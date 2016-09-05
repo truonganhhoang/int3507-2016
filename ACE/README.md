@@ -1,6 +1,7 @@
 # Facebook Chatbot
 Dự án nhỏ môn Những vấn đề hiện đại trong CNTT - Trường đại học Công nghệ, Đại học Quốc gia Hà Nội</br>
-Giảng viên Trương Anh Hoàng
+Giảng viên Trương Anh Hoàng</br>
+DEMO: https://facebook.com/uetbot
 # Thành viên
 Hà Đức Văn - K58CD - Trưởng nhóm</br>
 Lê Văn Tuấn - K58CC</br>
