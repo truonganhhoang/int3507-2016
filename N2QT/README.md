@@ -3,6 +3,6 @@ Nhóm N2QT, thành viên:
 - Lê Văn Quang
 - Trương Thị Hồng Nhung
 - Lương Thị Trang
-Đề tài :
++ Đề tài :
 Làm các core components bằng angular2 để dùng cho các dạng bài của SM
 
