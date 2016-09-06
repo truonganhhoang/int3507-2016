@@ -4,5 +4,5 @@ Nhóm N2QT, thành viên:
 - Trương Thị Hồng Nhung
 - Lương Thị Trang
 + Đề tài :
-Làm các core components bằng angular2 để dùng cho các dạng bài của SM
+Làm một số trò chơi học ngoại ngữ, học vui bằng Construct2
 
