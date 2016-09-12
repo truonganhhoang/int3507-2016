@@ -8,6 +8,7 @@
 - Tạo các issues để thông tin công việc từng nhóm/người đang làm, dùng nó để thảo luận các nội dung chính, và đóng issue khi hoàn thành công việc đó.
 - Khi các nhóm tạo issue, thì gắn label của nhóm đó vào issue.
 - Trước khi commit/push, nên pull/merge để tránh bị conflict.
+- **Từng người phải có issue mô tả công việc của mình, gán thông tin tag của nhóm, assignee, v.v. đầy đủ.**
 
 ## 19/9 các nhóm báo cáo, trình bày kiến thức tìm hiểu đc, và demo chương trình
 - Chuẩn bị sẵn slides để trình bày trong khoảng 20 phút.
