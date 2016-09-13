@@ -1,0 +1,1 @@
+﻿App Angular đầu tiên hiển thị nội dung 'My First Angular 2 App'.
