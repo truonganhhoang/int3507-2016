@@ -16,13 +16,26 @@ const
   crypto = require('crypto'),
   express = require('express'),
   https = require('https'),  
-  request = require('request');
+  request = require('request'),
+  fs = require('fs');
 
 var app = express();
-app.set('port', process.env.PORT || 5000);
+app.set('port', process.env.PORT || 2053);
 app.set('view engine', 'ejs');
 app.use(bodyParser.json({ verify: verifyRequestSignature }));
 app.use(express.static('public'));
+
+var options = {
+    key: fs.readFileSync('/home/trieudh/trieudh/key.pem'),
+    cert: fs.readFileSync('/home/trieudh/trieudh/certificate.pem')
+};
+
+app.all('*', function(req, res, next){
+  if (req.secure) {
+    return next();
+  };
+  res.redirect('https://trieudh.me:2053'+req.url);
+});
 
 /*
  * Be sure to setup your config values before running this code. You can 
@@ -831,8 +844,9 @@ function callSendAPI(messageData) {
 // Start server
 // Webhooks must be available via SSL with a certificate signed by a valid 
 // certificate authority.
-app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+
+https.createServer(options, app).listen(2053, function () {
+    console.log('Server is running on port ', app.get('port'));
 });
 
 module.exports = app;
