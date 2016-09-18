@@ -1,0 +1,121 @@
+@import "../varialbles";
+
+.sign-in-wrapper {
+	min-height: 500px;
+
+	.sign-in-box {
+		width: 470px;
+		margin: 0 auto;
+		background-color: #fff;
+		-webkit-box-shadow: 0 0 2px 2px #eee;
+		-moz-box-shadow: 0 0 2px 2px #eee;
+		box-shadow: 0 0 2px 2px #eee;
+		position: absolute;
+		top: calc(50% + 30px - 50px);
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-moz-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		border-radius: 8px;
+		max-width: 100%;
+	}
+
+	.errors {
+		background-color: #f44336;
+		margin-bottom: 20px;
+		color: #fff;
+		border-radius: 6px;
+
+		.error {
+			padding: 10px 20px;
+		}
+	}
+
+	.forget-password {
+		display: block;
+		color: $title-color;
+		padding-top: 25px;
+		font-weight: 600;
+		font-size: 14px;
+
+		&:hover {
+			text-decoration: none;
+			color: $primary-color;
+		}
+
+		&:before {
+			content: "\f128";
+			font-family: "FontAwesome";
+			font-size: 13px;
+			font-weight: 400;
+			display: inline-block;
+			text-align: center;
+			-webkit-border-radius: 50%;
+			-moz-border-radius: 50%;
+			border-radius: 50%;
+			background-color: $primary-color;
+			color: #fff;
+			width: 25px;
+			margin-right: 7px;
+		}
+	}
+
+	.modal-header {
+		border-bottom: none;
+		text-align: center;
+		.modal-title {
+			text-transform: uppercase;
+			padding: 10px 0;
+			position: relative;
+			&:after {
+				content: '';
+				width: 50px;
+				height: 2px;
+				background-color: $primary-color;
+				position: absolute;
+				left: 50%;
+				-webkit-transform: translateX(-50%);
+				-moz-transform: translateX(-50%);
+				-ms-transform: translateX(-50%);
+				-o-transform: translateX(-50%);
+				transform: translateX(-50%);
+				bottom: 0;
+				display: block;
+			}
+		}
+	}
+
+	.modal-body {
+		padding: 35px 60px 20px;
+		.checkbox-inline {
+			float: right;
+			padding-top: 12px;
+		}
+
+		.user_input {
+			-webkit-border-radius: 8px;
+			-moz-border-radius: 8px;
+			border-radius: 8px;
+			border: 1px solid #999;
+		}
+
+		.form-group {
+			margin-bottom: 20px;
+		}
+
+		.btn:hover, .btn:focus, .btn.focus, .btn:active {
+			outline: none;
+			outline-offset: 0;
+		}
+
+		.login-button {
+			background-color: $primary-color;
+			border-color: $primary-color;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+		}
+	}
+}
