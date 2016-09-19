@@ -1,0 +1,33 @@
+<!--
+  Generated template for the BookPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Books</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<ion-card *ngFor="let item of books" (click)="enter(item)">
+    <ion-grid>
+      <ion-row>
+        <ion-col width-33>
+          <img style="width:100%" src="{{item.cover}}"/>
+        </ion-col>
+        <ion-col width-67>
+          <h2 style="font-size:20px">{{item.name}}</h2>
+          <div style="width: 100%">
+            <p style=" text-align: justify">{{item.description}}</p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+</ion-content>

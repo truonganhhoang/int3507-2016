@@ -1,0 +1,1 @@
+ionic plugin add cordova-plugin-tts
