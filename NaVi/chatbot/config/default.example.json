@@ -1,0 +1,6 @@
+{
+    "appSecret": "example",
+    "pageAccessToken": "example",
+    "validationToken": "example",
+    "serverURL": "https://example.ngrok.io"
+}
