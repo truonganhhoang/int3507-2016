@@ -1,0 +1,29 @@
+<div class="container sign-in-wrapper">
+    <div class="sign-in-box">
+        <div class="modal-header">
+            <h4 class="modal-title">Đăng Nhập</h4>
+        </div>
+        <div class="modal-body">
+            <div class="errors" [hidden]="errors.length == 0">
+                <div class="error" *ngFor="let error of errors">{{error}}</div>
+            </div>
+            <form id="loginForm">
+                <div class="form-group">
+                    <input type="email" class="form-control user_input" name="email" [(ngModel)]="email"
+                           placeholder="Email đăng nhập...">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" class="form-control user_input" name="password" [(ngModel)]="password"
+                           placeholder="Mật khẩu">
+                </div>
+
+                <div class="form-group">
+                    <button class="btn btn-primary login-button ed-button" type="submit" (click)="login()">Đăng Nhập
+                    </button>
+                    <label class="checkbox-inline"><input type="checkbox" value="">Nhớ mật khẩu</label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
