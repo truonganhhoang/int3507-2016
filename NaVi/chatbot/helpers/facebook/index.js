@@ -1,5 +1,8 @@
 module.exports = {
-    receivedDeliveryConfirmation: require('./receivedDeliveryConfirmation'),
+    receivedAccountLink: require('./receivedAccountLink'),
     receivedAuthentication: require('./receivedAuthentication'),
-    receivedMessage: require('./receivedMessage')
+    receivedDeliveryConfirmation: require('./receivedDeliveryConfirmation'),
+    receivedMessage: require('./receivedMessage'),
+    receivedMessageRead: require('./receivedMessageRead'),
+    receivedPostback: require('./receivedPostback')
 };

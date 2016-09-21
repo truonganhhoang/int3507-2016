@@ -1,5 +1,4 @@
-const request = require('request'),
-    sendFunctions = require('./sendFunctions');
+const sendFunctions = require('./sendFunctions');
 
 module.exports = function receivedMessage(event) {
     var senderID = event.sender.id;
@@ -56,7 +55,7 @@ module.exports = function receivedMessage(event) {
                 break;
 
             case 'button':
-                sendButtonMessage(senderID);
+                sendFunctions.sendButtonMessage(senderID);
                 break;
 
             case 'generic':

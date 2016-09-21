@@ -1,3 +1,5 @@
+const sendFunctions = require('./sendFunctions');
+
 module.exports = function receivedAuthentication(event) {
     var senderID = event.sender.id;
     var recipientID = event.recipient.id;
@@ -9,5 +11,5 @@ module.exports = function receivedAuthentication(event) {
         "through param '%s' at %d", senderID, recipientID, passThroughParam,
         timeOfAuth);
 
-    require('./sendFunctions/sendTextMessage')(senderID, "Authentication successful");
+    sendFunctions.sendTextMessage(senderID, "Authentication successful");
 };
