@@ -15,8 +15,8 @@
 
 
 <ion-content padding>
-  <button [disabled]="!selectedUnit" (click)="enter()">Training</button>
-  <button>Fighting</button>
+  <button [disabled]="!selectedUnit" (click)="enterTraining()">Training</button>
+  <button [disabled]="!selectedUnit" (click)="enterFighting()">Fighting</button>
   <ion-list radio-group [(ngModel)]="selectedUnit">
     <ion-item *ngFor="let item of units">
       <ion-label>{{item.name}}</ion-label>

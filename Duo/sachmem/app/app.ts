@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { ionicBootstrap, Platform, Nav } from 'ionic-angular';
-import { StatusBar } from 'ionic-native';
+import { StatusBar, SQLite } from 'ionic-native';
 
 import { BookPage } from './pages/book/book';
 import { Page1 } from './pages/page1/page1';
@@ -9,6 +9,7 @@ import { Page2 } from './pages/page2/page2';
 @Component({
   templateUrl: 'build/app.html'
 })
+
 class MyApp {
   @ViewChild(Nav) nav: Nav;
 
@@ -25,6 +26,21 @@ class MyApp {
       { title: 'Page uno', component: Page1 },
       { title: 'Page dos', component: Page2 }
     ];
+
+    //Sqlite create
+  //   let db = new SQLite();
+  //   db.openDatabase({
+  //     name: 'data.db',
+  //     location: 'default' // the location field is required
+  //   }).then(() => {
+  //     db.executeSql('create table danceMoves(name VARCHAR(32))', {}).then(() => {
+  //       alert('success');
+  //     }, (err) => {
+  //       alert('Unable to execute sql: ' + err);
+  //     });
+  //   }, (err) => {
+  //     alert('Unable to open database: ' + err);
+  //   });
 
   }
 

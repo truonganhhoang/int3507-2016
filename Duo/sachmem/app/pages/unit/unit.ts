@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { TrainingPage } from '../training/training'
+import { FightingPage } from '../fighting/fighting'
 import { UnitService } from '../../services/unit.service';
 /*
   Generated class for the UnitPage page.
@@ -26,9 +27,15 @@ export class UnitPage {
     });
   }
 
-  enter() {
+  enterTraining() {
     // console.log(this.selectedUnit);   
     this.navCtrl.push(TrainingPage, {
+      unitId: this.selectedUnit
+    });
+  }
+
+  enterFighting() {
+    this.navCtrl.push(FightingPage, {
       unitId: this.selectedUnit
     });
   }

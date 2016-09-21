@@ -15,6 +15,7 @@ import { TextToSpeech } from 'ionic-native';
   templateUrl: 'build/pages/training/training.html',
   providers: [ WordService ]
 })
+
 export class TrainingPage implements OnInit {
   words: Object[];
   curWord: Object;
@@ -25,7 +26,10 @@ export class TrainingPage implements OnInit {
     wordService.getWords(unitId).then(res => {
       this.words = res;
       // this.curWord = this.words[this.curNum];
+      
       this.reload();
+      this.speak();
+      // console.log(this.curWord['content']);  
     });
   }
 
@@ -37,10 +41,15 @@ export class TrainingPage implements OnInit {
 
   next() {
     this.curNum ++;
-    TextToSpeech.speak('Hello World')
+    this.reload();
+    this.speak();
+    
+  }
+
+  speak() {
+    TextToSpeech.speak(this.curWord['content'])
       .then(() => alert('Success'))
       .catch((reason: any) => alert(reason));
-    this.reload();
   }
 
   previous() {
