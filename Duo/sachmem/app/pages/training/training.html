@@ -13,21 +13,24 @@
     </button>
 
     <ion-item>
-      <button round item-left large clear>
+      <h1 primary style="font-size:200%;font-weight:bold">{{curWord.content}}</h1>
+      <p style="font-size:170%">{{curWord.meaning}}</p>
+      <button clear>
         <ion-icon name="volume-up"></ion-icon>
       </button>
-      <!-- <ion-icon name="football" item-left large></ion-icon> -->
-      <h1 primary>{{curWord.content}}</h1>
-      <p>{{curWord.meaning}}</p>
     </ion-item>
 
     <ion-item>
-      <button item-left clear [disabled]="isBegin()" (click)="previous()">
+      <button item-left round outline [disabled]="isBegin()" (click)="previous()">
         <ion-icon name="arrow-back"></ion-icon>
         Previous
       </button>
-      <button item-right clear [disabled]="isEnd()" (click)="next()">
+      <button item-right round outline *ngIf="!isEnd()" (click)="next()">
         Next
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+      <button item-right round *ngIf="isEnd()" (click)="enterFightingPage()">
+        Fight
         <ion-icon name="arrow-forward"></ion-icon>
       </button>
     </ion-item>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+import { FightingPage } from '../fighting/fighting';
+
 import { WordService } from '../../services/word.service';
 import { NativeService } from '../../services/native.service';
 
@@ -48,5 +50,11 @@ export class TrainingPage implements OnInit {
   reload() {
     this.curWord = this.words[this.curNum];
     this.nativeService.tts(this.curWord['content']);
+  }
+
+  enterFightingPage() {
+    this.navCtrl.push(FightingPage, {
+      unitId: this.navParams.get('unitId')
+    });
   }
 }
