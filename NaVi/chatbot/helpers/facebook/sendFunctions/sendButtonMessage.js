@@ -1,3 +1,4 @@
+'use strict';
 module.exports = function sendButtonMessage(recipientId) {
     var messageData = {
         recipient: {

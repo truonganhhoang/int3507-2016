@@ -1,3 +1,4 @@
+'use strict';
 module.exports = function sendReadReceipt(recipientId) {
     console.log("Sending a read receipt to mark message as seen");
 

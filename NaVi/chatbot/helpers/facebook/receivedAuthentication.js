@@ -1,4 +1,6 @@
-const sendFunctions = require('./sendFunctions');
+'use strict';
+const
+    sendFunctions = require('./sendFunctions');
 
 module.exports = function receivedAuthentication(event) {
     var senderID = event.sender.id;

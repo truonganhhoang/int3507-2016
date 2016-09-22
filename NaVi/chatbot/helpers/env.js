@@ -1,4 +1,6 @@
-const config = require('config');
+'use strict';
+const
+    config = require('config');
 
 module.exports = {
     APP_SECRET: config.get('appSecret'),

@@ -1,3 +1,4 @@
+'use strict';
 module.exports = function sendTypingOff(recipientId) {
     console.log("Turning typing indicator off");
 

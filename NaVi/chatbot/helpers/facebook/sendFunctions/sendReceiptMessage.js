@@ -1,4 +1,6 @@
-const env = require('../../env');
+'use strict';
+const
+    env = require('../../env');
 
 module.exports = function sendReceiptMessage(recipientId) {
     // Generate a random receipt ID as the API requires a unique ID

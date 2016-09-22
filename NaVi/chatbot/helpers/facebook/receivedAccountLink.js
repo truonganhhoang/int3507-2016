@@ -1,3 +1,4 @@
+'use strict';
 module.exports = function receivedAccountLink(event) {
     var senderID = event.sender.id;
     var recipientID = event.recipient.id;

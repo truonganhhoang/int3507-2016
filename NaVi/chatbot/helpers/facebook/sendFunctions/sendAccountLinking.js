@@ -1,4 +1,6 @@
-const env = require('../../env');
+'use strict';
+const
+    env = require('../../env');
 
 module.exports = function sendAccountLinking(recipientId) {
     var messageData = {

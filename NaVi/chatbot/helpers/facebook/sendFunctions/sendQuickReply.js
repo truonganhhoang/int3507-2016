@@ -1,3 +1,4 @@
+'use strict';
 module.exports = function sendQuickReply(recipientId) {
     var messageData = {
         recipient: {

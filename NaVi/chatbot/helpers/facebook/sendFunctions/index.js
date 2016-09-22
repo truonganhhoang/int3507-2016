@@ -1,3 +1,4 @@
+'use strict';
 module.exports = {
     callSendAPI: require('./callSendAPI'),
     sendAccountLinking: require('./sendAccountLinking'),

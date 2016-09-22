@@ -1,3 +1,4 @@
+'use strict';
 module.exports = function receivedMessageRead(event) {
     var senderID = event.sender.id;
     var recipientID = event.recipient.id;
