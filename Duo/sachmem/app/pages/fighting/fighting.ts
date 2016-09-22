@@ -66,8 +66,12 @@ export class FightingPage implements OnInit {
     if (this.words.length == 0) {
       this.navCtrl.pop();
     } else {
-      console.log(this.words);
+      // console.log(this.words);
       this.reload();  
     }
+  }
+  
+  onCorrect(correct: boolean) {
+    if (correct) this.next();
   }
 }
