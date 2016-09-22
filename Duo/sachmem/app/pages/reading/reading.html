@@ -3,3 +3,4 @@
 <!-- <p>{{words[0].content}}</p> -->
 <p>{{curWord.content}}</p>
 <p>{{curWord.meaning}}</p>
+<button *ngFor="let item of answers" (click)="checkAnswer(item)"> {{item.content}} </button>

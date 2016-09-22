@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild} from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { WordService } from '../../services/word.service'
@@ -20,6 +20,7 @@ import { SpeakingPage } from '../speaking/speaking'
 })
 
 export class FightingPage {
+  @ViewChild(ReadingPage) ReadingPage:ReadingPage;
 	words: Object[];
 	curWord: Object;
   curNum: number = 0;
@@ -108,6 +109,10 @@ export class FightingPage {
   	} else {
   		this.reload();	
   	}
+  }
+
+  onCorrect(correct: boolean) {
+    if(correct) this.next();
   }
 
 }

@@ -19,7 +19,7 @@
 		<div *ngIf="selectedGame == 0">
 			Game 0:
 			<!-- <p>{{curWord.content}}</p>	 -->
-			<reading-page [curWord]="curWord" [words]="words"></reading-page>
+			<reading-page [curWord]="curWord" [words]="words" (onCorrect)="onCorrect($event)"></reading-page>
 		</div>
 		
 		<div *ngIf="selectedGame == 1">
