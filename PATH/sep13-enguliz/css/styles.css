@@ -11,4 +11,29 @@ h2, h3 {
 }
 body {
     margin: 2em;
+    background-color: gainsboro;
 }
+
+.header-title {
+    text-align: center;
+    width: 100%;
+}
+
+.card-view {
+    display: inline-block;
+    margin: 10px; box-shadow: 3px 3px 3px #888888;
+    padding-bottom: 40px;
+    padding-top: 3px;
+    text-align: center;
+    width: 20%;
+    height: 300px;
+    background-color: white;
+}
+
+.content {
+    width: 1000px;
+    overflow-x: hidden;
+    height: 30%;
+}
+
+
