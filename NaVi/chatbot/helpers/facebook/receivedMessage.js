@@ -23,6 +23,18 @@ module.exports = function receivedMessage(event) {
     var messageAttachments = message.attachments;
     var quickReply = message.quick_reply;
 
+    // Can not use metadata === 'MULTIPLE_CHOICES' here?
+    // if (quickReply && metadata === 'MULTIPLE_CHOICES') {
+    if (quickReply) {
+        if (quickReply.payload === 'IS_ANSWER') {
+            sendFunctions.sendTextMessage(senderID, 'Congrats. You\'re right');
+            return;
+        }
+        else {
+            sendFunctions.sendTextMessage(senderID, 'Oh oh. It\'s not the right answer');
+            return;
+        }
+    }
     if (isEcho) {
         // Just logging message echoes to console
         console.log("Received echo for message %s and app %d with metadata %s", messageId, appId, metadata);
@@ -37,6 +49,10 @@ module.exports = function receivedMessage(event) {
 
     if (messageText) {
         switch (messageText) {
+            case 'multiple choices':
+                require('../fnMutipleChoices/sendQuestion')(senderID);
+                break;
+
             case 'image':
                 sendFunctions.sendImageMessage(senderID);
                 break;
