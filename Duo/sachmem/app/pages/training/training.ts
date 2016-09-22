@@ -1,19 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import { WordService } from '../../services/word.service'
+import { FightingPage } from '../fighting/fighting';
 
-import { TextToSpeech } from 'ionic-native';
+import { WordService } from '../../services/word.service';
+import { NativeService } from '../../services/native.service';
 
-/*
-  Generated class for the TrainingPage page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   templateUrl: 'build/pages/training/training.html',
-  providers: [ WordService ]
+  providers: [ WordService, NativeService ]
 })
 
 export class TrainingPage implements OnInit {
@@ -21,35 +16,20 @@ export class TrainingPage implements OnInit {
   curWord: Object;
   curNum: number = 0;
 
-  constructor(private navCtrl: NavController, private navParams: NavParams, private wordService: WordService) {
+  constructor(private navCtrl: NavController, private navParams: NavParams, private wordService: WordService, private nativeService: NativeService) {
     let unitId = this.navParams.get('unitId');
+
     wordService.getWords(unitId).then(res => {
       this.words = res;
-      // this.curWord = this.words[this.curNum];
-      
       this.reload();
-      this.speak();
-      // console.log(this.curWord['content']);  
     });
   }
 
-  ngOnInit(): void {
-    // this.reload();
-    // this.curWord = this.words[this.curNum];
-    
-  }
+  ngOnInit(): void { }
 
   next() {
     this.curNum ++;
     this.reload();
-    this.speak();
-    
-  }
-
-  speak() {
-    TextToSpeech.speak(this.curWord['content'])
-      .then(() => alert('Success'))
-      .catch((reason: any) => alert(reason));
   }
 
   previous() {
@@ -69,5 +49,12 @@ export class TrainingPage implements OnInit {
 
   reload() {
     this.curWord = this.words[this.curNum];
+    this.nativeService.tts(this.curWord['content']);
+  }
+
+  enterFightingPage() {
+    this.navCtrl.push(FightingPage, {
+      unitId: this.navParams.get('unitId')
+    });
   }
 }

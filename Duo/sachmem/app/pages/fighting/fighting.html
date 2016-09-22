@@ -5,37 +5,29 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
+  <ion-navbar primary>
     <ion-title>Fighting</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-	<div *ngIf="curWord">
-
-		<div *ngIf="selectedGame == 0">
-			Game 0:
-			<!-- <p>{{curWord.content}}</p>	 -->
-			<reading-page [curWord]="curWord" [words]="words" (onCorrect)="onCorrect($event)"></reading-page>
-		</div>
-		
-		<div *ngIf="selectedGame == 1">
-			Game 1
-			<writing-page [curWord]="curWord" [words]="words"></writing-page>
-		</div>
-
-		<div *ngIf="selectedGame == 2">
-			Game 2
-			<listening-page [curWord]="curWord" [words]="words"></listening-page>
-		</div>
-
-		<div *ngIf="selectedGame == 3">
-			Game 3
-			<speaking-page [curWord]="curWord" [words]="words"></speaking-page>
-		</div>
-		<button (click)="next()">Next</button>
-	</div>
+  <div *ngIf="curWord">
+    <div *ngIf="selectedGame == 0">
+      Game 0:
+      <reading-page [curWord]="curWord" [words]="words" (onCorrect)="onCorrect($event)"></reading-page>
+    </div>
+    <div *ngIf="selectedGame == 1">
+      Game 1
+      <writing-page [curWord]="curWord" [words]="words"></writing-page>
+    </div>
+    <div *ngIf="selectedGame == 2">
+      Game 2
+      <listening-page [curWord]="curWord" [words]="words"></listening-page>
+    </div>
+    <div *ngIf="selectedGame == 3">
+      Game 3
+      <speaking-page [curWord]="curWord" [words]="words"></speaking-page>
+    </div>
+    <button (click)="next()">Next</button>
+  </div>
 </ion-content>

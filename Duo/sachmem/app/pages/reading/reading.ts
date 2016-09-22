@@ -1,20 +1,13 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-/*
-  Generated class for the ReadingPage page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
-	selector: 'reading-page',
+  selector: 'reading-page',
   templateUrl: 'build/pages/reading/reading.html',
-  inputs: [ 'words', 'curWord']
+  inputs: [ 'words', 'curWord' ]
 })
 
 export class ReadingPage implements OnInit {
-
   @Output() onCorrect = new EventEmitter<boolean>();
 	words: Object[];
 	curWord: Object;
@@ -52,7 +45,7 @@ export class ReadingPage implements OnInit {
 				this.answers[i]['position'] = false;
 		    wrongWord.splice(r, 1);
 			}
-		}
+		}		
 	}
 
 	//Kiem tra dung sai

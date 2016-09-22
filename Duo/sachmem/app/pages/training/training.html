@@ -1,25 +1,38 @@
-<!--
-  Generated template for the TrainingPage page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
+  <ion-navbar primary>
     <ion-title>Training</ion-title>
   </ion-navbar>
-
 </ion-header>
 
+<ion-content>
+  <div></div>
+  <ion-card *ngIf="curWord">
+    <img src="img/advance-card-map-madison.png">
+    <button fab fab-right fab-top>
+      <ion-icon name="star"></ion-icon>
+    </button>
 
-<ion-content padding>
-  <div *ngIf="curWord">
-    <p>{{curWord.content}}</p>
-    <p>{{curWord.meaning}}</p>
-    <p>{{curWord.id}}</p>
-    <button [disabled]="isBegin()" (click)="previous()">Previous</button>
-    <button [disabled]="isEnd()" (click)="next()">Next</button>
-    
-  </div>
+    <ion-item>
+      <h1 primary style="font-size:200%;font-weight:bold">{{curWord.content}}</h1>
+      <p style="font-size:170%">{{curWord.meaning}}</p>
+      <button clear>
+        <ion-icon name="volume-up"></ion-icon>
+      </button>
+    </ion-item>
+
+    <ion-item>
+      <button item-left round outline [disabled]="isBegin()" (click)="previous()">
+        <ion-icon name="arrow-back"></ion-icon>
+        Previous
+      </button>
+      <button item-right round outline *ngIf="!isEnd()" (click)="next()">
+        Next
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+      <button item-right round *ngIf="isEnd()" (click)="enterFightingPage()">
+        Fight
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-card>
 </ion-content>
