@@ -1,5 +1,4 @@
 const
-    mongoose = require('mongoose'),
     csv = require('fast-csv'),
     models = require('../models'),
     Question = models.Question;

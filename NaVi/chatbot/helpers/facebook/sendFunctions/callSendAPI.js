@@ -1,4 +1,5 @@
-const request = require('request'),
+const
+    request = require('request'),
     env = require('../../env');
 
 module.exports = function callSendAPI(messageData) {

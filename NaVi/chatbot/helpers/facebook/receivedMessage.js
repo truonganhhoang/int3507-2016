@@ -1,4 +1,6 @@
-const sendFunctions = require('./sendFunctions');
+const
+    sendFunctions = require('./sendFunctions'),
+    models = require('../../models');
 
 module.exports = function receivedMessage(event) {
     var senderID = event.sender.id;

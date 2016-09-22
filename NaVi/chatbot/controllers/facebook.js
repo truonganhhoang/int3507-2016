@@ -1,4 +1,6 @@
-const env = require('../helpers/env'),
+'use strict';
+const
+    env = require('../helpers/env'),
     facebookHelpers = require('../helpers/facebook');
 
 module.exports = {
@@ -7,7 +9,8 @@ module.exports = {
             req.query['hub.verify_token'] === env.VALIDATION_TOKEN) {
             console.log("Validating webhook");
             res.status(200).send(req.query['hub.challenge']);
-        } else {
+        }
+        else {
             console.error("Failed validation. Make sure the validation tokens match.");
             res.sendStatus(403);
         }
@@ -23,22 +26,45 @@ module.exports = {
                 pageEntry.messaging.forEach(function(messagingEvent) {
                     if (messagingEvent.optin) {
                         facebookHelpers.receivedAuthentication(messagingEvent);
-                    } else if (messagingEvent.message) {
+                    }
+                    else if (messagingEvent.message) {
                         facebookHelpers.receivedMessage(messagingEvent);
-                    } else if (messagingEvent.delivery) {
+                    }
+                    else if (messagingEvent.delivery) {
                         facebookHelpers.receivedDeliveryConfirmation(messagingEvent);
-                    } else if (messagingEvent.postback) {
+                    }
+                    else if (messagingEvent.postback) {
                         facebookHelpers.receivedPostback(messagingEvent);
-                    } else if (messagingEvent.read) {
+                    }
+                    else if (messagingEvent.read) {
                         facebookHelpers.receivedMessageRead(messagingEvent);
-                    } else if (messagingEvent.account_linking) {
+                    }
+                    else if (messagingEvent.account_linking) {
                         facebookHelpers.receivedAccountLink(messagingEvent);
-                    } else {
+                    }
+                    else {
                         console.log("Webhook received unknown messagingEvent: ", messagingEvent);
                     }
                 });
             });
             res.sendStatus(200);
         }
+    },
+    getAuthorize: function(req, res) {
+        var accountLinkingToken = req.query['account_linking_token'];
+        var redirectURI = req.query['redirect_uri'];
+
+        // Authorization Code should be generated per user by the developer. This will
+        // be passed to the Account Linking callback.
+        var authCode = "1234567890";
+
+        // Redirect users to this URI on successful login
+        var redirectURISuccess = redirectURI + "&authorization_code=" + authCode;
+
+        res.render('authorize', {
+            accountLinkingToken: accountLinkingToken,
+            redirectURI: redirectURI,
+            redirectURISuccess: redirectURISuccess
+        });
     }
 };

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "lint": "jshint --exclude node_modules .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "import": "node database/import.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,8 @@
     "config": "^1.20.4",
     "ejs": "^2.4.2",
     "express": "^4.13.4",
+    "fast-csv": "^2.1.0",
+    "mongoose": "^4.6.1",
     "request": "^2.72.0"
   },
   "engines": {
