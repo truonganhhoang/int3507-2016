@@ -1,18 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-/*
-  Generated class for the ListeningPage page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
 	selector: 'listening-page',
   templateUrl: 'build/pages/listening/listening.html',
   inputs: [ 'words', 'curWord']
 })
-export class ListeningPage {
+
+export class ListeningPage implements OnInit {
 	words: Object[];
 	curWord: Object;
 
@@ -22,6 +17,4 @@ export class ListeningPage {
   constructor(private navCtrl: NavController) {
 
   }
-
-
 }
