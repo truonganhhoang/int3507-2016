@@ -1,0 +1,338 @@
+1,woman,phụ nữ,1
+2,baby,đứa trẻ,1
+3,girl,cô gái,1
+4,man,đàn ông,1
+5,parents ,bố mẹ ,1
+6,grandparents,ông bà ,1
+7,husband ,chồng ,1
+8,wife,vợ,1
+9,children,trẻ con,1
+10,granddaughter,cháu gái,1
+11,boy,con trai,1
+12,grandson,cháu trai,1
+13,nephew,cháu trai,1
+14,mother,mẹ,1
+15,father,bố,1
+16,grandmother,bà,1
+17,niece,cháu gái,1
+18,uncle,chú/bác trai/cậu,1
+19,sister-in-law,chị/em dâu/chị/em vợ,1
+20,cousin,anh/em họ,1
+21,aunt,bác gái-cô-dì-thím,1
+22,brother-in-law,anh em rể/anh em vợ,1
+23,face,khuôn mặt,2
+24,mouth,miệng,2
+25,chin,cằm,2
+26,neck,cổ ,2
+27,shoulder,vai,2
+28,arm,cánh tay,2
+29,upper arm ,cánh tay trên,2
+30,elbow,khuỷu tay,2
+31,forearm,cẳng tay,2
+32,armpit ,nách,2
+33,back,lưng,2
+34,chest,ngực,2
+35,waist ,eo,2
+36,abdomen,bụng,2
+37,buttocks,mông,2
+38,hip,hông,2
+39,leg,chân,2
+40,thigh,bắp đùi,2
+41,knee,đầu gối,2
+42,calf,bắp chân,2
+43,wrist,cổ tay,2
+44,knuckle,khớp đốt ngón tayt,2
+45,fingernail,móng tay,2
+46,thumb,ngón tay cái,2
+47,index finger,ngón trỏ,2
+48,middle finger,ngón giữa,2
+49,ring finger,ngón đeo nhẫn,2
+50,little finger,ngón út,2
+51,palm,lòng bàn tay,2
+52,hair,tóc,2
+53,part,ngôi rẽ,2
+54,forehead,trán,2
+55,sideburns,tóc mai dài,2
+56,ear,tai ,2
+57,cheek,má ,2
+58,nose,mũi,2
+59,nostril,lỗ mũi,2
+60,jaw,quai hàm,2
+61,beard,râu,2
+62,mustache,ria mép,2
+63,tongue,lưỡi,2
+64,tooth,răng,2
+65,lip,môi,2
+66,eyebrow,lông mày,2
+67,eyelid,mí mắt,2
+68,eyelashes,lông mi,2
+69,iris,mống mắt,2
+70,pupil,con ngươi,2
+71,ankle,mắt cá chân,2
+72,heel,gót chân,2
+73,instep,mu bàn chân,2
+74,ball,xương khớp ngón chân,2
+75,big toe,ngón cái,2
+76,toe,ngón chân,2
+77,little toe,ngón út,2
+78,toenail,móng chân,2
+79,brain,não,2
+80,spinal cord,tủy sống,2
+81,throat,cuống họng,2
+82,windpipe,khí quản,2
+83,esophagus,thực quản,2
+84,muscle,bắp thịt,2
+85,lung,phổi,2
+86,heart,tim,2
+87,liver,gan,2
+88,stomach,dạ dày,2
+89,intestines,ruột,2
+90,vein,tĩnh mạch,2
+91,artery,động mạch,2
+92,kidney,cật,2
+93,pancreas,tụy,2
+94,bladder,bọng đái,2
+95,(head of) cauliflower,súp lơ,3
+96,kidney bean(s),đậu tây,3
+97,garlic,tỏi,3
+98,broccoli,súp lơ xanh,3
+99,black bean(s),đậu đen,3
+100,pumpkin,bí ngô,3
+101,cabbage,cải bắp ,3
+102,string bean(s),quả đậu tây,3
+103,zucchini,bí ngồi,3
+104,Brussels sprouts,cải bluxen,3
+105,lima bean(s),đậu lima,3
+106,acorn squash,bí đấu,3
+107,watercress,cải xoong,3
+108,pea(s),đậu,3
+109,radish(es),củ cải ,3
+110,lettuce,xà lách,3
+111,asparagus,măng tây,3
+112,mushroom(s),nấm,3
+113,escarole,rau diếp,3
+114,tomato(es),cà chua,3
+115,onion(s),hành,3
+116,spinach,rau bina,3
+117,cucumber(s),dưa chuột,3
+118,carrot(s),cà rốt,3
+119,herb(s),rau thơm,3
+120,eggplant,cà tím,3
+121,beets,củ cải đường,3
+122,celery,cần tây,3
+123,pepper(s),ớt,3
+124,turnip,củ cải,3
+125,artichoke,atiso,3
+126,potato(es),khoai tây,3
+127,(ear of) corn,ngô,3
+128,yam,khoai lang,3
+129,( a bunch of) grapes,(một chùm) nho,4
+130,blueberries,quả việt quất,4
+131,cashew (s),hạt điều,4
+132,apple,táo,4
+133,strawberry,dâu tây,4
+134,peanut (s),lạc ,4
+135,coconut,dừa,4
+136,raspberries,mâm xôi,4
+137,walnut (s),quả óc chó,4
+138,pineapple,dứa,4
+139,nectarine,quả xuân đào,4
+140,hazelnut (s),hạt dẻ nhỏ,4
+141,mango,xoài,4
+142,pear,quả lê,4
+143,almond,quả hạnh,4
+144,papaya,đu đủ ,4
+145,cherries,anh đào,4
+146,chestnut (s),hạt dẻ,4
+147,grapefruit,quả trùm,4
+148,(a bunch of) bananas,chuối,4
+149,avocado (s),quả bơ,4
+150,orange,quả cam,4
+151,fig,quả sung,4
+152,plum,mận,4
+153,lemon,chanh,4
+154,prune,mận khô,4
+155,honeydew melon,dưa bở ruột xanh,4
+156,lime,chanh lá cam,4
+157,date,quả chà là ,4
+158,cantaloupe,dưa ruột vàng,4
+159,gooseberries,quả lý gai,4
+160,raisin (s),nho khô,4
+161,peach,quả đào,4
+162,blackberries,mâm xôi đen,4
+163,apricot,quả mơ,4
+164,cranberries,quả nam việt quất,4
+165,watermelon,dưa hấu,4
+166,beef,thịt bò,5
+167,pork,thịt lợn,5
+168,bacon,thịt muối xông khói,5
+169,ground beef,thịt bò xay,5
+170,sausage,xúc xích,5
+171,ham,thịt giăm bông,5
+172,roast,thịt quay,5
+173,lamb,thịt cừu non,5
+174,stewing meat,thịt kho,5
+175,chops,thịt sườn,5
+176,leg,thịt bắp đùi,5
+177,steak,thịt để nướng,5
+178,spare ribs,sườn,5
+179,whole chicken,cả con gà,5
+180,leg,đùi gà,5
+181,turkey,gà tây,5
+182,split,một phần,5
+183,breast,thịt ức,5
+184,chicken,gà giò,5
+185,quarter,một phần tư,5
+186,wing,cánh,5
+187,duck,vịt,5
+188,thigh,thịt bắp đùi,5
+189,fish,cá,5
+190,filet,thịt thăn,5
+191,whole fish,toàn con cá,5
+192,steak,miếng cá để nướng,5
+193,lobster,tôm hùm,5
+194,oyster (s),con hàu,5
+195,scallop (s),sò điệp,5
+196,shrimp,con tôm,5
+197,mussel (s),con trai,5
+198,crab (s),con cua,5
+199,clam (s),con nghêu/ngao,5
+200,carton,hộp/ bìa đựng,6
+201,roll,cuộn,6
+202,slice,miếng (bánh)/lát (chanh),6
+203,container,cái đựng,6
+204,box,thùng/ hộp giấy,6
+205,piece,góc/phần,6
+206,bottle,chai lọ,6
+207,six-pack,hộp chứa 6 lon/ chai,6
+208,bowl,tô/ bát,6
+209,package,thực phẩm đóng gói,6
+210,pump,chai/ lọ có đầu xịt,6
+211,spray can,bình xịt,6
+212,stick,thỏi kẹo,6
+213,tube,tuýp,6
+214,dollar bill,tiền giấy Đôla,6
+215,tub,hộp đựng,6
+216,pack,gói,6
+217,coins,tiền xu,6
+218,book,tập/xếp,6
+219,penny,đồng penni,6
+220,bag,túi,6
+221,bar,thanh/ que,6
+222,nickel,đồng xu trị giá 5 cent,6
+223,jar,vại/lọ/bình,6
+224,cup,tách/cốc,6
+225,dime,đồng 1 hào ( 10 cent),6
+226,can,lon,6
+227,glass,cốc thủy tinh,6
+228,quarter,đồng 25 xu,6
+229,deli counter,quầy bán thức ăn ngon,7
+230,aisle,lối đi,7
+231,shopping cart,xe đẩy,7
+232,frozen foods,thức ăn đông lạnh,7
+233,baked goods,đồ khô,7
+234,receipt,biên lai,7
+235,freezer,máy ướp lạnh,7
+236,bread,bánh mỳ,7
+237,cash register,máy tính tiền,7
+238,dairy products,các sản phẩm từ sữa,7
+239,canned goods,đồ đóng hộp,7
+240,cashier,thu ngân,7
+241,milk,sữa,7
+242,beverages,đồ uống,7
+243,conveyor belt,băng tải,7
+244,shelf,kệ để hàng,7
+245,household items,đồ gia dụng,7
+246,groceries,tạp phẩm,7
+247,scale,cân đĩa,7
+248,bin,thùng chứa,7
+249,bag,túi,7
+250,shopping basket,giỏ mua hàng,7
+251,customers,khách mua hàng,7
+252,checkout counter,quầy thu tiền,7
+253,produce,nông sản,7
+254,snacks,đồ ăn vặt,7
+255,check,séc,7
+256,cook,đầu bếp,8
+257,jukebox,máy chơi nhạc,8
+258,beer,bia,8
+259,waitress,nữ bồi bàn,8
+260,sugar,đường,8
+261,bar,quầy,8
+262,busboy,người phụ giúp bồi bàn dọn dẹp bàn ăn,8
+263,check,hóa đơn,8
+264,bar stool,ghế quầy bar,8
+265,ketchup,nước xốt cà chua,8
+266,tea,trà,8
+267,pipe,tẩu thuốc,8
+268,waiter,nam bồi bàn,8
+269,sandwich,1 loại bánh kẹp,8
+270,coaster,tấm lót cốc,8
+271,apron,tạp dề,8
+272,corkscrew,cái mở nút chai,8
+273,matches,(hộp) diêm,8
+274,menu,thực đơn,8
+275,cork,nút chai,8
+276,ashtray,gạt tàn,8
+277,high chair,ghế cao cho trẻ con ngồi ăn,8
+278,wine,rượu vang,8
+279,lighter,bật lửa,8
+280,booth,từng gian riêng,8
+281,tap,nút thùng rượu,8
+282,cigarette,thuốc lá,8
+283,straw,ống hút,8
+284,bartender,người phục vụ ở quầy rượu,8
+285,cocktail waitress,người phục vụ đồ uống,8
+286,soft drink,đồ uống ngọt không có cồn,8
+287,liquor,rượu/chất lỏng,8
+288,tray,khay/mâm,8
+289,eat,ăn,9
+290,clear,dọn bàn,9
+291,spread,phết,9
+292,drink,uống,9
+293,pay,thanh toán,9
+294,hold,cầm,9
+295,serve,phục vụ,9
+296,set the table,bày bàn ăn,9
+297,light,thắp,9
+298,cook,nấu,9
+299,give,đưa,9
+300,burn,cháy,9
+301,order,gọi món,9
+302,take,lấy lại,9
+303,mustard,mù tạc,10
+304,tossed salad,sa lát đã trộn,10
+305,egg roll,trứng cuộn,10
+306,hot dog,xúc xích,10
+307,beef stew,thịt bò hầm,10
+308,strawberry shortcake,bánh bơ dâu,10
+309,baked beans,đậu hầm,10
+310,pork chops,sườn lợn,10
+311,biscuit,bánh quy mặn,10
+312,potato chips,khoai tây chiên,10
+313,mixed vegetables,rau trộn,10
+314,french-fries,khoai tây chiên kiểu Pháp (cắt dài),10
+315,pancakes,bánh kếp,10
+316,mashed potatoes,khoai tây nghiền,10
+317,fried chicken,gà rán,10
+318,syrup,xi-rô,10
+319,butter,bơ,10
+320,pizza,bánh pizza,10
+321,bun,bánh bao nhân nho/bánh sữa nhỏ,10
+322,roll,ổ bánh mỳ nhỏ,10
+323,jelly,thạch,10
+324,pickle,dưa góp,10
+325,baked potato,khoai tây nướng,10
+326,(Sunnyside-up) egg,(lòng đỏ bên trên) trứng,10
+327,hamburger,bánh hamburger,10
+328,steak,bò bít tết,10
+329,bacon,thịt lợn muối xông khói,10
+330,spaghetti,mì ống,10
+331,cookie,bánh quy,10
+332,toast,bánh mỳ nướng,10
+333,meatballs,thịt viên,10
+334,sundae,kem mứt,10
+335,coffee,cà phê,10
+336,salad dressing,dầu giấm để trộn sa lát,10
+337,taco,bánh thịt chiên dòn,10
+338,ice cream cone,kem ốc quế,10

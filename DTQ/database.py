@@ -29,9 +29,9 @@ class Conversation(db.Model):
 class User(db.Model):
   __tablename__ = 'user_chat'
   id = db.Column(db.Integer, primary_key=True)
-  user_id = db.Column(db.String(100))
+  user_id = db.Column(db.String(100), unique=True)
   state = db.Column(db.Integer)
-  # word_results = db.relationship("WordResult", back_populates="user")
+  word_results = db.relationship("WordResult", back_populates="user")
   created_at = db.Column(db.Date, default=datetime.datetime.now())
   updated_at = db.Column(db.Date, onupdate=datetime.datetime.now())
 
@@ -64,7 +64,7 @@ class Word(db.Model):
   meaning = db.Column(db.String(255))
   category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
   category = db.relationship("Category", back_populates="words")
-  word_results = db.relationship("WordResult", back_populates="word")
+  # word_results = db.relationship("WordResult", back_populates="word")
   created_at = db.Column(db.Date, default=datetime.datetime.now())
   updated_at = db.Column(db.Date, onupdate=datetime.datetime.now())
 
@@ -78,9 +78,11 @@ class Word(db.Model):
 class WordResult(db.Model):
   __tablename__ = 'word_result'
   id = db.Column(db.Integer, primary_key=True)
-  # user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-  # user = db.relationship("User", back_populates="word_results")
-  word_id = db.Column(db.Integer, db.ForeignKey('word.id'))
-  word = db.relationship("Word", back_populates="word_results")
+  word_id = db.Column(db.Integer)
+  user_id = db.Column(db.String(100), db.ForeignKey('user_chat.user_id'))
+  user = db.relationship("User", back_populates="word_results")
+  # word_id = db.Column(db.Integer, db.ForeignKey('word.id'))
+  # word = db.relationship("Word", back_populates="word_results")
+  is_learned = db.Column(db.Boolean, default=False)
   created_at = db.Column(db.Date, default=datetime.datetime.now())
   updated_at = db.Column(db.Date, onupdate=datetime.datetime.now())
