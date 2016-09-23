@@ -7,10 +7,17 @@
   </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
-  <button [disabled]="!selectedUnit" (click)="enterTraining()">Training</button>
-  <button [disabled]="!selectedUnit" (click)="enterFighting()">Fighting</button>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-50>
+        <button [disabled]="!selectedUnit" (click)="enterTraining()" round block>Training</button>
+      </ion-col>
+      <ion-col width-50>  
+        <button [disabled]="!selectedUnit" (click)="enterFighting()" round block>Fighting</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
   <ion-list radio-group [(ngModel)]="selectedUnit">
     <ion-item *ngFor="let item of units">
       <ion-label>{{item.name}}</ion-label>

@@ -1,7 +1,7 @@
 [
     {
     "id": "1",
-    "name": "Tiếng Anh 3 Tập 1",
+    "name": "English 3 Volumn 1",
     "cover": "http://s.sachmem.com/public/bookcovers/TA3T1SHS_head.jpg",
     "description": "The first level of the three-level English textbook series for Vietnamese primary school pupils.",
     "created_at": "2016-07-26 04:47:27 UTC",
@@ -10,18 +10,18 @@
     },
     {
     "id": "2",
-    "name": "Tiếng Anh 3 Tập 2",
+    "name": "English 3 Volumn 2",
     "cover": "http://s.sachmem.com/public//bookcovers/TA3T2SHS_head.jpg",
-    "description": "",
+    "description": "The first level of the three-level English textbook series for Vietnamese primary school pupils.",
     "created_at": "2016-07-26 04:47:27 UTC",
     "updated_at": "2016-07-26 04:47:27 UTC",
     "version": 0
     },
     {
     "id": "3",
-    "name": "Tiếng Anh 4 Tập 1",
+    "name": "English 4 Volumn 1",
     "cover": "http://s.sachmem.com/public//bookcovers/TA4T1SHS_head.jpg",
-    "description": "",
+    "description": "The second level of the three-level English textbook series for Vietnamese primary school pupils.",
     "created_at": "2016-07-26 04:47:28 UTC",
     "updated_at": "2016-07-26 04:47:28 UTC",
     "version": 0

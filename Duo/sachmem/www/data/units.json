@@ -1,7 +1,7 @@
 [
   {
   "id": "1",
-  "name": "2 What's your name?",
+  "name": "What's your name?",
   "description": "",
   "book_id": "1",
   "created_at": "2016-07-26 04:47:37 UTC",
@@ -9,7 +9,7 @@
   },
   {
   "id": "2",
-  "name": "3 This is Tony",
+  "name": "This is Tony",
   "description": "",
   "book_id": "1",
   "created_at": "2016-07-26 04:47:37 UTC",
@@ -17,7 +17,7 @@
   },
   {
   "id": "3",
-  "name": "4 How old are you?",
+  "name": "How old are you?",
   "description": "",
   "book_id": "1",
   "created_at": "2016-07-26 04:47:37 UTC",
@@ -25,7 +25,7 @@
   },
   {
   "id": "4",
-  "name": "5 Are they your friends?",
+  "name": "Are they your friends?",
   "description": "",
   "book_id": "1",
   "created_at": "2016-07-26 04:47:37 UTC",
@@ -33,7 +33,7 @@
   },
   {
   "id": "5",
-  "name": "6 Stand up!",
+  "name": "Stand up!",
   "description": "",
   "book_id": "1",
   "created_at": "2016-07-26 04:47:37 UTC",
@@ -41,7 +41,7 @@
   },
   {
   "id": "6",
-  "name": "7 That's my school",
+  "name": "That's my school",
   "description": "",
   "book_id": "1",
   "created_at": "2016-07-26 04:47:37 UTC",
@@ -49,7 +49,7 @@
   },
   {
   "id": "7",
-  "name": "8 This is my pen",
+  "name": "This is my pen",
   "description": "",
   "book_id": "1",
   "created_at": "2016-07-26 04:47:37 UTC",
@@ -57,7 +57,7 @@
   },
   {
   "id": "8",
-  "name": "9 What colour is it?",
+  "name": "What colour is it?",
   "description": "",
   "book_id": "1",
   "created_at": "2016-07-26 04:47:37 UTC",
@@ -65,7 +65,7 @@
   },
   {
   "id": "9",
-  "name": "10 What do you do at break time?",
+  "name": "What do you do at break time?",
   "description": "",
   "book_id": "1",
   "created_at": "2016-07-26 04:47:37 UTC",

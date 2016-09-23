@@ -24,24 +24,9 @@ class MyApp {
     this.pages = [
       { title: 'Books', component: BookPage },
       { title: 'Page uno', component: Page1 },
-      { title: 'Page dos', component: Page2 }
+      { title: 'Page dos', component: Page2 },
+      { title: 'Help & Feedback', component: BookPage }
     ];
-
-    //Sqlite create
-  //   let db = new SQLite();
-  //   db.openDatabase({
-  //     name: 'data.db',
-  //     location: 'default' // the location field is required
-  //   }).then(() => {
-  //     db.executeSql('create table danceMoves(name VARCHAR(32))', {}).then(() => {
-  //       alert('success');
-  //     }, (err) => {
-  //       alert('Unable to execute sql: ' + err);
-  //     });
-  //   }, (err) => {
-  //     alert('Unable to open database: ' + err);
-  //   });
-
   }
 
   initializeApp() {
