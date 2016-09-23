@@ -1,69 +1,65 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
+import { NativeService } from '../../services/native.service';
+import { HelperService } from '../../services/helper.service';
+
 @Component({
   selector: 'reading-page',
   templateUrl: 'build/pages/reading/reading.html',
-  inputs: [ 'curWord', 'allWords']
+  providers: [ NativeService ],
+  inputs: [ 'curWord', 'allWords' ]
 })
 
 export class ReadingPage implements OnInit{
-	// Biến trả về cho fighting, khi đúng thì gọi hàm next()
+  // Biến trả về cho fighting, khi đúng thì gọi hàm next()
   @Output() onCorrect = new EventEmitter<boolean>();
   allWords: Object[];
-	curWord: Object;
-	position: number;
-	noOfAns: number;
-	answers: Object[] = [];
-	//Biến lưu câu trả lời đúng sai
-	correct: boolean = false;
+  curWord: Object;
+  answers: Object[] = [];
 
-	ngOnInit() {
-		
-	}
+  constructor(private nativeService: NativeService, private helperService: HelperService) { }
 
-	ngOnChanges( event ) {
+  ngOnInit() { }
 
-		if (this.allWords.length <= 4) this.noOfAns = this.allWords.length;
-		else this.noOfAns = 4;	
+  ngOnChanges(event) {
+    if (this.allWords.length < 5) {
+      var NO_OF_ANS = this.allWords.length;
+    } else {
+      var NO_OF_ANS = 5;
+    }
 
-		//Vị trí từ đúng
-		this.position = Math.floor((Math.random() * this.noOfAns));
+    // Tạo mảng các từ sai
+    let wrongWord = [];
+    for (let i = 0; i < this.allWords.length; i++) {
+      if (this.curWord['id'] != this.allWords[i]['id']) {
+        wrongWord.push(this.allWords[i]);
+      }
+    }
 
-		//Tạo mảng các từ sai
-		let wrongWord = [];
-		for (let i = 0; i < this.allWords.length; i++) {
-			if (this.curWord['id'] != this.allWords[i]['id']) {
-				wrongWord.push(this.allWords[i]);
-			}
-		}
+    // Random vị trí từ đúng
+    let position = this.helperService.random(NO_OF_ANS);
 
-		//Tạo các câu trả lời
-		for (let i = 0; i< this.noOfAns; i++) {
-			if (i == this.position) {
-				this.answers[i] = this.curWord;
-				this.answers[i]['position'] = true;
-			} else {
-				let r = Math.floor((Math.random() * wrongWord.length));
-				this.answers[i] = wrongWord[r];
-				this.answers[i]['position'] = false;
-		    wrongWord.splice(r, 1);
-			}
-		}	
-   
-	}
-                    
+    // Tạo mảng các câu trả lời
+    for (let i = 0; i < NO_OF_ANS; i++) {
+      if (i == position) {
+        this.answers[i] = this.curWord;
+      } else {
+        let r = this.helperService.random(wrongWord.length);
+        this.answers[i] = wrongWord[r];
+        wrongWord.splice(r, 1);
+      }
+    }
+  }
 
-	//Kiểm tra đúng sai
-	checkAnswer(item: Object) {
-		//Trả lời đúng
-		if ( item['position'] == true) {
-			console.log('dung');
-			//Truyền biến true trong onCorrect của fighting
-			this.onCorrect.emit(true);
-		} else {
-			console.log('Sai');
-			this.onCorrect.emit(false);
-		}
-	}
+  checkAnswer(item: Object) {
+    if (item['id'] == this.curWord['id']) {
+      this.onCorrect.emit(true);
+      this.nativeService.playAudio('correct');
+      this.nativeService.tts(this.curWord);
+    } else {
+      this.onCorrect.emit(false);
+      this.nativeService.playAudio('wrong');
+    }
+  }
 }

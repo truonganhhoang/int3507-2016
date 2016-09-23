@@ -26,7 +26,7 @@ export class FightingPage implements OnInit {
 
     wordService.getWords(unitId).then(result => {
       this.words = result;
-      // gán allWords là mảng dữ liệu không đổi
+      // Gán allWords là mảng dữ liệu không đổi
       this.allWords = this.words.slice();
 
       // Tạm thời gán cho 'games' 4 giá trị l, s, r, w. 
@@ -51,7 +51,6 @@ export class FightingPage implements OnInit {
     this.selectedGame = this.words[i]['games'][j];
 
     console.log('Word: ' + this.curWord['content'] + ', game: ' + this.selectedGame);
-
   }
 
   next() {
