@@ -4,38 +4,42 @@ import { NavController } from 'ionic-angular';
 @Component({
   selector: 'reading-page',
   templateUrl: 'build/pages/reading/reading.html',
-  inputs: [ 'words', 'curWord' ]
+  inputs: [ 'curWord', 'allWords']
 })
 
-export class ReadingPage implements OnInit {
+export class ReadingPage implements OnInit{
+	// Biến trả về cho fighting, khi đúng thì gọi hàm next()
   @Output() onCorrect = new EventEmitter<boolean>();
-	words: Object[];
+  allWords: Object[];
 	curWord: Object;
 	position: number;
 	noOfAns: number;
-	//mang cau tra loi
 	answers: Object[] = [];
-	//cau tra loi dung hay sai
+	//Biến lưu câu trả lời đúng sai
 	correct: boolean = false;
 
-
 	ngOnInit() {
-		if (this.words.length <= 4) this.noOfAns = this.words.length;
+		
+	}
+
+	ngOnChanges( event ) {
+
+		if (this.allWords.length <= 4) this.noOfAns = this.allWords.length;
 		else this.noOfAns = 4;	
 
-		//vi tri tu dung
+		//Vị trí từ đúng
 		this.position = Math.floor((Math.random() * this.noOfAns));
 
-		//Tao mang cac tu sai
+		//Tạo mảng các từ sai
 		let wrongWord = [];
-		for (var i = 0; i < this.words.length; i++) {
-			if (this.curWord['id'] != this.words[i]['id']) {
-				wrongWord.push(this.words[i]);
+		for (let i = 0; i < this.allWords.length; i++) {
+			if (this.curWord['id'] != this.allWords[i]['id']) {
+				wrongWord.push(this.allWords[i]);
 			}
 		}
 
-		//Tao cac cau tra loi
-		for (i = 0; i< this.noOfAns; i++) {
+		//Tạo các câu trả lời
+		for (let i = 0; i< this.noOfAns; i++) {
 			if (i == this.position) {
 				this.answers[i] = this.curWord;
 				this.answers[i]['position'] = true;
@@ -45,15 +49,17 @@ export class ReadingPage implements OnInit {
 				this.answers[i]['position'] = false;
 		    wrongWord.splice(r, 1);
 			}
-		}		
+		}	
+   
 	}
+                    
 
-	//Kiem tra dung sai
+	//Kiểm tra đúng sai
 	checkAnswer(item: Object) {
-		//Tra loi dung
+		//Trả lời đúng
 		if ( item['position'] == true) {
 			console.log('dung');
-			//goi den onCorrect cua fighting.ts
+			//Truyền biến true trong onCorrect của fighting
 			this.onCorrect.emit(true);
 		} else {
 			console.log('Sai');

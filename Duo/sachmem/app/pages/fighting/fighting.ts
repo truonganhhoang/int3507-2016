@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { WordService } from '../../services/word.service';
@@ -17,13 +17,17 @@ import { SpeakingPage } from '../speaking/speaking';
 export class FightingPage implements OnInit {
   words: Object[];
   curWord: Object;
-  selectedGame: number;
+  selectedGame: String;
+  //mang cac tu khong thay doi de truyen cho cac game
+  allWords: Object[];
 
   constructor(private navCtrl: NavController, private navParams: NavParams, private wordService: WordService, private helperService: HelperService) {
     let unitId = navParams.get('unitId');
 
     wordService.getWords(unitId).then(result => {
       this.words = result;
+      // gán allWords là mảng dữ liệu không đổi
+      this.allWords = this.words.slice();
 
       // Tạm thời gán cho 'games' 4 giá trị l, s, r, w. 
       // Khi lưu dữ liệu sẽ thay đổi tùy theo.
@@ -47,6 +51,7 @@ export class FightingPage implements OnInit {
     this.selectedGame = this.words[i]['games'][j];
 
     console.log('Word: ' + this.curWord['content'] + ', game: ' + this.selectedGame);
+
   }
 
   next() {
@@ -66,12 +71,13 @@ export class FightingPage implements OnInit {
     if (this.words.length == 0) {
       this.navCtrl.pop();
     } else {
-      // console.log(this.words);
-      this.reload();  
+      this.reload();        
     }
   }
   
   onCorrect(correct: boolean) {
-    if (correct) this.next();
+    if (correct) {
+      this.next();    
+    }
   }
 }
