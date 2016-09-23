@@ -32,22 +32,17 @@ module.exports = function sendButtonMessage(recipientId) {
                         {
                             "content_type":"text",
                             "title": 'A. '+ qs.choices[0].text,
-                            "payload": qs.choices[0].isAnswer == true ? 'IS_ANSWER' : 'IS_NOT_ANSWER'
+                            "payload": qs.choices[0].isAnswer ? "MC_TRUE" : "MC_FALSE"
                         },
                         {
                             "content_type":"text",
                             "title": 'B. '+ qs.choices[1].text,
-                            "payload": qs.choices[1].isAnswer == true ? 'IS_ANSWER' : 'IS_NOT_ANSWER'
+                            "payload": qs.choices[1].isAnswer ? "MC_TRUE" : "MC_FALSE"
                         },
                         {
                             "content_type":"text",
                             "title": 'C. '+ qs.choices[2].text,
-                            "payload": qs.choices[2].isAnswer == true ? "IS_ANSWER" : "IS_NOT_ANSWER"
-                        },
-                        {
-                            "content_type":"text",
-                            "title": 'Stop learning!',
-                            "payload": "STOP_MULTIPLE_CHOICES"
+                            "payload": qs.choices[2].isAnswer ? "MC_TRUE" : "MC_FALSE"
                         }
                     ]
                 }

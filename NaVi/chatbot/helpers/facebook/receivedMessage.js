@@ -26,13 +26,33 @@ module.exports = function receivedMessage(event) {
     // Can not use metadata === 'MULTIPLE_CHOICES' here?
     // if (quickReply && metadata === 'MULTIPLE_CHOICES') {
     if (quickReply) {
-        if (quickReply.payload === 'IS_ANSWER') {
-            sendFunctions.sendTextMessage(senderID, 'Congrats. You\'re right');
-            return;
+        let payload = quickReply.payload;
+        if (payload) {
+            let action = payload.split('_')[0];
+            let status = payload.split('_')[1];
+            // If action is 'Multiple choices'
+            if (action === 'MC') {
+                if (status === 'TRUE') {
+                    sendFunctions.sendTextMessage(senderID, 'Congrats. You\'re right!');
+                    // gui them 1 cau hoi
+                    return;
+                }
+                else if (status === 'FALSE') {
+                    sendFunctions.sendTextMessage(senderID, 'Oh oh. It\'s not the right answer.');
+                    // dua dap an + cau khac
+                    return;
+                }
+                else if (messageText === 'stop') {
+                    sendFunctions.sendTextMessage(senderID, 'Okay. Multiple choices question stopped.');
+                    return;
+                }
+                else {
+                    console.log(payload);
+                }
+            }
         }
         else {
-            sendFunctions.sendTextMessage(senderID, 'Oh oh. It\'s not the right answer');
-            return;
+            console.log('Pay load is null');
         }
     }
     if (isEcho) {
@@ -40,8 +60,8 @@ module.exports = function receivedMessage(event) {
         console.log("Received echo for message %s and app %d with metadata %s", messageId, appId, metadata);
         return;
     } else if (quickReply) {
-        var quickReplyPayload = quickReply.payload;
-        console.log("Quick reply for message %s with payload %s", messageId, quickReplyPayload);
+        // var quickReplyPayload = quickReply.payload;
+        // console.log("Quick reply for message %s with payload %s", messageId, quickReplyPayload);
 
         sendFunctions.sendTextMessage(senderID, "Quick reply tapped");
         return;
