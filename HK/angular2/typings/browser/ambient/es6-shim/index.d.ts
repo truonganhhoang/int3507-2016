@@ -667,4 +667,5 @@ declare module "es6-shim" {
         function set(target: any, propertyKey: PropertyKey, value: any, receiver?: any): boolean;
         function setPrototypeOf(target: any, proto: any): boolean;
     }
+
 }
