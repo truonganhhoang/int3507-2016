@@ -38,23 +38,27 @@ export class TrainingPage implements OnInit {
   }
 
   isEnd(): boolean {
-    if(this.curNum >= this.words.length - 1) return true;
+    if (this.curNum >= this.words.length - 1) return true;
     return false;
   }
 
   isBegin(): boolean {
-    if(this.curNum <= 0) return true;
+    if (this.curNum <= 0) return true;
     return false;
   }
 
   reload() {
     this.curWord = this.words[this.curNum];
-    this.nativeService.tts(this.curWord['content']);
+    this.speak();
   }
 
   enterFightingPage() {
     this.navCtrl.push(FightingPage, {
       unitId: this.navParams.get('unitId')
     });
+  }
+
+  speak(): void {
+    this.nativeService.tts(this.curWord['content']);
   }
 }
