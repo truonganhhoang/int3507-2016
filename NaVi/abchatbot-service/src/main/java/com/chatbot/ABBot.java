@@ -22,11 +22,7 @@ public class ABBot {
         MagicStrings.default_bot_response = "Tôi chưa hiểu ý bạn";
     }
 
-    public void generateResponse(String inputText) {
-        String botname = "mybot";
-        String path = "/home/trieudh/Desktop/int3507-2016/NaVi/abchatbot-service";
-        Bot bot = new Bot(botname, path);
-        Chat chatSession = new Chat(bot);
+    public void generateResponse(Chat chatSession, String inputText) {
         this.response = chatSession.multisentenceRespond(inputText);
     }
 

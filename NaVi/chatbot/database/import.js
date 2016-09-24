@@ -1,38 +1,79 @@
 'use strict';
 const
     csv = require('fast-csv'),
+    seeder = require('mongoose-seed'),
+    config = require('config'),
+    mongoose = require('mongoose'),
     models = require('../models'),
     Question = models.Question;
 
-console.log('Start importing. Please wait...');
-csv.fromPath('database/raw/multipleChoices.csv').on('data', function (data) {
-    Question.findOne({
-        question: data[0]
-    }, function (err, result) {
-        if (result === null) {
-            Question.create({
-                question: data[0],
-                level: data[1],
-                choices: [
-                    {
-                        text: data[2],
-                        isAnswer: data[5] == 'A'
-                    },
-                    {
-                        text: data[3],
-                        isAnswer: data[5] == 'B'
-                    },
-                    {
-                        text: data[4],
-                        isAnswer: data[5] == 'C'
-                    }
-                ]
-            }, function (err, res) {
-                console.log(res);
-            });
-        }
+const delayTimeToImportData = 5000;
+var questions = [];
+mongoose.Promise = global.Promise;
+
+seeder.connect(config.get('mongodbURL'), function () {
+    console.log('Connected to mongodb');
+    seeder.loadModels([
+        'models/Question.js',
+        'models/UnlearnedQuestion.js',
+        'models/User.js'
+    ]);
+    seeder.clearModels([
+        'Question',
+        'UnlearnedQuestion',
+        'User'
+    ], function () {
+        console.log(`Start importing... Please wait ${delayTimeToImportData/1000} seconds`);
+        csv.fromPath('database/raw/multipleChoices.csv').on('data', function (data) {
+            questions.push(data);
+        }).on('finish', function () {
+            try {
+                importQuestion(questions, function (numberOfImportedQuestions) {
+                    setTimeout(function () {
+                        console.log(`Finish importing: ${numberOfImportedQuestions} questions.`);
+                        process.exit(0);
+                    }, delayTimeToImportData);
+                });
+            }
+            catch (err) {
+                console.log('Error occurs: ', err.message);
+            }
+        });
     });
-}).on('end', function () {
-    console.log('Data successfully imported');
-    process.exit(0);
 });
+
+var importQuestion = function (questions, callback) {
+    for (let i = 0; i < questions.length; i++) {
+        Question.findOne({
+            question: questions[i][0]
+        }, function (err, result) {
+            if (err) {
+                throw new Error('ERROR_FINDING_QUESTION');
+            }
+            else if (result === null) {
+                let qs = new Question({
+                    question: questions[i][0],
+                    level: questions[i][1],
+                    choices: [
+                        {
+                            text: questions[i][2],
+                            isAnswer: questions[i][5] == 'A'
+                        },
+                        {
+                            text: questions[i][3],
+                            isAnswer: questions[i][5] == 'B'
+                        },
+                        {
+                            text: questions[i][4],
+                            isAnswer: questions[i][5] == 'C'
+                        }
+                    ]
+                });
+                qs.save().then(function (savedQs) {
+                    // console.log(savedQs);
+                });
+            }
+        });
+    }
+    callback(questions.length);
+};
