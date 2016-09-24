@@ -1,9 +1,15 @@
 'use strict';
 const
-    mongoose = require('mongoose');
+    mongoose = require('mongoose'),
+    config = require('config');
 
-mongoose.connect('mongodb://localhost/chatbot');
+var mongooseConnect = function () {
+    mongoose.Promise = global.Promise;
+    mongoose.connect(config.get('mongodbURL'), function () {
+        console.log('Connected to mongodb.');
+    });
+};
 
 module.exports  = {
-    Question: require('./question')
+    Question: require('./Question')
 };

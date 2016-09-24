@@ -17,7 +17,7 @@ module.exports = function sendTextMessage(recipientId, messageText) {
             require('./callSendAPI')(messageData);
         });
     }
-    catch (e) {
+    catch (err) {
         require('../../sendConfusionMessage')(recipientId);
     }
 };
