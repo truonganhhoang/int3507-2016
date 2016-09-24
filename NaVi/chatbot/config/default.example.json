@@ -1,7 +1,0 @@
-{
-    "appSecret": "example",
-    "pageAccessToken": "example",
-    "validationToken": "example",
-    "serverURL": "https://example.ngrok.io",
-    "abServiceURL": "http://localhost:8080/myapp/abbot"
-}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<aiml>
+    <category>
+        <pattern>bạn là ai</pattern>
+        <template>Mình là một chat bot giúp bạn học tiếng anh!</template>
+    </category>
+    <category>
+        <pattern>huh</pattern>
+        <that>Mình là một chat bot giúp bạn học tiếng anh!</that>
+        <template>Ồ vậy hả</template>
+    </category>
+</aiml>
