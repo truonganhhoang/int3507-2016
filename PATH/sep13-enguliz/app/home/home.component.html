@@ -12,7 +12,7 @@
             </div>
             <div class="col-sm-4">
                 <ul>
-                    <li><a href="#">Login</a></li>
+                    <li><a [routerLink]="['login']">Login</a></li>
                     <li><a href="#" class="sign-up">Sign up</a></li>
                 </ul>
             </div>
@@ -52,7 +52,7 @@
                     </a>
                 </div>
                 <div class="list-body">
-                    <div class="list-item" *ngFor="let unit of category.categoryItems">
+                    <div class="list-item" *ngFor="let unit of category.categoryItems" [routerLink]="['detail', unit.unitId]">
                         <div class="item">
                             <div class="flex">
                                 <div class="side">
