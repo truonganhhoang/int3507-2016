@@ -1,0 +1,17 @@
+0,XIN CHÀO,*,*,<random>#Newline                <li>Chào bạn!</li>#Newline                <li>Hello</li>#Newline                <li>Chào#Comma ahihi</li>#Newline                <li>Sao thế cậu?</li>#Newline                <li>Ừ tớ nghe</li>#Newline                <li>Hello#Comma it's me.</li>#Newline                <li>Chào bạn! Hôm này trời đẹp nhỉ.</li>#Newline                <li>Chào bạn. Bạn vẫn khỏe chứ?</li>#Newline            </random>,greeting.aiml
+0,_ XIN CHÀO *,*,*,<srai>xin chào</srai>,greeting.aiml
+0,XIN CHÀO *,*,*,<srai>xin chào</srai>,greeting.aiml
+0,HELLO,*,*,<srai>xin chào</srai>,greeting.aiml
+0,_ HELLO *,*,*,<srai>xin chào</srai>,greeting.aiml
+0,HELLO *,*,*,<srai>xin chào</srai>,greeting.aiml
+0,HI,*,*,<srai>xin chào</srai>,greeting.aiml
+0,_ HI *,*,*,<srai>xin chào</srai>,greeting.aiml
+0,HI *,*,*,<srai>xin chào</srai>,greeting.aiml
+0,HEY,*,*,<random>#Newline                <li>Uh tớ nghe</li>#Newline                <li>Ừ sao vậy</li>#Newline                <li>Hả?</li>#Newline            </random>,greeting.aiml
+0,_ HEY *,*,*,<srai>hey</srai>,greeting.aiml
+0,HEY *,*,*,<srai>hey</srai>,greeting.aiml
+0,CÓ GÌ HOT,*,*,<random>#Newline                <li>Chẳng có gì hot cả. Gọi tớ có chuyện gì?</li>#Newline                <li>LOL. Không</li>#Newline                <li>Tớ không có gì "hot"#Comma cậu có gì "hot" không?</li>#Newline            </random>,greeting.aiml
+0,_ CÓ GÌ HOT *,*,*,<srai>có gì hot</srai>,greeting.aiml
+0,CÓ GÌ HOT *,*,*,<srai>có gì hot</srai>,greeting.aiml
+0,_ CÓ GÌ HÓT *,*,*,<srai>có gì hot</srai>,greeting.aiml
+0,CÓ GÌ HÓT *,*,*,<srai>có gì hot</srai>,greeting.aiml
