@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+logs
+*.log
+pids
+node_modules
+.npm
+*.dat
+
