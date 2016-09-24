@@ -9,7 +9,6 @@
                     </form>
                 </div>
 
-
             </div>
             <div class="col-sm-4">
                 <ul>
@@ -40,12 +39,12 @@
             <div class="col-sm-2 partner-logo">
                 <img src="../../images/Duke_University_Logo.png" alt="">
             </div>
-
         </div>
+
         <div class="wapper row">
-            <div class="list row" style="margin-left: 80px;">
+            <div class="list row" style="margin-left: 80px;" *ngFor="let category of categories">
                 <div class="list-header col-sm-11">
-                    <h3>Listening</h3>
+                    <h3>{{category.categoryName}}</h3>
                 </div>
                 <div class="see-all col-sm-1">
                     <a href="">
@@ -53,157 +52,19 @@
                     </a>
                 </div>
                 <div class="list-body">
-                    <div class="list-item">
+                    <div class="list-item" *ngFor="let unit of category.categoryItems">
                         <div class="item">
                             <div class="flex">
                                 <div class="side">
-                                    <div class="image-container"></div>
+                                    <div class="image-container">
+                                        <img alt="" width="100%" height="100%" src="{{unit.unitThumbnail}}">
+                                    </div>
                                     <div class="content">
-                                        <div class="partner-names">John Hopkins University</div>
-                                        <div class="offering-name">Data Science</div>
+                                        <div class="partner-names">{{unit.unitSubTitle}}</div>
+                                        <div class="offering-name">{{unit.unitTitle}}</div>
                                     </div>
                                 </div>
-                                <div class="side-footer">10 course</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="item">
-                            <div class="flex">
-                                <div class="side">
-                                    <div class="image-container"></div>
-                                    <div class="content">
-                                        <div class="partner-names">John Hopkins University</div>
-                                        <div class="offering-name">Data Science</div>
-                                    </div>
-                                </div>
-                                <div class="side-footer">10 course</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="item">
-                            <div class="flex">
-                                <div class="side">
-                                    <div class="image-container"></div>
-                                    <div class="content">
-                                        <div class="partner-names">John Hopkins University</div>
-                                        <div class="offering-name">Data Science</div>
-
-                                    </div>
-                                </div>
-                                <div class="side-footer">10 course</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="item">
-                            <div class="flex">
-                                <div class="side">
-                                    <div class="image-container"></div>
-                                    <div class="content">
-                                        <div class="partner-names">John Hopkins University</div>
-                                        <div class="offering-name">Data Science</div>
-                                    </div>
-                                </div>
-                                <div class="side-footer">10 course</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="item">
-                            <div class="flex">
-                                <div class="side">
-                                    <div class="image-container"></div>
-                                    <div class="content">
-                                        <div class="partner-names">John Hopkins University</div>
-                                        <div class="offering-name">Data Science</div>
-                                    </div>
-                                </div>
-                                <div class="side-footer">10 course</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="list row" style="margin-left: 80px;">
-                <div class="list-header col-sm-11">
-                    <h3>Reading</h3>
-                </div>
-                <div class="see-all col-sm-1">
-                    <a href="">
-
-                    </a>
-                </div>
-                <div class="list-body">
-                    <div class="list-item">
-                        <div class="item">
-                            <div class="flex">
-                                <div class="side">
-                                    <div class="image-container"></div>
-                                    <div class="content">
-                                        <div class="partner-names">John Hopkins University</div>
-                                        <div class="offering-name">Data Science</div>
-                                    </div>
-                                </div>
-                                <div class="side-footer">10 course</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="item">
-                            <div class="flex">
-                                <div class="side">
-                                    <div class="image-container"></div>
-                                    <div class="content">
-                                        <div class="partner-names">John Hopkins University</div>
-                                        <div class="offering-name">Data Science</div>
-                                    </div>
-                                </div>
-                                <div class="side-footer">10 course</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="item">
-                            <div class="flex">
-                                <div class="side">
-                                    <div class="image-container"></div>
-                                    <div class="content">
-                                        <div class="partner-names">John Hopkins University</div>
-                                        <div class="offering-name">Data Science</div>
-                                    </div>
-                                </div>
-                                <div class="side-footer">10 course</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="item">
-                            <div class="flex">
-                                <div class="side">
-                                    <div class="image-container"></div>
-                                    <div class="content">
-                                        <div class="partner-names">John Hopkins University</div>
-                                        <div class="offering-name">Data Science</div>
-                                    </div>
-                                </div>
-                                <div class="side-footer">10 course</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-item">
-                        <div class="item">
-                            <div class="flex">
-                                <div class="side">
-                                    <div class="image-container"></div>
-                                    <div class="content">
-                                        <div class="partner-names">John Hopkins University</div>
-                                        <div class="offering-name">Data Science</div>
-                                    </div>
-                                </div>
-                                <div class="side-footer">10 course</div>
+                                <div class="side-footer">Lượt xem: {{unit.unitViews}}</div>
                             </div>
                         </div>
                     </div>
