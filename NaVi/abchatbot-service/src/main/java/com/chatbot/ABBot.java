@@ -1,4 +1,4 @@
-package com.example;
+package com.chatbot;
 
 /**
  * Created by trieudh on 24/09/2016.

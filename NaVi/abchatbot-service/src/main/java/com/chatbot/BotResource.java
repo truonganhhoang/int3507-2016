@@ -1,6 +1,4 @@
-package com.example;
-
-import org.alicebot.ab.AB;
+package com.chatbot;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
