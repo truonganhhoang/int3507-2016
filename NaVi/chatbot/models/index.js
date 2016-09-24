@@ -11,5 +11,7 @@ var mongooseConnect = function () {
 };
 
 module.exports  = {
-    Question: require('./Question')
+    Question: require('./Question'),
+    User: require('./User'),
+    UnlearnedQuestion: require('./UnlearnedQuestion')
 };
