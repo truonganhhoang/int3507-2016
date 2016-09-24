@@ -2,26 +2,17 @@
 var Question = require('../../models').Question;
 
 module.exports = function sendButtonMessage(recipientId) {
-    var errorMessage = {
-        recipient: {
-            id: recipientId
-        },
-        message: {
-            text: 'Sorry. Something\' wrong!',
-            metadata: "MULTIPLE_CHOICES"
-        }
-    };
     Question.findOne({
         level: Math.floor(Math.random() * 4) + 1
     }, function (err, qs) {
         if (err) {
-            require('../facebook/sendFunctions/callSendAPI')(errorMessage);
+            require('../sendErrorMessage')(recipientId);
         }
         else if (!qs) {
-            require('../facebook/sendFunctions/callSendAPI')(errorMessage);
+            let errorText = "Xin lỗi. Mình chưa thể tìm thấy câu hỏi trắc nghiệm nào cho bạn.";
+            require('../sendErrorMessage')(recipientId, errorText);
         }
         else {
-            console.log(qs);
             var messageData = {
                 recipient: {
                     id: recipientId

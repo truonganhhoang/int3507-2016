@@ -19,6 +19,6 @@ public class BotResource {
         ABBot bot = new ABBot();
         bot.generateResponse(text);
 
-        return Response.status(Response.Status.FOUND).entity(bot.toString()).build();
+        return Response.ok().entity(bot.toString()).build();
     }
 }

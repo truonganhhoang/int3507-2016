@@ -4,8 +4,8 @@ const
     models = require('../models'),
     Question = models.Question;
 
+console.log('Start importing. Please wait...');
 csv.fromPath('database/raw/multipleChoices.csv').on('data', function (data) {
-    console.log('Start importing. Please wait...');
     Question.findOne({
         question: data[0]
     }, function (err, result) {
