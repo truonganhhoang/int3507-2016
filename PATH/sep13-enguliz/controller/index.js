@@ -11,6 +11,10 @@ router.get('/home', function(req, res) {
     resp.error = 0;
     resp.message = "";
 
+    var baseUrl = req.protocol + '://' + req.get('host');
+
+    console.log(baseUrl);
+
     db.fetchAll(Collect.category, (categories) => {
         var respCategories = [];
         Array.from(categories).forEach((x) => {
@@ -27,7 +31,7 @@ router.get('/home', function(req, res) {
                         unit.unitSubTitle,
                         unit.unitThumbnail,
                         unit.unitViews,
-                        ""));
+                        baseUrl + "/details?u_ref=" + unit._id));
                 });
                 category.categoryItems = respUnits;
                 callback();
