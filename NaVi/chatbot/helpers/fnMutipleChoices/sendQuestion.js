@@ -1,18 +1,42 @@
 'use strict';
-var Question = require('../../models').Question;
+const
+    mongoose = require('mongoose'),
+    models = require('../../models');
 
 module.exports = function sendButtonMessage(recipientId) {
-    Question.findOne({
-        level: Math.floor(Math.random() * 4) + 1
-    }, function (err, qs) {
-        if (err) {
-            require('../sendErrorMessage')(recipientId);
-        }
-        else if (!qs) {
+    var userId = recipientId;
+
+    function createNewUserWithQuestions(userId) {
+        models.User.create({
+            userId: userId
+        }, function (err, result) {
+            console.log(result);
+        });
+
+        models.Question.find({}, function(err, result) {
+            if (result) {
+                ids = [];
+                for (i=0; i < result.length; i++) {
+                    ids.push({questionId: result._id});
+                }
+                models.UnlearnedQuestion.create({
+                    userId: userId,
+                    questionIds: ids
+                }, function (err, result) {
+                    // return 1 question for user
+                    getOneQuestion(result);
+                });
+            }
+        });
+    };
+
+    function getOneQuestion(unlearnedQuestion) {
+        if (unlearnedQuestion.questionIds.length == 0) {
             let errorText = "Xin lỗi. Mình chưa thể tìm thấy câu hỏi trắc nghiệm nào cho bạn.";
             require('../sendErrorMessage')(recipientId, errorText);
-        }
-        else {
+        } else {
+            idx = Math.floor(Math.random() * unlearnedQuestion.questionIds.length);
+            qs = unlearnedQuestion.questionIds[idx];
             var messageData = {
                 recipient: {
                     id: recipientId
@@ -40,6 +64,22 @@ module.exports = function sendButtonMessage(recipientId) {
             };
 
             require('../facebook/sendFunctions/callSendAPI')(messageData);
+        }
+    };
+
+    models.UnlearnedQuestion.findOne({
+        userId: userId
+    }, function (err, result) {
+        if (err) {
+            require('../sendErrorMessage')(recipientId);
+        }
+        else if (!result) {
+            // new user
+            console.log('new user');
+            createNewUserWithQuestions(userId);
+        }
+        else {
+            getOneQuestion(result);
         }
     });
 };

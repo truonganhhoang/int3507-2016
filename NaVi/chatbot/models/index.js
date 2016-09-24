@@ -5,5 +5,7 @@ const
 mongoose.connect('mongodb://localhost/chatbot');
 
 module.exports  = {
-    Question: require('./question')
+    Question: require('./Question'),
+    User: require('./User'),
+    UnlearnedQuestion: require('./UnlearnedQuestion')
 };

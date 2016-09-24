@@ -34,16 +34,44 @@ module.exports = function receivedMessage(event) {
             if (action === 'MC') {
                 if (status === 'TRUE') {
                     sendFunctions.sendTextMessage(senderID, 'Congrats. You\'re right!');
-                    // gui them 1 cau hoi
+                    // remove question from user's unlearned questions
+                    models.Question.findOne({
+                        question: messageText
+                    }, function (err, qs) {
+                        if (qs) {
+                            qs_id = qs._id;
+                            models.UnlearnedQuestion.findOne({
+                                userId: senderID
+                            }, function (err, result) {
+                                for (i=0; i < result.questionIds.length; i++) {
+                                    if (result.questionIds[i].questionId == qs_id) {
+                                        result.questionIds.splice(i, 1);
+                                    }
+                                }
+                            });
+                        }
+                    });
+                    // send new question
+                    require('../fnMutipleChoices/sendQuestion')(senderID);
                     return;
                 }
                 else if (status === 'FALSE') {
                     sendFunctions.sendTextMessage(senderID, 'Oh oh. It\'s not the right answer.');
-                    // dua dap an + cau khac
-                    return;
-                }
-                else if (messageText === 'stop') {
-                    sendFunctions.sendTextMessage(senderID, 'Okay. Multiple choices question stopped.');
+                    // return the answer
+                    models.Question.findOne({
+                        question: messageText
+                    }, function (err, qs) {
+                        if (qs) {
+                            for (i = 0; i < qs.choices.length; i++) {
+                                if (qs.choices[i].isAnswer) {
+                                    sendFunctions.sendTextMessage(senderID, "The answer is " + qs.choices[i].text);
+                                    break;
+                                }
+                            }
+                        }
+                    });
+                    // send new question
+                    require('../fnMutipleChoices/sendQuestion')(senderID);
                     return;
                 }
                 else {
