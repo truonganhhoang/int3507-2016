@@ -15,17 +15,18 @@ class MyApp {
 
   rootPage: any = BookPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
 
   constructor(public platform: Platform) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Books', component: BookPage },
-      { title: 'Page uno', component: Page1 },
-      { title: 'Page dos', component: Page2 },
-      { title: 'Help & Feedback', component: BookPage }
+      { title: 'Books', component: BookPage, icon: 'book' },
+      { title: 'Page uno', component: Page1, icon: 'copy' },
+      { title: 'Page dos', component: Page2, icon: 'copy' },
+      { title: 'Help & Feedback', component: BookPage, icon: 'help-buoy' },
+      { title: 'Settings', component: BookPage, icon: 'settings' }
     ];
   }
 

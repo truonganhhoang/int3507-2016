@@ -14,6 +14,7 @@ import { UnitService } from '../../services/unit.service';
   templateUrl: 'build/pages/unit/unit.html',
   providers: [ UnitService ],
 })
+
 export class UnitPage {
   units: Object[];
   // test: any;

@@ -1,12 +1,13 @@
 <ion-menu [content]="content">
 
   <ion-toolbar primary style="background:">
-    <ion-title style="height:150px">SachMem</ion-title>
+    <ion-title style="height:180px">SachMem</ion-title>
   </ion-toolbar>
 
   <ion-content>
-    <ion-list inset>
+    <ion-list inset no-lines>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon name="{{p.icon}}" item-left></ion-icon>
         {{p.title}}
       </button>
     </ion-list>

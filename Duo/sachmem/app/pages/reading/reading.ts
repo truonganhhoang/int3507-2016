@@ -23,10 +23,9 @@ export class ReadingPage implements OnInit{
   ngOnInit() { }
 
   ngOnChanges(event) {
-    if (this.allWords.length < 5) {
-      var NO_OF_ANS = this.allWords.length;
-    } else {
-      var NO_OF_ANS = 5;
+    let NO_OF_ANS = 4;
+    if (this.allWords.length < NO_OF_ANS) {
+      NO_OF_ANS = this.allWords.length;
     }
 
     // Tạo mảng các từ sai
@@ -56,7 +55,7 @@ export class ReadingPage implements OnInit{
     if (item['id'] == this.curWord['id']) {
       this.onCorrect.emit(true);
       this.nativeService.playAudio('correct');
-      this.nativeService.tts(this.curWord);
+      this.nativeService.tts(this.curWord['content']);
     } else {
       this.onCorrect.emit(false);
       this.nativeService.playAudio('wrong');

@@ -1,8 +1,9 @@
-<!-- <ion-grid>
-  <ion-row>
-    <ion-col width-50>This column will take 10% of space</ion-col>
-    <ion-col width-50>This column will take 10% of space</ion-col>
-    <ion-col width-50>This column will take 10% of space</ion-col>
+<ion-grid>
+  <ion-row wrap>
+    <ion-col width-50 *ngFor="let item of answers">
+      <button block outline (click)="checkAnswer(item)" style="white-space:initial">
+        {{item.content}}
+      </button>
+    </ion-col>
   </ion-row>
-</ion-grid> -->
-<button block *ngFor="let item of answers" (click)="checkAnswer(item)">{{item.content}}</button> 
+</ion-grid>

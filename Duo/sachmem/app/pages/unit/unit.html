@@ -5,19 +5,20 @@
     </button>
     <ion-title>Unit</ion-title>
   </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  <ion-grid>
+  <ion-grid style="background:#387ef5">
     <ion-row>
       <ion-col width-50>
-        <button [disabled]="!selectedUnit" (click)="enterTraining()" round block>Training</button>
+        <button [disabled]="!selectedUnit" (click)="enterTraining()" block light>Training</button>
       </ion-col>
       <ion-col width-50>  
-        <button [disabled]="!selectedUnit" (click)="enterFighting()" round block>Fighting</button>
+        <button [disabled]="!selectedUnit" (click)="enterFighting()" block light>Fighting</button>
       </ion-col>
     </ion-row>
   </ion-grid>
+</ion-header>
+
+<ion-content padding>
   <ion-list radio-group [(ngModel)]="selectedUnit">
     <ion-item *ngFor="let item of units">
       <ion-label>{{item.name}}</ion-label>

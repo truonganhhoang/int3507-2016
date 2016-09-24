@@ -5,11 +5,19 @@
     </button>
     <ion-title>Books</ion-title>
   </ion-navbar>
+
+  <ion-segment [(ngModel)]="segment" style="background:#387ef5">
+    <ion-segment-button value="all" style="color:white">
+      Recommendation
+    </ion-segment-button>
+    <ion-segment-button value="your" style="color:white">
+      Your books
+    </ion-segment-button>
+  </ion-segment>
 </ion-header>
 
-
-<ion-content>
-  <ion-list>
+<ion-content [ngSwitch]="segment">
+  <ion-list no-lines *ngSwitchCase="'all'" >
     <ion-item *ngFor="let item of books" (click)="enter(item)">
       <ion-thumbnail item-left>
         <img src="{{item.cover}}" style="max-height:20rem">

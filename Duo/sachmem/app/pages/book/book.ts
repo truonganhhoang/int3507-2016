@@ -12,6 +12,7 @@ import { Book } from '../../entities/book';
 
 export class BookPage {
   books: Book[];
+  segment: string = 'all';
 
   constructor(private navCtrl: NavController, private bookService: BookService) {
     this.bookService.getBooks().then(res => {

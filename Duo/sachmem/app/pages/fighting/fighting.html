@@ -12,15 +12,17 @@
 
 <ion-content *ngIf="curWord">
   <ion-card>
-    <button fab fab-right fab-top outline>
+    <img src="img/advance-card-map-madison.png">
+    <button fab fab-right fab-top>
       <ion-icon name="book"></ion-icon>
     </button>
+
     <ion-card-header>
       <h1 primary style="margin-right:20%;white-space:initial;font-weight:bold;font-size:2em">{{curWord.meaning}}</h1>
     </ion-card-header>
     <ion-card-content>
       <div *ngIf="selectedGame == 'r'">
-        <reading-page [curWord]="curWord" [allWords]="allWords"  (onCorrect)="onCorrect($event)"></reading-page>
+        <reading-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></reading-page>
       </div>
     </ion-card-content>
   </ion-card>
