@@ -3,8 +3,11 @@ const
     abResponse = require('../../abchatbot/getResponse');
 
 module.exports = function sendTextMessage(recipientId, messageText) {
-    try {
-        abResponse(messageText, function (responseFromABBot) {
+    abResponse(messageText, function (err, responseFromABBot) {
+        if (err) {
+            require('../../sendErrorMessage')(recipientId);
+        }
+        else {
             var messageData = {
                 recipient: {
                     id: recipientId
@@ -15,9 +18,6 @@ module.exports = function sendTextMessage(recipientId, messageText) {
                 }
             };
             require('./callSendAPI')(messageData);
-        });
-    }
-    catch (err) {
-        require('../../sendConfusionMessage')(recipientId);
-    }
+        }
+    });
 };
