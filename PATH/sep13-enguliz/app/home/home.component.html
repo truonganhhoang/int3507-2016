@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="title-header">
+        <h3>Listening</h3>
+    </div>
+    <div class="content">
+        <div class="card-view" *ngFor="let item of listens">
+            <a href="">
+                <img width="97%" height="60%" style="margin-bottom: 10px;" src="{{item.lessonThumbnail}}"><br>
+                <span> <strong>{{item.lessonName}} </strong></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="title-header">
+        <h3>Speaking</h3>
+    </div>
+    <div class="content">
+        <div class="card-view" *ngFor="let item of listens">
+            <a href="">
+                <img width="97%" height="50%" style="margin-bottom: 10px;" src="{{item.lessonThumbnail}}"><br>
+                <span> <strong>{{item.lessonName}} </strong></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="title-header">
+        <h3>Reading</h3>
+    </div>
+    <div class="content">
+        <div class="card-view" *ngFor="let item of listens">
+            <a href="">
+                <img width="97%" height="50%" style="margin-bottom: 10px;" src="{{item.lessonThumbnail}}"><br>
+                <span> <strong>{{item.lessonName}} </strong></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="title-header">
+        <h3>Writing</h3>
+    </div>
+    <div class="content">
+        <div class="card-view" *ngFor="let item of listens">
+            <a href="">
+                <img width="97%" height="50%" style="margin-bottom: 10px;" src="{{item.lessonThumbnail}}"><br>
+                <span> <strong>{{item.lessonName}} </strong></span>
+            </a>
+        </div>
+    </div>
+
+    <div class="title-header">
+        <h3>Grammar</h3>
+    </div>
+    <div class="content">
+        <div class="card-view" *ngFor="let item of listens">
+            <a href="">
+                <img width="97%" height="50%" style="margin-bottom: 10px;" src="{{item.lessonThumbnail}}"><br>
+                <span> <strong>{{item.lessonName}} </strong></span>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <span>Accesstoken: {{auth_token}}</span>
+</footer>
