@@ -13,15 +13,24 @@ import { HelperService } from '../../services/helper.service';
   inputs: [ 'curWord', 'allWords' ],
   animations: [
     trigger('answerState', [
+      state('void', style({
+        transform: 'scale(0)',
+      })),
       state('right',   style({
-        backgroundColor: '#2196f3',
+        backgroundColor: '#4caf50',
+        borderColor: '#4caf50',
         color: 'white',
+        // boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+        // transform: 'scale(1.1)'
       })),
       state('wrong',   style({
         backgroundColor: '#f44336',
         color: 'white',
         borderColor: '#f44336',
       })),
+      transition('void => *', [
+        animate('200ms ease-out', style({transform: 'scale(1)'}))
+      ]),
     ])
   ]
 })
