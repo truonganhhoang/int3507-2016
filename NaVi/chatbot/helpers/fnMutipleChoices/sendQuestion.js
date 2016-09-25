@@ -13,7 +13,8 @@ module.exports = function (recipientId) {
         }
         else {
             if (user.unlearnedQuestions.length == 0) {
-                require('../sendConfusionMessage')(recipientId);
+                let allQuestionLearnedMessage = 'Bạn đã học hết tất cả các câu hỏi rồi. Đợi chúng mình cập nhật thêm nhé!';
+                require('../sendErrorMessage')(recipientId, allQuestionLearnedMessage);
             }
             else {
                 getOneQuestion(user.unlearnedQuestions, recipientId);

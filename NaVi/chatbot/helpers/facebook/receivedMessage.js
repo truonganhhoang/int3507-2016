@@ -47,7 +47,7 @@ module.exports = function receivedMessage(event) {
                             console.log(err);
                         }
                         else {
-                            sendFunctions.sendTextMessage(senderID, 'Well done! Next question:', function () {
+                            sendFunctions.sendTextMessage(senderID, 'Chính xác! Đang tải câu hỏi tiếp theo...', function () {
                                 // send new question
                                 require('../fnMutipleChoices/sendQuestion')(senderID);
                             });
@@ -56,7 +56,7 @@ module.exports = function receivedMessage(event) {
                 }
                 else if (status === 'FALSE') {
                     // return the answer
-                    sendFunctions.sendTextMessage(senderID, "Wrong. The answer is \"" + rightAnswer + "\". Next question: ", function () {
+                    sendFunctions.sendTextMessage(senderID, "Sai. Đáp án là: \"" + rightAnswer + "\". Đang tải câu hỏi tiếp theo...", function () {
                         // send new question
                         require('../fnMutipleChoices/sendQuestion')(senderID);
                     });
@@ -69,7 +69,7 @@ module.exports = function receivedMessage(event) {
 
     else if (messageText) {
         switch (messageText) {
-            case 'mc':
+            case 'làm trắc nghiệm':
                 require('../fnMutipleChoices/sendQuestion')(senderID);
                 break;
 
