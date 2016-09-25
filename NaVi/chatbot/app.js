@@ -7,7 +7,8 @@ const
     verifyRequestSignature = require('./middlewares/verifyRequestSignature'),
     env = require('./helpers/env'),
     controllers = require('./controllers'),
-    facebook = controllers.facebook;
+    facebook = controllers.facebook,
+    models = require('./models');
 
 var app = express();
 app.set('port', process.env.PORT || 3000);
@@ -27,5 +28,6 @@ app.get('/authorize', facebook.getAuthorize);
 // Start node server
 app.listen(app.get('port'), function() {
     console.log('Node app is running on port', app.get('port'));
+    models.mongooseConnect();
 });
 

@@ -4,11 +4,18 @@ const
     Schema = mongoose.Schema;
 
 var User = new Schema({
-    userId: {
+    facebookId: {
         type: String,
         require: true,
         unique: true
-    }
+    },
+    unlearnedQuestions: [{
+        _id: false,
+        questionId: {
+            type: Schema.Types.ObjectId,
+            ref: 'Question'
+        }
+    }]
 }, {
     timestamps: false,
     versionKey: false

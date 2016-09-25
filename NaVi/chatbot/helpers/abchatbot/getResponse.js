@@ -12,8 +12,10 @@ module.exports = function (message, callback) {
         method: 'GET'
     }, function (err, response, body) {
         if (err || response.statusCode !== 200) {
-            throw new Error("ABCHATBOT_SERVICE_ERROR");
+            callback(err);
         }
-        callback(JSON.parse(body).botResponse);
+        else {
+            callback(null, JSON.parse(body).botResponse);
+        }
     });
 };
