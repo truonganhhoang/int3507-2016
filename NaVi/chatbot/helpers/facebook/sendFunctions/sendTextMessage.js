@@ -4,8 +4,11 @@ const
 
 module.exports = function sendTextMessage(recipientId, messageText) {
     abResponse(messageText, function (err, responseFromABBot) {
-        if (err) {
+        if (err || responseFromABBot == 'ABBOT_ERROR') {
             require('../../sendErrorMessage')(recipientId);
+        }
+        else if (responseFromABBot === 'ABBOT_CONFUSION') {
+            require('../../sendConfusionMessage')(recipientId);
         }
         else {
             var messageData = {
