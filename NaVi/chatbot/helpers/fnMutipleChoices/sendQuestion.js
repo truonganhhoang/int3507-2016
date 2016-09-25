@@ -44,14 +44,14 @@ module.exports = function (recipientId) {
         });
     };
 
-    function getOneQuestion(unlearnedQuestion, recipientId) {
-        if (unlearnedQuestion.length == 0) {
+    function getOneQuestion(unlearnedQuestions, recipientId) {
+        if (unlearnedQuestions.length == 0) {
             let errorText = "Xin lỗi. Mình chưa thể tìm thấy câu hỏi trắc nghiệm nào cho bạn.";
             require('../sendErrorMessage')(recipientId, errorText);
         } else {
             // get a random question in unlearned question set
-            var idx = Math.floor(Math.random() * unlearnedQuestion.length);
-            var qs = unlearnedQuestion[idx];
+            var idx = Math.floor(Math.random() * unlearnedQuestions.length);
+            var qs = unlearnedQuestions[idx];
             models.Question.findOne({
                 _id: qs.questionId
             }, function (err, question) {
@@ -62,7 +62,7 @@ module.exports = function (recipientId) {
                     rightAnswer = '_B. ' + question.choices[1].text;
                 }
                 else if (question.choices[2].isAnswer) {
-                    rightAnswer = '_B. ' + question.choices[1].text;
+                    rightAnswer = '_C. ' + question.choices[2].text;
                 }
                 var mcTrue = "MC_TRUE_" + question._id + rightAnswer;
                 var mcFalse = "MC_FALSE_" + question._id + rightAnswer;

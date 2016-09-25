@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function sendTextMessage(recipientId, messageText) {
+module.exports = function sendTextMessage(recipientId, messageText, callback) {
     var messageData = {
         recipient: {
             id: recipientId
@@ -10,5 +10,12 @@ module.exports = function sendTextMessage(recipientId, messageText) {
             metadata: "DEVELOPER_DEFINED_METADATA"
         }
     };
-    require('./callSendAPI')(messageData);
+    require('./callSendAPI')(messageData, function (err) {
+        if (!err) {
+            if (callback) {
+                console.log('Callback is called');
+                callback(null);
+            }
+        }
+    });
 };

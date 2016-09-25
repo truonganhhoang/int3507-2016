@@ -9,9 +9,9 @@ module.exports = function receivedMessage(event) {
     var timeOfMessage = event.timestamp;
     var message = event.message;
 
-    // console.log("Received message for user %d and page %d at %d with message:",
-    //     senderID, recipientID, timeOfMessage);
-    // console.log(JSON.stringify(message));
+    console.log("Received message for user %d and page %d at %d with message:",
+        senderID, recipientID, timeOfMessage);
+    console.log(JSON.stringify(message));
 
     var isEcho = message.is_echo;
     var messageId = message.mid;
@@ -36,18 +36,32 @@ module.exports = function receivedMessage(event) {
             // If action is 'Multiple choices'
             if (action === 'MC') {
                 if (status === 'TRUE') {
-                    sendFunctions.sendTextMessage(senderID, 'Well done! Next question:');
-
-                    // remove question from user's unlearned questions
-
-                    // send new question
-                    require('../fnMutipleChoices/sendQuestion')(senderID);
+                    models.User.update({
+                        $pull: {
+                            unlearnedQuestions: {
+                                questionId: qId
+                            }
+                        }
+                    }).exec(function (err) {
+                        if (err) {
+                            console.log(err);
+                        }
+                        else {
+                            sendFunctions.sendTextMessage(senderID, 'Well done! Next question:', function () {
+                                // send new question
+                                require('../fnMutipleChoices/sendQuestion')(senderID);
+                            });
+                        }
+                    });
                 }
                 else if (status === 'FALSE') {
                     // return the answer
-                    sendFunctions.sendTextMessage(senderID, "Wrong. The answer is \"" + rightAnswer + "\". Next question: ");
+                    sendFunctions.sendTextMessage(senderID, "Wrong. The answer is \"" + rightAnswer + "\". Next question: ", function () {
+                        // send new question
+                        require('../fnMutipleChoices/sendQuestion')(senderID);
+                    });
                     // send new question
-                    require('../fnMutipleChoices/sendQuestion')(senderID);
+                    // require('../fnMutipleChoices/sendQuestion')(senderID);
                 }
             }
         }
