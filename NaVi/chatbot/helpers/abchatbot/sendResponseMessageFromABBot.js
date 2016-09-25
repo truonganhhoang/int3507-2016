@@ -1,14 +1,14 @@
 'use strict';
 const
-    abResponse = require('../../abchatbot/getResponse');
+    abResponse = require('./getResponse');
 
 module.exports = function sendTextMessage(recipientId, messageText) {
     abResponse(messageText, function (err, responseFromABBot) {
         if (err || responseFromABBot == 'ABBOT_ERROR') {
-            require('../../sendErrorMessage')(recipientId);
+            require('../sendErrorMessage')(recipientId);
         }
         else if (responseFromABBot === 'ABBOT_CONFUSION') {
-            require('../../sendConfusionMessage')(recipientId);
+            require('../sendConfusionMessage')(recipientId);
         }
         else {
             var messageData = {
@@ -20,7 +20,7 @@ module.exports = function sendTextMessage(recipientId, messageText) {
                     metadata: "DEVELOPER_DEFINED_METADATA"
                 }
             };
-            require('./callSendAPI')(messageData);
+            require('../facebook/sendFunctions/callSendAPI')(messageData);
         }
     });
 };
