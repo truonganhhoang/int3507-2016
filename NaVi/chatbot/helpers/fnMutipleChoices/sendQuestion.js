@@ -4,82 +4,103 @@ const
     models = require('../../models');
 
 module.exports = function sendButtonMessage(recipientId) {
-    var userId = recipientId;
+    // find unlearned question of "recipientId"
+    models.UnlearnedQuestion.findOne({
+        userId: recipientId
+    }, function (err, uQuestion) {
+        if (err) {
+            require('../sendErrorMessage')(recipientId);
+        }
+        else if (!uQuestion) {
+            console.log("Creating new user.");
+            createNewUserWithQuestions(recipientId);
+        }
+        else {
+            getOneQuestion(uQuestion, recipientId);
+        }
+    });
 
-    function createNewUserWithQuestions(userId) {
+    function createNewUserWithQuestions(recipientId) {
         models.User.create({
-            userId: userId
-        }, function (err, result) {
-            console.log(result);
-        });
+            _id: recipientId
+        }, function (err, user) {
+            if (err) {
+                console.log(err);
+            }
+            else if (user) {
+                console.log("New user created.");
 
-        models.Question.find({}, function(err, result) {
-            if (result) {
-                ids = [];
-                for (i=0; i < result.length; i++) {
-                    ids.push({questionId: result._id});
-                }
-                models.UnlearnedQuestion.create({
-                    userId: userId,
-                    questionIds: ids
-                }, function (err, result) {
-                    // return 1 question for user
-                    getOneQuestion(result);
+                // get all available questions' ids to push into user's unlearned questions
+                models.Question.find({}, function(err, questions) {
+                    if (questions) {
+                        var ids = [];
+                        for (var i=0; i < questions.length; i++) {
+                            ids.push({questionId: questions[i]._id});
+                        }
+                        console.log("Creating unlearned question set for new user.");
+                        models.UnlearnedQuestion.create({
+                            userId: recipientId,
+                            questionIds: ids
+                        }, function (err, result) {
+                            if (err) {
+                                console.log(err);
+                            }
+                            else if (result) {
+                                console.log("Unlearned question set for new user created.");
+                                // return 1 question for user
+                                getOneQuestion(result, recipientId);
+                            }
+                        });
+                    }
                 });
             }
         });
     };
 
-    function getOneQuestion(unlearnedQuestion) {
+    function getOneQuestion(unlearnedQuestion, recipientId) {
         if (unlearnedQuestion.questionIds.length == 0) {
             let errorText = "Xin lỗi. Mình chưa thể tìm thấy câu hỏi trắc nghiệm nào cho bạn.";
             require('../sendErrorMessage')(recipientId, errorText);
         } else {
-            idx = Math.floor(Math.random() * unlearnedQuestion.questionIds.length);
-            qs = unlearnedQuestion.questionIds[idx];
-            var messageData = {
-                recipient: {
-                    id: recipientId
-                },
-                message: {
-                    text: qs.question,
-                    quick_replies: [
-                        {
-                            "content_type":"text",
-                            "title": 'A. '+ qs.choices[0].text,
-                            "payload": qs.choices[0].isAnswer ? "MC_TRUE" : "MC_FALSE"
-                        },
-                        {
-                            "content_type":"text",
-                            "title": 'B. '+ qs.choices[1].text,
-                            "payload": qs.choices[1].isAnswer ? "MC_TRUE" : "MC_FALSE"
-                        },
-                        {
-                            "content_type":"text",
-                            "title": 'C. '+ qs.choices[2].text,
-                            "payload": qs.choices[2].isAnswer ? "MC_TRUE" : "MC_FALSE"
-                        }
-                    ]
-                }
-            };
+            // get a random question in unlearned question set
+            var idx = Math.floor(Math.random() * unlearnedQuestion.questionIds.length);
+            var qs = unlearnedQuestion.questionIds[idx];
+            models.Question.findOne({
+                _id: qs.questionId
+            }, function (err, question) {
+                // append question's id to payload to know which question the user
+                // answered to later
+                var mcTrue = "MC_TRUE_" + question._id;
+                var mcFalse = "MC_FALSE_" + question._id;
 
-            require('../facebook/sendFunctions/callSendAPI')(messageData);
+                var messageData = {
+                    recipient: {
+                        id: recipientId
+                    },
+                    message: {
+                        text: question.question,
+                        quick_replies: [
+                            {
+                                "content_type":"text",
+                                "title": 'A. '+ question.choices[0].text,
+                                "payload": question.choices[0].isAnswer ? mcTrue : mcFalse
+                            },
+                            {
+                                "content_type":"text",
+                                "title": 'B. '+ question.choices[1].text,
+                                "payload": question.choices[1].isAnswer ? mcTrue : mcFalse
+                            },
+                            {
+                                "content_type":"text",
+                                "title": 'C. '+ question.choices[2].text,
+                                "payload": question.choices[2].isAnswer ? mcTrue : mcFalse
+                            }
+                        ]
+                    }
+                };
+
+                require('../facebook/sendFunctions/callSendAPI')(messageData);
+            });
         }
     };
-
-    models.UnlearnedQuestion.findOne({
-        userId: userId
-    }, function (err, result) {
-        if (err) {
-            require('../sendErrorMessage')(recipientId);
-        }
-        else if (!result) {
-            // new user
-            console.log('new user');
-            createNewUserWithQuestions(userId);
-        }
-        else {
-            getOneQuestion(result);
-        }
-    });
 };

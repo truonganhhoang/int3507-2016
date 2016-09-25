@@ -30,22 +30,25 @@ module.exports = function receivedMessage(event) {
         if (payload) {
             let action = payload.split('_')[0];
             let status = payload.split('_')[1];
+            let qId = payload.split('_')[2];  // question's id
             // If action is 'Multiple choices'
             if (action === 'MC') {
                 if (status === 'TRUE') {
                     sendFunctions.sendTextMessage(senderID, 'Congrats. You\'re right!');
+
                     // remove question from user's unlearned questions
                     models.Question.findOne({
-                        question: messageText
+                        _id: qId
                     }, function (err, qs) {
                         if (qs) {
-                            qs_id = qs._id;
+                            var qs_id = qs._id;
                             models.UnlearnedQuestion.findOne({
                                 userId: senderID
                             }, function (err, result) {
-                                for (i=0; i < result.questionIds.length; i++) {
+                                for (var i=0; i < result.questionIds.length; i++) {
                                     if (result.questionIds[i].questionId == qs_id) {
                                         result.questionIds.splice(i, 1);
+                                        result.save();
                                     }
                                 }
                             });
@@ -59,10 +62,10 @@ module.exports = function receivedMessage(event) {
                     sendFunctions.sendTextMessage(senderID, 'Oh oh. It\'s not the right answer.');
                     // return the answer
                     models.Question.findOne({
-                        question: messageText
+                        _id: qId
                     }, function (err, qs) {
                         if (qs) {
-                            for (i = 0; i < qs.choices.length; i++) {
+                            for (var i = 0; i < qs.choices.length; i++) {
                                 if (qs.choices[i].isAnswer) {
                                     sendFunctions.sendTextMessage(senderID, "The answer is " + qs.choices[i].text);
                                     break;

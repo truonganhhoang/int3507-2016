@@ -5,7 +5,7 @@ const
 
 var UnlearnedQuestion = new Schema({
     userId: {
-        type: Schema.Types.ObjectId,
+        type: String,
         ref: 'User',
         unique: true
     },
