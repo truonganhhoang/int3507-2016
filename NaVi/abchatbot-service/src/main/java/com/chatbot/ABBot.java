@@ -19,7 +19,8 @@ public class ABBot {
 
     ABBot() {
         MagicStrings.root_path = "/";
-        MagicStrings.default_bot_response = "Tôi chưa hiểu ý bạn";
+        MagicStrings.default_bot_response = "ABBOT_CONFUSION";
+        MagicStrings.error_bot_response = "ABBOT_ERROR";
     }
 
     public void generateResponse(Chat chatSession, String inputText) {
