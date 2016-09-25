@@ -74,7 +74,7 @@ export class FightingPage implements OnInit {
     }
   }
   
-  onCorrect(correct: boolean) {
+  onCorrect(correct: boolean): void {
     if (correct) {
       this.next();    
     }

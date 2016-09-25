@@ -1,4 +1,6 @@
-import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output, OnChanges, SimpleChange,
+         trigger, state, style, transition, animate
+       } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { NativeService } from '../../services/native.service';
@@ -8,10 +10,23 @@ import { HelperService } from '../../services/helper.service';
   selector: 'reading-page',
   templateUrl: 'build/pages/reading/reading.html',
   providers: [ NativeService ],
-  inputs: [ 'curWord', 'allWords' ]
+  inputs: [ 'curWord', 'allWords' ],
+  animations: [
+    trigger('answerState', [
+      state('right',   style({
+        backgroundColor: '#2196f3',
+        color: 'white',
+      })),
+      state('wrong',   style({
+        backgroundColor: '#f44336',
+        color: 'white',
+        borderColor: '#f44336',
+      })),
+    ])
+  ]
 })
 
-export class ReadingPage implements OnInit{
+export class ReadingPage implements OnInit, OnChanges {
   // Biến trả về cho fighting, khi đúng thì gọi hàm next()
   @Output() onCorrect = new EventEmitter<boolean>();
   allWords: Object[];
@@ -22,7 +37,7 @@ export class ReadingPage implements OnInit{
 
   ngOnInit() { }
 
-  ngOnChanges(event) {
+  ngOnChanges(changes:{[propKey: string]: SimpleChange}) {
     let NO_OF_ANS = 4;
     if (this.allWords.length < NO_OF_ANS) {
       NO_OF_ANS = this.allWords.length;
@@ -40,12 +55,25 @@ export class ReadingPage implements OnInit{
     let position = this.helperService.random(NO_OF_ANS);
 
     // Tạo mảng các câu trả lời
+    this.answers = [];
+
     for (let i = 0; i < NO_OF_ANS; i++) {
       if (i == position) {
-        this.answers[i] = this.curWord;
+        let temp = {};
+        temp['id'] = this.curWord['id'];
+        temp['content'] = this.curWord['content'];
+        this.answers.push(temp);
+
+        // this.answers.push(this.curWord);
       } else {
         let r = this.helperService.random(wrongWord.length);
-        this.answers[i] = wrongWord[r];
+         
+        let temp = {};
+        temp['id'] = wrongWord[r]['id'];
+        temp['content'] = wrongWord[r]['content'];
+        this.answers.push(temp);
+
+        // this.answers.push(wrongWord[r]);
         wrongWord.splice(r, 1);
       }
     }
@@ -53,11 +81,15 @@ export class ReadingPage implements OnInit{
 
   checkAnswer(item: Object) {
     if (item['id'] == this.curWord['id']) {
-      this.onCorrect.emit(true);
+      setTimeout(() => {
+        this.onCorrect.emit(true);
+      }, 1000);
+  
+      item['state'] = 'right';
       this.nativeService.playAudio('correct');
       this.nativeService.tts(this.curWord['content']);
     } else {
-      this.onCorrect.emit(false);
+      item['state'] = 'wrong';
       this.nativeService.playAudio('wrong');
     }
   }
