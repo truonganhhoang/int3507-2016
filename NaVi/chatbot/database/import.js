@@ -15,12 +15,10 @@ seeder.connect(config.get('mongodbURL'), function () {
     console.log('Connected to mongodb');
     seeder.loadModels([
         'models/Question.js',
-        'models/UnlearnedQuestion.js',
         'models/User.js'
     ]);
     seeder.clearModels([
         'Question',
-        'UnlearnedQuestion',
         'User'
     ], function () {
         console.log(`Start importing... Please wait ${delayTimeToImportData/1000} seconds`);
