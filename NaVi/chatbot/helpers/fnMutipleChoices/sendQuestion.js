@@ -57,8 +57,15 @@ module.exports = function (recipientId) {
             }, function (err, question) {
                 // append question's id to payload to know which question the user
                 // answered to later
-                var mcTrue = "MC_TRUE_" + question._id;
-                var mcFalse = "MC_FALSE_" + question._id;
+                var rightAnswer = '_A. ' + question.choices[0].text;
+                if (question.choices[1].isAnswer) {
+                    rightAnswer = '_B. ' + question.choices[1].text;
+                }
+                else if (question.choices[2].isAnswer) {
+                    rightAnswer = '_B. ' + question.choices[1].text;
+                }
+                var mcTrue = "MC_TRUE_" + question._id + rightAnswer;
+                var mcFalse = "MC_FALSE_" + question._id + rightAnswer;
 
                 var messageData = {
                     recipient: {

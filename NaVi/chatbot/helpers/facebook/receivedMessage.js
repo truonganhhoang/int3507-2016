@@ -31,6 +31,8 @@ module.exports = function receivedMessage(event) {
             let action = payload.split('_')[0];
             let status = payload.split('_')[1];
             let qId = payload.split('_')[2];  // question's id
+            let rightAnswer = payload.split('_')[3];
+
             // If action is 'Multiple choices'
             if (action === 'MC') {
                 if (status === 'TRUE') {
@@ -43,27 +45,9 @@ module.exports = function receivedMessage(event) {
                 }
                 else if (status === 'FALSE') {
                     // return the answer
-                    models.Question.findOne({
-                        _id: qId
-                    }, function (err, qs) {
-                        if (qs) {
-                            for (var i = 0; i < qs.choices.length; i++) {
-                                if (qs.choices[i].isAnswer) {
-                                    let answerPosition = 'A. ';
-                                    if (i == 1) {
-                                        answerPosition = 'B. ';
-                                    }
-                                    else if (i == 2) {
-                                        answerPosition = 'C. ';
-                                    }
-                                    sendFunctions.sendTextMessage(senderID, "Wrong. The answer is \"" + answerPosition + qs.choices[i].text + "\". Next question: ");
-                                    break;
-                                }
-                            }
-                            // send new question
-                            require('../fnMutipleChoices/sendQuestion')(senderID);
-                        }
-                    });
+                    sendFunctions.sendTextMessage(senderID, "Wrong. The answer is \"" + rightAnswer + "\". Next question: ");
+                    // send new question
+                    require('../fnMutipleChoices/sendQuestion')(senderID);
                 }
             }
         }
