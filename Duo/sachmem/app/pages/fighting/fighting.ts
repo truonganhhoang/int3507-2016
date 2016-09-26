@@ -1,4 +1,6 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit,
+         trigger, state, style, transition, animate, keyframes
+       } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { WordService } from '../../services/word.service';
@@ -11,7 +13,22 @@ import { SpeakingPage } from '../speaking/speaking';
 @Component({
   templateUrl: 'build/pages/fighting/fighting.html',
   providers: [ WordService, HelperService ],
-  directives: [ ReadingPage, ListeningPage, WritingPage, SpeakingPage ]
+  directives: [ ReadingPage, ListeningPage, WritingPage, SpeakingPage ],
+  animations: [
+    trigger('iconState', [
+      state('right',   style({
+        backgroundColor: '#387ef5',
+        borderColor: '#387ef5',
+        color: 'white',
+      })),
+      transition('* => right', [
+        animate('200ms ease-in', keyframes([
+          style({transform: 'scale(1.1)', offset: 0.5}),
+          style({transform: 'scale(1)', offset: 1})
+        ]))
+      ])
+    ])
+  ]
 })
 
 export class FightingPage implements OnInit {
@@ -20,6 +37,7 @@ export class FightingPage implements OnInit {
   selectedGame: String;
   //mang cac tu khong thay doi de truyen cho cac game
   allWords: Object[];
+  iconState: string;
 
   constructor(private navCtrl: NavController, private navParams: NavParams, private wordService: WordService, private helperService: HelperService) {
     let unitId = navParams.get('unitId');
@@ -32,7 +50,7 @@ export class FightingPage implements OnInit {
       // Tạm thời gán cho 'games' 4 giá trị l, s, r, w. 
       // Khi lưu dữ liệu sẽ thay đổi tùy theo.
       for (let i = 0; i < this.words.length; i++) {
-        this.words[i]['games'] = [ 'w' ];
+        this.words[i]['games'] = [ 'l', 'r', 'w' ];
       }
 
       this.reload();
@@ -42,6 +60,7 @@ export class FightingPage implements OnInit {
   ngOnInit() { }
 
   reload(): void {
+    this.iconState = 'none';
     // Chọn từ ngẫu nhiên
     let i = this.helperService.random(this.words.length);
     // this.curWord = this.words[i];
@@ -83,9 +102,14 @@ export class FightingPage implements OnInit {
   
   onCorrect(correct: boolean): void {
     if (correct) {
-      this.next();
+      this.iconState = 'right';
+      setTimeout(() => {
+        this.next();
+      }, 1000);
     } else {
-      this.reload();
+      setTimeout(() => {
+        this.reload();
+      }, 1500);
     }
   }
 }

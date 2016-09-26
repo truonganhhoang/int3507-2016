@@ -1,7 +1,7 @@
 <ion-grid>
 	<ion-row wrap>
     <ion-col width-10 *ngFor="let item of answers" style="height:50px">
-      <button @answerState="item.state" block style="white-space:initial;height:100%">
+      <button @answerState="answerState" block style="white-space:initial;height:100%">
         {{item}}
       </button>
     </ion-col>
@@ -17,7 +17,9 @@
   </ion-row>
   <ion-row wrap>
     <ion-col width-100 style="height:50px">
-      <button (click)="backspace()" style="height:100%">Back</button>
+      <button (click)="backspace()" style="height:100%">
+        <i class="material-icons">backspace</i>
+      </button>
       <!-- <button [disabled]="!pass" (click)="next()" style="height:100%">Next</button> -->
       <button (click)="skip()" style="height:100%">Skip</button>
     </ion-col>

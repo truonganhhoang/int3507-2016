@@ -1,5 +1,5 @@
 import { Component, OnInit, EventEmitter, Input, Output, OnChanges, SimpleChange,
-         trigger, state, style, transition, animate
+         trigger, state, style, transition, animate, keyframes
        } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
@@ -15,24 +15,26 @@ import { TrainingPage } from '../training/training';
   inputs: [ 'curWord', 'allWords' ],
   animations: [
     trigger('answerState', [
-      state('void', style({
-        transform: 'scale(0)',
-      })),
-      state('right',   style({
+      // state('void', style({
+      //   transform: 'scale(0)',
+      // })),
+      state('right', style({
         backgroundColor: '#4caf50',
         borderColor: '#4caf50',
         color: 'white',
-        // boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
-        // transform: 'scale(1.1)'
       })),
-      state('wrong',   style({
+      state('wrong', style({
         backgroundColor: '#f44336',
         color: 'white',
         borderColor: '#f44336',
       })),
       transition('void => *', [
-        animate('200ms ease-out', style({transform: 'scale(1)'}))
-      ]),
+        animate('500ms ease-out', keyframes([
+          style({transform: 'scale(0)', offset: 0}),
+          style({transform: 'scale(1.1)', offset: 0.5}),
+          style({transform: 'scale(1)', offset: 1})
+        ]))
+      ])
     ])
   ]
 })
@@ -92,17 +94,17 @@ export class ReadingPage implements OnInit, OnChanges {
 
   checkAnswer(item: Object) {
     if (item['id'] == this.curWord['id']) {
-      setTimeout(() => {
+      // setTimeout(() => {
         this.onCorrect.emit(true);
-      }, 1000);
+      // }, 1000);
 
       item['state'] = 'right';
       this.nativeService.playAudio('correct');
       this.nativeService.tts(this.curWord['content']);
     } else {
-      setTimeout(() => {
+      // setTimeout(() => {
         this.onCorrect.emit(false);
-      }, 1500);
+      // }, 1500);
 
       setTimeout(() => {
         this.navCtrl.push(TrainingPage, {

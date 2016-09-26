@@ -13,9 +13,11 @@
 <ion-content *ngIf="curWord">
   <ion-card>
     <img src="img/advance-card-map-madison.png">
-    <button fab fab-right fab-top>
+    <button fab fab-right fab-top outline
+            @iconState="iconState">
       <i class="material-icons" *ngIf="selectedGame == 'r'">chrome_reader_mode</i>
       <i class="material-icons" *ngIf="selectedGame == 'l'">hearing</i>
+      <i class="material-icons" *ngIf="selectedGame == 'w'">edit</i>
     </button>
 
     <ion-card-header>

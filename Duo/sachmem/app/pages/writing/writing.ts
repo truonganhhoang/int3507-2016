@@ -1,10 +1,12 @@
 import { Component, OnInit, EventEmitter, Output, OnChanges, SimpleChange,
-         trigger, state, style, transition, animate
+         trigger, state, style, transition, animate, keyframes
        } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 import { NativeService } from '../../services/native.service';
 import { HelperService } from '../../services/helper.service';
+
+import { TrainingPage } from '../training/training';
 
 @Component({
 	selector: 'writing-page',
@@ -13,12 +15,25 @@ import { HelperService } from '../../services/helper.service';
   inputs: [ 'words', 'curWord' ],
   animations: [
     trigger('answerState', [
-      state('void', style({
-        transform: 'scale(0)',
+      state('right', style({
+        backgroundColor: '#4caf50',
+        borderColor: '#4caf50',
+        color: 'white',
       })),
       transition('void => *', [
-        animate('200ms ease-out', style({transform: 'scale(1)'}))
+        animate('200ms ease-out', keyframes([
+          style({transform: 'scale(0)', offset: 0}),
+          style({transform: 'scale(1.1)', offset: 0.5}),
+          style({transform: 'scale(1)', offset: 1})
+        ]))
       ]),
+      transition('* => void', [
+        animate('200ms ease-in', keyframes([
+          style({transform: 'scale(1)', offset: 0}),
+          style({transform: 'scale(1.1)', offset: 0.5}),
+          style({transform: 'scale(0)', offset: 1})
+        ]))
+      ])
     ])
   ]
 })
@@ -30,11 +45,10 @@ export class WritingPage implements OnInit, OnChanges  {
 	allWords: Object[];
 	answers: Object[] = [];
 	options: Object[];
-  pass: boolean;
-
 	allLetter: Object[];
+  answerState: string;
 
-	constructor(private nativeService: NativeService, private helperService: HelperService) { }
+	constructor(private navCtrl: NavController, private navParams: NavParams, private nativeService: NativeService, private helperService: HelperService) { }
 	
 	ngOnInit() { }
 
@@ -42,7 +56,7 @@ export class WritingPage implements OnInit, OnChanges  {
   	this.options = [];
     this.answers = [];
   	this.allLetter = [];
-    this.pass = false;
+    this.answerState = 'none';
 
   	let alphabet = 'qwertyuiopasdfghjklzxcvbnm';
 
@@ -73,15 +87,17 @@ export class WritingPage implements OnInit, OnChanges  {
   }
 
   backspace(): void {
-    this.answers.splice(this.answers.length - 1, 1);
+    this.nativeService.playAudio('tap');
+
+    if (this.answers.length >= 1) {
+      this.answers.splice(this.answers.length - 1, 1);
+    }
   }
 
   pick(char): void {
     this.answers.push(char);
-    this.checkAnswer();
-  }
 
-  checkAnswer() {
+    // So sánh sau mỗi lần pick 
     let temp = '';
 
     for (let i = 0; i < this.answers.length; i++) {
@@ -89,11 +105,29 @@ export class WritingPage implements OnInit, OnChanges  {
     }
 
     if (temp == this.curWord['content']) {
-      setTimeout(() => {
+      // setTimeout(() => {
         this.onCorrect.emit(true);
-      }, 1000);
+        this.answerState = 'right';
+      // }, 1000);
   
       this.nativeService.playAudio('correct');
+      this.nativeService.tts(this.curWord['content']);
+    } else {
+      this.nativeService.playAudio('tap');
     }
+  }
+
+  skip(): void {
+    // setTimeout(() => {
+      this.onCorrect.emit(false);
+    // }, 500);
+
+    setTimeout(() => {
+      this.navCtrl.push(TrainingPage, {
+        word: this.curWord
+      });
+    }, 1000);
+
+    this.nativeService.playAudio('wrong');
   }
 }
