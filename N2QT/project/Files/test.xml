@@ -1,0 +1,57 @@
+<?xml version='1.0' ?>
+<kiemtra>
+	<level1>
+		<bai id='bai1'>
+			<debai>
+				I ............Louisiana state University.
+			</debai>
+			<dapan id= "A">am attending </dapan>
+			<dapan id= "B">attend </dapan>
+			<dapan id= "C">was attending </dapan>
+			<dapan id= "D">attended</dapan>
+			<da_dung>A</da_dung>
+		</bai>
+		<bai id='bai2'>
+			<debai>
+				According to this newspaper, John is said............…a new record for the long jump.
+			</debai>
+			<dapan id= "A">to have established </dapan>
+			<dapan id= "B">establishing </dapan>
+			<dapan id= "C">to establish </dapan>
+			<dapan id= "D">established</dapan>
+			<da_dung>A</da_dung>
+		</bai>
+		<bai id='bai3'>
+			<debai>
+				 I have never played badminton before.This is the first time I.............to play.
+			</debai>
+			<dapan id= "A">try </dapan>
+			<dapan id= "B">tried </dapan>
+			<dapan id= "C">have tried </dapan>
+			<dapan id= "D">am trying</dapan>
+			<da_dung>C</da_dung>
+		</bai>
+		<bai id='bai4'>
+			<debai>
+				John ............a book when I saw him ?
+			</debai>
+			<dapan id= "A">is reading </dapan>
+			<dapan id= "B">read </dapan>
+			<dapan id= "C">was reading </dapan>
+			<dapan id= "D">reading</dapan>
+			<da_dung>C</da_dung>
+
+		</bai>
+		<bai id='bai5'>
+			<debai>
+				He fell down when he ............towards the church.
+			</debai>
+			<dapan id= "A">run </dapan>
+			<dapan id= "B">runs </dapan>
+			<dapan id= "C">was running </dapan>
+			<dapan id= "D">had run</dapan>
+			<da_dung>C</da_dung>
+		</bai>
+	</level1>
+</kiemtra>
+		

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+    <category>
+        <pattern>xin chào</pattern>
+        <template>
+            <random>
+                <li>Chào bạn!</li>
+                <li>Hello</li>
+                <li>Chào, ahihi</li>
+                <li>Sao thế cậu?</li>
+                <li>Ừ tớ nghe</li>
+                <li>Hello, it's me.</li>
+                <li>Chào bạn! Hôm này trời đẹp nhỉ.</li>
+                <li>Chào bạn. Bạn vẫn khỏe chứ?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ xin chào *</pattern>
+        <template>
+            <srai>xin chào</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>xin chào *</pattern>
+        <template>
+            <srai>xin chào</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>hello</pattern>
+        <template>
+            <srai>xin chào</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ hello *</pattern>
+        <template>
+            <srai>xin chào</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>hello *</pattern>
+        <template>
+            <srai>xin chào</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>hi</pattern>
+        <template>
+            <srai>xin chào</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ hi *</pattern>
+        <template>
+            <srai>xin chào</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>hi *</pattern>
+        <template>
+            <srai>xin chào</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>hey</pattern>
+        <template>
+            <random>
+                <li>Uh tớ nghe</li>
+                <li>Ừ sao vậy</li>
+                <li>Hả?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ hey *</pattern>
+        <template>
+            <srai>hey</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>wew</pattern>
+        <template>
+            <srai>hey</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>ê</pattern>
+        <template>
+            <srai>hey</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>hey *</pattern>
+        <template>
+            <srai>hey</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>có gì hot</pattern>
+        <template>
+            <random>
+                <li>Chẳng có gì hot cả. Gọi tớ có chuyện gì?</li>
+                <li>LOL. Không</li>
+                <li>Tớ không có gì "hot", cậu có gì "hot" không?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ có gì hot *</pattern>
+        <template>
+            <srai>có gì hot</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>có gì hot *</pattern>
+        <template>
+            <srai>có gì hot</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ có gì hót *</pattern>
+        <template>
+            <srai>có gì hot</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>có gì hót *</pattern>
+        <template>
+            <srai>có gì hot</srai>
+        </template>
+    </category>
+</aiml>
