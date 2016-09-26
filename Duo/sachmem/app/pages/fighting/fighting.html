@@ -14,7 +14,8 @@
   <ion-card>
     <img src="img/advance-card-map-madison.png">
     <button fab fab-right fab-top>
-      <ion-icon name="book"></ion-icon>
+      <i class="material-icons" *ngIf="selectedGame == 'r'">chrome_reader_mode</i>
+      <i class="material-icons" *ngIf="selectedGame == 'l'">hearing</i>
     </button>
 
     <ion-card-header>
