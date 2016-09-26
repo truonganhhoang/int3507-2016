@@ -24,6 +24,9 @@
       <div *ngIf="selectedGame == 'r'">
         <reading-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></reading-page>
       </div>
+      <div *ngIf="selectedGame == 'l'">
+        <listening-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></listening-page>
+      </div>
     </ion-card-content>
   </ion-card>
 
@@ -37,10 +40,7 @@
       Game 1
       <writing-page [curWord]="curWord" [words]="words"></writing-page>
     </div>
-    <div *ngIf="selectedGame == 'l'">
-      Game 2
-      <listening-page [curWord]="curWord" [words]="words"></listening-page>
-    </div>
+    
     <div *ngIf="selectedGame == 's'">
       Game 3
       <speaking-page [curWord]="curWord" [words]="words"></speaking-page>
