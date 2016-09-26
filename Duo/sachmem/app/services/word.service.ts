@@ -8,14 +8,14 @@ export class WordService {
 
   constructor(private http: Http) { }
 
-  getWords(unitId): Promise<Object[]>{
+  getWords(unitId: number): Promise<Object[]>{
     return new Promise(resolve => {
       this.http.get('data/words.json').subscribe(res => {
-        var temp = res.json();
+        let temp = res.json();
 
-        for(var i = 0; i < temp.length; i++) {
+        for(let i = 0; i < temp.length; i++) {
           if(temp[i].unit_id == unitId) {
-            this.words.push(temp[i])
+            this.words.push(temp[i]);
           }
         }
 
@@ -24,6 +24,22 @@ export class WordService {
         resolve(this.words);
 
         // resolve(res.json());
+      });
+    }) 
+  }
+
+   getWord(wordId: number): Promise<Object[]>{
+    return new Promise(resolve => {
+      this.http.get('data/words.json').subscribe(res => {
+        let temp = res.json();
+
+        for(let i = 0; i < temp.length; i++) {
+          if(temp[i].id == wordId) {
+            this.words.push(temp[i]);
+          }
+        }
+
+        resolve(this.words);
       });
     }) 
   }

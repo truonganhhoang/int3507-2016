@@ -1,10 +1,12 @@
 import { Component, OnInit, EventEmitter, Input, Output, OnChanges, SimpleChange,
          trigger, state, style, transition, animate
        } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 import { NativeService } from '../../services/native.service';
 import { HelperService } from '../../services/helper.service';
+
+import { TrainingPage } from '../training/training';
 
 @Component({
   selector: 'listening-page',
@@ -17,9 +19,9 @@ import { HelperService } from '../../services/helper.service';
         transform: 'scale(0)',
       })),
       state('choosen', style({
-      	backgroundColor: '#387ef5',
-      	color: 'white',
-      	transform: 'scale(1.1)'
+        backgroundColor: '#387ef5',
+        color: 'white',
+        transform: 'scale(1.1)'
       })),
       state('right',   style({
         backgroundColor: '#4caf50',
@@ -50,7 +52,7 @@ export class ListeningPage implements OnInit, OnChanges {
   answers: Object[] = [];
   choosen: Object;
 
-  constructor(private nativeService: NativeService, private helperService: HelperService) { }
+  constructor(private navCtrl: NavController, private navParams: NavParams, private nativeService: NativeService, private helperService: HelperService) { }
 
   ngOnInit() { }
 
@@ -97,14 +99,14 @@ export class ListeningPage implements OnInit, OnChanges {
   }
 
   choose(item: Object): void {
-  	this.choosen = item;
-  	this.nativeService.tts(item['content']);
+    this.choosen = item;
+    this.nativeService.tts(item['content']);
 
-  	for (let i = 0; i < this.answers.length; i++) {
-  		this.answers[i]['state'] = '';
-  	}
+    for (let i = 0; i < this.answers.length; i++) {
+      this.answers[i]['state'] = '';
+    }
 
-  	item['state'] = 'choosen';
+    item['state'] = 'choosen';
   }
 
   checkAnswer() {
@@ -115,11 +117,16 @@ export class ListeningPage implements OnInit, OnChanges {
   
       this.choosen['state'] = 'right';
       this.nativeService.playAudio('correct');
-      // this.nativeService.tts(this.curWord['content']);
     } else {
-      // setTimeout(() => {
-      //   this.onCorrect.emit(false);
-      // }, 1000);
+      setTimeout(() => {
+        this.onCorrect.emit(false);
+      }, 1500);
+
+      setTimeout(() => {
+        this.navCtrl.push(TrainingPage, {
+          word: this.curWord
+        });
+      }, 1000);
 
       this.choosen['state'] = 'wrong';
       this.nativeService.playAudio('wrong');

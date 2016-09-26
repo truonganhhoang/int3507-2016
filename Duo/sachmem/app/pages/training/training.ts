@@ -12,20 +12,34 @@ import { NativeService } from '../../services/native.service';
 })
 
 export class TrainingPage implements OnInit {
-  words: Object[];
+  words: Object[] = [];
   curWord: Object;
   curNum: number = 0;
+  pageType: number; // Loại trang; 0 = training, 1 = review;
 
   constructor(private navCtrl: NavController, private navParams: NavParams, private wordService: WordService, private nativeService: NativeService) {
     let unitId = this.navParams.get('unitId');
+    let word = this.navParams.get('word');
 
-    wordService.getWords(unitId).then(res => {
-      this.words = res;
+    if (unitId != undefined) {
+      this.pageType = 0;
+      wordService.getWords(unitId).then(res => {
+        this.words = res;
+        this.reload();
+      });
+    } else {
+      this.pageType = 1;
+      this.words = [ word ];
       this.reload();
-    });
+    }
   }
 
   ngOnInit(): void { }
+
+  reload(): void {
+    this.curWord = this.words[this.curNum];
+    this.speak();
+  }
 
   next() {
     this.curNum ++;
@@ -47,15 +61,14 @@ export class TrainingPage implements OnInit {
     return false;
   }
 
-  reload() {
-    this.curWord = this.words[this.curNum];
-    this.speak();
-  }
-
   enterFightingPage() {
     this.navCtrl.push(FightingPage, {
       unitId: this.navParams.get('unitId')
     });
+  }
+
+  back(): void {
+    this.navCtrl.pop();
   }
 
   speak(): void {
