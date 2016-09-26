@@ -4,6 +4,10 @@ import { NavController } from 'ionic-angular';
 import { NativeService } from '../../services/native.service';
 import { HelperService } from '../../services/helper.service';
 
+
+// declare var SpeechRecognizer: any;
+
+
 @Component({
 	selector: 'writing-page',
   templateUrl: 'build/pages/writing/writing.html',
@@ -75,23 +79,11 @@ export class WritingPage implements OnInit, OnChanges  {
 
   }
 
- //  shuffle (array) {
-	//   let temp = null;
-
-	//   for (let i = array.length - 1; i > 0; i -= 1) {
-	//     let j = Math.floor(Math.random() * (i + 1));
-	//     temp = array[i];
-	//     array[i] = array[j];
-	//     array[j] = temp;
-	//   }
-
-	//   return array;
-	// }
-
   backSpace() {
     this.answers.splice(this.answers.length - 1, 1);
     console.log(this.answers);
   }
+
 
   click(item) {
     this.answers.push(item);

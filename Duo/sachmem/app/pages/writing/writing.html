@@ -11,5 +11,8 @@
     </ion-col>
     <button (click)="backSpace()">Back</button>
     <button [disabled]="!pass" (click)="next()">Next</button>
+    <button (click)="record()">Record</button>
+    <p>{{text}}</p>
+    <p>{{speaking}}</p>
   </ion-row>
 </ion-grid>
