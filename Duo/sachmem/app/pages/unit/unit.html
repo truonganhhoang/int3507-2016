@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar primary>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Unit</ion-title>
+  </ion-navbar>
+
+  <ion-grid style="background:#387ef5">
+    <ion-row>
+      <ion-col width-50>
+        <button [disabled]="!selectedUnit" (click)="enterTraining()" block light>Training</button>
+      </ion-col>
+      <ion-col width-50>  
+        <button [disabled]="!selectedUnit" (click)="enterFighting()" block light>Fighting</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content padding>
+  <ion-list radio-group [(ngModel)]="selectedUnit">
+    <ion-item *ngFor="let item of units">
+      <ion-label>{{item.name}}</ion-label>
+      <ion-radio value="{{item.id}}"></ion-radio>
+    </ion-item>
+  </ion-list>
+</ion-content>

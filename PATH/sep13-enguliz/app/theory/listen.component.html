@@ -1,0 +1,17 @@
+<div class="container">
+    <h3>Listen</h3>
+    <div *ngFor="let item of listens"
+         style="display: inline-block;
+            margin: 10px; box-shadow: 3px 3px 3px #888888;
+            padding-bottom: 40px;
+            padding-top: 3px;
+            text-align: center;
+            width: 20%;
+            height: 180px;
+            background-color: #FFDDDD">
+            <a href="">
+                <img width="97%" height="97%" style="margin-bottom: 10px;" src="{{item.lessonThumbnail}}"><br>
+                <span> <strong>{{item.lessonName}} </strong></span>
+            </a>
+    </div>
+</div>
