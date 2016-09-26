@@ -15,16 +15,15 @@ seeder.connect(config.get('mongodbURL'), function () {
     console.log('Connected to mongodb');
     seeder.loadModels([
         'models/Question.js',
-        'models/UnlearnedQuestion.js',
         'models/User.js'
     ]);
     seeder.clearModels([
         'Question',
-        'UnlearnedQuestion',
         'User'
     ], function () {
+        let fileToImport = 'database/raw/mc_v2_database.csv';
         console.log(`Start importing... Please wait ${delayTimeToImportData/1000} seconds`);
-        csv.fromPath('database/raw/multipleChoices.csv').on('data', function (data) {
+        csv.fromPath(fileToImport, { delimiter: ';'}).on('data', function (data) {
             questions.push(data);
         }).on('finish', function () {
             try {

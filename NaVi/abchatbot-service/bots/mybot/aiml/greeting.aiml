@@ -90,6 +90,18 @@
             <srai>hey</srai>
         </template>
     </category>
+    <category>
+        <pattern>wew</pattern>
+        <template>
+            <srai>hey</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>ê</pattern>
+        <template>
+            <srai>hey</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>hey *</pattern>
