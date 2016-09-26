@@ -1,10 +1,12 @@
 import { Component, OnInit, EventEmitter, Input, Output, OnChanges, SimpleChange,
          trigger, state, style, transition, animate
        } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 
 import { NativeService } from '../../services/native.service';
 import { HelperService } from '../../services/helper.service';
+
+import { TrainingPage } from '../training/training';
 
 @Component({
   selector: 'reading-page',
@@ -42,7 +44,7 @@ export class ReadingPage implements OnInit, OnChanges {
   curWord: Object;
   answers: Object[] = [];
 
-  constructor(private nativeService: NativeService, private helperService: HelperService) { }
+  constructor(private navCtrl: NavController, private navParams: NavParams, private nativeService: NativeService, private helperService: HelperService) { }
 
   ngOnInit() { }
 
@@ -93,11 +95,21 @@ export class ReadingPage implements OnInit, OnChanges {
       setTimeout(() => {
         this.onCorrect.emit(true);
       }, 1000);
-  
+
       item['state'] = 'right';
       this.nativeService.playAudio('correct');
       this.nativeService.tts(this.curWord['content']);
     } else {
+      setTimeout(() => {
+        this.onCorrect.emit(false);
+      }, 1500);
+
+      setTimeout(() => {
+        this.navCtrl.push(TrainingPage, {
+          word: this.curWord
+        });
+      }, 1000);
+
       item['state'] = 'wrong';
       this.nativeService.playAudio('wrong');
     }

@@ -6,15 +6,16 @@
 -->
 <ion-header>
   <ion-navbar primary>
-    <ion-title>Fighting</ion-title>
+    <ion-title>Play</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content *ngIf="curWord">
   <ion-card>
-    <img src="img/advance-card-map-madison.png" style="max-height:250px;width:auto">
+    <img src="img/advance-card-map-madison.png">
     <button fab fab-right fab-top>
-      <ion-icon name="book"></ion-icon>
+      <i class="material-icons" *ngIf="selectedGame == 'r'">chrome_reader_mode</i>
+      <i class="material-icons" *ngIf="selectedGame == 'l'">hearing</i>
     </button>
 
     <ion-card-header>
@@ -23,6 +24,9 @@
     <ion-card-content>
       <div *ngIf="selectedGame == 'r'">
         <reading-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></reading-page>
+      </div>
+      <div *ngIf="selectedGame == 'l'">
+        <listening-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></listening-page>
       </div>
     </ion-card-content>
   </ion-card>
@@ -36,10 +40,7 @@
     <div *ngIf="selectedGame == 'w'">
       <writing-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></writing-page>
     </div>
-    <div *ngIf="selectedGame == 'l'">
-      Game 2
-      <listening-page [curWord]="curWord" [words]="words"></listening-page>
-    </div>
+    
     <div *ngIf="selectedGame == 's'">
       Speak
       <speaking-page [curWord]="curWord" [allWords]="allWords"></speaking-page>

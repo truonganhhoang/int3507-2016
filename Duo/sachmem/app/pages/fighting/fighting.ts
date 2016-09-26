@@ -32,7 +32,7 @@ export class FightingPage implements OnInit {
       // Tạm thời gán cho 'games' 4 giá trị l, s, r, w. 
       // Khi lưu dữ liệu sẽ thay đổi tùy theo.
       for (let i = 0; i < this.words.length; i++) {
-        this.words[i]['games'] = [ 's' ];
+        this.words[i]['games'] = [ 'r', 'l', 'w' ];
       }
 
       this.reload();
@@ -42,21 +42,29 @@ export class FightingPage implements OnInit {
   ngOnInit() { }
 
   reload(): void {
+    console.log(this.words);
     // Chọn từ ngẫu nhiên
     let i = this.helperService.random(this.words.length);
-    this.curWord = this.words[i];
+    // this.curWord = this.words[i];
+    this.curWord = JSON.parse(JSON.stringify(this.words[i]));
 
     // Chọn game ngẫu nhiên
     let j = this.helperService.random(this.words[i]['games'].length);
-    this.selectedGame = this.words[i]['games'][j];
+    // this.selectedGame = this.words[i]['games'][j];
+    this.selectedGame = JSON.parse(JSON.stringify(this.words[i]['games'][j]));
 
     console.log('Word: ' + this.curWord['content'] + ', game: ' + this.selectedGame);
   }
 
   next() {
-    for (let i = 0; i < this.curWord['games'].length; i++) {
-      if (this.curWord['games'][i] == this.selectedGame) {
-        this.curWord['games'].splice(i, 1);
+    for (let i = 0; i < this.words.length; i++) {
+      if (this.words[i]['id'] == this.curWord['id']) {
+        for (let j = 0; j < this.words[i]['games'].length; j++) {
+          if (this.words[i]['games'][j] == this.selectedGame) {
+            this.words[i]['games'].splice(j, 1);
+            break;
+          }
+        } 
         break;
       }
     }
@@ -70,13 +78,15 @@ export class FightingPage implements OnInit {
     if (this.words.length == 0) {
       this.navCtrl.pop();
     } else {
-      this.reload();        
+      this.reload();    
     }
   }
   
   onCorrect(correct: boolean): void {
     if (correct) {
-      this.next();    
+      this.next();
+    } else {
+      this.reload();
     }
   }
 }
