@@ -1,5 +1,15 @@
-<p style="color:red;">Trang Writing</p>
-<!-- <p>{{curWord.content}}</p> -->
-<!-- <p>{{words[0].content}}</p> -->
-<p>{{curWord.content}}</p>
-<p>{{curWord.meaning}}</p>
+<ion-grid>
+	<ion-row wrap> 
+		  <span *ngFor="let item of answers">{{item}}</span>
+  </ion-row>
+  <ion-row wrap>
+
+    <ion-col width-10 (click)="click(item)" *ngFor="let item of options" style="height:60px">
+      <button block outline style="white-space:initial;height:100%">
+        {{item}}
+      </button>
+    </ion-col>
+    <button (click)="backSpace()">Back</button>
+    <button [disabled]="!pass" (click)="next()">Next</button>
+  </ion-row>
+</ion-grid>

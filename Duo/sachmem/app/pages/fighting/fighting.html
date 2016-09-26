@@ -34,8 +34,7 @@
 
 
     <div *ngIf="selectedGame == 'w'">
-      Game 1
-      <writing-page [curWord]="curWord" [words]="words"></writing-page>
+      <writing-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></writing-page>
     </div>
     <div *ngIf="selectedGame == 'l'">
       Game 2
