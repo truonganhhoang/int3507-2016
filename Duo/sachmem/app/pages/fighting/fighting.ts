@@ -70,13 +70,15 @@ export class FightingPage implements OnInit {
     if (this.words.length == 0) {
       this.navCtrl.pop();
     } else {
-      this.reload();        
+      this.reload();    
     }
   }
   
   onCorrect(correct: boolean): void {
     if (correct) {
-      this.next();    
+      this.next();
+    } else {
+      this.reload();
     }
   }
 }

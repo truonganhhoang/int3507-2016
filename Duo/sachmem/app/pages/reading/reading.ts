@@ -98,6 +98,10 @@ export class ReadingPage implements OnInit, OnChanges {
       this.nativeService.playAudio('correct');
       this.nativeService.tts(this.curWord['content']);
     } else {
+      // setTimeout(() => {
+      //   this.onCorrect.emit(false);
+      // }, 1000);
+
       item['state'] = 'wrong';
       this.nativeService.playAudio('wrong');
     }
