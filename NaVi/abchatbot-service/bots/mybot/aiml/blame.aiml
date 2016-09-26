@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+    <category>
+        <pattern>dm</pattern>
+        <template>
+            <random>
+                <li>Ui sao tự nhiên chửi tớ?</li>
+                <li>Chửi thêm câu nữa coi</li>
+                <li>Haha I don't care</li>
+                <li>Hehe tớ không thèm chửi nhau với cậu đâu.</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>đm</pattern>
+        <template>
+            <srai>dm</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>đm *</pattern>
+        <template>
+            <srai>dm</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ đm *</pattern>
+        <template>
+            <srai>dm</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>đmm</pattern>
+        <template>
+            <srai>dm</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>đmm *</pattern>
+        <template>
+            <srai>dm</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ đmm *</pattern>
+        <template>
+            <srai>dm</srai>
+        </template>
+    </category>
+</aiml>

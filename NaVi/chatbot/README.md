@@ -1,36 +1,30 @@
-# Messenger Platform Sample -- node.js
+ # cwat chatbot
+Readme is coming soon.
+## Setup project
 
-This project is an example server for Messenger Platform built in Node.js. With this app, you can send it messages and it will echo them back to you. You can also see examples of the different types of Structured Messages. 
+**1. Setup npm**
 
-It contains the following functionality:
+```sh
+$ npm install 
+```
+**2. Setup nodemon**
 
-* Webhook (specifically for Messenger Platform events)
-* Send API 
-* Web Plugins
-* Messenger Platform v1.1 features
+```sh
+$ npm install nodemon -g
+```
 
-Follow the [walk-through](https://developers.facebook.com/docs/messenger-platform/quickstart) to learn about this project in more detail.
+**3. Setup ngrok**
 
-## Setup
+> ”I want to expose a local server behind a NAT or firewall to the internet.”
+ 
+  - Dowload [ngrok](https://ngrok.com/download)
+  - Archive file ngrok.zip
+  - Run file [ngrok.exe]()
+  - Run : **ngrok http 3000**
+  - Copy : https://....ngrok.io -> Paste to serverURL in defaut.json
 
-Set the values in `config/default.json` before running the sample. Descriptions of each parameter can be found in `app.js`. Alternatively, you can set the corresponding environment variables as defined in `app.js`.
+**4. Config file (defaut.json)**
 
-Replace values for `APP_ID` and `PAGE_ID` in `public/index.html`.
-
-## Run
-
-You can start the server by running `npm start`. However, the webhook must be at a public URL that the Facebook servers can reach. Therefore, running the server locally on your machine will not work.
-
-You can run this example on a cloud service provider like Heroku, Google Cloud Platform or AWS. Note that webhooks must have a valid SSL certificate, signed by a certificate authority. Read more about setting up SSL for a [Webhook](https://developers.facebook.com/docs/graph-api/webhooks#setup).
-
-## Webhook
-
-All webhook code is in `app.js`. It is routed to `/webhook`. This project handles callbacks for authentication, messages, delivery confirmation and postbacks. More details are available at the [reference docs](https://developers.facebook.com/docs/messenger-platform/webhook-reference).
-
-## "Send to Messenger" and "Message Us" Plugin
-
-An example of the "Send to Messenger" plugin and "Message Us" plugin are located at `index.html`. The "Send to Messenger" plugin can be used to trigger an authentication event. More details are available at the [reference docs](https://developers.facebook.com/docs/messenger-platform/plugin-reference).
-
-## License
-
-See the LICENSE file in the root directory of this source tree. Feel free to useand modify the code.
+- Copy file defaut.example.json and rename to defaut.json
+- Change parameter :
+    *appSecret* , *pageAccessToken*, *validationToken* : in [developer.facekbook.com](https://developers.facebook.com/)
