@@ -96,6 +96,8 @@ export class ListeningPage implements OnInit, OnChanges {
         wrongWord.splice(r, 1);
       }
     }
+
+    this.choosen = undefined;
   }
 
   choose(item: Object): void {

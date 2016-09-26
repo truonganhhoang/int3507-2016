@@ -1,18 +1,26 @@
 <ion-grid>
-	<ion-row wrap> 
-		  <span *ngFor="let item of answers">{{item}}</span>
-  </ion-row>
-  <ion-row wrap>
-
-    <ion-col width-10 (click)="click(item)" *ngFor="let item of options" style="height:60px">
-      <button block outline style="white-space:initial;height:100%">
+	<ion-row wrap>
+    <ion-col width-10 *ngFor="let item of answers" style="height:50px">
+      <button @answerState="item.state" block style="white-space:initial;height:100%">
         {{item}}
       </button>
     </ion-col>
-    <button (click)="backSpace()">Back</button>
-    <button [disabled]="!pass" (click)="next()">Next</button>
-    <button (click)="record()">Record</button>
-    <p>{{text}}</p>
-    <p>{{speaking}}</p>
+		<!-- <span *ngFor="let item of answers">{{item}}</span> -->
+  </ion-row>
+  <ion-row wrap>
+    <ion-col width-20 *ngFor="let item of options" style="height:50px">
+      <button block outline (click)="pick(item)"
+              style="white-space:initial;height:100%">
+        {{item}}
+      </button>
+    </ion-col>
+  </ion-row>
+  <ion-row wrap>
+    <ion-col width-100 style="height:50px">
+      <button (click)="backspace()" style="height:100%">Back</button>
+      <!-- <button [disabled]="!pass" (click)="next()" style="height:100%">Next</button> -->
+      <button (click)="skip()" style="height:100%">Skip</button>
+    </ion-col>
   </ion-row>
 </ion-grid>
+

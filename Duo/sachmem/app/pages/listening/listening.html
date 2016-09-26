@@ -9,4 +9,4 @@
   </ion-row>
 </ion-grid>
 
-<button (click)="checkAnswer()">Check</button>
+<button [disabled]="choosen == undefined" (click)="checkAnswer()" block round>Check</button>

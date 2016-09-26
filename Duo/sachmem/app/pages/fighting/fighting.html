@@ -21,12 +21,15 @@
     <ion-card-header>
       <h1 primary style="margin-right:20%;white-space:initial;font-weight:bold;font-size:2em">{{curWord.meaning}}</h1>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content style="height:100%">
       <div *ngIf="selectedGame == 'r'">
         <reading-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></reading-page>
       </div>
       <div *ngIf="selectedGame == 'l'">
         <listening-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></listening-page>
+      </div>
+      <div *ngIf="selectedGame == 'w'">
+        <writing-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></writing-page>
       </div>
     </ion-card-content>
   </ion-card>
@@ -37,9 +40,7 @@
 
 
 
-    <div *ngIf="selectedGame == 'w'">
-      <writing-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></writing-page>
-    </div>
+    
     
     <div *ngIf="selectedGame == 's'">
       Speak
