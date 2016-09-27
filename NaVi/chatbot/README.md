@@ -1,6 +1,6 @@
- # Hướng dẫn tạo và chạy một messenger bot
+# Hướng dẫn tạo và chạy một messenger bot
  
- ## Cấu trúc thư mục
+## Cấu trúc thư mục
 - `config/`: chứa các biến môi trường dùng chung cho cả project. Các biến này được mô tả trong file `default.json` dưới dạng `key:value`.
 
   Ví dụ ta cần đọc giá trị của `pageAccessToken` thì ta có thể đạt được bằng cách gọi: `config('pageAccessToken')`; trong đó `config` thực chất là một thư viện giúp đọc file `config/default.json` - sẽ giới thiệu về thư viện trong mục `node_modules` dưới đây.
