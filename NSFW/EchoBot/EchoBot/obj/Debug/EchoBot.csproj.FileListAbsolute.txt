@@ -1,0 +1,38 @@
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Bot Application1.dll.config
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Bot Application1.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Bot Application1.pdb
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Autofac.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Chronic.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Microsoft.Bot.Builder.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Microsoft.Bot.Connector.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Microsoft.Rest.ClientRuntime.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Microsoft.WindowsAzure.Configuration.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Newtonsoft.Json.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\System.IdentityModel.Tokens.Jwt.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\System.Net.Http.Formatting.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\System.Web.Http.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\System.Web.Http.WebHost.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Autofac.xml
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Microsoft.Bot.Builder.xml
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Microsoft.Bot.Connector.xml
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Microsoft.WindowsAzure.Configuration.xml
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\Newtonsoft.Json.xml
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\System.IdentityModel.Tokens.Jwt.xml
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\System.Net.Http.Formatting.xml
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\System.Web.Http.xml
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\System.Web.Http.WebHost.xml
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\ar\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\en\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\es\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\fa\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\fr\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\ja\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\ru\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\obj\Debug\Bot Application1.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\obj\Debug\Bot Application1.pdb
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\cs\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\bin\de-de\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\EchoBot\EchoBot\obj\Debug\EchoBot.csprojResolveAssemblyReference.cache

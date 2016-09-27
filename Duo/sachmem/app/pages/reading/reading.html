@@ -1,0 +1,10 @@
+<ion-grid>
+  <ion-row wrap>
+    <ion-col width-50 *ngFor="let item of answers">
+      <button block outline (click)="checkAnswer(item)" style="white-space:initial"
+      @answerState="item.state">
+        {{item.content}}
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-grid>

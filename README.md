@@ -1,10 +1,15 @@
-# int3507-2016
-Vấn đề hiện đại CNTT
+# Repo của môn học INT 3507: Các vấn đề hiện đại CNTT, 2016-2017
 
-## Cwat version 0.1
+## Chú ý khi chọn đề tài:
+- Các nhóm chủ động chọn, đề xuất đề tài với chủ đề: Tạo công cụ học ngoại ngữ cho học sinh phổ thông.
+- Không có quá 2 nhóm cùng công nghệ hoặc cùng một đề tài. Có thể trùng với điều kiện làm các phần khác nhau.
+ 
+## Chú ý khi thực hiện
+- Tạo các issues để thông tin công việc từng nhóm/người đang làm, dùng nó để thảo luận các nội dung chính, và đóng issue khi hoàn thành công việc đó.
+- Khi các nhóm tạo issue, thì gắn label của nhóm đó vào issue.
+- Trước khi commit/push, nên pull/merge để tránh bị conflict.
+- **Từng người phải có issue mô tả công việc của mình, gán thông tin tag của nhóm, assignee, v.v. đầy đủ.**
 
-**1. New features**
-- Users can ask Cwat for multiple choice question exercises.
-- Cwat knows which question has been correctly answered by the users and will not show that question again.
-- The database has been updated with more questions.
-- Improved user experience with friendly interaction.
+## 19/9 các nhóm báo cáo, trình bày kiến thức tìm hiểu đc, và demo chương trình
+- Chuẩn bị sẵn slides để trình bày trong khoảng 20 phút.
+- Demo chương trình, phiên bản v0.1, chuẩn bị sẵn cả source code để trao đổi.

@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 2</name>
+    <events>
+        <variable constant="0" name="da_dung" sid="4733710822040801" static="0" type="text"></variable>
+        <variable constant="0" name="id" sid="8804721191754082" static="0" type="number">0</variable>
+        <variable constant="0" name="scale" sid="3036492176151026" static="0" type="number">0</variable>
+        <variable constant="0" name="cau" sid="6343692755359598" static="0" type="number">1</variable>
+        <variable constant="0" name="layout_scale" sid="4070153424365421" static="0" type="number">0</variable>
+        <event-block sid="6217471998876627">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="8564314207652" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Request project file" sid="8077765995523452" type="AJAX">
+                    <param id="0" name="Tag">&quot;test&quot;</param>
+                    <param id="1" name="File">test.xml</param>
+                </action>
+                <action id="-9" name="Set value" sid="7430870831315586" type="System">
+                    <param id="0" name="Variable">layout_scale</param>
+                    <param id="1" name="Value">min(WindowWidth/LayoutWidth,WindowHeight/LayoutHeight)</param>
+                </action>
+                <action id="-3" name="Set position" sid="3200602784780219" type="BG">
+                    <param id="0" name="X">LayoutWidth/2</param>
+                    <param id="1" name="Y">LayoutHeight/2</param>
+                </action>
+                <action id="-7" name="Set size" sid="2449864912601979" type="BG">
+                    <param id="0" name="Width">WindowWidth/layout_scale+10</param>
+                    <param id="1" name="Height">WindowHeight/layout_scale +10</param>
+                </action>
+                <action id="-3" name="Set position" sid="743105214853209" type="Sprite2">
+                    <param id="0" name="X">LayoutWidth/2</param>
+                    <param id="1" name="Y">LayoutHeight/2</param>
+                </action>
+                <action id="-7" name="Set size" sid="8916325634608023" type="Sprite2">
+                    <param id="0" name="Width">WindowWidth/layout_scale+10</param>
+                    <param id="1" name="Height">WindowHeight/layout_scale +10</param>
+                </action>
+                <action id="-18" name="Set layer opacity" sid="8124913782739678" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2578405147324869">
+            <conditions>
+                <condition id="0" name="On completed" sid="8940929588483773" type="AJAX">
+                    <param id="0" name="Tag">&quot;test&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Load" sid="1188689804086156" type="XML">
+                    <param id="0" name="XML">AJAX.LastData</param>
+                </action>
+                <action id="0" name="Call function" sid="6388635887609953" type="Function">
+                    <param id="0" name="Name">&quot;LoadData&quot;</param>
+                    <param id="1" name="Parameter {n}">cau</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5714038237355831">
+            <conditions>
+                <condition id="0" name="On function" sid="6506396319379669" type="Function">
+                    <param id="0" name="Name">&quot;LoadData&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="8141776244263269" type="debai">
+                    <param id="0" name="Text">XML.StringValue(&quot;/kiemtra/level1&quot;&amp;&quot;/bai[@id=&apos;bai&quot;&amp;Function.Param(0)&amp;&quot;&apos;]/debai/text()&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="4628076414059409" type="a">
+                    <param id="0" name="Text">XML.StringValue(&quot;/kiemtra/level1&quot;&amp;&quot;/bai[@id=&apos;bai&quot;&amp;Function.Param(0)&amp;&quot;&apos;]/dapan[@id = &apos;A&apos;]/text()&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="9614539569671642" type="b">
+                    <param id="0" name="Text">XML.StringValue(&quot;/kiemtra/level1&quot;&amp;&quot;/bai[@id=&apos;bai&quot;&amp;Function.Param(0)&amp;&quot;&apos;]/dapan[@id = &apos;B&apos;]/text()&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="1969137386031646" type="c">
+                    <param id="0" name="Text">XML.StringValue(&quot;/kiemtra/level1&quot;&amp;&quot;/bai[@id=&apos;bai&quot;&amp;Function.Param(0)&amp;&quot;&apos;]/dapan[@id = &apos;C&apos;]/text()&quot;)</param>
+                </action>
+                <action id="0" name="Set text" sid="2052784796537267" type="d">
+                    <param id="0" name="Text">XML.StringValue(&quot;/kiemtra/level1&quot;&amp;&quot;/bai[@id=&apos;bai&quot;&amp;Function.Param(0)&amp;&quot;&apos;]/dapan[@id = &apos;D&apos;]/text()&quot;)</param>
+                </action>
+                <action id="-9" name="Set value" sid="2051120144248212" type="System">
+                    <param id="0" name="Variable">da_dung</param>
+                    <param id="1" name="Value">XML.StringValue(&quot;/kiemtra/level1&quot;&amp;&quot;/bai[@id=&apos;bai&quot;&amp;Function.Param(0)&amp;&quot;&apos;]/da_dung/text()&quot;)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="2883618232602828">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9677570131336244" type="System">
+                            <param id="0" name="Variable">cau</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Set opacity" sid="2827720786581494" type="pre">
+                            <param id="0" name="Opacity">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="844086621536128">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5221004310346592" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7360238786577425">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="4923694806626375" type="System">
+                                    <param id="0" name="Variable">cau</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="2706409707457384" type="next">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="4299669314099106" type="ArrowPNGHD">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="5959492388203124" type="check">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5080883613126612">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8948569141539117" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="1247665510918649" type="pre">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="4197953061678177" type="next">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6669684173118318">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="279171981926099" type="System">
+                            <param id="0" name="Object">da</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="881186897363707" type="da">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3528141761283165">
+                    <conditions>
+                        <condition id="0" name="Compare at X" sid="8820845174734459" type="custom_chose">
+                            <param id="0" name="X">cau-1</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5588377591171818">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="9658923123670429" type="da">
+                                    <param id="0" name="Unique ID">custom_chose.At(cau-1)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set font color" sid="774043753604715" type="da">
+                                    <param id="0" name="Color">rgb(0, 255, 255)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5431845374646358">
+            <conditions>
+                <condition id="17" name="On tap object" sid="2775643452708637" type="Touch">
+                    <param id="0" name="Object">next</param>
+                </condition>
+                <condition id="-10" name="Compare opacity" sid="4623119235680822" type="next">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Opacity">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="9823557767585497" type="System">
+                    <param id="0" name="Variable">cau</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="153915032278183" type="Function">
+                    <param id="0" name="Name">&quot;LoadData&quot;</param>
+                    <param id="1" name="Parameter {n}">cau</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4129220423865994">
+            <conditions>
+                <condition id="17" name="On tap object" sid="6705947926951908" type="Touch">
+                    <param id="0" name="Object">pre</param>
+                </condition>
+                <condition id="-10" name="Compare opacity" sid="9561452555420918" type="pre">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Opacity">100</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="861365725431805" type="System">
+                    <param id="0" name="Variable">cau</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="5021968399556749" type="Function">
+                    <param id="0" name="Name">&quot;LoadData&quot;</param>
+                    <param id="1" name="Parameter {n}">cau</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="52880931952825">
+            <conditions>
+                <condition id="17" name="On tap object" sid="6240326389516087" type="Touch">
+                    <param id="0" name="Object">da</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="1724240112720281" type="System">
+                    <param id="0" name="Variable">id</param>
+                    <param id="1" name="Value">da.UID</param>
+                </action>
+                <action id="2" name="Set at X" sid="1152890938144961" type="custom_chose">
+                    <param id="0" name="X">cau-1</param>
+                    <param id="1" name="Value">da.UID</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="2301368854604375">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="1919074113241069" type="System">
+                            <param id="0" name="Object">da</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="2764852284102527" type="da">
+                            <param id="0" name="Color">rgb(0, 0, 0)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7477332085260178">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="6453058643812766" type="da">
+                            <param id="0" name="Unique ID">id</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set font color" sid="1759019064934146" type="da">
+                            <param id="0" name="Color">rgb(0, 255, 255)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6184724763717717">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8220784733076156" type="da">
+                            <param id="0" name="Instance variable">tag</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">da_dung</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="517037912881603" type="kq">
+                            <param id="0" name="X">cau-1</param>
+                            <param id="1" name="Value">&quot;T&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4468226738430748">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2231974910045235" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="2" name="Set at X" sid="2095160903099789" type="kq">
+                            <param id="0" name="X">cau-1</param>
+                            <param id="1" name="Value">&quot;F&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5294425617264715">
+            <conditions>
+                <condition id="17" name="On tap object" sid="1806802917237755" type="Touch">
+                    <param id="0" name="Object">check</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Set layer opacity" sid="9535723552006114" type="System">
+                    <param id="0" name="Layer">1</param>
+                    <param id="1" name="Opacity">100</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9566895179355158">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="4364734278674772" type="kq">
+                            <param id="0" name="Axes">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1415564570687784">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="6932854519797433" type="rs">
+                                    <param id="0" name="Unique ID">32+ kq.CurX</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="8764271460882155" type="rs">
+                                    <param id="0" name="Text">kq.CurValue</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
