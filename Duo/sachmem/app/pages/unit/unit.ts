@@ -14,7 +14,7 @@ import { UnitService } from '../../services/unit.service';
     trigger('actionState', [
       state('void', style({transform: 'translateY(100%)'})),
       transition('void => *', [
-        animate('500ms ease-out', keyframes([
+        animate('200ms ease-out', keyframes([
           style({transform: 'translateY(0%)', offset: 1}),
         ]))
       ])
