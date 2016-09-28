@@ -18,7 +18,7 @@ import javax.ws.rs.core.Response;
 public class BotResource {
     private ABBot abbot = new ABBot();
     private String botname = "mybot";
-    private String path = "/home/trieudh/Desktop/int3507-2016/NaVi/abchatbot-service";
+    private String path = System.getProperty("user.dir");
     private Bot bot = new Bot(botname, path);
     private Chat chatSession = new Chat(bot);
 
