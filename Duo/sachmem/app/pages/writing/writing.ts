@@ -118,16 +118,13 @@ export class WritingPage implements OnInit, OnChanges  {
   }
 
   skip(): void {
-    // setTimeout(() => {
-      this.onCorrect.emit(false);
-    // }, 500);
-
+    this.onCorrect.emit(false);
+    this.nativeService.playAudio('wrong');
+    
     setTimeout(() => {
       this.navCtrl.push(TrainingPage, {
         word: this.curWord
       });
     }, 1000);
-
-    this.nativeService.playAudio('wrong');
   }
 }

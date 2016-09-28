@@ -76,24 +76,17 @@ export class ListeningPage implements OnInit, OnChanges {
     this.answers = [];
 
     for (let i = 0; i < NO_OF_ANS; i++) {
-      if (i == position) {
-        let temp = {};
-        temp['id'] = this.curWord['id'];
-        temp['content'] = this.curWord['content'];
-        this.answers.push(temp);
+      let temp;
 
-        // this.answers.push(this.curWord);
+      if (i == position) {
+        temp = JSON.parse(JSON.stringify(this.curWord));
       } else {
         let r = this.helperService.random(wrongWord.length);
-         
-        let temp = {};
-        temp['id'] = wrongWord[r]['id'];
-        temp['content'] = wrongWord[r]['content'];
-        this.answers.push(temp);
-
-        // this.answers.push(wrongWord[r]);
+        temp = JSON.parse(JSON.stringify(wrongWord[r]));
         wrongWord.splice(r, 1);
       }
+
+      this.answers.push(temp);
     }
 
     this.choosen = undefined;
@@ -112,25 +105,19 @@ export class ListeningPage implements OnInit, OnChanges {
 
   checkAnswer() {
     if (this.choosen['id'] == this.curWord['id']) {
-      // setTimeout(() => {
-        this.onCorrect.emit(true);
-      // }, 1000);
-  
+      this.onCorrect.emit(true);
       this.choosen['state'] = 'right';
       this.nativeService.playAudio('correct');
     } else {
-      // setTimeout(() => {
-        this.onCorrect.emit(false);
-      // }, 1500);
+      this.onCorrect.emit(false);
+      this.choosen['state'] = 'wrong';
+      this.nativeService.playAudio('wrong');
 
       setTimeout(() => {
         this.navCtrl.push(TrainingPage, {
           word: this.curWord
         });
       }, 1000);
-
-      this.choosen['state'] = 'wrong';
-      this.nativeService.playAudio('wrong');
     }
   }
 }
