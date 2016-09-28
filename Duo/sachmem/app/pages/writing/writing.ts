@@ -86,6 +86,9 @@ export class WritingPage implements OnInit, OnChanges  {
   		this.allLetter.splice(r, 1);
   	}
 
+    // Sắp xếp lại options theo alphabet
+    this.options.sort();
+
     this.disabled = false;
   }
 
