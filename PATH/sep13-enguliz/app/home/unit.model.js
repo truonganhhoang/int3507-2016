@@ -3,7 +3,7 @@
  * Created by Thinking on 09/24/2016.
  */
 var Unit = (function () {
-    function Unit(unitId, unitTitle, unitSubTitle, unitThumbnail, unitViews, unitActionUrl) {
+    function Unit(unitId, unitTitle, unitSubTitle, unitThumbnail, unitViews, unitThreads, unitCreatedDate, categoryIdRef, unitActionUrl) {
     }
     return Unit;
 }());

@@ -8,6 +8,9 @@ export class Unit {
         unitSubTitle: string,
         unitThumbnail: string,
         unitViews: number,
+        unitThreads: string,
+        unitCreatedDate: string,
+        categoryIdRef: string,
         unitActionUrl: string
     ) {}
 }

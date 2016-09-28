@@ -1,3 +1,56 @@
 <div class="container">
-    <h3>Detail course</h3>
+    <div style="width: 100%;text-align: center;">
+        <h3>{{title}}</h3>
+        <img alt="" width="30%" height="30%" src="{{thumbnail}}"><br>
+        <span>{{subTitle}}</span><br>
+        <p>Time: 30'</p>
+        <button class="btn btn-primary" (click)="startTesting()">Start</button>
+    </div>
+
+    <div *ngIf="isTest === true">
+        <h3>Bắt đầu làm bài</h3>
+
+        <h2>Thời gian làm bài: {{ticks}}</h2>
+
+        <div>
+            <ol>
+                <li>Đây là 1 câu hỏi ?
+                    <ul>
+                        <li><input type="radio" name="cau1">A. Đáp án 1</li>
+                        <li><input type="radio" name="cau1">B. Đáp án 2</li>
+                        <li><input type="radio" name="cau1">C. Đáp án 3</li>
+                        <li><input type="radio" name="cau1">D. Đáp án 4</li>
+                    </ul>
+                </li>
+                <li>Đây là 2 câu hỏi ?
+                    <ul>
+                        <li><input type="radio" name="cau2">A. Đáp án 1</li>
+                        <li><input type="radio" name="cau2">B. Đáp án 2</li>
+                        <li><input type="radio" name="cau2">C. Đáp án 3</li>
+                        <li><input type="radio" name="cau2">D. Đáp án 4</li>
+                    </ul>
+                </li>
+                <li>Đây là 3 câu hỏi ?
+                    <ul>
+                        <li><input type="radio" name="cau3">A. Đáp án 1</li>
+                        <li><input type="radio" name="cau3">B. Đáp án 2</li>
+                        <li><input type="radio" name="cau3">C. Đáp án 3</li>
+                        <li><input type="radio" name="cau3">D. Đáp án 4</li>
+                    </ul>
+                </li>
+                <li>Đây là 4 câu hỏi ?
+                    <ul>
+                        <li><input type="radio" name="cau4">A. Đáp án 1</li>
+                        <li><input type="radio" name="cau4">B. Đáp án 2</li>
+                        <li><input type="radio" name="cau4">C. Đáp án 3</li>
+                        <li><input type="radio" name="cau4">D. Đáp án 4</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+
+    <div *ngIf="isNotify === true">
+        <h3>Hết giờ làm bài</h3>
+    </div>
 </div>

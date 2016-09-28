@@ -4,16 +4,14 @@ var db = require('../utils/mongo1970');
 var Collect = require('../utils/collection');
 var RespHome = require('../models/logical/RespHome');
 var async = require("async");
+var ObjectId = require('mongodb').ObjectID;
 
-
-router.get('/home', function(req, res) {
+router.get('/home', (req, res) => {
     var resp = {};
     resp.error = 0;
     resp.message = "";
 
-    var baseUrl = req.protocol + '://' + req.get('host');
-
-    console.log(baseUrl);
+    var baseUrl = req.protocol + '://' + req.get('host') + "/api/v1";
 
     db.fetchAll(Collect.category, (categories) => {
         var respCategories = [];
@@ -31,7 +29,7 @@ router.get('/home', function(req, res) {
                         unit.unitSubTitle,
                         unit.unitThumbnail,
                         unit.unitViews,
-                        baseUrl + "/details?u_ref=" + unit._id));
+                        baseUrl + "/details/" + unit._id));
                 });
                 category.categoryItems = respUnits;
                 callback();
@@ -39,6 +37,27 @@ router.get('/home', function(req, res) {
         }, (err) => {
             res.send(resp);
         });
+    });
+});
+
+router.get('/details/:id', (req, res) => {
+    var id =  req.params.id;
+    var resp = {};
+
+    db.findOne(Collect.unit, {"_id": new ObjectId(id)}, (result) => {
+        if(result) {
+            resp.error = 0;
+            resp.message = "";
+            resp.data = result;
+            res.send(resp);
+            res.end();
+        } else {
+            resp.error = 1;
+            resp.message = "Unit is empty or null";
+            resp.data = null;
+            res.send(resp);
+            res.end();
+        }
     });
 });
 
