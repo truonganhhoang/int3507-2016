@@ -50,6 +50,7 @@ export class ListeningPage implements OnInit, OnChanges {
   curWord: Object;
   answers: Object[] = [];
   choosen: Object;
+  disabled: boolean = false;
 
   constructor(private navCtrl: NavController, private navParams: NavParams, private nativeService: NativeService, private helperService: HelperService) { }
 
@@ -90,9 +91,13 @@ export class ListeningPage implements OnInit, OnChanges {
     }
 
     this.choosen = undefined;
+    this.disabled = false;
   }
 
   choose(item: Object): void {
+    // Đã trả lời, không cho click đáp án khác
+    if (this.disabled) return;
+
     this.choosen = item;
     this.nativeService.tts(item['content']);
 
@@ -104,6 +109,12 @@ export class ListeningPage implements OnInit, OnChanges {
   }
 
   checkAnswer() {
+    // Đã trả lời, không cho click check nữa
+    if (this.disabled) return;
+
+    // Khóa check
+    this.disabled = true;
+
     if (this.choosen['id'] == this.curWord['id']) {
       this.onCorrect.emit(true);
       this.choosen['state'] = 'right';

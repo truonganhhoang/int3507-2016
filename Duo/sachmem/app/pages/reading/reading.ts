@@ -42,6 +42,7 @@ export class ReadingPage implements OnInit, OnChanges {
   allWords: Object[];
   curWord: Object;
   answers: Object[] = [];
+  disabled: boolean = false;
 
   constructor(private navCtrl: NavController, private navParams: NavParams, private nativeService: NativeService, private helperService: HelperService) { }
 
@@ -80,9 +81,19 @@ export class ReadingPage implements OnInit, OnChanges {
 
       this.answers.push(temp);
     }
+
+    // Cho phép checkAnswer
+    this.disabled = false;
   }
 
   checkAnswer(item: Object) {
+    // Đã trả lời, không cho click đáp án khác
+    if (this.disabled) return;
+
+    // Khóa các đáp án
+    this.disabled = true;
+
+    // Xử lý
     if (item['id'] == this.curWord['id']) {
       this.onCorrect.emit(true);
       item['state'] = 'right';
@@ -92,7 +103,7 @@ export class ReadingPage implements OnInit, OnChanges {
       this.onCorrect.emit(false);
       item['state'] = 'wrong';
       this.nativeService.playAudio('wrong');
-      
+
       setTimeout(() => {
         this.navCtrl.push(TrainingPage, {
           word: this.curWord
