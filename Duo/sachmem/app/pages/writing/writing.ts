@@ -96,7 +96,7 @@ export class WritingPage implements OnInit, OnChanges  {
     // Đã trả lời đúng hoặc ấn skip, không cho backspace
     if (this.disabled) return;
 
-    this.nativeService.playAudio('tap');
+    this.nativeService.playAudio('click');
 
     if (this.answers.length >= 1) {
       this.answers.splice(this.answers.length - 1, 1);
