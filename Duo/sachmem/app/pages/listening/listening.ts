@@ -123,6 +123,7 @@ export class ListeningPage implements OnInit, OnChanges {
       this.onCorrect.emit(false);
       this.choosen['state'] = 'wrong';
       this.nativeService.playAudio('wrong');
+      this.nativeService.vibrate();
 
       setTimeout(() => {
         this.navCtrl.push(TrainingPage, {

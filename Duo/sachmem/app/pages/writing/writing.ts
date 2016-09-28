@@ -20,6 +20,11 @@ import { TrainingPage } from '../training/training';
         borderColor: '#4caf50',
         color: 'white',
       })),
+      state('wrong', style({
+        backgroundColor: '#f44336',
+        borderColor: '#f44336',
+        color: 'white',
+      })),
       transition('void => *', [
         animate('100ms ease-out', keyframes([
           style({transform: 'scale(0)', offset: 0}),
@@ -133,9 +138,10 @@ export class WritingPage implements OnInit, OnChanges  {
 
     // Khóa skip
     this.disabled = true;
-
     this.onCorrect.emit(false);
+    this.answerState = 'wrong';
     this.nativeService.playAudio('wrong');
+    this.nativeService.vibrate();
 
     setTimeout(() => {
       this.navCtrl.push(TrainingPage, {

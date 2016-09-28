@@ -103,6 +103,7 @@ export class ReadingPage implements OnInit, OnChanges {
       this.onCorrect.emit(false);
       item['state'] = 'wrong';
       this.nativeService.playAudio('wrong');
+      this.nativeService.vibrate();
 
       setTimeout(() => {
         this.navCtrl.push(TrainingPage, {
