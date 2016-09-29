@@ -29,105 +29,38 @@ module.exports = function receivedMessage(event) {
         let payload = quickReply.payload;
         if (payload) {
             let action = payload.split('_')[0];
-            let status = payload.split('_')[1];
-            let qId = payload.split('_')[2];  // question's id
-            let rightAnswer = payload.split('_')[3];
 
             // If action is 'Multiple choices'
             if (action === 'MC') {
-                if (status === 'TRUE') {
-                    models.User.update({
-                        $pull: {
-                            unlearnedQuestions: {
-                                questionId: qId
-                            }
-                        }
-                    }).exec(function (err) {
-                        if (err) {
-                            console.log(err);
-                        }
-                        else {
-                            sendFunctions.sendTextMessage(senderID, 'Chính xác! Đang tải câu hỏi tiếp theo...', function () {
-                                // send new question
-                                require('../fnMutipleChoices/sendQuestion')(senderID);
-                            });
-                        }
-                    });
-                }
-                else if (status === 'FALSE') {
-                    // return the answer
-                    sendFunctions.sendTextMessage(senderID, "Sai. Đáp án là: \"" + rightAnswer + "\". Đang tải câu hỏi tiếp theo...", function () {
-                        // send new question
-                        require('../fnMutipleChoices/sendQuestion')(senderID);
-                    });
-                    // send new question
-                    // require('../fnMutipleChoices/sendQuestion')(senderID);
-                }
+                require('../fnMutipleChoices/handleQuickReplyAction')(senderID, payload);
             }
         }
     }
 
     else if (messageText) {
-        switch (messageText) {
-            case 'làm trắc nghiệm':
+        require('../intentClassification/getIntentClassification')(messageText, function (err, response) {
+            if (err) {
+                require('../sendErrorMessage')(senderID);
+            }
+            else if (response && response.intentClass === 'MP') {
                 require('../fnMutipleChoices/sendQuestion')(senderID);
-                break;
-
-            case 'image':
-                sendFunctions.sendImageMessage(senderID);
-                break;
-
-            case 'gif':
-                sendFunctions.sendGifMessage(senderID);
-                break;
-
-            case 'audio':
-                sendFunctions.sendAudioMessage(senderID);
-                break;
-
-            case 'video':
-                sendFunctions.sendVideoMessage(senderID);
-                break;
-
-            case 'file':
-                sendFunctions.sendFileMessage(senderID);
-                break;
-
-            case 'button':
-                sendFunctions.sendButtonMessage(senderID);
-                break;
-
-            case 'generic':
-                sendFunctions.sendGenericMessage(senderID);
-                break;
-
-            case 'receipt':
-                sendFunctions.sendReceiptMessage(senderID);
-                break;
-
-            case 'quick reply':
-                sendFunctions.sendQuickReply(senderID);
-                break;
-
-            case 'read receipt':
-                sendFunctions.sendReadReceipt(senderID);
-                break;
-
-            case 'typing on':
-                sendFunctions.sendTypingOn(senderID);
-                break;
-
-            case 'typing off':
-                sendFunctions.sendTypingOff(senderID);
-                break;
-
-            case 'account linking':
-                sendFunctions.sendAccountLinking(senderID);
-                break;
-
-            default:
-                require('../abchatbot/sendResponseMessageFromABBot')(senderID, messageText);
-        }
+            }
+            else if (response && response.intentClass === 'NW') {
+                require('../fnNewwords/sendNewword')(senderID);
+            }
+            else if (response && response.intentClass === 'LI') {
+                require('../fnListening/sendListeningChallenge')(senderID);
+            }
+            else if (response && response.intentClass === 'CO') {
+                require('../fnConversations/sendNormalMessage')(senderID, response.botResponse);
+            }
+            else {
+                console.log(response);
+                require('./sendFunctions/sendTextMessage')(senderID, response.intentClass, function (err) {
+                    console.log("Message sent!");
+                });
+            }
+        });
     }
     else if (messageAttachments) {
         sendFunctions.sendTextMessage(senderID, "Message with attachment received");

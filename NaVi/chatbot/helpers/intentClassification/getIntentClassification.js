@@ -5,7 +5,7 @@ const
 
 module.exports = function (message, callback) {
     request({
-        uri: config.get('abServiceURL'),
+        uri: config.get('intentClassificationServiceURL'),
         qs: {
             text: message
         },
@@ -15,7 +15,7 @@ module.exports = function (message, callback) {
             callback(err);
         }
         else {
-            callback(null, JSON.parse(body).botResponse);
+            callback(null, JSON.parse(body));
         }
     });
 };
