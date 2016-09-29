@@ -30,11 +30,12 @@ module.exports = function receivedMessage(event) {
         if (payload) {
             let action = payload.split('_')[0];
             let status = payload.split('_')[1];
-            let qId = payload.split('_')[2];  // question's id
-            let rightAnswer = payload.split('_')[3];
 
             // If action is 'Multiple choices'
             if (action === 'MC') {
+            	let qId = payload.split('_')[2];  // question's id
+            	let rightAnswer = payload.split('_')[3];
+
                 if (status === 'TRUE') {
                     models.User.update({
                         $pull: {
@@ -60,10 +61,15 @@ module.exports = function receivedMessage(event) {
                         // send new question
                         require('../fnMutipleChoices/sendQuestion')(senderID);
                     });
-                    // send new question
-                    // require('../fnMutipleChoices/sendQuestion')(senderID);
                 }
             }
+           	// If action is 'New word'
+           	else if (action === "NW") {
+           		if (status === "NEXT") {
+           			// send another word
+           			require('../fnNewWords/sendWord')(senderID);
+           		}
+           	}
         }
     }
 
@@ -71,6 +77,10 @@ module.exports = function receivedMessage(event) {
         switch (messageText) {
             case 'làm trắc nghiệm':
                 require('../fnMutipleChoices/sendQuestion')(senderID);
+                break;
+
+            case 'học từ mới':
+                require('../fnNewWords/sendWord')(senderID);
                 break;
 
             case 'image':
