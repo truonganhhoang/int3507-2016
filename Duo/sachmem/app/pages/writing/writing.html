@@ -16,12 +16,11 @@
     </ion-col>
   </ion-row>
   <ion-row wrap>
-    <ion-col width-100 style="height:50px">
+    <ion-col width-100 style="height:50px;text-align:right">
+      <button (click)="skip()" style="height:100%">Skip</button>
       <button (click)="backspace()" style="height:100%">
         <i class="material-icons">backspace</i>
       </button>
-      <!-- <button [disabled]="!pass" (click)="next()" style="height:100%">Next</button> -->
-      <button (click)="skip()" style="height:100%">Skip</button>
     </ion-col>
   </ion-row>
 </ion-grid>
