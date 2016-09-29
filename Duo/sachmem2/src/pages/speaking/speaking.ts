@@ -14,7 +14,6 @@ declare var SpeechRecognition: any;
 export class SpeakingPage implements OnInit, OnChanges {
   @Output() onCorrect = new EventEmitter<boolean>();
   @Input() curWord: Object;
-  @Input() allWords: Object[];
 
   texts: String = 'ios-mic-outline';
   speaking: String;

@@ -45,8 +45,7 @@ import { TrainingPage } from '../training/training';
 
 export class WritingPage implements OnInit, OnChanges  {
 	@Output() onCorrect = new EventEmitter<boolean>();
-	@Input() curWord: Object;
-	@Input() allWords: Object[];
+	@Input() curWord: Object;	
   
 	answers: Object[] = [];
 	options: Object[];

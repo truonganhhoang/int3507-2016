@@ -17,9 +17,14 @@ import { SpeakingPage } from '../speaking/speaking';
   // directives: [ ReadingPage, ListeningPage, WritingPage, SpeakingPage ],
   animations: [
     trigger('iconState', [
+      state('init', style({
+        border: '#387ef5 1px solid',
+        backgroundColor: 'rgba(1,1,1,0)',
+        color: '#387ef5'
+      })),
       state('right',   style({
+        border: '#387ef5 1px solid',
         backgroundColor: '#387ef5',
-        borderColor: '#387ef5',
         color: 'white',
       })),
       transition('* => right', [
@@ -51,7 +56,7 @@ export class FightingPage implements OnInit {
       // Tạm thời gán cho 'games' 4 giá trị l, s, r, w. 
       // Khi lưu dữ liệu sẽ thay đổi tùy theo.
       for (let i = 0; i < this.words.length; i++) {
-        this.words[i]['games'] = [ 'r', 'w', 'l' ];
+        this.words[i]['games'] = [ 'r', 'l' ];
       }
 
       this.reload();
@@ -61,7 +66,7 @@ export class FightingPage implements OnInit {
   ngOnInit() { }
 
   reload(): void {
-    this.iconState = 'none';
+    this.iconState = 'init';
     // Chọn từ ngẫu nhiên
     let i = this.helperService.random(this.words.length);
     // this.curWord = this.words[i];

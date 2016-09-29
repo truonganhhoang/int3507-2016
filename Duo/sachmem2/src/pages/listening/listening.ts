@@ -45,8 +45,8 @@ import { TrainingPage } from '../training/training';
 export class ListeningPage implements OnInit, OnChanges {
   // Biến trả về cho fighting, khi đúng thì gọi hàm next()
   @Output() onCorrect = new EventEmitter<boolean>();
-  @Input() allWords: Object[];
   @Input() curWord: Object;
+  @Input() allWords: Object[];
   answers: Object[] = [];
   choosen: Object;
   disabled: boolean = false;
