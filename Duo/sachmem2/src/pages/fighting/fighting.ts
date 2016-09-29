@@ -11,9 +11,10 @@ import { WritingPage } from '../writing/writing';
 import { SpeakingPage } from '../speaking/speaking';
 
 @Component({
-  templateUrl: 'build/pages/fighting/fighting.html',
+  selector: 'fighting',
+  templateUrl: 'fighting.html',
   providers: [ WordService, HelperService ],
-  directives: [ ReadingPage, ListeningPage, WritingPage, SpeakingPage ],
+  // directives: [ ReadingPage, ListeningPage, WritingPage, SpeakingPage ],
   animations: [
     trigger('iconState', [
       state('right',   style({
@@ -50,7 +51,7 @@ export class FightingPage implements OnInit {
       // Tạm thời gán cho 'games' 4 giá trị l, s, r, w. 
       // Khi lưu dữ liệu sẽ thay đổi tùy theo.
       for (let i = 0; i < this.words.length; i++) {
-        this.words[i]['games'] = [ 's' ];
+        this.words[i]['games'] = [ 'r', 'w', 'l' ];
       }
 
       this.reload();

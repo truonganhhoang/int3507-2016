@@ -10,9 +10,8 @@ import { TrainingPage } from '../training/training';
 
 @Component({
   selector: 'listening-page',
-  templateUrl: 'build/pages/listening/listening.html',
+  templateUrl: 'listening.html',
   providers: [ NativeService ],
-  inputs: [ 'curWord', 'allWords' ],
   animations: [
     trigger('answerState', [
       state('choosen', style({
@@ -46,8 +45,8 @@ import { TrainingPage } from '../training/training';
 export class ListeningPage implements OnInit, OnChanges {
   // Biến trả về cho fighting, khi đúng thì gọi hàm next()
   @Output() onCorrect = new EventEmitter<boolean>();
-  allWords: Object[];
-  curWord: Object;
+  @Input() allWords: Object[];
+  @Input() curWord: Object;
   answers: Object[] = [];
   choosen: Object;
   disabled: boolean = false;

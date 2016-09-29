@@ -10,7 +10,7 @@ export class WordService {
 
   getWords(unitId: number): Promise<Object[]>{
     return new Promise(resolve => {
-      this.http.get('data/words.json').subscribe(res => {
+      this.http.get('assets/data/words.json').subscribe(res => {
         let temp = res.json();
 
         for(let i = 0; i < temp.length; i++) {
@@ -30,7 +30,7 @@ export class WordService {
 
    getWord(wordId: number): Promise<Object[]>{
     return new Promise(resolve => {
-      this.http.get('data/words.json').subscribe(res => {
+      this.http.get('assets/data/words.json').subscribe(res => {
         let temp = res.json();
 
         for(let i = 0; i < temp.length; i++) {

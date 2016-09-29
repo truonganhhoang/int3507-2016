@@ -1,4 +1,4 @@
-import { Component, OnInit, NgZone, EventEmitter, Output, OnChanges, SimpleChange } from '@angular/core';
+import { Component, OnInit, NgZone, EventEmitter, Output, Input, OnChanges, SimpleChange } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 import { HelperService } from '../../services/helper.service'; 
@@ -8,14 +8,14 @@ declare var SpeechRecognition: any;
 
 @Component({
   selector: 'speaking-page',
-  templateUrl: 'build/pages/speaking/speaking.html',
-  inputs: [ 'words', 'curWord' ]
+  templateUrl: 'speaking.html'
 })
 
 export class SpeakingPage implements OnInit, OnChanges {
   @Output() onCorrect = new EventEmitter<boolean>();
-  allWords: Object[];
-  curWord: Object;
+  @Input() curWord: Object;
+  @Input() allWords: Object[];
+
   texts: String = 'ios-mic-outline';
   speaking: String;
   isRecording: boolean = false;

@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output, OnChanges, SimpleChange,
+import { Component, OnInit, EventEmitter, Output, Input, OnChanges, SimpleChange,
          trigger, state, style, transition, animate, keyframes
        } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
@@ -10,9 +10,9 @@ import { TrainingPage } from '../training/training';
 
 @Component({
 	selector: 'writing-page',
-  templateUrl: 'build/pages/writing/writing.html',
+  templateUrl: 'writing.html',
   providers: [ NativeService ],
-  inputs: [ 'words', 'curWord' ],
+  // inputs: [ 'words', 'curWord' ],
   animations: [
     trigger('answerState', [
       state('right', style({
@@ -45,9 +45,9 @@ import { TrainingPage } from '../training/training';
 
 export class WritingPage implements OnInit, OnChanges  {
 	@Output() onCorrect = new EventEmitter<boolean>();
-
-	curWord: Object;
-	allWords: Object[];
+	@Input() curWord: Object;
+	@Input() allWords: Object[];
+  
 	answers: Object[] = [];
 	options: Object[];
 	allLetter: Object[];

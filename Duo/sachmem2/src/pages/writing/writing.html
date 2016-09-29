@@ -1,7 +1,7 @@
 <ion-grid>
 	<ion-row wrap>
     <ion-col width-10 *ngFor="let item of answers" style="height:50px">
-      <button @answerState="answerState" block style="white-space:initial;height:100%">
+      <button [@answerState]="answerState" block style="white-space:initial;height:100%">
         {{item}}
       </button>
     </ion-col>

@@ -2,7 +2,7 @@
   <ion-row wrap>
     <ion-col width-33 *ngFor="let item of answers" style="height:60px">
       <button block outline (click)="choose(item)" style="white-space:initial;height:100%"
-      @answerState="item.state">
+      [@answerState]="item.state">
         <ion-icon name="volume-up"></ion-icon>
       </button>
     </ion-col>

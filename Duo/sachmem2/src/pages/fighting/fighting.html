@@ -12,9 +12,9 @@
 
 <ion-content *ngIf="curWord">
   <ion-card>
-    <img src="img/advance-card-map-madison.png">
+    <img src="assets/img/advance-card-map-madison.png">
     <button fab fab-right fab-top outline
-            @iconState="iconState">
+            [@iconState]="iconState">
       <i class="material-icons" *ngIf="selectedGame == 'r'">chrome_reader_mode</i>
       <i class="material-icons" *ngIf="selectedGame == 'l'">hearing</i>
       <i class="material-icons" *ngIf="selectedGame == 'w'">edit</i>
@@ -29,13 +29,13 @@
         <reading-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></reading-page>
       </div>
       <div *ngIf="selectedGame == 'l'">
-        <listening-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></listening-page>
+        <listening-page ></listening-page>
       </div>
       <div *ngIf="selectedGame == 'w'">
         <writing-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></writing-page>
       </div>
       <div *ngIf="selectedGame == 's'">
-        <speaking-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></speaking-page>
+        <speaking-page></speaking-page>
       </div>
     </ion-card-content>
   </ion-card>

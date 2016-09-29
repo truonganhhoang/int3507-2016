@@ -10,9 +10,9 @@ import { TrainingPage } from '../training/training';
 
 @Component({
   selector: 'reading-page',
-  templateUrl: 'build/pages/reading/reading.html',
+  templateUrl: 'reading.html',
   providers: [ NativeService ],
-  inputs: [ 'curWord', 'allWords' ],
+  // inputs: [ 'curWord', 'allWords' ],
   animations: [
     trigger('answerState', [
       state('right', style({
@@ -39,8 +39,8 @@ import { TrainingPage } from '../training/training';
 export class ReadingPage implements OnInit, OnChanges {
   // Biến trả về cho fighting, khi đúng thì gọi hàm next()
   @Output() onCorrect = new EventEmitter<boolean>();
-  allWords: Object[];
-  curWord: Object;
+  @Input() allWords: Object[];
+  @Input() curWord: Object;
   answers: Object[] = [];
   disabled: boolean = false;
 

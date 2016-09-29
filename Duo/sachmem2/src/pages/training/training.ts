@@ -7,7 +7,7 @@ import { WordService } from '../../services/word.service';
 import { NativeService } from '../../services/native.service';
 
 @Component({
-  templateUrl: 'build/pages/training/training.html',
+  templateUrl: 'training.html',
   providers: [ WordService, NativeService ]
 })
 
