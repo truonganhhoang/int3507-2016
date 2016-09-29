@@ -5,31 +5,56 @@ const
     config = require('config'),
     mongoose = require('mongoose'),
     models = require('../models'),
-    Question = models.Question;
+    Question = models.Question,
+    NewWord = models.NewWord;
 
 const delayTimeToImportData = 5000;
 var questions = [];
+var newWords = [];
 mongoose.Promise = global.Promise;
 
 seeder.connect(config.get('mongodbURL'), function () {
     console.log('Connected to mongodb');
     seeder.loadModels([
         'models/Question.js',
-        'models/User.js'
+        'models/User.js',
+        'models/NewWord.js'
     ]);
     seeder.clearModels([
         'Question',
-        'User'
+        'User',
+        'NewWord'
     ], function () {
-        let fileToImport = 'database/raw/mc_v2_database.csv';
+        let MCQuestionFile = 'database/raw/mc_v2_database.csv';
+        let WordFile = 'database/raw/words.csv';
+
         console.log(`Start importing... Please wait ${delayTimeToImportData/1000} seconds`);
-        csv.fromPath(fileToImport, { delimiter: ';'}).on('data', function (data) {
+
+        // import multiple choices question
+        csv.fromPath(MCQuestionFile, { delimiter: ';'}).on('data', function (data) {
             questions.push(data);
         }).on('finish', function () {
             try {
                 importQuestion(questions, function (numberOfImportedQuestions) {
                     setTimeout(function () {
                         console.log(`Finish importing: ${numberOfImportedQuestions} questions.`);
+                        process.exit(0);
+                    }, delayTimeToImportData);
+                });
+            }
+            catch (err) {
+                console.log('Error occurs: ', err.message);
+            }
+        });
+
+        // import new words
+        csv.fromPath(WordFile, { delimiter: '|'}).on('data', function (data) {
+            newWords.push(data);
+        }).on('finish', function () {
+            try {
+                importNewWord(newWords, function (numberOfImportedWords) {
+                    setTimeout(function () {
+                        console.log(`Finish importing: ${numberOfImportedWords} new words.`);
                         process.exit(0);
                     }, delayTimeToImportData);
                 });
@@ -75,4 +100,26 @@ var importQuestion = function (questions, callback) {
         });
     }
     callback(questions.length);
+};
+
+var importNewWord = function (newWords, callback) {
+    for (let i = 0; i < newWords.length; i++) {
+        NewWord.findOne({
+            word: newWords[i][0]
+        }, function (err, result) {
+            if (err) {
+                throw new Error('ERROR_FINDING_NEW_WORD');
+            }
+            else if (result === null) {
+                let word = new NewWord({
+                    word: newWords[i][0],
+                    type: newWords[i][1],
+                    pronunciation: newWords[i][2],
+                    meaning: newWords[i][3]
+                });
+                word.save();
+            }
+        });
+    }
+    callback(newWords.length);
 };
