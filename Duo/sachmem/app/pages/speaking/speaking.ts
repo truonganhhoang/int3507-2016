@@ -2,37 +2,34 @@ import { Component, OnInit, NgZone, EventEmitter, Output, OnChanges, SimpleChang
 import { NavController } from 'ionic-angular';
 
 import { HelperService } from '../../services/helper.service'; 
+import { TrainingPage } from '../training/training';
 
 declare var SpeechRecognition: any;
 
 @Component({
-	selector: 'speaking-page',
+  selector: 'speaking-page',
   templateUrl: 'build/pages/speaking/speaking.html',
   inputs: [ 'words', 'curWord' ]
 })
 
 export class SpeakingPage implements OnInit, OnChanges {
   @Output() onCorrect = new EventEmitter<boolean>();
-	allWords: Object[];
-	curWord: Object;
-	// recognition: any;
-
-	texts: String = 'RECORD';
-	speaking: String;
+  allWords: Object[];
+  curWord: Object;
+  texts: String = 'ios-mic-outline';
+  speaking: String;
   isRecording: boolean = false;
   percent: number;
   recognition: any;
 
-	ngOnInit() { }
+  ngOnInit() { }
 
   ngOnChanges(changes:{[propKey: string]: SimpleChange}) {
     this.percent = 0;
-    alert(this.curWord['content'] + "222");
     this.recognition = new SpeechRecognition();
     
     this.recognition.onresult = (event: Event) => {
       if (event['results'].length > 0) {
-        alert(this.isRecording);
         
         var temp = 0;
         for(let i = 0; i < 3; i++) {
@@ -41,14 +38,13 @@ export class SpeakingPage implements OnInit, OnChanges {
           if(temp > this.percent) {
             this.percent = temp;
             this.speaking = event['results'][i][0].transcript;
-
           }
         }
 
         if(this.isRecording) this.checkAnswer();
 
         this.isRecording = false;
-        this.texts = 'RECORD';
+        this.texts = 'ios-mic-outline';
 
         this.zone.run(() => { });
       }
@@ -56,34 +52,34 @@ export class SpeakingPage implements OnInit, OnChanges {
 
     this.recognition.onspeechstart = (event: Event) => {
       this.isRecording = true;
-      this.texts = 'RECORDING'
+      this.texts = 'ios-square-outline'
       this.zone.run(() => { });
     }  
   }
 
-  constructor(private navCtrl: NavController, private zone: NgZone, private helperService: HelperService) {
-
-  }
+  constructor(private navCtrl: NavController, private zone: NgZone, private helperService: HelperService) { }
 
   record() {
     if(!this.isRecording) {
       this.recognition.start();
     } else {
-      // alert('abort');
       this.isRecording = false;
-      this.texts = 'RECORD';
+      this.texts = 'ios-mic-outline';
       this.recognition.abort();
     }
   }
 
   checkAnswer() {
-    alert("truoc condition" + this.percent);
     if(this.percent > 80) {
-      alert(this.percent);
       this.onCorrect.emit(true);
 
     } else {
       this.onCorrect.emit(false);
+      setTimeout(() => {
+        this.navCtrl.push(TrainingPage, {
+          word: this.curWord
+        });
+      }, 1000);
     }
   }
 }
