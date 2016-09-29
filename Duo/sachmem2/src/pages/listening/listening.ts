@@ -47,6 +47,7 @@ export class ListeningPage implements OnInit, OnChanges {
   @Output() onCorrect = new EventEmitter<boolean>();
   @Input() allWords: Object[];
   @Input() curWord: Object;
+  
   answers: Object[] = [];
   choosen: Object;
   disabled: boolean = false;
