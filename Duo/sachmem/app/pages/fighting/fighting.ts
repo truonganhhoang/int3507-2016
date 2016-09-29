@@ -50,7 +50,7 @@ export class FightingPage implements OnInit {
       // Tạm thời gán cho 'games' 4 giá trị l, s, r, w. 
       // Khi lưu dữ liệu sẽ thay đổi tùy theo.
       for (let i = 0; i < this.words.length; i++) {
-        this.words[i]['games'] = [ 'r', 'l', 'w' ];
+        this.words[i]['games'] = [ 's' ];
       }
 
       this.reload();
@@ -60,6 +60,7 @@ export class FightingPage implements OnInit {
   ngOnInit() { }
 
   reload(): void {
+    alert("reload");
     this.iconState = 'none';
     // Chọn từ ngẫu nhiên
     let i = this.helperService.random(this.words.length);
@@ -75,6 +76,7 @@ export class FightingPage implements OnInit {
   }
 
   next() {
+    alert("next");
     for (let i = 0; i < this.words.length; i++) {
       if (this.words[i]['id'] == this.curWord['id']) {
         for (let j = 0; j < this.words[i]['games'].length; j++) {

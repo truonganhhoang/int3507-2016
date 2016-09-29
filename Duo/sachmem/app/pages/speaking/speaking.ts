@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgZone, EventEmitter, Output, OnChanges, SimpleChange } from '@angular/core';
 import { NavController } from 'ionic-angular';
+
+import { HelperService } from '../../services/helper.service'; 
 
 declare var SpeechRecognition: any;
 
@@ -9,69 +11,79 @@ declare var SpeechRecognition: any;
   inputs: [ 'words', 'curWord' ]
 })
 
-export class SpeakingPage implements OnInit {
+export class SpeakingPage implements OnInit, OnChanges {
+  @Output() onCorrect = new EventEmitter<boolean>();
 	allWords: Object[];
 	curWord: Object;
 	// recognition: any;
 
-	texts: String = 'Khong record';
-	speaking: String = 'zz';
+	texts: String = 'RECORD';
+	speaking: String;
+  isRecording: boolean = false;
+  percent: number;
+  recognition: any;
 
-	ngOnInit() {
-			
-	}
+	ngOnInit() { }
 
-  constructor(private navCtrl: NavController) {
+  ngOnChanges(changes:{[propKey: string]: SimpleChange}) {
+    this.percent = 0;
+    alert(this.curWord['content'] + "222");
+    this.recognition = new SpeechRecognition();
+    
+    this.recognition.onresult = (event: Event) => {
+      if (event['results'].length > 0) {
+        alert(this.isRecording);
+        
+        var temp = 0;
+        for(let i = 0; i < 3; i++) {
+          temp = this.helperService.similar_text(event['results'][i][0].transcript, this.curWord['content'], 100);
+
+          if(temp > this.percent) {
+            this.percent = temp;
+            this.speaking = event['results'][i][0].transcript;
+
+          }
+        }
+
+        if(this.isRecording) this.checkAnswer();
+
+        this.isRecording = false;
+        this.texts = 'RECORD';
+
+        this.zone.run(() => { });
+      }
+    };
+
+    this.recognition.onspeechstart = (event: Event) => {
+      this.isRecording = true;
+      this.texts = 'RECORDING'
+      this.zone.run(() => { });
+    }  
+  }
+
+  constructor(private navCtrl: NavController, private zone: NgZone, private helperService: HelperService) {
 
   }
 
   record() {
-  	let recognition: any;
-  	recognition = new SpeechRecognition();
-  	
-  	recognition.onresult = (event: Event) => {
-  		if (event['results'].length > 0) {
-  			this.speaking = event['results'][0][0].transcript;
-  		 	alert(this.speaking);
-  		}
-  	};
-
-  	recognition.onspeechstart = (event: Event) => {
-  		this.texts = 'dang record';
-  	}
-
-  	// alert("ket thuc r:" +this.speaking);
-  	recognition.start();
+    if(!this.isRecording) {
+      this.recognition.start();
+    } else {
+      // alert('abort');
+      this.isRecording = false;
+      this.texts = 'RECORD';
+      this.recognition.abort();
+    }
   }
 
+  checkAnswer() {
+    alert("truoc condition" + this.percent);
+    if(this.percent > 80) {
+      alert(this.percent);
+      this.onCorrect.emit(true);
 
-
-  button() {
-  	alert(this.speaking);
+    } else {
+      this.onCorrect.emit(false);
+    }
   }
-  // record() {
-  //   // alert("something");
-  //   this.recognition = new SpeechRecognition(); 
-  //   this.recognition.onresult = function(event) {
-  //       if (event.results.length > 0) {
-  //           console.log('--> text: ', event.results[0][0].transcript);
-  //           // alert(event.results[0][0].transcript);          
-  //           this.speaking = event.results[0][0].transcript;
-  //       }
-  //   };
-
-  //   this.recognition.onaudiostart = function(event) {
-  //     this.texts = 'dang record';
-  //     alert("onaudiostart")
-  //   }
-
-  //   this.recognition.onend = function(event) {
-  //     this.texts = 'ko record';
-  //     alert("onEnd");
-  //   }
-
-  //   this.recognition.start();
-  // }
-
-
 }
