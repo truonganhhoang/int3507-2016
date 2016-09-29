@@ -17,7 +17,7 @@
         </template>
     </category>
     <category>
-        <pattern>bạn là ai</pattern>
+        <pattern>_ bạn là ai</pattern>
         <template>
             <srai>bạn là ai</srai>
         </template>
