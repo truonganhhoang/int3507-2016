@@ -1,4 +1,4 @@
-import { Component, OnInit,
+import { Component, OnInit, NgZone,
          trigger, state, style, transition, animate, keyframes
        } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
@@ -39,7 +39,7 @@ export class FightingPage implements OnInit {
   allWords: Object[];
   iconState: string;
 
-  constructor(private navCtrl: NavController, private navParams: NavParams, private wordService: WordService, private helperService: HelperService) {
+  constructor(private navCtrl: NavController, private navParams: NavParams, private wordService: WordService, private helperService: HelperService, private zone: NgZone) {
     let unitId = navParams.get('unitId');
 
     wordService.getWords(unitId).then(result => {
@@ -60,7 +60,6 @@ export class FightingPage implements OnInit {
   ngOnInit() { }
 
   reload(): void {
-    alert("reload");
     this.iconState = 'none';
     // Chọn từ ngẫu nhiên
     let i = this.helperService.random(this.words.length);
@@ -72,11 +71,11 @@ export class FightingPage implements OnInit {
     // this.selectedGame = this.words[i]['games'][j];
     this.selectedGame = JSON.parse(JSON.stringify(this.words[i]['games'][j]));
 
+    this.zone.run(() => { });
     console.log('Word: ' + this.curWord['content'] + ', game: ' + this.selectedGame);
   }
 
   next() {
-    alert("next");
     for (let i = 0; i < this.words.length; i++) {
       if (this.words[i]['id'] == this.curWord['id']) {
         for (let j = 0; j < this.words[i]['games'].length; j++) {
