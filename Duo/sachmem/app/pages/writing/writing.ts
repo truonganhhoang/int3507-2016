@@ -20,15 +20,20 @@ import { TrainingPage } from '../training/training';
         borderColor: '#4caf50',
         color: 'white',
       })),
+      state('wrong', style({
+        backgroundColor: '#f44336',
+        borderColor: '#f44336',
+        color: 'white',
+      })),
       transition('void => *', [
-        animate('200ms ease-out', keyframes([
+        animate('100ms ease-out', keyframes([
           style({transform: 'scale(0)', offset: 0}),
           style({transform: 'scale(1.1)', offset: 0.5}),
           style({transform: 'scale(1)', offset: 1})
         ]))
       ]),
       transition('* => void', [
-        animate('200ms ease-in', keyframes([
+        animate('100ms ease-in', keyframes([
           style({transform: 'scale(1)', offset: 0}),
           style({transform: 'scale(1.1)', offset: 0.5}),
           style({transform: 'scale(0)', offset: 1})
@@ -47,6 +52,7 @@ export class WritingPage implements OnInit, OnChanges  {
 	options: Object[];
 	allLetter: Object[];
   answerState: string;
+  disabled: boolean = false;
 
 	constructor(private navCtrl: NavController, private navParams: NavParams, private nativeService: NativeService, private helperService: HelperService) { }
 	
@@ -84,10 +90,18 @@ export class WritingPage implements OnInit, OnChanges  {
   		//Loai bo tu vua them ra khoi all leter
   		this.allLetter.splice(r, 1);
   	}
+
+    // Sắp xếp lại options theo alphabet
+    this.options.sort();
+
+    this.disabled = false;
   }
 
   backspace(): void {
-    this.nativeService.playAudio('tap');
+    // Đã trả lời đúng hoặc ấn skip, không cho backspace
+    if (this.disabled) return;
+
+    this.nativeService.playAudio('click');
 
     if (this.answers.length >= 1) {
       this.answers.splice(this.answers.length - 1, 1);
@@ -95,6 +109,9 @@ export class WritingPage implements OnInit, OnChanges  {
   }
 
   pick(char): void {
+    // Đã trả lời đúng hoặc ấn skip, không cho pick thêm
+    if (this.disabled) return;
+
     this.answers.push(char);
 
     // So sánh sau mỗi lần pick 
@@ -105,11 +122,9 @@ export class WritingPage implements OnInit, OnChanges  {
     }
 
     if (temp == this.curWord['content']) {
-      // setTimeout(() => {
-        this.onCorrect.emit(true);
-        this.answerState = 'right';
-      // }, 1000);
-  
+      this.disabled = true;
+      this.onCorrect.emit(true);
+      this.answerState = 'right';
       this.nativeService.playAudio('correct');
       this.nativeService.tts(this.curWord['content']);
     } else {
@@ -118,16 +133,20 @@ export class WritingPage implements OnInit, OnChanges  {
   }
 
   skip(): void {
-    // setTimeout(() => {
-      this.onCorrect.emit(false);
-    // }, 500);
+    // Đã skip, không cho click skip nữa
+    if (this.disabled) return;
+
+    // Khóa skip
+    this.disabled = true;
+    this.onCorrect.emit(false);
+    this.answerState = 'wrong';
+    this.nativeService.playAudio('wrong');
+    this.nativeService.vibrate();
 
     setTimeout(() => {
       this.navCtrl.push(TrainingPage, {
         word: this.curWord
       });
     }, 1000);
-
-    this.nativeService.playAudio('wrong');
   }
 }

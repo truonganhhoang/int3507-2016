@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { TextToSpeech, NativeAudio } from 'ionic-native';
+import { TextToSpeech, NativeAudio, Vibration } from 'ionic-native';
 
 @Injectable()
 export class NativeService { 
@@ -17,6 +17,13 @@ export class NativeService {
           NativeAudio.unload(fileName);
         });
       })
-      .catch((reason: any) => console.log('native-audio: ' + fileName));
+      .catch((reason: any) => {
+        var audio = new Audio('audio/' + fileName + '.mp3');
+        audio.play();
+      });
+  }
+
+  vibrate(): void {
+    Vibration.vibrate(200);
   }
 }

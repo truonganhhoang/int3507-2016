@@ -50,6 +50,7 @@ export class ListeningPage implements OnInit, OnChanges {
   curWord: Object;
   answers: Object[] = [];
   choosen: Object;
+  disabled: boolean = false;
 
   constructor(private navCtrl: NavController, private navParams: NavParams, private nativeService: NativeService, private helperService: HelperService) { }
 
@@ -76,30 +77,27 @@ export class ListeningPage implements OnInit, OnChanges {
     this.answers = [];
 
     for (let i = 0; i < NO_OF_ANS; i++) {
-      if (i == position) {
-        let temp = {};
-        temp['id'] = this.curWord['id'];
-        temp['content'] = this.curWord['content'];
-        this.answers.push(temp);
+      let temp;
 
-        // this.answers.push(this.curWord);
+      if (i == position) {
+        temp = JSON.parse(JSON.stringify(this.curWord));
       } else {
         let r = this.helperService.random(wrongWord.length);
-         
-        let temp = {};
-        temp['id'] = wrongWord[r]['id'];
-        temp['content'] = wrongWord[r]['content'];
-        this.answers.push(temp);
-
-        // this.answers.push(wrongWord[r]);
+        temp = JSON.parse(JSON.stringify(wrongWord[r]));
         wrongWord.splice(r, 1);
       }
+
+      this.answers.push(temp);
     }
 
     this.choosen = undefined;
+    this.disabled = false;
   }
 
   choose(item: Object): void {
+    // Đã trả lời, không cho click đáp án khác
+    if (this.disabled) return;
+
     this.choosen = item;
     this.nativeService.tts(item['content']);
 
@@ -111,26 +109,27 @@ export class ListeningPage implements OnInit, OnChanges {
   }
 
   checkAnswer() {
+    // Đã trả lời, không cho click check nữa
+    if (this.disabled) return;
+
+    // Khóa check
+    this.disabled = true;
+
     if (this.choosen['id'] == this.curWord['id']) {
-      // setTimeout(() => {
-        this.onCorrect.emit(true);
-      // }, 1000);
-  
+      this.onCorrect.emit(true);
       this.choosen['state'] = 'right';
       this.nativeService.playAudio('correct');
     } else {
-      // setTimeout(() => {
-        this.onCorrect.emit(false);
-      // }, 1500);
+      this.onCorrect.emit(false);
+      this.choosen['state'] = 'wrong';
+      this.nativeService.playAudio('wrong');
+      this.nativeService.vibrate();
 
       setTimeout(() => {
         this.navCtrl.push(TrainingPage, {
           word: this.curWord
         });
       }, 1000);
-
-      this.choosen['state'] = 'wrong';
-      this.nativeService.playAudio('wrong');
     }
   }
 }

@@ -15,9 +15,6 @@ import { TrainingPage } from '../training/training';
   inputs: [ 'curWord', 'allWords' ],
   animations: [
     trigger('answerState', [
-      // state('void', style({
-      //   transform: 'scale(0)',
-      // })),
       state('right', style({
         backgroundColor: '#4caf50',
         borderColor: '#4caf50',
@@ -45,6 +42,7 @@ export class ReadingPage implements OnInit, OnChanges {
   allWords: Object[];
   curWord: Object;
   answers: Object[] = [];
+  disabled: boolean = false;
 
   constructor(private navCtrl: NavController, private navParams: NavParams, private nativeService: NativeService, private helperService: HelperService) { }
 
@@ -71,49 +69,47 @@ export class ReadingPage implements OnInit, OnChanges {
     this.answers = [];
 
     for (let i = 0; i < NO_OF_ANS; i++) {
-      if (i == position) {
-        let temp = {};
-        temp['id'] = this.curWord['id'];
-        temp['content'] = this.curWord['content'];
-        this.answers.push(temp);
+      let temp;
 
-        // this.answers.push(this.curWord);
+      if (i == position) {
+        temp = JSON.parse(JSON.stringify(this.curWord));
       } else {
         let r = this.helperService.random(wrongWord.length);
-         
-        let temp = {};
-        temp['id'] = wrongWord[r]['id'];
-        temp['content'] = wrongWord[r]['content'];
-        this.answers.push(temp);
-
-        // this.answers.push(wrongWord[r]);
+        temp = JSON.parse(JSON.stringify(wrongWord[r]));
         wrongWord.splice(r, 1);
       }
+
+      this.answers.push(temp);
     }
+
+    // Cho phép checkAnswer
+    this.disabled = false;
   }
 
   checkAnswer(item: Object) {
-    if (item['id'] == this.curWord['id']) {
-      // setTimeout(() => {
-        this.onCorrect.emit(true);
-      // }, 1000);
+    // Đã trả lời, không cho click đáp án khác
+    if (this.disabled) return;
 
+    // Khóa các đáp án
+    this.disabled = true;
+
+    // Xử lý
+    if (item['id'] == this.curWord['id']) {
+      this.onCorrect.emit(true);
       item['state'] = 'right';
       this.nativeService.playAudio('correct');
       this.nativeService.tts(this.curWord['content']);
     } else {
-      // setTimeout(() => {
-        this.onCorrect.emit(false);
-      // }, 1500);
+      this.onCorrect.emit(false);
+      item['state'] = 'wrong';
+      this.nativeService.playAudio('wrong');
+      this.nativeService.vibrate();
 
       setTimeout(() => {
         this.navCtrl.push(TrainingPage, {
           word: this.curWord
         });
       }, 1000);
-
-      item['state'] = 'wrong';
-      this.nativeService.playAudio('wrong');
     }
   }
 }
