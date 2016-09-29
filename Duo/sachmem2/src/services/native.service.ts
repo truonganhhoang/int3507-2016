@@ -11,19 +11,20 @@ export class NativeService {
   }
 
   playAudio(fileName: string): void {
-    NativeAudio.preloadSimple(fileName, 'audio/' + fileName + '.mp3')
+    NativeAudio.preloadSimple(fileName, 'assets/audio/' + fileName + '.mp3')
       .then(() => {
         NativeAudio.play(fileName, () => {
           NativeAudio.unload(fileName);
         });
       })
       .catch((reason: any) => {
-        var audio = new Audio('audio/' + fileName + '.mp3');
+        var audio = new Audio('assets/audio/' + fileName + '.mp3');
         audio.play();
       });
   }
 
   vibrate(): void {
     Vibration.vibrate(200);
+    console.log('vibrate for 200ms');
   }
 }

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar primary>
+  <ion-navbar color="primary">
     <ion-title>Learn</ion-title>
   </ion-navbar>
 </ion-header>
@@ -7,35 +7,37 @@
 <ion-content>
   <ion-card *ngIf="curWord">
     <img src="assets/img/advance-card-map-madison.png">
-    <button fab fab-right fab-top>
-      <ion-icon name="star"></ion-icon>
-    </button>
+    <ion-fab right top style="right:20px;top:20px">
+      <button ion-fab color="primary">
+        <ion-icon name="star"></ion-icon>
+      </button>
+    </ion-fab>
 
     <ion-item>
-      <h1 primary style="font-size:200%;font-weight:bold">{{curWord.content}}</h1>
+      <h1 color="primary" style="font-size:200%;font-weight:bold">{{curWord.content}}</h1>
       <p style="font-size:170%;white-space:initial;text-align:justify">{{curWord.meaning}}</p>
-      <button clear (click)="speak()">
+      <button ion-button clear (click)="speak()">
         <ion-icon name="volume-up"></ion-icon>
       </button>
     </ion-item>
 
     <ion-item *ngIf="pageType == 0">
-      <button item-left round outline [disabled]="isBegin()" (click)="previous()">
+      <button ion-button item-left round outline [disabled]="isBegin()" (click)="previous()">
         <ion-icon name="arrow-back"></ion-icon>
         Previous
       </button>
-      <button item-right round outline *ngIf="!isEnd()" (click)="next()">
+      <button ion-button item-right round outline *ngIf="!isEnd()" (click)="next()">
         Next
         <ion-icon name="arrow-forward"></ion-icon>
       </button>
-      <button item-right round *ngIf="isEnd()" (click)="enterFightingPage()">
+      <button ion-button item-right round *ngIf="isEnd()" (click)="enterFightingPage()">
         Play
         <ion-icon name="arrow-forward"></ion-icon>
       </button>
     </ion-item>
 
     <ion-item *ngIf="pageType == 1">
-      <button item-right round (click)="back()">
+      <button ion-button item-right round (click)="back()">
         Got it!
         <ion-icon name="arrow-forward"></ion-icon>
       </button>

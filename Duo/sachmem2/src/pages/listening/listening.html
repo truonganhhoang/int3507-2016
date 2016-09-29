@@ -1,7 +1,7 @@
 <ion-grid>
-  <ion-row wrap>
+  <ion-row wrap *ngIf="answers">
     <ion-col width-33 *ngFor="let item of answers" style="height:60px">
-      <button block outline (click)="choose(item)" style="white-space:initial;height:100%"
+      <button ion-button block outline (click)="choose(item)" style="white-space:initial;height:100%"
       [@answerState]="item.state">
         <ion-icon name="volume-up"></ion-icon>
       </button>
@@ -9,4 +9,4 @@
   </ion-row>
 </ion-grid>
 
-<button [disabled]="choosen == undefined" (click)="checkAnswer()" block round>Check</button>
+<button ion-button [disabled]="choosen == undefined" (click)="checkAnswer()" block round>Check</button>

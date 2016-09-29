@@ -14,7 +14,6 @@ declare var SpeechRecognition: any;
 export class SpeakingPage implements OnInit, OnChanges {
   @Output() onCorrect = new EventEmitter<boolean>();
   @Input() curWord: Object;
-  @Input() allWords: Object[];
 
   texts: String = 'ios-mic-outline';
   speaking: String;
@@ -37,7 +36,7 @@ export class SpeakingPage implements OnInit, OnChanges {
 
           if(temp > this.percent) {
             this.percent = temp;
-            this.speaking = event['results'][i][0].transcript;
+            this.speaking = event['results'][i][0].transcript.toLowerCase();
           }
         }
 
@@ -67,6 +66,11 @@ export class SpeakingPage implements OnInit, OnChanges {
       this.texts = 'ios-mic-outline';
       this.recognition.abort();
     }
+  }
+
+  skip() {
+    this.percent = 0;
+    this.checkAnswer();
   }
 
   checkAnswer() {
