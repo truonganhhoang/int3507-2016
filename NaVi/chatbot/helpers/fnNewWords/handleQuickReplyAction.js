@@ -10,6 +10,3 @@ module.exports = function (recipientId, payload) {
 		require('../fnNewWords/sendNewWord')(senderID);
 	}
 };
-
-
-
