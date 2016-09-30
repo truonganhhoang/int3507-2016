@@ -6,6 +6,7 @@ import {TheoryListenComponent} from "./theory/listen.component";
 import {TheoryComponent} from "./theory/theory.component";
 import {TestComponent} from "./test/test.component";
 import {TestReadCompoent} from "./test/read/test.component";
+import {DetailComponent} from "./detail/detail.component";
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full'},
@@ -19,7 +20,8 @@ const appRoutes: Routes = [
     { path: 'test', component: TestComponent, children: [
             { path: 'read', component: TestReadCompoent }
         ]
-    }
+    },
+    { path: 'detail/:id', component: DetailComponent }
 ];
 
 export const appRoutingProvider: any[] = [

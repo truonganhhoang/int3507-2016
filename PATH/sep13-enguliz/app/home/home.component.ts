@@ -5,10 +5,12 @@
 import {Component, OnInit} from "@angular/core";
 import {ListenService} from "../theory/listen.service";
 import {Listen} from "../theory/listen.model";
+import {HomeService} from "./home.service";
+import {Category} from "./category.model";
 
 @Component({
     templateUrl: 'app/home/home.component.html',
-    providers: [ListenService]
+    providers: [HomeService]
 })
 
 export class HomeComponent implements OnInit {
@@ -16,16 +18,16 @@ export class HomeComponent implements OnInit {
 
     auth_token = '';
 
-    listens:Listen[];
+    categories : Category[];
 
-    constructor(private service:ListenService) {
+    constructor(private service: HomeService) {
         this.loggedIn = !!localStorage.getItem('auth_token');
     }
 
-    loadListens() {
-        this.service.getListens()
+    loadHomeDatas() {
+        this.service.getHomeData()
             .subscribe(
-                data => this.listens = data,
+                body => this.categories = body,
                 err => {
                     console.error(err);
                 }
@@ -40,6 +42,6 @@ export class HomeComponent implements OnInit {
         if (this.isLoggedIn()) {
             this.auth_token = localStorage.getItem('auth_token');
         }
-        this.loadListens();
+        this.loadHomeDatas();
     }
 }

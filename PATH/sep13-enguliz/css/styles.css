@@ -1,39 +1,163 @@
 /* Master Styles */
-h1 {
-    color: #369;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 250%;
-}
-h2, h3 {
-    color: #444;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-}
 body {
-    margin: 2em;
-    background-color: gainsboro;
+    font-family: 'Merriweather',Georgia,serif;
 }
 
-.header-title {
-    text-align: center;
+ul li {
+    list-style-type: none;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 100% !important;
+    }
+}
+
+.header {
+    position: fixed;
     width: 100%;
+    height: 63px;
+    background: #ffffff;
+    border: 1px solid #dedede;
+    right: 0;
+    left: 0;
 }
 
-.card-view {
+.header ul li {
+    float: left;
+    padding: 20px 0;
+    margin: 0 12px;
+}
+
+.header ul li a {
+    text-decoration: none;
+}
+
+.header .sreach {
+    width: 350px;
+    height: 45px;
+    border: 1px solid #dedede;
+    margin-top: 7px;
+
+}
+
+.header ul li .sign-up {
+    line-height: 16px;
+    background: #428bca;
+    padding: 15px 20px;
+    margin-top: -14px;
     display: inline-block;
-    margin: 10px; box-shadow: 3px 3px 3px #888888;
-    padding-bottom: 40px;
-    padding-top: 3px;
-    text-align: center;
-    width: 20%;
-    height: 300px;
-    background-color: white;
+    color: #ffffff;;
 }
 
-.content {
-    width: 1000px;
-    overflow-x: hidden;
-    height: 30%;
+.slider {
+    height: 240px;
+    background-image: url("../images/slider.jpg");
 }
+
+.partner-banner {
+    padding-top: 25px;
+    padding-bottom: 27px
+}
+
+.partner-logo:first-child {
+    padding-left: 100px;
+}
+
+.wapper {
+    background: #f5f5f5;
+}
+
+.list {
+    margin-top: 90px;
+    width: 95%;
+}
+
+.list .list-header {
+    height: 36px;
+    padding-left: 465px;
+    margin-bottom: 40px;
+}
+
+.list .list-header h3 {
+    font-size: 32px;
+    line-height: 36px;
+    font-family: 'Merriweather-Light',Georgia,serif;
+}
+
+.list .see-all {
+}
+
+.list .list-body .list-item {
+    width: 240px;
+    height: 350px;
+    float: left;
+}
+
+.list .list-body .list-item .item {
+    border: 1px solid #dedede;
+    position: relative;
+    width: 218px;
+    height: 321px;
+    cursor: pointer;
+}
+
+.list .list-body .list-item .item .flex {
+    background: #ffffff;
+    height: 319px;
+}
+
+.list-body .list-item .item .flex .side .image-container {
+    height: 129px;
+    background-image: url("../images/list-spec/item1.jpg");
+    margin-bottom: 15px;
+}
+
+.list-body .list-item .item .flex .side .content .partner-names {
+    color: #bba896;
+    margin: 4px 0 8px;
+    height: 17px;
+    line-height: 17px;
+    white-space: nowrap;
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.list-body .list-item .item .flex .side .content .offering-name{
+    height: 24px;
+    line-height: 24px;
+    padding-left: 15px;
+    font-size: 22px;
+}
+
+.list-body .list-item .item .flex .side-footer {
+    padding: 90px 15px;
+}
+
+.footer {
+    height: 250px;
+    width: 100%;
+    margin-top: 50px;
+    border-top: 1px solid #dedede;
+}
+
+.footer div {
+    margin-left: 80px;
+}
+
+.footer div h3 {
+    padding-left: 38px;
+}
+
+.footer div ul li{
+    padding-top: 20px;
+}
+
+.footer div ul li a {
+    text-decoration: none;
+    color: #897a91;
+}
+
+
 
 

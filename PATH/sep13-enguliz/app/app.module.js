@@ -23,6 +23,7 @@ var theory_component_1 = require("./theory/theory.component");
 var http_1 = require("@angular/http");
 var test_component_1 = require("./test/test.component");
 var test_component_2 = require("./test/read/test.component");
+var detail_component_1 = require("./detail/detail.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -42,7 +43,8 @@ var AppModule = (function () {
                 theory_component_1.TheoryComponent,
                 listen_component_1.TheoryListenComponent,
                 test_component_1.TestComponent,
-                test_component_2.TestReadCompoent
+                test_component_2.TestReadCompoent,
+                detail_component_1.DetailComponent
             ],
             providers: [
                 app_routing_1.appRoutingProvider
