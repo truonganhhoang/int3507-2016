@@ -3,7 +3,7 @@ const
     mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
-var User = new Schema({
+var UnlearnedQuestionUser = new Schema({
     facebookId: {
         type: String,
         require: true,
@@ -21,4 +21,4 @@ var User = new Schema({
     versionKey: false
 });
 
-module.exports = mongoose.model('User', User);
+module.exports = mongoose.model('UnlearnedQuestionUser', UnlearnedQuestionUser);

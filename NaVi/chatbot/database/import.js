@@ -4,9 +4,8 @@ const
     seeder = require('mongoose-seed'),
     config = require('config'),
     mongoose = require('mongoose'),
-    models = require('../models'),
-    Question = models.Question,
-    NewWord = models.NewWord;
+    Question = require('../models').Question,
+    NewWord = require('../models').NewWord;
 
 const delayTimeToImportData = 5000;
 var questions = [];
@@ -17,13 +16,15 @@ seeder.connect(config.get('mongodbURL'), function () {
     console.log('Connected to mongodb');
     seeder.loadModels([
         'models/Question.js',
-        'models/User.js',
-        'models/NewWord.js'
+        'models/UnlearnedQuestionUser.js',
+        'models/NewWord.js',
+        'models/UnlearnedWordUser.js'
     ]);
     seeder.clearModels([
         'Question',
-        'User',
-        'NewWord'
+        'UnlearnedQuestionUser',
+        'NewWord',
+        'UnlearnedWordUser'
     ], function () {
         let MCQuestionFile = 'database/raw/mc_v2_database.csv';
         let WordFile = 'database/raw/words.csv';

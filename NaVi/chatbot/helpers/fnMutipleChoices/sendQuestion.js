@@ -4,11 +4,11 @@ const
     models = require('../../models');
 
 module.exports = function (recipientId) {
-    models.User.findOne({
+    models.UnlearnedQuestionUser.findOne({
         facebookId: recipientId
     }, function (err, user) {
         if (!user) {
-            console.log('User does not exist yet!');
+            console.log('UnlearnedQuestionUser does not exist yet!');
             createNewUserWithQuestions(recipientId);
         }
         else {
@@ -31,7 +31,7 @@ function createNewUserWithQuestions(recipientId) {
                 ids.push({questionId: questions[i]._id});
             }
             console.log("Creating unlearned question set for new user.");
-            models.User.create({
+            models.UnlearnedQuestionUser.create({
                 facebookId: recipientId,
                 unlearnedQuestions: ids
             }, function (err) {
