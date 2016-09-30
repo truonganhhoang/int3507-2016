@@ -1,3 +1,4 @@
+import import_package
 from database import db, User
 
 class UserRecord:
@@ -6,6 +7,7 @@ class UserRecord:
     NONE = 0
     LEARNING_WORDS = 1
     DOING_EXERSICE = 2
+    CHOOSE_CATEGORY = 3
 
   @staticmethod
   def get(user_id):

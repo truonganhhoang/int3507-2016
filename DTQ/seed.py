@@ -5,11 +5,18 @@ class Seed:
     db.create_all()
 
   def make(self):
-    for i in range(20):
-      category = Category("Category " + str(i), "Description: Category " + str(i))
-      db.session.add(category)
-      db.session.commit()
-      for j in range(20):
-        word = Word("Word " + str(i) + str(j), "Meaning: Word " + str(i) + str(j))
-        category.words.append(word)
+    with open("data/categories.csv") as inCategories:
+      for line in inCategories:
+        objLine = line.split(",")
+        category = Category(objLine[1].strip(" "), objLine[2].strip("\n").strip(" "))
+        db.session.add(category)
         db.session.commit()
+    with open("data/words.csv") as inWords:
+      for line in inWords:
+        objLine = line.strip("\n").split(",")
+        if objLine[3].strip(" ") != "":
+          print objLine[3].strip("\n").strip(" ")
+          category = db.session.query(Category).filter(Category.id == int(objLine[3].strip("\n").strip(" "))).first()
+          word = Word(objLine[1].strip(" "), objLine[2].strip(" "))
+          category.words.append(word)
+          db.session.commit()

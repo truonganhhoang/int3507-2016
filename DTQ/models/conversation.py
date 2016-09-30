@@ -1,6 +1,5 @@
+import import_package
 from luis import Luis
-from database import Conversation
-
 class ConversationRecord:
   @staticmethod
   def is_learn_new_word(conversation):
