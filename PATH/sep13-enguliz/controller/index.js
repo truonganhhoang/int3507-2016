@@ -49,8 +49,11 @@ router.get('/details/:id', (req, res) => {
             resp.error = 0;
             resp.message = "";
             resp.data = result;
-            res.send(resp);
-            res.end();
+            db.fetchRows(Collect.question, {'unitIdRef': new ObjectId(result._id)}, (question) => {
+                resp.data.question = question;
+                res.send(resp);
+                res.end();
+            });
         } else {
             resp.error = 1;
             resp.message = "Unit is empty or null";

@@ -12,3 +12,4 @@ Collection('user', 'user');
 Collection('token', 'token-info');
 Collection('category', 'category');
 Collection('unit', 'unit');
+Collection('question', 'question');
