@@ -1,13 +1,13 @@
 /* Master Styles */
 body {
-    font-family: 'Merriweather',Georgia,serif;
+    font-family: 'Arial',Georgia,serif;
 }
 
 ul li {
     list-style-type: none;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
     .container {
         width: 100% !important;
     }
@@ -33,7 +33,7 @@ ul li {
     text-decoration: none;
 }
 
-.header .sreach {
+.header .search {
     width: 350px;
     height: 45px;
     border: 1px solid #dedede;
@@ -157,6 +157,44 @@ ul li {
     text-decoration: none;
     color: #897a91;
 }
+
+.account-wall{
+    box-shadow: 5px 5px  5px 5px grey;
+    padding: 10 10 10 10;
+    margin-top: 20%;
+}
+.timer {
+  border: 1px solid #E6E6E6;
+  background-color: #FFFFCC;
+  float: right;
+  position: fixed;
+  right: 70px;
+  top: 70px;
+  text-align: center;
+}
+
+.status-start{
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.status-end{
+    text-align: center;
+}
+
+.clear-both{
+    clear: both;
+}
+
+.question_answers{
+    background-color: #F0F0F0;
+}
+
+.btn-submit{
+    text-align: center;
+}
+
 
 
 

@@ -8,49 +8,67 @@
     </div>
 
     <div *ngIf="isTest === true">
-        <h3>Bắt đầu làm bài</h3>
+        <div class="status-start">
+            <h3>Bắt đầu làm bài</h3>
+        </div>
 
-        <h2>Thời gian làm bài: {{ticks}}</h2>
+        <div class="col-md-1 timer">
+            <h5>Time Remain</h5>
+            <h5>{{ticks}}</h5>
+        </div>
 
-        <div>
+        <div class="col-md-8 col-md-offset-2">
             <ol>
-                <li>Đây là 1 câu hỏi ?
-                    <ul>
-                        <li><input type="radio" name="cau1">A. Đáp án 1</li>
-                        <li><input type="radio" name="cau1">B. Đáp án 2</li>
-                        <li><input type="radio" name="cau1">C. Đáp án 3</li>
-                        <li><input type="radio" name="cau1">D. Đáp án 4</li>
-                    </ul>
-                </li>
-                <li>Đây là 2 câu hỏi ?
-                    <ul>
-                        <li><input type="radio" name="cau2">A. Đáp án 1</li>
-                        <li><input type="radio" name="cau2">B. Đáp án 2</li>
-                        <li><input type="radio" name="cau2">C. Đáp án 3</li>
-                        <li><input type="radio" name="cau2">D. Đáp án 4</li>
-                    </ul>
-                </li>
-                <li>Đây là 3 câu hỏi ?
-                    <ul>
-                        <li><input type="radio" name="cau3">A. Đáp án 1</li>
-                        <li><input type="radio" name="cau3">B. Đáp án 2</li>
-                        <li><input type="radio" name="cau3">C. Đáp án 3</li>
-                        <li><input type="radio" name="cau3">D. Đáp án 4</li>
-                    </ul>
-                </li>
-                <li>Đây là 4 câu hỏi ?
-                    <ul>
-                        <li><input type="radio" name="cau4">A. Đáp án 1</li>
-                        <li><input type="radio" name="cau4">B. Đáp án 2</li>
-                        <li><input type="radio" name="cau4">C. Đáp án 3</li>
-                        <li><input type="radio" name="cau4">D. Đáp án 4</li>
-                    </ul>
-                </li>
+                <div class="panel panel-default col m6 question_answers">
+                    <li><label>Đây là 1 câu hỏi ?</label>
+                        <ul>
+                            <li><input type="radio" name="cau1">A. Đáp án 1</li>
+                            <li><input type="radio" name="cau1">B. Đáp án 2</li>
+                            <li><input type="radio" name="cau1">C. Đáp án 3</li>
+                            <li><input type="radio" name="cau1">D. Đáp án 4</li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="panel panel-default col m6 question_answers">
+                    <li><label>Đây là 1 câu hỏi ?</label>
+                        <ul>
+                            <li><input type="radio" name="cau2">A. Đáp án 1</li>
+                            <li><input type="radio" name="cau2">B. Đáp án 2</li>
+                            <li><input type="radio" name="cau2">C. Đáp án 3</li>
+                            <li><input type="radio" name="cau2">D. Đáp án 4</li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="panel panel-default col m6 question_answers">
+                    <li><label>Đây là 1 câu hỏi ?</label>
+                        <ul>
+                            <li><input type="radio" name="cau2">A. Đáp án 1</li>
+                            <li><input type="radio" name="cau2">B. Đáp án 2</li>
+                            <li><input type="radio" name="cau2">C. Đáp án 3</li>
+                            <li><input type="radio" name="cau2">D. Đáp án 4</li>
+                        </ul>
+                    </li>
+                </div>
+                <div class="panel panel-default col m6 question_answers">
+                    <li><label>Đây là 1 câu hỏi ?</label>
+                        <ul>
+                            <li><input type="radio" name="cau2">A. Đáp án 1</li>
+                            <li><input type="radio" name="cau2">B. Đáp án 2</li>
+                            <li><input type="radio" name="cau2">C. Đáp án 3</li>
+                            <li><input type="radio" name="cau2">D. Đáp án 4</li>
+                        </ul>
+                    </li>
+                </div>
             </ol>
         </div>
+        <div class="clear-both"></div>
+        <div class="btn-submit">
+            <button class="btn btn-info">Submit</button>
+        </div>
     </div>
-
     <div *ngIf="isNotify === true">
-        <h3>Hết giờ làm bài</h3>
+        <div class="status-end">
+            <h3>Hết giờ làm bài</h3>
+        </div>
     </div>
 </div>
