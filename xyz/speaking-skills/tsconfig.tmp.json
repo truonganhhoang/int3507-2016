@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "target": "es5",
+    "outDir": "E:\\github\\int3507-2016\\xyz\\speaking-skills\\.tmp"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "compileOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  },
+  "include": [
+    "E:\\github\\int3507-2016\\xyz\\speaking-skills\\src\\app\\main.dev.ts",
+    "E:\\github\\int3507-2016\\xyz\\speaking-skills\\src\\**\\*.d.ts"
+  ]
+}
