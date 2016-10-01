@@ -19,9 +19,16 @@ var HomeService = (function () {
     function HomeService(http) {
         this.http = http;
         this.homeUrl = appSettings_1.AppSettings.API_ENDPOINT + "/home";
+        this.userProfileUrl = appSettings_1.AppSettings.API_ENDPOINT + "/user/profile";
     }
     HomeService.prototype.getHomeData = function () {
         return this.http.get(this.homeUrl)
+            .map(function (res) { return res.json().data; })
+            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
+    };
+    HomeService.prototype.getProfile = function (token) {
+        var headers = new http_1.Headers({ 'access_token': token });
+        return this.http.get(this.userProfileUrl, { headers: headers })
             .map(function (res) { return res.json().data; })
             .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
     };

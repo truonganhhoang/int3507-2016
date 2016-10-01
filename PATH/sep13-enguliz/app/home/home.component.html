@@ -11,9 +11,13 @@
 
             </div>
             <div class="col-sm-4">
-                <ul>
+                <ul *ngIf="loggedIn === false">
                     <li><a [routerLink]="['login']">Login</a></li>
                     <li><a href="#" class="sign-up">Sign up</a></li>
+                </ul>
+                <ul *ngIf="loggedIn === true">
+                    <li>Tài khoản: <a href=""> {{email}}</a></li>
+                    <li><a href="">Logout</a></li>
                 </ul>
             </div>
         </div>

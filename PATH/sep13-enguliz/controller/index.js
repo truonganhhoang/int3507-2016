@@ -44,24 +44,49 @@ router.get('/details/:id', (req, res) => {
     var id =  req.params.id;
     var resp = {};
 
-    db.findOne(Collect.unit, {"_id": new ObjectId(id)}, (result) => {
-        if(result) {
-            resp.error = 0;
-            resp.message = "";
-            resp.data = result;
-            db.fetchRows(Collect.question, {'unitIdRef': new ObjectId(result._id)}, (question) => {
-                resp.data.question = question;
+    var token = req.get('access_token');
+
+    if(token) {
+        db.findOne(Collect.unit, {"_id": new ObjectId(id)}, (result) => {
+            if(result) {
+                resp.error = 0;
+                resp.message = "";
+                resp.data = result;
+                db.fetchRows(Collect.question, {'unitIdRef': result._id}, (question) => {
+                    console.log(question);
+                    resp.data.question = question;
+                    res.send(resp);
+                    res.end();
+                });
+            } else {
+                resp.error = 1;
+                resp.message = "Unit is empty or null";
+                resp.data = null;
                 res.send(resp);
                 res.end();
-            });
-        } else {
-            resp.error = 1;
-            resp.message = "Unit is empty or null";
-            resp.data = null;
-            res.send(resp);
-            res.end();
-        }
-    });
+            }
+        });
+    } else {
+        resp.error = 101;
+        resp.message = "User is not login";
+        resp.data = null;
+        res.send(resp);
+    }
+});
+
+router.get('/details/:id/submit', (req, res) => {
+    var token = req.get('access_token');
+    var resp = {};
+    var id = req.params.id;
+
+    if(token) {
+
+    } else {
+        resp.error = 101;
+        resp.message = "User is not login";
+        resp.data = null;
+        res.send(resp);
+    }
 });
 
 module.exports = router;

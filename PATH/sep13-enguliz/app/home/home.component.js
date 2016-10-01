@@ -17,7 +17,7 @@ var HomeComponent = (function () {
     function HomeComponent(service) {
         this.service = service;
         this.loggedIn = false;
-        this.auth_token = '';
+        this.email = '';
         this.loggedIn = !!localStorage.getItem('auth_token');
     }
     HomeComponent.prototype.loadHomeDatas = function () {
@@ -27,12 +27,23 @@ var HomeComponent = (function () {
             console.error(err);
         });
     };
+    HomeComponent.prototype.loadUserProfile = function () {
+        var _this = this;
+        var auth_token = localStorage.getItem('auth_token');
+        this.service.getProfile(auth_token).subscribe(function (data) {
+            _this.user = data;
+            _this.email = _this.user.userName;
+            console.log(_this.email);
+        }, function (err) {
+            console.log(err);
+        });
+    };
     HomeComponent.prototype.isLoggedIn = function () {
         return this.loggedIn;
     };
     HomeComponent.prototype.ngOnInit = function () {
         if (this.isLoggedIn()) {
-            this.auth_token = localStorage.getItem('auth_token');
+            this.loadUserProfile();
         }
         this.loadHomeDatas();
     };

@@ -7,6 +7,7 @@ var Resp = require('../models/logical/Resp');
 var Collect = require('../utils/collection');
 var TokenInfo = require('../models/physical/TokenInfo');
 var random = require('../utils/random');
+var ObjectId = require('mongodb').ObjectID;
 
 router.get('/login', (req, res) => {
 
@@ -21,7 +22,7 @@ router.get('/login', (req, res) => {
 
                 var token = TokenInfo.init(id, random.generateToken(32), random.generateToken(64));
 
-                db.insert(Collect.token, token);
+                db.insertOne(Collect.token, token, (res)=>{});
 
                 res.send(Resp.login(token.access_token, token.refresh_token));
             } else {
@@ -45,12 +46,34 @@ router.get('/register', (req, res) => {
         if (result) {
             res.send(Resp.error(1, 'Account already exists', null));
         } else {
-            db.insert(Collect.user, user);
+            db.insertOne(Collect.user, user, (res)=>{});
 
             res.send(Resp.success(null));
         }
         res.end();
     });
+});
+
+router.get('/profile', (req, res) => {
+    var token = req.get('access_token');
+    var resp = {};
+    if(token){
+        resp.error = 0;
+        resp.message = "";
+        db.findOne(Collect.token, {'access_token': token}, (r1) => {
+           db.findOne(Collect.user, {'_id': new ObjectId(r1.userId)}, (r2) => {
+               resp.data = r2;
+               res.send(resp);
+               res.end();
+           });
+        });
+    } else {
+        resp.error = 1;
+        resp.message = "Token invalid";
+        resp.data = null;
+        res.send(resp);
+        res.end();
+    }
 });
 
 module.exports = router;

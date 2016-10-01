@@ -61,23 +61,35 @@ router.get('/unit', (req, res) => {
 
                         var answers = [];
                         var answer = {};
-                        answer.ansId = "A";answer.ansContent = "is";
+                        answer.ansId = "A";
+                        answer.ansContent = "is";
                         answers.push(answer);
-                        answer.ansId = "B";answer.ansContent = "are";
+                        answer = {};
+                        answer.ansId = "B";
+                        answer.ansContent = "are";
                         answers.push(answer);
-                        answer.ansId = "C";answer.ansContent = "in";
+                        answer = {};
+                        answer.ansId = "C";
+                        answer.ansContent = "in";
                         answers.push(answer);
                         questions.push(Question.init("How ... you ?", result._id, answers));
 
                         var answers = [];
                         var answer = {};
-                        answer.ansId = "A";answer.ansContent = "A hello song";
+                        answer.ansId = "A";
+                        answer.ansContent = "A hello song";
                         answers.push(answer);
-                        answer.ansId = "B";answer.ansContent = "A goodbye song";
+                        answer = {};
+                        answer.ansId = "B";
+                        answer.ansContent = "A goodbye song";
                         answers.push(answer);
-                        answer.ansId = "C";answer.ansContent = "A greetings song";
+                        answer = {};
+                        answer.ansId = "C";
+                        answer.ansContent = "A greetings song";
                         answers.push(answer);
-                        answer.ansId = "D";answer.ansContent = "A good morning song";
+                        answer = {};
+                        answer.ansId = "D";
+                        answer.ansContent = "A good morning song";
                         answers.push(answer);
                         questions.push(Question.init("What is the most suitable name for the song?", result._id, answers));
 

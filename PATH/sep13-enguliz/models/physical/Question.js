@@ -3,7 +3,7 @@
  */
 function Question(q, unitId, anwsers) {
     this.question = q;
-    this.unitRefId = unitId;
+    this.unitIdRef = unitId;
     this.anwsers = anwsers;
 }
 
