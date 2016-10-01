@@ -9,7 +9,7 @@ module.exports = function (recipientId, payload) {
     let rightAnswer = payload.split('_')[3];
 
     if (status === 'TRUE') {
-        models.User.update({
+        models.UnlearnedQuestionUser.update({
             $pull: {
                 unlearnedQuestions: {
                     questionId: qId

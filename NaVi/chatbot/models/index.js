@@ -13,6 +13,7 @@ var mongooseConnect = function () {
 module.exports  = {
 	mongooseConnect: mongooseConnect,
     Question: require('./Question'),
-    User: require('./User'),
-    NewWord: require('./NewWord')
+    UnlearnedQuestionUser: require('./UnlearnedQuestionUser'),
+    NewWord: require('./NewWord'),
+    UnlearnedWordUser: require('./UnlearnedWordUser')
 };
