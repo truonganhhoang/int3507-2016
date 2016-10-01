@@ -4,3 +4,5 @@ Nhóm 4C bao gồm các thành viên:
 + Đinh Việt Cường
 + Nông Thành Công
 + Nguyễn Ngọc Duy
+
+Tìm hiểu về Alexa Skill 

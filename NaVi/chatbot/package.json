@@ -1,0 +1,31 @@
+{
+  "name": "chatbot",
+  "version": "1.0.0",
+  "description": "cwat chatbot",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "lint": "jshint --exclude node_modules .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "import": "node database/import.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trieudh58/int3507-2016.git"
+  },
+  "author": "trieudh58",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "config": "^1.20.4",
+    "ejs": "^2.4.2",
+    "express": "^4.13.4",
+    "fast-csv": "^2.1.0",
+    "mongoose": "^4.6.1",
+    "mongoose-seed": "^0.3.1",
+    "request": "^2.72.0"
+  },
+  "engines": {
+    "node": "~4.1.2"
+  }
+}

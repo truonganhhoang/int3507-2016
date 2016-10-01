@@ -1,0 +1,7 @@
+0,DM,*,*,<random>#Newline                <li>Ui sao tự nhiên chửi tớ?</li>#Newline                <li>Chửi thêm câu nữa coi</li>#Newline                <li>Haha I don't care</li>#Newline                <li>Hehe tớ không thèm chửi nhau với cậu đâu.</li>#Newline            </random>,blame.aiml
+0,ĐM,*,*,<srai>dm</srai>,blame.aiml
+0,ĐM *,*,*,<srai>dm</srai>,blame.aiml
+0,_ ĐM *,*,*,<srai>dm</srai>,blame.aiml
+0,ĐMM,*,*,<srai>dm</srai>,blame.aiml
+0,ĐMM *,*,*,<srai>dm</srai>,blame.aiml
+0,_ ĐMM *,*,*,<srai>dm</srai>,blame.aiml

@@ -1,0 +1,107 @@
+<div class="container">
+    <div class="row">
+        <div class="header row" style="margin-left: 0;">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div class="sreach">
+                    <form action="#">
+                        <input type="text" placeholder="Sreach" style="border: none">
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-sm-4">
+                <ul>
+                    <li><a [routerLink]="['login']">Login</a></li>
+                    <li><a href="#" class="sign-up">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="slider row">
+
+        </div>
+        <div class="partner-banner row">
+            <div class="col-sm-2 partner-logo">
+                <img src="../../images/Penn-logo.png" alt="">
+            </div>
+            <div class="col-sm-2 partner-logo">
+                <img src="../../images/jhu_logo.png" alt="">
+            </div>
+            <div class="col-sm-2 partner-logo">
+                <img src="../../images/U-M_bmp.png" alt="">
+            </div>
+            <div class="col-sm-2 partner-logo">
+                <img src="../../images/stanford.png" alt="">
+            </div>
+            <div class="col-sm-2 partner-logo">
+                <img src="../../images/UC-San-Diego-blue--gold.png" alt="">
+            </div>
+            <div class="col-sm-2 partner-logo">
+                <img src="../../images/Duke_University_Logo.png" alt="">
+            </div>
+        </div>
+
+        <div class="wapper row">
+            <div class="list row" style="margin-left: 80px;" *ngFor="let category of categories">
+                <div class="list-header col-sm-11">
+                    <h3>{{category.categoryName}}</h3>
+                </div>
+                <div class="see-all col-sm-1">
+                    <a href="">
+
+                    </a>
+                </div>
+                <div class="list-body">
+                    <div class="list-item" *ngFor="let unit of category.categoryItems" [routerLink]="['detail', unit.unitId]">
+                        <div class="item">
+                            <div class="flex">
+                                <div class="side">
+                                    <div class="image-container">
+                                        <img alt="" width="100%" height="100%" src="{{unit.unitThumbnail}}">
+                                    </div>
+                                    <div class="content">
+                                        <div class="partner-names">{{unit.unitSubTitle}}</div>
+                                        <div class="offering-name">{{unit.unitTitle}}</div>
+                                    </div>
+                                </div>
+                                <div class="side-footer">Lượt xem: {{unit.unitViews}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer row">
+                <div>
+                    <div class="col-sm-3">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Listening</a></li>
+                            <li><a href="">Reading</a></li>
+                            <li><a href="">Writing</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>Contact</h3>
+                        <h3>Dai hoc Cong Nghe</h3>
+
+                        <ul>
+                            <li><a href="">144 Xuan Thuy, Cau Giay, HN</a></li>
+                            <li><a href="">(04)664251</a></li>
+                            <li><a href="">bla@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="web col-sm-3">
+                        <h3>Connect</h3>
+                    </div>
+
+                    <div class="col-sm-3"></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
