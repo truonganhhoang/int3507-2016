@@ -13,6 +13,7 @@
                 <li>Hello, it's me.</li>
                 <li>Chào bạn! Hôm này trời đẹp nhỉ.</li>
                 <li>Chào bạn. Bạn vẫn khỏe chứ?</li>
+                <li>Tôi có thể giúp gì cho bạn ?</li>
             </random>
         </template>
     </category>
@@ -117,6 +118,8 @@
                 <li>Chẳng có gì hot cả. Gọi tớ có chuyện gì?</li>
                 <li>LOL. Không</li>
                 <li>Tớ không có gì "hot", cậu có gì "hot" không?</li>
+                <li>Tớ mới đi chơi với người yêu về </li>
+                <li>Hot có nghĩa là nóng ! Bạn hãy bật điều hòa đi</li>
             </random>
         </template>
     </category>
@@ -148,4 +151,6 @@
             <srai>có gì hot</srai>
         </template>
     </category>
+
+
 </aiml>
