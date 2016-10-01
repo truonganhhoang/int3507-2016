@@ -2,6 +2,7 @@ import sys
 from helpers.sendMessage.send_text import send_text_message
 from helpers.sendMessage.send_list import send_list_message
 from helpers.sendMessage.send_word import send_word_message
+from helpers.program_o.program_o  import ProgramO
 from luis import Luis
 from database import db, Conversation, User
 from models.category import CategoryRecord
@@ -65,7 +66,8 @@ def recieve(data):
                 else:
                   send_text_message(sender_id, "Hoc chua het da voi lo xin them")
               else:
-                send_text_message(sender_id, "Learn new words or do exercises. Please choose one of them!")
+                botsay = ProgramO.get_answer(sender_id, message_text)
+                send_text_message(sender_id, botsay)
 
 def log(message):  # simple wrapper for logging to stdout on heroku
   print str(message)
