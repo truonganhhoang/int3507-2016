@@ -20,11 +20,11 @@ module.exports = function (recipientId) {
                         },
                         message: {
                             text: result.word + ' ' + result.type +
-                                    '\n' + result.pronunciation + '\n' + result.meaning,
+                                    ' - ' + result.pronunciation + '\nNghĩa: ' + result.meaning,
                             quick_replies: [
                                 {
                                     "content_type":"text",
-                                    "title": 'Từ khác',
+                                    "title": 'Học từ khác',
                                     "payload": "NW_NEXT"
                                 }
                             ]

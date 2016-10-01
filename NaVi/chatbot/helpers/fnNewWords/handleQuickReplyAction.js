@@ -7,6 +7,6 @@ module.exports = function (recipientId, payload) {
 
 	if (status === "NEXT") {
 		// send another word
-		require('../fnNewWords/sendNewWord')(senderID);
+		require('../fnNewWords/sendNewWord')(recipientId);
 	}
 };
