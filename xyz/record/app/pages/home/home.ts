@@ -1,40 +1,67 @@
-import { Component } from '@angular/core';
-// import { NavController, AlertController } from 'ionic-angular';
-// import { AudioRecorder, AudioRecorderState } from '../../services/audiorecorder';
+import { Component} from '@angular/core';
 import {Platform, Page, Events} from 'ionic-angular';
-import {MediaPlugin} from 'ionic-native';
+import { MediaPlugin, Transfer } from 'ionic-native';
+
+
 declare var cordova: any;
+declare var options: any;
+declare var api : any;
 
 @Component({
-  templateUrl: 'build/pages/home/home.html',
-  //providers: [AudioRecorder]
+  templateUrl: 'build/pages/home/home.html'
 })
-export class HomePage {
+export class HomePage{
+	private _fileRecord : MediaPlugin;
+	private _pathFile: string;
+	private _nameFile: string;
+	// Create instance:
+	private _fileTransfer : Transfer;
+
+
+	// start record a new file
+  startRecord(): void{
+  	this._pathFile = this.getPathFileRecordAudio();
+  	this._fileRecord = new MediaPlugin(this._pathFile);
+  	this._fileRecord.startRecord();
+  }
+
+  //stop record
+  stopRecord(): void{
+  	this._fileRecord.stopRecord();
+  }
+
+  // save and upload to a new drive
+  save(): void {
+  	this._fileTransfer = new Transfer();
+  	alert('aaa');
+
+  	this._pathFile = this.getPathFileRecordAudio();
+
+  	options = {
+     	fileKey: 'file',
+    	fileName: 'demo.mp3',
+     	headers: {}
+  	}
+
+  	api = encodeURI("http://tinyurl.com/gp3suqb");
+
+  	this._fileTransfer.upload(this._pathFile, api )
+   .then((data) => {
+     alert("Success");
+   }, (err) => {
+     alert("Error");
+   })
+  }
   
-    private _fileRecord: MediaPlugin;
-
-    private _pathFile: string;
-    private _nameFile: string;
-
-    public startRecord(): void {
-        this._pathFile = this.getPathFileRecordAudio();
-        alert(this._pathFile);
-        this._fileRecord = new MediaPlugin(this._pathFile);
-        this._fileRecord.startRecord();
-    }
-
-    public stopRecord(): void {
-        this._fileRecord.stopRecord();
-    }
-
-    private startPlay(): void {
-        this._fileRecord = new MediaPlugin(this._pathFile);
-        this._fileRecord.play();
-    }
-
-    private getPathFileRecordAudio(): string {
+  // play after recording
+  play(): void {
+  	this._fileRecord = new MediaPlugin(this._pathFile);
+  	this._fileRecord.play();
+  }
+  
+  // get path to the lastest file recording
+  private getPathFileRecordAudio(): string {
     let path: string = cordova.file.externalRootDirectory;
     return path + 'test.amr';
-}
-
+	}
 }
