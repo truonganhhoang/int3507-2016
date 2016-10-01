@@ -3,21 +3,27 @@ import { NavController, Platform } from 'ionic-angular';
 import { RecordService } from '../../services/record.service';
 import { MediaPlugin } from 'ionic-native';
 import { File } from 'ionic-native';
-// import { TextToSpeech } from 'ionic-native';
+import { TextToSpeech } from 'ionic-native';
 
 declare var cordova: any;
 
 /*
-  Generated class for the RecordPage page.
+  Generated class for the Record page.
 
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 */
 @Component({
-  templateUrl: 'build/pages/record/record.html',
+  selector: 'page-record',
+  templateUrl: 'record.html',
   providers: [ RecordService ]
 })
 export class Record implements OnInit {
+
+  ionViewDidLoad() {
+    console.log('Hello Record Page');
+  }
+
   platform: Platform;
 	words: Object[];
 	records: Object[];
@@ -60,28 +66,33 @@ export class Record implements OnInit {
     
   }
 
+
   ngOnInit() {
+      
   }
 
-  // tts(text): void {
-  //   console.log(text);
-  //   TextToSpeech.speak(text)
-  //     .then(() => console.log('Success'))
-  //     .catch((reason: any) => console.log(reason));
-  // }
+  tts(text): void {
+    console.log(text);
+    TextToSpeech.speak(text)
+      .then(() => console.log('Success'))
+      .catch((reason: any) => console.log(reason));
+  }
   //truyền vào từ word đang cần record
   startRecord(word: Object) {
     word['isRecording'] = true;
+    if(!this.platform.is('cordova')) return;
     //link lưu file ở máy
     this._pathFile = this.getPathFile(word['content']);
-    this._fileRecord = new MediaPlugin(this._pathFile);
     //khởi tạo đối tượng Media
+    this._fileRecord = new MediaPlugin(this._pathFile);
+    this._fileRecord.status.subscribe(()=>{});
     //bắt đầu ghi âm
     this._fileRecord.startRecord();
   }
 
   stopRecord(word: Object) {
     word['isRecording'] = false;
+    if(!this.platform.is('cordova')) return;
     this._fileRecord.stopRecord();
 
     var record: Object = {};
@@ -96,10 +107,9 @@ export class Record implements OnInit {
   playRecord(item){
     //let path = this.getPathFile(item['content']);
     let path = item['url'];
-    if(this.platform.is('core') || this.platform.is('mobileweb')) {
-      return;
-    }
+    if(!this.platform.is('cordova')) return;
     this._fileRecord = new MediaPlugin(path);
+    this._fileRecord.status.subscribe(()=>{});
     this._fileRecord.play();
   }
 
@@ -119,5 +129,6 @@ export class Record implements OnInit {
       }
     );
   }
+
 
 }

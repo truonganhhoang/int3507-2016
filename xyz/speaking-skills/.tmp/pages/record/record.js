@@ -12,6 +12,7 @@ import { NavController, Platform } from 'ionic-angular';
 import { RecordService } from '../../services/record.service';
 import { MediaPlugin } from 'ionic-native';
 import { File } from 'ionic-native';
+import { TextToSpeech } from 'ionic-native';
 /*
   Generated class for the Record page.
 
@@ -64,24 +65,29 @@ export var Record = (function () {
     };
     Record.prototype.ngOnInit = function () {
     };
-    // tts(text): void {
-    //   console.log(text);
-    //   TextToSpeech.speak(text)
-    //     .then(() => console.log('Success'))
-    //     .catch((reason: any) => console.log(reason));
-    // }
+    Record.prototype.tts = function (text) {
+        console.log(text);
+        TextToSpeech.speak(text)
+            .then(function () { return console.log('Success'); })
+            .catch(function (reason) { return console.log(reason); });
+    };
     //truyền vào từ word đang cần record
     Record.prototype.startRecord = function (word) {
         word['isRecording'] = true;
+        if (!this.platform.is('cordova'))
+            return;
         //link lưu file ở máy
         this._pathFile = this.getPathFile(word['content']);
-        this._fileRecord = new MediaPlugin(this._pathFile);
         //khởi tạo đối tượng Media
+        this._fileRecord = new MediaPlugin(this._pathFile);
+        this._fileRecord.status.subscribe(function () { });
         //bắt đầu ghi âm
         this._fileRecord.startRecord();
     };
     Record.prototype.stopRecord = function (word) {
         word['isRecording'] = false;
+        if (!this.platform.is('cordova'))
+            return;
         this._fileRecord.stopRecord();
         var record = {};
         record['word_id'] = word['id'];
@@ -93,10 +99,10 @@ export var Record = (function () {
     Record.prototype.playRecord = function (item) {
         //let path = this.getPathFile(item['content']);
         var path = item['url'];
-        if (this.platform.is('core') || this.platform.is('mobileweb')) {
+        if (!this.platform.is('cordova'))
             return;
-        }
         this._fileRecord = new MediaPlugin(path);
+        this._fileRecord.status.subscribe(function () { });
         this._fileRecord.play();
     };
     Record.prototype.getPathFile = function (name) {

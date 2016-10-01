@@ -12,6 +12,7 @@ export declare class Record implements OnInit {
     private _pathFile;
     constructor(navCtrl: NavController, recordService: RecordService, platform: Platform);
     ngOnInit(): void;
+    tts(text: any): void;
     startRecord(word: Object): void;
     stopRecord(word: Object): void;
     playRecord(item: any): void;

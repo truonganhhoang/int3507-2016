@@ -16,7 +16,7 @@ import { Record } from '../pages/record/record';
 export var MyApp = (function () {
     function MyApp(platform) {
         this.platform = platform;
-        this.rootPage = Page1;
+        this.rootPage = Record;
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [

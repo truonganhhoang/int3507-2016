@@ -13,7 +13,7 @@ import { Record } from '../pages/record/record';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Page1;
+  rootPage: any = Record;
 
   pages: Array<{title: string, component: any}>;
 
