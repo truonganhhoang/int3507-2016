@@ -15,7 +15,10 @@ class ProgramO:
       log(r.status_code)
       log(r.text)
     r = r.json()
-    return r["botsay"]
+    if "botsay" in r:
+      return r["botsay"]
+    else:
+      return "Ahihi"
 
 def log(message):  # simple wrapper for logging to stdout on heroku
   print str(message)

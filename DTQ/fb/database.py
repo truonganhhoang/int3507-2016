@@ -32,6 +32,7 @@ class User(db.Model):
   user_id = db.Column(db.String(100), unique=True)
   state = db.Column(db.Integer)
   word_results = db.relationship("WordResult", back_populates="user")
+  word_learned = db.Column(db.Integer, default=0)
   created_at = db.Column(db.Date, default=datetime.datetime.now())
   updated_at = db.Column(db.Date, onupdate=datetime.datetime.now())
 
