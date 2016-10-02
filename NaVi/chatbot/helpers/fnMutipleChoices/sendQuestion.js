@@ -97,7 +97,7 @@ function getOneQuestion(unlearnedQuestions, recipientId) {
             };
 
             require('../facebook/sendFunctions/callSendAPI')(messageData);
-
+            redisClient.hmset(recipientId, ["lastMPQuestion", JSON.stringify(question)]);
             // Save last MP question id of current user to Redis
             redisClient.hmset(recipientId, ["lastMPQuestionId", question._id.toString()], function (err) {
                 if (err) {
