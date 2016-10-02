@@ -35,14 +35,19 @@ module.exports = function receivedMessage(event) {
             if (action === 'MC') {
                 require('../fnMutipleChoices/handleQuickReplyAction')(senderID, payload);
             }
+            // If there is a MC answer suggestion
+            else if (action === 'MCSUGGESTION') {
+                require('../fnMutipleChoices/handleSuggestionQuickReply')(senderID, payload, event);
+            }
         }
     }
+
     else if (messageText) {
         redisClient.hgetall(senderID, function (err, reply) {
             if (err) {
                 console.log(err);
             }
-            else if (reply && reply.context === 'MP') {
+            else if (reply && reply.context === 'MC') {
                 require('../fnMutipleChoices/handleTextReplyAction')(senderID, messageText, event);
             }
             else {
@@ -62,7 +67,7 @@ module.exports = function receivedMessage(event) {
                     if (err) {
                         require('../sendErrorMessage')(senderID);
                     }
-                    else if (response && response.intentClass === 'MP') {
+                    else if (response && response.intentClass === 'MC') {
                         require('../fnMutipleChoices/sendQuestion')(senderID);
                     }
                     else if (response && response.intentClass === 'NW') {

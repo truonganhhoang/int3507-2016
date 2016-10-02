@@ -2,7 +2,9 @@
 const
     models = require('../../models'),
     redisClient = require('../../caching/redisClient'),
-    sendFunctions = require('../facebook/sendFunctions');
+    sendFunctions = require('../facebook/sendFunctions'),
+    JWDistance = require('jaro-winkler'),
+    RATE_TO_SUGGEST = 0.8;
 
 module.exports = function (recipientId, recipientMessageText, event) {
     redisClient.hgetall(recipientId, function (err, reply) {
@@ -10,36 +12,38 @@ module.exports = function (recipientId, recipientMessageText, event) {
             console.log(err);
         }
         else {
-            let lastMPQuestion = JSON.parse(reply.lastMPQuestion),
+            let lastMCQuestion = JSON.parse(reply.lastMCQuestion),
                 recipientTypingAnswerIsTrue = false,
                 recipientMessageTextIsOneOfTheAnswer = false,
-                rightAnswer = 'A. ' + lastMPQuestion.choices[0].text;
+                rightAnswer = 'A. ' + lastMCQuestion.choices[0].text,
+                needSuggestion = false,
+                choiceToSuggest = "";
 
             // If user just type A, B, C as the answer
             // So we do replace A, B, C with the real answer text before go to compare step below
             if (recipientMessageText == 'A' || recipientMessageText == 'a') {
-                recipientMessageText = lastMPQuestion.choices[0].text;
+                recipientMessageText = lastMCQuestion.choices[0].text;
             }
             else if (recipientMessageText == 'B' || recipientMessageText == 'b') {
-                recipientMessageText = lastMPQuestion.choices[1].text;
+                recipientMessageText = lastMCQuestion.choices[1].text;
             }
             else if (recipientMessageText == 'C' || recipientMessageText == 'c') {
-                recipientMessageText = lastMPQuestion.choices[2].text;
+                recipientMessageText = lastMCQuestion.choices[2].text;
             }
 
-            for (let idx = 0; idx < lastMPQuestion.choices.length; idx++) {
-                if (lastMPQuestion.choices[idx].isAnswer) {
+            for (let idx = 0; idx < lastMCQuestion.choices.length; idx++) {
+                if (lastMCQuestion.choices[idx].isAnswer) {
                     if (idx == 1) {
-                        rightAnswer = 'B. ' + lastMPQuestion.choices[idx].text;
+                        rightAnswer = 'B. ' + lastMCQuestion.choices[idx].text;
                     }
                     else if (idx == 2) {
-                        rightAnswer = 'C. ' + lastMPQuestion.choices[idx].text;
+                        rightAnswer = 'C. ' + lastMCQuestion.choices[idx].text;
                     }
                 }
-                if (recipientMessageText === lastMPQuestion.choices[idx].text) {
+                if (recipientMessageText === lastMCQuestion.choices[idx].text) {
                     recipientMessageTextIsOneOfTheAnswer = true;
                 }
-                if (recipientMessageText === lastMPQuestion.choices[idx].text && lastMPQuestion.choices[idx].isAnswer == true) {
+                if (recipientMessageText === lastMCQuestion.choices[idx].text && lastMCQuestion.choices[idx].isAnswer == true) {
                     recipientTypingAnswerIsTrue = true;
                     sendFunctions.sendTextMessage(recipientId, 'Chính xác! Đang tải câu hỏi tiếp theo...', function () {
                         // send new question
@@ -47,9 +51,37 @@ module.exports = function (recipientId, recipientMessageText, event) {
                     });
                     break;
                 }
+                let similarity = JWDistance(recipientMessageText.toLowerCase(), lastMCQuestion.choices[idx].text.toLowerCase());
+                if (similarity >= RATE_TO_SUGGEST) {
+                    needSuggestion = true;
+                    choiceToSuggest = lastMCQuestion.choices[idx].text;
+                }
+            }
+            if (recipientMessageTextIsOneOfTheAnswer == false && needSuggestion == true) {
+                var messageData = {
+                    recipient: {
+                        id: recipientId
+                    },
+                    message: {
+                        text: "Có phải bạn muốn chọn đáp án: \"" + choiceToSuggest + "\"",
+                        quick_replies: [
+                            {
+                                "content_type":"text",
+                                "title": 'Đúng vậy!',
+                                "payload": "MCSUGGESTION_TRUE_" + choiceToSuggest + "_" + rightAnswer
+                            },
+                            {
+                                "content_type":"text",
+                                "title": 'Không',
+                                "payload": "MCSUGGESTION_FALSE_" + recipientMessageText
+                            }
+                        ]
+                    }
+                };
+                require('../facebook/sendFunctions/callSendAPI')(messageData);
             }
             // If the user is not about to answer (they want to break into other chat context)
-            if (recipientMessageTextIsOneOfTheAnswer == false) {
+            else if (recipientMessageTextIsOneOfTheAnswer == false && needSuggestion == false) {
                 // Update the context to UNKNOWN
                 redisClient.hmset(recipientId, ["context", 'UNKNOWN'], function (err, res) {
                     if (err) {
