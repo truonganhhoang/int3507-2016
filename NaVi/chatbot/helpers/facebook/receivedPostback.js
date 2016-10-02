@@ -12,9 +12,14 @@ module.exports = function receivedPostback(event) {
     var payload = event.postback.payload;
 
     console.log("Received postback for user %d and page %d with payload '%s' " +
-        "at %d", senderID, recipientID, payload, timeOfPostback);
+    "at %d", senderID, recipientID, payload, timeOfPostback);
 
-    // When a postback is called, we'll send a message back to the sender to
-    // let them know it was successful
-    sendFunctions.sendTextMessage(senderID, "Postback called");
+    if (payload) {
+        let action = payload.split('_')[0];
+
+        // If action is 'New word'
+        if (action === "NW") {
+            require('../fnNewWords/handlePostbackAction')(senderID, payload);
+        }
+    }
 };

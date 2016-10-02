@@ -34,13 +34,8 @@ module.exports = function receivedMessage(event) {
             if (action === 'MC') {
                 require('../fnMutipleChoices/handleQuickReplyAction')(senderID, payload);
             }
-           	// If action is 'New word'
-           	else if (action === "NW") {
-           		require('../fnNewWords/handleQuickReplyAction')(senderID, payload);
-           	}
         }
     }
-
     else if (messageText) {
         require('../intentClassification/getIntentClassification')(messageText, function (err, response) {
             if (err) {
