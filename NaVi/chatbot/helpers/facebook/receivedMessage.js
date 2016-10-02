@@ -38,40 +38,52 @@ module.exports = function receivedMessage(event) {
         }
     }
     else if (messageText) {
-        require('../intentClassification/getIntentClassification')(messageText, function (err, response) {
-            if (!err && response && response.intentClass) {
-                redisClient.hmset(senderID, ["context", response.intentClass], function (err, res) {
-                    if (err) {
-                        console.log("Redis error: ", err);
-                    }
-                    else {
-                        console.log(res);
-                    }
-                });
-                redisClient.hgetall(senderID, function (err, reply) {
-                    console.log(reply);
-                });
-            }
-
+        redisClient.hgetall(senderID, function (err, reply) {
             if (err) {
-                require('../sendErrorMessage')(senderID);
+                console.log(err);
             }
-            else if (response && response.intentClass === 'MP') {
-                require('../fnMutipleChoices/sendQuestion')(senderID);
-            }
-            else if (response && response.intentClass === 'NW') {
-                require('../fnNewWords/sendNewWord')(senderID);
-            }
-            else if (response && response.intentClass === 'LI') {
-                require('../fnListening/sendListeningChallenge')(senderID);
-            }
-            else if (response && response.intentClass === 'CO') {
-                require('../fnConversations/sendNormalMessage')(senderID, response.botResponse);
+            else if (reply && reply.context === 'MP') {
+                console.log('The current context is ', reply.context);
+                require('../fnMutipleChoices/handleTextReplyAction')(senderID, messageText, event);
             }
             else {
-                console.log(response);
-                require('./sendFunctions/sendTextMessage')(senderID, response.intentClass, function (err) {
-                    console.log("Message sent!");
+                require('../intentClassification/getIntentClassification')(messageText, function (err, response) {
+                    // Save the new context to redis
+                    if (!err && response && response.intentClass) {
+                        redisClient.hmset(senderID, ["context", response.intentClass], function (err, res) {
+                            if (err) {
+                                console.log("Redis error: ", err);
+                            }
+                            else {
+                                console.log(res);
+                            }
+                        });
+                        redisClient.hgetall(senderID, function (err, reply) {
+                            console.log(reply);
+                        });
+                    }
+
+                    if (err) {
+                        require('../sendErrorMessage')(senderID);
+                    }
+                    else if (response && response.intentClass === 'MP') {
+                        require('../fnMutipleChoices/sendQuestion')(senderID);
+                    }
+                    else if (response && response.intentClass === 'NW') {
+                        require('../fnNewWords/sendNewWord')(senderID);
+                    }
+                    else if (response && response.intentClass === 'LI') {
+                        require('../fnListening/sendListeningChallenge')(senderID);
+                    }
+                    else if (response && response.intentClass === 'CO') {
+                        require('../fnConversations/sendNormalMessage')(senderID, response.botResponse);
+                    }
+                    else {
+                        console.log(response);
+                        require('./sendFunctions/sendTextMessage')(senderID, response.intentClass, function (err) {
+                            console.log("Message sent!");
+                        });
+                    }
                 });
             }
         });
