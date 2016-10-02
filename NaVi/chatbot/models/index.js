@@ -13,5 +13,6 @@ var mongooseConnect = function () {
 module.exports  = {
 	mongooseConnect: mongooseConnect,
     Question: require('./Question'),
-    User: require('./User')
+    User: require('./User'),
+    NewWord: require('./NewWord')
 };

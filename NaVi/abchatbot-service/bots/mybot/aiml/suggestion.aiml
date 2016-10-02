@@ -1,4 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
+    <catogery>
+        <pattern>học tiếng anh</pattern>
+        <template>
+            <random>
+                <li>Bạn đã thuộc hết từ mới của ngày hôm nay chưa ?</li>
+                <li>Bạn đã sẵn sàng làm bài tập trắc nghiệm cùng Cwat ?</li>
+                <li>Hãy bắt đầu học từ mới của ngày hôm nay !</li>
+                <li>Để học tiếng anh tốt bạn hãy luyện cách phát âm chuẩn</li>
+                <li>Hãy ra bờ hồ nói chuyện với người nước ngoài để việc học thú vị hơn và tốt hơn</li>
+                <li>Mỗi ngày bạn nên dành 1 tiếng để học tiếng anh</li>
+                <li>Kỹ năng nghe và nói sẽ giúp ích cho công việc của bạn rất nhiều </li>
+                <li>15p mỗi ngày để học tiếng anh cùng Cwat</li>
+            </random>
+         </template>
+     </catogery>
+
+    <catogery>
+        <pattern>_ học tiếng anh *</pattern>
+            <template>
+                <srai>học tiếng anh</srai>
+            </template>
+    </catogery>
+
+     <catogery>
+        <pattern>học tiếng anh *</pattern>
+            <template>
+                 <srai>học tiếng anh</srai>
+            </template>
+        </catogery>
+
+     <catogery>
+        <pattern>_ học tiếng anh *</pattern>
+             <template>
+                  <srai>học tiếng anh</srai>
+              </template>
+         </catogery>
+
+     <catogery>
+        <pattern>learning english</pattern>
+             <template>
+                  <srai>học tiếng anh</srai>
+              </template>
+     </catogery>
+
+     <catogery>
+        <pattern>_ learning english *</pattern>
+             <template>
+                  <srai>học tiếng anh</srai>
+              </template>
+         </catogery>
+
+     <catogery>
+        <pattern>learning english *</pattern>
+             <template>
+                  <srai>học tiếng anh</srai>
+              </template>
+         </catogery>
+
+
+
+     <catogery>
+        <pattern>chán</pattern>
+        <template>
+            <random>
+                <li>Hãy nghe các bài hát tiếng anh sẽ giúp bạn học thú vị hơn</li>
+                <li>Đừng chán học Tiếng anh ! Nó là công cụ rất hữu ích cho tương lai mà bạn hướng đến.</li>
+                <li>Hãy chịu khó đợi cảm hứng học tiếng Anh đến với bạn</li>
+                <li>Hãy lên một kế hoạch cụ thể và kiên trì với việc học tiếng anh</li>
+                <li>Ghi từ mới vào giấy nhớ và dán ở những nơi bạn thường qua lại : Tủ lạnh, bàn học, cánh của tủ ,.. Để bạn học tiếng anh một cách tự nhiên và mọi lúc</li>
+                <li>Luôn tạo động lực và nguồn cảm hứng mỗi ngày</li>
+                <li>Bạn có biết : Khi cảm xúc của bạn lên cao là lúc bạn ghi nhớ được tốt nhất ! Hãy tạo cảm xúc vui vẻ, hứng thú khi bạn học từ mới</li>
+            </random>
+        </template>
+     </catogery>
+
+     <catogery>
+        <pattern>_ chán * </pattern>
+            <srai>chán</srai>
+     </catogery>
+
+     <catogery>
+        <pattern>chán * </pattern>
+            <srai>chán</srai>
+     </catogery>
+
+
+     <catogery>
+        <pattern>luyện nghe</pattern>
+        <template>
+            <random>
+                <li>http://www.esl-lab.com/  luyện nghe và làm bài tập trắc nghiệm nghe ở cấp độ: dễ, trung bình, khó và rất khó.</li>
+                <li> http://www.youtube.com/watch?v=Jx5oXvuL_Lw clips luyện nghe & nói thuộc loạt bài Real English Lesson 1, 2 ,3 ,4, ...  (từ cơ bản đến nâng cao, có phụ đề tiếng Anh)</li>
+                <li>http://www.youtube.com/watch?v=LIifh6aHsQM  clips tập nghe & nói, giao tiếp tiếng Anh thuộc loạt bài How to speak in American, Learn English, Savio (tiếng Anh giao tiếp thực dụng )</li>
+                <li> http://www.learnenglishfeelgood.com/eslvideo/ (SHORT FILM CLIPS, Watch and Learn!) : xem đoạn phim ngắn và làm bài tập trắc nghiệm khả năng nghe hiểu.</li>
+                <li> http://www.englishstudydirect.com/OSAC/langacls.htm : nguồn tài liệu học nghe & nói tiếng Anh online.</li>
+                <li>http://www.manythings.org/e/requirements.html : học tiếng Anh tổng hợp</li>
+            </random>
+        </template>
+     </catogery>
+
+     <catogery>
+          <pattern>_ luyện nghe *</pattern>
+            <srai>luyện nghe</srai>
+     </catogery>
+
+      <catogery>
+        <pattern>luyện nghe *</pattern>
+            <srai>luyện nghe</srai>
+      </catogery>
 
 </aiml>
