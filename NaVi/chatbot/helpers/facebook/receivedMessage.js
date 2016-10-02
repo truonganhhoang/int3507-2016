@@ -1,6 +1,7 @@
 'use strict';
 const
     sendFunctions = require('./sendFunctions'),
+    redisClient = require('../../caching/redisClient'),
     models = require('../../models');
 
 module.exports = function receivedMessage(event) {
@@ -38,6 +39,20 @@ module.exports = function receivedMessage(event) {
     }
     else if (messageText) {
         require('../intentClassification/getIntentClassification')(messageText, function (err, response) {
+            if (!err && response && response.intentClass) {
+                redisClient.hmset(senderID, ["context", response.intentClass], function (err, res) {
+                    if (err) {
+                        console.log("Redis error: ", err);
+                    }
+                    else {
+                        console.log(res);
+                    }
+                });
+                redisClient.hgetall(senderID, function (err, reply) {
+                    console.log(reply);
+                });
+            }
+
             if (err) {
                 require('../sendErrorMessage')(senderID);
             }
