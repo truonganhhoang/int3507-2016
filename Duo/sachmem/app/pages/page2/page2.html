@@ -8,7 +8,24 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
+<div style="font-size: 240%; text-align: center">
+  <ion-icon *ngIf="percent < 15" name="ios-star-outline"></ion-icon>
+  <ion-icon *ngIf="percent >= 15" name="star"></ion-icon>
+
+  <ion-icon *ngIf="percent < 30" name="ios-star-outline"></ion-icon>
+  <ion-icon *ngIf="percent >= 30" name="star"></ion-icon>
+  
+  <ion-icon *ngIf="percent < 45" name="ios-star-outline"></ion-icon>
+  <ion-icon *ngIf="percent >= 45" name="star"></ion-icon>
+  
+  <ion-icon *ngIf="percent < 60" name="ios-star-outline"></ion-icon>
+  <ion-icon *ngIf="percent >= 60" name="star"></ion-icon>
+  
+  <ion-icon *ngIf="percent < 80" ng-if name="ios-star-outline"></ion-icon>
+  <ion-icon *ngIf="percent >= 80" name="star"></ion-icon>
+</div>
+
+  <!-- <ion-list>
     <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
       <ion-icon [name]="item.icon" item-left></ion-icon>
       {{item.title}}
@@ -19,5 +36,5 @@
   </ion-list>
   <div *ngIf="selectedItem" padding>
     You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+  </div> -->
 </ion-content>

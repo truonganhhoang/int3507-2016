@@ -21,6 +21,8 @@ export class SpeakingPage implements OnInit, OnChanges {
   percent: number;
   recognition: any;
 
+  constructor(private navCtrl: NavController, private zone: NgZone, private helperService: HelperService) { }
+
   ngOnInit() { }
 
   ngOnChanges(changes:{[propKey: string]: SimpleChange}) {
@@ -56,7 +58,7 @@ export class SpeakingPage implements OnInit, OnChanges {
     }  
   }
 
-  constructor(private navCtrl: NavController, private zone: NgZone, private helperService: HelperService) { }
+  
 
   record() {
     if(!this.isRecording) {
