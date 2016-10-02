@@ -112,6 +112,25 @@
     </category>
 
     <category>
+        <pattern>chào cwat</pattern>
+        <template>
+            <srai>xin chào</srai>
+         </template>
+    </category>
+
+    <category>
+        <pattern>_ chào cwat *</pattern>
+        <template>
+            <srai>xin chào</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>chào cwat *</pattern>
+            <srai>xin chào</srai>
+    </category>
+
+    <category>
         <pattern>có gì hot</pattern>
         <template>
             <random>

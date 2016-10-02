@@ -85,4 +85,29 @@
             <srai>chán</srai>
      </catogery>
 
+
+     <catogery>
+        <pattern>luyện nghe</pattern>
+        <template>
+            <random>
+                <li>http://www.esl-lab.com/  luyện nghe và làm bài tập trắc nghiệm nghe ở cấp độ: dễ, trung bình, khó và rất khó.</li>
+                <li> http://www.youtube.com/watch?v=Jx5oXvuL_Lw clips luyện nghe & nói thuộc loạt bài Real English Lesson 1, 2 ,3 ,4, ...  (từ cơ bản đến nâng cao, có phụ đề tiếng Anh)</li>
+                <li>http://www.youtube.com/watch?v=LIifh6aHsQM  clips tập nghe & nói, giao tiếp tiếng Anh thuộc loạt bài How to speak in American, Learn English, Savio (tiếng Anh giao tiếp thực dụng )</li>
+                <li> http://www.learnenglishfeelgood.com/eslvideo/ (SHORT FILM CLIPS, Watch and Learn!) : xem đoạn phim ngắn và làm bài tập trắc nghiệm khả năng nghe hiểu.</li>
+                <li> http://www.englishstudydirect.com/OSAC/langacls.htm : nguồn tài liệu học nghe & nói tiếng Anh online.</li>
+                <li>http://www.manythings.org/e/requirements.html : học tiếng Anh tổng hợp</li>
+            </random>
+        </template>
+     </catogery>
+
+     <catogery>
+          <pattern>_ luyện nghe *</pattern>
+            <srai>luyện nghe</srai>
+     </catogery>
+
+      <catogery>
+        <pattern>luyện nghe *</pattern>
+            <srai>luyện nghe</srai>
+      </catogery>
+
 </aiml>
