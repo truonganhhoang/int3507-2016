@@ -1,4 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
+    <category>
+        <pattern>đội phát triển</pattern>
+        <template>
+            <random>
+                <li>Thành viên đội phát triển: Đặng Hải Triều, Nguyễn Minh Trang, Trần Mạnh Tiến, Nguyễn Huy Hùng!</li>
+                <li>Mấy con sen của mình ấy à: Nguyễn Minh Trang, Đặng Hải Triều, Trần Mạnh Tiến, Nguyễn Huy Hùng! :)) Họ phục vụ mình tận tình lắm. </li>
+                <li>Những người phát triển mình ấy àm: Nguyễn Minh Trang, Trần Mạnh Tiến, Đặng Hải Triều, Nguyễn Huy Hùng!</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>_ đội phát triển</pattern>
+        <template>
+            <srai>đội phát triển</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>đội phát triển *</pattern>
+        <template>
+            <srai>đội phát triển</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ đội phát triển *</pattern>
+        <template>
+            <srai>đội phát triển</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ người phát triển</pattern>
+        <template>
+            <srai>đội phát triển</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ người phát triển *</pattern>
+        <template>
+            <srai>đội phát triển</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>người phát triển *</pattern>
+        <template>
+            <srai>đội phát triển</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ người tạo ra</pattern>
+        <template>
+            <srai>đội phát triển</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ người tạo ra *</pattern>
+        <template>
+            <srai>đội phát triển</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>người tạo ra *</pattern>
+        <template>
+            <srai>đội phát triển</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ team phát triển</pattern>
+        <template>
+            <srai>đội phát triển</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>team phát triển *</pattern>
+        <template>
+            <srai>đội phát triển</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ team phát triển *</pattern>
+        <template>
+            <srai>đội phát triển</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>Trang</pattern>
+        <template>
+            <random>
+                <li>Minh Trang sinh viên lớp K58 CLC!</li>
+                <li></li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>Trang *</pattern>
+        <template>
+            <srai>Trang</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ Trang</pattern>
+        <template>
+            <srai>Trang</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ Trang *</pattern>
+        <template>
+            <srai>Trang</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>Tiến</pattern>
+        <template>
+            <random>
+                <li>Anh Tiến đẹp trai :)) vui tính, yêu màu hồng, ghét sự thủy chung</li>
+                <li>Mạnh Tiến sinh viên lớp K58 CLC</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>tiến *</pattern>
+        <template>
+            <srai>Tiến</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ tiến *</pattern>
+        <template>
+            <srai>Tiến</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ tiến</pattern>
+        <template>
+            <srai>Tiến</srai>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>Triều</pattern>
+        <template>
+            <random>
+                <li>Sinh viên K58CLC chưa thèm yêu ai. (thực tế là gay lọ đó mà. :3)</li>
+                <li>Hải Triều sinh viên lớp K58 CLC</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>triều *</pattern>
+        <template>
+            <srai>Triều</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ triều *</pattern>
+        <template>
+            <srai>Triều</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ triều</pattern>
+        <template>
+            <srai>Triều</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>Hùng</pattern>
+        <template>
+            <random>
+                <li>Thằng nhóc của lũy tre làng ấy àm. Không có gì đáng nói! :D</li>
+                <li>Một thằng nhóc của phương đông. :3</li>
+                <li>Huy Hùng sinh viên lớp K58 CD!</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>hùng *</pattern>
+        <template>
+            <srai>Hùng</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ hùng *</pattern>
+        <template>
+            <srai>Hùng</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ hùng</pattern>
+        <template>
+            <srai>Hùng</srai>
+        </template>
+    </category>
 
 </aiml>

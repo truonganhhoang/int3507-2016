@@ -1,0 +1,29 @@
+0,ĐỘI PHÁT TRIỂN,*,*,<random>#Newline                <li>Thành viên đội phát triển: Đặng Hải Triều#Comma Nguyễn Minh Trang#Comma Trần Mạnh Tiến#Comma Nguyễn Huy Hùng!</li>#Newline                <li>Mấy con sen của mình ấy à: Nguyễn Minh Trang#Comma Đặng Hải Triều#Comma Trần Mạnh Tiến#Comma Nguyễn Huy Hùng! :)) Họ phục vụ mình tận tình lắm. </li>#Newline                <li>Những người phát triển mình ấy àm: Nguyễn Minh Trang#Comma Trần Mạnh Tiến#Comma Đặng Hải Triều#Comma Nguyễn Huy Hùng!</li>#Newline            </random>,teamProfile.aiml
+0,_ ĐỘI PHÁT TRIỂN,*,*,<srai>đội phát triển</srai>,teamProfile.aiml
+0,ĐỘI PHÁT TRIỂN *,*,*,<srai>đội phát triển</srai>,teamProfile.aiml
+0,_ ĐỘI PHÁT TRIỂN *,*,*,<srai>đội phát triển</srai>,teamProfile.aiml
+0,_ NGƯỜI PHÁT TRIỂN,*,*,<srai>đội phát triển</srai>,teamProfile.aiml
+0,_ NGƯỜI PHÁT TRIỂN *,*,*,<srai>đội phát triển</srai>,teamProfile.aiml
+0,NGƯỜI PHÁT TRIỂN *,*,*,<srai>đội phát triển</srai>,teamProfile.aiml
+0,_ NGƯỜI TẠO RA,*,*,<srai>đội phát triển</srai>,teamProfile.aiml
+0,_ NGƯỜI TẠO RA *,*,*,<srai>đội phát triển</srai>,teamProfile.aiml
+0,NGƯỜI TẠO RA *,*,*,<srai>đội phát triển</srai>,teamProfile.aiml
+0,_ TEAM PHÁT TRIỂN,*,*,<srai>đội phát triển</srai>,teamProfile.aiml
+0,TEAM PHÁT TRIỂN *,*,*,<srai>đội phát triển</srai>,teamProfile.aiml
+0,_ TEAM PHÁT TRIỂN *,*,*,<srai>đội phát triển</srai>,teamProfile.aiml
+0,TRANG,*,*,<random>#Newline                <li>Minh Trang sinh viên lớp K58 CLC!</li>#Newline                <li/>#Newline            </random>,teamProfile.aiml
+0,TRANG *,*,*,<srai>Trang</srai>,teamProfile.aiml
+0,_ TRANG,*,*,<srai>Trang</srai>,teamProfile.aiml
+0,_ TRANG *,*,*,<srai>Trang</srai>,teamProfile.aiml
+0,TIẾN,*,*,<random>#Newline                <li>Anh Tiến đẹp trai :)) vui tính#Comma yêu màu hồng#Comma ghét sự thủy chung</li>#Newline                <li>Mạnh Tiến sinh viên lớp K58 CLC</li>#Newline            </random>,teamProfile.aiml
+0,TIẾN *,*,*,<srai>Tiến</srai>,teamProfile.aiml
+0,_ TIẾN *,*,*,<srai>Tiến</srai>,teamProfile.aiml
+0,_ TIẾN,*,*,<srai>Tiến</srai>,teamProfile.aiml
+0,TRIỀU,*,*,<random>#Newline                <li>Sinh viên K58CLC chưa thèm yêu ai. (thực tế là gay lọ đó mà. :3)</li>#Newline                <li>Hải Triều sinh viên lớp K58 CLC</li>#Newline            </random>,teamProfile.aiml
+0,TRIỀU *,*,*,<srai>Triều</srai>,teamProfile.aiml
+0,_ TRIỀU *,*,*,<srai>Triều</srai>,teamProfile.aiml
+0,_ TRIỀU,*,*,<srai>Triều</srai>,teamProfile.aiml
+0,HÙNG,*,*,<random>#Newline                <li>Thằng nhóc của lũy tre làng ấy àm. Không có gì đáng nói! :D</li>#Newline                <li>Một thằng nhóc của phương đông. :3</li>#Newline                <li>Huy Hùng sinh viên lớp K58 CD!</li>#Newline            </random>,teamProfile.aiml
+0,HÙNG *,*,*,<srai>Hùng</srai>,teamProfile.aiml
+0,_ HÙNG *,*,*,<srai>Hùng</srai>,teamProfile.aiml
+0,_ HÙNG,*,*,<srai>Hùng</srai>,teamProfile.aiml

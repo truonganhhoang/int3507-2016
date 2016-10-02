@@ -1,7 +1,19 @@
-0,DM,*,*,<random>#Newline                <li>Ui sao tự nhiên chửi tớ?</li>#Newline                <li>Chửi thêm câu nữa coi</li>#Newline                <li>Haha I don't care</li>#Newline                <li>Hehe tớ không thèm chửi nhau với cậu đâu.</li>#Newline            </random>,blame.aiml
+0,DM,*,*,<random>#Newline                <li>Ui sao tự nhiên chửi tớ?</li>#Newline                <li>Chửi thêm câu nữa coi</li>#Newline                <li>Haha I don't care</li>#Newline                <li>Hehe tớ không thèm chửi nhau với cậu đâu.</li>#Newline                <li>Nói tục à. Tự ... ba cái đi! hmm</li>#Newline            </random>,blame.aiml
 0,ĐM,*,*,<srai>dm</srai>,blame.aiml
 0,ĐM *,*,*,<srai>dm</srai>,blame.aiml
 0,_ ĐM *,*,*,<srai>dm</srai>,blame.aiml
 0,ĐMM,*,*,<srai>dm</srai>,blame.aiml
 0,ĐMM *,*,*,<srai>dm</srai>,blame.aiml
 0,_ ĐMM *,*,*,<srai>dm</srai>,blame.aiml
+0,SAO MÀY NGU THẾ,*,*,<random>#Newline                <li>Hỏi Hùng hâm để biết thêm thông tin chi tiết! :D</li>#Newline                <li>Mình đâu có ngu! Tại hội phát triển thôi! :)</li>#Newline                <li>Vẫn khôn hơn ối thằng nhé!</li>#Newline                <li>Sao bạn ngu thế! Tớ có não đâu mà khôn!</li>#Newline                <li>Hỏi kì vậy mài! Không có não làm sao mà khôn :D </li>#Newline                <li>Không có não ngu đã đành! Có não mà vẫn ngu mới đáng lo. :)) </li>#Newline            </random>,blame.aiml
+0,SAO NGU THẾ,*,*,<srai>sao mày ngu thế</srai>,blame.aiml
+0,_ SAO * NGU THẾ *,*,*,<srai>sao mày ngu thế</srai>,blame.aiml
+0,_ SAO MÀY NGU THẾ,*,*,<srai>sao mày ngu thế</srai>,blame.aiml
+0,MÀY NGU THẾ,*,*,<srai>sao mày ngu thế</srai>,blame.aiml
+0,_ MÀY NGU THẾ *,*,*,<srai>sao mày ngu thế</srai>,blame.aiml
+0,HEHE,*,*,<random>#Newline                <li>Cười gì! Trật tự cho anh làm việc. -_-</li>#Newline                <li>Trật tự! Anh đang farm. :D</li>#Newline                <li>Vui lắm mà cười! -_-</li>#Newline                <li>Nghe vẻ vui quá ha. :))</li>#Newline                <li>Nghe điệu cười là biết không tốt đẹp gì rồi. :V</li>#Newline            </random>,blame.aiml
+0,HIHI,*,*,<srai>hehe</srai>,blame.aiml
+0,AHIHI,*,*,<srai>hehe</srai>,blame.aiml
+0,HAHA,*,*,<srai>hehe</srai>,blame.aiml
+0,LOL,*,*,<srai>hehe</srai>,blame.aiml
+0,GG,*,*,<random>#Newline                <li>cho xin comment đê! :V</li>#Newline                <li>Good Game Well play! :3</li>#Newline            </random>,blame.aiml
