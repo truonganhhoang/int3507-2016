@@ -8,8 +8,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component } from '@angular/core';
-import { NavController, Platform } from 'ionic-angular';
+import { NavController, Platform, NavParams } from 'ionic-angular';
 import { RecordService } from '../../services/record.service';
+import { WordService } from '../../services/word.service';
 import { MediaPlugin } from 'ionic-native';
 import { File } from 'ionic-native';
 import { TextToSpeech } from 'ionic-native';
@@ -20,12 +21,15 @@ import { TextToSpeech } from 'ionic-native';
   Ionic pages and navigation.
 */
 export var Record = (function () {
-    function Record(navCtrl, recordService, platform) {
+    function Record(navCtrl, recordService, wordService, platform, navParams) {
         var _this = this;
         this.navCtrl = navCtrl;
         this.recordService = recordService;
+        this.wordService = wordService;
+        this.navParams = navParams;
         this.platform = platform;
-        this.recordService.getWords().then(function (res) {
+        var categoryId = this.navParams.get('categoryId');
+        this.wordService.getWord(categoryId).then(function (res) {
             _this.words = res;
             _this.recordService.getRecords().then(function (res) {
                 _this.records = res;
@@ -121,9 +125,9 @@ export var Record = (function () {
         Component({
             selector: 'page-record',
             templateUrl: 'record.html',
-            providers: [RecordService]
+            providers: [RecordService, WordService]
         }), 
-        __metadata('design:paramtypes', [NavController, RecordService, Platform])
+        __metadata('design:paramtypes', [NavController, RecordService, WordService, Platform, NavParams])
     ], Record);
     return Record;
 }());

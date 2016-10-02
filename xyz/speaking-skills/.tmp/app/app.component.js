@@ -12,17 +12,19 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
-import { Record } from '../pages/record/record';
+import { Category } from '../pages/category/category';
+import { Youtube } from '../pages/youtube/youtube';
 export var MyApp = (function () {
     function MyApp(platform) {
         this.platform = platform;
-        this.rootPage = Record;
+        this.rootPage = Youtube;
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [
             { title: 'Page One', component: Page1 },
             { title: 'Page Two', component: Page2 },
-            { title: 'Record', component: Record }
+            { title: 'Speaking by category', component: Category },
+            { title: 'Speaking with youtube', component: Youtube }
         ];
     }
     MyApp.prototype.initializeApp = function () {

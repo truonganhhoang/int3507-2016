@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, Platform } from 'ionic-angular'; 
+import { NavController, Platform, NavParams } from 'ionic-angular'; 
 import { RecordService } from '../../services/record.service';
+import { WordService } from '../../services/word.service'
 import { MediaPlugin } from 'ionic-native';
 import { File } from 'ionic-native';
 import { TextToSpeech } from 'ionic-native';
@@ -16,7 +17,7 @@ declare var cordova: any;
 @Component({
   selector: 'page-record',
   templateUrl: 'record.html',
-  providers: [ RecordService ]
+  providers: [ RecordService, WordService ]
 })
 export class Record implements OnInit {
 
@@ -30,9 +31,11 @@ export class Record implements OnInit {
   private _fileRecord: MediaPlugin;
   private _pathFile: string;
 
-  constructor(private navCtrl: NavController, private recordService: RecordService, platform: Platform) {
+  constructor(private navCtrl: NavController, private recordService: RecordService, private wordService: WordService, platform: Platform, private navParams: NavParams) {
     this.platform = platform;
-  	this.recordService.getWords().then(res => {
+    let categoryId = this.navParams.get('categoryId');
+  
+  	this.wordService.getWord(categoryId).then(res => {
       this.words = res;
       this.recordService.getRecords().then(res => {
         this.records = res;

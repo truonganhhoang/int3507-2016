@@ -4,7 +4,8 @@ import { StatusBar } from 'ionic-native';
 
 import { Page1 } from '../pages/page1/page1';
 import { Page2 } from '../pages/page2/page2';
-import { Record } from '../pages/record/record';
+import { Category } from '../pages/category/category';
+import { Youtube } from '../pages/youtube/youtube';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { Record } from '../pages/record/record';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Record;
+  rootPage: any = Youtube;
 
   pages: Array<{title: string, component: any}>;
 
@@ -24,7 +25,8 @@ export class MyApp {
     this.pages = [
       { title: 'Page One', component: Page1 },
       { title: 'Page Two', component: Page2 },
-      { title: 'Record', component: Record }
+      { title: 'Speaking by category', component: Category },
+      { title: 'Speaking with youtube', component: Youtube }
     ];
 
   }
