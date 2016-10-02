@@ -43,7 +43,6 @@ module.exports = function receivedMessage(event) {
                 console.log(err);
             }
             else if (reply && reply.context === 'MP') {
-                console.log('The current context is ', reply.context);
                 require('../fnMutipleChoices/handleTextReplyAction')(senderID, messageText, event);
             }
             else {
@@ -57,9 +56,6 @@ module.exports = function receivedMessage(event) {
                             else {
                                 console.log(res);
                             }
-                        });
-                        redisClient.hgetall(senderID, function (err, reply) {
-                            console.log(reply);
                         });
                     }
 
@@ -79,7 +75,6 @@ module.exports = function receivedMessage(event) {
                         require('../fnConversations/sendNormalMessage')(senderID, response.botResponse);
                     }
                     else {
-                        console.log(response);
                         require('./sendFunctions/sendTextMessage')(senderID, response.intentClass, function (err) {
                             console.log("Message sent!");
                         });

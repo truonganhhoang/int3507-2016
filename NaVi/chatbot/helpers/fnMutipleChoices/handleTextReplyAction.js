@@ -10,11 +10,22 @@ module.exports = function (recipientId, recipientMessageText, event) {
             console.log(err);
         }
         else {
-            console.log(JSON.parse(reply.lastMPQuestion));
             let lastMPQuestion = JSON.parse(reply.lastMPQuestion),
                 recipientTypingAnswerIsTrue = false,
                 recipientMessageTextIsOneOfTheAnswer = false,
                 rightAnswer = 'A. ' + lastMPQuestion.choices[0].text;
+
+            // If user just type A, B, C as the answer
+            // So we do replace A, B, C with the real answer text before go to compare step below
+            if (recipientMessageText == 'A' || recipientMessageText == 'a') {
+                recipientMessageText = lastMPQuestion.choices[0].text;
+            }
+            else if (recipientMessageText == 'B' || recipientMessageText == 'b') {
+                recipientMessageText = lastMPQuestion.choices[1].text;
+            }
+            else if (recipientMessageText == 'C' || recipientMessageText == 'c') {
+                recipientMessageText = lastMPQuestion.choices[2].text;
+            }
 
             for (let idx = 0; idx < lastMPQuestion.choices.length; idx++) {
                 if (lastMPQuestion.choices[idx].isAnswer) {
