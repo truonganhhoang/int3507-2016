@@ -70,7 +70,7 @@ export class SpeakingPage implements OnInit, OnChanges {
   }
 
   checkAnswer() {
-    if(this.percent > 80) {
+    if(this.percent >= 80) {
       this.onCorrect.emit(true);
 
     } else {
