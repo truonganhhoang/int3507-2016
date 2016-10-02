@@ -14,7 +14,7 @@ function Unit(title, subTitle, thumbnail, threads, views, categoryId, createdDat
 }
 
 module.exports = {
-    init: (title, subTitle, thumbnail, threads, views, categoryId, createdDate) => {
-        return new Unit(title, subTitle, thumbnail, threads, views, categoryId, createdDate);
+    init: (title, subTitle, thumbnail, threads, views, categoryId, createdDate, time) => {
+        return new Unit(title, subTitle, thumbnail, threads, views, categoryId, createdDate, time);
     }
 }

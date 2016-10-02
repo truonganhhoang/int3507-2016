@@ -19,23 +19,16 @@ var DetailComponent = (function () {
     function DetailComponent(route, service) {
         this.route = route;
         this.service = service;
-        this.title = '';
-        this.subTitle = '';
-        this.views = 0;
-        this.thumbnail = '';
         this.isTest = false;
         this.ticks = 0;
         this.isNotify = false;
+        this.timeLimit = 60;
     }
     DetailComponent.prototype.loadDetailsData = function (id) {
         var _this = this;
         this.service.getDetailsData(id)
             .subscribe(function (body) {
             _this.unit = body;
-            _this.title = _this.unit.unitTitle;
-            _this.subTitle = _this.unit.unitSubTitle;
-            _this.views = _this.unit.unitViews;
-            _this.thumbnail = _this.unit.unitThumbnail;
         }, function (err) {
             console.log(err);
         });
@@ -46,11 +39,12 @@ var DetailComponent = (function () {
         this.isNotify = false;
         var timer = Rx_1.Observable.timer(0, 999).take(11);
         timer.subscribe(function (t) {
-            if (t >= 10) {
+            if (_this.ticks <= 1) {
+                //TODO
                 _this.isTest = false;
                 _this.isNotify = true;
             }
-            _this.ticks = t;
+            _this.ticks = _this.timeLimit - t;
         });
     };
     DetailComponent.prototype.ngOnInit = function () {

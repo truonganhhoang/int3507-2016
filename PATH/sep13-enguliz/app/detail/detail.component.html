@@ -1,9 +1,10 @@
 <div class="container">
-    <div style="width: 100%;text-align: center;">
-        <h3>{{title}}</h3>
-        <img alt="" width="30%" height="30%" src="{{thumbnail}}"><br>
-        <span>{{subTitle}}</span><br>
-        <p>Time: 30'</p>
+    <div style="width: 100%;text-align: center;" *ngIf="unit">
+        <h3>{{unit.unitTitle}}</h3>
+        <img alt="" width="30%" height="30%" src="{{unit.unitThumbnail}}"><br>
+        <span>{{unit.unitSubTitle}}</span><br>
+        <span>{{unit.unitThreads}}</span>
+        <p>Time: {{unit.unitTime}}</p>
         <button class="btn btn-primary" (click)="startTesting()">Start</button>
     </div>
 
@@ -19,43 +20,10 @@
 
         <div class="col-md-8 col-md-offset-2">
             <ol>
-                <div class="panel panel-default col m6 question_answers">
-                    <li><label>Đây là 1 câu hỏi ?</label>
+                <div class="panel panel-default col m6 question_answers" *ngFor="let q of unit.question">
+                    <li><label>{{q.question}}</label>
                         <ul>
-                            <li><input type="radio" name="cau1">A. Đáp án 1</li>
-                            <li><input type="radio" name="cau1">B. Đáp án 2</li>
-                            <li><input type="radio" name="cau1">C. Đáp án 3</li>
-                            <li><input type="radio" name="cau1">D. Đáp án 4</li>
-                        </ul>
-                    </li>
-                </div>
-                <div class="panel panel-default col m6 question_answers">
-                    <li><label>Đây là 1 câu hỏi ?</label>
-                        <ul>
-                            <li><input type="radio" name="cau2">A. Đáp án 1</li>
-                            <li><input type="radio" name="cau2">B. Đáp án 2</li>
-                            <li><input type="radio" name="cau2">C. Đáp án 3</li>
-                            <li><input type="radio" name="cau2">D. Đáp án 4</li>
-                        </ul>
-                    </li>
-                </div>
-                <div class="panel panel-default col m6 question_answers">
-                    <li><label>Đây là 1 câu hỏi ?</label>
-                        <ul>
-                            <li><input type="radio" name="cau2">A. Đáp án 1</li>
-                            <li><input type="radio" name="cau2">B. Đáp án 2</li>
-                            <li><input type="radio" name="cau2">C. Đáp án 3</li>
-                            <li><input type="radio" name="cau2">D. Đáp án 4</li>
-                        </ul>
-                    </li>
-                </div>
-                <div class="panel panel-default col m6 question_answers">
-                    <li><label>Đây là 1 câu hỏi ?</label>
-                        <ul>
-                            <li><input type="radio" name="cau2">A. Đáp án 1</li>
-                            <li><input type="radio" name="cau2">B. Đáp án 2</li>
-                            <li><input type="radio" name="cau2">C. Đáp án 3</li>
-                            <li><input type="radio" name="cau2">D. Đáp án 4</li>
+                            <li *ngFor="let ans of q.anwsers"><input type="radio" name="cau1">{{ans.ansId}}. {{ans.ansContent}}</li>
                         </ul>
                     </li>
                 </div>

@@ -46,7 +46,7 @@ router.get('/details/:id', (req, res) => {
 
     var token = req.get('access_token');
 
-    if(token) {
+    //if(token) {
         db.findOne(Collect.unit, {"_id": new ObjectId(id)}, (result) => {
             if(result) {
                 resp.error = 0;
@@ -66,12 +66,12 @@ router.get('/details/:id', (req, res) => {
                 res.end();
             }
         });
-    } else {
-        resp.error = 101;
-        resp.message = "User is not login";
-        resp.data = null;
-        res.send(resp);
-    }
+    //} else {
+    //    resp.error = 101;
+    //    resp.message = "User is not login";
+    //    resp.data = null;
+    //    res.send(resp);
+    //}
 });
 
 router.get('/details/:id/submit', (req, res) => {

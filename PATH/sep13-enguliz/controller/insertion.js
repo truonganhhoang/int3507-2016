@@ -44,6 +44,7 @@ router.get('/unit', (req, res) => {
         Array.from(categories).forEach((x) => {
             if (x.categoryName === 'Listening') {
                 var units = [];
+                
                 units.push(Unit.init('Unit 01: Greetings', 'Cách chào hỏi khi gặp người quen', 'https://data.tienganh123.com/images/avatar/unit1.jpg', 'Nghe audio sau đó chọn đáp án đúng cho câu hỏi sau:', random.int(1000), x._id, Date(), 600000));
                 units.push(Unit.init('Unit 02: People', 'Appearance Description', 'https://data.tienganh123.com/images/avatar/unit2.jpg', '', random.int(1000), x._id, Date(), 600000));
                 units.push(Unit.init('Unit 03: Clothes', 'Formal clothes in business and workplace', 'https://data.tienganh123.com/images/avatar/unit3.jpg', '', random.int(1000), x._id, Date(), 600000));
@@ -54,6 +55,7 @@ router.get('/unit', (req, res) => {
                 units.push(Unit.init('Unit 08: Dates', 'Trong phần này chúng ta sẽ học cách đọc ngày tháng nhé.', 'https://data.tienganh123.com/images/avatar/lntacb_unit8.jpg', '', random.int(1000), x._id, Date(), 600000));
                 units.push(Unit.init('Unit 09: Movies', 'Trong phần này, chúng ta cùng nhau tìm hiểu về các thể loại phim nhé.', 'https://data.tienganh123.com/images/avatar/lntacb_unit9.jpg', '', random.int(1000), x._id, Date(), 600000));
                 units.push(Unit.init('Unit 10: Sports', 'Trong bài này, chúng ta cùng tìm hiểu về các môn thể thao.', 'https://data.tienganh123.com/images/avatar/lntacb_unit10.jpg', '', random.int(1000), x._id, Date(), 600000));
+                
                 db.insertMany(Collect.unit, units, (results) => {
 
                     db.findOne(Collect.unit, {'unitTitle': 'Unit 01: Greetings'}, (result) => {

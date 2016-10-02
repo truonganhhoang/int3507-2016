@@ -14,13 +14,11 @@ import {Observable} from "rxjs/Rx";
 export class DetailComponent implements OnInit {
 
     unit: Unit;
-    title = '';
-    subTitle = '';
-    views = 0;
-    thumbnail = '';
     isTest = false;
     ticks = 0;
     isNotify = false;
+
+    timeLimit = 60;
 
     constructor(
         private route: ActivatedRoute,
@@ -32,10 +30,6 @@ export class DetailComponent implements OnInit {
             .subscribe(
                     body => {
                         this.unit = body;
-                        this.title = this.unit.unitTitle;
-                        this.subTitle = this.unit.unitSubTitle;
-                        this.views = this.unit.unitViews;
-                        this.thumbnail = this.unit.unitThumbnail;
                     },
                     err => {
                         console.log(err);
@@ -47,11 +41,12 @@ export class DetailComponent implements OnInit {
         this.isNotify = false;
         let timer = Observable.timer(0, 999).take(11);
         timer.subscribe(t=> {
-            if(t >= 10) {
+            if(this.ticks <= 1) {
+                //TODO
                 this.isTest = false;
                 this.isNotify = true;
             }
-            this.ticks = t;
+            this.ticks = this.timeLimit - t;
         });
     }
 
