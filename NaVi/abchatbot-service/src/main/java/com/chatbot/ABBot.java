@@ -30,7 +30,7 @@ public class ABBot {
     @Override
     public String toString() {
         try {
-            return new JSONObject().put("botResponse", this.response).toString();
+            return new JSONObject().put("intentClass", "CO").put("botResponse", this.response).toString();
         }
         catch (JSONException e) {
             return null;
