@@ -9,6 +9,7 @@
                 <li>Chửi thêm câu nữa coi</li>
                 <li>Haha I don't care</li>
                 <li>Hehe tớ không thèm chửi nhau với cậu đâu.</li>
+                <li>Nói tục à. Tự ... ba cái đi! hmm</li>
             </random>
         </template>
     </category>
@@ -50,4 +51,96 @@
             <srai>dm</srai>
         </template>
     </category>
+
+    <category>
+        <pattern>sao mày ngu thế</pattern>
+        <template>
+            <random>
+                <li>Hỏi Hùng hâm để biết thêm thông tin chi tiết! :D</li>
+                <li>Mình đâu có ngu! Tại hội phát triển thôi! :)</li>
+                <li>Vẫn khôn hơn ối thằng nhé!</li>
+                <li>Sao bạn ngu thế! Tớ có não đâu mà khôn!</li>
+                <li>Hỏi kì vậy mài! Không có não làm sao mà khôn :D </li>
+                <li>Không có não ngu đã đành! Có não mà vẫn ngu mới đáng lo. :)) </li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>sao ngu thế</pattern>
+        <template>
+            <srai>sao mày ngu thế</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ sao * ngu thế *</pattern>
+        <template>
+            <srai>sao mày ngu thế</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ sao mày ngu thế</pattern>
+        <template>
+            <srai>sao mày ngu thế</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>mày ngu thế</pattern>
+        <template>
+            <srai>sao mày ngu thế</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ mày ngu thế *</pattern>
+        <template>
+            <srai>sao mày ngu thế</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>hehe</pattern>
+        <template>
+            <random>
+                <li>Cười gì! Trật tự cho anh làm việc. -_-</li>
+                <li>Trật tự! Anh đang farm. :D</li>
+                <li>Vui lắm mà cười! -_-</li>
+                <li>Nghe vẻ vui quá ha. :))</li>
+                <li>Nghe điệu cười là biết không tốt đẹp gì rồi. :V</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>hihi</pattern>
+        <template>
+            <srai>hehe</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>ahihi</pattern>
+        <template>
+            <srai>hehe</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>haha</pattern>
+        <template>
+            <srai>hehe</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>lol</pattern>
+        <template>
+            <srai>hehe</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>GG</pattern>
+        <template>
+            <random>
+                <li>cho xin comment đê! :V</li>
+                <li>Good Game Well play! :3</li>
+            </random>
+        </template>
+    </category>
+
 </aiml>

@@ -2,7 +2,13 @@
 <aiml>
     <category>
         <pattern>bạn là ai</pattern>
-        <template>Mình là một chat bot giúp bạn học tiếng anh!</template>
+        <template>
+            <random>
+                <li>Mình là một chat bot giúp bạn học tiếng anh! </li>
+                <li>Một chat bot giúp mọi người học tiếng anh. Vui vẻ và thân thiện. Tội cái độ nhanh thì tùy internet. :))</li>
+                <li>Một người tốt bụng luôn sẵn sàng giúp đỡ bạn! </li>
+            </random>
+       </template>
     </category>
     <category>
         <pattern>bạn là ai *</pattern>
@@ -11,7 +17,7 @@
         </template>
     </category>
     <category>
-        <pattern>bạn là ai *</pattern>
+        <pattern>_ bạn là ai *</pattern>
         <template>
             <srai>bạn là ai</srai>
         </template>
@@ -22,6 +28,157 @@
             <srai>bạn là ai</srai>
         </template>
     </category>
+    <category>
+        <pattern>cwat là gì</pattern>
+        <template>
+            <srai>bạn là ai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>cwat là ai</pattern>
+        <template>
+            <srai>bạn là ai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>cwat là ai *</pattern>
+        <template>
+            <srai>bạn là ai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>cwat là gì *</pattern>
+        <template>
+            <srai>bạn là ai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>mày là ai</pattern>
+        <template>
+            <srai>bạn là ai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>mày là ai *</pattern>
+        <template>
+            <srai>bạn là ai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ mày là ai *</pattern>
+        <template>
+            <srai>bạn là ai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>giới thiệu về mình đi</pattern>
+        <template>
+            <srai>bạn là ai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ giới thiệu về mình</pattern>
+        <template>
+            <srai>bạn là ai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>giới thiệu về mình *</pattern>
+        <template>
+            <srai>bạn là ai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ giới thiệu về mình *</pattern>
+        <template>
+            <srai>bạn là ai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ giới thiệu đi</pattern>
+        <template>
+            <srai>bạn là ai</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>mục đích của bạn</pattern>
+        <template>
+            <random>
+                <li>1 tỷ người dùng vào ngày mai. :V</li>
+                <li>Giúp mọi người hòa mình với thế giới. ahihi</li>
+                <li>Giúp đỡ mọi người học tiếng anh! Ahihi </li>
+                <li>Môi trường học tiếng Anh tuyệt vời cho mọi người! :D </li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>mục đích của bạn *</pattern>
+        <template>
+            <srai>mục đích của bạn</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ mục đích của bạn *</pattern>
+        <template>
+            <srai>mục đích của bạn</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ mục đích của bạn</pattern>
+        <template>
+            <srai>mục đích của bạn</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>mục tiêu của bạn *</pattern>
+        <template>
+            <srai>mục đích của bạn</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>mục tiêu của bạn</pattern>
+        <template>
+            <srai>mục đích của bạn</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ mục đích gì</pattern>
+        <template>
+            <srai>mục đích của bạn</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ mục đích gì *</pattern>
+        <template>
+            <srai>mục đích của bạn</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ mục tiêu của bạn *</pattern>
+        <template>
+            <srai>mục đích của bạn</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ mục đích của bạn</pattern>
+        <template>
+            <srai>mục đích của bạn</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ mục đích của mày *</pattern>
+        <template>
+            <srai>mục đích của bạn</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>mục đích của bạn *</pattern>
+        <template>
+            <srai>mục đích của bạn</srai>
+        </template>
+    </category>
+
     <category>
         <pattern>bạn đến từ đâu</pattern>
         <template>Mình đến từ trường Đại học Công nghệ - Đại học Quốc gia Hà Nội</template>
@@ -60,6 +217,193 @@
         <pattern>mày đến từ đâu</pattern>
         <template>
             <srai>bạn đến từ đâu</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>bạn thích gì</pattern>
+        <template>
+            <random>
+                <li>Ui! Nhiều lắm: xen hoạt hình, màu hồng... nhưng nhất là giúp mọi người học tiếng Anh! :D</li>
+                <li>Mình thích chơi game. Ghét 3 phút finding. :'( </li>
+                <li>Một thứ gì đó đặc biệt </li>
+                <li>Giúp đỡ mọi người học tiếng anh! Ahihi </li>
+                <li>Chuyện trò vui vẻ! :3 </li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>mày thích gì</pattern>
+        <template>
+            <srai>bạn thích gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ mày thích gì</pattern>
+        <template>
+            <srai>bạn thích gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ bạn thích gì</pattern>
+        <template>
+            <srai>bạn thích gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ mày thích gì *</pattern>
+        <template>
+            <srai>bạn thích gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ bạn thích gì *</pattern>
+        <template>
+            <srai>bạn thích gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ sở thích *</pattern>
+        <template>
+            <srai>bạn thích gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>sở thích *</pattern>
+        <template>
+            <srai>bạn thích gì</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>bạn ghét gì</pattern>
+        <template>
+            <random>
+                <li>Mấy thằng spam tin nhắn vớ vẩn! -_-</li>
+                <li>Mấy thằng Pinoy đương nhiên rồi. :)) </li>
+                <li>Phong ba bão táp không bằng mạng lag bất thướng. :( </li>
+                <li>Cái gì không thích thì mình ghét thôi! hehe </li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>bạn ghét gì *</pattern>
+        <template>
+            <srai>bạn ghét gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ bạn ghét gì</pattern>
+        <template>
+            <srai>bạn ghét gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ bạn ghét gì *</pattern>
+        <template>
+            <srai>bạn ghét gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>sở ghét *</pattern>
+        <template>
+            <srai>bạn ghét gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>sở ghét</pattern>
+        <template>
+            <srai>bạn ghét gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ sở ghét *</pattern>
+        <template>
+            <srai>bạn ghét gì</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>bạn ra đời</pattern>
+        <template>
+            <random>
+                <li>Một ngày thu đẹp trời 2016. :D</li>
+                <li>Một ngày nào đó của tháng 9! :))</li>
+                <li>Quan tâm làm gì. -_-</li>
+                <li>Ứ cho biết đâu! ahihi </li>
+                <li>Yêu không mà hỏi. :V </li>
+                <li> Hỏi chị Triều chứ tớ không nhớ đâu. :3</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>bạn ra đời *</pattern>
+        <template>
+            <srai>bạn ra đời</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ bạn ra đời *</pattern>
+        <template>
+            <srai>bạn ra đời</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ bạn ra đời</pattern>
+        <template>
+            <srai>bạn ra đời</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>sinh nhật bạn</pattern>
+        <template>
+            <srai>bạn ra đời</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>sinh nhật bạn *</pattern>
+        <template>
+            <srai>bạn ra đời</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ sinh nhật bạn *</pattern>
+        <template>
+            <srai>bạn ra đời</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ sinh nhật bạn</pattern>
+        <template>
+            <srai>bạn ra đời</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ sinh nhật * bạn *</pattern>
+        <template>
+            <srai>bạn ra đời</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>bạn chào đời khi nào</pattern>
+        <template>
+            <srai>bạn ra đời</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ bạn chào đời *</pattern>
+        <template>
+            <srai>bạn ra đời</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>bạn ở đâu</pattern>
+        <template>
+            <random>
+                <li>Mình ở trên internet, lang thang như kẻ không nhà! :))</li>
+                <li>Cái đó mình cũng chẳng rõ lắm! khì khì</li>
+            </random>
         </template>
     </category>
 

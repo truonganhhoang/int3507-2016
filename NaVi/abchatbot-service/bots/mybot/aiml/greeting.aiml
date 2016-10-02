@@ -112,6 +112,25 @@
     </category>
 
     <category>
+        <pattern>chào cwat</pattern>
+        <template>
+            <srai>xin chào</srai>
+         </template>
+    </category>
+
+    <category>
+        <pattern>_ chào cwat *</pattern>
+        <template>
+            <srai>xin chào</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>chào cwat *</pattern>
+            <srai>xin chào</srai>
+    </category>
+
+    <category>
         <pattern>có gì hot</pattern>
         <template>
             <random>
@@ -150,6 +169,44 @@
         <template>
             <srai>có gì hot</srai>
         </template>
+    </category>
+
+
+
+    <category>
+        <pattern>chào buổi sáng</pattern>
+        <template>
+            <random>
+                <li>Cwat ! Chúc bạn một buổi sáng tốt lành</li>
+                <li>Hãy có một ngày làm việc tràn đầy năng lượng và hiệu quả nhé !</li>
+                <li>Một li cà phê vào buổi sáng sẽ giúp bạn thấy tuyệt vời hơn đó !</li>
+                <li>Chào buổi sáng. Bạn sẽ làm gì vào ngày hôm nay ? </li>
+                <li>Chào buổi sáng. Đừng quên học từ vựng nhé !</li>
+                <li>Hôm nay tâm trạng của bạn thế nào ?</li>
+                <li>Bạn thích thời tiết của ngày hôm nay chứ ?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ chào buổi sáng *</pattern>
+            <srai>chào buổi sáng</srai>
+    </category>
+
+    <category>
+        <pattern>chào buổi sáng *</pattern>
+            <srai>chào buổi sáng</srai>
+    </category>
+
+
+    <category>
+        <pattern>good morning</pattern>
+            <srai>chào buổi sáng</srai>
+    </category>
+
+    <category>
+        <pattern>_ good moring *</pattern>
+            <srai>chào buổi sáng</srai>
     </category>
 
 
