@@ -67,6 +67,6 @@ module.exports = function receivedMessage(event) {
         });
     }
     else if (messageAttachments) {
-        sendFunctions.sendTextMessage(senderID, "Message with attachment received");
+        sendFunctions.sendTextMessage(senderID, "Mình đã nhận được tệp đính kèm :)");
     }
 };
