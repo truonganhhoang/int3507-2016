@@ -1,7 +1,7 @@
 .idea/
 
-target/
+target/*
 
-out/
+out/*
 
-bots/mybot/aimlif/
+bots/mybot/aimlif/*

@@ -5,8 +5,7 @@
         <template>
             <random>
                 <li>Thành viên đội phát triển: Đặng Hải Triều, Nguyễn Minh Trang, Trần Mạnh Tiến, Nguyễn Huy Hùng!</li>
-                <li>Mấy con sen của mình ấy à: Nguyễn Minh Trang, Đặng Hải Triều, Trần Mạnh Tiến, Nguyễn Huy Hùng! :)) Họ phục vụ mình tận tình lắm. </li>
-                <li>Những người phát triển mình ấy àm: Nguyễn Minh Trang, Trần Mạnh Tiến, Đặng Hải Triều, Nguyễn Huy Hùng!</li>
+                <li>Những người phát triển mình ấy à: Nguyễn Minh Trang, Trần Mạnh Tiến, Đặng Hải Triều, Nguyễn Huy Hùng!</li>
             </random>
         </template>
     </category>
@@ -144,7 +143,7 @@
         <pattern>Triều</pattern>
         <template>
             <random>
-                <li>Sinh viên K58CLC chưa thèm yêu ai. (thực tế là gay lọ đó mà. :3)</li>
+                <li>Sinh viên K58CLC chưa thèm yêu ai. :P</li>
                 <li>Hải Triều sinh viên lớp K58 CLC</li>
             </random>
         </template>

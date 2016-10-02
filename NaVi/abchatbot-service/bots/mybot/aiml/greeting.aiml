@@ -78,9 +78,9 @@
         <pattern>hey</pattern>
         <template>
             <random>
-                <li>Uh tớ nghe</li>
-                <li>Ừ sao vậy</li>
-                <li>Hả?</li>
+                <li>Uh tớ nghe :)</li>
+                <li>Ừ sao vậy :P</li>
+                <li>Hả? :D</li>
             </random>
         </template>
     </category>
@@ -106,6 +106,12 @@
 
     <category>
         <pattern>hey *</pattern>
+        <template>
+            <srai>hey</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>ahihi</pattern>
         <template>
             <srai>hey</srai>
         </template>
