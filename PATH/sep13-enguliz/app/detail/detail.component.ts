@@ -4,7 +4,7 @@
 import {Component, OnInit} from "@angular/core";
 import {DetailService} from "./detail.service";
 import {Unit} from "../detail/unit.model";
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Observable} from "rxjs/Rx";
 @Component({
     templateUrl: 'app/detail/detail.component.html',
@@ -13,17 +13,21 @@ import {Observable} from "rxjs/Rx";
 
 export class DetailComponent implements OnInit {
 
-    unit: Unit;
-    isTest = false;
-    ticks = 0;
-    isNotify = false;
+    public  unit: Unit;
+    public  isTest = false;
+    public ticks = 0;
+    public isNotify = false;
 
-    timeLimit = 60;
+    private loggedIn = false;
+    private timeLimit = 60;
 
     constructor(
+        private router:Router,
         private route: ActivatedRoute,
         private service: DetailService
-    ) {}
+    ) {
+        this.loggedIn = !!localStorage.getItem('auth_token');
+    }
 
     loadDetailsData(id) {
         this.service.getDetailsData(id)
@@ -50,11 +54,20 @@ export class DetailComponent implements OnInit {
         });
     }
 
+    isLoggedIn() {
+        return this.loggedIn;
+    }
+
+
     ngOnInit() {
-        this.route.params
-            .map(params => params['id'])
-            .subscribe((id) => {
-                this.loadDetailsData(id);
-            });
+        if(this.isLoggedIn() === false) {
+            return this.router.navigate['/'];
+        } else {
+            this.route.params
+                .map(params => params['id'])
+                .subscribe((id) => {
+                    this.loadDetailsData(id);
+                });
+        }
     }
 }

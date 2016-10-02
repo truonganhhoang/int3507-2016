@@ -16,13 +16,16 @@ var detail_service_1 = require("./detail.service");
 var router_1 = require("@angular/router");
 var Rx_1 = require("rxjs/Rx");
 var DetailComponent = (function () {
-    function DetailComponent(route, service) {
+    function DetailComponent(router, route, service) {
+        this.router = router;
         this.route = route;
         this.service = service;
         this.isTest = false;
         this.ticks = 0;
         this.isNotify = false;
+        this.loggedIn = false;
         this.timeLimit = 60;
+        this.loggedIn = !!localStorage.getItem('auth_token');
     }
     DetailComponent.prototype.loadDetailsData = function (id) {
         var _this = this;
@@ -47,20 +50,28 @@ var DetailComponent = (function () {
             _this.ticks = _this.timeLimit - t;
         });
     };
+    DetailComponent.prototype.isLoggedIn = function () {
+        return this.loggedIn;
+    };
     DetailComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.route.params
-            .map(function (params) { return params['id']; })
-            .subscribe(function (id) {
-            _this.loadDetailsData(id);
-        });
+        if (this.isLoggedIn() === false) {
+            return this.router.navigate['/'];
+        }
+        else {
+            this.route.params
+                .map(function (params) { return params['id']; })
+                .subscribe(function (id) {
+                _this.loadDetailsData(id);
+            });
+        }
     };
     DetailComponent = __decorate([
         core_1.Component({
             templateUrl: 'app/detail/detail.component.html',
             providers: [detail_service_1.DetailService]
         }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute, detail_service_1.DetailService])
+        __metadata('design:paramtypes', [router_1.Router, router_1.ActivatedRoute, detail_service_1.DetailService])
     ], DetailComponent);
     return DetailComponent;
 }());

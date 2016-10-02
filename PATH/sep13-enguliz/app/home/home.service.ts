@@ -31,7 +31,15 @@ export class HomeService {
             .map((res:Response) => res.json().data)
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
 
-    }    
+    }
+
+    private logoutUrl = `${AppSettings.API_ENDPOINT}/user/logout`;
+    logout(token) {
+        let headers = new Headers({ 'access_token': token });
+        return this.http.get(this.logoutUrl, {headers: headers})
+            .map((res:Response) => res.json())
+            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    }
     
 
 }

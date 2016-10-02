@@ -76,4 +76,18 @@ router.get('/profile', (req, res) => {
     }
 });
 
+router.get('/logout', (req, res) => {
+    var token = req.get('access_token');
+    db.remove(Collect.token, {'access_token': token}, (result) => {
+        var resp = {};
+        resp.error = 0;
+        resp.message = "";
+        resp.data = null;
+
+        res.send(resp);
+        res.end();
+    })
+
+});
+
 module.exports = router;

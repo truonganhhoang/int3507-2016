@@ -20,6 +20,7 @@ var HomeService = (function () {
         this.http = http;
         this.homeUrl = appSettings_1.AppSettings.API_ENDPOINT + "/home";
         this.userProfileUrl = appSettings_1.AppSettings.API_ENDPOINT + "/user/profile";
+        this.logoutUrl = appSettings_1.AppSettings.API_ENDPOINT + "/user/logout";
     }
     HomeService.prototype.getHomeData = function () {
         return this.http.get(this.homeUrl)
@@ -30,6 +31,12 @@ var HomeService = (function () {
         var headers = new http_1.Headers({ 'access_token': token });
         return this.http.get(this.userProfileUrl, { headers: headers })
             .map(function (res) { return res.json().data; })
+            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
+    };
+    HomeService.prototype.logout = function (token) {
+        var headers = new http_1.Headers({ 'access_token': token });
+        return this.http.get(this.logoutUrl, { headers: headers })
+            .map(function (res) { return res.json(); })
             .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
     };
     HomeService = __decorate([

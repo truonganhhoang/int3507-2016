@@ -55,6 +55,11 @@ export class HomeComponent implements OnInit {
         return this.loggedIn;
     }
 
+    logout() {
+        this.service.logout(localStorage.getItem('auth_token'));
+        localStorage.removeItem('auth_token');
+    }
+
     ngOnInit() {
         if (this.isLoggedIn()) {
             this.loadUserProfile();

@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b04d9f9a-80bd-4c50-bd67-df94c3caec0e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/detail/anwser.model.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/detail/question.model.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/detail.component.html" afterPath="$PROJECT_DIR$/app/detail/detail.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/detail.component.js" afterPath="$PROJECT_DIR$/app/detail/detail.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/detail.component.js.map" afterPath="$PROJECT_DIR$/app/detail/detail.component.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/detail.component.ts" afterPath="$PROJECT_DIR$/app/detail/detail.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/unit.model.ts" afterPath="$PROJECT_DIR$/app/detail/unit.model.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/index.js" afterPath="$PROJECT_DIR$/controller/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/insertion.js" afterPath="$PROJECT_DIR$/controller/insertion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/physical/Unit.js" afterPath="$PROJECT_DIR$/models/physical/Unit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/home.component.html" afterPath="$PROJECT_DIR$/app/home/home.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/home.component.js" afterPath="$PROJECT_DIR$/app/home/home.component.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/home.component.js.map" afterPath="$PROJECT_DIR$/app/home/home.component.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/home.component.ts" afterPath="$PROJECT_DIR$/app/home/home.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/home.service.js" afterPath="$PROJECT_DIR$/app/home/home.service.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/home.service.js.map" afterPath="$PROJECT_DIR$/app/home/home.service.js.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/home.service.ts" afterPath="$PROJECT_DIR$/app/home/home.service.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/user.js" afterPath="$PROJECT_DIR$/controller/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/mongo1970.js" afterPath="$PROJECT_DIR$/utils/mongo1970.js" />
     </list>
     <ignored path="sep13-enguliz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +36,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="detail.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="detail.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/detail/detail.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+            <state relative-caret-position="431">
+              <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/home/home.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/user.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.service.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/home/home.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="321">
+              <caret line="36" column="10" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mongo1970.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/mongo1970.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="58" column="74" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="category.model.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/home/category.model.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/home/home.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="497">
+              <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -73,14 +135,10 @@
         <option value="$PROJECT_DIR$/models/physical/Question.js" />
         <option value="$PROJECT_DIR$/controller/test.ts" />
         <option value="$PROJECT_DIR$/app/login/login.component.ts" />
-        <option value="$PROJECT_DIR$/controller/user.js" />
         <option value="$PROJECT_DIR$/app/user/UserService.ts" />
         <option value="$PROJECT_DIR$/app/login/user.model.ts" />
         <option value="$PROJECT_DIR$/app/user/user.service.ts" />
-        <option value="$PROJECT_DIR$/app/home/home.service.ts" />
         <option value="$PROJECT_DIR$/server.js" />
-        <option value="$PROJECT_DIR$/app/home/home.component.ts" />
-        <option value="$PROJECT_DIR$/app/home/home.component.html" />
         <option value="$PROJECT_DIR$/controller/index.js" />
         <option value="$PROJECT_DIR$/controller/insertion.js" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -90,6 +148,11 @@
         <option value="$PROJECT_DIR$/app/detail/unit.model.ts" />
         <option value="$PROJECT_DIR$/app/detail/detail.component.html" />
         <option value="$PROJECT_DIR$/app/detail/detail.component.ts" />
+        <option value="$PROJECT_DIR$/app/home/home.component.html" />
+        <option value="$PROJECT_DIR$/utils/mongo1970.js" />
+        <option value="$PROJECT_DIR$/controller/user.js" />
+        <option value="$PROJECT_DIR$/app/home/home.service.ts" />
+        <option value="$PROJECT_DIR$/app/home/home.component.ts" />
       </list>
     </option>
   </component>
@@ -194,7 +257,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="detail" />
+              <option name="myItemId" value="home" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -317,7 +380,7 @@
       <workItem from="1474990351837" duration="1238000" />
       <workItem from="1475070803710" duration="4496000" />
       <workItem from="1475323829522" duration="7423000" />
-      <workItem from="1475400884787" duration="3836000" />
+      <workItem from="1475400884787" duration="4813000" />
     </task>
     <task id="LOCAL-00001" summary="set event click course">
       <created>1474734807551</created>
@@ -347,11 +410,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475331164848</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="push add question from server">
+      <created>1475418755931</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1475418755931</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27758000" />
+    <option name="totallyTimeSpent" value="28735000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -371,7 +441,7 @@
       <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4844098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25317124" sideWeight="0.50664455" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26280624" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26280624" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814237" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -403,7 +473,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="update insertion with question" />
     <MESSAGE value="show login display" />
-    <option name="LAST_COMMIT_MESSAGE" value="show login display" />
+    <MESSAGE value="push add question from server" />
+    <option name="LAST_COMMIT_MESSAGE" value="push add question from server" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -531,13 +602,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/category.model.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/home/unit.model.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -602,14 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils/mongo1970.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/collection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -650,34 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/home.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
-          <folding>
-            <element signature="e#47#88#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/home.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="44" column="26" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="26" />
-          <folding>
-            <element signature="e#47#95#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/user/user.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -685,16 +713,6 @@
           <folding>
             <element signature="e#0#54#0" expanded="false" />
             <element signature="n#!!doc;n#UserService#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/home.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -785,10 +803,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/category.model.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/mongo1970.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="58" column="74" selection-start-line="58" selection-start-column="66" selection-end-line="58" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="86" column="23" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/home.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="36" column="10" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/detail/detail.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+        <state relative-caret-position="431">
+          <caret line="69" column="16" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/home.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="497">
+          <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
           <folding />
         </state>
       </provider>

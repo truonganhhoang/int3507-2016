@@ -41,6 +41,10 @@ var HomeComponent = (function () {
     HomeComponent.prototype.isLoggedIn = function () {
         return this.loggedIn;
     };
+    HomeComponent.prototype.logout = function () {
+        this.service.logout(localStorage.getItem('auth_token'));
+        localStorage.removeItem('auth_token');
+    };
     HomeComponent.prototype.ngOnInit = function () {
         if (this.isLoggedIn()) {
             this.loadUserProfile();
