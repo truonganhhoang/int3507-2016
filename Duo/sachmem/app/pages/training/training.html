@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar primary>
-    <ion-title>Training</ion-title>
+    <ion-title>Learn</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -19,7 +19,7 @@
       </button>
     </ion-item>
 
-    <ion-item>
+    <ion-item *ngIf="pageType == 0">
       <button item-left round outline [disabled]="isBegin()" (click)="previous()">
         <ion-icon name="arrow-back"></ion-icon>
         Previous
@@ -29,7 +29,14 @@
         <ion-icon name="arrow-forward"></ion-icon>
       </button>
       <button item-right round *ngIf="isEnd()" (click)="enterFightingPage()">
-        Fight
+        Play
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-item>
+
+    <ion-item *ngIf="pageType == 1">
+      <button item-right round (click)="back()">
+        Got it!
         <ion-icon name="arrow-forward"></ion-icon>
       </button>
     </ion-item>

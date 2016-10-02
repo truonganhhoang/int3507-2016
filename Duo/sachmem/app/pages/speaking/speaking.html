@@ -1,5 +1,19 @@
-<p style="color:red;">Trang Speaking</p>
-<!-- <p>{{curWord.content}}</p> -->
-<!-- <p>{{words[0].content}}</p> -->
-<p>{{curWord.content}}</p>
-<p>{{curWord.meaning}}</p>
+<div style="font-size: 240%; text-align: center">
+	<ion-icon *ngIf="percent < 15" name="ios-star-outline"></ion-icon>
+  <ion-icon style="color: #387ef5" *ngIf="percent >= 15" name="star"></ion-icon>
+
+  <ion-icon *ngIf="percent < 30" name="ios-star-outline"></ion-icon>
+  <ion-icon style="color: #387ef5" *ngIf="percent >= 30" name="star"></ion-icon>
+  
+  <ion-icon *ngIf="percent < 45" name="ios-star-outline"></ion-icon>
+  <ion-icon style="color: #387ef5" *ngIf="percent >= 45" name="star"></ion-icon>
+  
+  <ion-icon *ngIf="percent < 60" name="ios-star-outline"></ion-icon>
+  <ion-icon style="color: #387ef5" *ngIf="percent >= 60" name="star"></ion-icon>
+  
+  <ion-icon *ngIf="percent < 80" ng-if name="ios-star-outline"></ion-icon>
+  <ion-icon style="color: #387ef5" *ngIf="percent >= 80" name="star"></ion-icon>
+</div>
+<button fab fab-center outline style="margin-top: 30px; color: red; text-align: middle" (click)="record()">
+  <ion-icon name="{{texts}}"></ion-icon>
+</button>

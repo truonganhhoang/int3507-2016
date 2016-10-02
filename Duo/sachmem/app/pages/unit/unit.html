@@ -6,13 +6,13 @@
     <ion-title>Unit</ion-title>
   </ion-navbar>
 
-  <ion-grid style="background:#387ef5">
+  <ion-grid @actionState="actionState" *ngIf="selectedUnit" style="position:fixed;bottom:0px;background:rgba(210, 210, 210, 0.5)">
     <ion-row>
       <ion-col width-50>
-        <button [disabled]="!selectedUnit" (click)="enterTraining()" block light>Training</button>
+        <button [disabled]="!selectedUnit" (click)="enterTraining()" block>Learn</button>
       </ion-col>
       <ion-col width-50>  
-        <button [disabled]="!selectedUnit" (click)="enterFighting()" block light>Fighting</button>
+        <button [disabled]="!selectedUnit" (click)="enterFighting()" block>Play</button>
       </ion-col>
     </ion-row>
   </ion-grid>
@@ -20,6 +20,9 @@
 
 <ion-content padding>
   <ion-list radio-group [(ngModel)]="selectedUnit">
+    <ion-list-header>
+      Choose a unit
+    </ion-list-header>
     <ion-item *ngFor="let item of units">
       <ion-label>{{item.name}}</ion-label>
       <ion-radio value="{{item.id}}"></ion-radio>

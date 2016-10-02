@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Page Two</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <h3>TEXT HERE</h3>
+<button ion-button fab fab-right fab-top outline style="color: red; " (click)="record()">
+  <ion-icon name="ios-square-outline"></ion-icon>
+</button>
+
+ 
+<ion-grid>
+  <ion-row> 
+    <ion-col width-100 style="height:auto; text-align:center">
+      <h3>âsâsâs</h3>
+      <button ion-fab color="danger" (click)="record()">
+        <ion-icon name="{{texts}}"></ion-icon>
+      </button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+  <button ion-button (click)="skip()" block round>Skip</button>
+  </ion-row>
+</ion-grid>
+
+
+
+</ion-content>

@@ -1,5 +1,12 @@
-<p style="color:red;">Trang Listening</p>
-<!-- <p>{{curWord.content}}</p> -->
-<!-- <p>{{words[0].content}}</p> -->
-<p>{{curWord.content}}</p>
-<p>{{curWord.meaning}}</p>
+<ion-grid>
+  <ion-row wrap>
+    <ion-col width-33 *ngFor="let item of answers" style="height:60px">
+      <button block outline (click)="choose(item)" style="white-space:initial;height:100%"
+      @answerState="item.state">
+        <ion-icon name="volume-up"></ion-icon>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<button [disabled]="choosen == undefined" (click)="checkAnswer()" block round>Check</button>
