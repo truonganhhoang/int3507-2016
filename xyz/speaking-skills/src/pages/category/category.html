@@ -21,7 +21,7 @@
 		<img src="{{item.image}}">
 		</ion-item>
 	</ion-list> -->
-	<ion-col style="float:left;" width-33 *ngFor="let item of category" (click)=enterWord(item.id)>
+	<ion-col style="float:left;" width-33 *ngFor="let item of category" (click)=enterWord(item)>
 		<img src="{{item.image}}">
 		<p class="text-center name-category">{{item.name}}</p>
 	</ion-col>

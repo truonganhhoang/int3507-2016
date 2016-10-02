@@ -10,7 +10,6 @@ export class YtbSearchService {
  	getVideos(myQuery){
  		let stringParamsYoutube= "?key="+this.key+"&type=video&q="+myQuery+"&part=id,snippet&maxResults=20";
  		let url = `https://www.googleapis.com/youtube/v3/search`+stringParamsYoutube;
- 		console.log(url);
     return new Promise(resolve => {
       this.http.get(url).subscribe(res => {
         resolve(res.json());

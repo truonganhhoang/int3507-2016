@@ -29,9 +29,9 @@ export class Category {
     console.log('Hello Category Page');
   }
 
-  enterWord(id) {
+  enterWord(item) {
     this.navCtrl.push(Record, {
-      categoryId: id
+      category: item
     });
   }
 

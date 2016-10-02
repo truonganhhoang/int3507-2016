@@ -29,9 +29,9 @@ export var Category = (function () {
     Category.prototype.ionViewDidLoad = function () {
         console.log('Hello Category Page');
     };
-    Category.prototype.enterWord = function (id) {
+    Category.prototype.enterWord = function (item) {
         this.navCtrl.push(Record, {
-            categoryId: id
+            category: item
         });
     };
     Category = __decorate([

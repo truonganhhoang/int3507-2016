@@ -28,7 +28,8 @@ export var Record = (function () {
         this.wordService = wordService;
         this.navParams = navParams;
         this.platform = platform;
-        var categoryId = this.navParams.get('categoryId');
+        var categoryId = this.navParams.get('category').id;
+        this.categoryName = this.navParams.get('category').name;
         this.wordService.getWord(categoryId).then(function (res) {
             _this.words = res;
             _this.recordService.getRecords().then(function (res) {

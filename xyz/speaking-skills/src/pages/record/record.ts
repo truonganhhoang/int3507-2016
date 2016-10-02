@@ -26,6 +26,7 @@ export class Record implements OnInit {
   }
 
   platform: Platform;
+  categoryName: String;
 	words: Object[];
 	records: Object[];
   private _fileRecord: MediaPlugin;
@@ -33,7 +34,8 @@ export class Record implements OnInit {
 
   constructor(private navCtrl: NavController, private recordService: RecordService, private wordService: WordService, platform: Platform, private navParams: NavParams) {
     this.platform = platform;
-    let categoryId = this.navParams.get('categoryId');
+    let categoryId = this.navParams.get('category').id;
+    this.categoryName = this.navParams.get('category').name;
   
   	this.wordService.getWord(categoryId).then(res => {
       this.words = res;

@@ -23,7 +23,6 @@ export var VideoPlayer = (function () {
         this.domSanitizer = domSanitizer;
         this.video = this.navParams.get('video');
         this.url = this.domSanitizer.bypassSecurityTrustResourceUrl('http://www.youtube.com/embed/' + this.video['id']['videoId']);
-        //src="http://www.youtube.com/embed/EY0vwK7a2yg" 
     }
     VideoPlayer.prototype.ngOnInit = function () {
     };

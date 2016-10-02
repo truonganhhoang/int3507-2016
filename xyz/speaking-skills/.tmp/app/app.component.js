@@ -10,8 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
-import { Page1 } from '../pages/page1/page1';
-import { Page2 } from '../pages/page2/page2';
 import { Category } from '../pages/category/category';
 import { Youtube } from '../pages/youtube/youtube';
 export var MyApp = (function () {
@@ -21,8 +19,6 @@ export var MyApp = (function () {
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [
-            { title: 'Page One', component: Page1 },
-            { title: 'Page Two', component: Page2 },
             { title: 'Speaking by category', component: Category },
             { title: 'Speaking with youtube', component: Youtube }
         ];

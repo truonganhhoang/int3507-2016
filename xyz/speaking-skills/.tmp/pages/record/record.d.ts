@@ -9,6 +9,7 @@ export declare class Record implements OnInit {
     private navParams;
     ionViewDidLoad(): void;
     platform: Platform;
+    categoryName: String;
     words: Object[];
     records: Object[];
     private _fileRecord;

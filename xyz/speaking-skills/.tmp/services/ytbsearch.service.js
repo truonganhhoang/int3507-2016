@@ -18,7 +18,6 @@ export var YtbSearchService = (function () {
         var _this = this;
         var stringParamsYoutube = "?key=" + this.key + "&type=video&q=" + myQuery + "&part=id,snippet&maxResults=20";
         var url = "https://www.googleapis.com/youtube/v3/search" + stringParamsYoutube;
-        console.log(url);
         return new Promise(function (resolve) {
             _this.http.get(url).subscribe(function (res) {
                 resolve(res.json());

@@ -6,5 +6,5 @@ export declare class Category {
     category: Object[];
     constructor(navCtrl: NavController, categoryService: CategoryService);
     ionViewDidLoad(): void;
-    enterWord(id: any): void;
+    enterWord(item: any): void;
 }
