@@ -17,7 +17,8 @@ module.exports = function (recipientId, recipientMessageText, event) {
                 recipientMessageTextIsOneOfTheAnswer = false,
                 rightAnswer = 'A. ' + lastMCQuestion.choices[0].text,
                 needSuggestion = false,
-                choiceToSuggest = "";
+                choiceToSuggest = "",
+                choiceToSuggestWithPosition = "";
 
             // If user just type A, B, C as the answer
             // So we do replace A, B, C with the real answer text before go to compare step below
@@ -54,7 +55,9 @@ module.exports = function (recipientId, recipientMessageText, event) {
                 let similarity = JWDistance(recipientMessageText.toLowerCase(), lastMCQuestion.choices[idx].text.toLowerCase());
                 if (similarity >= RATE_TO_SUGGEST) {
                     needSuggestion = true;
+                    let choicePosition = (idx == 0) ? 'A. ' : ((idx == 1) ? 'B. ' : 'C. ');
                     choiceToSuggest = lastMCQuestion.choices[idx].text;
+                    choiceToSuggestWithPosition =  choicePosition + lastMCQuestion.choices[idx].text;
                 }
             }
             if (recipientMessageTextIsOneOfTheAnswer == false && needSuggestion == true) {
@@ -63,7 +66,7 @@ module.exports = function (recipientId, recipientMessageText, event) {
                         id: recipientId
                     },
                     message: {
-                        text: "Có phải bạn muốn chọn đáp án: \"" + choiceToSuggest + "\"",
+                        text: "Có phải bạn muốn chọn đáp án: \"" + choiceToSuggestWithPosition + "\"",
                         quick_replies: [
                             {
                                 "content_type":"text",
