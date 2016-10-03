@@ -1,0 +1,49 @@
+<!--
+  Generated template for the FightingPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Play</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="curWord">
+    <img src="assets/img/advance-card-map-madison.png">
+    <ion-fab right top style="right:20px;top:20px">
+      <button ion-fab color="primary" style="border:#387ef5 1px solid;background:rgba(1,1,1,0);color:#387ef5"
+              [@iconState]="iconState">
+        <i class="material-icons" *ngIf="selectedGame == 'r'">chrome_reader_mode</i>
+        <i class="material-icons" *ngIf="selectedGame == 'l'">hearing</i>
+        <i class="material-icons" *ngIf="selectedGame == 'w'">edit</i>
+        <i class="material-icons" *ngIf="selectedGame == 's'">record_voice_over</i>
+      </button>
+    </ion-fab>
+
+    <ion-card-header>
+      <h1 style="margin-right:20%;white-space:initial;font-weight:bold;font-size:2em;color:#387ef5">
+        {{curWord.meaning}}
+      </h1>
+    </ion-card-header>
+    <ion-card-content style="height:100%">
+      <div *ngIf="selectedGame == 'r'">
+        <reading-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></reading-page>
+      </div>
+      <div *ngIf="selectedGame == 'l'">
+        <listening-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></listening-page>
+      </div>
+      <div *ngIf="selectedGame == 'w'">
+        <writing-page [curWord]="curWord" (onCorrect)="onCorrect($event)"></writing-page>
+      </div>
+      <!-- <div *ngIf="selectedGame == 's'">
+        <speaking-page [curWord]="curWord" (onCorrect)="onCorrect($event)"></speaking-page>
+      </div> -->
+    </ion-card-content>
+  </ion-card>
+   
+  
+  <!-- <button (click)="next()">Next</button> -->
+</ion-content>
