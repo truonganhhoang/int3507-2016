@@ -1,0 +1,31 @@
+doctype html
+html
+	head
+		title Register
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+	body
+		.container
+			.row
+				.col-md-4
+				.col-md-4
+					include ../message.jade
+					.panel.panel-success
+						.panel-heading
+							h3.panel-title Register
+						.panel-body
+							img(src="/images/avatar.jpg" width="100" height="100").img-circle.img-responsive.center-block
+							form.form-signin(role="form", method="post", action="/users/register")
+								label UserName
+								input.form-control#inputUsername(type='text', placeholder='Username', name="username")
+								label Password
+								input.form-control#inputPassword(type='password', placeholder='Password', name="password")
+								br
+								button.btn.btn-lg.btn-success.btn-block(type="submit") Register
+								br
+								h4: a(href='/users/login') Login
+				.col-md-4
+		script(src='/javascripts/jquery.js')
+		script(src='/javascripts/angular.js')
+		script(src='/javascripts/bootstrap.js')
+		script(src='/javascripts/myapp.js')
