@@ -25,6 +25,6 @@ namespace FAQ_Bot.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<FAQ> FAQs { get; set; }
+        public virtual DbSet<window> windows { get; set; }
     }
 }

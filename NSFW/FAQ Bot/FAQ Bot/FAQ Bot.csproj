@@ -144,6 +144,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
+    <Compile Include="FaqDialog.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -162,7 +163,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BotData.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\FAQ.cs">
+    <Compile Include="Models\window.cs">
       <DependentUpon>BotData.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -176,6 +177,7 @@
     <Content Include="Models\BotData.edmx.diagram">
       <DependentUpon>BotData.edmx</DependentUpon>
     </Content>
+    <None Include="Properties\PublishProfiles\FAQBotDemo - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

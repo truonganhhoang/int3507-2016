@@ -1,9 +1,11 @@
 # int3507-2016 Vấn đề hiện đại CNTT - Nhóm NSFW
 ## **Football chatbot**
 ### Mô tả:
-Football Chatbot trả lời các thông tin về bóng đá ví dụ như tra cứu tỷ số, lịch thi đấu, bảng xếp hạng,dự đoán tỷ số,....</br>
-Chatbot sử dụng [Microsoft Bot Framework](https://dev.botframework.com/).</br>
+Faq Chatbot trả lời các câu hỏi thường gặp</br>
+Chatbot sử dụng [Microsoft Bot Framework](https://dev.botframework.com/). </br>
 Chatbot có thể được tích hợp vào các channel như Skype, Slack, Facebook Messenger, Kik, Group Me, ....</br>
+Thêm faq bot vào skype của bạn tại [đây](https://join.skype.com/bot/455b9e86-db27-4a3a-86c8-df9cc15ccc09) </br>
+
 
 ![Bot Framework Diagram](http://docs.botframework.com/en-us/images/faq-overview/botframework_overview_july.png)
 ### Cài đặt Bot Application Templates
