@@ -3,7 +3,7 @@ import { Component, OnInit, NgZone,
 import { NavController, NavParams } from 'ionic-angular';
 
 import { WordService } from '../../providers/word-service';
-import { HelperService } from '../../providers/helper-service'
+import { HelperService } from '../../providers/helper-service';
 
 /*
   Generated class for the Playing page.
@@ -54,7 +54,7 @@ export class Playing implements OnInit {
       // Tạm thời gán cho 'games' 4 giá trị l, s, r, w. 
       // Khi lưu dữ liệu sẽ thay đổi tùy theo.
       for (let i = 0; i < this.words.length; i++) {
-        this.words[i]['games'] = [ 's', 'l', 'r', 'w' ];
+        this.words[i]['games'] = [ 'l', 'r', 'w'];
       }
 
       this.reload();

@@ -30,21 +30,17 @@
     </ion-card-header>
     <ion-card-content style="height:100%">
       <div *ngIf="selectedGame == 'r'">
-      	r
-        <!-- <reading-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></reading-page> -->
+        <reading-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></reading-page>
       </div>
       <div *ngIf="selectedGame == 'l'">
-      	l
-        <!-- <listening-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></listening-page> -->
+        <listening-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></listening-page>
       </div>
       <div *ngIf="selectedGame == 'w'">
-      	w
-        <!-- <writing-page [curWord]="curWord" (onCorrect)="onCorrect($event)"></writing-page> -->
+        <writing-page [curWord]="curWord" (onCorrect)="onCorrect($event)"></writing-page>
       </div>
-      <div *ngIf="selectedGame == 's'">
-        s
-        <!-- <speaking-page [curWord]="curWord" (onCorrect)="onCorrect($event)"></speaking-page> -->
-      </div>
+      <!-- <div *ngIf="selectedGame == 's'">
+        <speaking-page [curWord]="curWord" (onCorrect)="onCorrect($event)"></speaking-page>
+      </div> -->
     </ion-card-content>
   </ion-card>
    

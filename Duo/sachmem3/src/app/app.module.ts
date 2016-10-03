@@ -9,6 +9,10 @@ import { Unit } from '../pages/unit/unit';
 import { Learning } from '../pages/learning/learning'; 
 import { Playing } from '../pages/playing/playing';
 
+import { Listening } from '../components/listening/listening';
+import { Reading } from '../components/reading/reading';
+// import { Speaking } from '../components/speaking/speaking';
+import { Writing } from '../components/writing/writing';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { Playing } from '../pages/playing/playing';
     Book,
     Unit,
     Learning,
-    Playing
+    Playing,
+    Listening,
+    Reading,
+    // Speaking,
+    Writing
   ],
   imports: [
     IonicModule.forRoot(MyApp)
