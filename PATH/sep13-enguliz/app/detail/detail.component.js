@@ -24,6 +24,7 @@ var DetailComponent = (function () {
         this.isNotify = false;
         this.loggedIn = false;
         this.ticks = 999999999999;
+        this.userAns = {};
         this.loggedIn = !!localStorage.getItem('auth_token');
     }
     DetailComponent.prototype.loadDetailsData = function (id) {
@@ -50,6 +51,12 @@ var DetailComponent = (function () {
     };
     DetailComponent.prototype.isLoggedIn = function () {
         return this.loggedIn;
+    };
+    DetailComponent.prototype.submitAns = function () {
+        console.log(JSON.stringify(this.userAns));
+    };
+    DetailComponent.prototype.chooseAns = function (questionId, ansId) {
+        this.userAns[questionId] = ansId;
     };
     DetailComponent.prototype.ngOnInit = function () {
         var _this = this;

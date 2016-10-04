@@ -6,6 +6,7 @@ import {DetailService} from "./detail.service";
 import {Unit} from "../detail/unit.model";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Observable} from "rxjs/Rx";
+import {Anwser} from "./anwser.model";
 @Component({
     templateUrl: 'app/detail/detail.component.html',
     providers: [DetailService]
@@ -20,6 +21,8 @@ export class DetailComponent implements OnInit {
     private loggedIn = false;
     public ticks = 999999999999;
 
+    public userAns: {[key:string]: string;} = {};
+    
     constructor(
         private router:Router,
         private route: ActivatedRoute,
@@ -54,6 +57,14 @@ export class DetailComponent implements OnInit {
 
     isLoggedIn() {
         return this.loggedIn;
+    }
+
+    submitAns() {
+        console.log(JSON.stringify(this.userAns));
+    }
+
+    chooseAns(questionId, ansId) {
+        this.userAns[questionId] = ansId;
     }
 
     ngOnInit() {

@@ -28,7 +28,7 @@
                 <div class="panel panel-default col m6 question_answers" *ngFor="let q of unit.question">
                     <li><label>{{q.question}}</label>
                         <ul>
-                            <li *ngFor="let ans of q.anwsers"><input type="radio" name="cau1">{{ans.ansId}}. {{ans.ansContent}}</li>
+                            <li *ngFor="let ans of q.anwsers"><input type="radio" name="{{q._id}}" (click)="chooseAns(q._id, ans.ansId)"> {{ans.ansId}}. {{ans.ansContent}}</li>
                         </ul>
                     </li>
                 </div>
@@ -36,7 +36,7 @@
         </div>
         <div class="clear-both"></div>
         <div class="btn-submit">
-            <button class="btn btn-info">Submit</button>
+            <button class="btn btn-info" (click)="submitAns()">Submit</button>
         </div>
     </div>
     <div *ngIf="isNotify">
