@@ -1,0 +1,39 @@
+extends layout
+
+block content
+	if (typeof(user) !== 'undefined')
+		p You are logged in as <b>#{user.display_name}</b>
+		a.btn.btn-md.btn-success(href="/users/logout") Logout
+	else
+		a.btn.btn-md.btn-primary(href="/users/login") Login
+		&nbsp;
+		a.btn.btn-md.btn-success(href="/users/register") Register
+	h4 Choose Lesson
+	//- form.form-inline(role="form" method="post" action="/lesson")
+	//- 	.form-group
+	//- 		select.form-control#lesson
+	//- 			<option selected disabled>Choose Skills</option>
+	//- 			<option value="listening"> Listening</option>
+	//- 			<option value="speaking"> Speaking</option>
+	//- 			<option value="reading"> Reading</option>
+	//- 			<option value="writing"> Writing</option>
+	//- 	&nbsp;
+	//- 	.form-group
+	//- 		select.form-control#unit
+	//- 			<option selected disabled>Choose Unit</option>
+	//- 			<option value="1">Unit 1</option>
+	//- 			<option value="2">Unit 2</option>
+	//- 			<option value="3">Unit 3</option>
+	//- 			<option value="4">Unit 4</option>
+	//- 			<option value="5">Unit 5</option>
+	//- 	&nbsp;
+	//- 	a.btn.btn-primary.btn-md(href="/lesson") Go
+	a.btn.btn-md.btn-primary(href="/lesson/listening") Listening
+	&nbsp;
+	a.btn.btn-md.btn-info(href="/lesson/speaking") Speaking
+	&nbsp;
+	a.btn.btn-md.btn-success(href="/lesson/reading") Reading
+	&nbsp;
+	a.btn.btn-md.btn-warning(href="/lesson/writing") Writing
+
+
