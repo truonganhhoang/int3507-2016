@@ -13,13 +13,12 @@ import {Observable} from "rxjs/Rx";
 
 export class DetailComponent implements OnInit {
 
-    public  unit: Unit;
-    public  isTest = false;
-    public ticks = 0;
+    public unit: Unit;
+    public isTest = false;
     public isNotify = false;
 
     private loggedIn = false;
-    private timeLimit = 60;
+    public ticks = 999999999999;
 
     constructor(
         private router:Router,
@@ -32,32 +31,30 @@ export class DetailComponent implements OnInit {
     loadDetailsData(id) {
         this.service.getDetailsData(id)
             .subscribe(
-                    body => {
-                        this.unit = body;
-                    },
-                    err => {
-                        console.log(err);
-                    });
+                body => {
+                    this.unit = body;
+                },
+                err => {
+                    console.log(err);
+                });
     }
 
     startTesting() {
         this.isTest = true;
         this.isNotify = false;
-        let timer = Observable.timer(0, 999).take(11);
+        let timer = Observable.timer(0, 999).take(this.unit.unitTime / 1000);
         timer.subscribe(t=> {
             if(this.ticks <= 1) {
-                //TODO
                 this.isTest = false;
                 this.isNotify = true;
             }
-            this.ticks = this.timeLimit - t;
+            this.ticks = this.unit.unitTime/1000 - t;
         });
     }
 
     isLoggedIn() {
         return this.loggedIn;
     }
-
 
     ngOnInit() {
         if(this.isLoggedIn() === false) {

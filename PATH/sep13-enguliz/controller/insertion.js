@@ -95,6 +95,82 @@ router.get('/unit', (req, res) => {
                         answers.push(answer);
                         questions.push(Question.init("What is the most suitable name for the song?", result._id, answers));
 
+                        var answers = [];
+                        var answer = {};
+                        answer.ansId = "A";
+                        answer.ansContent = "A hello song";
+                        answers.push(answer);
+                        answer = {};
+                        answer.ansId = "B";
+                        answer.ansContent = "A goodbye song";
+                        answers.push(answer);
+                        answer = {};
+                        answer.ansId = "C";
+                        answer.ansContent = "A greetings song";
+                        answers.push(answer);
+                        answer = {};
+                        answer.ansId = "D";
+                        answer.ansContent = "A good morning song";
+                        answers.push(answer);
+                        questions.push(Question.init("What is the most suitable name for the song?", result._id, answers));
+
+                        var answers = [];
+                        var answer = {};
+                        answer.ansId = "A";
+                        answer.ansContent = "A hello song";
+                        answers.push(answer);
+                        answer = {};
+                        answer.ansId = "B";
+                        answer.ansContent = "A goodbye song";
+                        answers.push(answer);
+                        answer = {};
+                        answer.ansId = "C";
+                        answer.ansContent = "A greetings song";
+                        answers.push(answer);
+                        answer = {};
+                        answer.ansId = "D";
+                        answer.ansContent = "A good morning song";
+                        answers.push(answer);
+                        questions.push(Question.init("What is the most suitable name for the song?", result._id, answers));
+
+                        var answers = [];
+                        var answer = {};
+                        answer.ansId = "A";
+                        answer.ansContent = "A hello song";
+                        answers.push(answer);
+                        answer = {};
+                        answer.ansId = "B";
+                        answer.ansContent = "A goodbye song";
+                        answers.push(answer);
+                        answer = {};
+                        answer.ansId = "C";
+                        answer.ansContent = "A greetings song";
+                        answers.push(answer);
+                        answer = {};
+                        answer.ansId = "D";
+                        answer.ansContent = "A good morning song";
+                        answers.push(answer);
+                        questions.push(Question.init("What is the most suitable name for the song?", result._id, answers));
+
+                        var answers = [];
+                        var answer = {};
+                        answer.ansId = "A";
+                        answer.ansContent = "A hello song";
+                        answers.push(answer);
+                        answer = {};
+                        answer.ansId = "B";
+                        answer.ansContent = "A goodbye song";
+                        answers.push(answer);
+                        answer = {};
+                        answer.ansId = "C";
+                        answer.ansContent = "A greetings song";
+                        answers.push(answer);
+                        answer = {};
+                        answer.ansId = "D";
+                        answer.ansContent = "A good morning song";
+                        answers.push(answer);
+                        questions.push(Question.init("What is the most suitable name for the song?", result._id, answers));
+
                         db.insertMany(Collect.question, questions, (res) => {});
 
                     });
@@ -113,9 +189,15 @@ router.get('/unit', (req, res) => {
                 units.push(Unit.init('Salt coffee – Last Part', 'After 40 years, he passed away, left her a letter which said: “My dearest, please...', 'https://noidung.tienganh123.com/file/baihoc/reading/beginner/bai22/bai22.jpg', 'After 40 years, he passed away, and left her a letter which said: “My dearest, please forgive me, forgive my life\'s lie. This was the only lie I said to you - the salty coffee. Remember the first time we dated?I was so nervous at that time, actually I wanted some sugar, but I said salt, it was hard for me to change so I just went ahead. I never thought that would be the start of my biggest lie. I tried to tell you the truth many times in my life, but I was too afraid to, as I had promised never to lie to you. Now I’m dying, and afraid of nothing so I will tell you the truth: I don’t like salty coffee, what a strange bad taste!But I have had salty coffee for my whole life.Since I have known you, I have never felt sorry for anything I have done for you. Having you with me is the biggest happiness of my life.If I could live again, I would want to know you and have you for my whole life, even if I had to drink the salty coffee again.”Her tears made the letter totally wet. Some day, someone asked her: "How does salty coffee taste?" "It’s sweet," she replied. ', random.int(1000), x._id, Date(), 600000));
                 db.insertMany(Collect.unit, units, (result) => { });
             } else if (x.categoryName === 'Writing') {
-
+                var units = [];
+                units.push(Unit.init('Yoda - the cat with four ears', 'In Chicago, Illinois, couple Valerie and Ted Rock took the cat in two years ago after...', 'https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg', 'In Chicago, Illinois, couple Valerie and Ted Rock took the cat in two years ago after they visited a local bar, where a group of drinkers were handing the animal around and making fun of him. Since being adopted by the Rocks and after getting his picture posted on the Internet, the two-year-old cat immediately became famous. The Rocks have received calls from Good Morning America, Fox News and The Tyra Banks Show. His pictures are shown in many magazines. People are surprised at his extra pair of ears. Despite his strange appearance, Yoda - named after the pointy-eared Star Wars character - is a perfectly normal and attractive cat. His extra ears are thought to be the result of a genetic mutation. He likes being taken for a walk with his owners. But Yoda\'s owners are keeping a close watch on their much-loved pet.', random.int(1000), x._id, Date(), 600000));
+                units.push(Unit.init('Salt coffee – Last Part', 'After 40 years, he passed away, left her a letter which said: “My dearest, please...', 'https://noidung.tienganh123.com/file/baihoc/reading/beginner/bai22/bai22.jpg', 'After 40 years, he passed away, and left her a letter which said: “My dearest, please forgive me, forgive my life\'s lie. This was the only lie I said to you - the salty coffee. Remember the first time we dated?I was so nervous at that time, actually I wanted some sugar, but I said salt, it was hard for me to change so I just went ahead. I never thought that would be the start of my biggest lie. I tried to tell you the truth many times in my life, but I was too afraid to, as I had promised never to lie to you. Now I’m dying, and afraid of nothing so I will tell you the truth: I don’t like salty coffee, what a strange bad taste!But I have had salty coffee for my whole life.Since I have known you, I have never felt sorry for anything I have done for you. Having you with me is the biggest happiness of my life.If I could live again, I would want to know you and have you for my whole life, even if I had to drink the salty coffee again.”Her tears made the letter totally wet. Some day, someone asked her: "How does salty coffee taste?" "It’s sweet," she replied. ', random.int(1000), x._id, Date(), 600000));
+                db.insertMany(Collect.unit, units, (result) => { });
             } else if (x.categoryName === 'Grammar') {
-
+                var units = [];
+                units.push(Unit.init('Yoda - the cat with four ears', 'In Chicago, Illinois, couple Valerie and Ted Rock took the cat in two years ago after...', 'https://i.ytimg.com/vi/tntOCGkgt98/maxresdefault.jpg', 'In Chicago, Illinois, couple Valerie and Ted Rock took the cat in two years ago after they visited a local bar, where a group of drinkers were handing the animal around and making fun of him. Since being adopted by the Rocks and after getting his picture posted on the Internet, the two-year-old cat immediately became famous. The Rocks have received calls from Good Morning America, Fox News and The Tyra Banks Show. His pictures are shown in many magazines. People are surprised at his extra pair of ears. Despite his strange appearance, Yoda - named after the pointy-eared Star Wars character - is a perfectly normal and attractive cat. His extra ears are thought to be the result of a genetic mutation. He likes being taken for a walk with his owners. But Yoda\'s owners are keeping a close watch on their much-loved pet.', random.int(1000), x._id, Date(), 600000));
+                units.push(Unit.init('Salt coffee – Last Part', 'After 40 years, he passed away, left her a letter which said: “My dearest, please...', 'https://noidung.tienganh123.com/file/baihoc/reading/beginner/bai22/bai22.jpg', 'After 40 years, he passed away, and left her a letter which said: “My dearest, please forgive me, forgive my life\'s lie. This was the only lie I said to you - the salty coffee. Remember the first time we dated?I was so nervous at that time, actually I wanted some sugar, but I said salt, it was hard for me to change so I just went ahead. I never thought that would be the start of my biggest lie. I tried to tell you the truth many times in my life, but I was too afraid to, as I had promised never to lie to you. Now I’m dying, and afraid of nothing so I will tell you the truth: I don’t like salty coffee, what a strange bad taste!But I have had salty coffee for my whole life.Since I have known you, I have never felt sorry for anything I have done for you. Having you with me is the biggest happiness of my life.If I could live again, I would want to know you and have you for my whole life, even if I had to drink the salty coffee again.”Her tears made the letter totally wet. Some day, someone asked her: "How does salty coffee taste?" "It’s sweet," she replied. ', random.int(1000), x._id, Date(), 600000));
+                db.insertMany(Collect.unit, units, (result) => { });
             }
         });
     });

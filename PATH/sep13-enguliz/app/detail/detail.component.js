@@ -21,10 +21,9 @@ var DetailComponent = (function () {
         this.route = route;
         this.service = service;
         this.isTest = false;
-        this.ticks = 0;
         this.isNotify = false;
         this.loggedIn = false;
-        this.timeLimit = 60;
+        this.ticks = 999999999999;
         this.loggedIn = !!localStorage.getItem('auth_token');
     }
     DetailComponent.prototype.loadDetailsData = function (id) {
@@ -40,14 +39,13 @@ var DetailComponent = (function () {
         var _this = this;
         this.isTest = true;
         this.isNotify = false;
-        var timer = Rx_1.Observable.timer(0, 999).take(11);
+        var timer = Rx_1.Observable.timer(0, 999).take(this.unit.unitTime / 1000);
         timer.subscribe(function (t) {
             if (_this.ticks <= 1) {
-                //TODO
                 _this.isTest = false;
                 _this.isNotify = true;
             }
-            _this.ticks = _this.timeLimit - t;
+            _this.ticks = _this.unit.unitTime / 1000 - t;
         });
     };
     DetailComponent.prototype.isLoggedIn = function () {
