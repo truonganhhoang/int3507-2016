@@ -1,0 +1,85 @@
+doctype html
+html
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/bootstrap.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		nav.navbar.navbar-default.navbar-fixed-top(role='navigation')
+			.container-fluid
+				.navbar-header
+					a.navbar-toggle.collapsed(type="button", href="#", data-toggle="collapse", data-target="#collapse-1", aria-expanded="false")
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href="/") Home
+				.collapse.navbar-collapse#collapse-1
+					ul.nav.navbar-nav
+						li: a(href="/") Helps
+						li: a(href="/") About Us
+						li.dropdown
+							a(href="#", data-toggle='dropdown').dropdown-toggle Dropdown
+								b.caret
+							ul.dropdown-menu
+								li: a(href="/userlist") User List
+								li: a(href="/manageraccount") Manager Account
+					//- form.navbar-form.navbar-left
+					//- 	.form-group
+					//- 		input.form-control(type="text", placeholder="Search")
+					//- 	&nbsp;
+					//- 	button.btn.btn-default(type="submit") Search
+					ul.nav.navbar-right.navbar-nav
+						li.dropdown
+							if (typeof(user) !== 'undefined')
+								a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-haspopup="true", aria-expanded="false")= user.display_name
+									b.caret
+								ul.dropdown-menu
+									li: a(href="/users/logout") Logout
+									li: a(href="/changeinfo/#{user._id}") Change Info
+									li: a(href="/posts/user/#{user._id}") My Post
+							else
+								a.dropdown-toggle(href="#", data-toggle="dropdown", role="button", aria-haspopup="true", aria-expanded="false") Guest
+									b.caret
+								ul.dropdown-menu
+									li: a(href="/users/login") Login
+		.container-fluid
+			.row
+				.col-sm-3.col-md-2.sidebar
+					ul.nav.nav-sidebar
+						if (currentSkill == 'undefined')
+							li.active: a(href="/") Home
+							li: a(href="/lesson/listening") Listening Skills
+							li: a(href="/lesson/speaking") Speaking Skills
+							li: a(href="/lesson/reading") Reading Skills
+							li: a(href="/lesson/writing") Writing Skills
+						else if (currentSkill == 'listening')
+							li: a(href="/") Home
+							li.active: a(href="/lesson/listening") Listening Skills
+							li: a(href="/lesson/speaking") Speaking Skills
+							li: a(href="/lesson/reading") Reading Skills
+							li: a(href="/lesson/writing") Writing Skills
+						else if (currentSkill == 'speaking')
+							li: a(href="/") Home
+							li: a(href="/lesson/listening") Listening Skills
+							li.active: a(href="/lesson/speaking") Speaking Skills
+							li: a(href="/lesson/reading") Reading Skills
+							li: a(href="/lesson/writing") Writing Skills
+						else if (currentSkill == 'reading')
+							li: a(href="/") Home
+							li: a(href="/lesson/listening") Listening Skills
+							li: a(href="/lesson/speaking") Speaking Skills
+							li.active: a(href="/lesson/reading") Reading Skills
+							li: a(href="/lesson/writing") Writing Skills
+						else
+							li: a(href="/") Home
+							li: a(href="/lesson/listening") Listening Skills
+							li: a(href="/lesson/speaking") Speaking Skills
+							li: a(href="/lesson/reading") Reading Skills
+							li.active: a(href="/lesson/writing") Writing Skills
+				.col-sm-9.col-sm-offset-3.col-md-10.col-md-offset-2.main
+					block content
+		script(src='/javascripts/angular.js')
+		script(src='/javascripts/jquery.js')
+		script(src='/javascripts/bootstrap.js')
+		script(src='/javascripts/myapp.js')
