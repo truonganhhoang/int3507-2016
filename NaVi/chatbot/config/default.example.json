@@ -3,6 +3,6 @@
   "pageAccessToken": "example",
   "validationToken": "example",
   "serverURL": "https://example.ngrok.io",
-  "intentClassificationServiceURL": "http://localhost:8080/intent-classification/classify",
+  "intentClassificationServiceURL": "http://localhost:8080/IntentClassification/api/ic/classify",
   "mongodbURL": "mongodb://localhost:27017/chatbot"
 }
