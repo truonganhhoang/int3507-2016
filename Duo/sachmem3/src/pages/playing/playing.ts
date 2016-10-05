@@ -17,8 +17,13 @@ import { HelperService } from '../../providers/helper-service';
   providers: [ WordService, HelperService ],
   animations: [
     trigger('iconState', [
+      state('none', style({
+        border: '#387ef5 1px solid',
+        background: 'rgba(1,1,1,0)',
+        color: '#387ef5'
+      })),
       state('right',   style({
-        backgroundColor: '#387ef5',
+        background: '#387ef5',
         borderColor: '#387ef5',
         color: 'white',
       })),
@@ -37,7 +42,7 @@ export class Playing implements OnInit {
   selectedGame: String;
   //mang cac tu khong thay doi de truyen cho cac game
   allWords: Object[];
-  iconState: string;
+  iconState: string = 'none';
 
   constructor(private navCtrl: NavController, private navParams: NavParams, private wordService: WordService, private helperService: HelperService, private zone: NgZone) {
     
@@ -54,7 +59,7 @@ export class Playing implements OnInit {
       // Tạm thời gán cho 'games' 4 giá trị l, s, r, w. 
       // Khi lưu dữ liệu sẽ thay đổi tùy theo.
       for (let i = 0; i < this.words.length; i++) {
-        this.words[i]['games'] = [ 'l', 'r', 'w'];
+        this.words[i]['games'] = [ 'r', 'l', 'w' ];
       }
 
       this.reload();
