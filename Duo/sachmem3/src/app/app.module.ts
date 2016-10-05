@@ -27,7 +27,6 @@ import { Writing } from '../components/writing/writing';
     Playing,
     Listening,
     Reading,
-    // Speaking,
     Writing
   ],
   imports: [

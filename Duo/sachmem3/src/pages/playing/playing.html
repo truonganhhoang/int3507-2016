@@ -14,12 +14,12 @@
   <ion-card *ngIf="curWord">
     <img src="assets/img/advance-card-map-madison.png">
     <ion-fab right top style="right:20px;top:20px">
-      <button ion-fab color="primary" style="border:#387ef5 1px solid;background:rgba(1,1,1,0);color:#387ef5"
+      <button ion-fab color="primary"
               [@iconState]="iconState">
         <i class="material-icons" *ngIf="selectedGame == 'r'">chrome_reader_mode</i>
         <i class="material-icons" *ngIf="selectedGame == 'l'">hearing</i>
         <i class="material-icons" *ngIf="selectedGame == 'w'">edit</i>
-        <i class="material-icons" *ngIf="selectedGame == 's'">record_voice_over</i>
+        <!-- <i class="material-icons" *ngIf="selectedGame == 's'">record_voice_over</i> -->
       </button>
     </ion-fab>
 
@@ -44,7 +44,6 @@
       </div> -->
     </ion-card-content>
   </ion-card>
-   
-  
+
   <!-- <button (click)="next()">Next</button> -->
 </ion-content>
