@@ -28,6 +28,7 @@
         {{curWord.meaning}}
       </h1>
     </ion-card-header>
+
     <ion-card-content style="height:100%">
       <div *ngIf="selectedGame == 'r'">
         <reading-page [curWord]="curWord" [allWords]="allWords" (onCorrect)="onCorrect($event)"></reading-page>

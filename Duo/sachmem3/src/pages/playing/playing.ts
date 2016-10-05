@@ -5,6 +5,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import { WordService } from '../../providers/word-service';
 import { HelperService } from '../../providers/helper-service';
 
+import { NativeService } from '../../providers/native-service';
+
 /*
   Generated class for the Playing page.
 
@@ -14,7 +16,7 @@ import { HelperService } from '../../providers/helper-service';
 @Component({
   selector: 'page-playing',
   templateUrl: 'playing.html',
-  providers: [ WordService, HelperService ],
+  providers: [ WordService, HelperService, NativeService ],
   animations: [
     trigger('iconState', [
       state('right',   style({
@@ -39,7 +41,8 @@ export class Playing implements OnInit {
   allWords: Object[];
   iconState: string;
 
-  constructor(private navCtrl: NavController, private navParams: NavParams, private wordService: WordService, private helperService: HelperService, private zone: NgZone) {
+  constructor(private navCtrl: NavController, private navParams: NavParams, private wordService: WordService,
+               private helperService: HelperService, private zone: NgZone, private nativeService: NativeService) {
     
   }
 
@@ -54,7 +57,8 @@ export class Playing implements OnInit {
       // Tạm thời gán cho 'games' 4 giá trị l, s, r, w. 
       // Khi lưu dữ liệu sẽ thay đổi tùy theo.
       for (let i = 0; i < this.words.length; i++) {
-        this.words[i]['games'] = [ 'l', 'r', 'w'];
+
+        this.words[i]['games'] = [ 'l', 'r', 'w' ];
       }
 
       this.reload();
@@ -92,7 +96,11 @@ export class Playing implements OnInit {
 
     for (let i = 0; i < this.words.length; i++) {
       if (this.words[i]['games'].length == 0) {
+        //Native Storage save learned word
+        this.nativeService.updateLearned(this.words[i]['id']);
+
         this.words.splice(i, 1);
+
       }
     }
 
@@ -101,6 +109,19 @@ export class Playing implements OnInit {
     } else {
       this.reload();    
     }
+  }
+
+  test() {
+    // this.nativeService.setStorage('test', {key1: '123', key2: '456'});
+
+    this.nativeService.getStorage('test3').then(
+      data => {
+        console.log(data)
+      },
+      error => {
+        console.log(error);
+      }
+    );
   }
   
   onCorrect(correct: boolean): void {
