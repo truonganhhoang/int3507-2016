@@ -110,19 +110,6 @@ export class Playing implements OnInit {
       this.reload();    
     }
   }
-
-  test() {
-    // this.nativeService.setStorage('test', {key1: '123', key2: '456'});
-
-    this.nativeService.getStorage('test3').then(
-      data => {
-        console.log(data)
-      },
-      error => {
-        console.log(error);
-      }
-    );
-  }
   
   onCorrect(correct: boolean): void {
     if (correct) {

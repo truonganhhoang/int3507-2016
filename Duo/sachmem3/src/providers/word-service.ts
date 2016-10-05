@@ -4,7 +4,6 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class WordService { 
-  words: Object[] = [];
 
   constructor(private http: Http) { }
 
@@ -12,34 +11,37 @@ export class WordService {
     return new Promise(resolve => {
       this.http.get('assets/data/words.json').subscribe(res => {
         let temp = res.json();
+        let words: Object[] = [];
 
         for(let i = 0; i < temp.length; i++) {
           if(temp[i].unit_id == unitId) {
-            this.words.push(temp[i]);
+            words.push(temp[i]);
           }
         }
 
         // console.log(this.units);
   
-        resolve(this.words);
+        resolve(words);
 
         // resolve(res.json());
       });
     }) 
   }
 
-   getWord(wordId: number): Promise<Object[]>{
+  getWordsInArray(bookId: number, array: number[]): Promise<Object[]> {
     return new Promise(resolve => {
-      this.http.get('data/words.json').subscribe(res => {
+      this.http.get('assets/data/words.json').subscribe(res => {
         let temp = res.json();
+        let words: Object[] = [];
 
-        for(let i = 0; i < temp.length; i++) {
-          if(temp[i].id == wordId) {
-            this.words.push(temp[i]);
+        //
+        for (let i = 0; i < temp.length; i++) {
+          if (temp[i].book_id == bookId && array.indexOf(parseInt(temp[i].id)) >= 0) {
+            words.push(temp[i]);
           }
         }
 
-        resolve(this.words);
+        resolve(words);
       });
     }) 
   }

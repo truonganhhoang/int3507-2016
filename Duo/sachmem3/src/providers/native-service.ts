@@ -47,10 +47,6 @@ export class NativeService {
     )
   }
 
-  getLearned() {
-
-  }
-
   getStorage(key) {
     return NativeStorage.getItem(key);
   }
