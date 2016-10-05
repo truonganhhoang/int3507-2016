@@ -19,6 +19,8 @@
 </ion-header>
 
 <ion-content padding>
+  <button ion-button (click)="enterReview()" block>Review</button>
+
   <ion-list radio-group [(ngModel)]="selectedUnit">
     <ion-list-header>
       Choose a unit

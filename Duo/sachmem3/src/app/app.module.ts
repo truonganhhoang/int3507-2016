@@ -8,6 +8,7 @@ import { Book } from '../pages/book/book';
 import { Unit } from '../pages/unit/unit';
 import { Learning } from '../pages/learning/learning'; 
 import { Playing } from '../pages/playing/playing';
+import { Review } from '../pages/review/review';
 
 import { Listening } from '../components/listening/listening';
 import { Reading } from '../components/reading/reading';
@@ -22,10 +23,10 @@ import { Writing } from '../components/writing/writing';
     Book,
     Unit,
     Learning,
+    Review,
     Playing,
     Listening,
     Reading,
-    // Speaking,
     Writing
   ],
   imports: [
@@ -39,7 +40,8 @@ import { Writing } from '../components/writing/writing';
     Book,
     Unit,
     Learning,
-    Playing
+    Playing,
+    Review
   ],
   providers: []
 })

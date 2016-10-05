@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { TextToSpeech, NativeAudio, Vibration } from 'ionic-native';
+import { TextToSpeech, NativeAudio, Vibration, NativeStorage } from 'ionic-native';
 
 @Injectable()
 export class NativeService { 
@@ -25,5 +25,29 @@ export class NativeService {
 
   vibrate(): void {
     Vibration.vibrate(200);
+  }
+
+  updateLearned(value) {
+    value = parseInt(value);
+
+    NativeStorage.getItem('learned').then(
+      data => {
+        let temp = [];
+        temp = data;
+
+        if (temp.indexOf(value) < 0) {
+          temp.push(value);
+        }
+        
+        NativeStorage.setItem('learned', temp);               
+      },
+      err => {
+        NativeStorage.setItem('learned', [ value ]);
+      }
+    )
+  }
+
+  getStorage(key) {
+    return NativeStorage.getItem(key);
   }
 }
