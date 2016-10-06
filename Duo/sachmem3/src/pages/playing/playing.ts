@@ -21,7 +21,7 @@ import { NativeService } from '../../providers/native-service';
     trigger('iconState', [
       state('none', style({
         border: '#387ef5 1px solid',
-        background: 'rgba(1,1,1,0)',
+        background: 'white',
         color: '#387ef5'
       })),
       state('right',   style({

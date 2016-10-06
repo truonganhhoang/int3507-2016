@@ -1,3 +1,38 @@
 page-playing {
+  .meaning {
+    margin-right: 20% !important;
+    white-space: initial !important;
+    font-weight: bold !important;
+    font-size: 2em !important;
+  }
+}
+
+.card-background-page {
+  img {
+	  background: pink;
+  }
+
+  ion-card {
+    position: relative;
+    // text-align: center;
+  }
+
+  .card-title {
+    padding: 0px 10px;
+    position: absolute;
+    top: 85px;
+    font-size: 2.5em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
 
 }

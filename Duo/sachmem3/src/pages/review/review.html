@@ -14,13 +14,20 @@
 
 <ion-content padding>
   <ion-card *ngIf="!learnedWords">
+    <img src="assets/img/review.png"/>
     <ion-card-content>
-      <p>You haven't learned any word.</p>
+      <ion-card-title style="color:#4db593">
+        You haven't learned any word yet!
+      </ion-card-title>
+      <p>
+        You can start learning new words first, or playing practical games
+        to add your own learned words to this list.
+      </p>
     </ion-card-content>
   </ion-card>
 
   <ion-list *ngIf="learnedWords">
-    <ion-item *ngFor="let item of learnedWords" (click)="enterLearning(item)>
+    <ion-item *ngFor="let item of learnedWords" (click)="enterLearning(item)">
       <h1 color="primary"><b>{{item.content}}</b></h1>
       <p>{{item.meaning}}</p>
       <button ion-button clear icon-only item-right (click)="speak(item)">

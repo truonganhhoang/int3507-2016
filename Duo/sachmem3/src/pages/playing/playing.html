@@ -10,10 +10,13 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="card-background-page">
   <ion-card *ngIf="curWord">
-    <img src="assets/img/advance-card-map-madison.png">
-    <ion-fab right top style="right:20px;top:20px">
+    <img src="assets/img/blank.png"/>
+    <div class="card-title"></div>
+
+    <!-- <p color="primary">{{curWord.meaning}}</p> -->
+    <ion-fab right top>
       <button ion-fab color="primary"
               [@iconState]="iconState">
         <i class="material-icons" *ngIf="selectedGame == 'r'">chrome_reader_mode</i>
@@ -23,11 +26,9 @@
       </button>
     </ion-fab>
 
-    <ion-card-header>
-      <h1 style="margin-right:20%;white-space:initial;font-weight:bold;font-size:2em;color:#387ef5">
-        {{curWord.meaning}}
-      </h1>
-    </ion-card-header>
+    <ion-item>
+      <h1 class="meaning" color="primary">{{curWord.meaning}}</h1>
+    </ion-item>
 
     <ion-card-content style="height:100%">
       <div *ngIf="selectedGame == 'r'">
@@ -44,6 +45,4 @@
       </div> -->
     </ion-card-content>
   </ion-card>
-
-  <!-- <button (click)="next()">Next</button> -->
 </ion-content>
