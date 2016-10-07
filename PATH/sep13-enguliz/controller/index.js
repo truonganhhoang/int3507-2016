@@ -52,6 +52,7 @@ router.get('/details/:id', (req, res) => {
                 resp.error = 0;
                 resp.message = "";
                 resp.data = result;
+
                 db.fetchRows(Collect.question, {'unitIdRef': result._id}, (question) => {
                     console.log(question);
                     resp.data.question = question;

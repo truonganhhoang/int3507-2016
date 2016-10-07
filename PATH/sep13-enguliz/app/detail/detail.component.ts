@@ -14,20 +14,19 @@ import {Anwser} from "./anwser.model";
 
 export class DetailComponent implements OnInit {
 
-    public unit: Unit;
+    public unit:Unit;
     public isTest = false;
     public isNotify = false;
 
     private loggedIn = false;
     public ticks = 999999999999;
 
-    public userAns: {[key:string]: string;} = {};
-    
-    constructor(
-        private router:Router,
-        private route: ActivatedRoute,
-        private service: DetailService
-    ) {
+    public userAns:{[key:string]:string;} = {};
+    public timeCoutdown: string;
+
+    constructor(private router:Router,
+                private route:ActivatedRoute,
+                private service:DetailService) {
         this.loggedIn = !!localStorage.getItem('auth_token');
     }
 
@@ -47,11 +46,12 @@ export class DetailComponent implements OnInit {
         this.isNotify = false;
         let timer = Observable.timer(0, 999).take(this.unit.unitTime / 1000);
         timer.subscribe(t=> {
-            if(this.ticks <= 1) {
+            if (this.ticks <= 1) {
                 this.isTest = false;
                 this.isNotify = true;
             }
-            this.ticks = this.unit.unitTime/1000 - t;
+            this.ticks = this.unit.unitTime / 1000 - t;
+            this.timeCoutdown = this.convertTime(this.ticks);
         });
     }
 
@@ -60,6 +60,8 @@ export class DetailComponent implements OnInit {
     }
 
     submitAns() {
+        this.isTest = false;
+        this.isNotify = true;
         console.log(JSON.stringify(this.userAns));
     }
 
@@ -67,15 +69,25 @@ export class DetailComponent implements OnInit {
         this.userAns[questionId] = ansId;
     }
 
-    ngOnInit() {
-        if(this.isLoggedIn() === false) {
-            return this.router.navigate['/'];
+    convertTime(ticks) {
+        var minute = 0;
+        var second = 0;
+        if(ticks >= 60 && ticks < 3600) {
+            minute =  Math.floor(ticks/60);
+            second = ticks % 60;
+            return minute + " phút " + second + " giây";
         } else {
-            this.route.params
-                .map(params => params['id'])
-                .subscribe((id) => {
-                    this.loadDetailsData(id);
-                });
+            return ticks + " giây";
         }
+        
+
+    }
+
+    ngOnInit() {
+        this.route.params
+            .map(params => params['id'])
+            .subscribe((id) => {
+                this.loadDetailsData(id);
+            });
     }
 }

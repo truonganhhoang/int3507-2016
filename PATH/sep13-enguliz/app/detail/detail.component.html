@@ -6,7 +6,7 @@
         <span>{{unit.unitThreads}}</span>
         <p>Time: {{unit.unitTime}}</p>
 
-        <audio src="../../public/demo.mp3" controls="controls">
+        <audio src="../../public/P1_17_01.mp3" controls="controls" *ngIf="unit.unitType == 'Listening'">
         </audio><br>
 
         <button class="btn btn-primary" (click)="startTesting()">Start</button>
@@ -20,7 +20,7 @@
 
         <div class="col-md-1 timer">
             <h5>Time Remain</h5>
-            <h5>{{ticks}}</h5>
+            <h5>{{timeCoutdown}}</h5>
         </div>
 
         <div class="col-md-8 col-md-offset-2">
@@ -41,7 +41,7 @@
     </div>
     <div *ngIf="isNotify">
         <div class="status-end">
-            <h3>Hết giờ làm bài</h3>
+            <h3>Bài làm kết thúc</h3>
         </div>
     </div>
 </div>

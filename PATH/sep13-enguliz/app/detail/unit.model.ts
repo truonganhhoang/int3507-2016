@@ -13,6 +13,7 @@ export class Unit {
         public unitTime: number,
         public createdDate: string,
         public categoryIdRef: string,
+        public unitType: string,
         public question: Question[]
     ) {}
 }

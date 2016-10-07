@@ -47,29 +47,39 @@ var DetailComponent = (function () {
                 _this.isNotify = true;
             }
             _this.ticks = _this.unit.unitTime / 1000 - t;
+            _this.timeCoutdown = _this.convertTime(_this.ticks);
         });
     };
     DetailComponent.prototype.isLoggedIn = function () {
         return this.loggedIn;
     };
     DetailComponent.prototype.submitAns = function () {
+        this.isTest = false;
+        this.isNotify = true;
         console.log(JSON.stringify(this.userAns));
     };
     DetailComponent.prototype.chooseAns = function (questionId, ansId) {
         this.userAns[questionId] = ansId;
     };
-    DetailComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        if (this.isLoggedIn() === false) {
-            return this.router.navigate['/'];
+    DetailComponent.prototype.convertTime = function (ticks) {
+        var minute = 0;
+        var second = 0;
+        if (ticks >= 60 && ticks < 3600) {
+            minute = Math.floor(ticks / 60);
+            second = ticks % 60;
+            return minute + " phút " + second + " giây";
         }
         else {
-            this.route.params
-                .map(function (params) { return params['id']; })
-                .subscribe(function (id) {
-                _this.loadDetailsData(id);
-            });
+            return ticks + " giây";
         }
+    };
+    DetailComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.params
+            .map(function (params) { return params['id']; })
+            .subscribe(function (id) {
+            _this.loadDetailsData(id);
+        });
     };
     DetailComponent = __decorate([
         core_1.Component({
