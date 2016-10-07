@@ -54,7 +54,6 @@ router.get('/details/:id', (req, res) => {
                 resp.data = result;
 
                 db.fetchRows(Collect.question, {'unitIdRef': result._id}, (question) => {
-                    console.log(question);
                     resp.data.question = question;
                     res.send(resp);
                     res.end();
@@ -75,19 +74,28 @@ router.get('/details/:id', (req, res) => {
     //}
 });
 
-router.get('/details/:id/submit', (req, res) => {
-    var token = req.get('access_token');
-    var resp = {};
-    var id = req.params.id;
+router.post('/details/:id/submit', (req, res) => {
+    console.log("call submit");
+    console.log(JSON.stringify(req.body));
 
-    if(token) {
+    
+
+
+    var resp = {};
+    resp.error = 0;
+    resp.message = "Bạn trả lời đúng 3 trong tổng số 5 câu hỏi";
+    resp.data = null;
+    res.send(resp);
+
+
+    /*if(token) {
 
     } else {
         resp.error = 101;
         resp.message = "User is not login";
         resp.data = null;
         res.send(resp);
-    }
+    }*/
 });
 
 module.exports = router;

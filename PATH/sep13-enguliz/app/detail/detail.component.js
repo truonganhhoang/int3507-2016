@@ -15,6 +15,7 @@ var core_1 = require("@angular/core");
 var detail_service_1 = require("./detail.service");
 var router_1 = require("@angular/router");
 var Rx_1 = require("rxjs/Rx");
+var anwser_model_1 = require("./anwser.model");
 var DetailComponent = (function () {
     function DetailComponent(router, route, service) {
         this.router = router;
@@ -25,6 +26,7 @@ var DetailComponent = (function () {
         this.loggedIn = false;
         this.ticks = 999999999999;
         this.userAns = {};
+        this.userAnswer = [];
         this.loggedIn = !!localStorage.getItem('auth_token');
     }
     DetailComponent.prototype.loadDetailsData = function (id) {
@@ -56,10 +58,10 @@ var DetailComponent = (function () {
     DetailComponent.prototype.submitAns = function () {
         this.isTest = false;
         this.isNotify = true;
-        console.log(JSON.stringify(this.userAns));
+        this.service.submitAns(this.unit._id, JSON.stringify(this.userAnswer)).subscribe(function (data) { return console.log(data); }, function (err) { return console.log(JSON.stringify(err)); });
     };
     DetailComponent.prototype.chooseAns = function (questionId, ansId) {
-        this.userAns[questionId] = ansId;
+        this.userAnswer.push(new anwser_model_1.Anwser(questionId, ansId));
     };
     DetailComponent.prototype.convertTime = function (ticks) {
         var minute = 0;

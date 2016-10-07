@@ -23,6 +23,7 @@ export class DetailComponent implements OnInit {
 
     public userAns:{[key:string]:string;} = {};
     public timeCoutdown: string;
+    public userAnswer = [];
 
     constructor(private router:Router,
                 private route:ActivatedRoute,
@@ -62,11 +63,13 @@ export class DetailComponent implements OnInit {
     submitAns() {
         this.isTest = false;
         this.isNotify = true;
-        console.log(JSON.stringify(this.userAns));
+
+        this.service.submitAns(this.unit._id, JSON.stringify(this.userAnswer)).subscribe(data => console.log(data), err => console.log(JSON.stringify(err)));
+
     }
 
     chooseAns(questionId, ansId) {
-        this.userAns[questionId] = ansId;
+        this.userAnswer.push(new Anwser(questionId, ansId));
     }
 
     convertTime(ticks) {
