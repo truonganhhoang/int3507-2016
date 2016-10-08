@@ -1,12 +1,3 @@
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 import { Component } from '@angular/core';
 import { NavController, Platform, NavParams } from 'ionic-angular';
 import { RecordService } from '../../services/record.service';
@@ -85,7 +76,7 @@ export var Record = (function () {
         this._pathFile = this.getPathFile(word['content']);
         //khởi tạo đối tượng Media
         this._fileRecord = new MediaPlugin(this._pathFile);
-        this._fileRecord.status.subscribe(function () { });
+        // this._fileRecord['status'].subscribe(()=>{});
         //bắt đầu ghi âm
         this._fileRecord.startRecord();
     };
@@ -107,9 +98,10 @@ export var Record = (function () {
         if (!this.platform.is('cordova'))
             return;
         this._fileRecord = new MediaPlugin(path);
-        this._fileRecord.status.subscribe(function () { });
+        // this._fileRecord['status'].subscribe(()=>{});
         this._fileRecord.play();
     };
+    // 
     Record.prototype.getPathFile = function (name) {
         var path = cordova.file.externalRootDirectory;
         return path + name + '.mp3';
@@ -122,13 +114,20 @@ export var Record = (function () {
             return false;
         });
     };
-    Record = __decorate([
-        Component({
-            selector: 'page-record',
-            templateUrl: 'record.html',
-            providers: [RecordService, WordService]
-        }), 
-        __metadata('design:paramtypes', [NavController, RecordService, WordService, Platform, NavParams])
-    ], Record);
+    Record.decorators = [
+        { type: Component, args: [{
+                    selector: 'page-record',
+                    templateUrl: 'record.html',
+                    providers: [RecordService, WordService]
+                },] },
+    ];
+    /** @nocollapse */
+    Record.ctorParameters = [
+        { type: NavController, },
+        { type: RecordService, },
+        { type: WordService, },
+        { type: Platform, },
+        { type: NavParams, },
+    ];
     return Record;
 }());
