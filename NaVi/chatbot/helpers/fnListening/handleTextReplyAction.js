@@ -9,13 +9,17 @@ module.exports = function (recipientId, recipientMessageText, event) {
             console.log(err);
         }
         else if (reply && reply.lastListeningText) {
+            // Trim and remove consecutive spaces from user input text
+            recipientMessageText = recipientMessageText.replace(/\s+/g, ' ').trim();
+
             let answerTextSplittedToWords = reply.lastListeningText.split(' '),
                 recipientTextSplittedToWords = recipientMessageText.split(' '),
                 answerText = '',
                 rightWords = 0;
 
             for (let i = 0; i < answerTextSplittedToWords.length; i++) {
-                if (answerTextSplittedToWords[i] === recipientTextSplittedToWords[i]) {
+                if (answerTextSplittedToWords[i].replace(',', '').replace('.', '').toLowerCase()
+                    === recipientTextSplittedToWords[i].replace(',', '').replace('.', '').toLowerCase()) {
                     answerText += answerTextSplittedToWords[i];
                     rightWords += 1;
                 }
