@@ -10,6 +10,7 @@ class ProgramO:
       "format": "json"
     }
     r = requests.get("http://lebot.3eeweb.com/chatbot/conversation_start.php?",params=params)
+    # r = requests.get("http://5d25b11f.ngrok.io/Program-O/chatbot/conversation_start.php?", params=params)
     # r = requests.get("http://chatbot.3dles.com/VWchat/chatbot/conversation_start.php?say=hello&convo_id=Dave&bot_id=1&format=json")
     if r.status_code != 200:
       log(r.status_code)

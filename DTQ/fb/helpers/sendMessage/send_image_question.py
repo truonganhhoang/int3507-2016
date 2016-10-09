@@ -6,15 +6,31 @@ import requests
 import sys
 import random
 
-def send_question_message(recipient_id, word, another_choices, do_exercise):
-  question = word.name.title() + " mean?"
+def send_image_question_message(recipient_id, word, another_choices, do_exercise=False):
+  question = "What's in the picture?"
   data = json.dumps({
     "recipient": {
       "id": recipient_id
     },
     
     "message": {
-      "text": question,
+      "text": question
+    }
+  })
+  send_message(data)
+
+  data = json.dumps({
+    "recipient": {
+      "id": recipient_id
+    },
+    
+    "message": {
+      "attachment":{
+        "type":"image",
+        "payload":{
+          "url":BingSearchImage.get_image(word.name)
+        }
+      },
       "quick_replies": []
     }
   })
@@ -27,15 +43,14 @@ def send_question_message(recipient_id, word, another_choices, do_exercise):
   buttons = []
   buttons.append({
     "content_type":"text",
-    "title": word.meaning,
+    "title": word.name,
     "payload": payload + "_True"
   })
-
   for another_choice in another_choices:
     buttons.append({
       "content_type":"text",
       "title": another_choice,
-      "payload": payload + "_False_" + word.meaning
+      "payload": payload + "_False_" + word.name
     })
   
   random.shuffle(buttons)

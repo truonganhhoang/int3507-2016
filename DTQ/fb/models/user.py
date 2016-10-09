@@ -9,6 +9,7 @@ class UserRecord:
     DOING_EXERSICE = 2
     CHOOSE_CATEGORY = 3
     TESTING_WORD = 4
+    TESTING_LISTEN = 5
 
   @staticmethod
   def get(user_id):

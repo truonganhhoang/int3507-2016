@@ -10,3 +10,11 @@ class ConversationRecord:
         return False
     else:
       return False
+  
+  @staticmethod
+  def is_do_exercises(conversation):
+    conversations = ["do exercises", "exercise", "some exercises"]
+    for cvs in conversations:
+      if cvs.upper() == conversation.upper():
+        return True
+    return False

@@ -1,9 +1,12 @@
 import sys
 import time
+from random import randint
 from helpers.sendMessage.send_text import send_text_message
 from helpers.sendMessage.send_list import send_list_message
 from helpers.sendMessage.send_word import send_word_message
 from helpers.sendMessage.send_question import send_question_message
+from helpers.sendMessage.send_image_question import send_image_question_message
+from helpers.sendMessage.send_audio_question import send_audio_question_message
 from helpers.program_o.program_o  import ProgramO
 from luis import Luis
 from database import db, Conversation, User
@@ -14,7 +17,8 @@ from models.user import UserRecord
 from models.word import WordRecord
 from models.word_result import WordResultRecord
 
-def recieve(data):  
+def recieve(data):
+  word_listen = None
   if data["object"] == "page":
 
     for entry in data["entry"]:
@@ -41,24 +45,33 @@ def recieve(data):
                   user.word_learned += 1
                   db.session.add(user)
                   db.session.commit()
-
-                  if user.word_learned % 3 and user.word_learned > 0:
+                
+                  if (user.word_learned - 1) % 3 and user.word_learned > 0:
                     UserRecord.set_state(sender_id, UserRecord.UserState.TESTING_WORD)
-                    send_question(sender_id)
+                    send_random_type_question(sender_id)
                   else:
                     send_new_word(sender_id)
             else:
               if PostBack.PAY_LOAD_QUESTION in payload:
                 if "True" in payload:
                   send_text_message(sender_id, "Correct")
-                  time.sleep(1)
-                  send_word_not_learn(sender_id)
                 else:
-                  answer_right = payload.split("_")[2].lower()
+                  answer_right = payload.split("_")[2].upper()
                   send_text_message(sender_id, "Wrong. Correct answer is " + answer_right)
-                  time.sleep(1)
-                  send_word_not_learn(sender_id)
+                time.sleep(1)
+                send_word_not_learn(sender_id)
                 UserRecord.set_state(sender_id, UserRecord.UserState.NONE)
+              else:
+                if PostBack.PAY_LOAD_DO_EXERCISE in payload:
+                  if "True" in payload:
+                    send_text_message(sender_id, "Correct")
+                    log("Gui Correc")
+                  else:
+                    answer_right = payload.split("_")[2].upper()
+                    send_text_message(sender_id, "Wrong. Correct answer is " + answer_right)
+                  time.sleep(1)
+                  send_random_type_question(sender_id, do_exercise=True)
+
           else:
             if message_text:
 
@@ -74,23 +87,45 @@ def recieve(data):
                 db.session.add(cvs)
                 db.session.commit()
               log(cvs)
-              # send_text_message(sender_id, str(cvs.indent + " " + cvs.entity)
+              
               if ConversationRecord.is_learn_new_word(cvs):
                 if UserRecord.get_state(sender_id) == UserRecord.UserState.NONE:
                   send_word_not_learn(sender_id)
                 else:
                   if UserRecord.get_state(sender_id) == UserRecord.UserState.TESTING_WORD:
-                    send_question(sender_id)
+                    send_random_type_question(sender_id)
               else:
-                botsay = ProgramO.get_answer(sender_id, message_text)
-                send_text_message(sender_id, botsay)
+                if ConversationRecord.is_do_exercises(message_text):
+                  send_random_type_question(sender_id, do_exercise=True)
+                else:
+                  botsay = ProgramO.get_answer(sender_id, message_text)
+                  send_text_message(sender_id, botsay)
 
-def send_question(sender_id):
+def send_question(sender_id, do_exercise=False):
   random_result = WordResultRecord.get_random_result(sender_id)
   if random_result:
     word_question = WordRecord.get(random_result.word_id)
     meanings = WordRecord.get_meanings(2)
-    send_question_message(sender_id, word_question, meanings)
+    send_question_message(sender_id, word_question, meanings, do_exercise=do_exercise)
+
+def send_image_quesion(sender_id, do_exercise=False):
+  random_result = WordResultRecord.get_random_result(sender_id)
+  if random_result:
+    word_question = WordRecord.get(random_result.word_id)
+    names = WordRecord.get_random_names(2)
+    send_image_question_message(sender_id, word_question, names, do_exercise=do_exercise)
+
+def send_audio_question(sender_id, do_exercise=False):
+  random_result = WordResultRecord.get_random_result(sender_id)
+  if random_result:
+    word_question = WordRecord.get(random_result.word_id)
+    send_audio_question_message(sender_id, word_question)
+    word_listen = word_question
+
+def send_random_type_question(sender_id, do_exercise=False):
+  type_question = randint(0, 1)
+  func = {0: send_question, 1: send_image_quesion, 2: send_audio_question}
+  func[type_question](sender_id, do_exercise)
 
 def send_new_word(sender_id):
   word = WordRecord.get_new_word(sender_id, 1)

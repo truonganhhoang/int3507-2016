@@ -20,7 +20,7 @@ def send_word_message(recipient_id, word):
             {
               "title": word.name,
               "image_url": BingSearchImage.get_image(word.name),
-              "subtitle": word.meaning,
+              "subtitle": word.meaning + " - Example: " + word.example,
             }
           ]
         }
@@ -39,6 +39,8 @@ def send_word_message(recipient_id, word):
   # sound_link = r["data"]
   
   sound_link = "http://stream.dict.laban.vn/uk/d422d0ec37672abb3f2fef58b94c608d/157765c6199/H/hello.mp3"
+  # sound_link = word.link_pronunciation
+  log(sound_link)
   data = json.dumps({
     "recipient": {
       "id": recipient_id
