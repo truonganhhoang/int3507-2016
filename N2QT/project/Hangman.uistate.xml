@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout active="1" order="0">Start</layout>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="1" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="0">
+        <family expanded="0" name="Fa_kytu" />
+        <family expanded="0" name="Fa_hangman" />
+        <family expanded="0" name="Fa_Unit" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/page00cover/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/bgcv/" />
+        <folder expanded="1" path="animation-folder/Sprite_Solid/" />
+        <folder expanded="1" path="animation-folder/MU_exit/" />
+        <folder expanded="1" path="animation-folder/TAB_Thoat/" />
+        <folder expanded="1" path="animation-folder/dongy/" />
+        <folder expanded="1" path="animation-folder/boqua/" />
+        <folder expanded="1" path="animation-folder/gachChan/" />
+        <folder expanded="1" path="animation-folder/a/" />
+        <folder expanded="1" path="animation-folder/b/" />
+        <folder expanded="1" path="animation-folder/c/" />
+        <folder expanded="1" path="animation-folder/d/" />
+        <folder expanded="1" path="animation-folder/e/" />
+        <folder expanded="1" path="animation-folder/f/" />
+        <folder expanded="1" path="animation-folder/g/" />
+        <folder expanded="1" path="animation-folder/h/" />
+        <folder expanded="1" path="animation-folder/i/" />
+        <folder expanded="1" path="animation-folder/j/" />
+        <folder expanded="1" path="animation-folder/k/" />
+        <folder expanded="1" path="animation-folder/l/" />
+        <folder expanded="1" path="animation-folder/m/" />
+        <folder expanded="1" path="animation-folder/o/" />
+        <folder expanded="1" path="animation-folder/n/" />
+        <folder expanded="1" path="animation-folder/p/" />
+        <folder expanded="1" path="animation-folder/q/" />
+        <folder expanded="1" path="animation-folder/r/" />
+        <folder expanded="1" path="animation-folder/s/" />
+        <folder expanded="1" path="animation-folder/t/" />
+        <folder expanded="1" path="animation-folder/u/" />
+        <folder expanded="1" path="animation-folder/v/" />
+        <folder expanded="1" path="animation-folder/w/" />
+        <folder expanded="1" path="animation-folder/x/" />
+        <folder expanded="1" path="animation-folder/y/" />
+        <folder expanded="1" path="animation-folder/z/" />
+        <folder expanded="1" path="animation-folder/hangman/" />
+        <folder expanded="1" path="animation-folder/home/" />
+        <folder expanded="1" path="animation-folder/giaTreo/" />
+        <folder expanded="1" path="animation-folder/dau/" />
+        <folder expanded="1" path="animation-folder/tayPhai/" />
+        <folder expanded="1" path="animation-folder/tayTrai/" />
+        <folder expanded="1" path="animation-folder/chanPhai/" />
+        <folder expanded="1" path="animation-folder/chanTrai/" />
+        <folder expanded="1" path="animation-folder/Than/" />
+        <folder expanded="1" path="animation-folder/Youwin/" />
+        <folder expanded="1" path="animation-folder/khungTimeScore/" />
+        <folder expanded="1" path="animation-folder/khungChu/" />
+        <folder expanded="1" path="animation-folder/score/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/khungCauHoi/" />
+        <folder expanded="1" path="animation-folder/UINT/" />
+        <folder expanded="1" path="animation-folder/unit/" />
+        <folder expanded="1" path="animation-folder/unit2/" />
+        <folder expanded="1" path="animation-folder/unit3/" />
+        <folder expanded="1" path="animation-folder/unit4/" />
+        <folder expanded="1" path="animation-folder/unit5/" />
+        <folder expanded="1" path="animation-folder/unit6/" />
+        <folder expanded="1" path="animation-folder/bgStart/" />
+        <folder expanded="1" path="animation-folder/name/" />
+        <folder expanded="1" path="animation-folder/play/" />
+        <folder expanded="1" path="animation-folder/edit/" />
+        <folder expanded="1" path="animation-folder/save/" />
+    </folders-expanded>
+</c2uistate>
