@@ -9,6 +9,9 @@ import { Category } from '../pages/category/category';
 import { Youtube } from '../pages/youtube/youtube';
 import { VideoPlayer } from '../pages/video-player/video-player';
 import { Login } from '../components/login/login';
+import { LoginWeb } from '../components/login-web/login-web';
+import { Google } from '../pages/google/google'
+
 
 
 @NgModule({
@@ -20,7 +23,9 @@ import { Login } from '../components/login/login';
     Category,
     Youtube,
     VideoPlayer, 
-    Login
+    Login,
+    LoginWeb,
+    Google
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -33,7 +38,8 @@ import { Login } from '../components/login/login';
     Record,
     Category,
     Youtube,
-    VideoPlayer
+    VideoPlayer,
+    Google
   ],
   providers: []
 })

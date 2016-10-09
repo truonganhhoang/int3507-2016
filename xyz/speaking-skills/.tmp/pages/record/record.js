@@ -1,3 +1,12 @@
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 import { Component } from '@angular/core';
 import { NavController, Platform, NavParams } from 'ionic-angular';
 import { RecordService } from '../../services/record.service';
@@ -114,20 +123,80 @@ export var Record = (function () {
             return false;
         });
     };
-    Record.decorators = [
-        { type: Component, args: [{
-                    selector: 'page-record',
-                    templateUrl: 'record.html',
-                    providers: [RecordService, WordService]
-                },] },
-    ];
-    /** @nocollapse */
-    Record.ctorParameters = [
-        { type: NavController, },
-        { type: RecordService, },
-        { type: WordService, },
-        { type: Platform, },
-        { type: NavParams, },
-    ];
+    Record.prototype.getDrive = function () {
+        gapi.client.load('drive', 'v2', function () {
+            var request = gapi.client.request({
+                path: 'https://www.googleapis.com/drive/v2/files',
+                method: 'GET',
+                params: {
+                    projection: "FULL",
+                    maxResults: 5
+                }
+            });
+            request.execute(function (response) {
+                alert(JSON.stringify(response));
+            });
+        });
+    };
+    Record.prototype.uploadDrive = function () {
+        alert('upload');
+        var callback;
+        var boundary = '-------314159265358979323846';
+        var delimiter = "\r\n--" + boundary + "\r\n";
+        var close_delim = "\r\n--" + boundary + "--";
+        // File.readAsBinaryString(cordova.file.externalRootDirectory,'badminton.mp3').then( res => {
+        //    var contentType = 'audio/mp3' || 'application/octet-stream';
+        //   var metadata = {
+        //     'title': 'badminton.mp3',
+        //     'mimeType': contentType
+        //   };
+        //   alert('binarystring' + res);
+        // })
+        File.readAsDataURL(cordova.file.externalRootDirectory, 'badminton.mp3').then(function (res) {
+            var contentType = 'audio/mp3' || 'application/octet-stream';
+            var metadata = {
+                'title': 'badminton.mp3',
+                'mimeType': contentType
+            };
+            var base64Data = res;
+            var multipartRequestBody = delimiter +
+                'Content-Type: application/json\r\n\r\n' +
+                JSON.stringify(metadata) +
+                delimiter +
+                'Content-Type: ' + contentType + '\r\n' +
+                'Content-Transfer-Encoding: base64\r\n' +
+                '\r\n' +
+                base64Data +
+                close_delim;
+            alert('bbbb');
+            gapi.client.load('drive', 'v2', function () {
+                alert('load done');
+                var request = gapi.client.request({
+                    'path': '/upload/drive/v2/files',
+                    'method': 'POST',
+                    'params': { 'uploadType': 'multipart' },
+                    'headers': {
+                        'Content-Type': 'multipart/mixed; boundary="' + boundary + '"'
+                    },
+                    'body': multipartRequestBody });
+                alert('aaa');
+                if (!callback) {
+                    callback = function (file) {
+                        alert(file);
+                    };
+                }
+                request.execute(callback);
+            });
+            alert('dataURL' + res);
+        });
+    };
+    Record = __decorate([
+        Component({
+            selector: 'page-record',
+            templateUrl: 'record.html',
+            providers: [RecordService, WordService]
+        }), 
+        __metadata('design:paramtypes', [NavController, RecordService, WordService, Platform, NavParams])
+    ], Record);
     return Record;
 }());

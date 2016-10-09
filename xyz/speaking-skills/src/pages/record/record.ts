@@ -135,5 +135,92 @@ export class Record implements OnInit {
     );
   }
 
+  getDrive() {
+    gapi.client.load('drive', 'v2', function() {
+          var request = gapi.client.request({
+               path : 'https://www.googleapis.com/drive/v2/files',
+               method : 'GET',
+               params : {
+                    projection: "FULL",
+                    maxResults: 5
+               }
+          });
+          request.execute(function(response) {
+               alert(JSON.stringify(response));   
+          });
+
+
+     });
+  }
+
+
+
+  uploadDrive() {
+    alert('upload');
+    var callback;
+    const boundary = '-------314159265358979323846';
+    const delimiter = "\r\n--" + boundary + "\r\n";
+    const close_delim = "\r\n--" + boundary + "--";
+   
+    // File.readAsBinaryString(cordova.file.externalRootDirectory,'badminton.mp3').then( res => {
+    //    var contentType = 'audio/mp3' || 'application/octet-stream';
+    //   var metadata = {
+    //     'title': 'badminton.mp3',
+    //     'mimeType': contentType
+    //   };
+
+    //   alert('binarystring' + res);
+    // })
+
+    File.readAsDataURL(cordova.file.externalRootDirectory,'badminton.mp3').then( res => {
+      var contentType = 'audio/mp3' || 'application/octet-stream';
+      var metadata = {
+        'title': 'badminton.mp3',
+        'mimeType': contentType
+      };
+
+       var base64Data = res;
+      var multipartRequestBody =
+          delimiter +
+          'Content-Type: application/json\r\n\r\n' +
+          JSON.stringify(metadata) +
+          delimiter +
+          'Content-Type: ' + contentType + '\r\n' +
+          'Content-Transfer-Encoding: base64\r\n' +
+          '\r\n' +
+          base64Data +
+          close_delim;
+
+         alert('bbbb');
+
+        gapi.client.load('drive', 'v2', function() {
+          alert('load done');
+          var request = gapi.client.request({
+            'path': '/upload/drive/v2/files',
+            'method': 'POST',
+            'params': {'uploadType': 'multipart'},
+            'headers': {
+              'Content-Type': 'multipart/mixed; boundary="' + boundary + '"'
+            },
+            'body': multipartRequestBody});
+            alert('aaa');
+            if (!callback) {
+              callback = function(file) {
+                alert(file)
+              };
+            }
+            request.execute(callback);
+
+        });
+          
+
+            alert('dataURL' + res);
+
+      })
+
+
+  }
+
+
 
 }

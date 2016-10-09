@@ -11,6 +11,9 @@
   <link rel="manifest" href="assets/manifest.json">
   <meta name="theme-color" content="#4e8ef7">
 
+  <meta name="google-signin-client_id" content="736288713251-26srbi81jha5n1aithe4av668oh5pn12.apps.googleusercontent.com">
+
+
   <!-- un-comment this code to enable service worker
   <script>
     if ('serviceWorker' in navigator) {
@@ -25,6 +28,11 @@
 </head>
 <body>
 
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+  <script src="https://apis.google.com/js/api:client.js"></script>
+  <script src="https://apis.google.com/js/api.js"></script>  
+
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
 
@@ -36,6 +44,8 @@
 
   <!-- The bundle js is generated during the build process -->
   <script src="build/main.js"></script>
+
+  
 
 </body>
 </html>

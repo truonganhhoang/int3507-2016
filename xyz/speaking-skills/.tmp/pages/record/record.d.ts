@@ -22,4 +22,6 @@ export declare class Record implements OnInit {
     playRecord(item: any): void;
     private getPathFile(name);
     checkFileExist(nameFile: any): void;
+    getDrive(): void;
+    uploadDrive(): void;
 }

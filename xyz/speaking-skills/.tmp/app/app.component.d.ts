@@ -3,6 +3,7 @@ export declare class MyApp {
     platform: Platform;
     nav: Nav;
     rootPage: any;
+    onDevice: boolean;
     pages: Array<{
         title: string;
         component: any;

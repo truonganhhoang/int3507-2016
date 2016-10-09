@@ -4,6 +4,7 @@ import { StatusBar } from 'ionic-native';
 
 import { Category } from '../pages/category/category';
 import { Youtube } from '../pages/youtube/youtube';
+import { Google } from '../pages/google/google'
 
 
 @Component({
@@ -13,16 +14,20 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = Youtube;
+  onDevice: boolean = false;
 
   pages: Array<{title: string, component: any}>;
 
   constructor(public platform: Platform) {
+    this.platform = platform;
+    this.onDevice = this.platform.is('cordova');
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Speaking by category', component: Category },
-      { title: 'Speaking with youtube', component: Youtube }
+      { title: 'Speaking with youtube', component: Youtube },
+      { title: 'Test Google Drive', component: Google }
     ];
 
   }
