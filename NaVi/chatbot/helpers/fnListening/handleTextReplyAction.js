@@ -18,7 +18,8 @@ module.exports = function (recipientId, recipientMessageText, event) {
                 rightWords = 0;
 
             for (let i = 0; i < answerTextSplittedToWords.length; i++) {
-                if (answerTextSplittedToWords[i].replace(',', '').replace('.', '').toLowerCase()
+                if (recipientTextSplittedToWords[i] !== undefined &&
+                    answerTextSplittedToWords[i].replace(',', '').replace('.', '').toLowerCase()
                     === recipientTextSplittedToWords[i].replace(',', '').replace('.', '').toLowerCase()) {
                     answerText += answerTextSplittedToWords[i];
                     rightWords += 1;
