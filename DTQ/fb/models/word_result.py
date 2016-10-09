@@ -1,6 +1,7 @@
 import import_package
 from database import db, WordResult
 from user import UserRecord
+from random import randint
 
 class WordResultRecord:
   @staticmethod
@@ -25,3 +26,12 @@ class WordResultRecord:
     db.session.add(user)
     db.session.commit()
     return wordresult
+
+  @staticmethod
+  def get_random_result(user_id):
+    word_results = WordResult.query.all()
+    if word_results:
+      random_int = randint(0, len(word_results))
+      return word_results[random_int]
+    else:
+      return None

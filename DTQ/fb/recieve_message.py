@@ -1,7 +1,9 @@
 import sys
+import time
 from helpers.sendMessage.send_text import send_text_message
 from helpers.sendMessage.send_list import send_list_message
 from helpers.sendMessage.send_word import send_word_message
+from helpers.sendMessage.send_question import send_question_message
 from helpers.program_o.program_o  import ProgramO
 from luis import Luis
 from database import db, Conversation, User
@@ -29,14 +31,34 @@ def recieve(data):
             payload = messaging_event["message"]["quick_reply"]["payload"]
             if PostBack.PAY_LOAD_WORD in payload:
               word_id = int(payload.split(" ")[1])
-              for word_result in UserRecord.get(sender_id).word_results:
+              user = UserRecord.get(sender_id)
+              for word_result in user.word_results:
                 if word_result.word_id == word_id:
                   word_result.is_learned = True
                   db.session.add(word_result)
                   db.session.commit()
-                  word = WordRecord.get_new_word(sender_id, 1)
-                  log(word)
-                  send_word_message(sender_id, word)
+
+                  user.word_learned += 1
+                  db.session.add(user)
+                  db.session.commit()
+
+                  if user.word_learned % 3 and user.word_learned > 0:
+                    UserRecord.set_state(sender_id, UserRecord.UserState.TESTING_WORD)
+                    send_question(sender_id)
+                  else:
+                    send_new_word(sender_id)
+            else:
+              if PostBack.PAY_LOAD_QUESTION in payload:
+                if "True" in payload:
+                  send_text_message(sender_id, "Correct")
+                  time.sleep(1)
+                  send_word_not_learn(sender_id)
+                else:
+                  answer_right = payload.split("_")[2].lower()
+                  send_text_message(sender_id, "Wrong. Correct answer is " + answer_right)
+                  time.sleep(1)
+                  send_word_not_learn(sender_id)
+                UserRecord.set_state(sender_id, UserRecord.UserState.NONE)
           else:
             if message_text:
 
@@ -55,19 +77,33 @@ def recieve(data):
               # send_text_message(sender_id, str(cvs.indent + " " + cvs.entity)
               if ConversationRecord.is_learn_new_word(cvs):
                 if UserRecord.get_state(sender_id) == UserRecord.UserState.NONE:
-                  word_result = WordResultRecord.get_wordresult_not_learn(sender_id)
-                  if word_result:
-                    word = WordRecord.get(int(word_result.word_id))
-                    send_word_message(sender_id, word)
-                  else:
-                    word = WordRecord.get_new_word(sender_id, 1)
-                    log(word)
-                    send_word_message(sender_id, word)
+                  send_word_not_learn(sender_id)
                 else:
-                  send_text_message(sender_id, "Hoc chua het da voi lo xin them")
+                  if UserRecord.get_state(sender_id) == UserRecord.UserState.TESTING_WORD:
+                    send_question(sender_id)
               else:
                 botsay = ProgramO.get_answer(sender_id, message_text)
                 send_text_message(sender_id, botsay)
+
+def send_question(sender_id):
+  random_result = WordResultRecord.get_random_result(sender_id)
+  if random_result:
+    word_question = WordRecord.get(random_result.word_id)
+    meanings = WordRecord.get_meanings(2)
+    send_question_message(sender_id, word_question, meanings)
+
+def send_new_word(sender_id):
+  word = WordRecord.get_new_word(sender_id, 1)
+  log(word)
+  send_word_message(sender_id, word)
+
+def send_word_not_learn(sender_id):
+  word_result = WordResultRecord.get_wordresult_not_learn(sender_id)
+  if word_result:
+    word = WordRecord.get(int(word_result.word_id))
+    send_word_message(sender_id, word)
+  else:
+    send_new_word(sender_id)
 
 def log(message):  # simple wrapper for logging to stdout on heroku
   print str(message)
