@@ -4,6 +4,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { WordService } from '../../providers/word-service';
 import { NativeService } from '../../providers/native-service';
 import { Playing } from '../playing/playing';
+import { Review } from '../review/review';
 
 /*
   Generated class for the Learning page.
@@ -30,8 +31,9 @@ export class Learning implements OnInit {
 
     if (unitId != undefined) {
       this.pageType = 0;
-      this.wordService.getWords(unitId).then(res => {
+      this.wordService.getLearningWords(unitId).then(res => {
         this.words = res;
+        console.log(this.words);
         this.reload();
       });
     } else {
@@ -66,9 +68,15 @@ export class Learning implements OnInit {
     return false;
   }
 
-  enterFightingPage() {
+  enterPlayingPage(): void {
     this.navCtrl.push(Playing, {
       unitId: this.navParams.get('unitId')
+    });
+  }
+
+  enterReviewPage(): void {
+    this.navCtrl.push(Review, {
+      bookId: this.navParams.get('bookId')
     });
   }
 

@@ -8,12 +8,10 @@
   <ion-navbar color="primary">
     <ion-title>Review</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-  <ion-card *ngIf="!learnedWords">
+  <ion-card *ngIf="learnedWords.length <= 0">
     <img src="assets/img/review.png"/>
     <ion-card-content>
       <ion-card-title style="color:#4db593">
@@ -26,10 +24,13 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-list *ngIf="learnedWords">
+  <ion-list no-lines *ngIf="learnedWords.length > 0">
+    <ion-list-header>
+      Words you have learned in this book
+    </ion-list-header>
     <ion-item *ngFor="let item of learnedWords" (click)="enterLearning(item)">
-      <h1 color="primary"><b>{{item.content}}</b></h1>
-      <p>{{item.meaning}}</p>
+      <p color="primary" class="content">{{item.content}}</p>
+      <p class="meaning">{{item.meaning}}</p>
       <button ion-button clear icon-only item-right (click)="speak(item)">
         <ion-icon name="volume-up"></ion-icon>
       </button>

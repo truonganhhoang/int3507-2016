@@ -5,7 +5,31 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngIf="curWord">
+  <ion-card *ngIf="words.length <= 0">
+    <img src="assets/img/learn.png"/>
+    <ion-card-content>
+      <ion-card-title style="color:#4db593">
+        You have learned every word in this unit!
+      </ion-card-title>
+      <p>
+        You can review all the words you have learned in this book so far,
+        or keep playing practical games...
+      </p>
+    </ion-card-content>
+
+    <ion-item>
+      <button ion-button icon-left item-left class="nav-button" (click)="enterReviewPage()">
+        <ion-icon name="clipboard"></ion-icon>
+        Review
+      </button>
+      <button ion-button icon-left item-right class="nav-button" (click)="enterPlayingPage()">
+        <ion-icon name="game-controller-b"></ion-icon>
+        Play
+      </button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card *ngIf="words.length > 0 && curWord">
     <img src="assets/img/learn.png">
     <ion-fab right top style="right:20px;top:20px">
       <button ion-fab color="primary">
@@ -30,7 +54,7 @@
         Next
         <ion-icon name="arrow-forward"></ion-icon>
       </button>
-      <button ion-button icon-right item-right round class="nav-button" *ngIf="isEnd()" (click)="enterFightingPage()">
+      <button ion-button icon-right item-right round class="nav-button" *ngIf="isEnd()" (click)="enterPlayingPage()">
         Play
         <ion-icon name="arrow-forward"></ion-icon>
       </button>

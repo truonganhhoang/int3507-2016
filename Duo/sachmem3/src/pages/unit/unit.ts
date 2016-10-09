@@ -36,9 +36,10 @@ export class Unit {
     });
   }
 
-  enterTraining() {
+  enterTraining(): void {
     this.navCtrl.push(Learning, {
-      unitId: this.selectedUnit
+      unitId: this.selectedUnit,
+      bookId: this.bookId
     });
   }
 

@@ -19,13 +19,16 @@ import { Learning } from '../learning/learning';
 })
 
 export class Review implements OnInit {
-  learnedWords: Object[];
+  learnedWords: Object[] = [];
 
   constructor(public navCtrl: NavController, private navParams: NavParams, private nativeService: NativeService, private wordService: WordService) {}
 
   ngOnInit() {
-    this.wordService.getReviewWords(this.navParams.get('bookId')).then(res => {
+    let bookId = this.navParams.get('bookId');
+
+    this.wordService.getReviewWords(bookId).then(res => {
       this.learnedWords = res;
+      console.log(this.learnedWords.length);
     });
   }
 
