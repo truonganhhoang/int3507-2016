@@ -14,7 +14,7 @@
 ('Windows 10 Mobile','bluetooth','Connect to Bluetooth devices','Connect to a Bluetooth keyboard, mouse, or other device',
 '1. Turn on your device and make it discoverable.
 
-2. On Start ![Start symbol](https://kbdevstorage1.blob.core.windows.net/asset-blobs/15438_en_2), swipe over to the All apps list, then select **Settings**  > **Devices** > **Bluetooth**.
+2. On Start, swipe over to the All apps list, then select **Settings**  > **Devices** > **Bluetooth**.
 
 3. Turn on **Status** for Bluetooth, select the device, and follow any more instructions if they appear.'),
 ('Windows 10 Mobile','back up', 'Back up your stuff','',
@@ -22,12 +22,12 @@
 
 * To back up settings (including your Start screen layout and accounts) and app data (like high scores or conversation history), swipe over to the All apps list from Start ![Start symbol](https://kbdevstorage1.blob.core.windows.net/asset-blobs/15438_en_2), select **Settings**  > **Update & security**  > **Backup**, and then turn on both options. We’ll automatically back up this info once a day when you’re connected to WiFi and a power source.
 
-```
-Tip
+
+**Tip**
 
 To kick off a manual backup, go to Settings  > Update & security  > Backup > More options > Back up now.
-```
+
 
 * To back up your text messages, sync them among your Windows 10 mobile devices. Go to **Settings**  > **System**  > **Messaging**, and turn on **Sync messages between devices**.
 
-* For photos and videos, go to **OneDrive** ![OneDrive icon](https://kbdevstorage1.blob.core.windows.net/asset-blobs/15436_en_2) > **Menu**  > **Settings**  > **Camera Upload**, and then turn on auto-upload. From now on, pictures you take or save on your phone will upload automatically to OneDrive—the free online storage that comes with your Microsoft account.');
+* For photos and videos, go to **OneDrive** > **Menu**  > **Settings**  > **Camera Upload**, and then turn on auto-upload. From now on, pictures you take or save on your phone will upload automatically to OneDrive—the free online storage that comes with your Microsoft account.');

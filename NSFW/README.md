@@ -1,5 +1,5 @@
 # int3507-2016 Vấn đề hiện đại CNTT - Nhóm NSFW
-## **Football chatbot**
+## **Faq chatbot**
 ### Mô tả:
 Faq Chatbot trả lời các câu hỏi thường gặp</br>
 Chatbot sử dụng [Microsoft Bot Framework](https://dev.botframework.com/). </br>
