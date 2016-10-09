@@ -5,11 +5,13 @@ const
     config = require('config'),
     mongoose = require('mongoose'),
     Question = require('../models').Question,
-    NewWord = require('../models').NewWord;
+    NewWord = require('../models').NewWord,
+    Audio = require('../models').Audio;
 
 const delayTimeToImportData = 5000;
-var questions = [];
-var newWords = [];
+var questions = [],
+    newWords = [],
+    audios = [];
 mongoose.Promise = global.Promise;
 
 seeder.connect(config.get('mongodbURL'), function () {
@@ -18,16 +20,19 @@ seeder.connect(config.get('mongodbURL'), function () {
         'models/Question.js',
         'models/UnlearnedQuestionUser.js',
         'models/NewWord.js',
-        'models/UnlearnedWordUser.js'
+        'models/UnlearnedWordUser.js',
+        'models/Audio.js'
     ]);
     seeder.clearModels([
         'Question',
         'UnlearnedQuestionUser',
         'NewWord',
-        'UnlearnedWordUser'
+        'UnlearnedWordUser',
+        'Audio'
     ], function () {
-        let MCQuestionFile = 'database/raw/mc_v2_database.csv';
-        let WordFile = 'database/raw/words.csv';
+        let MCQuestionFile = 'database/raw/mc_v2_database.csv',
+            WordFile = 'database/raw/words.csv',
+            AudioFile = 'database/raw/audios.csv';
 
         console.log(`Start importing... Please wait ${delayTimeToImportData/1000} seconds`);
 
@@ -56,6 +61,23 @@ seeder.connect(config.get('mongodbURL'), function () {
                 importNewWord(newWords, function (numberOfImportedWords) {
                     setTimeout(function () {
                         console.log(`Finish importing: ${numberOfImportedWords} new words.`);
+                        process.exit(0);
+                    }, delayTimeToImportData);
+                });
+            }
+            catch (err) {
+                console.log('Error occurs: ', err.message);
+            }
+        });
+
+        // import audios files for listening functionality
+        csv.fromPath(AudioFile, { delimiter: '|'}).on('data', function (data) {
+            audios.push(data);
+        }).on('finish', function () {
+            try {
+                importAudios(audios, function (numberOfImportedAudios) {
+                    setTimeout(function () {
+                        console.log(`Finish importing: ${numberOfImportedAudios} audios.`);
                         process.exit(0);
                     }, delayTimeToImportData);
                 });
@@ -123,4 +145,24 @@ var importNewWord = function (newWords, callback) {
         });
     }
     callback(newWords.length);
+};
+
+var importAudios = function (audios, callback) {
+    for (let i = 0; i < audios.length; i++) {
+        Audio.findOne({
+            word: audios[i][0]
+        }, function (err, result) {
+            if (err) {
+                throw new Error('ERROR_FINDING_AUDIO');
+            }
+            else if (result === null) {
+                let audio = new Audio({
+                    name: audios[i][0] + '.mp3',
+                    text: audios[i][1]
+                });
+                audio.save();
+            }
+        });
+    }
+    callback(audios.length);
 };

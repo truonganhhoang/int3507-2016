@@ -88,7 +88,7 @@ module.exports = function (recipientId, recipientMessageText, event) {
                 // Update the context to UNKNOWN
                 redisClient.hmset(recipientId, ["context", 'UNKNOWN'], function (err, res) {
                     if (err) {
-                        console.log(err)
+                        console.log(err);
                     }
                     else if (res) {
                         // Send back to receivedMessage event to do intent-classification
