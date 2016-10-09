@@ -38,6 +38,17 @@ class WordRecord:
     return meanings
 
   @staticmethod
+  def get_random_names(nName):
+    names = []
+    words = Word.query.all()
+    while len(names) < nName:
+      random_int = randint(0, len(words))
+      if len(words[random_int].name) < 20:
+        names.append(words[random_int].name)
+        del words[random_int]
+    return names
+
+  @staticmethod
   def log(message):  # simple wrapper for logging to stdout on heroku
     print str(message)
     sys.stdout.flush()

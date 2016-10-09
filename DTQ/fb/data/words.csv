@@ -1,338 +1,93 @@
-1,woman,phụ nữ,1
-2,baby,đứa trẻ,1
-3,girl,cô gái,1
-4,man,đàn ông,1
-5,parents ,bố mẹ ,1
-6,grandparents,ông bà ,1
-7,husband ,chồng ,1
-8,wife,vợ,1
-9,children,trẻ con,1
-10,granddaughter,cháu gái,1
-11,boy,con trai,1
-12,grandson,cháu trai,1
-13,nephew,cháu trai,1
-14,mother,mẹ,1
-15,father,bố,1
-16,grandmother,bà,1
-17,niece,cháu gái,1
-18,uncle,chú/bác trai/cậu,1
-19,sister-in-law,chị/em dâu/chị/em vợ,1
-20,cousin,anh/em họ,1
-21,aunt,bác gái-cô-dì-thím,1
-22,brother-in-law,anh em rể/anh em vợ,1
-23,face,khuôn mặt,2
-24,mouth,miệng,2
-25,chin,cằm,2
-26,neck,cổ ,2
-27,shoulder,vai,2
-28,arm,cánh tay,2
-29,upper arm ,cánh tay trên,2
-30,elbow,khuỷu tay,2
-31,forearm,cẳng tay,2
-32,armpit ,nách,2
-33,back,lưng,2
-34,chest,ngực,2
-35,waist ,eo,2
-36,abdomen,bụng,2
-37,buttocks,mông,2
-38,hip,hông,2
-39,leg,chân,2
-40,thigh,bắp đùi,2
-41,knee,đầu gối,2
-42,calf,bắp chân,2
-43,wrist,cổ tay,2
-44,knuckle,khớp đốt ngón tayt,2
-45,fingernail,móng tay,2
-46,thumb,ngón tay cái,2
-47,index finger,ngón trỏ,2
-48,middle finger,ngón giữa,2
-49,ring finger,ngón đeo nhẫn,2
-50,little finger,ngón út,2
-51,palm,lòng bàn tay,2
-52,hair,tóc,2
-53,part,ngôi rẽ,2
-54,forehead,trán,2
-55,sideburns,tóc mai dài,2
-56,ear,tai ,2
-57,cheek,má ,2
-58,nose,mũi,2
-59,nostril,lỗ mũi,2
-60,jaw,quai hàm,2
-61,beard,râu,2
-62,mustache,ria mép,2
-63,tongue,lưỡi,2
-64,tooth,răng,2
-65,lip,môi,2
-66,eyebrow,lông mày,2
-67,eyelid,mí mắt,2
-68,eyelashes,lông mi,2
-69,iris,mống mắt,2
-70,pupil,con ngươi,2
-71,ankle,mắt cá chân,2
-72,heel,gót chân,2
-73,instep,mu bàn chân,2
-74,ball,xương khớp ngón chân,2
-75,big toe,ngón cái,2
-76,toe,ngón chân,2
-77,little toe,ngón út,2
-78,toenail,móng chân,2
-79,brain,não,2
-80,spinal cord,tủy sống,2
-81,throat,cuống họng,2
-82,windpipe,khí quản,2
-83,esophagus,thực quản,2
-84,muscle,bắp thịt,2
-85,lung,phổi,2
-86,heart,tim,2
-87,liver,gan,2
-88,stomach,dạ dày,2
-89,intestines,ruột,2
-90,vein,tĩnh mạch,2
-91,artery,động mạch,2
-92,kidney,cật,2
-93,pancreas,tụy,2
-94,bladder,bọng đái,2
-95,(head of) cauliflower,súp lơ,3
-96,kidney bean(s),đậu tây,3
-97,garlic,tỏi,3
-98,broccoli,súp lơ xanh,3
-99,black bean(s),đậu đen,3
-100,pumpkin,bí ngô,3
-101,cabbage,cải bắp ,3
-102,string bean(s),quả đậu tây,3
-103,zucchini,bí ngồi,3
-104,Brussels sprouts,cải bluxen,3
-105,lima bean(s),đậu lima,3
-106,acorn squash,bí đấu,3
-107,watercress,cải xoong,3
-108,pea(s),đậu,3
-109,radish(es),củ cải ,3
-110,lettuce,xà lách,3
-111,asparagus,măng tây,3
-112,mushroom(s),nấm,3
-113,escarole,rau diếp,3
-114,tomato(es),cà chua,3
-115,onion(s),hành,3
-116,spinach,rau bina,3
-117,cucumber(s),dưa chuột,3
-118,carrot(s),cà rốt,3
-119,herb(s),rau thơm,3
-120,eggplant,cà tím,3
-121,beets,củ cải đường,3
-122,celery,cần tây,3
-123,pepper(s),ớt,3
-124,turnip,củ cải,3
-125,artichoke,atiso,3
-126,potato(es),khoai tây,3
-127,(ear of) corn,ngô,3
-128,yam,khoai lang,3
-129,( a bunch of) grapes,(một chùm) nho,4
-130,blueberries,quả việt quất,4
-131,cashew (s),hạt điều,4
-132,apple,táo,4
-133,strawberry,dâu tây,4
-134,peanut (s),lạc ,4
-135,coconut,dừa,4
-136,raspberries,mâm xôi,4
-137,walnut (s),quả óc chó,4
-138,pineapple,dứa,4
-139,nectarine,quả xuân đào,4
-140,hazelnut (s),hạt dẻ nhỏ,4
-141,mango,xoài,4
-142,pear,quả lê,4
-143,almond,quả hạnh,4
-144,papaya,đu đủ ,4
-145,cherries,anh đào,4
-146,chestnut (s),hạt dẻ,4
-147,grapefruit,quả trùm,4
-148,(a bunch of) bananas,chuối,4
-149,avocado (s),quả bơ,4
-150,orange,quả cam,4
-151,fig,quả sung,4
-152,plum,mận,4
-153,lemon,chanh,4
-154,prune,mận khô,4
-155,honeydew melon,dưa bở ruột xanh,4
-156,lime,chanh lá cam,4
-157,date,quả chà là ,4
-158,cantaloupe,dưa ruột vàng,4
-159,gooseberries,quả lý gai,4
-160,raisin (s),nho khô,4
-161,peach,quả đào,4
-162,blackberries,mâm xôi đen,4
-163,apricot,quả mơ,4
-164,cranberries,quả nam việt quất,4
-165,watermelon,dưa hấu,4
-166,beef,thịt bò,5
-167,pork,thịt lợn,5
-168,bacon,thịt muối xông khói,5
-169,ground beef,thịt bò xay,5
-170,sausage,xúc xích,5
-171,ham,thịt giăm bông,5
-172,roast,thịt quay,5
-173,lamb,thịt cừu non,5
-174,stewing meat,thịt kho,5
-175,chops,thịt sườn,5
-176,leg,thịt bắp đùi,5
-177,steak,thịt để nướng,5
-178,spare ribs,sườn,5
-179,whole chicken,cả con gà,5
-180,leg,đùi gà,5
-181,turkey,gà tây,5
-182,split,một phần,5
-183,breast,thịt ức,5
-184,chicken,gà giò,5
-185,quarter,một phần tư,5
-186,wing,cánh,5
-187,duck,vịt,5
-188,thigh,thịt bắp đùi,5
-189,fish,cá,5
-190,filet,thịt thăn,5
-191,whole fish,toàn con cá,5
-192,steak,miếng cá để nướng,5
-193,lobster,tôm hùm,5
-194,oyster (s),con hàu,5
-195,scallop (s),sò điệp,5
-196,shrimp,con tôm,5
-197,mussel (s),con trai,5
-198,crab (s),con cua,5
-199,clam (s),con nghêu/ngao,5
-200,carton,hộp/ bìa đựng,6
-201,roll,cuộn,6
-202,slice,miếng (bánh)/lát (chanh),6
-203,container,cái đựng,6
-204,box,thùng/ hộp giấy,6
-205,piece,góc/phần,6
-206,bottle,chai lọ,6
-207,six-pack,hộp chứa 6 lon/ chai,6
-208,bowl,tô/ bát,6
-209,package,thực phẩm đóng gói,6
-210,pump,chai/ lọ có đầu xịt,6
-211,spray can,bình xịt,6
-212,stick,thỏi kẹo,6
-213,tube,tuýp,6
-214,dollar bill,tiền giấy Đôla,6
-215,tub,hộp đựng,6
-216,pack,gói,6
-217,coins,tiền xu,6
-218,book,tập/xếp,6
-219,penny,đồng penni,6
-220,bag,túi,6
-221,bar,thanh/ que,6
-222,nickel,đồng xu trị giá 5 cent,6
-223,jar,vại/lọ/bình,6
-224,cup,tách/cốc,6
-225,dime,đồng 1 hào ( 10 cent),6
-226,can,lon,6
-227,glass,cốc thủy tinh,6
-228,quarter,đồng 25 xu,6
-229,deli counter,quầy bán thức ăn ngon,7
-230,aisle,lối đi,7
-231,shopping cart,xe đẩy,7
-232,frozen foods,thức ăn đông lạnh,7
-233,baked goods,đồ khô,7
-234,receipt,biên lai,7
-235,freezer,máy ướp lạnh,7
-236,bread,bánh mỳ,7
-237,cash register,máy tính tiền,7
-238,dairy products,các sản phẩm từ sữa,7
-239,canned goods,đồ đóng hộp,7
-240,cashier,thu ngân,7
-241,milk,sữa,7
-242,beverages,đồ uống,7
-243,conveyor belt,băng tải,7
-244,shelf,kệ để hàng,7
-245,household items,đồ gia dụng,7
-246,groceries,tạp phẩm,7
-247,scale,cân đĩa,7
-248,bin,thùng chứa,7
-249,bag,túi,7
-250,shopping basket,giỏ mua hàng,7
-251,customers,khách mua hàng,7
-252,checkout counter,quầy thu tiền,7
-253,produce,nông sản,7
-254,snacks,đồ ăn vặt,7
-255,check,séc,7
-256,cook,đầu bếp,8
-257,jukebox,máy chơi nhạc,8
-258,beer,bia,8
-259,waitress,nữ bồi bàn,8
-260,sugar,đường,8
-261,bar,quầy,8
-262,busboy,người phụ giúp bồi bàn dọn dẹp bàn ăn,8
-263,check,hóa đơn,8
-264,bar stool,ghế quầy bar,8
-265,ketchup,nước xốt cà chua,8
-266,tea,trà,8
-267,pipe,tẩu thuốc,8
-268,waiter,nam bồi bàn,8
-269,sandwich,1 loại bánh kẹp,8
-270,coaster,tấm lót cốc,8
-271,apron,tạp dề,8
-272,corkscrew,cái mở nút chai,8
-273,matches,(hộp) diêm,8
-274,menu,thực đơn,8
-275,cork,nút chai,8
-276,ashtray,gạt tàn,8
-277,high chair,ghế cao cho trẻ con ngồi ăn,8
-278,wine,rượu vang,8
-279,lighter,bật lửa,8
-280,booth,từng gian riêng,8
-281,tap,nút thùng rượu,8
-282,cigarette,thuốc lá,8
-283,straw,ống hút,8
-284,bartender,người phục vụ ở quầy rượu,8
-285,cocktail waitress,người phục vụ đồ uống,8
-286,soft drink,đồ uống ngọt không có cồn,8
-287,liquor,rượu/chất lỏng,8
-288,tray,khay/mâm,8
-289,eat,ăn,9
-290,clear,dọn bàn,9
-291,spread,phết,9
-292,drink,uống,9
-293,pay,thanh toán,9
-294,hold,cầm,9
-295,serve,phục vụ,9
-296,set the table,bày bàn ăn,9
-297,light,thắp,9
-298,cook,nấu,9
-299,give,đưa,9
-300,burn,cháy,9
-301,order,gọi món,9
-302,take,lấy lại,9
-303,mustard,mù tạc,10
-304,tossed salad,sa lát đã trộn,10
-305,egg roll,trứng cuộn,10
-306,hot dog,xúc xích,10
-307,beef stew,thịt bò hầm,10
-308,strawberry shortcake,bánh bơ dâu,10
-309,baked beans,đậu hầm,10
-310,pork chops,sườn lợn,10
-311,biscuit,bánh quy mặn,10
-312,potato chips,khoai tây chiên,10
-313,mixed vegetables,rau trộn,10
-314,french-fries,khoai tây chiên kiểu Pháp (cắt dài),10
-315,pancakes,bánh kếp,10
-316,mashed potatoes,khoai tây nghiền,10
-317,fried chicken,gà rán,10
-318,syrup,xi-rô,10
-319,butter,bơ,10
-320,pizza,bánh pizza,10
-321,bun,bánh bao nhân nho/bánh sữa nhỏ,10
-322,roll,ổ bánh mỳ nhỏ,10
-323,jelly,thạch,10
-324,pickle,dưa góp,10
-325,baked potato,khoai tây nướng,10
-326,(Sunnyside-up) egg,(lòng đỏ bên trên) trứng,10
-327,hamburger,bánh hamburger,10
-328,steak,bò bít tết,10
-329,bacon,thịt lợn muối xông khói,10
-330,spaghetti,mì ống,10
-331,cookie,bánh quy,10
-332,toast,bánh mỳ nướng,10
-333,meatballs,thịt viên,10
-334,sundae,kem mứt,10
-335,coffee,cà phê,10
-336,salad dressing,dầu giấm để trộn sa lát,10
-337,taco,bánh thịt chiên dòn,10
-338,ice cream cone,kem ốc quế,10
+﻿1,woman,phụ nữ,1,a jury of seven women and five men,http://audio.oxforddictionaries.com/en/mp3/woman_gb_1.mp3
+2,baby,đứa trẻ,1,a baby girl,http://audio.oxforddictionaries.com/en/mp3/baby_gb_1.mp3
+3,girl,cô gái,1,girls go through puberty earlier than boys,http://audio.oxforddictionaries.com/en/mp3/girl_gb_1_8.mp3
+4,man,đàn ông,1,the firemen manned the pumps and fought the blaze,http://audio.oxforddictionaries.com/en/mp3/man_gb_1.mp3
+5,parents ,bố mẹ ,1,his adoptive parents,http://audio.oxforddictionaries.com/en/mp3/parent_gb_1_8.mp3
+6,grandparents,ông bà ,1,it must be a great blessing to have Chloe's grandparents living nearby,http://audio.oxforddictionaries.com/en/mp3/grandparent_gb_1_8.mp3
+7,husband ,chồng ,1,she and her husband are both retired,http://audio.oxforddictionaries.com/en/mp3/husband_gb_1.mp3
+8,wife,vợ,1,a clergy wife,http://audio.oxforddictionaries.com/en/mp3/wife_gb_1.mp3
+11,boy,con trai,1,oh boy that's wonderful!,http://audio.oxforddictionaries.com/en/mp3/boy_gb_1.mp3
+14,mother,mẹ,1,she returned to Bristol to nurse her ageing mother,http://audio.oxforddictionaries.com/en/mp3/mother_gb_1.mp3
+15,father,bố,1,how like your father you are,http://audio.oxforddictionaries.com/en/mp3/father_gb_1.mp3
+16,grandmother,bà,1,my grandmother is ill,http://audio.oxforddictionaries.com/en/mp3/grandmother_gb_1.mp3
+18,uncle,chú bác trai cậu,1,tell me something interesting Uncle,http://audio.oxforddictionaries.com/en/mp3/uncle_gb_1.mp3
+20,cousin,anh em họ,1,she's a distant cousin,http://audio.oxforddictionaries.com/en/mp3/cousin_gb_1.mp3
+21,aunt,bác gái cô dì thím,1,she was brought up by her aunt and uncle,http://audio.oxforddictionaries.com/en/mp3/aunt_gb_1.mp3
+23,face,khuôn mặt,2,she was scarlet in the face and perspiring profusely,http://audio.oxforddictionaries.com/en/mp3/face_gb_1.mp3
+24,mouth,miệng,2,‘Come on’ he mouthed,http://audio.oxforddictionaries.com/en/mp3/mouth_gb_2.mp3
+26,neck,cổ ,2,she had a silver crucifix around her neck,http://audio.oxforddictionaries.com/en/mp3/neck_gb_1.mp3
+27,shoulder,vai,2,we shouldered our crippling backpacks and set off slowly up the hill,http://audio.oxforddictionaries.com/en/mp3/shoulder_gb_1.mp3
+28,arm,cánh tay,2,she held the baby in her arms,http://audio.oxforddictionaries.com/en/mp3/arm_gb_1.mp3
+30,elbow,khuỷu tay,2,she propped herself up on one elbow,http://audio.oxforddictionaries.com/en/mp3/elbow_gb_1.mp3
+32,armpit ,nách,2,they call the region the armpit of America,http://audio.oxforddictionaries.com/en/mp3/armpit_gb_1.mp3
+33,back,lưng,2,back pain,http://audio.oxforddictionaries.com/en/mp3/back_gb_1.mp3
+34,chest,ngực,2,he was very well built with a muscular chest,http://audio.oxforddictionaries.com/en/mp3/chest_gb_1.mp3
+35,waist ,eo,2,the last time you had a waist was around 1978,http://audio.oxforddictionaries.com/en/mp3/waist_gb_1.mp3
+38,hip,hông,2,it's hip to be environmentally conscious,http://audio.oxforddictionaries.com/en/mp3/hip_gb_1.mp3
+39,leg,chân,2,Adams broke his leg,http://audio.oxforddictionaries.com/en/mp3/leg_gb_1.mp3
+42,calf,bắp chân,2,a heifer calf,http://audio.oxforddictionaries.com/en/mp3/calf_gb_1.mp3
+43,wrist,cổ tay,2,I fell over and sprained my wrist,http://audio.oxforddictionaries.com/en/mp3/wrist_gb_1.mp3
+51,palm,lòng bàn tay,2,he would spin wild tales while palming your wristwatch,http://audio.oxforddictionaries.com/en/mp3/palm_gb_1.mp3
+52,hair,tóc,2,thick black hairs on his huge arms,http://audio.oxforddictionaries.com/en/mp3/hair_gb_1_8.mp3
+53,part,ngôi rẽ,2,his lips parted in a smile,http://audio.oxforddictionaries.com/en/mp3/part_gb_1.mp3
+57,cheek,má ,2,tears rolled down her cheeks,http://audio.oxforddictionaries.com/en/mp3/cheek_gb_1.mp3
+58,nose,mũi,2,he slowly breathed out the air through his nose,http://audio.oxforddictionaries.com/en/mp3/nose_gb_1.mp3
+60,jaw,quai hàm,2,I was too busy to spend time jawing with the rest of the crew,http://audio.oxforddictionaries.com/en/mp3/jaw_gb_1.mp3
+61,beard,râu,2,he was afraid to beard the sultan himself,http://audio.oxforddictionaries.com/en/mp3/beard_gb_1.mp3
+71,ankle,mắt cá chân,2,we can ankle off to a new locale,http://audio.oxforddictionaries.com/en/mp3/ankle_gb_1.mp3
+73,instep,mu bàn chân,2,the shoes are comfortable because they have a moulded instep,http://audio.oxforddictionaries.com/en/mp3/instep_gb_1.mp3
+74,ball,xương khớp ngón chân,2,a cricket ball,http://audio.oxforddictionaries.com/en/mp3/ball_gb_1.mp3
+76,toe,ngón chân,2,he toed off his shoes and flexed his feet,http://audio.oxforddictionaries.com/en/mp3/toe_gb_1.mp3
+79,brain,não,2,she brained me with a rolling pin,http://audio.oxforddictionaries.com/en/mp3/brain_gb_1.mp3
+81,throat,cuống họng,2,he's pouring beer down his throat,http://audio.oxforddictionaries.com/en/mp3/throat_gb_1.mp3
+84,muscle,bắp thịt cơ,2,they were muscling baggage into the hold of the plane,http://audio.oxforddictionaries.com/en/mp3/muscle_gb_1.mp3
+86,heart,tim,2,I totally heart this song,http://audio.oxforddictionaries.com/en/mp3/heart_gb_1.mp3
+87,liver,gan,2,high livers,http://audio.oxforddictionaries.com/en/mp3/liver_gb_1.mp3
+88,stomach,dạ dày,2,if you cannot stomach orange juice try apple juice,http://audio.oxforddictionaries.com/en/mp3/stomach_gb_1.mp3
+90,vein,tĩnh mạch,2,he felt the adrenaline course through his veins,http://audio.oxforddictionaries.com/en/mp3/vein_gb_1.mp3
+94,bladder,bọng đái,2,patients were asked to empty their bladders before going to bed,http://audio.oxforddictionaries.com/en/mp3/bladder_gb_1.mp3
+96,kidney bean(s),đậu tây,3,she picked up a rock and beaned him on the forehead,http://audio.oxforddictionaries.com/en/mp3/bean_gb_1.mp3
+97,garlic,tỏi,3,garlic butter,http://audio.oxforddictionaries.com/en/mp3/garlic_gb_1.mp3
+100,pumpkin,bí ngô,3,listen pumpkin I thought you ought to know,http://audio.oxforddictionaries.com/en/mp3/pumpkin_gb_1.mp3
+101,cabbage,cải bắp ,3,boiled cabbage,http://audio.oxforddictionaries.com/en/mp3/cabbage_gb_1.mp3
+108,pea(s),đậu,3,steak and ale pie with peas and new potatoes,http://audio.oxforddictionaries.com/en/mp3/pea_gb_1.mp3
+112,mushroom(s),nấm,3,mushroom soup,http://audio.oxforddictionaries.com/en/mp3/mushroom_gb_2.mp3
+114,tomato(es),cà chua,3,she got into the tomato Mini and drove away,http://audio.oxforddictionaries.com/en/mp3/tomato_gb_1.mp3
+115,onion(s),hành,3,onion rings,http://audio.oxforddictionaries.com/en/mp3/onion_gb_1.mp3
+118,carrot(s),cà rốt,3,carrot juice,http://audio.oxforddictionaries.com/en/mp3/carrot_gb_1.mp3
+119,herb(s),rau thơm,3,bundles of dried herbs,http://audio.oxforddictionaries.com/en/mp3/herb_gb_1_8.mp3
+167,pork,thịt lợn,5,pork chops,http://audio.oxforddictionaries.com/en/mp3/pork_gb_1.mp3
+168,bacon,thịt muối xông khói,5,a bacon sandwich,http://audio.oxforddictionaries.com/en/mp3/bacon_gb_1.mp3
+170,sausage,xúc xích,5,smoked German sausage,http://audio.oxforddictionaries.com/en/mp3/sausage_gb_1.mp3
+171,ham,thịt giăm bông,5,she hammed it up for the cameras,http://audio.oxforddictionaries.com/en/mp3/ham_gb_1.mp3
+172,roast,thịt quay,5,she was going to roast a leg of mutton for Sunday dinner,http://audio.oxforddictionaries.com/en/mp3/roast_gb_1.mp3
+173,lamb,thịt cừu non,5,Shetland sheep lamb very easily,http://audio.oxforddictionaries.com/en/mp3/lamb_gb_1.mp3
+175,chops,thịt sườn,5,a smack in the chops,http://audio.oxforddictionaries.com/en/mp3/chops_gb_1.mp3
+176,leg,thịt bắp đùi,5,Adams broke his leg,http://audio.oxforddictionaries.com/en/mp3/leg_gb_1.mp3
+177,steak,thịt để nướng,5,half a pound of fillet steak,http://audio.oxforddictionaries.com/en/mp3/steak_gb_1.mp3
+180,leg,đùi gà,5,Adams broke his leg,http://audio.oxforddictionaries.com/en/mp3/leg_gb_1.mp3
+182,split,một phần,5,light squeezed through a small split in the curtain,http://audio.oxforddictionaries.com/en/mp3/split_gb_1.mp3
+183,breast,thịt ức,5,breast cancer,http://audio.oxforddictionaries.com/en/mp3/breast_gb_1.mp3
+184,chicken,gà giò,5,I was too chicken to go to court,http://audio.oxforddictionaries.com/en/mp3/chicken_gb_1.mp3
+185,quarter,một phần tư,5,a page and a quarter,http://audio.oxforddictionaries.com/en/mp3/quarter_gb_1.mp3
+186,wing,cánh,5,George satisfied his keen urge to fly by winging homewards with the Royal Air Force,http://audio.oxforddictionaries.com/en/mp3/wing_gb_1.mp3
+187,duck,vịt,5,spectators ducked for cover,http://audio.oxforddictionaries.com/en/mp3/duck_gb_1.mp3
+189,fish,cá,5,he was fishing for pike,http://audio.oxforddictionaries.com/en/mp3/fish_gb_1.mp3
+190,filet,thịt thăn,5,filet de boeuf,http://audio.oxforddictionaries.com/en/mp3/filet_gb_1_8.mp3
+192,steak,miếng cá để nướng,5,half a pound of fillet steak,http://audio.oxforddictionaries.com/en/mp3/steak_gb_1.mp3
+193,lobster,tôm hùm,5,he has been lobstering in Maine for 50 years,http://audio.oxforddictionaries.com/en/mp3/lobster_gb_1.mp3
+194,oyster (s),con hàu,5,oystering is still the lifeblood of this town,http://audio.oxforddictionaries.com/en/mp3/oyster_gb_1.mp3
+195,scallop (s),sò điệp,5,a scalloped V-shaped neckline,http://audio.oxforddictionaries.com/en/mp3/scallop_gb_1.mp3
+196,shrimp,con tôm,5,at Trebetherick you paddle on Daymer Bay or shrimp off Gully,http://audio.oxforddictionaries.com/en/mp3/shrimp_gb_1.mp3
+199,clam (s),con nghêu ngao,5,November is one of the worst times for clamming,http://audio.oxforddictionaries.com/en/mp3/clam_gb_1.mp3
+200,carton,hộp/ bìa đựng,6,a carton of milk,http://audio.oxforddictionaries.com/en/mp3/carton_gb_1.mp3
+201,roll,cuộn,6,a roll of carpet,http://audio.oxforddictionaries.com/en/mp3/roll_gb_1.mp3
+202,slice,miếng (bánh) lát (chanh),6,four slices of bread,http://audio.oxforddictionaries.com/en/mp3/slice_gb_1.mp3
+203,container,cái đựng (cốc bình hộp...),6,the cakes will keep for up to two weeks if kept in an airtight container,http://audio.oxforddictionaries.com/en/mp3/xcontainer_gb_1.mp3
+205,piece,góc phần,6,the dish lay in pieces on the floor,http://audio.oxforddictionaries.com/en/mp3/piece_gb_1.mp3
+206,bottle,chai lọ,6,he opened the bottle of beer,http://audio.oxforddictionaries.com/en/mp3/bottle_gb_1.mp3
+208,bowl,tô/ bát,6,she snatched her hat off and bowled it ahead of her,http://audio.oxforddictionaries.com/en/mp3/bowl_gb_1.mp3
+209,package,thực phẩm đóng gói,6,choose products which are packaged in recyclable materials,http://audio.oxforddictionaries.com/en/mp3/package_gb_1.mp3
+212,stick,thỏi kẹo,6,he stuck his fork into the sausage,http://audio.oxforddictionaries.com/en/mp3/stick_gb_1.mp3
+213,tube,tuýp,6,a giant eight-tubed hookah,http://audio.oxforddictionaries.com/en/mp3/tube_gb_1.mp3
+215,tub,hộp đựng,6,a rainwater tub,http://audio.oxforddictionaries.com/en/mp3/tub_gb_1.mp3
