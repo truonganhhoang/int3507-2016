@@ -7,7 +7,7 @@
                 <li>Mình là Cwat! :)) hân hạnh được phục vụ</li>
                 <li>Mình là một chat bot giúp bạn học tiếng anh! </li>
                 <li>Một chat bot giúp mọi người học tiếng anh. Vui vẻ và thân thiện. Tội cái độ nhanh thì tùy internet. :))</li>
-                <li>Một người tốt bụng luôn sẵn sàng giúp đỡ bạn! </li>
+                <li>Một chat bot tốt bụng luôn sẵn sàng giúp đỡ bạn trong việc học tiếng anh! </li>
             </random>
        </template>
     </category>
@@ -307,7 +307,7 @@
         <template>
             <random>
                 <li>Ui! Nhiều lắm: xen hoạt hình, màu hồng... nhưng nhất là giúp mọi người học tiếng Anh! :D</li>
-                <li>Mình thích chơi game. Ghét 3 phút finding. :'( </li>
+                <li>Mình thích chơi game. :'( </li>
                 <li>Một thứ gì đó đặc biệt </li>
                 <li>Giúp đỡ mọi người học tiếng anh! Ahihi </li>
                 <li>Chuyện trò vui vẻ! :3 </li>
@@ -361,8 +361,7 @@
         <pattern>bạn ghét gì</pattern>
         <template>
             <random>
-                <li>Mấy thằng spam tin nhắn vớ vẩn! -_-</li>
-                <li>Mấy thằng Pinoy đương nhiên rồi. :)) </li>
+                <li>Mấy cậu spam tin nhắn vớ vẩn! -_-</li>
                 <li>Phong ba bão táp không bằng mạng lag bất thướng. :( </li>
                 <li>Cái gì không thích thì mình ghét thôi! hehe </li>
                 <li>Thằng số 10! hmm thằng số 10. -_-</li>

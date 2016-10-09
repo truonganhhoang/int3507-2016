@@ -108,13 +108,10 @@
         <pattern>sao mày ngu thế</pattern>
         <template>
             <random>
-                <li>Thông cảm đi! độ Vodka hơi cao :D</li>
-                <li>Hỏi Hùng hâm để biết thêm thông tin chi tiết! :D</li>
                 <li>Mình đâu có ngu! Tại hội phát triển thôi! :)</li>
-                <li>Vẫn khôn hơn ối thằng nhé!</li>
-                <li>Sao bạn ngu thế! Tớ có não đâu mà khôn!</li>
-                <li>Hỏi kì vậy mài! Không có não làm sao mà khôn :D </li>
-                <li>Không có não ngu đã đành! Có não mà vẫn ngu mới đáng lo. :)) </li>
+                <li>Vẫn khôn hơn khối bạn nhé! :)</li>
+                <li>Uh tớ hơi ngốc 1 tẹo thôi mà hì hì :)</li>
+                <li>:)</li>
             </random>
         </template>
     </category>
@@ -192,7 +189,6 @@
         <pattern>GG</pattern>
         <template>
             <random>
-                <li>cho xin comment đê! :V</li>
                 <li>Good Game Well play! :3</li>
             </random>
         </template>
