@@ -1,20 +1,16 @@
-## Cwat version 0.1
+## Cwat version 0.3
 
 **New features**
 
-- Users can ask Cwat for multiple choice question exercises.
-  ![multiple choices](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/multiple-choices.png)
+- Users can now learn both listening and writing skills with Cwat.
+  ![listening](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/listening.png)
 
-- Cwat knows which question has been correctly answered by the users and will not show that question again.
-  ![right answer](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/right-answer.png)
+- Cwat helps you improve by correcting your answer and showing how many percent correctness you've achieved.
+  ![listening 1](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/listening-1.png)
 
-- Improved user experience with friendly interaction (programab intergrated).
-  ![conversation](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/conversation.png)
+- Improved user experience with friendly interaction.
 
-- Error/Exception handling if any service is down.
-  ![error handling](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/handling-exceptions.png)
-
-- The database has been updated with more questions.
+- The database has been updated with more audio questions for listening feature.
 
 
 ## Cwat version 0.2
@@ -37,3 +33,22 @@
   ![conversation 1](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/conversation-1.png)
 
 - The database has been updated with more questions new words.
+
+
+## Cwat version 0.1
+
+**New features**
+
+- Users can ask Cwat for multiple choice question exercises.
+  ![multiple choices](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/multiple-choices.png)
+
+- Cwat knows which question has been correctly answered by the users and will not show that question again.
+  ![right answer](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/right-answer.png)
+
+- Improved user experience with friendly interaction (programab intergrated).
+  ![conversation](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/conversation.png)
+
+- Error/Exception handling if any service is down.
+  ![error handling](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/handling-exceptions.png)
+
+- The database has been updated with more questions.
