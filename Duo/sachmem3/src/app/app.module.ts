@@ -15,6 +15,8 @@ import { Reading } from '../components/reading/reading';
 // import { Speaking } from '../components/speaking/speaking';
 import { Writing } from '../components/writing/writing';
 
+import { Login } from '../components/login/login'
+
 @NgModule({
   declarations: [
     MyApp,
@@ -27,7 +29,8 @@ import { Writing } from '../components/writing/writing';
     Playing,
     Listening,
     Reading,
-    Writing
+    Writing,
+    Login
   ],
   imports: [
     IonicModule.forRoot(MyApp)
