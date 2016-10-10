@@ -51,17 +51,21 @@ export class WordService {
   }
 
   getLearningWords(unitId: number): Promise<Object[]> {
-    let result: Object[] = [];
-
-    return new Promise(resolve => {
+    return new Promise<Object[]>(resolve => {
       this.getWordsByUnit(unitId).then(wordsByUnit => {
+        let result: Object[] = [];
+        // alert('eo');
+
         this.nativeService.getStorage('learned').then(
           data => {
+            // alert('data = ' + data);
             for (let i = 0; i < wordsByUnit.length; i++) {
               if (data.indexOf(parseInt(wordsByUnit[i]['id'])) < 0) {
                 result.push(wordsByUnit[i]);
               }
             }
+
+            resolve(result);
           },
           err => {
             for (let i = 0; i < wordsByUnit.length; i++) {
@@ -69,10 +73,10 @@ export class WordService {
                 result.push(wordsByUnit[i]);
               // }
             }
-          }
-        );
 
-        resolve(result);
+            resolve(result);
+          }
+        );        
       });
     })
   }

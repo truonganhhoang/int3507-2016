@@ -31,7 +31,7 @@
     <ion-item *ngFor="let item of learnedWords" (click)="enterLearning(item)">
       <p color="primary" class="content">{{item.content}}</p>
       <p class="meaning">{{item.meaning}}</p>
-      <button ion-button clear icon-only item-right (click)="speak(item)">
+      <button ion-button clear icon-only item-right (click)="speak(item); $event.stopPropagation();">
         <ion-icon name="volume-up"></ion-icon>
       </button>
     </ion-item>

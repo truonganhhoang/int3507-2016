@@ -33,7 +33,7 @@ export class Learning implements OnInit {
       this.pageType = 0;
       this.wordService.getLearningWords(unitId).then(res => {
         this.words = res;
-        console.log(this.words);
+        // console.log(this.words);
         this.reload();
       });
     } else {
