@@ -39,6 +39,9 @@ module.exports = function receivedMessage(event) {
             else if (action === 'MCSUGGESTION') {
                 require('../fnMutipleChoices/handleSuggestionQuickReply')(senderID, payload, event);
             }
+            else if (action === 'LINEXT') {
+                require('../fnListening/sendListeningChallenge')(senderID);
+            }
         }
     }
 
@@ -49,6 +52,9 @@ module.exports = function receivedMessage(event) {
             }
             else if (reply && reply.context === 'MC') {
                 require('../fnMutipleChoices/handleTextReplyAction')(senderID, messageText, event);
+            }
+            else if (reply && reply.context === 'LI') {
+                require('../fnListening/handleTextReplyAction')(senderID, messageText, event);
             }
             else {
                 require('../intentClassification/getIntentClassification')(messageText, function (err, response) {
