@@ -63,7 +63,13 @@ export class WordService {
               }
             }
           },
-          err => { }
+          err => {
+            for (let i = 0; i < wordsByUnit.length; i++) {
+              // if (data.indexOf(parseInt(wordsByUnit[i]['id'])) < 0) {
+                result.push(wordsByUnit[i]);
+              // }
+            }
+          }
         );
 
         resolve(result);
