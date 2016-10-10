@@ -20,8 +20,8 @@ export class Login {
 
   login() {
     GooglePlus.login({
-      'scopes': 'https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.file', // optional, space-separated list of scopes, If not included or empty, defaults to `profile` and `email`.
-      'webClientId': '302095486746-e7n3e4mhkum4vrlq1heigesrtah1khce.apps.googleusercontent.com', // optional clientId of your Web application from Credentials settings of your project - On Android, this MUST be included to get an idToken. On iOS, it is not required.
+      'scopes': 'profile', // optional, space-separated list of scopes, If not included or empty, defaults to `profile` and `email`.
+      'webClientId': '1029342345664-8vt4o6il1unl0g0ef348suhcgmt6pt5f.apps.googleusercontent.com', // optional clientId of your Web application from Credentials settings of your project - On Android, this MUST be included to get an idToken. On iOS, it is not required.
       'offline': true, // optional, but requires the webClientId - if set to true the plugin will also return a serverAuthCode, which can be used to grant offline access to a non-Google server
     }).then(res => {
       this.profile = res;
@@ -33,8 +33,8 @@ export class Login {
 
   loginSilent() {
     GooglePlus.trySilentLogin({
-      'scopes': 'https://www.googleapis.com/auth/drive', // optional, space-separated list of scopes, If not included or empty, defaults to `profile` and `email`.
-      'webClientId': '302095486746-e7n3e4mhkum4vrlq1heigesrtah1khce.apps.googleusercontent.com', // optional clientId of your Web application from Credentials settings of your project - On Android, this MUST be included to get an idToken. On iOS, it is not required.
+      'scopes': 'profile', // optional, space-separated list of scopes, If not included or empty, defaults to `profile` and `email`.
+      'webClientId': '1029342345664-8vt4o6il1unl0g0ef348suhcgmt6pt5f.apps.googleusercontent.com', // optional clientId of your Web application from Credentials settings of your project - On Android, this MUST be included to get an idToken. On iOS, it is not required.
       'offline': true, // optional, but requires the webClientId - if set to true the plugin will also return a serverAuthCode, which can be used to grant offline access to a non-Google server
     }).then(res => {
       this.profile = res;

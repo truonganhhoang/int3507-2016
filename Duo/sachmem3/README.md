@@ -5,3 +5,5 @@ ionic plugin add cordova-plugin-vibration
 ionic plugin add cordova-plugin-nativeaudio
 
 ionic plugin add cordova-plugin-tts
+
+ionic plugin add cordova-plugin-googleplus
