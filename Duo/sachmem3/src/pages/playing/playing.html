@@ -6,7 +6,9 @@
 -->
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>Play</ion-title>
+    <ion-title *ngIf="selectedGame == 'r'">Reading</ion-title>
+    <ion-title *ngIf="selectedGame == 'l'">Listening</ion-title>
+    <ion-title *ngIf="selectedGame == 'w'">Writing</ion-title>
   </ion-navbar>
 </ion-header>
 
