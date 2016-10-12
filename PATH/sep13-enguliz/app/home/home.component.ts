@@ -7,6 +7,7 @@ import {HomeService} from "./home.service";
 import {Category} from "./category.model";
 import {UserService} from "../user/user.service";
 import {User} from "../user/user.model";
+import {Router} from "@angular/router";
 
 @Component({
     templateUrl: 'app/home/home.component.html',
@@ -22,8 +23,8 @@ export class HomeComponent implements OnInit {
     categories : Category[];
 
     constructor(
-        private service: HomeService)
-    {
+        private service: HomeService,
+        private router: Router) {
         this.loggedIn = !!localStorage.getItem('auth_token');
     }
 
@@ -37,33 +38,19 @@ export class HomeComponent implements OnInit {
             )
     }
 
-    loadUserProfile() {
-        let auth_token = localStorage.getItem('auth_token');
-        this.service.getProfile(auth_token).subscribe(
-            data => {
-                this.user = data;
-                this.email = this.user.userName;
-                console.log(this.email);
-            },
-            err => {
-                console.log(err);
-            }
-        )
-    }
-
     isLoggedIn() {
         return this.loggedIn;
     }
 
-    logout() {
-        this.service.logout(localStorage.getItem('auth_token'));
-        localStorage.removeItem('auth_token');
+    detailsAction(unitId) {
+        if(this.loggedIn) {
+            this.router.navigate(['/details', unitId]);
+        } else {
+            this.router.navigate(['/login']);
+        }
     }
 
     ngOnInit() {
-        if (this.isLoggedIn()) {
-            this.loadUserProfile();
-        }
         this.loadHomeDatas();
     }
 }

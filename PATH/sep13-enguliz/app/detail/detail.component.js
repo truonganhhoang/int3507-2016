@@ -28,6 +28,11 @@ var DetailComponent = (function () {
         this.userAns = {};
         this.userAnswer = [];
         this.loggedIn = !!localStorage.getItem('auth_token');
+        if (this.loggedIn) {
+        }
+        else {
+            this.router.navigate(['/login']);
+        }
     }
     DetailComponent.prototype.loadDetailsData = function (id) {
         var _this = this;
@@ -58,7 +63,8 @@ var DetailComponent = (function () {
     DetailComponent.prototype.submitAns = function () {
         this.isTest = false;
         this.isNotify = true;
-        this.service.submitAns(this.unit._id, JSON.stringify(this.userAnswer)).subscribe(function (data) { return console.log(data); }, function (err) { return console.log(JSON.stringify(err)); });
+        this.service.submitAns(this.unit._id, JSON.stringify(this.userAnswer))
+            .subscribe(function (data) { return console.log(data); }, function (err) { return console.log(JSON.stringify(err)); });
     };
     DetailComponent.prototype.chooseAns = function (questionId, ansId) {
         this.userAnswer.push(new anwser_model_1.Anwser(questionId, ansId));

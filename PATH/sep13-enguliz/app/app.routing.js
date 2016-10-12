@@ -20,7 +20,7 @@ var appRoutes = [
             { path: 'read', component: test_component_2.TestReadCompoent }
         ]
     },
-    { path: 'detail/:id', component: detail_component_1.DetailComponent }
+    { path: 'details/:id', component: detail_component_1.DetailComponent }
 ];
 exports.appRoutingProvider = [];
 exports.routing = router_1.RouterModule.forRoot(appRoutes);

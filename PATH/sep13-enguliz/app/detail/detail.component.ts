@@ -29,6 +29,11 @@ export class DetailComponent implements OnInit {
                 private route:ActivatedRoute,
                 private service:DetailService) {
         this.loggedIn = !!localStorage.getItem('auth_token');
+        if(this.loggedIn) {
+
+        } else {
+            this.router.navigate(['/login']);
+        }
     }
 
     loadDetailsData(id) {
@@ -64,7 +69,10 @@ export class DetailComponent implements OnInit {
         this.isTest = false;
         this.isNotify = true;
 
-        this.service.submitAns(this.unit._id, JSON.stringify(this.userAnswer)).subscribe(data => console.log(data), err => console.log(JSON.stringify(err)));
+        this.service.submitAns(this.unit._id, JSON.stringify(this.userAnswer))
+                .subscribe(
+                    data => console.log(data),
+                    err => console.log(JSON.stringify(err)));
 
     }
 
@@ -82,8 +90,6 @@ export class DetailComponent implements OnInit {
         } else {
             return ticks + " giây";
         }
-        
-
     }
 
     ngOnInit() {

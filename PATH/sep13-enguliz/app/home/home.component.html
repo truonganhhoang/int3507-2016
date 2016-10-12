@@ -1,29 +1,6 @@
 <div class="container">
     <div class="row">
-        <div class="header row" style="margin-left: 0;">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4">
-                <div class="sreach">
-                    <form action="#">
-                        <input type="text" placeholder="Sreach" style="border: none">
-                    </form>
-                </div>
 
-            </div>
-            <div class="col-sm-4">
-                <ul *ngIf="loggedIn === false">
-                    <li><a [routerLink]="['login']">Login</a></li>
-                    <li><a href="#" class="sign-up">Sign up</a></li>
-                </ul>
-                <ul *ngIf="loggedIn === true">
-                    <li>Tài khoản: <a href=""> {{email}}</a></li>
-                    <li><a href="" (click)="logout()">Logout</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="slider row">
-
-        </div>
         <div class="partner-banner row">
             <div class="col-sm-2 partner-logo">
                 <img src="../../images/Penn-logo.png" alt="">
@@ -56,7 +33,7 @@
                     </a>
                 </div>
                 <div class="list-body">
-                    <div class="list-item" *ngFor="let unit of category.categoryItems" [routerLink]="['detail', unit.unitId]">
+                    <div class="list-item" *ngFor="let unit of category.categoryItems" (click)="detailsAction(unit.unitId)">
                         <div class="item">
                             <div class="flex">
                                 <div class="side">

@@ -1,32 +1,4 @@
 <div class="container">
-    <div class="row">
-        <div class="header row" style="margin-left: 0;">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4">
-                <div class="sreach">
-                    <form action="#">
-                        <input type="text" placeholder="Sreach" style="border: none">
-                    </form>
-                </div>
-
-            </div>
-            <div class="col-sm-4">
-                <ul *ngIf="loggedIn === false">
-                    <li><a [routerLink]="['login']">Login</a></li>
-                    <li><a href="#" class="sign-up">Sign up</a></li>
-                </ul>
-                <ul *ngIf="loggedIn === true">
-                    <li>Tài khoản: <a href=""> {{email}}</a></li>
-                    <li><a href="" (click)="logout()">Logout</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="slider row">
-
-        </div>
-    </div>
-
-
     <div style="width: 100%;text-align: center;" *ngIf="unit">
         <h3>{{unit.unitTitle}}</h3>
         <img alt="" width="30%" height="30%" src="{{unit.unitThumbnail}}"><br>

@@ -13,9 +13,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var home_service_1 = require("./home.service");
+var router_1 = require("@angular/router");
 var HomeComponent = (function () {
-    function HomeComponent(service) {
+    function HomeComponent(service, router) {
         this.service = service;
+        this.router = router;
         this.loggedIn = false;
         this.email = '';
         this.loggedIn = !!localStorage.getItem('auth_token');
@@ -27,28 +29,18 @@ var HomeComponent = (function () {
             console.error(err);
         });
     };
-    HomeComponent.prototype.loadUserProfile = function () {
-        var _this = this;
-        var auth_token = localStorage.getItem('auth_token');
-        this.service.getProfile(auth_token).subscribe(function (data) {
-            _this.user = data;
-            _this.email = _this.user.userName;
-            console.log(_this.email);
-        }, function (err) {
-            console.log(err);
-        });
-    };
     HomeComponent.prototype.isLoggedIn = function () {
         return this.loggedIn;
     };
-    HomeComponent.prototype.logout = function () {
-        this.service.logout(localStorage.getItem('auth_token'));
-        localStorage.removeItem('auth_token');
+    HomeComponent.prototype.detailsAction = function (unitId) {
+        if (this.loggedIn) {
+            this.router.navigate(['/details', unitId]);
+        }
+        else {
+            this.router.navigate(['/login']);
+        }
     };
     HomeComponent.prototype.ngOnInit = function () {
-        if (this.isLoggedIn()) {
-            this.loadUserProfile();
-        }
         this.loadHomeDatas();
     };
     HomeComponent = __decorate([
@@ -56,7 +48,7 @@ var HomeComponent = (function () {
             templateUrl: 'app/home/home.component.html',
             providers: [home_service_1.HomeService]
         }), 
-        __metadata('design:paramtypes', [home_service_1.HomeService])
+        __metadata('design:paramtypes', [home_service_1.HomeService, router_1.Router])
     ], HomeComponent);
     return HomeComponent;
 }());

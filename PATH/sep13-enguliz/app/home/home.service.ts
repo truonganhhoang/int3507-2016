@@ -13,7 +13,6 @@ import {User} from "../user/user.model";
 export class HomeService {
 
     private homeUrl = `${AppSettings.API_ENDPOINT}/home`;
-    private userProfileUrl = `${AppSettings.API_ENDPOINT}/user/profile`;
     
     constructor(private http: Http) {}
 
@@ -23,23 +22,5 @@ export class HomeService {
                         .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
                 
     }
-
-
-    getProfile(token): Observable<User> {
-        let headers = new Headers({ 'access_token': token });
-        return this.http.get(this.userProfileUrl, {headers: headers})
-            .map((res:Response) => res.json().data)
-            .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
-
-    }
-
-    private logoutUrl = `${AppSettings.API_ENDPOINT}/user/logout`;
-    logout(token) {
-        let headers = new Headers({ 'access_token': token });
-        return this.http.get(this.logoutUrl, {headers: headers})
-            .map((res:Response) => res.json())
-            .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
-    }
-    
 
 }

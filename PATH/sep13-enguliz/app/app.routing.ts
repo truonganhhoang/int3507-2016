@@ -21,7 +21,7 @@ const appRoutes: Routes = [
             { path: 'read', component: TestReadCompoent }
         ]
     },
-    { path: 'detail/:id', component: DetailComponent }
+    { path: 'details/:id', component: DetailComponent }
 ];
 
 export const appRoutingProvider: any[] = [
