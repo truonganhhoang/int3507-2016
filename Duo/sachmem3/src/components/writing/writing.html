@@ -1,7 +1,7 @@
-<ion-grid>
+<ion-grid class="writing">
 	<ion-row wrap style="min-height: 50px;">
     <ion-col width-10 *ngFor="let item of answers" style="height:50px">
-      <button ion-button [@answerState]="answerState" block style="white-space:initial;height:100%;">
+      <button ion-button [@answerState]="answerState" class="answer" block style="white-space:initial;height:100%;">
         {{item}}
       </button>
     </ion-col>
@@ -12,7 +12,7 @@
 		<!-- <span *ngFor="let item of answers">{{item}}</span> -->
   </ion-row>
   <ion-row wrap>
-    <ion-col width-20 *ngFor="let item of options" style="height:50px">
+    <ion-col width-20 *ngFor="let item of options" class="option-answer" style="height:50px">
       <button ion-button block outline (click)="pick(item)"
               style="white-space:initial;height:100%">
         {{item}}

@@ -1,7 +1,7 @@
 <ion-grid>
   <ion-row wrap>
     <ion-col width-50 *ngFor="let item of answers" style="height:60px">
-      <button ion-button block outline (click)="checkAnswer(item)" style="white-space:initial;height:100%"
+      <button ion-button block outline (click)="checkAnswer(item)" class="answer" style="white-space:initial;height:100%"
       [@answerState]="item.state">
         {{item.content}}
       </button>
