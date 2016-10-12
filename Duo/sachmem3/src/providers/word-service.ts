@@ -93,11 +93,13 @@ export class WordService {
                 result.push(allWords[i]);
               }
             }
-          },
-          err => { }
-        );
 
-        resolve(result);
+            resolve(result);
+          },
+          err => {
+            resolve(result);
+          }
+        );
       });
     })
   }

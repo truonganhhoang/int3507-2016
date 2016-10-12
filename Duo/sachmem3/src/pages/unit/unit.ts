@@ -41,8 +41,11 @@ export class Unit {
   }
 
   ionViewDidEnter() {
+    // alert('here');
     this.wordService.getReviewWords(this.bookId).then(res => {
       this.learned = res.length;
+
+      // alert('this.learn = ' + this.learned);
     });
   }
 
