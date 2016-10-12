@@ -9,7 +9,7 @@
         <audio src="../../public/P1_17_01.mp3" controls="controls" *ngIf="unit.unitType == 'Listening'">
         </audio><br>
 
-        <button class="btn btn-primary" (click)="startTesting()">Bắt đầu</button>
+        <button *ngIf="!isTest" class="btn btn-primary" (click)="startTesting()">Bắt đầu</button>
 
     </div>
 

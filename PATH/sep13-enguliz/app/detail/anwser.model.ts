@@ -4,7 +4,7 @@
 export class Anwser {
 
     constructor(
-        public ansId: string,
-        public ansContent: string
+        public time: number,
+        public answer: any[]
     ) {}
 }

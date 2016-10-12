@@ -20,9 +20,10 @@ export class DetailService {
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
     }
 
-    submitAns(id, body) {
-        let headers = new Headers({ 'Content-Type': 'application/json' });
+    submitAns(token, id, body) {
+        let headers = new Headers({ 'Content-Type': 'application/json', 'access_token': token });
         let options = new RequestOptions({ headers: headers });
+
         return this.http.post(this.detailsUrl + "/" + id + "/submit", body, options)
             .map((res:Response) => res.json())
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'))

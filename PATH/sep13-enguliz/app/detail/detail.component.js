@@ -48,7 +48,7 @@ var DetailComponent = (function () {
         this.isTest = true;
         this.isNotify = false;
         var timer = Rx_1.Observable.timer(0, 999).take(this.unit.unitTime / 1000);
-        timer.subscribe(function (t) {
+        this.sub = timer.subscribe(function (t) {
             if (_this.ticks <= 1) {
                 _this.isTest = false;
                 _this.isNotify = true;
@@ -61,10 +61,16 @@ var DetailComponent = (function () {
         return this.loggedIn;
     };
     DetailComponent.prototype.submitAns = function () {
+        var _this = this;
         this.isTest = false;
         this.isNotify = true;
-        this.service.submitAns(this.unit._id, JSON.stringify(this.userAnswer))
-            .subscribe(function (data) { return console.log(data); }, function (err) { return console.log(JSON.stringify(err)); });
+        var auth_token = localStorage.getItem('auth_token');
+        var data = new anwser_model_1.Anwser(this.unit.unitTime / 1000 - this.ticks, this.userAnswer);
+        this.service.submitAns(auth_token, this.unit._id, JSON.stringify(data))
+            .subscribe(function (data) {
+            _this.sub.unsubscribe();
+        }, function (err) { return console.log(JSON.stringify(err)); });
+        this.ticks = 99999999999;
     };
     DetailComponent.prototype.chooseAns = function (questionId, ansId) {
         this.userAnswer.push(new anwser_model_1.Anwser(questionId, ansId));

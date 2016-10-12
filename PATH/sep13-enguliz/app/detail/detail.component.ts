@@ -25,6 +25,8 @@ export class DetailComponent implements OnInit {
     public timeCoutdown: string;
     public userAnswer = [];
 
+    public sub: Subcription;
+
     constructor(private router:Router,
                 private route:ActivatedRoute,
                 private service:DetailService) {
@@ -51,7 +53,7 @@ export class DetailComponent implements OnInit {
         this.isTest = true;
         this.isNotify = false;
         let timer = Observable.timer(0, 999).take(this.unit.unitTime / 1000);
-        timer.subscribe(t=> {
+        this.sub = timer.subscribe(t=> {
             if (this.ticks <= 1) {
                 this.isTest = false;
                 this.isNotify = true;
@@ -69,11 +71,18 @@ export class DetailComponent implements OnInit {
         this.isTest = false;
         this.isNotify = true;
 
-        this.service.submitAns(this.unit._id, JSON.stringify(this.userAnswer))
-                .subscribe(
-                    data => console.log(data),
-                    err => console.log(JSON.stringify(err)));
+        let auth_token = localStorage.getItem('auth_token');
+        var data = new Anwser(this.unit.unitTime / 1000 - this.ticks, this.userAnswer);
 
+        this.service.submitAns(auth_token, this.unit._id, JSON.stringify(data))
+                .subscribe(
+                    data => {
+                        this.sub.unsubscribe();
+                    },
+                    err => console.log(JSON.stringify(err))
+                );
+
+        this.ticks = 99999999999;
     }
 
     chooseAns(questionId, ansId) {

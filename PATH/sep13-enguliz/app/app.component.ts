@@ -7,39 +7,38 @@ import {UserService} from "./user/user.service";
 import {User} from "./user/user.model";
 @Component({
     selector: 'my-app',
-    template: `<div class="header row" style="margin-left: 0;">
-            <div class="col-sm-4"></div>
-            <div class="col-sm-4">
-                <div class="sreach">
-                    <form action="#">
-                        <input type="text" placeholder="Sreach" style="border: none">
-                    </form>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <ul *ngIf="loggedIn === false">
-                    <li><a [routerLink]="['login']">Login</a></li>
-                    <li><a href="#" class="sign-up">Sign up</a></li>
-                </ul>
-                <ul *ngIf="loggedIn === true">
-                    <li>Tài khoản: <a href=""> {{email}}</a></li>
-                    <li><a href="" (click)="logout()">Logout</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="slider row">
-        </div>
+    template: `<div class="header" style="margin-left: 0;">
+                    <div class="col-sm-4"></div>
+                    <div class="col-sm-4">
+                        <div class="search">
+                            <form action="#">
+                                <input type="text" placeholder="Search" style="border: none">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <ul *ngIf="loggedIn === false">
+                            <li><a [routerLink]="['login']">Login</a></li>
+                            <li><a href="#" class="sign-up">Sign up</a></li>
+                        </ul>
+                        <ul *ngIf="loggedIn === true">
+                            <li>Tài khoản: <a href=""> {{email}}</a></li>
+                            <li><a href="" (click)="logout()">Logout</a></li>
+                        </ul>
+                    </div>
+               </div>
+               <div class="slider row"></div>
         <router-outlet></router-outlet>`,
     providers: [UserService]
 })
 
 export class AppComponent implements OnInit {
     private loggedIn = false;
-    public user: User;
+    public user:User;
     public email = '';
-    
-    
-    constructor(private service: UserService) {
+
+
+    constructor(private service:UserService) {
         this.loggedIn = !!localStorage.getItem('auth_token');
     }
 
