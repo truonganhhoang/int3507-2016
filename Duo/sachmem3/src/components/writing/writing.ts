@@ -39,7 +39,16 @@ import { Learning } from '../../pages/learning/learning';
           style({transform: 'scale(0)', offset: 1})
         ]))
       ])
-    ])
+    ]),
+
+    trigger('pending', [
+      state('dark', style({
+        backgroundColor: '#bdbdbd'
+      })),
+      state('light', style({
+        backgroundColor: '#dedede'
+      }))
+    ]),
   ]
 })
 
@@ -51,11 +60,21 @@ export class Writing implements OnInit, OnChanges  {
 	options: Object[];
 	allLetter: Object[];
   answerState: string;
+  pending: string = 'light';
+
   disabled: boolean = false;
 
 	constructor(private navCtrl: NavController, private navParams: NavParams, private nativeService: NativeService, private helperService: HelperService) { }
 	
-	ngOnInit() { }
+	ngOnInit() { 
+    setInterval(() => {
+      if (this.pending == 'light') {
+        this.pending = 'dark';
+      } else {
+        this.pending = 'light';
+      }
+    }, 500);
+  }
 
   ngOnChanges(changes:{[propKey: string]: SimpleChange}) {
   	this.options = [];

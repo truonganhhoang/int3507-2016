@@ -10,7 +10,7 @@
     <!-- <ion-grid>
       <ion-row center>
         <ion-col width-33> -->
-          <button icon-left ion-button (click)="enterReview()" color="light">
+          <button icon-left ion-button [disabled]="learned <= 0" (click)="enterReview()" color="light">
             <ion-icon name="clipboard"></ion-icon>
             Review
           </button>

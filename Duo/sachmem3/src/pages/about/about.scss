@@ -1,0 +1,27 @@
+page-about {
+	ion-slide {
+		background: white;
+	}
+
+	img {
+		width: 30% !important;
+	}
+
+	.version {
+		font-size: 1em !important;
+		color: gray;
+	}
+
+	.header {
+		font-size: 1.2em;
+		text-align: left;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.content {
+		text-align: left;
+		font-size: 1em;
+		text-align: justify
+	}
+}
