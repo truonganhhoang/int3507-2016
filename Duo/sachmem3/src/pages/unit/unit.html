@@ -43,7 +43,7 @@
       Choose a unit
     </ion-list-header>
     <ion-item *ngFor="let item of units">
-      <ion-label>{{item.name}}</ion-label>
+      <ion-label><span color="primary">Unit {{item.number}}.</span> {{item.name}}</ion-label>
       <ion-radio value="{{item.id}}"></ion-radio>
     </ion-item>
   </ion-list>
