@@ -12,6 +12,7 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'google.html'
 })
 export class Google {
+  listFile: Object[] = [];
 	auth2: any;
 
   constructor(public navCtrl: NavController) {
@@ -19,17 +20,24 @@ export class Google {
   }
 
   list(){
-    gapi.client.load('drive', 'v2', function() {
+    gapi.client.load('drive', 'v2', () => {
       var request = gapi.client.request({
            path : 'https://www.googleapis.com/drive/v2/files',
            method : 'GET',
            params : {
                 projection: "FULL",
-                maxResults: 5
+                maxResults: 1000
            }
       });
-      request.execute(function(response) {
-           console.log(response);   
+      request.execute((response) => {
+            //console.log(response.items);  
+        for(var i = 0; i < response.items.length; i++) {
+         //console.log(response.items[i].mimeType);
+          if(response.items[i].mimeType == 'application/vnd.google-apps.folder') {
+             this.listFile.push(response.items[i]);
+          }
+        } 
+        console.log(this.listFile);
       });
 
 
