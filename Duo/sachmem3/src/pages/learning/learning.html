@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Learn</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="words.length <= 0">
+    <img src="assets/img/learn.png"/>
+    <ion-card-content>
+      <ion-card-title style="color:#4db593">
+        You have learned every word in this unit!
+      </ion-card-title>
+      <p>
+        You can review all the words you have learned in this book so far,
+        or keep playing practical games...
+      </p>
+    </ion-card-content>
+
+    <ion-item>
+      <button ion-button icon-left item-left class="nav-button" (click)="enterReviewPage()">
+        <ion-icon name="clipboard"></ion-icon>
+        Review
+      </button>
+      <button ion-button icon-left item-right class="nav-button" (click)="enterPlayingPage()">
+        <ion-icon name="game-controller-b"></ion-icon>
+        Play
+      </button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card *ngIf="words.length > 0 && curWord">
+    <img src="assets/img/learn.png">
+    <ion-fab right top style="right:20px;top:20px">
+      <button ion-fab color="primary">
+        <ion-icon name="star"></ion-icon>
+      </button>
+    </ion-fab>
+
+    <ion-item>
+      <h1 class="content" class="content" color="primary">{{curWord.content}}</h1>
+      <p class="meaning">{{curWord.meaning}}</p>
+      <button ion-button icon-only clear (click)="speak()">
+        <ion-icon name="volume-up"></ion-icon>
+      </button>
+    </ion-item>
+
+    <ion-item *ngIf="pageType == 0">
+      <button ion-button icon-left item-left round outline class="nav-button" [disabled]="isBegin()" (click)="previous()">
+        <ion-icon name="arrow-back"></ion-icon>
+        Previous
+      </button>
+      <button ion-button icon-right item-right round outline class="nav-button" *ngIf="!isEnd()" (click)="next()">
+        Next
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+      <button ion-button icon-right item-right round class="nav-button" *ngIf="isEnd()" (click)="enterPlayingPage()">
+        Play
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-item>
+
+    <ion-item *ngIf="pageType == 1">
+      <button ion-button icon-right item-right round class="nav-button" (click)="back()">
+        Got it!
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-item>
+  </ion-card>
+</ion-content>
