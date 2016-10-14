@@ -15,5 +15,6 @@ module.exports  = {
     Question: require('./Question'),
     UnlearnedQuestionUser: require('./UnlearnedQuestionUser'),
     NewWord: require('./NewWord'),
-    UnlearnedWordUser: require('./UnlearnedWordUser')
+    UnlearnedWordUser: require('./UnlearnedWordUser'),
+    Audio: require('./Audio')
 };

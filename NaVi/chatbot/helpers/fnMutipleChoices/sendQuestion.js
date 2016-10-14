@@ -1,7 +1,8 @@
 'use strict';
 const
     mongoose = require('mongoose'),
-    models = require('../../models');
+    models = require('../../models'),
+    redisClient = require('../../caching/redisClient');
 
 module.exports = function (recipientId) {
     models.UnlearnedQuestionUser.findOne({
@@ -96,6 +97,13 @@ function getOneQuestion(unlearnedQuestions, recipientId) {
             };
 
             require('../facebook/sendFunctions/callSendAPI')(messageData);
+            redisClient.hmset(recipientId, ["lastMCQuestion", JSON.stringify(question)]);
+            // Save last MC question id of current user to Redis
+            redisClient.hmset(recipientId, ["lastMCQuestionId", question._id.toString()], function (err) {
+                if (err) {
+                    console.log(err);
+                }
+            });
         });
     }
 }

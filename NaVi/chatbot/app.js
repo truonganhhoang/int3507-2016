@@ -4,6 +4,7 @@ const
     express = require('express'),
     https = require('https'),
     request = require('request'),
+    redisClient = require('./caching/redisClient'),
     verifyRequestSignature = require('./middlewares/verifyRequestSignature'),
     env = require('./helpers/env'),
     controllers = require('./controllers'),

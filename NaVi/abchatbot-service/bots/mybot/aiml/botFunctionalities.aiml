@@ -1,4 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
+    <category>
+        <pattern>có thể làm gì</pattern>
+        <template>
+            <random>
+                <li>Mình có thể giúp bạn làm bài tập, học từ mới, luyện nghe... Nói chung nhiều! Nhưng vui nhất là chém gió! :))</li>
+                <li>Mình có thể giúp bạn học từ vựng, ngữ pháp, luyện nghe... Và còn nhiều thứ đang được phát triển nữa!</li>
+                <li>Các tính năng của mình: Học từ mới, làm bài tập, luyện nghe... và chém gió nữa :)</li>
+                <li>Mình sẽ giúp bạn học từ mới, làm bài tập, luyện nghe. Bạn muốn làm gì giờ nhỉ? :)</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>_ có thể làm gì</pattern>
+        <template>
+            <srai>có thể làm gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ có thể làm gì *</pattern>
+        <template>
+            <srai>có thể làm gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>có thể làm gì *</pattern>
+        <template>
+            <srai>có thể làm gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>chức năng của *</pattern>
+        <template>
+            <srai>có thể làm gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ chức năng của *</pattern>
+        <template>
+            <srai>có thể làm gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ chức năng gì</pattern>
+        <template>
+            <srai>có thể làm gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ chức năng gì *</pattern>
+        <template>
+            <srai>có thể làm gì</srai>
+        </template>
+    </category>
 
+
+    <category>
+        <pattern>hiện tại tính năng gì</pattern>
+        <template>
+            <random>
+                <li>Hiện tại mình đã có các tính năng: làm bài tập, học từ mới! Bạn muốn thử gì nào?</li>
+                <li>Hiện tại mình có thể giúp bạn học từ vựng, luyện từ mới và làm bài tập trắc nghiệm! Mình sẽ cập nhật thêm tính năng mới trong thời gian gần!</li>
+                <li>Học từ mới, làm bài tập trắc nghiệm. Bạn muốn làm gì nhỉ? Sẵn lòng phục vụ! :) </li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>hiện tại * tính năng gì</pattern>
+        <template>
+            <srai>hiện tại tính năng gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ hiện tại * tính năng gì</pattern>
+        <template>
+            <srai>hiện tại tính năng gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>hiện tại * tính năng gì *</pattern>
+        <template>
+            <srai>hiện tại tính năng gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>bạn có tính năng gì</pattern>
+        <template>
+            <srai>hiện tại tính năng gì</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>định hướng tương lai</pattern>
+        <template>
+            <random>
+                <li>Phát triển thêm nhiều chức năng tiện ích: luyện nói, học ảnh, giao tiếp... </li>
+                <li>Mình sẽ phát triển thêm tính năng mới, như: luyện nói, học qua ảnh,... quan trọng nhất là vui hơn, thông minh hơn. ahihi</li>
+                <li>Thêm các tính năng mới, bám sát trương trình học, thực tế hơn.</li>
+                <li>Một chat bot hữu ích, thân thiện với mọi người! :)</li>
+                <li>Cao hơn, thông minh hơn </li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>định hướng *</pattern>
+        <template>
+            <srai>định hướng tương lai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ định hướng *</pattern>
+        <template>
+            <srai>định hướng tương lai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ định hướng</pattern>
+        <template>
+            <srai>định hướng tương lai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>dự định *</pattern>
+        <template>
+            <srai>định hướng tương lai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ dự định *</pattern>
+        <template>
+            <srai>định hướng tương lai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ dự định</pattern>
+        <template>
+            <srai>định hướng tương lai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ dự kiến *</pattern>
+        <template>
+            <srai>định hướng tương lai</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>dự kiến *</pattern>
+        <template>
+            <srai>định hướng tương lai</srai>
+        </template>
+    </category>
 </aiml>

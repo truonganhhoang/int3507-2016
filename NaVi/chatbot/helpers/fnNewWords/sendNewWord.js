@@ -76,7 +76,7 @@ function getOneWord(unlearnedWords, recipientId) {
                                     subtitle: result.pronunciation,
                                     buttons: [{
                                         type: "postback",
-                                        title: "Từ khác",
+                                        title: "Học từ khác",
                                         payload: "NW_NEXT"
                                     },
                                     {
