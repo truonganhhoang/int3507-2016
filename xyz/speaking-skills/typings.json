@@ -1,0 +1,5 @@
+{
+  "globalDependencies": {
+    "webaudioapi/waa": "registry:dt/webaudioapi/waa#0.0.0+20160328224055"
+  }
+}
