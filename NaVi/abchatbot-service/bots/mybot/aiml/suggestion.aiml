@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-    <catogery>
+    <category>
         <pattern>học tiếng anh</pattern>
         <template>
             <random>
@@ -14,53 +14,51 @@
                 <li>15p mỗi ngày để học tiếng anh cùng Cwat</li>
             </random>
          </template>
-     </catogery>
+     </category>
 
-    <catogery>
+    <category>
         <pattern>_ học tiếng anh *</pattern>
             <template>
                 <srai>học tiếng anh</srai>
             </template>
-    </catogery>
+    </category>
 
-     <catogery>
+     <category>
         <pattern>học tiếng anh *</pattern>
             <template>
                  <srai>học tiếng anh</srai>
             </template>
-        </catogery>
+        </category>
 
-     <catogery>
+     <category>
         <pattern>_ học tiếng anh *</pattern>
              <template>
                   <srai>học tiếng anh</srai>
               </template>
-         </catogery>
+         </category>
 
-     <catogery>
+     <category>
         <pattern>learning english</pattern>
              <template>
                   <srai>học tiếng anh</srai>
               </template>
-     </catogery>
+     </category>
 
-     <catogery>
+     <category>
         <pattern>_ learning english *</pattern>
              <template>
                   <srai>học tiếng anh</srai>
               </template>
-         </catogery>
+         </category>
 
-     <catogery>
+     <category>
         <pattern>learning english *</pattern>
-             <template>
-                  <srai>học tiếng anh</srai>
-              </template>
-         </catogery>
+         <template>
+              <srai>học tiếng anh</srai>
+          </template>
+     </category>
 
-
-
-     <catogery>
+     <category>
         <pattern>chán</pattern>
         <template>
             <random>
@@ -73,16 +71,41 @@
                 <li>Bạn có biết : Khi cảm xúc của bạn lên cao là lúc bạn ghi nhớ được tốt nhất ! Hãy tạo cảm xúc vui vẻ, hứng thú khi bạn học từ mới</li>
             </random>
         </template>
-     </catogery>
+     </category>
 
-     <catogery>
+     <category>
         <pattern>_ chán * </pattern>
             <srai>chán</srai>
-     </catogery>
+     </category>
 
-     <catogery>
+     <category>
         <pattern>chán * </pattern>
             <srai>chán</srai>
-     </catogery>
+     </category>
+
+
+     <category>
+        <pattern>luyện nghe</pattern>
+        <template>
+            <random>
+                <li>http://www.esl-lab.com/  luyện nghe và làm bài tập trắc nghiệm nghe ở cấp độ: dễ, trung bình, khó và rất khó.</li>
+                <li> http://www.youtube.com/watch?v=Jx5oXvuL_Lw clips luyện nghe & nói thuộc loạt bài Real English Lesson 1, 2 ,3 ,4, ...  (từ cơ bản đến nâng cao, có phụ đề tiếng Anh)</li>
+                <li>http://www.youtube.com/watch?v=LIifh6aHsQM  clips tập nghe & nói, giao tiếp tiếng Anh thuộc loạt bài How to speak in American, Learn English, Savio (tiếng Anh giao tiếp thực dụng )</li>
+                <li> http://www.learnenglishfeelgood.com/eslvideo/ (SHORT FILM CLIPS, Watch and Learn!) : xem đoạn phim ngắn và làm bài tập trắc nghiệm khả năng nghe hiểu.</li>
+                <li> http://www.englishstudydirect.com/OSAC/langacls.htm : nguồn tài liệu học nghe & nói tiếng Anh online.</li>
+                <li>http://www.manythings.org/e/requirements.html : học tiếng Anh tổng hợp</li>
+            </random>
+        </template>
+     </category>
+
+     <category>
+          <pattern>_ luyện nghe *</pattern>
+            <srai>luyện nghe</srai>
+     </category>
+
+      <category>
+        <pattern>luyện nghe *</pattern>
+            <srai>luyện nghe</srai>
+      </category>
 
 </aiml>
