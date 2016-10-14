@@ -21,8 +21,10 @@
     "ejs": "^2.4.2",
     "express": "^4.13.4",
     "fast-csv": "^2.1.0",
+    "jaro-winkler": "^0.2.7",
     "mongoose": "^4.6.1",
     "mongoose-seed": "^0.3.1",
+    "redis": "^2.6.2",
     "request": "^2.72.0"
   },
   "engines": {

@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Record</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="page1">
+  <p>
+    <button (click)="startRecord()" class="buttton-start-recording" >
+      <ion-icon name="microphone"></ion-icon>
+      Start recording
+    </button>
+  </p>
+  <p>
+    <button (click)="stopRecord()" class="buttton-stop-recording" >
+      <ion-icon name="mic-off"></ion-icon>
+      Stop recording
+    </button>
+  </p>
+  <button (click)="startPlay()" class="buttton-stop-recording" >
+      <ion-icon name="play"></ion-icon>
+     Play
+  </button>
+</ion-content>

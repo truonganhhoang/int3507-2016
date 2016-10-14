@@ -1,3 +1,4 @@
-# Ignore IDE files
-.idea/
-PATH/
+PATH/sep13-enguliz/node_modules/process-nextick-args/package.json
+PATH/sep13-enguliz/node_modules/
+PATH/sep13-enguliz/typings/
+PATH/sep13-enguliz/.idea/

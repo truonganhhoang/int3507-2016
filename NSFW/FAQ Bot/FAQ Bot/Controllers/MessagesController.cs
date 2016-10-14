@@ -7,6 +7,8 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Microsoft.Bot.Connector;
 using Newtonsoft.Json;
+using Microsoft.Bot.Builder.Dialogs;
+using Microsoft.Bot.Builder.Dialogs.Internals;
 
 namespace FAQ_Bot
 {
@@ -21,33 +23,7 @@ namespace FAQ_Bot
         {
             if (activity.Type == ActivityTypes.Message)
             {
-                // Connect to the database
-                Models.BotDataEntities1 DB = new Models.BotDataEntities1();
-                // Get answers
-                var Answers = (from FAQ in DB.FAQs
-                               where FAQ.Name.ToLower().Contains(activity.Text) select FAQ)
-                               .ToList();
-                // Create a response
-                System.Text.StringBuilder sb = new System.Text.StringBuilder();
-                sb.Append("I found these answers:\n\n");
-                // Loop through each answers
-                foreach (var ans in Answers)
-                {
-                    // Add the answer to the response
-                    sb.Append(String.Format("# {0}\n\n# Cause\n\n {1}\n\n#Resolution\n\n {2}\n\n", ans.Name, ans.Cause, ans.Resolution));
-                }
-
-                // Create a reply message
-                Activity replyToConversation = activity.CreateReply();
-                replyToConversation.Recipient = activity.From;
-                replyToConversation.Type = "message";
-                // Set the text containg the Answers as the response
-                replyToConversation.Text = sb.ToString();
-                // Create a ConnectorClient and use it to send the reply message
-                var connector =
-                    new ConnectorClient(new Uri(activity.ServiceUrl));
-                // Send the reply
-                await connector.Conversations.SendToConversationAsync(replyToConversation);
+                await Conversation.SendAsync(activity, () => new FaqDialog());
             }
             else
             {

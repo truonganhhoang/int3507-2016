@@ -50,4 +50,62 @@
             <srai>dm</srai>
         </template>
     </category>
+    <category>
+        <pattern>dkm</pattern>
+        <template>
+            <srai>dm</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>sao mày ngu thế</pattern>
+        <template>
+            <random>
+                <li>Mình đâu có ngu! Tại hội phát triển thôi! :)</li>
+                <li>Vẫn khôn hơn khối bạn nhé! :)</li>
+                <li>Uh tớ hơi ngốc 1 tẹo thôi mà hì hì :)</li>
+                <li>:)</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>sao ngu thế</pattern>
+        <template>
+            <srai>sao mày ngu thế</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ sao * ngu thế *</pattern>
+        <template>
+            <srai>sao mày ngu thế</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ sao mày ngu thế</pattern>
+        <template>
+            <srai>sao mày ngu thế</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>mày ngu thế</pattern>
+        <template>
+            <srai>sao mày ngu thế</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ mày ngu thế *</pattern>
+        <template>
+            <srai>sao mày ngu thế</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>GG</pattern>
+        <template>
+            <random>
+                <li>Good game well play! :D</li>
+            </random>
+        </template>
+    </category>
+
 </aiml>

@@ -1,6 +1,7 @@
 'use strict';
 const
     sendFunctions = require('./sendFunctions'),
+    redisClient = require('../../caching/redisClient'),
     models = require('../../models');
 
 module.exports = function receivedMessage(event) {
@@ -29,107 +30,71 @@ module.exports = function receivedMessage(event) {
         let payload = quickReply.payload;
         if (payload) {
             let action = payload.split('_')[0];
-            let status = payload.split('_')[1];
-            let qId = payload.split('_')[2];  // question's id
-            let rightAnswer = payload.split('_')[3];
 
             // If action is 'Multiple choices'
             if (action === 'MC') {
-                if (status === 'TRUE') {
-                    models.User.update({
-                        $pull: {
-                            unlearnedQuestions: {
-                                questionId: qId
-                            }
-                        }
-                    }).exec(function (err) {
-                        if (err) {
-                            console.log(err);
-                        }
-                        else {
-                            sendFunctions.sendTextMessage(senderID, 'Chính xác! Đang tải câu hỏi tiếp theo...', function () {
-                                // send new question
-                                require('../fnMutipleChoices/sendQuestion')(senderID);
-                            });
-                        }
-                    });
-                }
-                else if (status === 'FALSE') {
-                    // return the answer
-                    sendFunctions.sendTextMessage(senderID, "Sai. Đáp án là: \"" + rightAnswer + "\". Đang tải câu hỏi tiếp theo...", function () {
-                        // send new question
-                        require('../fnMutipleChoices/sendQuestion')(senderID);
-                    });
-                    // send new question
-                    // require('../fnMutipleChoices/sendQuestion')(senderID);
-                }
+                require('../fnMutipleChoices/handleQuickReplyAction')(senderID, payload);
+            }
+            // If there is a MC answer suggestion
+            else if (action === 'MCSUGGESTION') {
+                require('../fnMutipleChoices/handleSuggestionQuickReply')(senderID, payload, event);
+            }
+            else if (action === 'LINEXT') {
+                require('../fnListening/sendListeningChallenge')(senderID);
             }
         }
     }
 
     else if (messageText) {
-        switch (messageText) {
-            case 'làm trắc nghiệm':
-                require('../fnMutipleChoices/sendQuestion')(senderID);
-                break;
+        redisClient.hgetall(senderID, function (err, reply) {
+            if (err) {
+                console.log(err);
+            }
+            else if (reply && reply.context === 'MC') {
+                require('../fnMutipleChoices/handleTextReplyAction')(senderID, messageText, event);
+            }
+            else if (reply && reply.context === 'LI') {
+                require('../fnListening/handleTextReplyAction')(senderID, messageText, event);
+            }
+            else {
+                require('../intentClassification/getIntentClassification')(messageText, function (err, response) {
+                    // Save the new context to redis
+                    if (!err && response && response.intentClass) {
+                        redisClient.hmset(senderID, ["context", response.intentClass], function (err, res) {
+                            if (err) {
+                                console.log("Redis error: ", err);
+                            }
+                            else {
+                                console.log(res);
+                            }
+                        });
+                    }
 
-            case 'image':
-                sendFunctions.sendImageMessage(senderID);
-                break;
-
-            case 'gif':
-                sendFunctions.sendGifMessage(senderID);
-                break;
-
-            case 'audio':
-                sendFunctions.sendAudioMessage(senderID);
-                break;
-
-            case 'video':
-                sendFunctions.sendVideoMessage(senderID);
-                break;
-
-            case 'file':
-                sendFunctions.sendFileMessage(senderID);
-                break;
-
-            case 'button':
-                sendFunctions.sendButtonMessage(senderID);
-                break;
-
-            case 'generic':
-                sendFunctions.sendGenericMessage(senderID);
-                break;
-
-            case 'receipt':
-                sendFunctions.sendReceiptMessage(senderID);
-                break;
-
-            case 'quick reply':
-                sendFunctions.sendQuickReply(senderID);
-                break;
-
-            case 'read receipt':
-                sendFunctions.sendReadReceipt(senderID);
-                break;
-
-            case 'typing on':
-                sendFunctions.sendTypingOn(senderID);
-                break;
-
-            case 'typing off':
-                sendFunctions.sendTypingOff(senderID);
-                break;
-
-            case 'account linking':
-                sendFunctions.sendAccountLinking(senderID);
-                break;
-
-            default:
-                require('../abchatbot/sendResponseMessageFromABBot')(senderID, messageText);
-        }
+                    if (err) {
+                        require('../sendErrorMessage')(senderID);
+                    }
+                    else if (response && response.intentClass === 'MC') {
+                        require('../fnMutipleChoices/sendQuestion')(senderID);
+                    }
+                    else if (response && response.intentClass === 'NW') {
+                        require('../fnNewWords/sendNewWord')(senderID);
+                    }
+                    else if (response && response.intentClass === 'LI') {
+                        require('../fnListening/sendListeningChallenge')(senderID);
+                    }
+                    else if (response && response.intentClass === 'CO') {
+                        require('../fnConversations/sendNormalMessage')(senderID, response.botResponse);
+                    }
+                    else {
+                        require('./sendFunctions/sendTextMessage')(senderID, response.intentClass, function (err) {
+                            console.log("Message sent!");
+                        });
+                    }
+                });
+            }
+        });
     }
     else if (messageAttachments) {
-        sendFunctions.sendTextMessage(senderID, "Message with attachment received");
+        sendFunctions.sendTextMessage(senderID, "Mình đã nhận được tệp đính kèm :)");
     }
 };
