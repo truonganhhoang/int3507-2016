@@ -80,51 +80,7 @@
 "created_at": "2016-10-13 07:47:32 UTC",
 "updated_at": "2016-10-13 07:47:32 UTC"
 },
-{
-"id": "10",
-"name": "Hello",
-"number": "1",
-"description": "",
-"book_id": "1",
-"created_at": "2016-10-13 07:47:32 UTC",
-"updated_at": "2016-10-13 07:47:32 UTC"
-},
-{
-"id": "11",
-"name": "",
-"number": "1",
-"description": "",
-"book_id": "1",
-"created_at": "2016-10-13 07:47:32 UTC",
-"updated_at": "2016-10-13 07:47:32 UTC"
-},
-{
-"id": "12",
-"name": "",
-"number": "2",
-"description": "",
-"book_id": "1",
-"created_at": "2016-10-13 07:47:32 UTC",
-"updated_at": "2016-10-13 07:47:32 UTC"
-},
-{
-"id": "13",
-"name": "Cat and Mouse 1",
-"number": "story",
-"description": "",
-"book_id": "1",
-"created_at": "2016-10-13 07:47:32 UTC",
-"updated_at": "2016-10-13 07:47:32 UTC"
-},
-{
-"id": "14",
-"name": "Cat and Mouse 2",
-"number": "story",
-"description": "",
-"book_id": "1",
-"created_at": "2016-10-13 07:47:32 UTC",
-"updated_at": "2016-10-13 07:47:32 UTC"
-},
+
 {
 "id": "15",
 "name": "This is my family",
@@ -215,42 +171,7 @@
 "created_at": "2016-10-13 07:47:33 UTC",
 "updated_at": "2016-10-13 07:47:33 UTC"
 },
-{
-"id": "25",
-"name": "",
-"number": "3",
-"description": "",
-"book_id": "2",
-"created_at": "2016-10-13 07:47:33 UTC",
-"updated_at": "2016-10-13 07:47:33 UTC"
-},
-{
-"id": "26",
-"name": "",
-"number": "4",
-"description": "",
-"book_id": "2",
-"created_at": "2016-10-13 07:47:33 UTC",
-"updated_at": "2016-10-13 07:47:33 UTC"
-},
-{
-"id": "27",
-"name": "Cat and Mouse 3",
-"number": "story",
-"description": "",
-"book_id": "2",
-"created_at": "2016-10-13 07:47:33 UTC",
-"updated_at": "2016-10-13 07:47:33 UTC"
-},
-{
-"id": "28",
-"name": "Cat and Mouse 4",
-"number": "story",
-"description": "",
-"book_id": "2",
-"created_at": "2016-10-13 07:47:33 UTC",
-"updated_at": "2016-10-13 07:47:33 UTC"
-},
+
 {
 "id": "29",
 "name": "Nice to see you again",
@@ -341,42 +262,7 @@
 "created_at": "2016-10-13 07:47:33 UTC",
 "updated_at": "2016-10-13 07:47:33 UTC"
 },
-{
-"id": "39",
-"name": "",
-"number": "1",
-"description": "",
-"book_id": "3",
-"created_at": "2016-10-13 07:47:33 UTC",
-"updated_at": "2016-10-13 07:47:33 UTC"
-},
-{
-"id": "40",
-"name": "",
-"number": "2",
-"description": "",
-"book_id": "3",
-"created_at": "2016-10-13 07:47:33 UTC",
-"updated_at": "2016-10-13 07:47:33 UTC"
-},
-{
-"id": "41",
-"name": "Cat and Mouse 1",
-"number": "story",
-"description": "",
-"book_id": "3",
-"created_at": "2016-10-13 07:47:33 UTC",
-"updated_at": "2016-10-13 07:47:33 UTC"
-},
-{
-"id": "42",
-"name": "Cat and Mouse 2",
-"number": "story",
-"description": "",
-"book_id": "3",
-"created_at": "2016-10-13 07:47:33 UTC",
-"updated_at": "2016-10-13 07:47:33 UTC"
-},
+
 {
 "id": "43",
 "name": "What time is it?",
@@ -467,42 +353,7 @@
 "created_at": "2016-10-13 07:47:34 UTC",
 "updated_at": "2016-10-13 07:47:34 UTC"
 },
-{
-"id": "53",
-"name": "",
-"number": "3",
-"description": "",
-"book_id": "4",
-"created_at": "2016-10-13 07:47:34 UTC",
-"updated_at": "2016-10-13 07:47:34 UTC"
-},
-{
-"id": "54",
-"name": "",
-"number": "4",
-"description": "",
-"book_id": "4",
-"created_at": "2016-10-13 07:47:34 UTC",
-"updated_at": "2016-10-13 07:47:34 UTC"
-},
-{
-"id": "55",
-"name": "Cat and Mouse 3",
-"number": "story",
-"description": "",
-"book_id": "4",
-"created_at": "2016-10-13 07:47:34 UTC",
-"updated_at": "2016-10-13 07:47:34 UTC"
-},
-{
-"id": "56",
-"name": "Cat and Mouse 4",
-"number": "story",
-"description": "",
-"book_id": "4",
-"created_at": "2016-10-13 07:47:34 UTC",
-"updated_at": "2016-10-13 07:47:34 UTC"
-},
+
 {
 "id": "57",
 "name": "Hello",
@@ -1773,33 +1624,6 @@
 "updated_at": "2016-10-13 07:47:40 UTC"
 },
 {
-"id": "198",
-"name": "",
-"number": "1",
-"description": "",
-"book_id": "19",
-"created_at": "2016-10-13 07:47:40 UTC",
-"updated_at": "2016-10-13 07:47:40 UTC"
-},
-{
-"id": "199",
-"name": "Cat and Mouse 1",
-"number": "story",
-"description": "",
-"book_id": "19",
-"created_at": "2016-10-13 07:47:40 UTC",
-"updated_at": "2016-10-13 07:47:40 UTC"
-},
-{
-"id": "200",
-"name": "How many lessons do you have today?",
-"number": "6",
-"description": "",
-"book_id": "19",
-"created_at": "2016-10-13 07:47:41 UTC",
-"updated_at": "2016-10-13 07:47:41 UTC"
-},
-{
 "id": "201",
 "name": "How do you learn English?",
 "number": "7",
@@ -1835,24 +1659,7 @@
 "created_at": "2016-10-13 07:47:41 UTC",
 "updated_at": "2016-10-13 07:47:41 UTC"
 },
-{
-"id": "205",
-"name": "",
-"number": "2",
-"description": "",
-"book_id": "19",
-"created_at": "2016-10-13 07:47:41 UTC",
-"updated_at": "2016-10-13 07:47:41 UTC"
-},
-{
-"id": "206",
-"name": "Cat and Mouse 2",
-"number": "story",
-"description": "",
-"book_id": "19",
-"created_at": "2016-10-13 07:47:41 UTC",
-"updated_at": "2016-10-13 07:47:41 UTC"
-},
+
 {
 "id": "207",
 "name": "What’s the matter with you?",
@@ -1898,24 +1705,7 @@
 "created_at": "2016-10-13 07:47:41 UTC",
 "updated_at": "2016-10-13 07:47:41 UTC"
 },
-{
-"id": "212",
-"name": "",
-"number": "3",
-"description": "",
-"book_id": "20",
-"created_at": "2016-10-13 07:47:41 UTC",
-"updated_at": "2016-10-13 07:47:41 UTC"
-},
-{
-"id": "213",
-"name": "Cat and Mouse 3",
-"number": "story",
-"description": "",
-"book_id": "20",
-"created_at": "2016-10-13 07:47:41 UTC",
-"updated_at": "2016-10-13 07:47:41 UTC"
-},
+
 {
 "id": "214",
 "name": "Where’s the post office?",
@@ -1961,24 +1751,7 @@
 "created_at": "2016-10-13 07:47:41 UTC",
 "updated_at": "2016-10-13 07:47:41 UTC"
 },
-{
-"id": "219",
-"name": "",
-"number": "4",
-"description": "",
-"book_id": "20",
-"created_at": "2016-10-13 07:47:41 UTC",
-"updated_at": "2016-10-13 07:47:41 UTC"
-},
-{
-"id": "220",
-"name": "Cat and Mouse 4",
-"number": "story",
-"description": "",
-"book_id": "20",
-"created_at": "2016-10-13 07:47:41 UTC",
-"updated_at": "2016-10-13 07:47:41 UTC"
-},
+
 {
 "id": "221",
 "name": "What’s your address?",
