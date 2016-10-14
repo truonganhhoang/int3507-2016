@@ -20,7 +20,7 @@
     <!-- <p color="primary">{{curWord.meaning}}</p> -->
     <ion-fab right top>
       <button ion-fab color="primary"
-              [@iconState]="iconState">
+              [@iconState]="iconState" disabled>
         <i class="material-icons" *ngIf="selectedGame == 'r'">chrome_reader_mode</i>
         <i class="material-icons" *ngIf="selectedGame == 'l'">hearing</i>
         <i class="material-icons" *ngIf="selectedGame == 'w'">edit</i>
