@@ -15,23 +15,25 @@ import { Review } from '../review/review';
 @Component({
   selector: 'page-learning',
   templateUrl: 'learning.html',
-   providers: [ WordService, NativeService ]
+  providers: [ WordService, NativeService ]
 })
+
 export class Learning implements OnInit {
   words: Object[] = [];
   curWord: Object;
   curNum: number = 0;
   pageType: number; // Loại trang; 0 = training, 1 = review;
+  unitId: number;
 
   constructor(private navCtrl: NavController, private navParams: NavParams, private wordService: WordService, private nativeService: NativeService) { }
 
   ngOnInit(): void { 
-  	let unitId = this.navParams.get('unitId');
+  	this.unitId = this.navParams.get('unitId');
     let word = this.navParams.get('word');
 
-    if (unitId != undefined) {
+    if (this.unitId != undefined) {
       this.pageType = 0;
-      this.wordService.getLearningWords(unitId).then(res => {
+      this.wordService.getLearningWords(this.unitId).then(res => {
         this.words = res;
         // console.log(this.words);
         this.reload();
@@ -70,7 +72,7 @@ export class Learning implements OnInit {
 
   enterPlayingPage(): void {
     this.navCtrl.push(Playing, {
-      unitId: this.navParams.get('unitId')
+      unitId: this.navParams.get(this.unitId)
     });
   }
 

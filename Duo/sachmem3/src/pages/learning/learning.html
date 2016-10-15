@@ -5,6 +5,8 @@
 </ion-header>
 
 <ion-content>
+  <my-title [unitId]="unitId"></my-title>  
+
   <ion-card *ngIf="words.length <= 0">
     <img src="assets/img/learn.png"/>
     <ion-card-content>
