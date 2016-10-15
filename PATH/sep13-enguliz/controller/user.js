@@ -22,7 +22,8 @@ router.get('/login', (req, res) => {
 
                 var token = TokenInfo.init(id, random.generateToken(32), random.generateToken(64));
 
-                db.insertOne(Collect.token, token, (res)=>{});
+                db.insertOne(Collect.token, token, (res)=> {
+                });
 
                 res.send(Resp.login(token.access_token, token.refresh_token));
             } else {
@@ -46,7 +47,8 @@ router.get('/register', (req, res) => {
         if (result) {
             res.send(Resp.error(1, 'Account already exists', null));
         } else {
-            db.insertOne(Collect.user, user, (res)=>{});
+            db.insertOne(Collect.user, user, (res)=> {
+            });
 
             res.send(Resp.success(null));
         }
@@ -57,15 +59,15 @@ router.get('/register', (req, res) => {
 router.get('/profile', (req, res) => {
     var token = req.get('access_token');
     var resp = {};
-    if(token){
+    if (token) {
         resp.error = 0;
         resp.message = "";
         db.findOne(Collect.token, {'access_token': token}, (r1) => {
-           db.findOne(Collect.user, {'_id': new ObjectId(r1.userId)}, (r2) => {
-               resp.data = r2;
-               res.send(resp);
-               res.end();
-           });
+            db.findOne(Collect.user, {'_id': new ObjectId(r1.userId)}, (r2) => {
+                resp.data = r2;
+                res.send(resp);
+                res.end();
+            });
         });
     } else {
         resp.error = 1;
@@ -88,6 +90,28 @@ router.get('/logout', (req, res) => {
         res.end();
     })
 
+});
+
+router.get('/exam', (req, res) => {
+    var token = req.get('access_token');
+    var body = {};
+    if (token) {
+        body.error = 0;
+        body.message = "";
+        db.findOne(Collect.token, {'access_token': token}, (result) => {
+            if (result) {
+                db.fetchRows(Collect.exam, {'userIdRef': result.userId}, (items) => {
+                    body.data = items;
+                    res.send(body);
+                });
+            }
+        });
+    } else {
+        body.error = 1;
+        body.message = "Invalid token";
+        body.data = null;
+        res.send(resp);
+    }
 });
 
 module.exports = router;

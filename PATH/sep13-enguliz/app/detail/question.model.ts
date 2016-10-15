@@ -1,4 +1,4 @@
-import {Anwser} from "./anwser.model";
+import {Answer} from "./answer.model";
 /**
  * Created by Thinking on 10/02/2016.
  */
@@ -7,6 +7,6 @@ export class Question {
        _id: string,
        question: string,
        unitIdRef : string,
-       anwsers: Anwser[]
+       answers: Answer[]
     ) {}
 }

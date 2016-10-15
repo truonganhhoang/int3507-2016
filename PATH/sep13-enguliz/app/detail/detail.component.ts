@@ -6,7 +6,7 @@ import {DetailService} from "./detail.service";
 import {Unit} from "../detail/unit.model";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Observable} from "rxjs/Rx";
-import {Anwser} from "./anwser.model";
+import {Answer} from "./answer.model";
 @Component({
     templateUrl: 'app/detail/detail.component.html',
     providers: [DetailService]
@@ -72,7 +72,7 @@ export class DetailComponent implements OnInit {
         this.isNotify = true;
 
         let auth_token = localStorage.getItem('auth_token');
-        var data = new Anwser(this.unit.unitTime / 1000 - this.ticks, this.userAnswer);
+        var data = new UserAnswer(this.unit.unitTime / 1000 - this.ticks, this.userAnswer);
 
         this.service.submitAns(auth_token, this.unit._id, JSON.stringify(data))
                 .subscribe(
@@ -86,7 +86,7 @@ export class DetailComponent implements OnInit {
     }
 
     chooseAns(questionId, ansId) {
-        this.userAnswer.push(new Anwser(questionId, ansId));
+        this.userAnswer.push(new Answer(questionId, ansId));
     }
 
     convertTime(ticks) {
@@ -108,4 +108,11 @@ export class DetailComponent implements OnInit {
                 this.loadDetailsData(id);
             });
     }
+}
+
+export class UserAnswer {
+    constructor(
+        public time:number,
+        public answer: any[]
+    ) {}
 }

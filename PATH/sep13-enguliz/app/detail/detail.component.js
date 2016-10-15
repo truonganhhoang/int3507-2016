@@ -15,7 +15,7 @@ var core_1 = require("@angular/core");
 var detail_service_1 = require("./detail.service");
 var router_1 = require("@angular/router");
 var Rx_1 = require("rxjs/Rx");
-var anwser_model_1 = require("./anwser.model");
+var answer_model_1 = require("./answer.model");
 var DetailComponent = (function () {
     function DetailComponent(router, route, service) {
         this.router = router;
@@ -65,7 +65,7 @@ var DetailComponent = (function () {
         this.isTest = false;
         this.isNotify = true;
         var auth_token = localStorage.getItem('auth_token');
-        var data = new anwser_model_1.Anwser(this.unit.unitTime / 1000 - this.ticks, this.userAnswer);
+        var data = new UserAnswer(this.unit.unitTime / 1000 - this.ticks, this.userAnswer);
         this.service.submitAns(auth_token, this.unit._id, JSON.stringify(data))
             .subscribe(function (data) {
             _this.sub.unsubscribe();
@@ -73,7 +73,7 @@ var DetailComponent = (function () {
         this.ticks = 99999999999;
     };
     DetailComponent.prototype.chooseAns = function (questionId, ansId) {
-        this.userAnswer.push(new anwser_model_1.Anwser(questionId, ansId));
+        this.userAnswer.push(new answer_model_1.Answer(questionId, ansId));
     };
     DetailComponent.prototype.convertTime = function (ticks) {
         var minute = 0;
@@ -105,4 +105,12 @@ var DetailComponent = (function () {
     return DetailComponent;
 }());
 exports.DetailComponent = DetailComponent;
+var UserAnswer = (function () {
+    function UserAnswer(time, answer) {
+        this.time = time;
+        this.answer = answer;
+    }
+    return UserAnswer;
+}());
+exports.UserAnswer = UserAnswer;
 //# sourceMappingURL=detail.component.js.map

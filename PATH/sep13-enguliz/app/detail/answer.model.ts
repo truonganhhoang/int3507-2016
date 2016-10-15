@@ -1,10 +1,10 @@
 /**
  * Created by Thinking on 10/02/2016.
  */
-export class Anwser {
+export class Answer {
 
     constructor(
-        public time: number,
+        public ansId: number,
         public answer: any[]
     ) {}
 }
