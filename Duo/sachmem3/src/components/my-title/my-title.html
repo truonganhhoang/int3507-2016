@@ -1,1 +1,5 @@
-<div *ngIf="unit">{{unit.name}}</div>
+<ion-card *ngIf="unit">
+  <ion-item>
+    <p class="name"><span class="number">Unit {{unit.number}}</span> {{unit.name}}</p>
+  </ion-item>
+</ion-card>

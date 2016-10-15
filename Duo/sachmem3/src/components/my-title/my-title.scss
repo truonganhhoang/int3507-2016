@@ -1,3 +1,18 @@
 my-title {
+	ion-card ion-item {
+		background: #00bcd4 !important;
+	}
 
+	.name {
+		color: white;
+		font-size: 1.3em;
+		font-family: 'Noto Sans';
+		font-weight: bold;
+		white-space: initial;
+	}
+
+	.number {
+		font-size: 0.85em;
+		font-weight: normal;
+	}
 }

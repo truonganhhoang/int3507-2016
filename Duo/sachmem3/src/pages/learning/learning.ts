@@ -72,7 +72,7 @@ export class Learning implements OnInit {
 
   enterPlayingPage(): void {
     this.navCtrl.push(Playing, {
-      unitId: this.navParams.get(this.unitId)
+      unitId: this.unitId
     });
   }
 
