@@ -91,6 +91,7 @@
             <srai>hey</srai>
         </template>
     </category>
+
     <category>
         <pattern>wew</pattern>
         <template>
@@ -105,11 +106,19 @@
     </category>
 
     <category>
+        <pattern>alo</pattern>
+        <template>
+            <srai>hey</srai>
+        </template>
+    </category>
+
+    <category>
         <pattern>hey *</pattern>
         <template>
             <srai>hey</srai>
         </template>
     </category>
+
     <category>
         <pattern>ahihi</pattern>
         <template>
@@ -123,7 +132,6 @@
             <srai>xin chào</srai>
          </template>
     </category>
-
     <category>
         <pattern>_ chào cwat *</pattern>
         <template>
@@ -135,6 +143,8 @@
         <pattern>chào cwat *</pattern>
             <srai>xin chào</srai>
     </category>
+
+    <category>
 
     <category>
         <pattern>có gì hot</pattern>
@@ -178,7 +188,6 @@
     </category>
 
 
-
     <category>
         <pattern>chào buổi sáng</pattern>
         <template>
@@ -207,7 +216,7 @@
 
     <category>
         <pattern>good morning</pattern>
-            <srai>chào buổi sáng</srai>
+             <srai>chào buổi sáng</srai>
     </category>
 
     <category>
