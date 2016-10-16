@@ -17,12 +17,14 @@ export class DetailComponent implements OnInit {
     public unit:Unit;
     public isTest = false;
     public isNotify = false;
+    public checkAnswer = false;
+
 
     private loggedIn = false;
     public ticks = 999999999999;
 
     public userAns:{[key:string]:string;} = {};
-    public timeCoutdown: string;
+    public timeCountdown: string;
     public userAnswer = [];
 
     public sub: Subcription;
@@ -59,7 +61,7 @@ export class DetailComponent implements OnInit {
                 this.isNotify = true;
             }
             this.ticks = this.unit.unitTime / 1000 - t;
-            this.timeCoutdown = this.convertTime(this.ticks);
+            this.timeCountdown = this.convertTime(this.ticks);
         });
     }
 
@@ -99,6 +101,10 @@ export class DetailComponent implements OnInit {
         } else {
             return ticks + " giây";
         }
+    }
+
+    actionCheckAnswer() {
+        this.checkAnswer = true;
     }
 
     ngOnInit() {

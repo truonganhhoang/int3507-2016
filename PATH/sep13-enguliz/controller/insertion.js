@@ -75,7 +75,7 @@ router.get('/unit', (req, res) => {
                         answer.ansId = "C";
                         answer.ansContent = "installed in a parking area";
                         answers.push(answer);
-                        questions.push(Question.init("Streetlamps are _________", result._id, answers));
+                        questions.push(Question.init("Streetlamps are _________", result._id, "A", answers));
 
                         var answers = [];
                         var answer = {};
@@ -90,7 +90,7 @@ router.get('/unit', (req, res) => {
                         answer.ansId = "C";
                         answer.ansContent = "being driven a bridge";
                         answers.push(answer);
-                        questions.push(Question.init("Cars are _________", result._id, answers));
+                        questions.push(Question.init("Cars are _________", result._id, "B", answers));
 
                         var answers = [];
                         var answer = {};
@@ -105,7 +105,7 @@ router.get('/unit', (req, res) => {
                         answer.ansId = "C";
                         answer.ansContent = "near a building screen";
                         answers.push(answer);
-                        questions.push(Question.init("People have _________", result._id, answers));
+                        questions.push(Question.init("People have _________", result._id, "C", answers));
 
                         var answers = [];
                         var answer = {};
@@ -120,7 +120,7 @@ router.get('/unit', (req, res) => {
                         answer.ansId = "C";
                         answer.ansContent = "near a building screen";
                         answers.push(answer);
-                        questions.push(Question.init("People have _________", result._id, answers));
+                        questions.push(Question.init("People have _________", result._id, "C", answers));
 
                         var answers = [];
                         var answer = {};
@@ -135,7 +135,7 @@ router.get('/unit', (req, res) => {
                         answer.ansId = "C";
                         answer.ansContent = "near a building screen";
                         answers.push(answer);
-                        questions.push(Question.init("People have _________", result._id, answers));
+                        questions.push(Question.init("People have _________", result._id, "B", answers));
 
                         db.insertMany(Collect.question, questions, (res) => {});
 

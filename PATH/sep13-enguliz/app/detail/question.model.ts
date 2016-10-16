@@ -7,6 +7,7 @@ export class Question {
        _id: string,
        question: string,
        unitIdRef : string,
+       correctAns: string,
        answers: Answer[]
     ) {}
 }

@@ -23,6 +23,7 @@ var DetailComponent = (function () {
         this.service = service;
         this.isTest = false;
         this.isNotify = false;
+        this.checkAnswer = false;
         this.loggedIn = false;
         this.ticks = 999999999999;
         this.userAns = {};
@@ -54,7 +55,7 @@ var DetailComponent = (function () {
                 _this.isNotify = true;
             }
             _this.ticks = _this.unit.unitTime / 1000 - t;
-            _this.timeCoutdown = _this.convertTime(_this.ticks);
+            _this.timeCountdown = _this.convertTime(_this.ticks);
         });
     };
     DetailComponent.prototype.isLoggedIn = function () {
@@ -86,6 +87,9 @@ var DetailComponent = (function () {
         else {
             return ticks + " giây";
         }
+    };
+    DetailComponent.prototype.actionCheckAnswer = function () {
+        this.checkAnswer = true;
     };
     DetailComponent.prototype.ngOnInit = function () {
         var _this = this;
