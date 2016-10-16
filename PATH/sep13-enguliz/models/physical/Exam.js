@@ -5,6 +5,7 @@ function Exam(userIdRef, unitIdRef, answer, time) {
     this.userIdRef = userIdRef;
     this.time = time;
     this.unitIdRef = unitIdRef;
+    this.createdDate = new Date();
     this.answer = answer;
 }
 
