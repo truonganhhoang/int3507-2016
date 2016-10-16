@@ -46,13 +46,6 @@ module.exports = function receivedMessage(event) {
     }
 
     else if (messageText) {
-
-        // hard code the command to enter fnPronunciation
-        if (messageText.substring(0, 5) == "speak") {
-            var speechContent = messageText.substring(5, messageText.length);
-            require('../fnPronunciation/sendAudio')(senderID, speechContent);
-        }
-
         redisClient.hgetall(senderID, function (err, reply) {
             if (err) {
                 console.log(err);
@@ -64,40 +57,61 @@ module.exports = function receivedMessage(event) {
                 require('../fnListening/handleTextReplyAction')(senderID, messageText, event);
             }
             else {
-                require('../intentClassification/getIntentClassification')(messageText, function (err, response) {
-                    // Save the new context to redis
-                    if (!err && response && response.intentClass) {
-                        redisClient.hmset(senderID, ["context", response.intentClass], function (err, res) {
-                            if (err) {
-                                console.log("Redis error: ", err);
-                            }
-                            else {
-                                console.log(res);
-                            }
-                        });
+                // hard code the command to enter fnPronunciation
+                let
+                    pronunciationIntentFlag = 0,
+                    pronunciationIntentSignals = [
+                        'speak', 'say', 'pronounce',
+                        'đọc', 'nói', 'phát âm',
+                        'doc', 'noi', 'phat am'
+                    ];
+                for (let i = 0; i < pronunciationIntentSignals.length; i++) {
+                    if (messageText.toLowerCase().indexOf(pronunciationIntentSignals[i]) != -1) {
+                        pronunciationIntentFlag = pronunciationIntentSignals[i].length;
+                        break;
                     }
+                }
+                if (pronunciationIntentFlag != 0) {
+                    var speechContent = messageText.substring(pronunciationIntentFlag + 1, messageText.length);
+                    require('../fnPronunciation/sendAudio')(senderID, speechContent);
+                }
+                // End of fnPronunciation
+                else {
+                    require('../intentClassification/getIntentClassification')(messageText, function (err, response) {
+                        // Save the new context to redis
+                        if (!err && response && response.intentClass) {
+                            redisClient.hmset(senderID, ["context", response.intentClass], function (err, res) {
+                                if (err) {
+                                    console.log("Redis error: ", err);
+                                }
+                                else {
+                                    console.log(res);
+                                }
+                            });
+                        }
 
-                    if (err) {
-                        require('../sendErrorMessage')(senderID);
-                    }
-                    else if (response && response.intentClass === 'MC') {
-                        require('../fnMutipleChoices/sendQuestion')(senderID);
-                    }
-                    else if (response && response.intentClass === 'NW') {
-                        require('../fnNewWords/sendNewWord')(senderID);
-                    }
-                    else if (response && response.intentClass === 'LI') {
-                        require('../fnListening/sendListeningChallenge')(senderID);
-                    }
-                    else if (response && response.intentClass === 'CO') {
-                        require('../fnConversations/sendNormalMessage')(senderID, response.botResponse);
-                    }
-                    else {
-                        require('./sendFunctions/sendTextMessage')(senderID, response.intentClass, function (err) {
-                            console.log("Message sent!");
-                        });
-                    }
-                });
+                        if (err) {
+                            require('../sendErrorMessage')(senderID);
+                        }
+                        else if (response && response.intentClass === 'MC') {
+                            require('../fnMutipleChoices/sendQuestion')(senderID);
+                        }
+                        else if (response && response.intentClass === 'NW') {
+                            require('../fnNewWords/sendNewWord')(senderID);
+                        }
+                        else if (response && response.intentClass === 'LI') {
+                            require('../fnListening/sendListeningChallenge')(senderID);
+                        }
+                        else if (response && response.intentClass === 'CO') {
+                            require('../fnConversations/sendNormalMessage')(senderID, response.botResponse);
+                        }
+                        else {
+                            require('./sendFunctions/sendTextMessage')(senderID, response.intentClass, function (err) {
+                                console.log("Message sent!");
+                            });
+                        }
+                    });
+                }
             }
         });
     }
