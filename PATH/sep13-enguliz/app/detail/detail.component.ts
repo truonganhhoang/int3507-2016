@@ -18,14 +18,12 @@ export class DetailComponent implements OnInit {
     public isTest = false;
     public isNotify = false;
     public checkAnswer = false;
-
-
     private loggedIn = false;
     public ticks = 999999999999;
-
     public userAns:{[key:string]:string;} = {};
     public timeCountdown: string;
     public userAnswer = [];
+    public correctNumber = 0;
 
     public sub: Subcription;
 
@@ -105,6 +103,9 @@ export class DetailComponent implements OnInit {
 
     actionCheckAnswer() {
         this.checkAnswer = true;
+        for(var i = 0; i < this.unit.question.length; i++) {
+            this.correctNumber++;
+        }
     }
 
     ngOnInit() {

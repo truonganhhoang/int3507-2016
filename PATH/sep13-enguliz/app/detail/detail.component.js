@@ -28,6 +28,7 @@ var DetailComponent = (function () {
         this.ticks = 999999999999;
         this.userAns = {};
         this.userAnswer = [];
+        this.correctNumber = 0;
         this.loggedIn = !!localStorage.getItem('auth_token');
         if (this.loggedIn) {
         }
@@ -90,6 +91,9 @@ var DetailComponent = (function () {
     };
     DetailComponent.prototype.actionCheckAnswer = function () {
         this.checkAnswer = true;
+        for (var i = 0; i < this.unit.question.length; i++) {
+            this.correctNumber++;
+        }
     };
     DetailComponent.prototype.ngOnInit = function () {
         var _this = this;

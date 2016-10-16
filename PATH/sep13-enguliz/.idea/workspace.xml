@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b04d9f9a-80bd-4c50-bd67-df94c3caec0e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/details.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/detail.component.html" afterPath="$PROJECT_DIR$/app/detail/detail.component.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/detail.component.js" afterPath="$PROJECT_DIR$/app/detail/detail.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/detail.component.js.map" afterPath="$PROJECT_DIR$/app/detail/detail.component.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/detail.component.ts" afterPath="$PROJECT_DIR$/app/detail/detail.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/question.model.ts" afterPath="$PROJECT_DIR$/app/detail/question.model.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/index.js" afterPath="$PROJECT_DIR$/controller/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/insertion.js" afterPath="$PROJECT_DIR$/controller/insertion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/physical/Question.js" afterPath="$PROJECT_DIR$/models/physical/Question.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
     </list>
     <ignored path="sep13-enguliz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,8 +31,8 @@
       <file leaf-file-name="detail.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/detail/detail.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="105" column="21" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="21" />
+            <state relative-caret-position="498">
+              <caret line="106" column="33" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -47,8 +41,8 @@
       <file leaf-file-name="detail.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/detail/detail.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1366">
-              <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
+            <state relative-caret-position="401">
+              <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -57,8 +51,8 @@
       <file leaf-file-name="question.model.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/detail/question.model.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="220">
+              <caret line="10" column="14" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -118,8 +112,8 @@
         <option value="$PROJECT_DIR$/controller/details.js" />
         <option value="$PROJECT_DIR$/models/physical/Question.js" />
         <option value="$PROJECT_DIR$/controller/insertion.js" />
-        <option value="$PROJECT_DIR$/app/detail/detail.component.ts" />
         <option value="$PROJECT_DIR$/app/detail/question.model.ts" />
+        <option value="$PROJECT_DIR$/app/detail/detail.component.ts" />
         <option value="$PROJECT_DIR$/app/detail/detail.component.html" />
       </list>
     </option>
@@ -440,7 +434,7 @@
       <workItem from="1476500379829" duration="1413000" />
       <workItem from="1476547119575" duration="1727000" />
       <workItem from="1476586139638" duration="3120000" />
-      <workItem from="1476606977006" duration="3348000" />
+      <workItem from="1476606977006" duration="8458000" />
     </task>
     <task id="LOCAL-00001" summary="set event click course">
       <created>1474734807551</created>
@@ -540,11 +534,18 @@
       <option name="project" value="LOCAL" />
       <updated>1476591348201</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="update check correct answer">
+      <created>1476610613105</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1476610613105</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68595000" />
+    <option name="totallyTimeSpent" value="73705000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -627,7 +628,8 @@
     <MESSAGE value="save exam of user" />
     <MESSAGE value="get exam of user" />
     <MESSAGE value="update jquery" />
-    <option name="LAST_COMMIT_MESSAGE" value="update jquery" />
+    <MESSAGE value="update check correct answer" />
+    <option name="LAST_COMMIT_MESSAGE" value="update check correct answer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -977,24 +979,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/detail/question.model.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="220">
+          <caret line="10" column="14" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/detail/detail.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="105" column="21" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="21" />
+        <state relative-caret-position="498">
+          <caret line="106" column="33" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/detail/detail.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1366">
-          <caret line="65" column="10" selection-start-line="65" selection-start-column="10" selection-end-line="65" selection-end-column="10" />
+        <state relative-caret-position="401">
+          <caret line="64" column="38" selection-start-line="64" selection-start-column="38" selection-end-line="64" selection-end-column="38" />
           <folding />
         </state>
       </provider>

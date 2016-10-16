@@ -56,12 +56,13 @@
                             <li *ngFor="let ans of q.anwsers">
                                 <input *ngIf="q.correctAns == ans.ansId" type="radio" name="{{q._id}}" checked (click)="chooseAns(q._id, ans.ansId)">
                                 <input *ngIf="q.correctAns != ans.ansId" type="radio" name="{{q._id}}" (click)="chooseAns(q._id, ans.ansId)">
-                                {{ans.ansId}}. {{ans.ansContent}}
+                                    {{ans.ansId}}. {{ans.ansContent}}
                             </li>
                         </ul>
                     </li>
                 </div>
             </ol>
+            <span>Bạn trả lời đúng {{correctNumber}} câu</span>
         </div>
     </div>
 </div>
