@@ -1,6 +1,7 @@
 /* Master Styles */
 body {
     font-family: 'Arial',Georgia,serif;
+    background: #f5f5f5;
 }
 
 ul li {
@@ -11,6 +12,11 @@ ul li {
     .container {
         width: 100% !important;
     }
+}
+
+.affix {
+    top: 0;
+    width: 100%;
 }
 
 .header {
@@ -50,8 +56,8 @@ ul li {
     color: #ffffff;;
 }
 
-.slider {
-    height: 240px;
+.my-slide {
+    height: 350px;
     background-image: url("../images/slider.jpg");
 }
 
@@ -160,7 +166,7 @@ ul li {
 
 .account-wall{
     box-shadow: 5px 5px  5px 5px grey;
-    padding: 10 10 10 10;
+    padding: 10px 10px 10px 10px;
     margin-top: 20%;
 }
 .timer {
@@ -193,4 +199,71 @@ ul li {
 
 .btn-submit{
     text-align: center;
+}
+
+/*--------------Detail-------------*/
+
+.player-inner {
+    width: 95%;
+    background: #ffffff;
+    margin: 100px auto;
+}
+
+.player-inner .player-header {
+    background: #007f86;
+    height: 100px;
+    line-height: 100px;
+    color: #ffffff;
+    padding: 15px 0 0 50px;
+}
+
+.player-inner .player-title {
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.player-inner .player-title .title h3{
+    height: 40px;
+    line-height: 40px;
+    border: 1px dotted #333333;
+    background: #e6e6e6;
+}
+
+.player-inner .player-title .title p {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.player-inner .player-wrapper {
+    width: 95%;
+    margin: auto;
+    background: #f2f2f2;
+    border: 1px solid #c0c0c0;
+    font-size: 16px;
+}
+
+.player-wrapper h3 {
+    text-align: center;
+}
+
+.player-wrapper .audio {
+    width: 650px;
+    margin: auto;
+    padding: 30px 0 30px 0;
+}
+
+.center {
+    padding-left: 200px;
+    /*padding-left: 200px;*/
+}
+
+.testYourEnglish p {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-top: 5px
+}
+
+.testYourEnglish ul li {
+    margin: 10px 0;
 }
