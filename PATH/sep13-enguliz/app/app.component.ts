@@ -7,29 +7,33 @@ import {UserService} from "./user/user.service";
 import {User} from "./user/user.model";
 @Component({
     selector: 'my-app',
-    template: `<div class="header navbar navbar-inverse" style="margin-left: 0;"  data-spy="affix" data-offset-top="0" >
-                    <div class="col-sm-4"></div>
-                    <div class="col-sm-4">
-                        <div class="search">
-                            <form action="#">
-                                <input type="text" placeholder="Search" style="border: none">
-                            </form>
-                        </div>
+    template: `<header class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <nav>
+                            <div class="header-logo">
+                                <img src="../../images/learnenglish.png" alt="">
+                            </div>
+                            <ul class="nav navbar-nav navbar-right" *ngIf="loggedIn === false">
+                                <li><a href="">Home</a></li>
+                                <li><a href="">Listening</a></li>
+                                <li><a href="">Reading</a></li>
+                                <li><a href="">Writing</a></li>
+                                <li><a [routerLink]="['login']">Login</a></li>
+                                <li><a href="#" class="sign-up">Sign up</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right" *ngIf="loggedIn === true">
+                                <li><a href="">Home</a></li>
+                                <li><a href="">Listening</a></li>
+                                <li><a href="">Reading</a></li>
+                                <li><a href="">Writing</a></li>
+                                <li>
+                                    <a href="" class="dropdown-toggle" data-toggle="dropdown"> {{email}}</a>
+                                </li>
+                                <li><a href="" (click)="logout()">Logout</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="col-sm-4">
-                        <ul *ngIf="loggedIn === false">
-                            <li><a [routerLink]="['login']">Login</a></li>
-                            <li><a href="#" class="sign-up">Sign up</a></li>
-                        </ul>
-                        <ul *ngIf="loggedIn === true">
-                            <li>Tài khoản: <a href=""> {{email}}</a></li>
-                            <li><a href="" (click)="logout()">Logout</a></li>
-                        </ul>
-                    </div>
-               </div>
-               <div class="slider row">
-               
-               </div>
+               <div class="slider row"></div>
         <router-outlet></router-outlet>`,
     providers: [UserService]
 })
