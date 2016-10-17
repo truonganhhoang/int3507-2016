@@ -7,7 +7,7 @@ import {UserService} from "./user/user.service";
 import {User} from "./user/user.model";
 @Component({
     selector: 'my-app',
-    template: `<div class="header" style="margin-left: 0;">
+    template: `<div class="header navbar navbar-inverse" style="margin-left: 0;"  data-spy="affix" data-offset-top="0" >
                     <div class="col-sm-4"></div>
                     <div class="col-sm-4">
                         <div class="search">
@@ -27,7 +27,9 @@ import {User} from "./user/user.model";
                         </ul>
                     </div>
                </div>
-               <div class="slider row"></div>
+               <div class="slider row">
+               
+               </div>
         <router-outlet></router-outlet>`,
     providers: [UserService]
 })

@@ -1,68 +1,80 @@
-<div class="container">
-    <div style="width: 100%;text-align: center;" *ngIf="unit">
-        <h3>{{unit.unitTitle}}</h3>
-        <img alt="" width="30%" height="30%" src="{{unit.unitThumbnail}}"><br>
-        <span>{{unit.unitSubTitle}}</span><br>
-        <span>{{unit.unitThreads}}</span>
-        <p>Thời gian: {{convertTime(unit.unitTime/1000)}}</p>
-
-        <audio src="../../public/P1_17_01.mp3" controls="controls" *ngIf="unit.unitType == 'Listening'">
-        </audio><br>
-
-        <button *ngIf="!isTest && !isNotify" class="btn btn-primary" (click)="startTesting()">Bắt đầu</button>
-
-    </div>
-
-    <div *ngIf="isTest">
-        <div class="status-start">
-            <h3>Bắt đầu làm bài</h3>
+<div class="container" xmlns="http://www.w3.org/1999/html">
+    <div class="player-inner row" *ngIf="unit">
+        <div class="player-header">
+            <h2>Nâng cao kỹ năng tiếng anh qua các khóa học của chúng tôi</h2>
         </div>
-
-        <div class="col-md-1 timer">
-            <h5>Time Remain</h5>
-            <h5>{{timeCountdown}}</h5>
+        <div class="player-title">
+            <div class="title">
+                <h3>Test your English - For Schools - Page 1</h3>
+                <p>
+                    For the question below, choose the best sentence to complete the conversation
+                </p>
+            </div>
         </div>
-
-        <div class="col-md-8 col-md-offset-2">
-            <ol>
-                <div class="panel panel-default col m6 question_answers" *ngFor="let q of unit.question">
-                    <li><label>{{q.question}}</label>
-                        <ul>
-                            <li *ngFor="let ans of q.anwsers"><input type="radio" name="{{q._id}}" (click)="chooseAns(q._id, ans.ansId)"> {{ans.ansId}}. {{ans.ansContent}}</li>
-                        </ul>
-                    </li>
+             <div class="player-wrapper" *ngIf="unit">
+                <h3>{{unit.unitTitle}}</h3>
+                <div class="audio">
+                    <img alt=""  src="{{unit.unitThumbnail}}" width="100%"><br>
+                    <p class="center" style="padding-top: 20px;">{{unit.unitSubTitle}}</p>
+                    <p class="center">{{unit.unitThreads}}</p>
+                    <p class="center">Thời gian: {{convertTime(unit.unitTime/1000)}}</p>
+                    <button *ngIf="!isTest && !isNotify" class="btn btn-primary" (click)="startTesting()">Bắt đầu</button>
                 </div>
-            </ol>
-        </div>
-        <div class="clear-both"></div>
-        <div class="btn-submit">
-            <button class="btn btn-info" (click)="submitAns()">Submit</button>
-        </div>
-    </div>
-    <div *ngIf="isNotify">
-        <div class="status-end">
-            <h3>Bài làm kết thúc</h3>
-            <button class="btn btn-default" [routerLink]="['']">Về trang chủ</button>
-            <button class="btn btn-primary" (click)="actionCheckAnswer()">Xem kết quả</button>
-        </div>
-    </div>
 
-    <div *ngIf="checkAnswer">
-        <div class="col-md-8 col-md-offset-2">
-            <ol>
-                <div class="panel panel-default col m6 question_answers" *ngFor="let q of unit.question">
-                    <li><label>{{q.question}}</label>
-                        <ul>
-                            <li *ngFor="let ans of q.anwsers">
-                                <input *ngIf="q.correctAns == ans.ansId" type="radio" name="{{q._id}}" checked (click)="chooseAns(q._id, ans.ansId)">
-                                <input *ngIf="q.correctAns != ans.ansId" type="radio" name="{{q._id}}" (click)="chooseAns(q._id, ans.ansId)">
-                                    {{ans.ansId}}. {{ans.ansContent}}
-                            </li>
-                        </ul>
-                    </li>
+                <div *ngIf="isTest">
+                    <div class="status-start">
+                        <h3>Bắt đầu làm bài</h3>
+                    </div>
+                    <div class="col-md-1 timer">
+                        <h5>Time Remain</h5>
+                        <h5>{{timeCountdown}}</h5>
+                    </div>
+                    <div class="question-content" *ngFor="let q of unit.question">
+                        <fieldset>
+                            <ul>
+                                <li class="testYourEnglish">
+                                    <p>{{q.question}}</p>
+                                    <ul>
+                                        <li *ngFor="let ans of q.anwsers">
+                                            <input type="radio" name="{{q._id}}" (click)="chooseAns(q._id, ans.ansId)"> {{ans.ansId}}. {{ans.ansContent}}
+                                            <label></label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </fieldset>
+
+                    </div>
+                    <div class="clear-both"></div>
+                    <div class="btn-submit">
+                        <button class="btn btn-info" (click)="submitAns()">Submit</button>
+                    </div>
+                    <div *ngIf="isNotify">
+                        <div class="status-end">
+                            <h3>Bài làm kết thúc</h3>
+                            <button class="btn btn-default" [routerLink]="['']">Về trang chủ</button>
+                            <button class="btn btn-primary" (click)="actionCheckAnswer()">Xem kết quả</button>
+                        </div>
+                    </div>
+
+                    <div *ngIf="checkAnswer">
+                        <div class="col-md-8 col-md-offset-2">
+                        <ol>
+                            <div class="panel panel-default col m6 question_answers" *ngFor="let q of unit.question">
+                                <li><label>{{q.question}}</label>
+                                    <ul>
+                                        <li *ngFor="let ans of q.anwsers">
+                                            <input *ngIf="q.correctAns == ans.ansId" type="radio" name="{{q._id}}" checked (click)="chooseAns(q._id, ans.ansId)">
+                                            <input *ngIf="q.correctAns != ans.ansId" type="radio" name="{{q._id}}" (click)="chooseAns(q._id, ans.ansId)">
+                                            {{ans.ansId}}. {{ans.ansContent}}
+                                        </li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </ol>
+                    <span>Bạn trả lời đúng {{correctNumber}} câu</span>
+                    </div>
                 </div>
-            </ol>
-            <span>Bạn trả lời đúng {{correctNumber}} câu</span>
         </div>
     </div>
 </div>
