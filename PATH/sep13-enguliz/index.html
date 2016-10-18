@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <base href="/">
-
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="css/styles.css">
@@ -31,24 +30,5 @@
 <body>
 <my-app>Loading...</my-app>
 </body>
-<script>
-    $('#myCarousel').carousel({
-        interval: 10000
-    })
 
-    $('.carousel .item').each(function(){
-        var next = $(this).next();
-        if (!next.length) {
-            next = $(this).siblings(':first');
-        }
-        next.children(':first-child').clone().appendTo($(this));
-
-        if (next.next().length>0) {
-            next.next().children(':first-child').clone().appendTo($(this));
-        }
-        else {
-            $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-        }
-    });
-</script>
 </html>
