@@ -10,6 +10,11 @@
 - Trước khi commit/push, nên pull/merge để tránh bị conflict.
 - **Từng người phải có issue mô tả công việc của mình, gán thông tin tag của nhóm, assignee, v.v. đầy đủ.**
 
-## 19/9 các nhóm báo cáo, trình bày kiến thức tìm hiểu đc, và demo chương trình
-- Chuẩn bị sẵn slides để trình bày trong khoảng 20 phút.
-- Demo chương trình, phiên bản v0.1, chuẩn bị sẵn cả source code để trao đổi.
+## Sản phẩm của các nhóm
+Liên kết đến sản phẩm của các nhóm:
+
+| Tên nhóm | Liên kết  |
+|---|---|
+| abc  | http://m.me/abc |
+| ... | ...  |
+| ...  | ... |

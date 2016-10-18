@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>yêu bạn</pattern>
+        <template>
+            <random>
+                <li>Oh! Mình biết. Dễ thương như mình ai mà ko yêu chứ. kaka</li>
+                <li>Vậy à. Nhưng rất tiếc mình đã dành tình cảm cho người khác rồi! :3 Xin lỗi bạn.</li>
+                <li>Cảm ơn bạn nhé. :V</li>
+                <li>Mình cũng vậy! Mình cũng yêu mình luôn. ahihi</li>
+                <li>Mình sẽ gửi tin này tới mầy thằng FA trong nhóm. :D</li>
+            </random>
+       </template>
+    </category>
+    <category>
+        <pattern>yêu bạn *</pattern>
+        <template>
+            <srai>yêu bạn</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ yêu bạn *</pattern>
+        <template>
+            <srai>yêu bạn</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ yêu bạn</pattern>
+        <template>
+            <srai>yêu bạn</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ thích bạn</pattern>
+        <template>
+            <srai>yêu bạn</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>ghét bạn</pattern>
+        <template>
+            <random>
+                <li>Oh! Ai quan tâm chứ. kaka</li>
+                <li>Oh No. Tại sao chứ. Mình cute vậy mà.</li>
+                <li>Haha. Nhìn mình có vẻ gì quan tâm không?</li>
+                <li>Được thôi. Cắt xít luôn. hmm</li>
+                <li>Bạn làm mình buồn. :'(</li>
+                <li>Hoang Đường</li>
+            </random>
+       </template>
+    </category>
+    <category>
+        <pattern>_ ghét bạn</pattern>
+        <template>
+            <srai>ghét bạn</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ ghét bạn *</pattern>
+        <template>
+            <srai>ghét bạn</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>ghét bạn *</pattern>
+        <template>
+            <srai>ghét bạn</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>chém gió</pattern>
+        <template>
+            <random>
+                <li>Gió thì làm sao mà chém? :)</li>
+                <li>Truy cập windytv.com để biết tình hình gió ngày hôm nay. :D</li>
+                <li>Cái này thì bạn chưa đủ trình nói chuyện với mình đâu. ahaha</li>
+                <li>Thôi thôi. Mình không muốn có bão ngày hôm nay</li>
+            </random>
+       </template>
+    </category>
+    <category>
+        <pattern>chém gió *</pattern>
+        <template>
+            <srai>chém gió</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ chém gió *</pattern>
+        <template>
+            <srai>chém gió</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ chém gió</pattern>
+        <template>
+            <srai>chém gió</srai>
+        </template>
+    </category>
+</aiml>
