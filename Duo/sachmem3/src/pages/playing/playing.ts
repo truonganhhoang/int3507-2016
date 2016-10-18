@@ -61,7 +61,7 @@ export class Playing implements OnInit {
       // Tạm thời gán cho 'games' 4 giá trị l, s, r, w. 
       // Khi lưu dữ liệu sẽ thay đổi tùy theo.
       for (let i = 0; i < this.words.length; i++) {
-        this.words[i]['games'] = [ 'r', 'l', 'w' ];
+        this.words[i]['games'] = [ 'l' ];
       }
 
       this.reload();

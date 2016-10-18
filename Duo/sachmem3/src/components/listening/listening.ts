@@ -19,6 +19,12 @@ import { Learning } from '../../pages/learning/learning';
         color: 'white',
         transform: 'scale(1.1)'
       })),
+      state('pending', style({
+        backgroundColor: '#FFC107',
+        borderColor: '#FFC107',
+        color: 'white',
+        transform: 'scale(1.1)',
+      })),
       state('right', style({
         backgroundColor: '#4caf50',
         borderColor: '#4caf50',
@@ -51,10 +57,36 @@ export class Listening implements OnInit, OnChanges {
   answers: Object[] = [];
   choosen: Object;
   disabled: boolean = false;
+  timeout = [];
 
   constructor(private navCtrl: NavController, private navParams: NavParams, private nativeService: NativeService, private helperService: HelperService) { }
 
   ngOnInit() { }
+
+  autoplay(): void {
+    let TIME = 2000;
+    let no = this.answers.length;
+    
+    for (let i = 0; i <= no; i++) {
+      this.timeout[i] = setTimeout(() => {
+        // Reset color
+        for (let j = 0; j < no; j++) {
+          this.answers[j]['state'] = '';
+        }
+
+        if (i != no) {
+          this.nativeService.tts(this.answers[i]['content']);
+          this.answers[i]['state'] = 'pending';  
+        }
+      }, i * TIME);
+    }
+  }
+
+  stopAutoplay(): void {
+    for (let i = 0; i < this.timeout.length; i++) {
+      clearTimeout(this.timeout[i]);
+    }
+  }
 
   ngOnChanges(changes:{[propKey: string]: SimpleChange}) {
     let NO_OF_ANS = 3;
@@ -90,11 +122,14 @@ export class Listening implements OnInit, OnChanges {
       this.answers.push(temp);
     }
 
+    this.autoplay();
     this.choosen = undefined;
     this.disabled = false;
   }
 
   choose(item: Object): void {
+    this.stopAutoplay();
+
     // Đã trả lời, không cho click đáp án khác
     if (this.disabled) return;
 
