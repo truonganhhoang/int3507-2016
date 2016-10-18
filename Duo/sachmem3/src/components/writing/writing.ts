@@ -82,14 +82,15 @@ export class Writing implements OnInit, OnChanges  {
   	this.allLetter = [];
     this.answerState = 'none';
 
-  	let alphabet = 'qwertyuiopasdfghjklzxcvbnm';
-
   	//Tao mang cho cac letter
+    let alphabet = 'qwertyuiopasdfghjklzxcvbnm';
+
   	for (let i = 0; i < alphabet.length; i++) {
   		this.allLetter.push(alphabet.charAt(i));
   	}
 
   	//Them cac tu dung vào trong mảng options
+    this.curWord['content'] = this.curWord['content'].toLowerCase();
   	for (let i = 0; i < this.curWord['content'].length; i++) {
   		if (this.options.indexOf(this.curWord['content'].charAt(i)) < 0) {
   			this.options.push(this.curWord['content'].charAt(i));	

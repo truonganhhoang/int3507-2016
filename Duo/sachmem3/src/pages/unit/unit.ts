@@ -32,9 +32,12 @@ export class Unit {
   selectedUnit: number;
   bookId: number;
   learned: number;
+  bookTitle: string;
 
   constructor(private navCtrl: NavController, private navParams: NavParams, private unitService: UnitService, private wordService: WordService) {
     this.bookId = this.navParams.get('bookId');
+    this.bookTitle = this.navParams.get('bookTitle');
+
     this.unitService.getUnits(this.bookId).then(res => {
       this.units = res;  
     });

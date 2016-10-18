@@ -30,7 +30,8 @@ export class Book implements OnInit {
 
   enter(item) {
     this.navCtrl.push(Unit, {
-      bookId: item.id
+      bookId: item.id,
+      bookTitle: item.name
     });
   }
 

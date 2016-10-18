@@ -3,7 +3,7 @@
     <button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Unit</ion-title>
+    <ion-title>{{bookTitle}}</ion-title>
   </ion-navbar>
 
   <ion-toolbar color="primary" style="text-align:center">
@@ -19,7 +19,8 @@
     </ion-grid> -->
   </ion-toolbar>
 
-  <ion-grid [@actionState]="actionState" *ngIf="selectedUnit" style="position:fixed;bottom:0px;background:rgba(210, 210, 210, 0.5)">
+  <ion-grid [@actionState]="actionState" *ngIf="selectedUnit" 
+       style="position:fixed;bottom:0px;background:rgba(210, 210, 210, 0.5)">
     <ion-row>
       <ion-col width-50>
         <button ion-button icon-left [disabled]="!selectedUnit" (click)="enterTraining()" block>
