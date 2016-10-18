@@ -1,4 +1,10 @@
 page-playing {
+  ion-fab {
+    button {
+      box-shadow: none !important;
+    }
+  }
+
   .meaning {
     margin-right: 20% !important;
     white-space: initial !important;

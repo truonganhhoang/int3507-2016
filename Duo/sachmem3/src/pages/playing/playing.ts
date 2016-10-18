@@ -45,14 +45,15 @@ export class Playing implements OnInit {
   //mang cac tu khong thay doi de truyen cho cac game
   allWords: Object[];
   iconState: string = 'none';
+  unitId: number;
 
   constructor(private navCtrl: NavController, private navParams: NavParams, private wordService: WordService,
               private helperService: HelperService, private zone: NgZone, private nativeService: NativeService) { }
 
   ngOnInit() { 
-    let unitId = this.navParams.get('unitId');
+    this.unitId = this.navParams.get('unitId');
 
-    this.wordService.getWordsByUnit(unitId).then(result => {
+    this.wordService.getWordsByUnit(this.unitId).then(result => {
       this.words = result;
       // Gán allWords là mảng dữ liệu không đổi
       this.allWords = this.words.slice();

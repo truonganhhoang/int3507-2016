@@ -1,4 +1,4 @@
-# Repo của môn học INT 3507: Các vấn đề hiện đại CNTT, 2016-2017
+﻿# Repo của môn học INT 3507: Các vấn đề hiện đại CNTT, 2016-2017
 
 ## Chú ý khi chọn đề tài:
 - Các nhóm chủ động chọn, đề xuất đề tài với chủ đề: Tạo công cụ học ngoại ngữ cho học sinh phổ thông.
@@ -16,5 +16,5 @@ Liên kết đến sản phẩm của các nhóm:
 | Tên nhóm | Liên kết  |
 |---|---|
 | abc  | http://m.me/abc |
-| ... | ...  |
+| Duo | https://play.google.com/store/apps/details?id=com.saokhuee.sachmem  |
 | ...  | ... |

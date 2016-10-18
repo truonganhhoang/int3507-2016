@@ -9,14 +9,15 @@ import { Unit } from '../pages/unit/unit';
 import { Learning } from '../pages/learning/learning'; 
 import { Playing } from '../pages/playing/playing';
 import { Review } from '../pages/review/review';
+import { About } from '../pages/about/about';
 
 import { Listening } from '../components/listening/listening';
 import { Reading } from '../components/reading/reading';
 // import { Speaking } from '../components/speaking/speaking';
 import { Writing } from '../components/writing/writing';
-
 import { Login } from '../components/login/login';
-import { About } from '../pages/about/about';
+import { MyTitle } from '../components/my-title/my-title';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { About } from '../pages/about/about';
     Reading,
     Writing,
     Login,
-    About
+    About,
+    MyTitle
   ],
   imports: [
     IonicModule.forRoot(MyApp)

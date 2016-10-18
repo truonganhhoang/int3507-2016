@@ -5,6 +5,8 @@
 </ion-header>
 
 <ion-content>
+  <my-title [unitId]="unitId"></my-title>
+
   <ion-card *ngIf="words.length <= 0">
     <img src="assets/img/learn.png"/>
     <ion-card-content>
@@ -31,11 +33,11 @@
 
   <ion-card *ngIf="words.length > 0 && curWord">
     <img src="assets/img/learn.png">
-    <ion-fab right top style="right:20px;top:20px">
+    <!-- <ion-fab right top style="right:20px;top:20px">
       <button ion-fab color="primary">
         <ion-icon name="star"></ion-icon>
       </button>
-    </ion-fab>
+    </ion-fab> -->
 
     <ion-item>
       <h1 class="content" class="content" color="primary">{{curWord.content}}</h1>
