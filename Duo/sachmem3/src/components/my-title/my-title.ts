@@ -14,7 +14,8 @@ import { UnitService } from '../../providers/unit-service';
   providers: [ UnitService ]
 })
 
-export class MyTitle {
+export class MyTitle implements OnInit {
+  
   @Input() unitId: number;
   unit: Object;
   text: string;

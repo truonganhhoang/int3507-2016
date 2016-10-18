@@ -22,8 +22,8 @@ import { MyTitle } from '../components/my-title/my-title';
 @NgModule({
   declarations: [
     MyApp,
-    // Page1,
-    // Page2,
+    Page1,
+    Page2,
     Book,
     Unit,
     Learning,
@@ -42,8 +42,8 @@ import { MyTitle } from '../components/my-title/my-title';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    // Page1,
-    // Page2,
+    Page1,
+    Page2,
     Book,
     Unit,
     Learning,

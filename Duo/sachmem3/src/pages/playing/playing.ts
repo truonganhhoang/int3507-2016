@@ -45,6 +45,7 @@ export class Playing implements OnInit {
   //mang cac tu khong thay doi de truyen cho cac game
   allWords: Object[];
   iconState: string = 'none';
+  unitId: number;
 
   constructor(private navCtrl: NavController, private navParams: NavParams, private wordService: WordService,
               private helperService: HelperService, private zone: NgZone, private nativeService: NativeService) { }
