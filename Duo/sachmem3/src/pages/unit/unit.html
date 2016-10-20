@@ -3,21 +3,15 @@
     <button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>{{bookTitle}}</ion-title>
-  </ion-navbar>
 
-  <ion-toolbar color="primary" style="text-align:center">
-    <!-- <ion-grid>
-      <ion-row center>
-        <ion-col width-33> -->
-          <button icon-left ion-button [disabled]="learned <= 0" (click)="enterReview()" color="light">
-            <ion-icon name="clipboard"></ion-icon>
-            Review
-          </button>
-        <!-- </ion-col>
-      </ion-row>
-    </ion-grid> -->
-  </ion-toolbar>
+    <ion-title>{{bookTitle}}</ion-title>
+
+    <ion-fab middle right>
+      <button ion-fab mini color="light" [disabled]="learned <= 0" (click)="enterReview()">
+        <ion-icon name="clipboard"></ion-icon>
+      </button>
+    </ion-fab>
+  </ion-navbar>
 
   <ion-grid [@actionState]="actionState" *ngIf="selectedUnit" 
        style="position:fixed;bottom:0px;background:rgba(210, 210, 210, 0.5)">
