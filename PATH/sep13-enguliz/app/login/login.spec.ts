@@ -12,7 +12,7 @@ describe('LoginService tests', () =>{
     });
 
     it('Get params 2', () => {
-        it('true is true', () => expect(false).toBe(false));
+        it('true is true', () => expect(false).toBe(true));
     });
 
 });

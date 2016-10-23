@@ -11,14 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 /**
  * Created by Thinking on 09/15/2016.
  */
-const core_1 = require("@angular/core");
-let TheoryComponent = class TheoryComponent {
-};
-TheoryComponent = __decorate([
-    core_1.Component({
-        template: `<router-outlet></router-outlet>`
-    }), 
-    __metadata('design:paramtypes', [])
-], TheoryComponent);
+var core_1 = require("@angular/core");
+var TheoryComponent = (function () {
+    function TheoryComponent() {
+    }
+    TheoryComponent = __decorate([
+        core_1.Component({
+            template: "<router-outlet></router-outlet>"
+        }), 
+        __metadata('design:paramtypes', [])
+    ], TheoryComponent);
+    return TheoryComponent;
+}());
 exports.TheoryComponent = TheoryComponent;
 //# sourceMappingURL=theory.component.js.map

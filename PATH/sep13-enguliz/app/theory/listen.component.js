@@ -11,30 +11,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 /**
  * Created by Thinking on 09/15/2016.
  */
-const core_1 = require("@angular/core");
+var core_1 = require("@angular/core");
 require('rxjs/Rx');
-const listen_service_1 = require("./listen.service");
-let TheoryListenComponent = class TheoryListenComponent {
+var listen_service_1 = require("./listen.service");
+var TheoryListenComponent = (function () {
     // Constructor with injected service
-    constructor(service) {
+    function TheoryListenComponent(service) {
         this.service = service;
     }
-    loadListens() {
+    TheoryListenComponent.prototype.loadListens = function () {
+        var _this = this;
         this.service.getListens()
-            .subscribe(data => this.listens = data, err => {
+            .subscribe(function (data) { return _this.listens = data; }, function (err) {
             console.error(err);
         });
-    }
-    ngOnInit() {
+    };
+    TheoryListenComponent.prototype.ngOnInit = function () {
         this.loadListens();
-    }
-};
-TheoryListenComponent = __decorate([
-    core_1.Component({
-        templateUrl: 'app/theory/listen.component.html',
-        providers: [listen_service_1.ListenService],
-    }), 
-    __metadata('design:paramtypes', [listen_service_1.ListenService])
-], TheoryListenComponent);
+    };
+    TheoryListenComponent = __decorate([
+        core_1.Component({
+            templateUrl: 'app/theory/listen.component.html',
+            providers: [listen_service_1.ListenService],
+        }), 
+        __metadata('design:paramtypes', [listen_service_1.ListenService])
+    ], TheoryListenComponent);
+    return TheoryListenComponent;
+}());
 exports.TheoryListenComponent = TheoryListenComponent;
 //# sourceMappingURL=listen.component.js.map

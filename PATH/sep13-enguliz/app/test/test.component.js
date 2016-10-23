@@ -11,14 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 /**
  * Created by Thinking on 09/18/2016.
  */
-const core_1 = require("@angular/core");
-let TestComponent = class TestComponent {
-};
-TestComponent = __decorate([
-    core_1.Component({
-        templateUrl: 'app/test/test.component.html'
-    }), 
-    __metadata('design:paramtypes', [])
-], TestComponent);
+var core_1 = require("@angular/core");
+var TestComponent = (function () {
+    function TestComponent() {
+    }
+    TestComponent = __decorate([
+        core_1.Component({
+            templateUrl: 'app/test/test.component.html'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], TestComponent);
+    return TestComponent;
+}());
 exports.TestComponent = TestComponent;
 //# sourceMappingURL=test.component.js.map

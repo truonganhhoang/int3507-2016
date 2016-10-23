@@ -2,9 +2,10 @@
 /**
  * Created by Thinking on 09/24/2016.
  */
-class Category {
-    constructor(categoryId, categoryName, categoryThumbnail, categoryItems) {
+var Category = (function () {
+    function Category(categoryId, categoryName, categoryThumbnail, categoryItems) {
     }
-}
+    return Category;
+}());
 exports.Category = Category;
 //# sourceMappingURL=category.model.js.map

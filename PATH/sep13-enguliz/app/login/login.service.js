@@ -12,32 +12,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Created by Thinking on 09/19/2016.
  */
 require('rxjs/Rx');
-const core_1 = require("@angular/core");
-const http_1 = require("@angular/http");
-const Rx_1 = require("rxjs/Rx");
-let LoginService = class LoginService {
-    constructor(http) {
+var core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
+var Rx_1 = require("rxjs/Rx");
+var LoginService = (function () {
+    function LoginService(http) {
         this.http = http;
         this.loginUrl = "http://localhost:8080/api/v1/user/login?";
         this.logoutUrl = "http://localhost:8080/api/v1/user/logout?";
     }
-    loginRequest(username, password) {
+    LoginService.prototype.loginRequest = function (username, password) {
         return this.http.get(this.loginUrl + "username=" + username + "&password=" + password)
-            .map((res) => res.json())
-            .catch((error) => Rx_1.Observable.throw(error.json().error || 'Server error'));
-    }
-    logoutRequest(auth_token) {
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
+    };
+    LoginService.prototype.logoutRequest = function (auth_token) {
         var headers = {
             access_token: auth_token
         };
         return this.http.get(this.logoutUrl, headers)
-            .map((res) => res.json())
-            .catch((error) => Rx_1.Observable.throw(error.json().error || 'Server error'));
-    }
-};
-LoginService = __decorate([
-    core_1.Injectable(), 
-    __metadata('design:paramtypes', [http_1.Http])
-], LoginService);
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
+    };
+    LoginService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], LoginService);
+    return LoginService;
+}());
 exports.LoginService = LoginService;
 //# sourceMappingURL=login.service.js.map

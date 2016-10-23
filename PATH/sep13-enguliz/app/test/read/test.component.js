@@ -11,14 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 /**
  * Created by Thinking on 09/18/2016.
  */
-const core_1 = require("@angular/core");
-let TestReadCompoent = class TestReadCompoent {
-};
-TestReadCompoent = __decorate([
-    core_1.Component({
-        templateUrl: 'app/test/read/read.component.html'
-    }), 
-    __metadata('design:paramtypes', [])
-], TestReadCompoent);
+var core_1 = require("@angular/core");
+var TestReadCompoent = (function () {
+    function TestReadCompoent() {
+    }
+    TestReadCompoent = __decorate([
+        core_1.Component({
+            templateUrl: 'app/test/read/read.component.html'
+        }), 
+        __metadata('design:paramtypes', [])
+    ], TestReadCompoent);
+    return TestReadCompoent;
+}());
 exports.TestReadCompoent = TestReadCompoent;
 //# sourceMappingURL=test.component.js.map

@@ -8,35 +8,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-const http_1 = require("@angular/http");
-const appSettings_1 = require("../appSettings");
-const Rx_1 = require("rxjs/Rx");
-const core_1 = require("@angular/core");
+var http_1 = require("@angular/http");
+var appSettings_1 = require("../appSettings");
+var Rx_1 = require("rxjs/Rx");
+var core_1 = require("@angular/core");
 /**
  * Created by Thinking on 10/01/2016.
  */
-let UserService = class UserService {
-    constructor(http) {
+var UserService = (function () {
+    function UserService(http) {
         this.http = http;
-        this.userProfileUrl = `${appSettings_1.AppSettings.API_ENDPOINT}/user/profile`;
-        this.logoutUrl = `${appSettings_1.AppSettings.API_ENDPOINT}/user/logout`;
+        this.userProfileUrl = appSettings_1.AppSettings.API_ENDPOINT + "/user/profile";
+        this.logoutUrl = appSettings_1.AppSettings.API_ENDPOINT + "/user/logout";
     }
-    getProfile(token) {
-        let headers = new http_1.Headers({ 'access_token': token });
+    UserService.prototype.getProfile = function (token) {
+        var headers = new http_1.Headers({ 'access_token': token });
         return this.http.get(this.userProfileUrl, { headers: headers })
-            .map((res) => res.json().data)
-            .catch((error) => Rx_1.Observable.throw(error.json().error || 'Server error'));
-    }
-    logout(token) {
-        let headers = new http_1.Headers({ 'access_token': token });
+            .map(function (res) { return res.json().data; })
+            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
+    };
+    UserService.prototype.logout = function (token) {
+        var headers = new http_1.Headers({ 'access_token': token });
         return this.http.get(this.logoutUrl, { headers: headers })
-            .map((res) => res.json())
-            .catch((error) => Rx_1.Observable.throw(error.json().error || 'Server error'));
-    }
-};
-UserService = __decorate([
-    core_1.Injectable(), 
-    __metadata('design:paramtypes', [http_1.Http])
-], UserService);
+            .map(function (res) { return res.json(); })
+            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
+    };
+    UserService = __decorate([
+        core_1.Injectable(), 
+        __metadata('design:paramtypes', [http_1.Http])
+    ], UserService);
+    return UserService;
+}());
 exports.UserService = UserService;
 //# sourceMappingURL=user.service.js.map

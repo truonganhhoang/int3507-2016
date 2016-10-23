@@ -54,8 +54,6 @@ module.exports = function(config) {
             'karma-jasmine',
             'karma-coverage',
             'karma-chrome-launcher',
-            'karma-firefox-launcher',
-            'karma-phantomjs-launcher'
         ],
 
         // Coverage reporter generates the coverage
@@ -77,17 +75,8 @@ module.exports = function(config) {
         //  Custom launcher for Travis-CI
         // See this link for more details:
         // http://stackoverflow.com/questions/19255976/how-to-make-travis-execute-angular-tests-on-chrome-please-set-env-variable-chr
-        customLaunchers: {
-            'Chrome_travis_ci': {
-                base: 'Chrome',
-                flags: ['--no-sandbox']
-            }
-        },
 
         singleRun: true
     });
 
-    if (process.env.TRAVIS) {
-        config.browsers = ['Chrome'];
-    }
 };
