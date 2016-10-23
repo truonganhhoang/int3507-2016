@@ -2,71 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b04d9f9a-80bd-4c50-bd67-df94c3caec0e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/login/login.spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/login/login.spec.js.map" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/login/login.spec.ts" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/karma-test-shim.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/karma.conf.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/npm-debug.log.1502682566" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/npm-debug.log.1527931545" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/npm-debug.log.2390465906" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/Duke_University_Logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/Penn-logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/U-M_bmp.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/UC-San-Diego-blue--gold.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/jhu_logo.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/package1.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.js" afterPath="$PROJECT_DIR$/app/app.component.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.js.map" afterPath="$PROJECT_DIR$/app/app.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.module.js" afterPath="$PROJECT_DIR$/app/app.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.module.js.map" afterPath="$PROJECT_DIR$/app/app.module.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.routing.js" afterPath="$PROJECT_DIR$/app/app.routing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.routing.js.map" afterPath="$PROJECT_DIR$/app/app.routing.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/appSettings.js" afterPath="$PROJECT_DIR$/app/appSettings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/appSettings.js.map" afterPath="$PROJECT_DIR$/app/appSettings.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/answer.model.js" afterPath="$PROJECT_DIR$/app/detail/answer.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/answer.model.js.map" afterPath="$PROJECT_DIR$/app/detail/answer.model.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/detail.component.js" afterPath="$PROJECT_DIR$/app/detail/detail.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/detail.component.js.map" afterPath="$PROJECT_DIR$/app/detail/detail.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/detail.component.ts" afterPath="$PROJECT_DIR$/app/detail/detail.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/detail.service.js" afterPath="$PROJECT_DIR$/app/detail/detail.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/detail.service.js.map" afterPath="$PROJECT_DIR$/app/detail/detail.service.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/question.model.js" afterPath="$PROJECT_DIR$/app/detail/question.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/question.model.js.map" afterPath="$PROJECT_DIR$/app/detail/question.model.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/unit.model.js" afterPath="$PROJECT_DIR$/app/detail/unit.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/detail/unit.model.js.map" afterPath="$PROJECT_DIR$/app/detail/unit.model.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/category.model.js" afterPath="$PROJECT_DIR$/app/home/category.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/category.model.js.map" afterPath="$PROJECT_DIR$/app/home/category.model.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/home.component.js" afterPath="$PROJECT_DIR$/app/home/home.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/home.component.js.map" afterPath="$PROJECT_DIR$/app/home/home.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/home.service.js" afterPath="$PROJECT_DIR$/app/home/home.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/home.service.js.map" afterPath="$PROJECT_DIR$/app/home/home.service.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/unit.model.js" afterPath="$PROJECT_DIR$/app/home/unit.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/unit.model.js.map" afterPath="$PROJECT_DIR$/app/home/unit.model.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/login/login.component.js" afterPath="$PROJECT_DIR$/app/login/login.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/login/login.component.js.map" afterPath="$PROJECT_DIR$/app/login/login.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/login/login.service.js" afterPath="$PROJECT_DIR$/app/login/login.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/login/login.service.js.map" afterPath="$PROJECT_DIR$/app/login/login.service.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/main.js" afterPath="$PROJECT_DIR$/app/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/main.js.map" afterPath="$PROJECT_DIR$/app/main.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/test/read/test.component.js" afterPath="$PROJECT_DIR$/app/test/read/test.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/test/read/test.component.js.map" afterPath="$PROJECT_DIR$/app/test/read/test.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/test/test.component.js" afterPath="$PROJECT_DIR$/app/test/test.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/test/test.component.js.map" afterPath="$PROJECT_DIR$/app/test/test.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/theory/listen.component.js" afterPath="$PROJECT_DIR$/app/theory/listen.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/theory/listen.component.js.map" afterPath="$PROJECT_DIR$/app/theory/listen.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/theory/listen.model.js" afterPath="$PROJECT_DIR$/app/theory/listen.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/theory/listen.model.js.map" afterPath="$PROJECT_DIR$/app/theory/listen.model.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/theory/listen.service.js" afterPath="$PROJECT_DIR$/app/theory/listen.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/theory/listen.service.js.map" afterPath="$PROJECT_DIR$/app/theory/listen.service.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/theory/theory.component.js" afterPath="$PROJECT_DIR$/app/theory/theory.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/theory/theory.component.js.map" afterPath="$PROJECT_DIR$/app/theory/theory.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/user/user.model.js" afterPath="$PROJECT_DIR$/app/user/user.model.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/user/user.model.js.map" afterPath="$PROJECT_DIR$/app/user/user.model.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/user/user.service.js" afterPath="$PROJECT_DIR$/app/user/user.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/user/user.service.js.map" afterPath="$PROJECT_DIR$/app/user/user.service.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/systemjs.config.js" afterPath="$PROJECT_DIR$/systemjs.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tsconfig.json" afterPath="$PROJECT_DIR$/tsconfig.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/typings.json" afterPath="$PROJECT_DIR$/typings.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.ts" afterPath="$PROJECT_DIR$/app/app.component.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/home.component.html" afterPath="$PROJECT_DIR$/app/home/home.component.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="sep13-enguliz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,13 +35,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+            <state relative-caret-position="286">
+              <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/app.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1307">
+              <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+              <folding>
+                <marker date="1477226942000" expanded="true" signature="302:1654" ph="..." />
+                <marker date="1477226942000" expanded="true" signature="350:800" ph="..." />
+                <marker date="1477226942000" expanded="true" signature="379:773" ph="..." />
+                <marker date="1477226942000" expanded="true" signature="870:1624" ph="..." />
+                <marker date="1477226942000" expanded="true" signature="898:1597" ph="..." />
+                <marker date="1477226942000" expanded="true" signature="931:1416" ph="..." />
+                <marker date="1477226942000" expanded="true" signature="984:1382" ph="..." />
+                <marker date="1477226942000" expanded="true" signature="1037:1343" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.component.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/app.component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1527">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.component.js.map" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/app.component.js.map">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="sourcemapFileViewerProvider">
+            <state />
           </provider>
         </entry>
       </file>
@@ -256,6 +245,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sep13-enguliz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sep13-enguliz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -405,7 +408,7 @@
       <workItem from="1477117156516" duration="2115000" />
       <workItem from="1477120311985" duration="1944000" />
       <workItem from="1477136673617" duration="12425000" />
-      <workItem from="1477226586413" duration="297000" />
+      <workItem from="1477226586413" duration="428000" />
     </task>
     <task id="LOCAL-00001" summary="set event click course">
       <created>1474734807551</created>
@@ -544,7 +547,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113045000" />
+    <option name="totallyTimeSpent" value="113176000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -557,15 +560,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="153" y="68" width="1720" height="921" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18757467" sideWeight="0.49335548" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18757467" sideWeight="0.49335548" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22002634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22002634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26086956" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.325" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25264272" sideWeight="0.50664455" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -640,18 +643,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/physical/Unit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/Penn-logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/slider.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -842,13 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/npm-debug.log" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
@@ -945,9 +929,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+        <state relative-caret-position="286">
+          <caret line="25" column="33" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.component.js.map">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1527">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1307">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
+          <folding>
+            <marker date="1477226942000" expanded="true" signature="302:1654" ph="..." />
+            <marker date="1477226942000" expanded="true" signature="350:800" ph="..." />
+            <marker date="1477226942000" expanded="true" signature="379:773" ph="..." />
+            <marker date="1477226942000" expanded="true" signature="870:1624" ph="..." />
+            <marker date="1477226942000" expanded="true" signature="898:1597" ph="..." />
+            <marker date="1477226942000" expanded="true" signature="931:1416" ph="..." />
+            <marker date="1477226942000" expanded="true" signature="984:1382" ph="..." />
+            <marker date="1477226942000" expanded="true" signature="1037:1343" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
