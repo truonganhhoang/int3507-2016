@@ -2,10 +2,9 @@
 /**
  * Created by Thinking on 09/24/2016.
  */
-var Unit = (function () {
-    function Unit(unitId, unitTitle, unitSubTitle, unitThumbnail, unitViews, unitThreads, unitCreatedDate, categoryIdRef, unitActionUrl) {
+class Unit {
+    constructor(unitId, unitTitle, unitSubTitle, unitThumbnail, unitViews, unitThreads, unitCreatedDate, categoryIdRef, unitActionUrl) {
     }
-    return Unit;
-}());
+}
 exports.Unit = Unit;
 //# sourceMappingURL=unit.model.js.map

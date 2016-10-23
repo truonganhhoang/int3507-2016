@@ -11,32 +11,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 /**
  * Created by Thinking on 09/26/2016.
  */
-var core_1 = require("@angular/core");
-var http_1 = require("@angular/http");
-var appSettings_1 = require("../appSettings");
-var Rx_1 = require("rxjs/Rx");
-var DetailService = (function () {
-    function DetailService(http) {
+const core_1 = require("@angular/core");
+const http_1 = require("@angular/http");
+const appSettings_1 = require("../appSettings");
+const Rx_1 = require("rxjs/Rx");
+let DetailService = class DetailService {
+    constructor(http) {
         this.http = http;
-        this.detailsUrl = ("" + appSettings_1.AppSettings.API_ENDPOINT) + "/details";
+        this.detailsUrl = `${appSettings_1.AppSettings.API_ENDPOINT}` + "/details";
     }
-    DetailService.prototype.getDetailsData = function (id) {
+    getDetailsData(id) {
         return this.http.get(this.detailsUrl + "/" + id)
-            .map(function (res) { return res.json().data; })
-            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
-    };
-    DetailService.prototype.submitAns = function (token, id, body) {
-        var headers = new http_1.Headers({ 'Content-Type': 'application/json', 'access_token': token });
-        var options = new http_1.RequestOptions({ headers: headers });
+            .map((res) => res.json().data)
+            .catch((error) => Rx_1.Observable.throw(error.json().error || 'Server error'));
+    }
+    submitAns(token, id, body) {
+        let headers = new http_1.Headers({ 'Content-Type': 'application/json', 'access_token': token });
+        let options = new http_1.RequestOptions({ headers: headers });
         return this.http.post(this.detailsUrl + "/" + id + "/submit", body, options)
-            .map(function (res) { return res.json(); })
-            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
-    };
-    DetailService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], DetailService);
-    return DetailService;
-}());
+            .map((res) => res.json())
+            .catch((error) => Rx_1.Observable.throw(error.json().error || 'Server error'));
+    }
+};
+DetailService = __decorate([
+    core_1.Injectable(), 
+    __metadata('design:paramtypes', [http_1.Http])
+], DetailService);
 exports.DetailService = DetailService;
 //# sourceMappingURL=detail.service.js.map

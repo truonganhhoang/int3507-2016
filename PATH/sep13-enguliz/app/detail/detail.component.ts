@@ -25,7 +25,7 @@ export class DetailComponent implements OnInit {
     public userAnswer = [];
     public correctNumber = 0;
 
-    public sub: Subcription;
+    public sub: any;
 
     constructor(private router:Router,
                 private route:ActivatedRoute,

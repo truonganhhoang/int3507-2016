@@ -11,47 +11,72 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var user_service_1 = require("./user/user.service");
-var AppComponent = (function () {
-    function AppComponent(service) {
+const core_1 = require("@angular/core");
+const user_service_1 = require("./user/user.service");
+let AppComponent = class AppComponent {
+    constructor(service) {
         this.service = service;
         this.loggedIn = false;
         this.email = '';
         this.loggedIn = !!localStorage.getItem('auth_token');
     }
-    AppComponent.prototype.loadUserProfile = function () {
-        var _this = this;
-        var auth_token = localStorage.getItem('auth_token');
-        this.service.getProfile(auth_token).subscribe(function (data) {
-            _this.user = data;
-            _this.email = _this.user.userName;
-            console.log(_this.email);
-        }, function (err) {
+    loadUserProfile() {
+        let auth_token = localStorage.getItem('auth_token');
+        this.service.getProfile(auth_token).subscribe(data => {
+            this.user = data;
+            this.email = this.user.userName;
+            console.log(this.email);
+        }, err => {
             console.log(err);
         });
-    };
-    AppComponent.prototype.isLoggedIn = function () {
+    }
+    isLoggedIn() {
         return this.loggedIn;
-    };
-    AppComponent.prototype.logout = function () {
+    }
+    logout() {
         this.service.logout(localStorage.getItem('auth_token'));
         localStorage.removeItem('auth_token');
-    };
-    AppComponent.prototype.ngOnInit = function () {
+    }
+    ngOnInit() {
         if (this.isLoggedIn()) {
             this.loadUserProfile();
         }
-    };
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "<header class=\"navbar navbar-default\">\n                    <div class=\"container-fluid\">\n                        <nav>\n                            <div class=\"header-logo\">\n                                <img src=\"../../images/learnenglish.png\" alt=\"\">\n                            </div>\n                            <ul class=\"nav navbar-nav navbar-right\" *ngIf=\"loggedIn === false\">\n                                <li><a href=\"\">Home</a></li>\n                                <li><a href=\"\">Listening</a></li>\n                                <li><a href=\"\">Reading</a></li>\n                                <li><a href=\"\">Writing</a></li>\n                                <li><a [routerLink]=\"['login']\">Login</a></li>\n                                <li><a href=\"#\" class=\"sign-up\">Sign up</a></li>\n                            </ul>\n                            <ul class=\"nav navbar-nav navbar-right\" *ngIf=\"loggedIn === true\">\n                                <li><a href=\"\">Home</a></li>\n                                <li><a href=\"\">Listening</a></li>\n                                <li><a href=\"\">Reading</a></li>\n                                <li><a href=\"\">Writing</a></li>\n                                <li>\n                                    <a href=\"\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"> {{email}}</a>\n                                </li>\n                                <li><a href=\"\" (click)=\"logout()\">Logout</a></li>\n                            </ul>\n                        </nav>\n                    </div>\n               <div class=\"slider row\"></div>\n        <router-outlet></router-outlet>",
-            providers: [user_service_1.UserService]
-        }), 
-        __metadata('design:paramtypes', [user_service_1.UserService])
-    ], AppComponent);
-    return AppComponent;
-}());
+    }
+};
+AppComponent = __decorate([
+    core_1.Component({
+        selector: 'my-app',
+        template: `<header class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <nav>
+                            <div class="header-logo">
+                                <img src="../../images/learnenglish.png" alt="">
+                            </div>
+                            <ul class="nav navbar-nav navbar-right" *ngIf="loggedIn === false">
+                                <li><a href="">Home</a></li>
+                                <li><a href="">Listening</a></li>
+                                <li><a href="">Reading</a></li>
+                                <li><a href="">Writing</a></li>
+                                <li><a [routerLink]="['login']">Login</a></li>
+                                <li><a href="#" class="sign-up">Sign up</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right" *ngIf="loggedIn === true">
+                                <li><a href="">Home</a></li>
+                                <li><a href="">Listening</a></li>
+                                <li><a href="">Reading</a></li>
+                                <li><a href="">Writing</a></li>
+                                <li>
+                                    <a href="" class="dropdown-toggle" data-toggle="dropdown"> {{email}}</a>
+                                </li>
+                                <li><a href="" (click)="logout()">Logout</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+               <div class="slider row"></div>
+        <router-outlet></router-outlet>`,
+        providers: [user_service_1.UserService]
+    }), 
+    __metadata('design:paramtypes', [user_service_1.UserService])
+], AppComponent);
 exports.AppComponent = AppComponent;
 //# sourceMappingURL=app.component.js.map

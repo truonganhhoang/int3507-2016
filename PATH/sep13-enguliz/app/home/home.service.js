@@ -11,25 +11,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var http_1 = require("@angular/http");
-var appSettings_1 = require("../appSettings");
-var Rx_1 = require("rxjs/Rx");
-var HomeService = (function () {
-    function HomeService(http) {
+const core_1 = require("@angular/core");
+const http_1 = require("@angular/http");
+const appSettings_1 = require("../appSettings");
+const Rx_1 = require("rxjs/Rx");
+let HomeService = class HomeService {
+    constructor(http) {
         this.http = http;
-        this.homeUrl = appSettings_1.AppSettings.API_ENDPOINT + "/home";
+        this.homeUrl = `${appSettings_1.AppSettings.API_ENDPOINT}/home`;
     }
-    HomeService.prototype.getHomeData = function () {
+    getHomeData() {
         return this.http.get(this.homeUrl)
-            .map(function (res) { return res.json().data; })
-            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
-    };
-    HomeService = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [http_1.Http])
-    ], HomeService);
-    return HomeService;
-}());
+            .map((res) => res.json().data)
+            .catch((error) => Rx_1.Observable.throw(error.json().error || 'Server error'));
+    }
+};
+HomeService = __decorate([
+    core_1.Injectable(), 
+    __metadata('design:paramtypes', [http_1.Http])
+], HomeService);
 exports.HomeService = HomeService;
 //# sourceMappingURL=home.service.js.map

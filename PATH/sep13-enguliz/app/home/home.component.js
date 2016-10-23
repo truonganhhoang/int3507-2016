@@ -11,46 +11,44 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
-var home_service_1 = require("./home.service");
-var router_1 = require("@angular/router");
-var HomeComponent = (function () {
-    function HomeComponent(service, router) {
+const core_1 = require("@angular/core");
+const home_service_1 = require("./home.service");
+const router_1 = require("@angular/router");
+let HomeComponent = class HomeComponent {
+    constructor(service, router) {
         this.service = service;
         this.router = router;
         this.loggedIn = false;
         this.email = '';
         this.loggedIn = !!localStorage.getItem('auth_token');
     }
-    HomeComponent.prototype.loadHomeDatas = function () {
-        var _this = this;
+    loadHomeDatas() {
         this.service.getHomeData()
-            .subscribe(function (body) { return _this.categories = body; }, function (err) {
+            .subscribe(body => this.categories = body, err => {
             console.error(err);
         });
-    };
-    HomeComponent.prototype.isLoggedIn = function () {
+    }
+    isLoggedIn() {
         return this.loggedIn;
-    };
-    HomeComponent.prototype.detailsAction = function (unitId) {
+    }
+    detailsAction(unitId) {
         if (this.loggedIn) {
             this.router.navigate(['/details', unitId]);
         }
         else {
             this.router.navigate(['/login']);
         }
-    };
-    HomeComponent.prototype.ngOnInit = function () {
+    }
+    ngOnInit() {
         this.loadHomeDatas();
-    };
-    HomeComponent = __decorate([
-        core_1.Component({
-            templateUrl: 'app/home/home.component.html',
-            providers: [home_service_1.HomeService]
-        }), 
-        __metadata('design:paramtypes', [home_service_1.HomeService, router_1.Router])
-    ], HomeComponent);
-    return HomeComponent;
-}());
+    }
+};
+HomeComponent = __decorate([
+    core_1.Component({
+        templateUrl: 'app/home/home.component.html',
+        providers: [home_service_1.HomeService]
+    }), 
+    __metadata('design:paramtypes', [home_service_1.HomeService, router_1.Router])
+], HomeComponent);
 exports.HomeComponent = HomeComponent;
 //# sourceMappingURL=home.component.js.map

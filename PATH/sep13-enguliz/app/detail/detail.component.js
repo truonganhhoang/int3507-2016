@@ -11,13 +11,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 /**
  * Created by Thinking on 09/24/2016.
  */
-var core_1 = require("@angular/core");
-var detail_service_1 = require("./detail.service");
-var router_1 = require("@angular/router");
-var Rx_1 = require("rxjs/Rx");
-var answer_model_1 = require("./answer.model");
-var DetailComponent = (function () {
-    function DetailComponent(router, route, service) {
+const core_1 = require("@angular/core");
+const detail_service_1 = require("./detail.service");
+const router_1 = require("@angular/router");
+const Rx_1 = require("rxjs/Rx");
+const answer_model_1 = require("./answer.model");
+let DetailComponent = class DetailComponent {
+    constructor(router, route, service) {
         this.router = router;
         this.route = route;
         this.service = service;
@@ -36,48 +36,45 @@ var DetailComponent = (function () {
             this.router.navigate(['/login']);
         }
     }
-    DetailComponent.prototype.loadDetailsData = function (id) {
-        var _this = this;
+    loadDetailsData(id) {
         this.service.getDetailsData(id)
-            .subscribe(function (body) {
-            _this.unit = body;
-        }, function (err) {
+            .subscribe(body => {
+            this.unit = body;
+        }, err => {
             console.log(err);
         });
-    };
-    DetailComponent.prototype.startTesting = function () {
-        var _this = this;
+    }
+    startTesting() {
         this.isTest = true;
         this.isNotify = false;
-        var timer = Rx_1.Observable.timer(0, 999).take(this.unit.unitTime / 1000);
-        this.sub = timer.subscribe(function (t) {
-            if (_this.ticks <= 1) {
-                _this.isTest = false;
-                _this.isNotify = true;
+        let timer = Rx_1.Observable.timer(0, 999).take(this.unit.unitTime / 1000);
+        this.sub = timer.subscribe(t => {
+            if (this.ticks <= 1) {
+                this.isTest = false;
+                this.isNotify = true;
             }
-            _this.ticks = _this.unit.unitTime / 1000 - t;
-            _this.timeCountdown = _this.convertTime(_this.ticks);
+            this.ticks = this.unit.unitTime / 1000 - t;
+            this.timeCountdown = this.convertTime(this.ticks);
         });
-    };
-    DetailComponent.prototype.isLoggedIn = function () {
+    }
+    isLoggedIn() {
         return this.loggedIn;
-    };
-    DetailComponent.prototype.submitAns = function () {
-        var _this = this;
+    }
+    submitAns() {
         this.isTest = false;
         this.isNotify = true;
-        var auth_token = localStorage.getItem('auth_token');
+        let auth_token = localStorage.getItem('auth_token');
         var data = new UserAnswer(this.unit.unitTime / 1000 - this.ticks, this.userAnswer);
         this.service.submitAns(auth_token, this.unit._id, JSON.stringify(data))
-            .subscribe(function (data) {
-            _this.sub.unsubscribe();
-        }, function (err) { return console.log(JSON.stringify(err)); });
+            .subscribe(data => {
+            this.sub.unsubscribe();
+        }, err => console.log(JSON.stringify(err)));
         this.ticks = 99999999999;
-    };
-    DetailComponent.prototype.chooseAns = function (questionId, ansId) {
+    }
+    chooseAns(questionId, ansId) {
         this.userAnswer.push(new answer_model_1.Answer(questionId, ansId));
-    };
-    DetailComponent.prototype.convertTime = function (ticks) {
+    }
+    convertTime(ticks) {
         var minute = 0;
         var second = 0;
         if (ticks >= 60 && ticks < 3600) {
@@ -88,37 +85,35 @@ var DetailComponent = (function () {
         else {
             return ticks + " giây";
         }
-    };
-    DetailComponent.prototype.actionCheckAnswer = function () {
+    }
+    actionCheckAnswer() {
         this.checkAnswer = true;
         for (var i = 0; i < this.unit.question.length; i++) {
             this.correctNumber++;
         }
-    };
-    DetailComponent.prototype.ngOnInit = function () {
-        var _this = this;
+    }
+    ngOnInit() {
         this.route.params
-            .map(function (params) { return params['id']; })
-            .subscribe(function (id) {
-            _this.loadDetailsData(id);
+            .map(params => params['id'])
+            .subscribe((id) => {
+            this.loadDetailsData(id);
         });
-    };
-    DetailComponent = __decorate([
-        core_1.Component({
-            templateUrl: 'app/detail/detail.component.html',
-            providers: [detail_service_1.DetailService]
-        }), 
-        __metadata('design:paramtypes', [router_1.Router, router_1.ActivatedRoute, detail_service_1.DetailService])
-    ], DetailComponent);
-    return DetailComponent;
-}());
+    }
+};
+DetailComponent = __decorate([
+    core_1.Component({
+        templateUrl: 'app/detail/detail.component.html',
+        providers: [detail_service_1.DetailService]
+    }), 
+    __metadata('design:paramtypes', [router_1.Router, (typeof (_a = typeof router_1.ActivatedRoute !== 'undefined' && router_1.ActivatedRoute) === 'function' && _a) || Object, detail_service_1.DetailService])
+], DetailComponent);
 exports.DetailComponent = DetailComponent;
-var UserAnswer = (function () {
-    function UserAnswer(time, answer) {
+class UserAnswer {
+    constructor(time, answer) {
         this.time = time;
         this.answer = answer;
     }
-    return UserAnswer;
-}());
+}
 exports.UserAnswer = UserAnswer;
+var _a;
 //# sourceMappingURL=detail.component.js.map

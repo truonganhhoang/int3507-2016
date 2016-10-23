@@ -1,1 +1,1 @@
-{"version":3,"file":"question.model.js","sourceRoot":"","sources":["question.model.ts"],"names":[],"mappings":";AACA;;GAEG;AACH;IACI,kBACG,GAAW,EACX,QAAgB,EAChB,SAAkB,EAClB,UAAkB,EAClB,OAAiB;IACjB,CAAC;IACR,eAAC;AAAD,CAAC,AARD,IAQC;AARY,gBAAQ,WAQpB,CAAA"}
+{"version":3,"file":"question.model.js","sourceRoot":"","sources":["question.model.ts"],"names":[],"mappings":";AACA;;GAEG;AACH;IACI,YACG,GAAW,EACX,QAAgB,EAChB,SAAkB,EAClB,UAAkB,EAClB,OAAiB;IACjB,CAAC;AACR,CAAC;AARY,gBAAQ,WAQpB,CAAA"}
