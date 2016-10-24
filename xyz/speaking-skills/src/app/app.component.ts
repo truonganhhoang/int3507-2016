@@ -4,7 +4,11 @@ import { StatusBar } from 'ionic-native';
 
 import { Category } from '../pages/category/category';
 import { Youtube } from '../pages/youtube/youtube';
+<<<<<<< HEAD
+import { Sing } from '../pages/sing/sing';
+=======
 import { Google } from '../pages/google/google'
+>>>>>>> 15e38cbc00e5c656e01c1b4fb99afb040da9b148
 
 
 @Component({
@@ -27,7 +31,11 @@ export class MyApp {
     this.pages = [
       { title: 'Speaking by category', component: Category },
       { title: 'Speaking with youtube', component: Youtube },
+<<<<<<< HEAD
+      { title: "Let's sing", component: Sing }
+=======
       { title: 'Test Google Drive', component: Google }
+>>>>>>> 15e38cbc00e5c656e01c1b4fb99afb040da9b148
     ];
 
   }

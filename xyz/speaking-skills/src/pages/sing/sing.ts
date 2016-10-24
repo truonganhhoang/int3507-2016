@@ -4,32 +4,34 @@ import { YtbSearchService } from '../../services/ytbsearch.service';
 import { VideoPlayer } from '../video-player/video-player';
 
 
+
 /*
+  Generated class for the Sing page.
+
   See http://ionicframework.com/docs/v2/components/#navigation for more info on
   Ionic pages and navigation.
 */
 @Component({
-  selector: 'page-youtube',
-  templateUrl: 'youtube.html',
+  selector: 'page-sing',
+  templateUrl: 'sing.html',
   providers: [YtbSearchService]
 })
-export class Youtube {
-
-   //context = new AudioContext();
-
+export class Sing {
 	videos: Object[];
-
-  constructor(public navCtrl: NavController, private ytbSearchService: YtbSearchService) {
-  	this.ytbSearchService.getVideos('speaking+english').then(res => {
-  		this.videos = res['items'];
-  	});
-  }
+	myQuery: String;
+  constructor(public navCtrl: NavController, private ytbSearchService: YtbSearchService) {}
 
   ionViewDidLoad() {
-    console.log('Hello Youtube Page');
+    console.log('Hello Sing Page');
   }
 
-  playVideo(video) {
+   getVideos() {
+   	this.ytbSearchService.getVideos(this.myQuery + 'lyric').then(res => {
+  		this.videos = res['items'];
+  	});
+   }
+
+   playVideo(video) {
     this.navCtrl.push(VideoPlayer, {video: video });
   }
 

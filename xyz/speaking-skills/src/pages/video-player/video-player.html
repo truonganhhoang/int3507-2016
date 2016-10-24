@@ -15,12 +15,22 @@
 
 <ion-content padding>
 	 <div class="image-left embed-video">
+<<<<<<< HEAD
+    <div class="videoWrapper">
+      <iframe class="embed-responsive-item" width="100%" height="250" [src]="url" allowfullscreen></iframe>
+=======
         <div class="videoWrapper">
   <iframe class="embed-responsive-item" width="100%" height="250" [src]="url" allowfullscreen></iframe>
         </div>
         <p>
             {{video['snippet'].description}}
         </p>
+>>>>>>> 15e38cbc00e5c656e01c1b4fb99afb040da9b148
     </div>
+    <p>
+    <button style="float: right;" light ion-button><ion-icon ios="ios-microphone" md="md-microphone"> </ion-icon> &nbsp; Record </button>
+<!--         {{video['snippet']['description']}}
+ -->    </p>
+  </div>
 
 </ion-content>
