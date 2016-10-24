@@ -65,17 +65,19 @@ class Word(db.Model):
   meaning = db.Column(db.String(255))
   example = db.Column(db.String(255))
   link_pronunciation = db.Column(db.String(255))
+  pronunce = db.Column(db.String(255))
   category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
   category = db.relationship("Category", back_populates="words")
   # word_results = db.relationship("WordResult", back_populates="word")
   created_at = db.Column(db.Date, default=datetime.datetime.now())
   updated_at = db.Column(db.Date, onupdate=datetime.datetime.now())
 
-  def __init__(self, name, meaning, example, link_pronunciation):
+  def __init__(self, name, meaning, example, link_pronunciation, pronunce):
     self.name = name
     self.meaning = meaning
     self.example = example
     self.link_pronunciation = link_pronunciation
+    self.pronunce = pronunce
 
   def __repr__(self):
     return "<Word %r>" % self.name

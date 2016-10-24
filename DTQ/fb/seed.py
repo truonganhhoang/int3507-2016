@@ -14,10 +14,11 @@ class Seed:
     with open("data/words.csv") as inWords:
       for line in inWords:
         objLine = line.strip("\n").strip("\r").split(",")
-        if objLine[3].strip(" ") != "":
-          print objLine[3].strip("\n").strip(" ")
-          category = db.session.query(Category).filter(Category.id == int(objLine[3].strip("\n").strip(" "))).first()
-          print objLine[4]
-          word = Word(objLine[1].strip(" "), objLine[2].strip(" "), objLine[4].strip(" "), objLine[5].strip(" "))
+
+        if objLine[2].strip(" ") != "":
+          print objLine[2].strip("\n").strip(" ")
+          category = db.session.query(Category).filter(Category.id == int(objLine[2].strip("\n").strip(" "))).first()
+          # print objLine[4]
+          word = Word(objLine[0].strip(" "), objLine[1].strip(" "), objLine[3].strip(" "), objLine[4].strip(" "), objLine[5].strip(" "))
           category.words.append(word)
           db.session.commit()

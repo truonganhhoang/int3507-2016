@@ -20,7 +20,7 @@ def send_word_message(recipient_id, word):
             {
               "title": word.name,
               "image_url": BingSearchImage.get_image(word.name),
-              "subtitle": word.meaning + " - Example: " + word.example,
+              "subtitle": word.meaning + " - " + word.pronunce + " - Example: " + word.example,
             }
           ]
         }
@@ -38,9 +38,9 @@ def send_word_message(recipient_id, word):
   # # if int(r["error"]) == 0:
   # sound_link = r["data"]
   
-  sound_link = "http://stream.dict.laban.vn/uk/d422d0ec37672abb3f2fef58b94c608d/157765c6199/H/hello.mp3"
-  # sound_link = word.link_pronunciation
-  log(sound_link)
+  # sound_link = "http://stream.dict.laban.vn/uk/d422d0ec37672abb3f2fef58b94c608d/157765c6199/H/hello.mp3"
+  sound_link = "http://api.voicerss.org/?key=2639193b13e245cb918270a1846cae5e&hl=en-us&src=" + word.name
+  # log(sound_link)
   data = json.dumps({
     "recipient": {
       "id": recipient_id
