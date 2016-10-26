@@ -16,4 +16,5 @@ Liên kết đến sản phẩm của các nhóm:
 | Tên nhóm | Liên kết  |
 |---|---|
 | Duo | https://play.google.com/store/apps/details?id=com.saokhuee.sachmem  |
+| FRIES  | http://v2.uetf.me/ |
 | ...  | ... |
