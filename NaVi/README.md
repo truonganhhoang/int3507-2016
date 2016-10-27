@@ -1,5 +1,7 @@
 ## Cwat version 0.3
 
+**Chat với Cwat tại:** `https://www.facebook.com/cwat.seewhat/`
+
 **New features**
 
 - Users can now learn both listening and writing skills with Cwat.
