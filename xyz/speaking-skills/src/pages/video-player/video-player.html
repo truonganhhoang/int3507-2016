@@ -6,21 +6,34 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>VideoPlayer</ion-title>
+  <ion-navbar color="secondary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Video Player</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-	 <div class="image-left embed-video">
-        <div class="videoWrapper">
-  <iframe class="embed-responsive-item" width="100%" height="250" [src]="url" allowfullscreen></iframe>
-        </div>
-        <p>
-            {{video['snippet'].description}}
-        </p>
+	<div class="image-left embed-video">
+    <div class="videoWrapper">
+      <iframe class="embed-responsive-item" width="100%" height="250" [src]="url" allowfullscreen></iframe>
     </div>
-
+    <ion-row>
+        <ion-col width-50>
+          <button ion-button outline (click)="startRecord(item)"> Ghi âm </button>
+        </ion-col>
+         <ion-col width-50>
+          <button ion-button outline (click)="stopRecord(item)"> Dừng ghi </button>
+        </ion-col>
+        <!-- <ion-col width-50>
+          <button ion-button outline (click)="playRecord(item)"> Phát lại </button>
+        </ion-col> -->
+      </ion-row>
+       <!--  <p>
+            {{video['snippet'].description}}
+        </p> -->
+  </div>
 </ion-content>

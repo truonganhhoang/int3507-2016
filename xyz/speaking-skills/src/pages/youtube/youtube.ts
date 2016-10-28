@@ -15,7 +15,6 @@ import { VideoPlayer } from '../video-player/video-player';
 })
 export class Youtube {
 
-   //context = new AudioContext();
 
 	videos: Object[];
 

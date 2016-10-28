@@ -6,7 +6,6 @@
 -->
 
 <ion-list >
-	
   <ion-item *ngIf="isLogin">
     <ion-avatar item-left>
       <img src="{{profile.imageUrl}}">
@@ -14,7 +13,7 @@
     <h2>{{profile.displayName}}</h2>
   </ion-item>
 
-  <ion-item id="customBtn">
+  <ion-item id="customBtn" *ngIf="!isLogin">
 		<ion-icon ios="ios-log-in" md="md-log-in"></ion-icon>
 		Login with Google
 	</ion-item>
@@ -24,9 +23,3 @@
     Logout Google
   </ion-item>	
 </ion-list>
-
-<!-- <button ion-button (click)="list()">List Drive</button>
- --><!-- <div id="customBtn" class="customGPlusSignIn">
-      <span class="icon"></span>
-      <button ion-button class="buttonText">Custom</button>
-</div> -->

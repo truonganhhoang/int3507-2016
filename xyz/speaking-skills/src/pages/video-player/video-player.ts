@@ -26,6 +26,8 @@ export class VideoPlayer {
 
   }
 
+  
+
   ionViewDidLoad() {
     console.log('Hello VideoPlayer Page');
   }

@@ -24,7 +24,8 @@ $background-color:  #fff;
 
 $colors: (
   primary:    #387ef5,
-  secondary:  #32db64,
+  secondary:    #F53D3D,
+  //secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
@@ -51,3 +52,7 @@ $ionicons-font-path: "../assets/fonts";
 @import "ionicons";
 
 @import "../pages/category/category";
+
+ion-header {
+  background-color: #F53D3D !important;
+}

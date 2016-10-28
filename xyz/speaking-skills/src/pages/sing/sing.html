@@ -1,0 +1,51 @@
+<!--
+  Generated template for the Sing page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="secondary">
+  	<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sing Karaoke</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>	
+	<ion-list inset>
+    <ion-item>
+      <ion-input [(ngModel)]="myQuery" type="text" placeholder="Enter a song"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-list radio-group [(ngModel)]="singType">
+    <ion-item class="singType">
+      <ion-label>Karaoke</ion-label>
+      <ion-radio value="karaoke" checked></ion-radio>
+    </ion-item>
+    <ion-item class="singType">
+      <ion-label>Lyrics</ion-label>
+      <ion-radio value="lyric"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button ion-button outline light block (click)="getVideos()">Search</button>
+  </div>
+
+   <ion-list>
+    <ion-item *ngFor="let video of videos" (click)="playVideo(video)" >
+      <ion-thumbnail item-left>
+        <img src="{{video.snippet.thumbnails.high.url}}">
+      </ion-thumbnail>
+      <h2>{{video.snippet.title}}</h2>
+      <p>{{video.snippet.channelTitle}}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
