@@ -18,7 +18,6 @@ module.exports = function(config) {
             {pattern: 'node_modules/rxjs/**/*.js', included: false, watched: false},
             {pattern: 'node_modules/@angular/**/*.js', included: false, watched: false},
             {pattern: 'karma-test-shim.js', included: true, watched: true},
-            {pattern: 'bower_components/d3/d3.min.js', included: true, watched: false},
             /*{pattern: 'lib/js-expression-eval/parser.js', included: true, watched: false},
              {pattern: 'lib/jsep-0.3.0/jsep.js', included: true, watched: false},
              {pattern: 'lib/silentmatt/parser3.js', included: true, watched: false},*/
@@ -53,7 +52,7 @@ module.exports = function(config) {
         plugins: [
             'karma-jasmine',
             'karma-coverage',
-            'karma-chrome-launcher',
+            'karma-chrome-launcher'
         ],
 
         // Coverage reporter generates the coverage
