@@ -15,9 +15,10 @@ var Unit = require('../models/physical/Unit');
 var random = require('../utils/random');
 var Question = require('../models/physical/Question');
 var async = require("async");
+var fs = require('fs');
 
 router.get('/add', (request, response) => {
-    var fs = require('fs');
+    
     fs.readFile('views/form-add.html', 'utf8', (err, contents) => {
         response.send(contents);
         response.end();
@@ -76,12 +77,38 @@ router.post('/add', (request, response) => {
 });
 
 router.get('/home', (request, response) => {
-    var fs = require('fs');
-    fs.readFile('views/form-add.html', 'utf8', (err, contents) => {
-        response.send(contents);
-        response.end();
-    });
+    fs.readFile('views/home.html', 'utf8', (err, contents) => {
 
+        db.fetchAll(Collection.unit, (result) => {
+            console.log(result);
+            var units = result;
+
+            var table = '';
+            table += "<table class='table'>";
+            table += "<thead>" +
+                "<tr>" +
+                "<th>Id</th>" +
+                "<th>Tên</th>" +
+                "<th>Chuyên mục</th>" +
+                "<th>Ảnh</th>" +
+                "<th></th>" +
+                "</tr>" +
+                "</thead><tbody>";
+            Array.from(units, (item) => {
+                table += "<tr>";
+                table += "<td>" + item._id + "</td>";
+                table += "<td>" + item.unitTitle + "</td>";
+                table += "<td>" + item.unitType + "</td>";
+                table += "<td><img width='64' height='64' src='" + item.unitThumbnail + "'></td>";
+                table += "<td><a href=''>Sửa</a> | <a href=''>Thêm bài tập</a> | <a href=''>Xóa</a></td>";
+                table += "</tr>";
+            });
+            table += "</tbody></table>";
+            contents = contents.replace("<#table></#table>", table);
+            response.write(contents);
+            response.end();
+        });
+    });
 });
 
 module.exports = router;
