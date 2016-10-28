@@ -30,7 +30,7 @@ export class MyApp {
       { title: 'Youtube', component: Youtube },
       { title: 'Drive', component: Google },
       { title: 'Sing', component: Sing },
-      { title: 'My Song', component: MySong }
+      { title: 'My Song', component: MySong },
       { title: 'Test Google Drive', component: Google }
     ];
   }

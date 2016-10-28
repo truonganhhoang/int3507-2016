@@ -27,7 +27,7 @@ import { MySong } from '../pages/my-song/my-song';
     Login,
     LoginWeb,
     Sing,
-    MySong
+    MySong,
     Google
   ],
   imports: [
