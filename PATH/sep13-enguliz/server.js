@@ -39,7 +39,7 @@ app.use('/api/v1/user', user);
 app.use('/api/v1/theory', theory);
 app.use('/api/v1', index);
 app.use('/api/v1/insert', insert);
-app.use('/api/v1/insert2', insert2);
+app.use('/cms', insert2);
 app.use('/api/v1/details', details);
 app.use('/media', media);
 
