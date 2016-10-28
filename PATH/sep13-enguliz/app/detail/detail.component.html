@@ -1,20 +1,9 @@
 <div class="container" xmlns="http://www.w3.org/1999/html">
     <div class="player-inner row" *ngIf="unit">
-        <div class="player-header">
-            <h2>Nâng cao kỹ năng tiếng anh qua các khóa học của chúng tôi</h2>
-        </div>
-        <div class="player-title">
-            <div class="title">
-                <h3>Test your English - For Schools - Page 1</h3>
-                <p>
-                    For the question below, choose the best sentence to complete the conversation
-                </p>
-            </div>
-        </div>
         <div class="player-wrapper" *ngIf="unit">
             <h3>{{unit.unitTitle}}</h3>
             <div class="audio">
-                <img alt="" src="{{unit.unitThumbnail}}" width="100%"><br>
+                <img alt="" src="{{unit.unitThumbnail}}" width="40%" >
                 <p class="center" style="padding-top: 20px;">{{unit.unitSubTitle}}</p>
                 <p class="center">{{unit.unitThreads}}</p>
                 <p class="center">Thời gian: {{convertTime(unit.unitTime/1000)}}</p>
@@ -39,13 +28,14 @@
                                         <input type="radio" name="{{q._id}}" (click)="chooseAns(q._id, ans.ansId)">
                                         {{ans.ansId}}. {{ans.ansContent}}
                                         <label></label>
-                                    </li>
+                                    </li><br>
                                 </ul>
+
                             </li>
                         </ul>
                     </fieldset>
-
                 </div>
+
                 <div class="clear-both"></div>
                 <div class="btn-submit">
                     <button class="btn btn-info" (click)="submitAns()">Submit</button>
@@ -61,24 +51,24 @@
 
             <div *ngIf="checkAnswer" class="question-content">
                 <ol>
-                    <div class="panel panel-default col m6 question_answers" *ngFor="let q of unit.question">
-                        <li><label>{{q.question}}</label>
+                    <div class="question_answers" *ngFor="let q of unit.question">
+                        <fieldset>
                             <ul>
-                                <li *ngFor="let ans of q.anwsers">
-                                    <input *ngIf="q.correctAns == ans.ansId" type="radio" name="{{q._id}}" checked
-                                           (click)="chooseAns(q._id, ans.ansId)">
-                                    <input *ngIf="q.correctAns != ans.ansId" type="radio" name="{{q._id}}"
-                                           (click)="chooseAns(q._id, ans.ansId)">
-                                    <font *ngIf="q.correctAns == ans.ansId" color="blue">
-                                        {{ans.ansId}}. {{ans.ansContent}}
-                                    </font>
-                                    <font *ngIf="q.correctAns != ans.ansId">
-                                        {{ans.ansId}}. {{ans.ansContent}}
-                                    </font>
+                                <li class="testYourEnglish">
+                                    <p>{{q.question}}</p>
+                                    <ul>
+                                        <li *ngFor="let ans of q.anwsers">
+                                            <input type="radio" name="{{q._id}}" (click)="chooseAns(q._id, ans.ansId)">
+                                            {{ans.ansId}}. {{ans.ansContent}}
+                                            <label></label>
+                                        </li><br>
+                                    </ul>
+
                                 </li>
                             </ul>
-                        </li>
+                        </fieldset>
                     </div>
+
                 </ol>
                 <span>Bạn trả lời đúng {{correctNumber}} câu</span>
             </div>

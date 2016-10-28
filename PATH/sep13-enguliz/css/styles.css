@@ -6,7 +6,6 @@ body {
 
 ul li {
     list-style-type: none;
-    float: left;
 }
 
 header{
@@ -15,6 +14,9 @@ header{
     line-height: 55px;
 }
 
+header ul li {
+    float: left;
+}
 header ul li a:hover{
     color: #0f7595;
 }
@@ -90,9 +92,9 @@ header ul li a:hover{
     padding: 30px 0 0 30px;
 }
 
-.list-course {
-    height: 600px;
-}
+/*.list-course {*/
+    /*height: 600px;*/
+/*}*/
 
 .list {
     width: 90%;
@@ -107,6 +109,7 @@ header ul li a:hover{
     margin-left: 20px;
     display: block;
     background: #ffffff;
+    margin-bottom: 50px;
 }
 
 .course a {
@@ -139,7 +142,7 @@ header ul li a:hover{
 
 .desc-course .course-title {
     margin: 0;
-    height: 180px;
+    height: 130px;
     font-size: 20px;
     padding: 20px;
     border-bottom: 1px solid #CCCCCC;
@@ -148,14 +151,19 @@ header ul li a:hover{
     white-space: initial;
 }
 
+.course-time {
+    position: absolute;
+    padding: 10px;
+    height: 50px;
+}
+
 .desc-course .course-time .time{
-    padding: 5px 0 0 10px;
     float: left;
+    padding-right: 145px;
 }
 
 .desc-course .course-time .view {
     float: right;
-    padding: 5px 15px;
 }
 
 .footer {
@@ -359,69 +367,89 @@ header ul li a:hover{
     /*background-image: url("../images/login_bg.jpg");*/
 /*}*/
 
-/*!*--------------Detail-------------*!*/
+/*--------------Detail-------------*/
 
-/*.player-inner {*/
-    /*width: 95%;*/
-    /*background: #ffffff;*/
-    /*margin: 100px auto;*/
-/*}*/
+.timer {
+    border: 1px solid #E6E6E6;
+    background-color: #FFFFCC;
+    float: right;
+    position: fixed;
+    right: 137px;
+    top: 35px;
+    text-align: center;
+}
 
-/*.player-inner .player-header {*/
-    /*background: #007f86;*/
-    /*height: 100px;*/
-    /*line-height: 100px;*/
-    /*color: #ffffff;*/
-    /*padding: 15px 0 0 50px;*/
-/*}*/
+.player-inner {
+    width: 95%;
+    background: #ffffff;
+    margin: 0 auto;
+}
 
-/*.player-inner .player-title {*/
-    /*width: 95%;*/
-    /*margin: auto;*/
-    /*margin-top: 20px;*/
-/*}*/
+.player-inner .player-header {
+    background: #007f86;
+    height: 100px;
+    line-height: 100px;
+    color: #ffffff;
+    padding: 15px 0 0 50px;
+}
 
-/*.player-inner .player-title .title h3{*/
-    /*height: 40px;*/
-    /*line-height: 40px;*/
-    /*border: 1px dotted #333333;*/
-    /*background: #e6e6e6;*/
-/*}*/
+.player-inner .player-title {
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+}
 
-/*.player-inner .player-title .title p {*/
-    /*margin-top: 20px;*/
-    /*font-size: 16px;*/
-/*}*/
+.player-inner .player-title .title h3{
+    height: 40px;
+    line-height: 40px;
+    border: 1px dotted #333333;
+    background: #e6e6e6;
+}
 
-/*.player-inner .player-wrapper {*/
-    /*width: 95%;*/
-    /*margin: auto;*/
-    /*background: #f2f2f2;*/
-    /*border: 1px solid #c0c0c0;*/
-    /*font-size: 16px;*/
-/*}*/
+.player-inner .player-title .title p {
+    margin-top: 20px;
+    font-size: 16px;
+}
 
-/*.player-wrapper h3 {*/
-    /*text-align: center;*/
-/*}*/
+.player-inner .player-wrapper {
+    width: 95%;
+    margin: auto;
+    background: #f2f2f2;
+    border-left: 1px solid #c0c0c0;
+    border-right: 1px solid #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
+    font-size: 16px;
+}
 
-/*.player-wrapper .audio {*/
-    /*width: 650px;*/
-    /*margin: auto;*/
-    /*padding: 30px 0 30px 0;*/
-/*}*/
+.player-wrapper h3 {
+    text-align: center;
+    padding-top: 4%;
+}
 
-/*.center {*/
+.player-wrapper .audio {
+    width: 650px;
+    margin: auto;
+    padding: 30px 0 30px 0;
+}
+
+.player-wrapper .audio img {
+    margin-left: 200px;
+}
+
+.player-wrapper .audio button {
+    margin-left: 250px;
+}
+.center {
+    padding-left: 200px;
     /*padding-left: 200px;*/
-    /*!*padding-left: 200px;*!*/
-/*}*/
+}
 
-/*.testYourEnglish p {*/
-    /*font-weight: bold;*/
-    /*font-size: 1.1em;*/
-    /*padding-top: 5px*/
-/*}*/
+.testYourEnglish p {
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-top: 5px
+}
 
-/*.testYourEnglish ul li {*/
-    /*margin: 10px 0;*/
-/*}*/
+.testYourEnglish ul li {
+    margin: 10px 0;
+}
