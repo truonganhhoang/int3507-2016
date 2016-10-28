@@ -30,5 +30,8 @@ app.get('/authorize', facebook.getAuthorize);
 app.listen(app.get('port'), function() {
     console.log('Node app is running on port', app.get('port'));
     models.mongooseConnect();
+
+    // Bootstrap messenger thread settings (persistent menu, greeting text,...)
+    require('./helpers/facebook/threadSettings');
 });
 
