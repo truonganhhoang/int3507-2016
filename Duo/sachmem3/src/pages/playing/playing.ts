@@ -41,7 +41,7 @@ import { NativeService } from '../../providers/native-service';
 export class Playing implements OnInit {
   words: Object[];
   curWord: Object;
-  selectedGame: String;
+  selectedGame: string;
   //mang cac tu khong thay doi de truyen cho cac game
   allWords: Object[];
   iconState: string = 'none';
@@ -125,6 +125,30 @@ export class Playing implements OnInit {
         this.reload();
       }, 1500);
     }
+  }
+
+  showGuide(): void {
+    let txt: string = 'oops!';
+
+    switch (this.selectedGame) {
+      case 'r':
+        txt = 'Choose the correct word matching with the given meaning.';
+        break;
+
+      case 'w':
+        txt = 'Spell the word with the given meaning.';
+        break;
+
+      case 'l':
+        txt = 'Choose the correct pronunciation of the English word matching with the given meaning.';
+        break;
+
+      default:
+        // code
+        break;
+    }
+
+    this.helperService.presentToast(txt);
   }
 
 }
