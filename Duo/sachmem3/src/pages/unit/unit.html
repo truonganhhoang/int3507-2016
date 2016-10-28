@@ -34,9 +34,9 @@
 
 <ion-content padding>
   <ion-list radio-group [(ngModel)]="selectedUnit">
-    <ion-list-header>
+    <!-- <ion-list-header>
       Choose a unit
-    </ion-list-header>
+    </ion-list-header> -->
     <ion-item *ngFor="let item of units">
       <ion-label><span color="primary">Unit {{item.number}}.</span> {{item.name}}</ion-label>
       <ion-radio value="{{item.id}}"></ion-radio>
