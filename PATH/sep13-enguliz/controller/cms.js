@@ -35,6 +35,7 @@ router.post('/add', (request, response) => {
     var categoryId = "";
     var thread = request.param('thread');
     var attach = request.param('attach');
+    var time = request.param('time');
 
     async.series([
         (callback) => {
@@ -65,7 +66,7 @@ router.post('/add', (request, response) => {
                 random.int(1000),
                 categoryId,
                 Date(),
-                600000,
+                time * 60 * 1000,
                 categoryName,
                 attach
             );
@@ -168,9 +169,16 @@ router.post('/unit/:id/add-exercise', (request, response) => {
         answer.ansContent = c;
         answers.push(answer);
 
+        if(d.length > 0) {
+            answer = {};
+            answer.ansId = "D";
+            answer.ansContent = d;
+            answers.push(answer);
+        }
+
         var question = Question.init(questionContent, r1._id, correct, answers);
 
-        db.insert(Collection.question, question, (r2) => {
+        db.insertOne(Collection.question, question, (r2) => {
             response.redirect('add-exercise');
         });
     });
