@@ -16,9 +16,10 @@ var random = require('../utils/random');
 var Question = require('../models/physical/Question');
 var async = require("async");
 var fs = require('fs');
+var ObjectId = require('mongodb').ObjectID;
 
 router.get('/add', (request, response) => {
-    
+
     fs.readFile('views/form-add.html', 'utf8', (err, contents) => {
         response.send(contents);
         response.end();
@@ -39,7 +40,7 @@ router.post('/add', (request, response) => {
     async.parallel([
         (callback) => {
             db.findOne(Collection.category, {"categoryName": categoryName}, (r1) => {
-                if(!r1) {
+                if (!r1) {
                     var category = Category.init(categoryName,
                         "https://www.socialmediaexplorer.com/wp-content/uploads/2014/03/Listen.jpg");
 
@@ -50,8 +51,8 @@ router.post('/add', (request, response) => {
                         });
                 } else {
                     console.log("==>>" + r1._id);
-            callback();
-        }
+                    callback();
+                }
             });
         },
         (callback) => {
@@ -67,10 +68,12 @@ router.post('/add', (request, response) => {
                 categoryName,
                 attach
             );
-            db.insertOne(Collection.unit, unit, (r1) => { callback(); });
+            db.insertOne(Collection.unit, unit, (r1) => {
+                callback();
+            });
         }
     ], (err) => {
-        if(err) response.send("Error");
+        if (err) response.send("Error");
         response.redirect('home');
         response.end();
     });
@@ -89,6 +92,7 @@ router.get('/home', (request, response) => {
                 "<tr>" +
                 "<th>Id</th>" +
                 "<th>Tên</th>" +
+                "<th>Lượt xem</th>" +
                 "<th>Chuyên mục</th>" +
                 "<th>Ảnh</th>" +
                 "<th></th>" +
@@ -98,16 +102,27 @@ router.get('/home', (request, response) => {
                 table += "<tr>";
                 table += "<td>" + item._id + "</td>";
                 table += "<td>" + item.unitTitle + "</td>";
+                table += "<td>" + item.unitViews + "</td>";
                 table += "<td>" + item.unitType + "</td>";
                 table += "<td><img width='64' height='64' src='" + item.unitThumbnail + "'></td>";
-                table += "<td><a href=''>Sửa</a> | <a href=''>Thêm bài tập</a> | <a href=''>Xóa</a></td>";
+                table += "<td><a href='unit/" + item._id + "/edit'>Sửa</a> " +
+                    "| <a href='unit/" + item._id + "/add-exercise'>Thêm bài tập</a>" +
+                    " | <a href='unit/" + item._id + "/delete'>Xóa</a></td>";
                 table += "</tr>";
             });
             table += "</tbody></table>";
+
             contents = contents.replace("<#table></#table>", table);
             response.write(contents);
             response.end();
         });
+    });
+});
+
+router.get('/unit/:id/delete', (request, response) => {
+    var id = request.params.id;
+    db.remove(Collection.unit, {"_id": new ObjectId(id)}, (r1) => {
+        response.redirect('/cms/home');
     });
 });
 

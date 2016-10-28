@@ -18,7 +18,7 @@ var user = require('./controller/user');
 var theory = require('./controller/theory');
 var index = require('./controller/index');
 var insert = require('./controller/insertion');
-var insert2 = require('./controller/insertion2');
+var cms = require('./controller/cms');
 var media = require('./controller/media');
 var details = require('./controller/details');
 
@@ -39,7 +39,7 @@ app.use('/api/v1/user', user);
 app.use('/api/v1/theory', theory);
 app.use('/api/v1', index);
 app.use('/api/v1/insert', insert);
-app.use('/cms', insert2);
+app.use('/cms', cms);
 app.use('/api/v1/details', details);
 app.use('/media', media);
 

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b04d9f9a-80bd-4c50-bd67-df94c3caec0e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controller/cms.js" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/form-add.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/home.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controller/insertion2.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/images/Duke_University_Logo.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/images/Penn-logo.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/images/U-M_bmp.png" afterPath="" />
@@ -65,7 +67,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/user/user.service.js" afterPath="$PROJECT_DIR$/app/user/user.service.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/user/user.service.js.map" afterPath="$PROJECT_DIR$/app/user/user.service.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/insertion.js" afterPath="$PROJECT_DIR$/controller/insertion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/insertion2.js" afterPath="$PROJECT_DIR$/controller/insertion2.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styles.css" afterPath="$PROJECT_DIR$/css/styles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="$PROJECT_DIR$/karma.conf.js" />
@@ -98,11 +99,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="insertion2.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controller/insertion2.js">
+      <file leaf-file-name="cms.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controller/cms.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="102" column="106" selection-start-line="102" selection-start-column="106" selection-end-line="102" selection-end-column="106" />
+            <state relative-caret-position="442">
+              <caret line="124" column="32" selection-start-line="124" selection-start-column="32" selection-end-line="124" selection-end-column="32" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -113,18 +114,28 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-262">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="770">
+              <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Unit.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/physical/Unit.js">
+      <file leaf-file-name="mongo1970.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/mongo1970.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="132">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="22" />
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="details.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/details.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -146,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/appSettings.ts" />
         <option value="$PROJECT_DIR$/app/theory/listen.model.ts" />
         <option value="$PROJECT_DIR$/app/home/category.model.ts" />
         <option value="$PROJECT_DIR$/.gitignore" />
@@ -191,12 +201,13 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/karma.conf.js" />
         <option value="$PROJECT_DIR$/systemjs.config.js" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/controller/insertion.js" />
         <option value="$PROJECT_DIR$/models/physical/Unit.js" />
-        <option value="$PROJECT_DIR$/views/form-add.html" />
         <option value="$PROJECT_DIR$/views/home.html" />
         <option value="$PROJECT_DIR$/controller/insertion2.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/views/form-add.html" />
+        <option value="$PROJECT_DIR$/controller/cms.js" />
       </list>
     </option>
   </component>
@@ -268,6 +279,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sep13-enguliz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sep13-enguliz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -469,7 +494,7 @@
       <workItem from="1477287306386" duration="915000" />
       <workItem from="1477292075258" duration="2427000" />
       <workItem from="1477619977667" duration="527000" />
-      <workItem from="1477637633888" duration="9390000" />
+      <workItem from="1477637633888" duration="10737000" />
     </task>
     <task id="LOCAL-00001" summary="set event click course">
       <created>1474734807551</created>
@@ -608,7 +633,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147496000" />
+    <option name="totallyTimeSpent" value="148843000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -716,13 +741,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="23" column="20" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/details.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -958,14 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/collection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -990,14 +1000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/form-add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="389">
@@ -1006,34 +1008,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/physical/Unit.js">
+    <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="22" />
+        <state relative-caret-position="354">
+          <caret line="45" column="27" selection-start-line="45" selection-start-column="27" selection-end-line="45" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils/mongo1970.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="82" column="12" selection-start-line="82" selection-start-column="4" selection-end-line="82" selection-end-column="12" />
+        <state relative-caret-position="132">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/physical/Unit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/form-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/details.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="47" column="4" selection-start-line="47" selection-start-column="4" selection-end-line="47" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-262">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="770">
+          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/insertion2.js">
+    <entry file="file://$PROJECT_DIR$/controller/cms.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="102" column="106" selection-start-line="102" selection-start-column="106" selection-end-line="102" selection-end-column="106" />
+        <state relative-caret-position="442">
+          <caret line="124" column="32" selection-start-line="124" selection-start-column="32" selection-end-line="124" selection-end-column="32" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
