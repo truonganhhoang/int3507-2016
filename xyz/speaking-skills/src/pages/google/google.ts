@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgZone, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
 /*
@@ -11,12 +11,21 @@ import { NavController } from 'ionic-angular';
   selector: 'page-google',
   templateUrl: 'google.html'
 })
-export class Google {
+export class Google implements OnInit {
+  idFolder: String;
+  speakingFolder: Object = {};
   listFile: Object[] = [];
 	auth2: any;
+  childOfFolder: Object[] = [];
+  recordAudio: Object[] = [];
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private ngZone: NgZone) {
   
+  }
+
+  ngOnInit() {
+    this.list();
+    //this.getSpeakingFolder();
   }
 
   list(){
@@ -30,21 +39,70 @@ export class Google {
            }
       });
       request.execute((response) => {
-            //console.log(response.items);  
         for(var i = 0; i < response.items.length; i++) {
-         //console.log(response.items[i].mimeType);
-          if(response.items[i].mimeType == 'application/vnd.google-apps.folder') {
+          if (response.items[i].title == 'Speaking') {
              this.listFile.push(response.items[i]);
+             this.idFolder = response.items[i].id;
+             break;
           }
         } 
         console.log(this.listFile);
       });
+    });
+  }
 
+  getSpeakingFolder() {
+    console.log('get');
+    console.log('id' + this.idFolder);
+      gapi.client.load('drive', 'v2', () => {
+      var request = gapi.client.request({
+           path : 'https://www.googleapis.com/drive/v2/files/'+ this.idFolder +'/children',
+           method : 'GET'
+      });
+      request.execute((response) => {
+        console.log(response.items);  
+        for(var i = 0; i < response.items.length; i++) {
+          this.childOfFolder.push(response.items[i]);
+        } 
+      });
 
     });
   }
 
+
+  getListRecord() {
+    this.getSpeakingFolder();
+    for( var i = 0; i < this.childOfFolder.length; i ++) {
+       let tempId = this.childOfFolder[i]['id']
+       gapi.client.load('drive', 'v2', () => {
+        var request = gapi.client.request({
+             path : 'https://www.googleapis.com/drive/v2/files/'+ tempId,
+             method : 'GET'
+        });
+        request.execute((response) => {
+             console.log(response);  
+             this.ngZone.run(() => {
+               this.recordAudio.push(response);
+             })   
+        });
+
+      });
+
+    }
+  }
+
+  playAudio(url) {
+    var audio = new Audio();
+    audio.src = url;
+    audio.load();
+    audio.play();
+  }
+
   insertFile() {
+    if(this.idFolder == null) {
+      console.log('chưa có folder');
+      return;
+    }
     var callback;
     var fileData = document.getElementById('files')['files'][0];
     var fileName = document.getElementById('files')['value'].match(/[^\/\\]+$/);
@@ -55,12 +113,15 @@ export class Google {
 
     var reader = new FileReader();
     reader.readAsBinaryString(fileData);
-    reader.onload = function(e) {
+    reader.onload = (e) => {
       console.log(fileData.type);
+      console.log('idFolder'+ this.idFolder);
       var contentType = fileData.type || 'application/octet-stream';
       var metadata = {
         'title': fileName,
-        'mimeType': contentType
+        'mimeType': contentType,
+        'parents':[{"id":this.idFolder}]
+
       };
 
       var base64Data = btoa(reader.result);
@@ -77,6 +138,7 @@ export class Google {
 
       var request = gapi.client.request({
           'path': '/upload/drive/v2/files',
+          //'path': 'https://www.googleapis.com/drive/v2/files/'+ this.idFolder + '/children',
           'method': 'POST',
           'params': {'uploadType': 'multipart'},
           'headers': {

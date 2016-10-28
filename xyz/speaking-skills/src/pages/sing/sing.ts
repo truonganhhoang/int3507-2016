@@ -16,23 +16,26 @@ import { VideoPlayer } from '../video-player/video-player';
   templateUrl: 'sing.html',
   providers: [YtbSearchService]
 })
+
 export class Sing {
 	videos: Object[];
 	myQuery: String;
+  singType: String = 'karaoke';
+
   constructor(public navCtrl: NavController, private ytbSearchService: YtbSearchService) {}
 
   ionViewDidLoad() {
     console.log('Hello Sing Page');
   }
 
-   getVideos() {
-   	this.ytbSearchService.getVideos(this.myQuery + 'lyric').then(res => {
+  getVideos() {
+    if (this.myQuery == '' || this.myQuery == null) return;
+   	this.ytbSearchService.getVideos(this.myQuery + ' ' + this.singType).then(res => {
   		this.videos = res['items'];
   	});
-   }
-
-   playVideo(video) {
-    this.navCtrl.push(VideoPlayer, {video: video });
   }
 
+  playVideo(video) {
+    this.navCtrl.push(VideoPlayer, {video: video});
+  }
 }

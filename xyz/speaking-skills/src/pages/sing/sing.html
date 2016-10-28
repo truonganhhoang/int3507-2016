@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="secondary">
   	<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -19,11 +19,23 @@
 <ion-content padding>	
 	<ion-list inset>
     <ion-item>
-      <ion-input  [(ngModel)]="myQuery" type="text" placeholder="Which song do you like?.."></ion-input>
+      <ion-input [(ngModel)]="myQuery" type="text" placeholder="Enter a song"></ion-input>
     </ion-item>
   </ion-list>
-   <div padding>
-    <button ion-button light block (click)="getVideos()">Search</button>
+
+  <ion-list radio-group [(ngModel)]="singType">
+    <ion-item class="singType">
+      <ion-label>Karaoke</ion-label>
+      <ion-radio value="karaoke" checked></ion-radio>
+    </ion-item>
+    <ion-item class="singType">
+      <ion-label>Lyrics</ion-label>
+      <ion-radio value="lyric"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button ion-button outline light block (click)="getVideos()">Search</button>
   </div>
 
    <ion-list>

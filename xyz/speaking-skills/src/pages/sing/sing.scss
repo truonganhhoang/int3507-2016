@@ -1,3 +1,14 @@
 page-sing {
+	.singType {
+		width: 50%;
+		float: left;
+		padding: 10px;
+	}
 
+	ion-item {
+		border: none !important;
+		.item-inner {
+			border: none !important;
+		}
+	}
 }

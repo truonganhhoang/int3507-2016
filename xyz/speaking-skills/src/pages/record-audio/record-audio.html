@@ -1,0 +1,53 @@
+<!--
+  Generated template for the RecordAudio page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+  	 <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>record-audio</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+        <section class="experiment" style="padding: 5px;">
+            <label for="time-interval">Time Interval (milliseconds):</label>
+            <input type="text" id="time-interval" value="5000">ms
+
+            <br>
+            <br> recorderType:
+
+            <select id="audio-recorderType" style="font-size:22px;vertical-align: middle;margin-right: 5px;">
+                <option>[Best Available Recorder]</option>
+                <option>MediaRecorder API</option>
+                <option>WebAudio API (WAV)</option>
+                <option>WebAudio API (PCM)</option>
+            </select>
+            <br>
+
+            <input id="left-channel" type="checkbox" checked style="width:auto;">
+            <label for="left-channel">Record Mono Audio if WebAudio API is selected (above)</label>
+
+            <br>
+            <br>
+
+            <button id="start-recording" ion-button (click)="start()">Start</button>
+            <button id="stop-recording" disabled>Stop</button>
+
+            <button id="pause-recording" disabled>Pause</button>
+            <button id="resume-recording" disabled>Resume</button>
+
+            <button id="save-recording" disabled>Save</button>
+        </section>
+
+        <section class="experiment">
+            <div id="audios-container"></div>
+        </section>
+</ion-content>

@@ -1,6 +1,6 @@
 <ion-menu [content]="content">
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar color="secondary">
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
@@ -10,6 +10,7 @@
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>
+      <login-web></login-web>
     </ion-list>
   </ion-content>
 
