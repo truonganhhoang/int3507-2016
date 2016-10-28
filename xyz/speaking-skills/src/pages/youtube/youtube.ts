@@ -27,9 +27,9 @@ export class Youtube {
   ionViewDidLoad() {
     console.log('Hello Youtube Page');
   }
+
   playVideo(video) {
-        //go to play-video.html and send the video variable (the selected video)
-        this.navCtrl.push(VideoPlayer,  {video: video });
+    this.navCtrl.push(VideoPlayer, {video: video });
   }
 
 }

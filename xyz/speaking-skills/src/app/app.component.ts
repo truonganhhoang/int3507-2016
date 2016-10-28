@@ -31,8 +31,8 @@ export class MyApp {
       { title: 'Drive', component: Google },
       { title: 'Sing', component: Sing },
       { title: 'My Song', component: MySong }
+      { title: 'Test Google Drive', component: Google }
     ];
-
   }
 
   initializeApp() {

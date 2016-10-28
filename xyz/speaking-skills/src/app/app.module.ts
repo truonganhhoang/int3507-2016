@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicApp, IonicModule } from 'ionic-angular';
+import 'rxjs/Rx';
 
 import { MyApp } from './app.component';
 // import { Page1 } from '../pages/page1/page1';
@@ -14,8 +15,6 @@ import { LoginWeb } from '../components/login-web/login-web';
 import { Google } from '../pages/google/google';
 import { MySong } from '../pages/my-song/my-song';
 
-
-
 @NgModule({
   declarations: [
     MyApp,
@@ -27,9 +26,9 @@ import { MySong } from '../pages/my-song/my-song';
     VideoPlayer, 
     Login,
     LoginWeb,
-    Google,
     Sing,
     MySong
+    Google
   ],
   imports: [
     IonicModule.forRoot(MyApp)

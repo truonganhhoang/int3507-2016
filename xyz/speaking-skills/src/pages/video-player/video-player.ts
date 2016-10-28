@@ -15,7 +15,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 export class VideoPlayer {
 	video: Object;
-	url;
+	url: any;
 
   constructor(public navCtrl: NavController, private navParams: NavParams, private domSanitizer: DomSanitizer) {
   	 this.video = this.navParams.get('video');
