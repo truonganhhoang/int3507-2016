@@ -36,8 +36,7 @@ router.post('/add', (request, response) => {
     var thread = request.param('thread');
     var attach = request.param('attach');
 
-
-    async.parallel([
+    async.series([
         (callback) => {
             db.findOne(Collection.category, {"categoryName": categoryName}, (r1) => {
                 if (!r1) {
@@ -46,11 +45,13 @@ router.post('/add', (request, response) => {
 
                     db.insertOne(Collection.category, category,
                         (r2) => {
+                            console.log("first ==>>" + category._id);
                             categoryId = category._id;
                             callback();
                         });
                 } else {
-                    console.log("==>>" + r1._id);
+                    console.log("second ==>>" + r1._id);
+                    categoryId = r1._id;
                     callback();
                 }
             });
@@ -83,7 +84,6 @@ router.get('/home', (request, response) => {
     fs.readFile('views/home.html', 'utf8', (err, contents) => {
 
         db.fetchAll(Collection.unit, (result) => {
-            console.log(result);
             var units = result;
 
             var table = '';
@@ -124,6 +124,58 @@ router.get('/unit/:id/delete', (request, response) => {
     db.remove(Collection.unit, {"_id": new ObjectId(id)}, (r1) => {
         response.redirect('/cms/home');
     });
+});
+
+router.get('/unit/:id/add-exercise', (request, response) => {
+    var id = request.params.id;
+
+    fs.readFile('views/add-work.html', 'utf8', (err, contents) => {
+       db.findOne(Collection.unit, {"_id": new ObjectId(id)}, (r1) => {
+
+           var header = "<h3>" + r1.unitTitle + "</h3>" +
+               "<h5><i>"+ r1.unitSubTitle + "</i></h5>";
+
+           contents = contents.replace("<#header></#header>", header);
+           response.write(contents);
+           response.end();
+       });
+    });
+});
+
+router.post('/unit/:id/add-exercise', (request, response) => {
+    var id = request.params.id;
+    var questionContent = request.param('question');
+    var a = request.param('a');
+    var b = request.param('b');
+    var c = request.param('c');
+    var d = request.param('d');
+    var correct = request.param('correct');
+
+    db.findOne(Collection.unit, {"_id": new ObjectId(id)}, (r1) => {
+
+        var answers = [];
+        var answer = {};
+
+        answer.ansId = "A";
+        answer.ansContent = a;
+        answers.push(answer);
+        answer = {};
+        answer.ansId = "B";
+        answer.ansContent = b;
+        answers.push(answer);
+        answer = {};
+        answer.ansId = "C";
+        answer.ansContent = c;
+        answers.push(answer);
+
+        var question = Question.init(questionContent, r1._id, correct, answers);
+
+        db.insert(Collection.question, question, (r2) => {
+            response.redirect('add-exercise');
+        });
+    });
+
+
 });
 
 module.exports = router;

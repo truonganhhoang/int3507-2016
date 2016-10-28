@@ -63,11 +63,15 @@ router.get('/profile', (req, res) => {
         resp.error = 0;
         resp.message = "";
         db.findOne(Collect.token, {'access_token': token}, (r1) => {
-            db.findOne(Collect.user, {'_id': new ObjectId(r1.userId)}, (r2) => {
-                resp.data = r2;
-                res.send(resp);
+            if (r1) {
+                db.findOne(Collect.user, {'_id': new ObjectId(r1.userId)}, (r2) => {
+                    resp.data = r2;
+                    res.send(resp);
+                    res.end();
+                });
+            } else {
                 res.end();
-            });
+            }
         });
     } else {
         resp.error = 1;
