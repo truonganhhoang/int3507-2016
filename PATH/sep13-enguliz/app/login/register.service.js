@@ -8,38 +8,31 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-/**
- * Created by Thinking on 09/19/2016.
- */
-require('rxjs/Rx');
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
-var Rx_1 = require("rxjs/Rx");
 var appSettings_1 = require("../appSettings");
-var LoginService = (function () {
-    function LoginService(http) {
+var Rx_1 = require("rxjs/Rx");
+/**
+ * Created by Thinking on 10/29/2016.
+ */
+var RegisterService = (function () {
+    function RegisterService(http) {
         this.http = http;
-        this.loginUrl = ("" + appSettings_1.AppSettings.API_ENDPOINT) + "/user/login?";
-        this.logoutUrl = ("" + appSettings_1.AppSettings.API_ENDPOINT) + "/user/logout?";
+        this.registerUrl = ("" + appSettings_1.AppSettings.API_ENDPOINT) + "/user/register?";
     }
-    LoginService.prototype.loginRequest = function (username, password) {
-        return this.http.get(this.loginUrl + "username=" + username + "&password=" + password)
+    RegisterService.prototype.registerRequest = function (username, password, phone) {
+        return this.http.get(this.registerUrl
+            + "username=" + username
+            + "&password=" + password
+            + "&phone=" + phone)
             .map(function (res) { return res.json(); })
             .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
     };
-    LoginService.prototype.logoutRequest = function (auth_token) {
-        var headers = {
-            access_token: auth_token
-        };
-        return this.http.get(this.logoutUrl, headers)
-            .map(function (res) { return res.json(); })
-            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
-    };
-    LoginService = __decorate([
+    RegisterService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
-    ], LoginService);
-    return LoginService;
+    ], RegisterService);
+    return RegisterService;
 }());
-exports.LoginService = LoginService;
-//# sourceMappingURL=login.service.js.map
+exports.RegisterService = RegisterService;
+//# sourceMappingURL=register.service.js.map

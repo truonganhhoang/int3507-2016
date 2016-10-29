@@ -30,7 +30,7 @@ import {User} from "./user/user.model";
                                 </div>
                             </li>
                             <li><a [routerLink]="['login']">LOGIN</a></li>
-                            <li><a href="" class="sign-up">SIGN IN</a></li> 
+                            <li><a [routerLink]="['register']" class="sign-up">SIGN IN</a></li> 
                        </ul>
                     </div>
                     </header>

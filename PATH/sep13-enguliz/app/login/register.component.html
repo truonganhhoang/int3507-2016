@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 col-md-offset-4">
+            <div class="account-wall">
+                <h1 class="text-center login-title">SIGN IN</h1>
+                <form class="form-signin" (submit)="submitRegister(username.value, password1.value, password2.value, phone.value)">
+                    <div class="form-group">
+                        <input type="text" #username class="form-control" placeholder="Email" required autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" #password1 class="form-control" placeholder="Enter password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" #password2 class="form-control" placeholder="Repeat password" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" #phone class="form-control" placeholder="Enter your phone" required>
+                    </div>
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+                    <div style="color: red; margin-top: 10px;">
+                        <label>{{msg_error}}</label>
+                    </div>
+                    <div style="color: blue; margin-top: 10px;">
+                        <label>{{msg_success}}</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
