@@ -183,7 +183,39 @@ router.post('/unit/:id/add-exercise', (request, response) => {
         });
     });
 
+});
 
+router.get('/user', (request, response) => {
+    fs.readFile('views/user.html', 'utf8', (err, contents) => {
+
+        db.fetchAll(Collection.user, (result) => {
+            var users = result;
+
+            var table = '';
+            table += "<table class='table'>";
+            table += "<thead>" +
+                "<tr>" +
+                "<th>Id</th>" +
+                "<th>Tên</th>" +
+                "<th>Số điện thoại</th>" +
+                "<th></th>" +
+                "</tr>" +
+                "</thead><tbody>";
+            Array.from(users, (item) => {
+                table += "<tr>";
+                table += "<td>" + item._id + "</td>";
+                table += "<td>" + item.userName + "</td>";
+                table += "<td>" + item.userPhone + "</td>";
+                table += "<td><a href='user/" + item._id + "/profile'>Chi tiết</a></td>";
+                table += "</tr>";
+            });
+            table += "</tbody></table>";
+
+            contents = contents.replace("<#table></#table>", table);
+            response.write(contents);
+            response.end();
+        });
+    });
 });
 
 module.exports = router;
