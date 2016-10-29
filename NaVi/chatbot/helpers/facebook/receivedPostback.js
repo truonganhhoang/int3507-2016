@@ -22,7 +22,7 @@ module.exports = function receivedPostback(event) {
                 require('../fnUserSettings/updateProfile')(senderID);
             }
             else if (chosenOption === "STATUS") {
-
+                require('../fnUserSettings/learningProgress')(senderID);
             }
             else if (chosenOption === "NOTIFICATIONS") {
 
