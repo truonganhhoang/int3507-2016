@@ -36,48 +36,47 @@ export class Login implements OnInit {
     }).then(res => {
       this.profile = res;
       alert(res.serverAuthCode);
-      // alert('token' + res.oauthToken);
-      // var data = {
-      //           client_id: '736288713251-26srbi81jha5n1aithe4av668oh5pn12.apps.googleusercontent.com',
-      //           client_secret: 'DXCJ-YeBLOcuY49Hq1OsbUmi',
-      //           grant_type: 'authorization_code',
-      //           code: res.serverAuthCode
-      //       };
+     
+      var data = {
+                client_id: '736288713251-26srbi81jha5n1aithe4av668oh5pn12.apps.googleusercontent.com',
+                client_secret: 'DXCJ-YeBLOcuY49Hq1OsbUmi',
+                grant_type: 'authorization_code',
+                code: res.serverAuthCode
+            };
 
-      //  var body = 'client_id=' + data.client_id +
-      //              '&client_secret=' + data.client_secret +
-      //              '&grant_type=' + data.grant_type +
-      //              '&code=' + data.code;
+       var body = 'client_id=' + data.client_id +
+                   '&client_secret=' + data.client_secret +
+                   '&redirect_uri=http://localhost/callback'+
+                   '&grant_type=authorization_code' +
+                   '&code=' + data.code;
 
-      //   let headers = new Headers();
-      //   headers.append('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8;');
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/x-www-form-urlencoded;charset=utf-8;');
 
-      //   this.http.post('https://www.googleapis.com/oauth2/v3/token', body, headers)
-      //   .subscribe(res => {
-      //     alert('succes'+res.json());
-      //   },
-      //   err => {
-      //     alert('erro'+err.json());
-      //   });
+        this.http.post('https://www.googleapis.com/oauth2/v4/token', body, {headers: headers})
+        .map(res => res.json())
+        .subscribe(data => {
+          //access_token
+          alert(data.access_token);
+          //test google drive
+          gapi.client.load('drive', 'v2', function() {
+            var request = gapi.client.request({
+                 path : 'https://www.googleapis.com/drive/v2/files?access_token=' + data.access_token,
+                 method : 'GET',
+                 params : {
+                      projection: "FULL",
+                      maxResults: 5
+                 }
+            });
+            request.execute(function(response) {
+                 alert(JSON.stringify(response));   
+            });
+          });
 
-
-        // let test = 'ya29.CjV2A0MFYoZmXdiZKJ5c2ljyNgYzkj61PHdq9KzkUGiwDh-8-m8G-yASwj7OPHRZa7suqVR1Yg'
-        //  gapi.client.load('drive', 'v2', function() {
-        //   var request = gapi.client.request({
-        //        path : 'https://www.googleapis.com/drive/v2/files?access_token='+test,
-        //        method : 'GET',
-        //        params : {
-        //             projection: "FULL",
-        //             maxResults: 5
-        //        }
-        //   });
-        //   request.execute(function(response) {
-        //        alert(JSON.stringify(response));   
-        //   });
-
-
-        //  });
-
+        },
+        err => {
+          alert(JSON.stringify(err));
+        });
     },
     err => {
       alert(err);

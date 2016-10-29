@@ -17,5 +17,9 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item *ngFor="let item of arrSong">
+       <ion-icon name="play" (click)="playAudio(item)"></ion-icon>{{item.title}}
+    </ion-item>
+  </ion-list>
 </ion-content>

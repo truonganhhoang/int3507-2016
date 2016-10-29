@@ -19,16 +19,18 @@
 <ion-content padding>
 	<div class="image-left embed-video">
     <div class="videoWrapper">
-      <iframe class="embed-responsive-item" width="100%" height="250" [src]="url" allowfullscreen></iframe>
+      <iframe id="video-player" class="embed-responsive-item" width="100%" height="250" [src]="url" 
+        allowscriptaccess="always"
+        allowfullscreen></iframe>
     </div>
     <ion-row>
-        <ion-col width-33>
+        <ion-col *ngIf="!isRecord"  width-33>
           <button ion-button outline (click)="startRecord()"> Ghi âm </button>
         </ion-col>
-         <ion-col width-33>
+         <ion-col *ngIf="isRecord"  width-33>
           <button ion-button outline (click)="stopRecord()"> Dừng ghi </button>
         </ion-col>
-        <ion-col width-33>
+        <ion-col *ngIf="isEnd" width-33>
           <button ion-button outline (click)="playRecord()"> Phát lại </button>
         </ion-col>
       </ion-row>

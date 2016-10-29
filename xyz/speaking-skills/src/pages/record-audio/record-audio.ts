@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { SongService} from '../../services/song.service'
 
 /*
   Generated class for the RecordAudio page.
@@ -26,7 +27,7 @@ export class RecordAudio {
   };
 
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, private songService: SongService) {}
 
   ionViewDidLoad() {
     this.destination = this.context.createMediaStreamDestination();

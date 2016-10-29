@@ -45,7 +45,8 @@
     "ionic-plugin-keyboard",
     "cordova-plugin-file",
     "cordova-plugin-media",
-    "cordova-plugin-tts"
+    "cordova-plugin-tts",
+    "cordova-plugin-nativestorage"
   ],
   "cordovaPlatforms": []
 }
