@@ -1,0 +1,75 @@
+<div class="content">
+    <div class="list-course" *ngFor="let cat of categories">
+
+        <div class="category">
+            <div class="col-md-10 col-md-offset-1 list-header">
+                <h1>{{cat.categoryName}}</h1>
+            </div>
+        </div>
+
+        <div class="list">
+            <div class="course" *ngFor="let item of cat.categoryItems" [routerLink]="['details', item.unitId]">
+                <a href="">
+                    <div class="fix">
+                        <div class="side-course" style="width: 324px; height: 220px">
+                            <img width="324px" height="220px" src="{{item.unitThumbnail}}" alt="" >
+                        </div>
+                        <div class="desc-course">
+                            <div class="course-title">
+                                {{item.unitTitle}}
+                            </div>
+                            <div class="course-time">
+                                <div class="time">
+                                    Time: 10 phút
+                                </div>
+                                <div class="view">
+                                    View: {{item.unitViews}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footer-content">
+        <h4>E-LEANING STUDIO</h4>
+        <ul>
+            <li>Đại học công nghệ</li>
+            <li>Địa chỉ: 144 Xuân Thủy - Cầu Giấy - Hà Nội</li>
+            <li>SĐT: (04)664251</li>
+            <li>Email: uet-vnu@gmail.com</li>
+        </ul>
+    </div>
+
+    <div class="footer-content">
+        <h4>E-LEANING STUDIO</h4>
+        <ul>
+            <li>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                144 Xuân Thủy - Cầu Giấy - Hà Nội
+            </li>
+            <li>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                (04)664251
+            </li>
+            <li>
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                uet-vnu@gmail.com</li>
+        </ul>
+    </div>
+
+    <div class="footer-content" style="border-right: none;">
+        <h4>E-LEANING STUDIO</h4>
+        <ul>
+            <li>Đại học công nghệ</li>
+            <li>Địa chỉ: 144 Xuân Thủy - Cầu Giấy - Hà Nội</li>
+            <li>SĐT: (04)664251</li>
+            <li>Email: uet-vnu@gmail.com</li>
+        </ul>
+    </div>
+</div>

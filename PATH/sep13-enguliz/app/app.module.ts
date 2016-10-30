@@ -16,6 +16,7 @@ import {TestReadCompoent} from "./test/read/test.component";
 import {DetailComponent} from "./detail/detail.component";
 import {RegisterComponent} from "./login/register.component";
 import {ProfileComponent} from "./profile/profile.component";
+import {GrammarComponent} from "./grammar/grammar.component";
 
 @NgModule({
     imports: [
@@ -36,6 +37,7 @@ import {ProfileComponent} from "./profile/profile.component";
         DetailComponent,
         RegisterComponent,
         ProfileComponent,
+        GrammarComponent
     ],
     providers: [
         appRoutingProvider
