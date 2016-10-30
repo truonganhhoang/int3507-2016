@@ -45,6 +45,16 @@ module.exports = function receivedMessage(event) {
             else if (action === 'PM') {
                 require('../fnUserSettings/handleNotificationSettingQuickReplyAction')(senderID, payload);
             }
+            else if (action === 'REMIND') {
+                let functionToBeFired = payload.split('?')[1];
+                if (functionToBeFired === 'NW') {
+                    require('../fnNewWords/sendNewWord')(senderID);
+                } else if (functionToBeFired === 'MC') {
+                    require('../fnMutipleChoices/sendQuestion')(senderID);
+                } else if (functionToBeFired === 'LI') {
+                    require('../fnListening/sendListeningChallenge')(senderID);
+                }
+            }
         }
     }
 

@@ -16,7 +16,7 @@ module.exports = function (recipientId) {
                 unlearnedQuestions = totalQuestions;
             } else {
                 unlearnedQuestions = result.unlearnedQuestions.length;
-                console.log(result);
+                // console.log(result);
             }
             // Count the number of new words that user has learned
             models.NewWord.count({}, function(err, totalNewWords) {
