@@ -3,10 +3,7 @@
         <div class="player-wrapper" *ngIf="unit">
             <h3>{{unit.unitTitle}}</h3>
             <div class="audio">
-                <img alt="" src="{{unit.unitThumbnail}}" width="40%" >
-                <p class="center" style="padding-top: 20px;">{{unit.unitSubTitle}}</p>
-                <p class="center">{{unit.unitThreads}}</p>
-                <p class="center">Thời gian: {{convertTime(unit.unitTime/1000)}}</p>
+                <h4><p class="center">{{unit.unitThreads}}</p></h4>
                 <button *ngIf="!isTest && !isNotify" class="btn btn-primary" (click)="startTesting()">Bắt đầu</button>
             </div>
 
