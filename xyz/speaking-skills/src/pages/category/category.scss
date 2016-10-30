@@ -1,17 +1,26 @@
 page-category {
-	.text-center {
-		text-align: center;
-	}
-	img {
+	
+	img {	
 		border-radius: 50%;
-		height: 100px;
-		width: 100px;
+		height: 60px;
+		width: 60px;
 		border: 1px solid rgba(153, 153, 153, 0.77);
+		margin-right: 16px;
+		&:hover{cursor:pointer}
 	}
 	.name-category {
 		text-transform: uppercase;
+		margin: 0;
+		top: 40%;
+		position:absolute;
+		&:hover{cursor:pointer}
 	}
 	ion-col {
-		margin-bottom: 25px;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		img, p {display:inline-block}
+		position: relative;
+		border-bottom: 1px solid #dedede;
+		&:focus {background-color: #7E60FF}
 	}
 }

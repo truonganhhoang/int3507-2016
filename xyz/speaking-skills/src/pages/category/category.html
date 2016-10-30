@@ -9,7 +9,7 @@
   	<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
   	</button>
-    <ion-title>Speaking by category</ion-title>
+    <ion-title>Category Speaking</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -21,9 +21,9 @@
 		<img src="{{item.image}}">
 		</ion-item>
 	</ion-list> -->
-	<ion-col style="float:left;" width-33 *ngFor="let item of category" (click)=enterWord(item)>
+	<ion-col *ngFor="let item of category" (click)=enterWord(item)>
 		<img src="{{item.image}}">
-		<p class="text-center name-category">{{item.name}}</p>
+		<p class=" name-category">{{item.name}}</p>
 	</ion-col>
 
 </ion-content>

@@ -11,4 +11,11 @@ page-sing {
 			border: none !important;
 		}
 	}
+	.button-outline-md {
+		background-color: #7E60FF;
+		color: white;
+		&:hover {
+			background-color: #7F54D4 !important; 
+		}
+	}
 }

@@ -25,13 +25,13 @@
       <ion-icon color="primary" name="volume-down" (click)=tts(item.content) style="float:right;"></ion-icon>
       <ion-row>
         <ion-col *ngIf="!item.isRecording"  width-50>
-          <button ion-button outline (click)="startRecord(item)"> Ghi âm </button>
+          <button ion-button (click)="startRecord(item)"> Start Record </button>
         </ion-col>
          <ion-col *ngIf="item.isRecording" width-50>
-          <button ion-button outline (click)="stopRecord(item)"> Dừng ghi </button>
+          <button ion-button (click)="stopRecord(item)"> Stop Recording </button>
         </ion-col>
         <ion-col width-50>
-          <button ion-button outline *ngIf="item.url!=undefined" (click)="playRecord(item)"> Phát lại </button>
+          <button ion-button *ngIf="item.url!=undefined" (click)="playRecord(item)"> Play </button>
         </ion-col>
       </ion-row>
 	  </ion-item>

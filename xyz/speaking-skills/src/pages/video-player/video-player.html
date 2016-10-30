@@ -25,13 +25,13 @@
     </div>
     <ion-row>
         <ion-col *ngIf="!isRecord"  width-33>
-          <button ion-button outline (click)="startRecord()"> Ghi âm </button>
+          <button ion-button (click)="startRecord()"> Start Record </button>
         </ion-col>
          <ion-col *ngIf="isRecord"  width-33>
-          <button ion-button outline (click)="stopRecord()"> Dừng ghi </button>
+          <button ion-button (click)="stopRecord()"> Stop Recording </button>
         </ion-col>
         <ion-col *ngIf="isEnd" width-33>
-          <button ion-button outline (click)="playRecord()"> Phát lại </button>
+          <button ion-button (click)="playRecord()"> Play </button>
         </ion-col>
       </ion-row>
        <!--  <p>

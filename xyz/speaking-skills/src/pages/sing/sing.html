@@ -10,7 +10,7 @@
   	<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Sing Karaoke</ion-title>
+    <ion-title>Karaoke</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -25,17 +25,17 @@
 
   <ion-list radio-group [(ngModel)]="singType">
     <ion-item class="singType">
-      <ion-label>Karaoke</ion-label>
+      <ion-label>Song without Lyrics</ion-label>
       <ion-radio value="karaoke" checked></ion-radio>
     </ion-item>
     <ion-item class="singType">
-      <ion-label>Lyrics</ion-label>
+      <ion-label>Song with Lyrics</ion-label>
       <ion-radio value="lyric"></ion-radio>
     </ion-item>
   </ion-list>
 
   <div padding>
-    <button ion-button outline light block (click)="getVideos()">Search</button>
+    <button ion-button light block (click)="getVideos()">Search</button>
   </div>
 
    <ion-list>

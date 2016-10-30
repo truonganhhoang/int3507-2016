@@ -6,11 +6,11 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="secondary">
   	<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
   	</button>
-    <ion-title>Upload Drive</ion-title>
+    <ion-title>Drive Uploading</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -22,6 +22,7 @@
 <!--  <button ion-button (click)="getSpeakingFolder()">GET All file in Speaking</button> -->
   
   <input type="file" id="files" name="files[]" multiple />
+  <br>
 	<button ion-button (click)="insertFile()"> 
     <ion-icon ios="ios-cloud-upload" md="md-cloud-upload"></ion-icon> &nbsp;
     Upload File
