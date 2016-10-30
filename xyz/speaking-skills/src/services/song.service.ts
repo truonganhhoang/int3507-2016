@@ -10,7 +10,6 @@ export class SongService {
   constructor(private http: Http) { }
 
   saveSong(song) {
-    alert('vao ham');
     let arrSong: Object[] = [];
     let i: number = 0;
 
@@ -20,7 +19,7 @@ export class SongService {
       for (i = 0; i < arrSong.length; i++ ) {
         //nếu video đã có trong storage thì thoát ra ngoài
         if (arrSong[i]['videoId'] == song['videoId']) {
-          alert('da co');
+          //alert('da co');
           break;
         }
       }
@@ -29,8 +28,8 @@ export class SongService {
         arrSong.push(song);
         NativeStorage.setItem('mysong', arrSong)
           .then(
-            () => alert('saved'),
-            error => alert('Error storing item')
+            () => console.log('saved'),
+            error => console.log('Error storing item')
           );
       }
     }, 
@@ -50,7 +49,7 @@ export class SongService {
       NativeStorage.getItem('mysong')
       .then(
         data => {
-          alert(data);
+          //alert(data);
           resolve(data);
         },
         error => {

@@ -1,5 +1,8 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { AppGlobals } from '../../services/app-globals.service';
+import { DriveService } from '../../services/drive.service';
+
 
 /*
   Generated class for the Google page.
@@ -9,7 +12,8 @@ import { NavController } from 'ionic-angular';
 */
 @Component({
   selector: 'page-google',
-  templateUrl: 'google.html'
+  templateUrl: 'google.html',
+  providers: [ DriveService ]
 })
 export class Google implements OnInit {
   idFolder: String;
@@ -18,42 +22,30 @@ export class Google implements OnInit {
 	auth2: any;
   childOfFolder: Object[] = [];
   recordAudio: Object[] = [];
+  access_token: String;
+  isLogin: boolean = false;
 
-  constructor(public navCtrl: NavController, private ngZone: NgZone) {
-  
+  constructor(public navCtrl: NavController, private ngZone: NgZone, 
+    private appGlobals: AppGlobals, private driveService: DriveService) {
+    
   }
 
   ngOnInit() {
-    this.list();
-    //this.getSpeakingFolder();
-  }
+    this.appGlobals.access_token.subscribe(value => {
+      this.access_token = value;
+      if(value != '') {
+        this.isLogin = true;
+      }
 
-  list(){
-    gapi.client.load('drive', 'v2', () => {
-      var request = gapi.client.request({
-           path : 'https://www.googleapis.com/drive/v2/files',
-           method : 'GET',
-           params : {
-                projection: "FULL",
-                maxResults: 1000
-           }
-      });
-      request.execute((response) => {
-        for(var i = 0; i < response.items.length; i++) {
-          if (response.items[i].title == 'Speaking') {
-             this.listFile.push(response.items[i]);
-             this.idFolder = response.items[i].id;
-             break;
-          }
-        } 
-        console.log(this.listFile);
+      this.driveService.getIdFolderSpeak(this.access_token).then(res => {
+        this.idFolder = res;
+        this.getSpeakingFolder();
       });
     });
   }
 
+
   getSpeakingFolder() {
-    console.log('get');
-    console.log('id' + this.idFolder);
       gapi.client.load('drive', 'v2', () => {
       var request = gapi.client.request({
            path : 'https://www.googleapis.com/drive/v2/files/'+ this.idFolder +'/children',
@@ -64,6 +56,7 @@ export class Google implements OnInit {
         for(var i = 0; i < response.items.length; i++) {
           this.childOfFolder.push(response.items[i]);
         } 
+        //alert(this.childOfFolder);
       });
 
     });
@@ -71,7 +64,6 @@ export class Google implements OnInit {
 
 
   getListRecord() {
-    this.getSpeakingFolder();
     for( var i = 0; i < this.childOfFolder.length; i ++) {
        let tempId = this.childOfFolder[i]['id']
        gapi.client.load('drive', 'v2', () => {
@@ -80,7 +72,7 @@ export class Google implements OnInit {
              method : 'GET'
         });
         request.execute((response) => {
-             console.log(response);  
+             alert(JSON.stringify(response));  
              this.ngZone.run(() => {
                this.recordAudio.push(response);
              })   
@@ -105,6 +97,7 @@ export class Google implements OnInit {
     }
     var callback;
     var fileData = document.getElementById('files')['files'][0];
+    console.log('fileData' + JSON.stringify(fileData));
     var fileName = document.getElementById('files')['value'].match(/[^\/\\]+$/);
     console.log('ten file' + fileName);
     const boundary = '-------314159265358979323846';
@@ -137,17 +130,19 @@ export class Google implements OnInit {
           close_delim;
 
       var request = gapi.client.request({
-          'path': '/upload/drive/v2/files',
+          'path': '/upload/drive/v2/files?access_token=' + this.access_token,
           //'path': 'https://www.googleapis.com/drive/v2/files/'+ this.idFolder + '/children',
           'method': 'POST',
           'params': {'uploadType': 'multipart'},
           'headers': {
             'Content-Type': 'multipart/mixed; boundary="' + boundary + '"'
           },
-          'body': multipartRequestBody});
+          'body': multipartRequestBody
+        });
       if (!callback) {
         callback = function(file) {
-          console.log(file)
+          console.log(file);
+          alert('upload success');
         };
       }
       request.execute(callback);

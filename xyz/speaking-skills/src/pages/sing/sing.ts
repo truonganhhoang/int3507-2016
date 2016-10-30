@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { YtbSearchService } from '../../services/ytbsearch.service';
 import { VideoPlayer } from '../video-player/video-player';
@@ -17,7 +17,7 @@ import { VideoPlayer } from '../video-player/video-player';
   providers: [YtbSearchService]
 })
 
-export class Sing {
+export class Sing implements OnInit {
 	videos: Object[];
 	myQuery: String;
   singType: String = 'karaoke';
@@ -26,6 +26,12 @@ export class Sing {
 
   ionViewDidLoad() {
     console.log('Hello Sing Page');
+  }
+
+  ngOnInit() {
+    this.ytbSearchService.getTopVideos().then(res => {
+      this.videos = res['items'];
+    })
   }
 
   getVideos() {

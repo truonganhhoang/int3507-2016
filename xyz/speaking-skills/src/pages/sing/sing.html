@@ -15,12 +15,35 @@
 
 </ion-header>
 
-
 <ion-content padding>	
-	<ion-list inset>
+  <ion-row class="input-search">
+    <ion-col width-80>
     <ion-item>
+      <ion-label><ion-icon name="search"></ion-icon></ion-label>
       <ion-input [(ngModel)]="myQuery" type="text" placeholder="Enter a song"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col width-20>
+      <button ion-button color="light" block (click)="getVideos()">  
+        Search
+      </button>
+    </ion-col>
+  </ion-row>
+
+ 
+    <ion-item>
+      <ion-label></ion-label>
+      <ion-select [(ngModel)]="singType">
+        <ion-option value="karaoke" selected="true">
+          <ion-icon name="microphone">Karaoke</ion-icon> 
+        </ion-option>
+        <ion-option value="lyric">
+          <ion-icon ios="ios-list-box" md="md-list-box"></ion-icon>Lyrics
+        </ion-option>
+      </ion-select>
     </ion-item>
+/*
+<<<<<<< HEAD
   </ion-list>
 
   <ion-list radio-group [(ngModel)]="singType">
@@ -39,6 +62,10 @@
   </div>
 
    <ion-list>
+=======
+*/
+  
+  <ion-list>
     <ion-item *ngFor="let video of videos" (click)="playVideo(video)" >
       <ion-thumbnail item-left>
         <img src="{{video.snippet.thumbnails.high.url}}">

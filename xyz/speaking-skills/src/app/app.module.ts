@@ -7,13 +7,15 @@ import { MyApp } from './app.component';
 // import { Page2 } from '../pages/page2/page2';
 import { Record } from '../pages/record/record';
 import { Category } from '../pages/category/category';
-import { Youtube } from '../pages/youtube/youtube';
+//import { Youtube } from '../pages/youtube/youtube';
 import { Sing } from '../pages/sing/sing';
 import { VideoPlayer } from '../pages/video-player/video-player';
 import { Login } from '../components/login/login';
 import { LoginWeb } from '../components/login-web/login-web';
 import { Google } from '../pages/google/google';
 import { MySong } from '../pages/my-song/my-song';
+import { AppGlobals } from '../services/app-globals.service';
+
 
 @NgModule({
   declarations: [
@@ -22,13 +24,13 @@ import { MySong } from '../pages/my-song/my-song';
     // Page2,
     Record,
     Category,
-    Youtube,
+   // Youtube,
     VideoPlayer, 
     Login,
     LoginWeb,
     Sing,
     MySong,
-    Google
+   Google
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -40,12 +42,12 @@ import { MySong } from '../pages/my-song/my-song';
     // Page2,
     Record,
     Category,
-    Youtube,
+   //  Youtube,
     VideoPlayer,
     Google,
     Sing,
     MySong
   ],
-  providers: []
+  providers: [ AppGlobals ]
 })
 export class AppModule {}

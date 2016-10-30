@@ -1,6 +1,6 @@
 page-sing {
 	.singType {
-		width: 50%;
+		width: 33.33%;
 		float: left;
 		padding: 10px;
 	}
@@ -11,11 +11,10 @@ page-sing {
 			border: none !important;
 		}
 	}
-	.button-outline-md {
-		background-color: #7E60FF;
-		color: white;
-		&:hover {
-			background-color: #7F54D4 !important; 
-		}
+
+	
+	.input-search {
+		border: 1px solid #e0e0e0;
 	}
+	
 }
