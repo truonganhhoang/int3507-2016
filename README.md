@@ -17,4 +17,5 @@ Liên kết đến sản phẩm của các nhóm:
 |---|---|
 | Duo | https://play.google.com/store/apps/details?id=com.saokhuee.sachmem  |
 | FRIES  | http://v2.uetf.me/ |
+| NaVi  | https://www.facebook.com/cwat.seewhat/ |
 | ...  | ... |
