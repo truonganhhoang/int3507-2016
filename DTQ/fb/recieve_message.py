@@ -23,16 +23,14 @@ def recieve(data):
 
     for entry in data["entry"]:
       for messaging_event in entry["messaging"]:
-
+        sender_id = messaging_event["sender"]["id"]
+        user = UserRecord.get(sender_id)
         if messaging_event.get("postback"):
-          sender_id = messaging_event["sender"]["id"]
           payload = messaging_event["postback"]["payload"]
           if PostBack.PAY_LOAD_MENU_HELP in payload:
             send_text_message(sender_id, "We have two functions for you: learn new words and do exercises. Please type 'learn word' to learn new words and 'do exercise' to do exercises. Thanks <3")
         else:
           if messaging_event.get("message"):  # someone sent us a message
-
-            sender_id = messaging_event["sender"]["id"]    # the facebook ID of the person sending you the message
             recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
             message_text = messaging_event["message"]["text"].lower()  # the message's text
             luis = Luis()
@@ -42,7 +40,7 @@ def recieve(data):
  
               if PostBack.PAY_LOAD_WORD in payload:
                 word_id = int(payload.split(" ")[1])
-                user = UserRecord.get(sender_id)
+                
                 for word_result in user.word_results:
                   if word_result.word_id == word_id:
                     word_result.is_learned = True
