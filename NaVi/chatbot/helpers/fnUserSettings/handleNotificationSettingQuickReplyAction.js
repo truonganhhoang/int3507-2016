@@ -46,6 +46,11 @@ module.exports = function (recipientId, payload) {
                     if (err) {
                         console.log(err);
                     } else {
+                        // If the user profile is not updated yet, we set the user's timezone equal to the system timezone
+                        if (!user) {
+                            user = {};
+                            user.timezone = systemTimezone;
+                        }
                         var timezoneDifference = user.timezone - systemTimezone;
                         var rule = new schedule.RecurrenceRule();
 
