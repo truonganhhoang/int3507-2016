@@ -29,9 +29,15 @@ class WordResultRecord:
 
   @staticmethod
   def get_random_result(user_id):
-    word_results = WordResult.query.all()
+    word_results = ordresult = db.session.query(WordResult)\
+      .filter(WordResult.user_id == user_id).all()
     if word_results:
       random_int = randint(0, len(word_results))
-      return word_results[random_int]
+      result = None
+      try:
+        result = word_results[random_int]
+      except Error:
+        result = None
+      return result
     else:
       return None
