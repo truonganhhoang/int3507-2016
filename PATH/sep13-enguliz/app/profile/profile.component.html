@@ -55,7 +55,7 @@
                     <li class="active"><a href="#changeinfo" data-toggle="tab">Thong tin</a></li>
                     <li><a href="#changepassword" data-toggle="tab">Change password</a></li>
                 </ul>
-                <div class="tab-content">
+                <div class="tab-content" style="background: #ffffff;">
                     <div id="listcourse" class="tab-pane fade active">
 
                         <div class="content">
@@ -206,10 +206,15 @@
                             <form action="/updateprofile" method="POST" id="changeprofile">
                                 <div data-form="profileUpdate">
                                     <div class="col-md-4">
-                                        <input type="file" name="file" id="file" />
+                                        <label style="padding-top: 50px;">Ảnh đại diện</label>
+
                                     </div>
                                     <br>
-                                    <div class="col-md-8 images-profile">
+                                    <div class="col-md-4" style="padding-top: 20px;">
+                                        <input type="file" name="file" id="file" />
+                                    </div>
+                                    <div class="col-md-4 images-profile" style="padding-bottom: 10px;">
+
                                         <div class="image-profile">
                                             <img src="https://www.sparklabs.com/forum/styles/comboot/theme/images/default_avatar.jpg" width="100px" height="100px">
                                         </div>
@@ -229,14 +234,19 @@
                                     ​
                                     <div class="form-group">
                                         <div class="col-md-4"><label>Email</label></div>
-                                        <div class="col-md-8"><input class="form-control" value="" id="email"></div>
-                                        <br>
+                                        <div class="col-md-8">
+                                            <input class="form-control" value="" id="email">
+                                            <br>
+                                        </div>
+
                                         <span class="alert-danger error-email" ></span>
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-4"><label>Điện thoại</label></div>
-                                        <div class="col-md-8"> <input class="form-control" value="" name="phone_number" id="phone_number"></div>
-                                        <br>
+                                        <div class="col-md-8">
+                                            <input class="form-control" value="" name="phone_number" id="phone_number">
+                                            <br>
+                                        </div>
                                         <span class="alert-danger error-phone_number" ></span>
                                     </div>
                                     <div class="form-group">
@@ -250,27 +260,31 @@
                         </div>
                     </div>
                     <div id="changepassword" class="tab-pane fade active">
-                        <form data-form="passwordUpdate" action="/infoprofile/1" method="GET">
-                            <input type="hidden"  name="user_id"  value =''>
-                            <div class="form-group">
-                                <div class="col-md-4"><label for="email">Email</label></div>
-                                <span class="alert-danger error-name" ></span>
-                            </div>
-                            ​
-                            <div class="form-group">
-                                <div class="col-md-4"><label>Current pass</label></div>
-                                <div class="col-md-8"><input class="form-control" type="text" name="cpass" ></div>
-                                <span class="alert-danger error-description" ></span>
-                            </div>
-                            ​
-                            <div class="form-group">
-                                <div class="col-md-4"><label>New pass</label></div>
-                                <div class="col-md-8"><input class="form-control" type="text" name="npass"></div>
-                                <span class="alert-danger error-email" ></span>
-                            </div>
+                        <div class="col-md-12" style="background: #ffffff;">
+                            <form data-form="passwordUpdate" action="/infoprofile/1" method="GET">
+                                <input type="hidden"  name="user_id"  value =''>
+                                ​
+                                <div class="form-group">
+                                    <div class="col-md-4"><label>Current pass</label></div>
+                                    <div class="col-md-8"><input class="form-control" type="text" name="cpass" ></div>
+                                    <span class="alert-danger error-description" ></span>
+                                </div>
+                                ​
+                                <div class="form-group">
+                                    <div class="col-md-4"><label>New pass</label></div>
+                                    <div class="col-md-8"><input class="form-control" type="text" name="npass"><br></div>
+                                    <span class="alert-danger error-email" ></span>
+                                </div>
 
-                            <input type="submit" class="btn btn-info" value="Change" >
-                        </form>
+                                <div class="form-group">
+                                    <div class="col-md-4"><label>Confirm pass</label></div>
+                                    <div class="col-md-8"><input class="form-control" type="text" name="retype-pass"></div>
+                                    <span class="alert-danger error-email" ></span>
+                                </div>
+
+                                <input type="submit" class="btn btn-info" value="Change" >
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

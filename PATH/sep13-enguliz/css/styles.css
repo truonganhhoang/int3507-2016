@@ -284,16 +284,16 @@ header ul li a:hover{
  * ============================= Page profile ==================================
  */
 
-#filterArticle  .tab-content  #listcourse .content #recommended-item-carousel{
-    border-right: 1px solid #CCCCCC;
-    border-bottom: 1px solid #CCCCCC;
-    border-left: 1px solid #CCCCCC;
+#filterArticle  .tab-content  #listcourse .content {
     background: #ffffff;
-    height: 400px;
+    min-height: 400px;
 }
 
+#changeinfo div {
+    background: #ffffff;
+}
 .userProfileMain h3{
-    padding: 15% 0 0 12%;
+    padding: 20% 0 0 12%;
 }
 
 #recommended-item-carousel .carousel-inner .item{
