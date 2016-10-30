@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="secondary">
   	<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
   	</button>
@@ -16,17 +16,19 @@
 </ion-header>
 
 
-<ion-content padding>
-<!-- 	<button ion-button (click)="list()">GET DRIVE</button>
- -->  
-<!--  <button ion-button (click)="getSpeakingFolder()">GET All file in Speaking</button> -->
-  
+<ion-content padding>  
+<div *ngIf="!isLogin">
+  <ion-item>Please login to upload Google Drive</ion-item>
+</div>
+<div *ngIf="isLogin">
   <input type="file" id="files" name="files[]" multiple />
 	<button ion-button (click)="insertFile()"> 
     <ion-icon ios="ios-cloud-upload" md="md-cloud-upload"></ion-icon> &nbsp;
     Upload File
   </button>
-  <div style="margin-bottom: 10px;"></div>
+</div>
+  
+  <!-- <div style="margin-bottom: 10px;"></div>
   <button ion-button (click)="getListRecord()">
     <ion-icon ios="ios-list-box" md="md-list-box"></ion-icon> &nbsp;
     List Record
@@ -35,10 +37,7 @@
       <ion-item *ngFor = "let item of recordAudio">
         <ion-icon name="play" (click)="playAudio(item.webContentLink)"></ion-icon>
         {{item.originalFilename}}
-      <!-- <audio controls="controls">
-        <source src="{{item.webContentLink}}">
-      </audio> -->
       </ion-item>
-  </ion-list>
+  </ion-list> -->
 </ion-content>
 

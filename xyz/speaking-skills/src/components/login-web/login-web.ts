@@ -1,5 +1,5 @@
 import { Component, NgZone, OnInit, AfterViewChecked } from '@angular/core';
-
+import { AppGlobals } from '../../services/app-globals.service';
 /*
   Generated class for the LoginWeb component.
 
@@ -8,7 +8,7 @@ import { Component, NgZone, OnInit, AfterViewChecked } from '@angular/core';
 */
 @Component({
   selector: 'login-web',
-  templateUrl: 'login-web.html'
+  templateUrl: 'login-web.html',
 })
 export class LoginWeb implements OnInit, AfterViewChecked {
   isLogin: boolean = false;
@@ -16,7 +16,9 @@ export class LoginWeb implements OnInit, AfterViewChecked {
   auth2: any;
   isLogout: boolean = false;
 
-  constructor( private zone: NgZone) {
+  constructor( private zone: NgZone, private appGlobals: AppGlobals) {
+    this.appGlobals.isUserLoggedIn.subscribe(value => console.log(value));
+    this.appGlobals.access_token.subscribe(value => console.log(value));
   }
   
   ngOnInit() {
@@ -34,14 +36,18 @@ export class LoginWeb implements OnInit, AfterViewChecked {
       this.auth2.then(() => {
         var isSignedIn = this.auth2.isSignedIn.get();
         var googleUser = this.auth2.currentUser.get();
+        
           if (isSignedIn) {
             this.isLogin = true;
+            this.appGlobals.setLoginStatus(true);
+
             var res =  googleUser.getBasicProfile();
             this.profile['displayName'] = res.getName();
             this.profile['imageUrl'] = res.getImageUrl();
             // User is signed in.
             // Pass currentUser to onSignIn callback.
           } else {
+            this.appGlobals.setLoginStatus(false);
             console.log('not login');
              // User is not signed in.
             // call auth2.attachClickHandler
@@ -49,15 +55,16 @@ export class LoginWeb implements OnInit, AfterViewChecked {
           }
       });
 
-    });
+     });
   };
 
   attachSignin(element) {
     this.auth2.attachClickHandler(element, {},
       (googleUser) => {
-        console.log(googleUser.getAuthResponse());
+        this.appGlobals.setAccessToken(googleUser.getAuthResponse().access_token);
         
-         this.zone.run(() => {
+        this.zone.run(() => {
+          this.appGlobals.setLoginStatus(true);
           this.isLogin = true;
           this.isLogout = false;
           var res =  googleUser.getBasicProfile();
@@ -79,6 +86,7 @@ export class LoginWeb implements OnInit, AfterViewChecked {
     this.auth2.signOut().then(() => {
       console.log('User signed out.');
       this.zone.run(() => {
+        this.appGlobals.setLoginStatus(false);
         this.isLogin = false;
         this.isLogout = true;
         this.profile = {};

@@ -1,6 +1,6 @@
 page-sing {
 	.singType {
-		width: 50%;
+		width: 33.33%;
 		float: left;
 		padding: 10px;
 	}
@@ -11,4 +11,9 @@ page-sing {
 			border: none !important;
 		}
 	}
+	
+	.input-search {
+		border: 1px solid #e0e0e0;
+	}
+	
 }

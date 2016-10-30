@@ -3,7 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 
 import { Category } from '../pages/category/category';
-import { Youtube } from '../pages/youtube/youtube';
+// import { Youtube } from '../pages/youtube/youtube';
 import { Google } from '../pages/google/google'
 import { Sing } from '../pages/sing/sing';
 import { MySong } from '../pages/my-song/my-song';
@@ -27,11 +27,10 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Category', component: Category },
-      { title: 'Youtube', component: Youtube },
+      // { title: 'Youtube', component: Youtube },
       { title: 'Drive', component: Google },
       { title: 'Sing', component: Sing },
-      { title: 'My Song', component: MySong },
-      { title: 'Test Google Drive', component: Google }
+      { title: 'My Song', component: MySong }
     ];
   }
 

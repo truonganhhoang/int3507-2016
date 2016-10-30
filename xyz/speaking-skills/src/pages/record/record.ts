@@ -5,6 +5,7 @@ import { WordService } from '../../services/word.service'
 import { MediaPlugin } from 'ionic-native';
 import { File } from 'ionic-native';
 import { TextToSpeech } from 'ionic-native';
+import { AppGlobals } from '../../services/app-globals.service';
 
 declare var cordova: any;
 
@@ -31,8 +32,11 @@ export class Record implements OnInit {
 	records: Object[];
   private _fileRecord: MediaPlugin;
   private _pathFile: string;
+  access_token: string;
 
-  constructor(private navCtrl: NavController, private recordService: RecordService, private wordService: WordService, platform: Platform, private navParams: NavParams) {
+  constructor(private navCtrl: NavController, 
+    private recordService: RecordService, private wordService: WordService, private appGlobals: AppGlobals,
+    platform: Platform, private navParams: NavParams) {
     this.platform = platform;
     let categoryId = this.navParams.get('category').id;
     this.categoryName = this.navParams.get('category').name;
@@ -73,6 +77,11 @@ export class Record implements OnInit {
 
 
   ngOnInit() {
+    
+    this.appGlobals.access_token.subscribe(value => {
+      this.access_token = value;
+      //alert(this.access_token);
+    });
       
   }
 
@@ -82,6 +91,7 @@ export class Record implements OnInit {
       .then(() => console.log('Success'))
       .catch((reason: any) => console.log(reason));
   }
+
   //truyền vào từ word đang cần record
   startRecord(word: Object) {
     word['isRecording'] = true;
@@ -90,7 +100,6 @@ export class Record implements OnInit {
     this._pathFile = this.getPathFile(word['content']);
     //khởi tạo đối tượng Media
     this._fileRecord = new MediaPlugin(this._pathFile);
-    // this._fileRecord['status'].subscribe(()=>{});
     //bắt đầu ghi âm
     this._fileRecord.startRecord();
   }
@@ -117,7 +126,7 @@ export class Record implements OnInit {
     // this._fileRecord['status'].subscribe(()=>{});
     this._fileRecord.play();
   }
-// 
+
   private getPathFile(name: String): string {
       let path: string = cordova.file.externalRootDirectory;
       return path + name + '.mp3';
@@ -136,9 +145,9 @@ export class Record implements OnInit {
   }
 
   getDrive() {
-    gapi.client.load('drive', 'v2', function() {
+    gapi.client.load('drive', 'v2', () => {
           var request = gapi.client.request({
-               path : 'https://www.googleapis.com/drive/v2/files',
+               path : 'https://www.googleapis.com/drive/v2/files?access_token=' + this.access_token,
                method : 'GET',
                params : {
                     projection: "FULL",
@@ -152,8 +161,6 @@ export class Record implements OnInit {
 
      });
   }
-
-
 
   uploadDrive() {
     alert('upload');
@@ -193,34 +200,30 @@ export class Record implements OnInit {
 
          alert('bbbb');
 
-        gapi.client.load('drive', 'v2', function() {
+        gapi.client.load('drive', 'v2', () => {
           alert('load done');
           var request = gapi.client.request({
-            'path': '/upload/drive/v2/files',
+            'path': '/upload/drive/v2/files?access_token=' + this.access_token,
             'method': 'POST',
             'params': {'uploadType': 'multipart'},
             'headers': {
               'Content-Type': 'multipart/mixed; boundary="' + boundary + '"'
             },
             'body': multipartRequestBody});
-            alert('aaa');
+            
             if (!callback) {
               callback = function(file) {
-                alert(file)
+                alert(file);
+                alert('upload success');
               };
             }
             request.execute(callback);
 
         });
-          
 
             alert('dataURL' + res);
 
       })
 
-
   }
-
-
-
 }
