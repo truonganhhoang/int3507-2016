@@ -280,3 +280,145 @@ header ul li a:hover{
 .testYourEnglish ul li {
     margin: 10px 0;
 }
+/*
+ * ============================= Page profile ==================================
+ */
+
+#filterArticle  .tab-content  #listcourse .content #recommended-item-carousel{
+    border-right: 1px solid #CCCCCC;
+    border-bottom: 1px solid #CCCCCC;
+    border-left: 1px solid #CCCCCC;
+    background: #ffffff;
+    height: 400px;
+}
+
+.userProfileMain h3{
+    padding: 15% 0 0 12%;
+}
+
+#recommended-item-carousel .carousel-inner .item{
+    padding-top: 20px;
+}
+
+#recommended-item-carousel .carousel-inner .item {
+    padding-left: 0;
+}
+
+#recommended-item-carousel .carousel-inner .item .course {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #CCCCCC;
+}
+.recommended-item-control {
+    position: absolute;
+    top: 41%;
+}
+
+.recommended-item-control i {
+    background: none repeat scroll 0 0 #CCCCCC;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 4px 10px;
+}
+
+.recommended-item-control i:hover {
+    background: #ccccc6;
+}
+
+.recommended_items  h2 {
+}
+
+.our_partners{
+    overflow:hidden;
+}
+
+.our_partners ul {
+    background: #F7F7F0;
+    margin-bottom: 50px;
+}
+
+
+.our_partners ul li a:hover{
+    background:none;
+}
+
+.userBackground{
+    height: 300px;
+}
+.userBackground-mb{
+    background-size: 100% 60% !important;
+    height: 25vh;
+}
+.userBackground-mb .menu-profile{
+
+    font-size: 12px;
+}
+.userBackground-mb .header-menu{
+    border-bottom: none;
+}
+.userBackground-mb .menu-profile .menuYbox{
+    line-height: 30px !important;
+}
+.menuYbox{
+    line-height: 40px !important;
+}
+.userProfileImage{
+    width: 32vh;
+    height: 32vh;
+    outline: 8px solid white;
+    margin-top: 230px;
+}
+.userProfileImage-mb{
+    width: 15vh;
+    height: 15vh;
+    left: 5px;
+    outline: 4px solid white;
+}
+
+.menu-profile{
+    height: auto;
+    right: 0;
+}
+.menu-profile-dt{
+    border: none;
+    margin-bottom: 35px;
+}
+.menu-profile-dt div:nth-child(2){
+    padding-left: 5.33344%;
+    font-size: larger;
+}
+.detail-info-user{
+    word-spacing: 6px;
+}
+.font-icon-contact{
+    font-size: 1.4em !important;
+    margin: 5px;
+}
+.btn-edit{
+    background: #F0AD4E;
+    padding: 6px;
+}
+
+.related-article{margin-top: 10px}
+
+.panel-lock{
+    top: 43px;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+}
+.panel-lock-is-visible{
+    visibility: visible;
+    width: 21%;
+    opacity: 1;
+}
+.panel-home-locked{
+    top: 60px;
+    position: fixed;
+    width: 22%;
+}
+.detail>.menu-list-article{
+    padding-top: 8px;
+    height: 46px;
+    box-shadow: 0 -1px 8px 0 rgba(0, 0, 0, 0.1), 0 0 2px 0 rgba(0, 0, 0, 0.19);
+}
