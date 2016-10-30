@@ -33,32 +33,7 @@ import {User} from "./user/user.model";
                             <li><a [routerLink]="['register']" class="sign-up">SIGN IN</a></li> 
                        </ul>
                     </div>
-                    </header>
-        
-                        <!--<nav>-->
-                            <!--<div class="header-logo">-->
-                                <!--<img src="../../images/logo.jpeg" alt="">-->
-                            <!--</div>-->
-                            <!--<ul class="nav navbar-nav navbar-right" *ngIf="loggedIn === false">-->
-                                <!--<li><a href="">Home</a></li>-->
-                                <!--<li><a href="">Listening</a></li>-->
-                                <!--<li><a href="">Reading</a></li>-->
-                                <!--<li><a href="">Writing</a></li>-->
-                                <!--<li><a [routerLink]="['login']">Login</a></li>-->
-                                <!--<li><a href="#" class="sign-up">Sign up</a></li>-->
-                            <!--</ul>-->
-                            <!--<ul class="nav navbar-nav navbar-right" *ngIf="loggedIn === true">-->
-                                <!--<li><a href="">Home</a></li>-->
-                                <!--<li><a href="">Listening</a></li>-->
-                                <!--<li><a href="">Reading</a></li>-->
-                                <!--<li><a href="">Writing</a></li>-->
-                                <!--<li>-->
-                                    <!--<a href="" class="dropdown-toggle" data-toggle="dropdown"> {{email}}</a>-->
-                                <!--</li>-->
-                                <!--<li><a href="" (click)="logout()">Logout</a></li>-->
-                            <!--</ul>-->
-                        <!--</nav>-->
-               <!--<div class="slider row"></div>-->
+                    </header>     
         <router-outlet></router-outlet>`,
     providers: [UserService]
 })
