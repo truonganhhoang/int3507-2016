@@ -17,5 +17,5 @@ Liên kết đến sản phẩm của các nhóm:
 |---|---|
 | Duo | https://play.google.com/store/apps/details?id=com.saokhuee.sachmem  |
 | FRIES  | http://v2.uetf.me/ |
-| NaVi  | https://www.facebook.com/cwat.seewhat/ |
+| NaVi  | - Link chatbot: https://www.facebook.com/cwat.seewhat/ <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/README.md)|
 | ...  | ... |
