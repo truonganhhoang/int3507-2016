@@ -1,30 +1,40 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-5 col-md-offset-4">
-            <div class="account-wall">
-                <h1 class="text-center login-title">SIGN IN</h1>
-                <form class="form-signin" (submit)="submitRegister(username.value, password1.value, password2.value, phone.value)">
-                    <div class="form-group">
-                        <input type="text" #username class="form-control" placeholder="Email" required autofocus>
+<section id="register">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6 fix">
+                <div class="form-res">
+                    <img src="../../images/imgs/logore.png" alt="">
+                    <hr>
+                    <h3>Đăng ký thành viên mới</h3>
+                    <p>Nhập thông tin của bạn để trở thành thành viên của Viademy</p>
+                    <div class="fix-form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Họ và Tên của bạn">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Email của bạn">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Mật khẩu">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nhập lại mật khẩu">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="password" #password1 class="form-control" placeholder="Enter password" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" #password2 class="form-control" placeholder="Repeat password" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" #phone class="form-control" placeholder="Enter your phone" required>
-                    </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
-                    <div style="color: red; margin-top: 10px;">
-                        <label>{{msg_error}}</label>
-                    </div>
-                    <div style="color: blue; margin-top: 10px;">
-                        <label>{{msg_success}}</label>
-                    </div>
-                </form>
+
+                    <button type="button" class="btn btn-success">Đăng ký là thành viên Viademy</button>
+                    <hr>
+                    <p>Đăng ký ngay bằng tài khoản mạng xã hội</p>
+                    <button type="button" class="btn btn-primary ok">FACEBOOK</button>
+                    <button type="button" class="btn btn-danger ok">GOOGLE</button>
+                </div>
+            </div>
+            <div class="col-md-3">
+
             </div>
         </div>
     </div>
-</div>
+</section>
