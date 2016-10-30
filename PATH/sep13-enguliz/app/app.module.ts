@@ -15,6 +15,7 @@ import {TestComponent} from "./test/test.component";
 import {TestReadCompoent} from "./test/read/test.component";
 import {DetailComponent} from "./detail/detail.component";
 import {RegisterComponent} from "./login/register.component";
+import {ProfileComponent} from "./profile/profile.component";
 
 @NgModule({
     imports: [
@@ -33,7 +34,8 @@ import {RegisterComponent} from "./login/register.component";
         TestComponent,
         TestReadCompoent,
         DetailComponent,
-        RegisterComponent
+        RegisterComponent,
+        ProfileComponent,
     ],
     providers: [
         appRoutingProvider
