@@ -10,7 +10,7 @@ import {User} from "../user/user.model";
 import {Router} from "@angular/router";
 
 @Component({
-    templateUrl: 'app/home/home.component.html',
+    templateUrl: 'app/grammar/grammar.component.html',
     providers: [GrammarService]
 })
 

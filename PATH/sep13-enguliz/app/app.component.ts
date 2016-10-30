@@ -9,31 +9,25 @@ import {User} from "./user/user.model";
     selector: 'my-app',
     template: `
         <header class="row" data-spy="affix" data-offset-top="0">
-                    <div class="left col-sm-7">
-                        <ul>
-                            <li><a href=""><img src="../images/logo.jpeg" width="200px" height="45px" class="logo"></a></li>
-                            <li><a href="">HOME</a></li>
-                            <li><a href="">READING</a></li>
-                            <li><a href="">LISTENING</a></li>
-                            <li><a href="">GRAMMAR</a></li>
+            <div class="container">
+                    <div class="pull-left">
+                        <ul class="navbar-left">
+                            <li class="item"><a href=""><img src="../images/logo.jpeg" width="200px" height="45px" class="logo"></a></li>
+                            <li class="item"><a href="">HOME</a></li>
+                            <li class="item"><a href="">READING</a></li>
+                            <li class="item"><a href="">LISTENING</a></li>
+                            <li class="item"><a [routerLink]="['grammar']">GRAMMAR</a></li>
                         </ul>
                     </div>
                     
-                    <div class="right col-sm-5">
-                       <ul>
-                            <li>
-                                <div class="search">
-                                    <form action="">
-                                        <input type="text" name="search_text" class="search_text" placeholder="Search..." id="search-box">
-                                        <input type="submit" name="search_button" class="btn search_button" role="button">
-                                    </form>
-                                </div>
-                            </li>
-                            <li><a [routerLink]="['login']">LOGIN</a></li>
-                            <li><a [routerLink]="['register']" class="sign-up">SIGN IN</a></li> 
+                    <div class="pull-right">
+                       <ul class="navbar-right">
+                            <li><a [routerLink]="['login']">SIGN IN</a></li>
+                            <li><a [routerLink]="['register']" class="sign-up">SIGN UP</a></li> 
                        </ul>
                     </div>
-                    </header>     
+            </div>
+        </header>     
         <router-outlet></router-outlet>`,
     providers: [UserService]
 })

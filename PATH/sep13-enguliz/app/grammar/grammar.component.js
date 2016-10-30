@@ -45,7 +45,7 @@ var GrammarComponent = (function () {
     };
     GrammarComponent = __decorate([
         core_1.Component({
-            templateUrl: 'app/home/home.component.html',
+            templateUrl: 'app/grammar/grammar.component.html',
             providers: [grammar_service_1.GrammarService]
         }), 
         __metadata('design:paramtypes', [grammar_service_1.GrammarService, router_1.Router])
