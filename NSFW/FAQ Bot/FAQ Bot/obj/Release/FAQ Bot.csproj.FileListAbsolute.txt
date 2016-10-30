@@ -1,0 +1,42 @@
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Bot Application1.dll.config
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Bot Application1.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Bot Application1.pdb
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Autofac.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Chronic.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\EntityFramework.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\EntityFramework.SqlServer.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Microsoft.Bot.Builder.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Microsoft.Bot.Connector.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Microsoft.Rest.ClientRuntime.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Microsoft.WindowsAzure.Configuration.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Newtonsoft.Json.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\System.IdentityModel.Tokens.Jwt.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\System.Net.Http.Formatting.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\System.Web.Http.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\System.Web.Http.WebHost.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Autofac.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\EntityFramework.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\EntityFramework.SqlServer.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Microsoft.Bot.Builder.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Microsoft.Bot.Connector.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Microsoft.WindowsAzure.Configuration.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Newtonsoft.Json.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\System.IdentityModel.Tokens.Jwt.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\System.Net.Http.Formatting.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\System.Web.Http.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\System.Web.Http.WebHost.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\ar\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\cs\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\de-de\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\en\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\es\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\fa\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\fr\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\ja\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\ru\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\zh-hans\Microsoft.Bot.Builder.resources.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\obj\Release\FAQ Bot.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\obj\Release\Bot Application1.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\obj\Release\Bot Application1.pdb

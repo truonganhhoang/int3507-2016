@@ -12,7 +12,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var listen_service_1 = require("../theory/listen.service");
+var home_service_1 = require("./home.service");
 var HomeComponent = (function () {
     function HomeComponent(service) {
         this.service = service;
@@ -20,10 +20,10 @@ var HomeComponent = (function () {
         this.auth_token = '';
         this.loggedIn = !!localStorage.getItem('auth_token');
     }
-    HomeComponent.prototype.loadListens = function () {
+    HomeComponent.prototype.loadHomeDatas = function () {
         var _this = this;
-        this.service.getListens()
-            .subscribe(function (data) { return _this.listens = data; }, function (err) {
+        this.service.getHomeData()
+            .subscribe(function (body) { return _this.categories = body; }, function (err) {
             console.error(err);
         });
     };
@@ -34,14 +34,14 @@ var HomeComponent = (function () {
         if (this.isLoggedIn()) {
             this.auth_token = localStorage.getItem('auth_token');
         }
-        this.loadListens();
+        this.loadHomeDatas();
     };
     HomeComponent = __decorate([
         core_1.Component({
             templateUrl: 'app/home/home.component.html',
-            providers: [listen_service_1.ListenService]
+            providers: [home_service_1.HomeService]
         }), 
-        __metadata('design:paramtypes', [listen_service_1.ListenService])
+        __metadata('design:paramtypes', [home_service_1.HomeService])
     ], HomeComponent);
     return HomeComponent;
 }());

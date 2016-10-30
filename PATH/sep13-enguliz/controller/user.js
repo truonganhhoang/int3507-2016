@@ -6,6 +6,7 @@ var User = require('../models/physical/User');
 var Resp = require('../models/logical/Resp');
 var Collect = require('../utils/collection');
 var TokenInfo = require('../models/physical/TokenInfo');
+var random = require('../utils/random');
 
 router.get('/login', (req, res) => {
 
@@ -18,7 +19,7 @@ router.get('/login', (req, res) => {
 
                 var id = result._id.toString();
 
-                var token = TokenInfo.init(id, generateToken(32), generateToken(64));
+                var token = TokenInfo.init(id, random.generateToken(32), random.generateToken(64));
 
                 db.insert(Collect.token, token);
 
@@ -53,14 +54,3 @@ router.get('/register', (req, res) => {
 });
 
 module.exports = router;
-
-var generateToken = (x) =>
-{
-    var text = "";
-    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-    for( var i=0; i < x; i++)
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-    return text;
-}

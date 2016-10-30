@@ -1,0 +1,30 @@
+<ion-grid class="writing">
+	<ion-row wrap style="min-height: 50px;">
+    <ion-col width-10 *ngFor="let item of answers" style="height:50px">
+      <button ion-button [@answerState]="answerState" class="answer" block style="white-space:initial;height:100%;">
+        {{item}}
+      </button>
+    </ion-col>
+    <ion-col width-10 style="height:50px">
+      <button class="dash" ion-button block style="white-space:initial;height:100%;" [@pending]="pending"
+              *ngIf="!disabled"></button>
+    </ion-col>
+		<!-- <span *ngFor="let item of answers">{{item}}</span> -->
+  </ion-row>
+  <ion-row wrap>
+    <ion-col width-20 *ngFor="let item of options" class="option-answer" style="height:50px">
+      <button ion-button block outline (click)="pick(item)"
+              style="white-space:initial;height:100%">
+        {{item}}
+      </button>
+    </ion-col>
+  </ion-row>
+  <ion-row wrap>
+    <ion-col width-100 style="height:50px;text-align:right">
+      <button ion-button (click)="skip()" style="height:100%">Learn</button>
+      <button ion-button (click)="backspace()" style="height:100%">
+        <i class="material-icons">backspace</i>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-grid>

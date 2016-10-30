@@ -1,0 +1,17 @@
+page-category {
+	.text-center {
+		text-align: center;
+	}
+	img {
+		border-radius: 50%;
+		height: 100px;
+		width: 100px;
+		border: 1px solid rgba(153, 153, 153, 0.77);
+	}
+	.name-category {
+		text-transform: uppercase;
+	}
+	ion-col {
+		margin-bottom: 25px;
+	}
+}
