@@ -16,7 +16,7 @@ let persistentMenuItems = [
     },
     {
         "type":"postback",
-        "title":"Thông báo",
+        "title":"Cài đặt thông báo",
         "payload":"PM_NOTIFICATIONS"
     }
 ];

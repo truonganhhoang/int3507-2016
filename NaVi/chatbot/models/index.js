@@ -17,5 +17,6 @@ module.exports  = {
     NewWord: require('./NewWord'),
     UnlearnedWordUser: require('./UnlearnedWordUser'),
     Audio: require('./Audio'),
-    UserProfile: require('./UserProfile')
+    UserProfile: require('./UserProfile'),
+    UserNotification: require('./UserNotification')
 };

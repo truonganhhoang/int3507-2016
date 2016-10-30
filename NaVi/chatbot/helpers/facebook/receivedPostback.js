@@ -25,7 +25,7 @@ module.exports = function receivedPostback(event) {
                 require('../fnUserSettings/learningProgress')(senderID);
             }
             else if (chosenOption === "NOTIFICATIONS") {
-
+                require('../fnUserSettings/notificationSetting')(senderID);
             }
         }
     }

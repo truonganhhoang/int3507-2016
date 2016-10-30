@@ -42,6 +42,9 @@ module.exports = function receivedMessage(event) {
             else if (action === 'LINEXT') {
                 require('../fnListening/sendListeningChallenge')(senderID);
             }
+            else if (action === 'PM') {
+                require('../fnUserSettings/handleNotificationSettingQuickReplyAction')(senderID, payload);
+            }
         }
     }
 
