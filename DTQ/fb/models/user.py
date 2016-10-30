@@ -1,6 +1,6 @@
 import import_package
 from database import db, User
-
+from helpers.user.profile import get_profile
 class UserRecord:
   
   class UserState:
@@ -19,6 +19,11 @@ class UserRecord:
       return user
     else:
       user = User(user_id, UserRecord.UserState.NONE)
+      profile = get_profile(user_id)
+      name = profile["first_name"] + " " + profile["last_name"]
+      gender = profile["gender"]
+      user.name = name
+      user.gender = gender
       db.session.add(user)
       db.session.commit()
       return user
