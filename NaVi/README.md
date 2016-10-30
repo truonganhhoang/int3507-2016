@@ -1,6 +1,11 @@
-## Cwat version 0.3
+## Cwat vesion 0.4
 
 **Chat với Cwat tại:** `https://www.facebook.com/cwat.seewhat/`
+
+- User can view the profile from menu.
+![profile](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/profile.PNG)
+
+## Cwat version 0.3
 
 **New features**
 
