@@ -15,11 +15,6 @@ def send_persistent_menu():
         "type":"postback",
         "title":"Account",
         "payload":"MENU_ACCOUNT"
-      },
-      {
-        "type":"postback",
-        "title":"Process",
-        "payload":"MENU_PROCESS"
       }
     ]
   })
