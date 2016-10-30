@@ -5,7 +5,7 @@ import json
 import requests
 from flask import Flask, request
 from recieve_message import recieve
-
+from helpers.thread_setting.persistent_menu import send_persistent_menu
 app = Flask(__name__)
 
 
@@ -23,18 +23,15 @@ def verify():
 
 @app.route('/', methods=['POST'])
 def webook():
-
-
-
   # endpoint for processing incoming messaging events
-
   data = request.get_json()
   log(data)  # you may not want to log every incoming message in production, but it's good for testing
   recieve(data)
-  
-
   return "ok", 200
 
+@app.before_first_request
+def send_menu():
+  send_persistent_menu()
 
 def log(message):  # simple wrapper for logging to stdout on heroku
   print str(message)
@@ -43,3 +40,4 @@ def log(message):  # simple wrapper for logging to stdout on heroku
 
 if __name__ == '__main__':
   app.run(debug=True)
+  
