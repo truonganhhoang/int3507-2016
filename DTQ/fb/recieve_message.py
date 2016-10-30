@@ -29,6 +29,11 @@ def recieve(data):
           payload = messaging_event["postback"]["payload"]
           if PostBack.PAY_LOAD_MENU_HELP in payload:
             send_text_message(sender_id, "We have two functions for you: learn new words and do exercises. Please type 'learn word' to learn new words and 'do exercise' to do exercises. Thanks <3")
+          else:
+            if PostBack.PAY_LOAD_MENU_ACCOUNT in payload:
+              str_word = " word"
+              if user.word_learned > 1: str_word = " words"
+              send_text_message(sender_id, "User: " + str(user.name.encode("utf-8")) + "\nGender: " + str(user.gender) + "\nLearnt: " + str(user.word_learned) + str_word)
         else:
           if messaging_event.get("message"):  # someone sent us a message
             recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
