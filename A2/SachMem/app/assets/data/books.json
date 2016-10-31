@@ -1,0 +1,50 @@
+[
+    {
+    "id": "1",
+    "name": "Tiếng Anh 3 Tập 1",
+    "cover": "http://s.sachmem.com/public/bookcovers/TA3T1SHS_head.jpg",
+    "description": "",
+    "created_at": "2016-10-13 07:47:28 UTC",
+    "updated_at": "2016-10-13 07:47:28 UTC"
+    },
+    {
+    "id": "2",
+    "name": "Tiếng Anh 3 Tập 2",
+    "cover": "http://s.sachmem.com/public//bookcovers/TA3T2SHS_head.jpg",
+    "description": "",
+    "created_at": "2016-10-13 07:47:28 UTC",
+    "updated_at": "2016-10-13 07:47:28 UTC"
+    },
+    {
+    "id": "3",
+    "name": "Tiếng Anh 4 Tập 1",
+    "cover": "http://s.sachmem.com/public//bookcovers/TA4T1SHS_head.jpg",
+    "description": "",
+    "created_at": "2016-10-13 07:47:28 UTC",
+    "updated_at": "2016-10-13 07:47:28 UTC"
+    },
+    {
+    "id": "4",
+    "name": "Tiếng Anh 4 Tập 2",
+    "cover": "http://s.sachmem.com/public//bookcovers/TA4T2SHS_head.jpg",
+    "description": "",
+    "created_at": "2016-10-13 07:47:28 UTC",
+    "updated_at": "2016-10-13 07:47:28 UTC"
+    },
+    {
+    "id": "19",
+    "name": "Tiếng Anh 5 Tập 1",
+    "cover": "http://s.sachmem.com/public/bookcovers/TA5T1SHS_head.jpg",
+    "description": "",
+    "created_at": "2016-10-13 07:47:28 UTC",
+    "updated_at": "2016-10-13 07:47:28 UTC"
+    },
+    {
+    "id": "20",
+    "name": "Tiếng Anh 5 Tập 2",
+    "cover": "http://s.sachmem.com/public/bookcovers/TA5T2SHS_head.jpg",
+    "description": "",
+    "created_at": "2016-10-13 07:47:28 UTC",
+    "updated_at": "2016-10-13 07:47:28 UTC"
+    }
+]
