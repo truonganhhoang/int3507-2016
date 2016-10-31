@@ -18,7 +18,7 @@ var Rx_1 = require("rxjs/Rx");
 var GrammarService = (function () {
     function GrammarService(http) {
         this.http = http;
-        this.grammarUrl = appSettings_1.AppSettings.API_ENDPOINT + "/grammar";
+        this.grammarUrl = ("" + appSettings_1.AppSettings.API_ENDPOINT) + "/category/Grammar";
     }
     GrammarService.prototype.getGrammarData = function () {
         return this.http.get(this.grammarUrl)

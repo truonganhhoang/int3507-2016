@@ -20,7 +20,7 @@ router.get('/home', (req, res) => {
         });
         resp.data = respCategories;
 
-        async.each(respCategories, function(category, callback) {
+        async.each(respCategories, function (category, callback) {
             var respUnits = [];
             db.fetchRows(Collection.unit, {"categoryIdRef": category.categoryId}, (units) => {
                 Array.from(units).forEach((unit) => {
@@ -37,6 +37,32 @@ router.get('/home', (req, res) => {
         }, (err) => {
             res.send(resp);
         });
+    });
+});
+
+router.get('/category/:id', (request, response) => {
+    var resp = {};
+
+    var id = request.params.id;
+
+    db.findOne(Collection.category, {"categoryName": id}, (r1) => {
+        if(r1) {
+            resp.error = 0;
+            resp.message = "";
+            resp.data = r1;
+            db.fetchRows(Collection.unit, {"unitType": r1.categoryName}, (r2) => {
+                resp.data.categoryItems = r2;
+                response.send(resp);
+                response.end();
+            });
+        } else {
+            resp.error = 1;
+            resp.message = "Category not found";
+            resp.data = null;
+
+            response.send(resp);
+            response.end();
+        }
     });
 });
 

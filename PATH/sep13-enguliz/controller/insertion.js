@@ -58,9 +58,9 @@ router.get('/unit', (req, res) => {
             } else if (x.categoryName === 'Grammar') {
                 var units = [];
 
-                units.push(Unit.init('Unit 01: Danh từ (Nouns)', 'Danh từ trong tiếng anh', 'https://data.tienganh123.com/images/avatar/unit1.jpg', 'Chọn danh từ trong các đáp án', random.int(1000), x._id, Date(), 600000, 'Grammar'));
-                units.push(Unit.init('Unit 02: Danh từ đếm được và không đếm được', 'Danh từ đếm được và không đếm được', 'https://data.tienganh123.com/images/avatar/lntacb_unit8.jpg', 'Chọn đáp án thích hợp để điền vào chỗ trống.', random.int(1000), x._id, Date(), 600000, 'Grammar'));
-                units.push(Unit.init('Unit 03: Thì hiện tại đơn', 'Trong bài này, chúng ta cùng tìm hiểu về thì hiện tại đơn', 'https://data.tienganh123.com/images/avatar/lntacb_unit10.jpg', 'Chọn đáp án đúng hoàn thành câu', random.int(1000), x._id, Date(), 600000, 'Grammar'));
+                units.push(Unit.init('Unit 01: Danh từ (Nouns)', 'Danh từ trong tiếng anh', 'http://i.huffpost.com/gen/1119986/images/o-HOW-PHOTOGRAPHS-BOOST-HAPPINESS-facebook.jpg', 'Chọn danh từ trong các đáp án', random.int(1000), x._id, Date(), 600000, 'Grammar'));
+                units.push(Unit.init('Unit 02: Danh từ đếm được và không đếm được', 'Danh từ đếm được và không đếm được', 'http://i.huffpost.com/gen/1119986/images/o-HOW-PHOTOGRAPHS-BOOST-HAPPINESS-facebook.jpg', 'Chọn đáp án thích hợp để điền vào chỗ trống.', random.int(1000), x._id, Date(), 600000, 'Grammar'));
+                units.push(Unit.init('Unit 03: Thì hiện tại đơn', 'Trong bài này, chúng ta cùng tìm hiểu về thì hiện tại đơn', 'http://i.huffpost.com/gen/1119986/images/o-HOW-PHOTOGRAPHS-BOOST-HAPPINESS-facebook.jpg', 'Chọn đáp án đúng hoàn thành câu', random.int(1000), x._id, Date(), 600000, 'Grammar'));
                 units.push(Unit.init('Unit 04: Thì quá khứ đơn', 'Trong bài này, chúng ta cùng tìm hiểu về thì quá khứ đơn', 'http://i.huffpost.com/gen/1119986/images/o-HOW-PHOTOGRAPHS-BOOST-HAPPINESS-facebook.jpg', 'Chọn động từ phù hợp điền vào chỗ trống', random.int(1000), x._id, Date(), 600000, 'Grammar'));
 
                 db.insertMany(Collect.unit, units, (results) => {

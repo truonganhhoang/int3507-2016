@@ -1,3 +1,23 @@
+<section id="slide">
+    <div id="carousel-id" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="item active">
+
+                <div id="homepage-img"></div>
+                <div class="carousel-caption">
+                    <div id="viademy-slogan" class="hidden-xs">Empower your career</div>
+                    <p id="viademy-caption" class="hidden-xs">Hơn 1000+ bài thi trắc nghiệm giúp bạn nâng cao kỹ năng Tiếng Anh của mình.</p>
+                    <div style="text-align: center;">
+                        <input type="text" id="homepage-course-search" class="form-control" placeholder="Tìm kiếm...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+        <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
+    </div>
+</section>
+
 <div *ngFor="let category of categories">
 <section class="hidden-xs" id="tab-leasson">
     <div class="tabs_holder tabs_wrapper skin10 top" style="display: block; overflow: hidden; position: relative;">
@@ -39,10 +59,18 @@
             </div>
         </div>
 
-        <div id="btn-more" class="row">
+        <div id="btn-more" class="row" *ngIf="category.categoryName != 'Grammar'">
             <div class="content_holder">
                 <a href="#">
                     <button type="button" class="btn btn-success">XEM THÊM</button>
+                </a>
+            </div>
+        </div>
+
+        <div id="btn-more" class="row" *ngIf="category.categoryName == 'Grammar'">
+            <div class="content_holder">
+                <a href="#">
+                    <button type="button" class="btn btn-success" [routerLink]="['grammar']">XEM THÊM</button>
                 </a>
             </div>
         </div>
@@ -52,53 +80,3 @@
 </section>
 </div>
 
-<section id="regis" class="hidden-xs">
-
-    <div class="row">
-        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-            <h3 class="via">Enguliz</h3>
-            <p>Empower your career</p>
-        </div>
-        <div class="regis-fix col-xs-7 col-sm-7 col-md-7 col-lg-7">
-            <div style="float: left;">
-                <input type="text" id="regis" class="textregis"
-                       placeholder="Nhập email của bạn để nhận các bài viết hữu ích">
-            </div>
-            <div style="float: left;">
-                <button type="button" class="btn btn-warning">ĐĂNG KÝ</button>
-            </div>
-            <div class="fix-social">
-                <div class="social-links">
-                    <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                </div>
-                <div class="social-links-y">
-
-                    <a href="#"><i class="fa fa-youtube fa-lg"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section>
-
-<section id="footer">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <div class="textfoot">
-                <h2>Liên Hệ Với Enguliz</h2>
-                <p>Hãy liên hệ với chúng tôi ngay khi bạn thắc mắc nhé</p>
-                <div>
-                    <img src="../../images/imgs/tele.png" alt="">
-                    <p><span>Hotline miễn phí: <a href="">0123456789</a> </span> <br>
-                        (7h00 đến 22h00 tất cả các ngày trong tuần)</p>
-
-                    <img class="fiximgft" src="../../images/imgs/email.png" alt="">
-                    <p class="fixpft"><span class="ok">Email: support@enguliz.vn</span> <br>
-                        Chúng tôi sẽ phản hồi sớm nhất
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>

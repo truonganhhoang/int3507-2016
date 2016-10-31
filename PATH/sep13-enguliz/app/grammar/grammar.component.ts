@@ -5,9 +5,9 @@
 import {Component, OnInit} from "@angular/core";
 import {GrammarService} from "./grammar.service";
 import {Category} from "./category.model";
-import {UserService} from "../user/user.service";
 import {User} from "../user/user.model";
 import {Router} from "@angular/router";
+import {Unit} from "../detail/unit.model";
 
 @Component({
     templateUrl: 'app/grammar/grammar.component.html',
@@ -20,7 +20,8 @@ export class GrammarComponent implements OnInit {
     user: User;
     email = '';
 
-    categories : Category[];
+    private category: Category;
+    private units: Unit[];
 
     constructor(
         private service: GrammarService,
@@ -31,7 +32,10 @@ export class GrammarComponent implements OnInit {
     loadGrammarDatas() {
         this.service.getGrammarData()
             .subscribe(
-                body => this.categories = body,
+                body => {
+                    this.category = body;
+                    this.units = body.categoryItems;
+                },
                 err => {
                     console.error(err);
                 }

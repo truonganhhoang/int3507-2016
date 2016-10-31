@@ -12,11 +12,11 @@ import {User} from "../user/user.model";
 @Injectable()
 export class GrammarService {
 
-    private grammarUrl = `${AppSettings.API_ENDPOINT}/grammar`;
+    private grammarUrl = `${AppSettings.API_ENDPOINT}` + "/category/Grammar";
 
     constructor(private http: Http) {}
 
-    getGrammarData(): Observable<Category[]> {
+    getGrammarData(): Observable<Category> {
         return this.http.get(this.grammarUrl)
             .map((res:Response) => res.json().data)
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));

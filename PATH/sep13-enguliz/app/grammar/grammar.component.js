@@ -25,7 +25,10 @@ var GrammarComponent = (function () {
     GrammarComponent.prototype.loadGrammarDatas = function () {
         var _this = this;
         this.service.getGrammarData()
-            .subscribe(function (body) { return _this.categories = body; }, function (err) {
+            .subscribe(function (body) {
+            _this.category = body;
+            _this.units = body.categoryItems;
+        }, function (err) {
             console.error(err);
         });
     };
