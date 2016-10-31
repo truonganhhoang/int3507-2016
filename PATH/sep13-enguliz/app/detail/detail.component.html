@@ -2,8 +2,8 @@
     <div class="row">
         <div class="cs_bg">
             <div class="fix-pad">
-                <h2>Phương pháp chụp ảnh selfie đạt hiệu quả cao nhất</h2>
-                <p>Trong khóa này, bạn sẽ học cách sử dụng các kỹ năng và giải quyết vấn đề trong kinh doanh để bán hàng</p>
+                <h2>{{unitTitle}}</h2>
+                <p>{{unitSubTitle}}</p>
                 <div class="pad">
                     <a href="#">
                         <span><i class="fa fa-star" aria-hidden="true"></i></span>
@@ -13,11 +13,11 @@
                         <span><i class="fa fa-star" aria-hidden="true"></i></span>
                     </a>
                     <span class="span">&nbsp;4.9 (321)</span>
-                    <span class="regit">1992 người học đã đăng ký</span>
-                    <span>Giảng viên: <a class="gv" href="">Nguyễn Quang Đức</a></span>
+                    <span class="regit">{{unitViews}} người đã tham gia</span>
+                    <span>Thời gian: {{convertTime(unitTime / 1000)}}</span>
                 </div>
                 <div>
-                    <span>Chuyên mục: <a class="cate_menu" href="">Marketing & sales</a></span>
+                    <span>Chuyên mục: <a class="cate_menu" href="">{{unitType}}</a></span>
                 </div>
             </div>
             <hr>
@@ -27,88 +27,50 @@
                         <img src="../../images/imgs/img-01.png" alt="">
                     </div>
                     <div class="author">
-                        <p>Tiếp tục học bài lần trước</p>
-                        <span>Giám đốc Sales SilkRoad</span>
+                        <p>{{unitThreads}}</p>
                     </div>
                 </div>
             </div>
         </div> <!--and cs_bg-->
     </div>
 
-    <div class="row">
-        <div class="fix-content">
-            <div class="pad col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                <div class="bg-les">
-                    <h4>BÀI SỐ 1</h4>
-                    <p>Kỹ năng sắp xếp và quản lý công việc kinh doanh</p>
-                </div>
-                <hr>
-                <div class="bg-les-bot">
-                    <p>Trong bài này, bạn sẽ học cách sử dụng các kỹ năng ra quyết định...</p>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-primary">HỌC BÀI</button>
-                    </div>
-                </div>
+    <div style="text-align: center;padding-top: 20px;" *ngIf="!isTest && !isNotify">
+        <button class="btn btn-primary" (click)="startTesting()">Bắt đầu làm bài</button>
+    </div>
 
-            </div>
-            <div class="pad col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                <div class="bg-les">
-                    <h4>BÀI SỐ 1</h4>
-                    <p>Kỹ năng sắp xếp và quản lý công việc kinh doanh</p>
-                </div>
-                <hr>
-                <div class="bg-les-bot">
-                    <p>Trong bài này, bạn sẽ học cách sử dụng các kỹ năng ra quyết định...</p>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-primary">HỌC BÀI</button>
-                    </div>
-                </div>
+    <div *ngIf="isTest">
+        <div class="col-md-1 timer">
+            <h5>Time Remain</h5>
+            <h5>{{timeCountdown}}</h5>
+        </div>
 
-            </div>
-            <div class="pad col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                <div class="bg-les">
-                    <h4>BÀI SỐ 1</h4>
-                    <p>Kỹ năng sắp xếp và quản lý công việc kinh doanh</p>
-                </div>
-                <hr>
-                <div class="bg-les-bot">
-                    <p>Trong bài này, bạn sẽ học cách sử dụng các kỹ năng ra quyết định...</p>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-primary">HỌC BÀI</button>
+        <div class="row">
+            <div class="fix-content">
+                <div class="pad col-xs-12 col-sm-6 col-md-6 col-lg-6" *ngFor="let q of questions; let i = index"
+                     [attr.data-index]="i">
+                    <div class="bg-les">
+                        <h4>CÂU SỐ {{i+1}}</h4>
+                        <p>{{q.question}}</p>
                     </div>
-                </div>
-
-            </div>
-            <div class="pad col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                <div class="bg-les">
-                    <h4>BÀI SỐ 1</h4>
-                    <p>Kỹ năng sắp xếp và quản lý công việc kinh doanh</p>
-                </div>
-                <hr>
-                <div class="bg-les-bot">
-                    <p>Trong bài này, bạn sẽ học cách sử dụng các kỹ năng ra quyết định...</p>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-primary">HỌC BÀI</button>
-                    </div>
-                </div>
-
-            </div>
-            <div class="pad col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                <div class="bg-les">
-                    <h4>BÀI SỐ 1</h4>
-                    <p>Kỹ năng sắp xếp và quản lý công việc kinh doanh</p>
-                </div>
-                <hr>
-                <div class="bg-les-bot">
-                    <p>Trong bài này, bạn sẽ học cách sử dụng các kỹ năng ra quyết định...</p>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-primary">HỌC BÀI</button>
+                    <hr>
+                    <div class="bg-les-bot">
+                        <p *ngFor="let ans of q.anwsers"><input type="radio" name="{{q._id}}"
+                                                                (click)="chooseAns(q._id, ans.ansId)">
+                            {{ans.ansId}}. {{ans.ansContent}}<label></label>
+                        </p>
                     </div>
                 </div>
 
             </div>
         </div>
-    </div>
 
+        <div id="btn-more" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="content_holder">
+                <a href="#">
+                    <button type="button" class="btn btn-success">KẾT THÚC BÀI LÀM</button>
+                </a>
+            </div>
+        </div>
+    </div>
 </section>
 <div class="hr"></div>

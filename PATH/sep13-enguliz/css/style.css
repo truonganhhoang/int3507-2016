@@ -283,6 +283,7 @@ input[id="search"]::-webkit-input-placeholder {
 #tab-leasson{
 	padding-top: 38px;
 	text-align: center;
+	text-transform: uppercase;
 }
 #content-leasson{
 	padding-bottom: 20px;
