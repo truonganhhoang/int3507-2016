@@ -6,9 +6,10 @@
                 <div id="homepage-img"></div>
                 <div class="carousel-caption">
                     <div id="viademy-slogan" class="hidden-xs">Empower your career</div>
-                    <p id="viademy-caption" class="hidden-xs">Hơn 100+ khoá học thông qua THỰC HÀNH bởi các chuyên gia hàng đầu - cho sự nghiệp bay cao ^^</p>
+                    <p id="viademy-caption" class="hidden-xs">Hơn 1000+ bài trắc nghiệm thực hành nâng cao kỹ năng Tiếng Anh</p>
                     <div style="text-align: center;">
-                        <input type="text" id="homepage-course-search" class="form-control" placeholder="Tìm kiếm khoá học...">
+                        <input type="text" id="homepage-course-search" class="form-control"
+                               placeholder="Tìm kiếm khoá học...">
                     </div>
                 </div>
             </div>
@@ -18,39 +19,15 @@
     </div>
 </section>
 
-<section id="cate-leasson">
-    <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 fix-left">
-            <a href=""><div class="mg-image"><img src="../../images/imgs/market.jpg"></div></a>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 fix-img">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 fix-bot">
-                <a href=""><div class="mg-image"><img src="../../images/imgs/dev.jpg"></div></a>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 fix-bot">
-                <a href=""><div class="mg-image"><img src="../../images/imgs/job.jpg"></div></a>
 
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 fix-bot">
-                <a href=""><div class="mg-image"><img src="../../images/imgs/shop.jpg"></div></a>
-
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 fix-bot">
-                <a href=""><div class="mg-image"><img src="../../images/imgs/skin.jpg"></div></a>
-            </div>
-        </div>
-    </div>
-
-</section>
+<div *ngFor="let category of categories">
 <section class="hidden-xs" id="tab-leasson">
     <div class="tabs_holder tabs_wrapper skin10 top" style="display: block; overflow: hidden; position: relative;">
         <ul class="tabs_header">
-            <li class="tab_header_item first_tab"><span class="header_item_before"></span><a class="your-tab-id-1-tab_header" href="#your-tab-id-1">KHÓA HỌC NỔI BẬT</a><span class="header_item_after"></span></li>
-            <li class="tab_header_item tab_selected"><span class="header_item_before"></span><a class="your-tab-id-2-tab_header active" href="#your-tab-id-2">KHÓA HỌC MỚI NHẤT</a><span class="header_item_after"></span></li>
-            <li class="tab_header_item last_tab"><span class="header_item_before"></span><a class="your-tab-id-3-tab_header" href="#your-tab-id-3">KHÓA HỌC HAY NHẤT</a><span class="header_item_after"></span></li>
+            {{category.categoryName}}
         </ul>
-
-        <div style="height: 0px; font-size: 1px; line-height: 1px; clear: both;"></div></div>
+        <div style="height: 0px; font-size: 1px; line-height: 1px; clear: both;"></div>
+    </div>
 
 </section>
 <section id="content-leasson">
@@ -58,10 +35,10 @@
         <div class="row">
             <div class="content_holder">
                 <div id="your-tab-id-1">
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="clear-fix"><img src="../../images/imgs/leasson/le.jpg" alt=""></div>
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" *ngFor="let item of category.categoryItems" [routerLink]="['details', item.unitId]">
+                        <div class="clear-fix"><img width="100%" height="100%" src="{{item.unitThumbnail}}" alt=""></div>
                         <div class="bg-element">
-                            <h4>Xây dựng chiến lượng cho doanh nghiệp nhỏ</h4>
+                            <h4>{{item.unitTitle}}</h4>
                             <div class="pad">
                                 <a href="#">
                                     <div class="rating">
@@ -70,311 +47,65 @@
                                 </a>
                                 <span class="span">&nbsp;4.9 (321)</span>
                             </div>
-                            <div class="img">
-                                <img src="../../images/imgs/leasson/le.jpg" alt="">
+                            <span>{{item.unitSubTitle}}</span>
+                            <hr>
+                            <div class="bg-comment-bot">
+                                <p class="user pull-right">Lượt xem: 1.233&nbsp;<i class="fa fa-user" aria-hidden="true"></i></p>
                             </div>
-                            <div class="author">
-                                <p>Nguyễn Quang Đức</p>
-                                <span>Giám đốc Sales SilkRoad</span>
-                            </div>
-
                         </div>
                         <hr>
                     </div>
+
                 </div>
 
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="clear-fix"><img src="../../images/imgs/leasson/le.jpg" alt=""></div>
-                    <div class="bg-element">
-                        <h4>Xây dựng chiến lượng cho doanh nghiệp nhỏ</h4>
-                        <div class="pad">
-                            <a href="#">
-                                <div class="rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>
-                            </a>
-                            <span class="span">&nbsp;4.9 (321)</span>
-                        </div>
-                        <div class="img">
-                            <img src="../../images/imgs/leasson/le.jpg" alt="">
-                        </div>
-                        <div class="author">
-                            <p>Nguyễn Quang Đức</p>
-                            <span>Giám đốc Sales SilkRoad</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="clear-fix"><img src="../../images/imgs/leasson/le.jpg" alt=""></div>
-                    <div class="bg-element">
-                        <h4>Xây dựng chiến lượng cho doanh nghiệp nhỏ</h4>
-                        <div class="pad">
-                            <a href="#">
-                                <div class="rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>
-                            </a>
-                            <span class="span">&nbsp;4.9 (321)</span>
-                        </div>
-                        <div class="img">
-                            <img src="../../images/imgs/leasson/le.jpg" alt="">
-                        </div>
-                        <div class="author">
-                            <p>Nguyễn Quang Đức</p>
-                            <span>Giám đốc Sales SilkRoad</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="clear-fix"><img src="../../images/imgs/leasson/le.jpg" alt=""></div>
-                    <div class="bg-element">
-                        <h4>Xây dựng chiến lượng cho doanh nghiệp nhỏ</h4>
-                        <div class="pad">
-                            <a href="#">
-                                <div class="rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>
-                            </a>
-                            <span class="span">&nbsp;4.9 (321)</span>
-                        </div>
-                        <div class="img">
-                            <img src="../../images/imgs/leasson/le.jpg" alt="">
-                        </div>
-                        <div class="author">
-                            <p>Nguyễn Quang Đức</p>
-                            <span>Giám đốc Sales SilkRoad</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="clear-fix"><img src="../../images/imgs/leasson/le.jpg" alt=""></div>
-                    <div class="bg-element">
-                        <h4>Xây dựng chiến lượng cho doanh nghiệp nhỏ</h4>
-                        <div class="pad">
-                            <a href="#">
-                                <div class="rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>
-                            </a>
-                            <span class="span">&nbsp;4.9 (321)</span>
-                        </div>
-                        <div class="img">
-                            <img src="../../images/imgs/leasson/le.jpg" alt="">
-                        </div>
-                        <div class="author">
-                            <p>Nguyễn Quang Đức</p>
-                            <span>Giám đốc Sales SilkRoad</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="your-tab-id-2">
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="clear-fix"><img src="../../images/imgs/leasson/tt.jpg" alt=""></div>
-                    <div class="bg-element">
-                        <h4>Phương pháp đánh giá và ước lượng dòng tiền</h4>
-                        <div class="pad">
-                            <a href="#">
-                                <div class="rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>
-                            </a>
-                            <span class="span">&nbsp;4.9 (321)</span>
-                        </div>
-                        <div class="img">
-                            <img src="../../images/imgs/leasson/le.jpg" alt="">
-                        </div>
-                        <div class="author">
-                            <p>Nguyễn Quang Đức</p>
-                            <span>Giám đốc Sales SilkRoad</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="clear-fix"><img src="../../images/imgs/leasson/tt.jpg" alt=""></div>
-                    <div class="bg-element">
-                        <h4>Phương pháp đánh giá và ước lượng dòng tiền</h4>
-                        <div class="pad">
-                            <a href="#">
-                                <div class="rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>
-                            </a>
-                            <span class="span">&nbsp;4.9 (321)</span>
-                        </div>
-                        <div class="img">
-                            <img src="../../images/imgs/leasson/le.jpg" alt="">
-                        </div>
-                        <div class="author">
-                            <p>Nguyễn Quang Đức</p>
-                            <span>Giám đốc Sales SilkRoad</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="clear-fix"><img src="../../images/imgs/leasson/tt.jpg" alt=""></div>
-                    <div class="bg-element">
-                        <h4>Phương pháp đánh giá và ước lượng dòng tiền</h4>
-                        <div class="pad">
-                            <a href="#">
-                                <div class="rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>
-                            </a>
-                            <span class="span">&nbsp;4.9 (321)</span>
-                        </div>
-                        <div class="img">
-                            <img src="../../images/imgs/leasson/le.jpg" alt="">
-                        </div>
-                        <div class="author">
-                            <p>Nguyễn Quang Đức</p>
-                            <span>Giám đốc Sales SilkRoad</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="clear-fix"><img src="../../images/imgs/leasson/tt.jpg" alt=""></div>
-                    <div class="bg-element">
-                        <h4>Phương pháp đánh giá và ước lượng dòng tiền</h4>
-                        <div class="pad">
-                            <a href="#">
-                                <div class="rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>
-                            </a>
-                            <span class="span">&nbsp;4.9 (321)</span>
-                        </div>
-                        <div class="img">
-                            <img src="../../images/imgs/leasson/le.jpg" alt="">
-                        </div>
-                        <div class="author">
-                            <p>Nguyễn Quang Đức</p>
-                            <span>Giám đốc Sales SilkRoad</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="your-tab-id-3">
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="clear-fix"><img src="../../images/imgs/leasson/pp.jpg" alt=""></div>
-                    <div class="bg-element">
-                        <h4>Xây dựng chiến lượng cho doanh nghiệp nhỏ</h4>
-                        <div class="pad">
-                            <a href="#">
-                                <div class="rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>
-                            </a>
-                            <span class="span">&nbsp;4.9 (321)</span>
-                        </div>
-                        <div class="img">
-                            <img src="../../images/imgs/leasson/le.jpg" alt="">
-                        </div>
-                        <div class="author">
-                            <p>Nguyễn Quang Đức</p>
-                            <span>Giám đốc Sales SilkRoad</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="clear-fix"><img src="../../images/imgs/leasson/pp.jpg" alt=""></div>
-                    <div class="bg-element">
-                        <h4>Xây dựng chiến lượng cho doanh nghiệp nhỏ</h4>
-                        <div class="pad">
-                            <a href="#">
-                                <div class="rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>
-                            </a>
-                            <span class="span">&nbsp;4.9 (321)</span>
-                        </div>
-                        <div class="img">
-                            <img src="../../images/imgs/leasson/le.jpg" alt="">
-                        </div>
-                        <div class="author">
-                            <p>Nguyễn Quang Đức</p>
-                            <span>Giám đốc Sales SilkRoad</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="clear-fix"><img src="../../images/imgs/leasson/pp.jpg" alt=""></div>
-                    <div class="bg-element">
-                        <h4>Xây dựng chiến lượng cho doanh nghiệp nhỏ</h4>
-                        <div class="pad">
-                            <a href="#">
-                                <div class="rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>
-                            </a>
-                            <span class="span">&nbsp;4.9 (321)</span>
-                        </div>
-                        <div class="img">
-                            <img src="../../images/imgs/leasson/le.jpg" alt="">
-                        </div>
-                        <div class="author">
-                            <p>Nguyễn Quang Đức</p>
-                            <span>Giám đốc Sales SilkRoad</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                    <div class="clear-fix"><img src="../../images/imgs/leasson/pp.jpg" alt=""></div>
-                    <div class="bg-element">
-                        <h4>Xây dựng chiến lượng cho doanh nghiệp nhỏ</h4>
-                        <div class="pad">
-                            <a href="#">
-                                <div class="rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>
-                            </a>
-                            <span class="span">&nbsp;4.9 (321)</span>
-                        </div>
-                        <div class="img">
-                            <img src="../../images/imgs/leasson/le.jpg" alt="">
-                        </div>
-                        <div class="author">
-                            <p>Nguyễn Quang Đức</p>
-                            <span>Giám đốc Sales SilkRoad</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
+
+        <div id="btn-more" class="row">
+            <div class="content_holder">
+                <a href="#">
+                    <button type="button" class="btn btn-success">XEM THÊM</button>
+                </a>
+            </div>
+        </div>
+
     </div><!--/.row-->
-    <div id="btn-more" class="row">
-        <div class="content_holder">
-            <a href="#"><button type="button" class="btn btn-success">XEM THÊM CÁC KHÓA HỌC</button></a>
-        </div>
 
-    </div>
-    <div class="text-center">
-        <h1 class="head-highlight">Những điểm nổi bật của Viademy</h1>
-    </div>
 </section>
+</div>
+
+
 <section id="content-highlight">
-    <div><hr></div>
+    <div>
+        <hr>
+    </div>
     <div class="row">
         <div class="content-highlight">
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
                 <div class="bg-highlight">
                     <div class="clear-fix child"><img src="../../images/imgs/1.png"/></div>
                     <h4>Học tập thông qua thực hành</h4>
-                    <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur</p>
+                    <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from
+                        45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+                        College in Virginia, looked up one of the more obscure Latin words, consectetur</p>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
                 <div class="bg-highlight">
                     <div class="clear-fix child"><img src="../../images/imgs/2.png"/></div>
                     <h4>Học tập thông qua thực hành</h4>
-                    <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur</p>
+                    <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from
+                        45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+                        College in Virginia, looked up one of the more obscure Latin words, consectetur</p>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
                 <div class="bg-highlight">
                     <div class="clear-fix child"><img src="../../images/imgs/3.png"/></div>
                     <h4>Học tập thông qua thực hành</h4>
-                    <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur</p>
+                    <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from
+                        45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+                        College in Virginia, looked up one of the more obscure Latin words, consectetur</p>
                 </div>
             </div>
         </div>
@@ -382,152 +113,125 @@
 </section>
 <section id="comment">
     <div class="text-center">
-        <h1 class="head-highlight">Ý kiến học viên về Viademy</h1>
+        <h1 class="head-highlight">Ý kiến học viên về Enguliz</h1>
     </div>
-    <div><hr></div>
+    <div>
+        <hr>
+    </div>
 </section>
-    <section id="content-comment">
-        <div><hr></div>
-        <div class="row">
-            <div class="content-comment">
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
-                    <div class="bg-comment">
-                        <div style="float: left;" class="img">
-                            <img src="../../images/imgs/leasson/le.jpg" alt="">
-                        </div>
-                        <div class="author">
-                            <h4>Nguyễn Quang Đức</h4>
-                            <p>Sinh viên, Hà Nội</p>
-                        </div>
+<section id="content-comment">
+    <div>
+        <hr>
+    </div>
+    <div class="row">
+        <div class="content-comment">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+                <div class="bg-comment">
+                    <div style="float: left;" class="img">
+                        <img src="../../images/imgs/leasson/le.jpg" alt="">
                     </div>
-                    <hr>
-                    <div class="bg-comment-bot">
-                        <div>
-                            <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more <a href="#">Chi tiết</a></p>
-                        </div>
+                    <div class="author">
+                        <h4>Nguyễn Quang Đức</h4>
+                        <p>Sinh viên, Hà Nội</p>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
-                    <div class="bg-comment">
-                        <div style="float: left;" class="img">
-                            <img src="../../images/imgs/leasson/le.jpg" alt="">
-                        </div>
-                        <div class="author">
-                            <h4>Đi Chợ Mua Mì</h4>
-                            <p>Sinh viên, Hà Nội</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="bg-comment-bot">
-                        <div>
-                            <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more <a href="#">Chi tiết</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
-                    <div class="bg-comment">
-                        <div style="float: left;" class="img">
-                            <img src="../../images/imgs/leasson/le.jpg" alt="">
-                        </div>
-                        <div class="author">
-                            <h4>Trần Trúc Quỳnh</h4>
-                            <p>Sinh viên, Hà Nội</p>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="bg-comment-bot">
-                        <div>
-                            <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more <a href="#">Chi tiết</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="regis" class="hidden-xs">
-
-        <div class="row">
-            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                <h3 class="via">Viademy</h3>
-                <p>Empower your career</p>
-            </div>
-            <div class="regis-fix col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                <div style="float: left;">
-                    <input type="text" id="regis" class="textregis" placeholder="Nhập email của bạn để nhận các bài viết hữu ích">
-                </div>
-                <div style="float: left;"><button type="button" class="btn btn-warning">ĐĂNG KÝ</button></div>
-                <div class="fix-social">
-                    <div class="social-links">
-                        <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
-                    </div>
-                    <div class="social-links-y">
-
-                        <a href="#"><i class="fa fa-youtube fa-lg"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-    <section id="footer">
-        <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 hidden-xs">
-                <h2>Hỗ trợ học viên</h2>
-                <p>Câu hỏi thường gặp</p>
-                <p>Hướng dẫn thanh toán học phí</p>
-                <p>Chính sách hoàn học phí</p>
-
-                <h2>Hỗ trợ giáo viên</h2>
-                <p>Câu hỏi thường gặp</p>
-                <p>Hướng dẫn đăng ký giảng dạy</p>
-                <p>Cơ chế hợp tác & phân chia lợi nhuận</p>
-                <p>Quy trình xét duyệt bài giảng</p>
-            </div>
-
-            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 fix hidden-xs">
-                <h2>Về Viademy</h2>
-                <p>Giới thiệu</p>
-                <p>Câu hỏi thường gặp</p>
-                <p>Điều khoản sử dụng</p>
-                <p>Quy chế hoạt động</p>
-                <p>Chính sách bảo mật</p>
-                <p>Cơ chế giải quyết tranh chấp</p>
-                <p>Chính sách hoàn học phí</p>
-                <p>Học tập tại Viademy</p>
-                <p>Giảng dạy tại Viademy</p>
-                <p>Hợp tác cùng Viademy</p>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                <div class="textfoot">
-                    <h2>Liên Hệ Với Viademy</h2>
-                    <p>Hãy liên hệ với chúng tôi ngay khi bạn thắc mắc nhé</p>
+                <hr>
+                <div class="bg-comment-bot">
                     <div>
-                        <img src="../../images/imgs/tele.png" alt="">
-                        <p><span>Hotline miễn phí</span> <br>
-                            (7h00 đến 22h00 tất cả các ngày trong tuần)</p>
-
-                        <img class="fiximgft" src="../../images/imgs/email.png" alt="">
-                        <p class="fixpft"><span class="ok">Email: support@viademy.vn</span> <br>
-                            Chúng tôi sẽ phản hồi sớm nhất
-                        </p>
+                        <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+                            from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                            Hampden-Sydney College in Virginia, looked up one of the more <a href="#">Chi tiết</a></p>
                     </div>
                 </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+                <div class="bg-comment">
+                    <div style="float: left;" class="img">
+                        <img src="../../images/imgs/leasson/le.jpg" alt="">
+                    </div>
+                    <div class="author">
+                        <h4>Đi Chợ Mua Mì</h4>
+                        <p>Sinh viên, Hà Nội</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="bg-comment-bot">
+                    <div>
+                        <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+                            from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                            Hampden-Sydney College in Virginia, looked up one of the more <a href="#">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 text-center">
+                <div class="bg-comment">
+                    <div style="float: left;" class="img">
+                        <img src="../../images/imgs/leasson/le.jpg" alt="">
+                    </div>
+                    <div class="author">
+                        <h4>Trần Trúc Quỳnh</h4>
+                        <p>Sinh viên, Hà Nội</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="bg-comment-bot">
+                    <div>
+                        <p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+                            from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at
+                            Hampden-Sydney College in Virginia, looked up one of the more <a href="#">Chi tiết</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="regis" class="hidden-xs">
 
+    <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+            <h3 class="via">Enguliz</h3>
+            <p>Empower your career</p>
+        </div>
+        <div class="regis-fix col-xs-7 col-sm-7 col-md-7 col-lg-7">
+            <div style="float: left;">
+                <input type="text" id="regis" class="textregis"
+                       placeholder="Nhập email của bạn để nhận các bài viết hữu ích">
+            </div>
+            <div style="float: left;">
+                <button type="button" class="btn btn-warning">ĐĂNG KÝ</button>
+            </div>
+            <div class="fix-social">
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                </div>
+                <div class="social-links-y">
+
+                    <a href="#"><i class="fa fa-youtube fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section id="footer">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="textfoot">
+                <h2>Liên Hệ Với Enguliz</h2>
+                <p>Hãy liên hệ với chúng tôi ngay khi bạn thắc mắc nhé</p>
+                <div>
+                    <img src="../../images/imgs/tele.png" alt="">
+                    <p><span>Hotline miễn phí: <a href="">0123456789</a> </span> <br>
+                        (7h00 đến 22h00 tất cả các ngày trong tuần)</p>
+
+                    <img class="fiximgft" src="../../images/imgs/email.png" alt="">
+                    <p class="fixpft"><span class="ok">Email: support@enguliz.vn</span> <br>
+                        Chúng tôi sẽ phản hồi sớm nhất
+                    </p>
+                </div>
             </div>
         </div>
 
-    </section>
-    <section id="end">
-        <div class="row">
-            <div style="padding-left: 3%;" class="col-md-7">
-                <h3>Viademy - học viện đào tạo trực tuyến</h3>
-                <p>MST:000987222 do Sở Kế Hoạch Và Đầu Tư TP.Hà Nội cấp ngày 27 tháng 08 năm 2016</p>
-                <p>   Đại diện ông bà : Nguyễn Quang Tèo</p>
-                <p>   Trụ sở chính: số 08 Huỳnh Thúc Kháng</p>
-                <p>   @2016 Viademy.All rights reserved</p>
-            </div>
-            <div class="col-md-5">
-                <img src="../../images/imgs/end.png" alt="">
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
