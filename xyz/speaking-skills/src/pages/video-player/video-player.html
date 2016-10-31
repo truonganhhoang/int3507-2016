@@ -29,11 +29,11 @@
       <ion-col *ngIf="!isRecord"  width-33>
         <button ion-button (click)="startRecord()"> Start Record </button>
       </ion-col>
-       <ion-col *ngIf="isRecord"  width-33>
+       <ion-col *ngIf="isRecord&&!isEnd"  width-33>
         <button ion-button (click)="stopRecord()"> Stop Recording </button>
       </ion-col>
       <ion-col *ngIf="isEnd" width-33>
-        <button ion-button outline (click)="playRecord()"> Play </button>
+        <button ion-button (click)="playRecord()"> Play </button>
       </ion-col>
     </ion-row>
 
@@ -42,7 +42,9 @@
       &nbsp;Upload Drive
     </button> -->
     <button ion-button  *ngIf="isEnd" (click)="saveSong()">  
+      <!--
       <ion-icon name="checkmark"></ion-icon>
+      -->
       &nbsp;Save
     </button>
 
