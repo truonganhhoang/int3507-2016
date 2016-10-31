@@ -84,7 +84,55 @@ import {User} from "./user/user.model";
         </div><!-- /.container-fluid -->
         </nav>
 	</section>      
-    <router-outlet></router-outlet>`,
+    <router-outlet></router-outlet>
+    <section id="regis" class="hidden-xs">
+        <div class="row">
+            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+                <h3 class="via">Enguliz</h3>
+                <p>Empower your career</p>
+            </div>
+            <div class="regis-fix col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <div style="float: left;">
+                    <input type="text" id="regis" class="textregis"
+                           placeholder="Nhập email của bạn để nhận các bài viết hữu ích">
+                </div>
+                <div style="float: left;">
+                    <button type="button" class="btn btn-warning">ĐĂNG KÝ</button>
+                </div>
+                <div class="fix-social">
+                    <div class="social-links">
+                        <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                    </div>
+                    <div class="social-links-y">
+    
+                        <a href="#"><i class="fa fa-youtube fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="textfoot">
+                <h2>Liên Hệ Với Enguliz</h2>
+                <p>Hãy liên hệ với chúng tôi ngay khi bạn thắc mắc nhé</p>
+                <div>
+                    <img src="../../images/imgs/tele.png" alt="">
+                    <p><span>Hotline miễn phí: <a href="">0123456789</a> </span> <br>
+                        (7h00 đến 22h00 tất cả các ngày trong tuần)</p>
+
+                    <img class="fiximgft" src="../../images/imgs/email.png" alt="">
+                    <p class="fixpft"><span class="ok">Email: support@enguliz.vn</span> <br>
+                        Chúng tôi sẽ phản hồi sớm nhất
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </section>`,
     providers: [UserService]
 })
 
