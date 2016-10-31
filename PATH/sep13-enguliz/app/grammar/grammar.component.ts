@@ -13,15 +13,14 @@ import {Unit} from "../detail/unit.model";
     templateUrl: 'app/grammar/grammar.component.html',
     providers: [GrammarService]
 })
-
 export class GrammarComponent implements OnInit {
     private loggedIn = false;
 
     user: User;
     email = '';
 
-    private category: Category;
-    private units: Unit[];
+    public category: Category;
+    public units: Unit[];
 
     constructor(
         private service: GrammarService,
@@ -34,7 +33,6 @@ export class GrammarComponent implements OnInit {
             .subscribe(
                 body => {
                     this.category = body;
-                    this.units = body.categoryItems;
                 },
                 err => {
                     console.error(err);

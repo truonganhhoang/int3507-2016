@@ -86,8 +86,8 @@
 	.content.black p a {
 		color: #08c;
 	}
-	
-	
+
+
 	.dropdown-menu {
 		min-width: 200px;
 	}
@@ -125,13 +125,13 @@
 	.navbar {
 	    border-radius: 0px;
 	}
-	
+
 .navbar-default .navbar-nav>li>a {
     color: #FFF;
 }
 
-.navbar-default .navbar-nav>li>a {  
-    padding-left: 27px;  
+.navbar-default .navbar-nav>li>a {
+    padding-left: 27px;
     padding-top: 24px;
 }
 
@@ -176,7 +176,7 @@ input[id="search"]::-webkit-input-placeholder {
 	color: #FFF;
 }
 .carousel-caption p{
-	
+
 	color: #FFF;
 }
 .carousel-caption .search .form-control {
@@ -192,21 +192,21 @@ input[id="search"]::-webkit-input-placeholder {
     padding: 11px 9px;
     background-color: #3b97d3;
     color: #fff;
-    border: 1px solid #3b97d3;    
+    border: 1px solid #3b97d3;
     border-radius: 0px;
     border-top-right-radius: 4px !important;
-    border-bottom-right-radius: 4px;    
+    border-bottom-right-radius: 4px;
 }
 .carousel-caption .form-control {
 	border-radius: 5px;
 	height: 40px;
 }
-#cate-leasson{	
+#cate-leasson{
 	padding: 24px 15px 0px 24px;
 	background-color: #000;
 }
 #cate-leasson .fix-bot{
-	padding-bottom: 25px;    
+	padding-bottom: 25px;
     padding-left: 10px;
 }
 #cate-leasson .fix-img {
@@ -243,23 +243,23 @@ input[id="search"]::-webkit-input-placeholder {
 
 .skin10.top.tabs_wrapper {
 	padding-top: 15px;
-	
+
 }
 
  .skin10.top .tab_header_item.tab_selected {
 	border-bottom: 6px solid #fc4e41;
-} 
+}
  .skin10.top .tab_header_item.first_tab {
 }
  .skin10.top .tab_header_item a {
 	display: block;
 	height: 27px;
-	padding: 0px 40px;	
+	padding: 0px 40px;
 	color: #999;
 	text-decoration: none;
 	outline: 0;
 }
- .skin10.top .content_holder {	
+ .skin10.top .content_holder {
 	color: #777;
 	padding: 5px 30px;
 	border-top: 1px solid #ddd;
@@ -289,12 +289,12 @@ input[id="search"]::-webkit-input-placeholder {
 	padding-bottom: 20px;
 	background-color: #000;
 }
-.head-highlight{	
+.head-highlight{
 	padding-top: 30px;
 	color: #4a4a4a;
 	margin-bottom: 0px;
 }
-#comment h1{	
+#comment h1{
 	padding-top: 50px;
 	padding-bottom: 15px;
 	color: #4a4a4a;
@@ -384,11 +384,11 @@ margin-left: 20px;
 }
 .content-highlight .clear-fix{
 	padding-top: 17px;
-	
+
 }
 /*img center div*/
 .parent {
-    display: flex;    
+    display: flex;
 }
 
 .child {
@@ -413,7 +413,7 @@ margin-left: 20px;
     padding-top: 10px;
     line-height: 23px;
 }
-#comment{	
+#comment{
 	background-color: #000;
 }
 #comment hr{
@@ -439,7 +439,7 @@ margin-left: 20px;
     background-color: #ffffff;
     border-radius: 0px;
     border-top-right-radius: 8px;
-    border-top-left-radius: 8px;    
+    border-top-left-radius: 8px;
 }
 #content-comment .bg-comment-bot {
 	    margin-bottom: 35px;
@@ -450,11 +450,11 @@ margin-left: 20px;
     background-color: #ffffff;
     border-radius: 0px;
     border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;    
+    border-bottom-left-radius: 8px;
 }
 .content-comment .clear-fix{
 	padding-top: 17px;
-	
+
 }
 /*img center div*/
 .child {
@@ -491,7 +491,7 @@ margin-left: 20px;
 	margin-left: 90px;
 	margin-top: 15px;
 }
-#content-comment hr {    
+#content-comment hr {
     border: 0;
     border-top: 2px solid #eee;
 }
@@ -515,8 +515,8 @@ margin-left: 20px;
     font-size: 32px !important;
     margin-top: 10px;
 }
-#regis .textregis {    	
-    height: 38px;    
+#regis .textregis {
+    height: 38px;
     border: 2px solid #FFFFFF;
     padding-left: 10px;
     -webkit-border-radius: 50px;
@@ -548,7 +548,7 @@ margin-left: 20px;
 #regis i{
   display: inline-block;
   border-radius: 60px;
-  
+
 }
 .social-links a{
   text-align:center;
@@ -683,7 +683,7 @@ margin-left: 20px;
 	padding: 0% 0% 3% 3%;
 	font-size: 16px;
 }
-#notification .textoop button{	
+#notification .textoop button{
 	margin-left: 3%;
 	padding: 1% 4% 1% 4%;
 	font-size: 18px;
@@ -697,11 +697,11 @@ margin-left: 20px;
 }
 #footer h2{
 	color: #4c4c4c;
-	padding: 5% 0% 5% 5%;	
+	padding: 5% 0% 5% 5%;
 	margin-bottom: 0px;
-	font-size: 24px;	
+	font-size: 24px;
 	font-family: "r0c0i Linotte";
-    
+
     font-weight: 600;
 }
 #footer p{
@@ -710,7 +710,7 @@ margin-left: 20px;
 	font-size: 16px;
 	margin: 0px;
 	font-family: "r0c0i Linotte";
-	font-weight: normal;	
+	font-weight: normal;
 
 }
 #footer .fix{
@@ -749,13 +749,13 @@ margin-left: 20px;
 #end h3{
 	color: #4c4c4c;
 	padding-top: 3%;
-	font-size: 24px;	
+	font-size: 24px;
 	font-family: "r0c0i Linotte";
-    
+
     font-weight: 600;
 }
 #end p{
-	font-size: 14px;	
+	font-size: 14px;
 	color: #a9a9a9;
 	margin: 0px;
 }
@@ -795,7 +795,7 @@ margin-left: 20px;
 	border-radius: 10px;
 	width: 200px;
 	padding-left: 3%;
-	
+
 }
 #register .btn-primary{
 	margin-left: 12%;
@@ -839,19 +839,19 @@ input[type="text"]:focus {
 }
 #register h3{
 	color: #4a4a4a;
-	text-align: center;	
+	text-align: center;
 }
-#register p{	
+#register p{
 	text-align: center;
 	color: #a9a9a9;
 }
-#register .form-control {    
+#register .form-control {
     width: 85%;
     height: 44px;
 	color: black;
 }
-#register .fix-form {  
-	padding-left: 65px;  
+#register .fix-form {
+	padding-left: 65px;
     text-align: center;
 }
 
@@ -868,7 +868,7 @@ input[type="text"]:focus {
     margin-bottom: 0;
     border-bottom-right-radius: 4px;
     border-bottom-left-radius: 4px;
-    border-bottom: 0px;    
+    border-bottom: 0px;
 }
 
 #categories ul a {
@@ -956,7 +956,7 @@ input[type="text"]:focus {
 	color: #4c4c4c;
 	float: left;
 	margin-top: 7%;
-	
+
 	padding-bottom: 12px;
 }
 #contentD .fixhr hr{
@@ -964,7 +964,7 @@ input[type="text"]:focus {
 	width: 100%;
 	color: #ffce4a;
 	background-color: #ffce4a;
-	
+
 }
 #contentD .img img {
 	width: 50px;
@@ -994,7 +994,7 @@ margin-left: 20px;
     background-color: #ffffff;
     border-radius: 0px;
     border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;    
+    border-bottom-left-radius: 8px;
 }
 #contentD .bg-comment-bot .price{
 	color: #fc4e41;
@@ -1120,7 +1120,7 @@ margin-left: 20px;
 	color: #ffce4a;
 }
 }
-.bg-element .span{	
+.bg-element .span{
 	padding-left: 10px;
 }
 .bg-element .pad{
@@ -1145,7 +1145,7 @@ margin-left: 20px;
     background-color: #ffffff;
     border-radius: 0px;
     border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;    
+    border-bottom-left-radius: 8px;
 }
 #bg-leasson .bg-comment-bot .price{
 	color: #fc4e41;
@@ -1207,8 +1207,8 @@ margin-left: 20px;
     border-radius: 0px;
 }
 #tag h3{
-	color: #4c4c4c;	
-	margin-top: 5%;	
+	color: #4c4c4c;
+	margin-top: 5%;
 	padding-bottom: 12px;
 }
 #tag .fixhr hr{
@@ -1216,7 +1216,7 @@ margin-left: 20px;
 	width: 100%;
 	color: #ffce4a;
 	background-color: #ffce4a;
-	
+
 }
 #tag .img img {
 	width: 50px;
@@ -1246,7 +1246,7 @@ margin-left: 20px;
     background-color: #ffffff;
     border-radius: 0px;
     border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;    
+    border-bottom-left-radius: 8px;
 }
 #tag .bg-comment-bot .price{
 	color: #fc4e41;
@@ -1384,7 +1384,7 @@ margin-left: 20px;
 }
 #homepage-img {
 	width: 100%;
-    height: 563px;    
+    height: 563px;
     background:url(../images/imgs/banner.jpg) center no-repeat;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1481,7 +1481,7 @@ margin-left: 20px;
     font-size: 14px;
 }
 #head .textimg{
-	float: left;	
+	float: left;
 	margin: -21% 0% 1% 30%;
 	font-size: 15px;
 	color: white;
@@ -1584,10 +1584,10 @@ a.socialIcon:hover, .socialHoverClass {
 }
 #courselesson .cs_bg h2 {
     color: #4c4c4c;
-    font-size: 24px;    
+    font-size: 24px;
 }
 #courselesson .cs_bg p {
-    color: #4c4c4c;      
+    color: #4c4c4c;
 }
 #courselesson .pad a {
     color: #ffce4a;
@@ -1628,13 +1628,13 @@ a.socialIcon:hover, .socialHoverClass {
 	padding: 20px 10px 20px 20px;
 	background-color: #fff9ea;
 	border: 2px solid #ffce4a;
-} 
+}
 #courselesson .img img {
     width: 70px;
     height: 70px;
     margin-top: 5px;
 }
-#courselesson .span{	
+#courselesson .span{
 	padding-left: 10px;
 }
 #courselesson .pad{
@@ -1656,14 +1656,14 @@ a.socialIcon:hover, .socialHoverClass {
 }
 
 #courselesson .fix-content h4{
-    font-size: 16px;  
+    font-size: 16px;
     font-weight: 400;
-    color: #4c4c4c; 
+    color: #4c4c4c;
 }
 #courselesson .fix-content p{
-    font-size: 14px;  
+    font-size: 14px;
     word-spacing: 5px;
-    font-weight: bold;     
+    font-weight: bold;
     color: #4c4c4c;
 
 }
@@ -1672,8 +1672,8 @@ a.socialIcon:hover, .socialHoverClass {
 
 }
 #courselesson .bg-les-bot p{
-    font-size: 14px;  
-    word-spacing: 5px;       
+    font-size: 14px;
+    word-spacing: 5px;
     color: #9b9b9b;
 
 }
@@ -1743,7 +1743,7 @@ a.socialIcon:hover, .socialHoverClass {
     background-color: #f6f6f6;
     text-decoration: none;
 }
-#lecture .list-group:hover {text-decoration: none;  
+#lecture .list-group:hover {text-decoration: none;
 }
 #lecture a {
     color: #6f6f6f;
@@ -1768,11 +1768,11 @@ a.socialIcon:hover, .socialHoverClass {
     padding: 6px 50px;
 }
 #lecture hr {
-	margin: 20px -30px 20px -50px;	
+	margin: 20px -30px 20px -50px;
     border: 0;
     border-top: 1px solid #f0f0f0;
 }
-#lecture .video{	
+#lecture .video{
 	padding-left: 0px !important;
 	padding-right: 0px !important;
 }
@@ -1782,10 +1782,10 @@ a.socialIcon:hover, .socialHoverClass {
 #lecture .title-des {
     color: #4c4c4c;
     font-size: 26px;
-    font-weight: 400;    
+    font-weight: 400;
     padding: 25px 0px 20px 0px;
 }
-#lecture .fix-video{	
+#lecture .fix-video{
 	font-size: 16px;
 	font-weight: 400;
 }
@@ -1796,11 +1796,11 @@ a.socialIcon:hover, .socialHoverClass {
 }
 #lecture .document{
 	background-color: #f0f0f0;
-	padding-top: 32px;    
+	padding-top: 32px;
     padding-bottom: 10px;
 }
 #lecture .img-doc{
-	
+
     margin: 0 auto;
     height: 175px;
     width: 150px;
@@ -1817,7 +1817,7 @@ a.socialIcon:hover, .socialHoverClass {
     border-color: #07a25f;
     border-radius: 30px;
     font-size: 15px;
-    height: 42px;    
+    height: 42px;
     padding: 6px 25px;
     margin-top: 24px;
 
@@ -1840,7 +1840,7 @@ a.socialIcon:hover, .socialHoverClass {
     padding-top: 30px;
 }
 #lecture .author {
-    padding-left: 80px;    
+    padding-left: 80px;
 }
 #lecture p {
     margin: 5px 0 4px;
@@ -1856,4 +1856,16 @@ a.socialIcon:hover, .socialHoverClass {
     margin-bottom: 0px;
     border: 0;
     border-bottom: 1px solid #f0f0f0;
+}
+
+.heading-title{
+	font-size: 36px;
+	color: #3a96d2;
+}
+
+.plan_title {
+    font-weight: 300;
+    letter-spacing: 2px;
+    padding: 30px;
+    margin-bottom: 20px;
 }

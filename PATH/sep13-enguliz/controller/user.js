@@ -8,6 +8,7 @@ var Collect = require('../utils/collection');
 var TokenInfo = require('../models/physical/TokenInfo');
 var random = require('../utils/random');
 var ObjectId = require('mongodb').ObjectID;
+var async = require("async");
 
 router.get('/login', (req, res) => {
 
@@ -99,18 +100,54 @@ router.get('/logout', (req, res) => {
 
 router.get('/exam', (req, res) => {
     var token = req.get('access_token');
+
+    token = "YS3IzMuhbEFYY7oY4geTjeVlaZGLKA61";
+
     var body = {};
     if (token) {
         body.error = 0;
         body.message = "";
+
         db.findOne(Collect.token, {'access_token': token}, (result) => {
             if (result) {
-                db.fetchRows(Collect.exam, {'userIdRef': result.userId}, (items) => {
-                    body.data = items;
-                    res.send(body);
+                db.fetchRows(Collect.exam, {'userIdRef': result.userId}, (results) => {
+                    //body.data = items;
+                    var items = [];
+
+                    async.each(results, (x, callback) => {
+
+                        db.findOne(Collect.unit, {'_id': new ObjectId(x.unitIdRef)}, (r1) => {
+
+                            if(r1) {
+                                var _item = {};
+                                _item._id = x._id;
+                                _item._time = x.time;
+                                _item.createdDate = x.createdDate;
+                                _item.unitTitle = r1.unitTitle;
+                                _item.unitType = r1.unitType;
+                                _item.answer = x.answer;
+
+                                items.push(_item);
+                            }
+
+                            callback();
+                        });
+
+                    }, err => {
+                        body.data = items;
+
+                        console.log(body);
+
+                        res.send(body);
+                    });
                 });
+            } else {
+                body.data = "Invalid";
+                res.send(body);
+                res.end();
             }
         });
+
     } else {
         body.error = 1;
         body.message = "Invalid token";

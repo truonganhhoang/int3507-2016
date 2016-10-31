@@ -4,9 +4,9 @@ import {Unit} from "./unit.model";
  */
 export class Category {
     constructor(
-        categoryId: string,
-        categoryName: string,
-        categoryThumbnail: string,
-        categoryItems: Unit[]
+        public categoryId: string,
+        public categoryName: string,
+        public categoryThumbnail: string,
+        public categoryItems: Unit[]
     ) {}
 }

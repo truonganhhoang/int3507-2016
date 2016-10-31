@@ -10,20 +10,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
+var user_service_1 = require("../user/user.service");
 /**
  * Created by Thinking on 10/29/2016.
  */
 var ProfileComponent = (function () {
-    function ProfileComponent(router) {
+    function ProfileComponent(router, userService) {
         this.router = router;
         this.msg_error = "";
         this.msg_success = "";
     }
     ProfileComponent = __decorate([
         core_1.Component({
-            templateUrl: 'app/profile/profile.component.html'
+            templateUrl: 'app/profile/profile.component.html',
+            providers: [user_service_1.UserService]
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
+        __metadata('design:paramtypes', [router_1.Router, user_service_1.UserService])
     ], ProfileComponent);
     return ProfileComponent;
 }());

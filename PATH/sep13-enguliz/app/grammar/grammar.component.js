@@ -27,7 +27,6 @@ var GrammarComponent = (function () {
         this.service.getGrammarData()
             .subscribe(function (body) {
             _this.category = body;
-            _this.units = body.categoryItems;
         }, function (err) {
             console.error(err);
         });
