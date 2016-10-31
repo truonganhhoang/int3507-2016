@@ -21,4 +21,4 @@ Liên kết đến sản phẩm của các nhóm:
 | PATH  | - Link product: http://45.63.70.247/ <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/ducanhk58uet/int3507-2016/blob/master/PATH/README.md) |
 | XYZ  | - Link APK:  https://goo.gl/JsyAnX <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/trangnt58/int3507-2016/blob/master/xyz/README.md) |
 | ...  | ... |
-| PATH  | - Link product: https://hoanggianguet.github.io/demo/ <br/> - Hướng dẫn sử dụng: [tại đây] |
+| A2 | - Link product: https://hoanggianguet.github.io/demo/ <br/> - Hướng dẫn sử dụng: [tại đây] |
