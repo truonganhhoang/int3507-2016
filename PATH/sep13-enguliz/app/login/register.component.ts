@@ -18,15 +18,15 @@ export class RegisterComponent {
     public msg_error = "";
     public msg_success = "";
 
-    submitRegister(username, password1, password2, phone) {
+    submitRegister(username, password1, password2, phone, fullName) {
         if(password1 != password2) {
             this.msg_error = "Mật khẩu nhập lại không giống nhau?";
         } else {
-            this.registerService.registerRequest(username, password1, phone)
+            this.registerService.registerRequest(username, password1, phone, fullName)
                 .subscribe(res => {
                     if(res) {
                         if(res.error == 0) {
-                            this.msg_success = "Đăng ký thành công ... ?"
+                            this.msg_success = "Đăng ký thành công, chờ trong ít phút ... ?"
                             setTimeout(() => {
                                 this.router.navigate(['login']);
                             }, 3000);

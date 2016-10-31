@@ -772,6 +772,7 @@ margin-left: 20px;
 	border-radius: 10px;
 	width: 100%;
 	padding-bottom: 13%;
+	padding-top: 10px;
 
 }
 #register .inputre{
@@ -846,6 +847,7 @@ input[type="text"]:focus {
 #register .form-control {    
     width: 85%;
     height: 44px;
+	color: black;
 }
 #register .fix-form {  
 	padding-left: 65px;  

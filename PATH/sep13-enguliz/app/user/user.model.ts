@@ -10,6 +10,7 @@ export class User {
         public userPass: string,
         public userHashPass: string,
         public userPhone: string,
-        public userAddress: string
+        public userAddress: string,
+        public userFullName: string
     ) {}
 }

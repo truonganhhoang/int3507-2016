@@ -21,17 +21,17 @@ var RegisterComponent = (function () {
         this.msg_error = "";
         this.msg_success = "";
     }
-    RegisterComponent.prototype.submitRegister = function (username, password1, password2, phone) {
+    RegisterComponent.prototype.submitRegister = function (username, password1, password2, phone, fullName) {
         var _this = this;
         if (password1 != password2) {
             this.msg_error = "Mật khẩu nhập lại không giống nhau?";
         }
         else {
-            this.registerService.registerRequest(username, password1, phone)
+            this.registerService.registerRequest(username, password1, phone, fullName)
                 .subscribe(function (res) {
                 if (res) {
                     if (res.error == 0) {
-                        _this.msg_success = "Đăng ký thành công ... ?";
+                        _this.msg_success = "Đăng ký thành công, chờ trong ít phút ... ?";
                         setTimeout(function () {
                             _this.router.navigate(['login']);
                         }, 3000);

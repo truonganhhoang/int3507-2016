@@ -6,20 +6,21 @@
             </div>
             <div class="col-md-6 fix">
                 <div class="form-res">
-                    <img src="../../images/imgs/logore.png" alt="">
                     <hr>
                     <h3>Đăng nhập tài khoản của bạn</h3>
-                    <p>Đăng nhập để nhận được các thông tin của Viademy</p>
-                    <div class="fix-form">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Email của bạn">
+                    <p>Đăng nhập để nhận được các thông tin của Enguliz</p>
+                    <form (submit)="actionLogin(email.value, pass.value)">
+                        <div class="fix-form">
+                            <div class="form-group">
+                                <input type="text" #email class="form-control" placeholder="Email của bạn">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" #pass class="form-control" placeholder="Mật khẩu">
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Mật khẩu">
-                        </div>
-                    </div>
 
-                    <button type="button" class="btn btn-success">Đăng nhập ngay</button>
+                        <button type="submit" class="btn btn-success">Đăng nhập ngay</button>
+                    </form>
                 </div>
             </div>
             <div class="col-md-3">

@@ -72,29 +72,19 @@ import {User} from "./user/user.model";
 	      <input type="text" id="main-menu-course-search" class="form-control" placeholder="Tìm đề tài">
 	    </div>    
 	</form>
-	<ul class="nav navbar-nav navbar-right hidden-sm">
+	<ul class="nav navbar-nav navbar-right hidden-sm" *ngIf="isLoggedIn() == false">
 	    <li><a [routerLink]="['register']"><div id="main-menu-register">Đăng ký</div></a></li>
+	    <li><a [routerLink]="['login']">Đăng nhập</a></li>
+	</ul>
+	<ul class="nav navbar-nav navbar-right hidden-sm" *ngIf="isLoggedIn() == true">
+	    <li><a [routerLink]="['profile']"><div id="main-menu-register">{{fullName}}</div></a></li>
 	    <li><a [routerLink]="['login']">Đăng nhập</a></li>
 	</ul>
 	</div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
 	</section>      
-        <router-outlet></router-outlet>
-        <script type="text/javascript" src="js/jquery-1.6.min.js"></script>
-<script type="text/javascript" src="js/skinable_tabs.min.js"></script>
-<script type="text/javascript">
-    $('.tabs_holder').skinableTabs({
-        effect: 'basic_display',
-        skin: 'skin10',
-        position: 'top'
-    });
-</script>
-<!-------------------- JS -------------------->
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
-<script type="text/javascript" src="js/custom.js"></script>
-<script type="text/javascript" src="js/menu.js"></script>`,
+        <router-outlet></router-outlet>`,
     providers: [UserService]
 })
 
@@ -102,7 +92,7 @@ export class AppComponent implements OnInit {
     private loggedIn = false;
     public user:User;
     public email = '';
-
+    public fullName = '';
 
     constructor(private service:UserService) {
         this.loggedIn = !!localStorage.getItem('auth_token');
@@ -114,7 +104,7 @@ export class AppComponent implements OnInit {
             data => {
                 this.user = data;
                 this.email = this.user.userName;
-                console.log(this.email);
+                this.fullName = this.user.userFullName;
             },
             err => {
                 console.log(err);

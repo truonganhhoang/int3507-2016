@@ -20,11 +20,12 @@ var RegisterService = (function () {
         this.http = http;
         this.registerUrl = ("" + appSettings_1.AppSettings.API_ENDPOINT) + "/user/register?";
     }
-    RegisterService.prototype.registerRequest = function (username, password, phone) {
+    RegisterService.prototype.registerRequest = function (username, password, phone, fullName) {
         return this.http.get(this.registerUrl
             + "username=" + username
             + "&password=" + password
-            + "&phone=" + phone)
+            + "&phone=" + phone
+            + "&fullName=" + fullName)
             .map(function (res) { return res.json(); })
             .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
     };
