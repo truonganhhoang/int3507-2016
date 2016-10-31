@@ -28,8 +28,8 @@ export class MyApp {
     this.pages = [
       { title: 'Category', component: Category },
       // { title: 'Youtube', component: Youtube },
-      { title: 'Drive', component: Google },
-      { title: 'Sing', component: Sing },
+      { title: 'My Drive', component: Google },
+      { title: 'Sing a Song', component: Sing },
       { title: 'My Song', component: MySong }
     ];
   }
