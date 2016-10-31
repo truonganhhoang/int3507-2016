@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b04d9f9a-80bd-4c50-bd67-df94c3caec0e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.js" afterPath="$PROJECT_DIR$/app/app.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.js.map" afterPath="$PROJECT_DIR$/app/app.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.component.ts" afterPath="$PROJECT_DIR$/app/app.component.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/grammar/grammar.component.html" afterPath="$PROJECT_DIR$/app/grammar/grammar.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/grammar/grammar.component.js" afterPath="$PROJECT_DIR$/app/grammar/grammar.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/grammar/grammar.component.js.map" afterPath="$PROJECT_DIR$/app/grammar/grammar.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/grammar/grammar.component.ts" afterPath="$PROJECT_DIR$/app/grammar/grammar.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/grammar/grammar.service.js" afterPath="$PROJECT_DIR$/app/grammar/grammar.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/grammar/grammar.service.js.map" afterPath="$PROJECT_DIR$/app/grammar/grammar.service.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/grammar/grammar.service.ts" afterPath="$PROJECT_DIR$/app/grammar/grammar.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/home/home.component.html" afterPath="$PROJECT_DIR$/app/home/home.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/index.js" afterPath="$PROJECT_DIR$/controller/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/insertion.js" afterPath="$PROJECT_DIR$/controller/insertion.js" />
     </list>
     <ignored path="sep13-enguliz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,7 +28,7 @@
       <file leaf-file-name="detail.component.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/detail/detail.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
+            <state relative-caret-position="1980">
               <caret line="90" column="56" selection-start-line="90" selection-start-column="56" selection-end-line="90" selection-end-column="56" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#section#0;n#!!top" expanded="true" />
@@ -62,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="grammar.component.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="grammar.component.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/grammar/grammar.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+            <state relative-caret-position="396">
+              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#section#0;n#!!top" expanded="true" />
               </folding>
@@ -74,10 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="insertion.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="insertion.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/insertion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
+            <state relative-caret-position="1320">
               <caret line="60" column="180" selection-start-line="60" selection-start-column="180" selection-end-line="60" selection-end-column="180" />
               <folding />
             </state>
@@ -87,7 +75,7 @@
       <file leaf-file-name="grammar.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/grammar/grammar.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
+            <state relative-caret-position="638">
               <caret line="36" column="51" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="51" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -163,8 +151,8 @@
         <option value="$PROJECT_DIR$/app/grammar/grammar.component.ts" />
         <option value="$PROJECT_DIR$/app/home/home.component.html" />
         <option value="$PROJECT_DIR$/app/app.component.ts" />
-        <option value="$PROJECT_DIR$/app/grammar/grammar.component.html" />
         <option value="$PROJECT_DIR$/controller/insertion.js" />
+        <option value="$PROJECT_DIR$/app/grammar/grammar.component.html" />
       </list>
     </option>
   </component>
@@ -209,7 +197,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -376,7 +364,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -534,7 +522,8 @@
       <workItem from="1477833989092" duration="2880000" />
       <workItem from="1477850258273" duration="1373000" />
       <workItem from="1477874434164" duration="17348000" />
-      <workItem from="1477892866687" duration="5478000" />
+      <workItem from="1477892866687" duration="6608000" />
+      <workItem from="1477904426469" duration="33000" />
     </task>
     <task id="LOCAL-00001" summary="set event click course">
       <created>1474734807551</created>
@@ -711,11 +700,18 @@
       <option name="project" value="LOCAL" />
       <updated>1477895329045</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="update category">
+      <created>1477898610381</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1477898610381</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193598000" />
+    <option name="totallyTimeSpent" value="194761000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -734,22 +730,22 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32674572" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript Compiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25389755" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14365256" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20601337" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14365256" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32182628" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25264272" sideWeight="0.50664455" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20601337" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25317124" sideWeight="0.50664455" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -808,7 +804,8 @@
     <MESSAGE value="done functions 'login' and 'register'&#10;" />
     <MESSAGE value="config details" />
     <MESSAGE value="add function on details page" />
-    <option name="LAST_COMMIT_MESSAGE" value="add function on details page" />
+    <MESSAGE value="update category" />
+    <option name="LAST_COMMIT_MESSAGE" value="update category" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -940,7 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -948,7 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,7 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -964,7 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-156">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -972,7 +965,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1001,7 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,7 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="20" column="69" selection-start-line="20" selection-start-column="69" selection-end-line="20" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,7 +1028,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="216" column="21" selection-start-line="216" selection-start-column="21" selection-end-line="216" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1060,7 +1049,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="652">
           <caret line="94" column="24" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1068,7 +1056,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="87" column="28" selection-start-line="87" selection-start-column="28" selection-end-line="87" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1076,7 +1063,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
           <caret line="42" column="21" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1084,7 +1070,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="43" column="67" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1092,9 +1077,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="733">
           <caret line="136" column="25" selection-start-line="136" selection-start-column="25" selection-end-line="136" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1102,7 +1084,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="33" column="39" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,7 +1091,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="1675" column="29" selection-start-line="1675" selection-start-column="29" selection-end-line="1675" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1118,7 +1098,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1126,7 +1105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1134,7 +1112,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="36" column="6" selection-start-line="36" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1142,54 +1119,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-22">
           <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-          <folding>
-            <element signature="e#47#95#0" expanded="true" />
-            <marker date="1477898060952" expanded="true" signature="267:3778" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="306:776" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="420:759" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="457:748" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="496:738" ph="..." />
-            <marker date="1477898060952" expanded="false" signature="807:833" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="854:1181" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="913:1172" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="950:1154" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="1091:1134" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="1229:3766" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="1262:3725" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="1366:1464" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="1429:1453" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="1623:3684" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="1665:2726" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="1710:2708" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="1845:1993" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="2063:2686" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="2105:2660" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="2156:2629" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="2223:2594" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="2777:3106" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="2851:3082" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="3199:3387" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="3479:3665" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="3863:4924" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="3889:4909" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="3951:4058" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="4130:4894" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="4160:4172" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="4173:4354" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="4242:4331" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="4384:4396" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="4397:4503" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="4544:4875" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="4591:4695" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="4744:4852" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="4951:5776" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="4973:5761" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="5033:5749" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="5068:5734" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="5210:5715" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="5300:5434" ph="..." />
-            <marker date="1477898060952" expanded="true" signature="5558:5692" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1197,9 +1126,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="617">
           <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1207,32 +1133,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/grammar/grammar.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
+        <state relative-caret-position="638">
           <caret line="36" column="51" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="51" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#47#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/detail/detail.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="90" column="56" selection-start-line="90" selection-start-column="56" selection-end-line="90" selection-end-column="56" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#section#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1245,21 +1155,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/grammar/grammar.component.html">
+    <entry file="file://$PROJECT_DIR$/controller/insertion.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        <state relative-caret-position="1320">
+          <caret line="60" column="180" selection-start-line="60" selection-start-column="180" selection-end-line="60" selection-end-column="180" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/detail/detail.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1980">
+          <caret line="90" column="56" selection-start-line="90" selection-start-column="56" selection-end-line="90" selection-end-column="56" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#3;n#section#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#4;n#section#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/insertion.js">
+    <entry file="file://$PROJECT_DIR$/app/grammar/grammar.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="60" column="180" selection-start-line="60" selection-start-column="180" selection-end-line="60" selection-end-column="180" />
-          <folding />
+        <state relative-caret-position="396">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
