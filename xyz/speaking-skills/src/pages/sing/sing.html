@@ -1,0 +1,77 @@
+<!--
+  Generated template for the Sing page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="secondary">
+  	<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Sing a Song</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>	
+  <ion-row class="input-search">
+    <ion-col width-80>
+    <ion-item>
+      <ion-label><ion-icon name="search"></ion-icon></ion-label>
+      <ion-input [(ngModel)]="myQuery" type="text" placeholder="Enter a song"></ion-input>
+      </ion-item>
+    </ion-col>
+    <ion-col width-20>
+      <button ion-button color="light" block (click)="getVideos()">  
+        Search
+      </button>
+    </ion-col>
+  </ion-row>
+
+ 
+    <ion-item>
+      <ion-select [(ngModel)]="singType">
+        <ion-option value="karaoke" selected="true">
+          <ion-icon name="microphone">Karaoke</ion-icon> 
+        </ion-option>
+        <ion-option value="lyric">
+          <ion-icon ios="ios-list-box" md="md-list-box"></ion-icon>Lyrics
+        </ion-option>
+      </ion-select>
+    </ion-item>
+<!--
+<<<<<<< HEAD
+  </ion-list>
+
+  <ion-list radio-group [(ngModel)]="singType">
+    <ion-item class="singType">
+      <ion-label>Song without Lyrics</ion-label>
+      <ion-radio value="karaoke" checked></ion-radio>
+    </ion-item>
+    <ion-item class="singType">
+      <ion-label>Song with Lyrics</ion-label>
+      <ion-radio value="lyric"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button ion-button light block (click)="getVideos()">Search</button>
+  </div>
+
+   <ion-list>
+=======
+-->
+  
+  <ion-list>
+    <ion-item *ngFor="let video of videos" (click)="playVideo(video)" >
+      <ion-thumbnail item-left>
+        <img src="{{video.snippet.thumbnails.high.url}}">
+      </ion-thumbnail>
+      <h2>{{video.snippet.title}}</h2>
+      <p>{{video.snippet.channelTitle}}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
