@@ -32,12 +32,30 @@
 
 Dưới đây lần lượt là ảnh giao diện của Register, Login
 
+![Register](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/Register.jpg)
+
+![Login](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/Login.jpg)
+
+
 ### Trang chủ
+
+![Home](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/Home.jpg)
+
 - Khi đã đăng nhập thành công , trang chủ của ứng dụng hiện ra cho phép
     + Đối với người dùng là user có thể làm các bài trắc nghiệm (lesson), xem lại các bài đã học, có thể chọn các category theo các chủ đề để học và xem danh sách các word.
     +Admin: ngoài các chức năng của user còn có thể quản lí / thêm các Category, word và có thể quản lí User ( follow hoặc unfollow)
 
 - Cả admin và user đều có thể xem thông tin cá nhân, cập nhật chỉnh sửa thông tin của mình và lịch sử hoạt động
+
+-Dưới đây là một số giao diện của ứng dung:
+
+![Profile](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/profile.jpg)
+
+![List User](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/user.jpg)
+
+![List Categories](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/ListCategories.jpg)
+
+![Lesson](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/leson.jpg)
 
 ## Hướng dẫn sử dụng
 Có thể chạy test trực tiếp trên link heroku nhóm đã đính kèm trên project.
