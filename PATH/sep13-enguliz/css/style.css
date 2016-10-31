@@ -151,7 +151,7 @@
     border-radius: 15px;
 }
 .textbox {
-    background: url(../imgs/search.png) no-repeat 5px 3px #27A8E6;
+    background: url(../images/imgs/search.png) no-repeat 5px 3px #27A8E6;
     height: 33px;
     width: 275px;
     border: 1px solid #848484;
@@ -282,10 +282,11 @@ input[id="search"]::-webkit-input-placeholder {
 }
 #tab-leasson{
 	padding-top: 38px;
+	text-align: center;
+	text-transform: uppercase;
 }
 #content-leasson{
 	padding-bottom: 20px;
-	padding-top: 40px;
 	background-color: #000;
 }
 .head-highlight{	
@@ -772,6 +773,7 @@ margin-left: 20px;
 	border-radius: 10px;
 	width: 100%;
 	padding-bottom: 13%;
+	padding-top: 10px;
 
 }
 #register .inputre{
@@ -846,6 +848,7 @@ input[type="text"]:focus {
 #register .form-control {    
     width: 85%;
     height: 44px;
+	color: black;
 }
 #register .fix-form {  
 	padding-left: 65px;  
@@ -1045,19 +1048,19 @@ margin-left: 20px;
     user-select: none;
 }
 .icon-ci {
-	background:url(../imgs/icon/ci.png) center no-repeat;
+	background:url(../images/imgs/icon/ci.png) center no-repeat;
     padding: 10px 35px 10px 10px;
 }
 .icon-pi {
-	background:url(../imgs/icon/pi.png) center no-repeat;
+	background:url(../images/imgs/icon/pi.png) center no-repeat;
     padding: 10px 35px 10px 10px;
 }
 .icon-tree {
-	background:url(../imgs/icon/tree.png) center no-repeat;
+	background:url(../images/imgs/icon/tree.png) center no-repeat;
     padding: 10px 35px 10px 10px;
 }
 .icon-mn {
-	background:url(../imgs/icon/mn.png) center no-repeat;
+	background:url(../images/imgs/icon/mn.png) center no-repeat;
     padding: 10px 35px 10px 10px;
 }
 .icon-mnis {

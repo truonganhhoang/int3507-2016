@@ -41,6 +41,13 @@ var DetailComponent = (function () {
         this.service.getDetailsData(id)
             .subscribe(function (body) {
             _this.unit = body;
+            _this.unitTitle = _this.unit.unitTitle;
+            _this.unitSubTitle = _this.unit.unitSubTitle;
+            _this.unitViews = _this.unit.unitViews;
+            _this.unitType = _this.unit.unitType;
+            _this.unitTime = _this.unit.unitTime;
+            _this.unitThreads = _this.unit.unitThreads;
+            _this.questions = _this.unit.question;
         }, function (err) {
             console.log(err);
         });

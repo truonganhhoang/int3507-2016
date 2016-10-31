@@ -7,6 +7,7 @@ import {Unit} from "../detail/unit.model";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Observable} from "rxjs/Rx";
 import {Answer} from "./answer.model";
+import {Question} from "./question.model";
 @Component({
     templateUrl: 'app/detail/detail.component.html',
     providers: [DetailService]
@@ -24,6 +25,14 @@ export class DetailComponent implements OnInit {
     public timeCountdown: string;
     public userAnswer = [];
     public correctNumber = 0;
+
+    private unitTitle: string;
+    private unitSubTitle: string;
+    private unitViews: number;
+    private unitType: string;
+    private unitTime: number;
+    private unitThreads: string;
+    private questions: Question[];
 
     public sub: any;
 
@@ -43,6 +52,13 @@ export class DetailComponent implements OnInit {
             .subscribe(
                 body => {
                     this.unit = body;
+                    this.unitTitle = this.unit.unitTitle;
+                    this.unitSubTitle = this.unit.unitSubTitle;
+                    this.unitViews = this.unit.unitViews;
+                    this.unitType = this.unit.unitType;
+                    this.unitTime = this.unit.unitTime;
+                    this.unitThreads = this.unit.unitThreads;
+                    this.questions = this.unit.question;
                 },
                 err => {
                     console.log(err);

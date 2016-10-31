@@ -1,45 +1,104 @@
-<section id="slide">
-    <div id="carousel-id" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="item active">
+<div *ngFor="let category of categories">
+<section class="hidden-xs" id="tab-leasson">
+    <div class="tabs_holder tabs_wrapper skin10 top" style="display: block; overflow: hidden; position: relative;">
+        <ul class="tabs_header">
+            {{category.categoryName}}
+        </ul>
+        <div style="height: 0px; font-size: 1px; line-height: 1px; clear: both;"></div>
+    </div>
 
-                <div id="homepage-img"></div>
-                <div class="carousel-caption">
-                    <div id="viademy-slogan" class="hidden-xs">Nâng cao kỹ năng tiếng anh của bạn</div>
-                    <p id="viademy-caption" class="hidden-xs">Hơn 100+ bài học ngữ pháp, từ vựng, luyện nghe, luyện đọc được xây dựng</p>
+</section>
+<section id="content-leasson">
+    <div id="bg-leasson">
+        <div class="row">
+            <div class="content_holder">
+                <div id="your-tab-id-1">
+                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" *ngFor="let item of category.categoryItems" [routerLink]="['details', item.unitId]">
+                        <div class="clear-fix"><img width="100%" height="100%" src="{{item.unitThumbnail}}" alt=""></div>
+                        <div class="bg-element">
+                            <h4>{{item.unitTitle}}</h4>
+                            <div class="pad">
+                                <a href="#">
+                                    <div class="rating">
+                                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                    </div>
+                                </a>
+                                <span class="span">&nbsp;4.9 (321)</span>
+                            </div>
+                            <span>{{item.unitSubTitle}}</span>
+                            <hr>
+                            <div class="bg-comment-bot">
+                                <p class="user pull-right">Lượt xem: {{item.unitViews}}&nbsp;<i class="fa fa-user" aria-hidden="true"></i></p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div id="btn-more" class="row">
+            <div class="content_holder">
+                <a href="#">
+                    <button type="button" class="btn btn-success">XEM THÊM</button>
+                </a>
+            </div>
+        </div>
+
+    </div><!--/.row-->
+
+</section>
+</div>
+
+<section id="regis" class="hidden-xs">
+
+    <div class="row">
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+            <h3 class="via">Enguliz</h3>
+            <p>Empower your career</p>
+        </div>
+        <div class="regis-fix col-xs-7 col-sm-7 col-md-7 col-lg-7">
+            <div style="float: left;">
+                <input type="text" id="regis" class="textregis"
+                       placeholder="Nhập email của bạn để nhận các bài viết hữu ích">
+            </div>
+            <div style="float: left;">
+                <button type="button" class="btn btn-warning">ĐĂNG KÝ</button>
+            </div>
+            <div class="fix-social">
+                <div class="social-links">
+                    <a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                </div>
+                <div class="social-links-y">
+
+                    <a href="#"><i class="fa fa-youtube fa-lg"></i></a>
                 </div>
             </div>
         </div>
-        <!-- <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-        <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
     </div>
+
 </section>
 
-<div class="footer">
-    <div class="footer-content">
-        <h4>E-LEANING STUDIO</h4>
-        <ul>
-            <li>Đại học công nghệ</li>
-            <li>Địa chỉ: 144 Xuân Thủy - Cầu Giấy - Hà Nội</li>
-            <li>SĐT: (04)664251</li>
-            <li>Email: uet-vnu@gmail.com</li>
-        </ul>
-    </div>
+<section id="footer">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="textfoot">
+                <h2>Liên Hệ Với Enguliz</h2>
+                <p>Hãy liên hệ với chúng tôi ngay khi bạn thắc mắc nhé</p>
+                <div>
+                    <img src="../../images/imgs/tele.png" alt="">
+                    <p><span>Hotline miễn phí: <a href="">0123456789</a> </span> <br>
+                        (7h00 đến 22h00 tất cả các ngày trong tuần)</p>
 
-    <div class="footer-content">
-        <h4>E-LEANING STUDIO</h4>
-        <ul>
-            <li>
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                144 Xuân Thủy - Cầu Giấy - Hà Nội
-            </li>
-            <li>
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                (04)664251
-            </li>
-            <li>
-                <i class="fa fa-envelope-o" aria-hidden="true"></i>
-                uet-vnu@gmail.com</li>
-        </ul>
-    </div>
+                    <img class="fiximgft" src="../../images/imgs/email.png" alt="">
+                    <p class="fixpft"><span class="ok">Email: support@enguliz.vn</span> <br>
+                        Chúng tôi sẽ phản hồi sớm nhất
+                    </p>
+                </div>
+            </div>
+        </div>
 
+    </div>
+</section>

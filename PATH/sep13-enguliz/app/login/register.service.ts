@@ -12,11 +12,12 @@ export class RegisterService {
     
     private registerUrl = `${AppSettings.API_ENDPOINT}` + "/user/register?";
     
-    registerRequest(username, password, phone) {
+    registerRequest(username, password, phone, fullName) {
         return this.http.get(this.registerUrl 
             + "username=" + username
             + "&password=" + password 
-            + "&phone=" + phone)
+            + "&phone=" + phone
+            + "&fullName=" + fullName)
             .map((res:Response) => res.json())
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
     }

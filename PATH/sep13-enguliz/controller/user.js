@@ -40,8 +40,9 @@ router.get('/register', (req, res) => {
     var username = req.query.username;
     var password = req.query.password;
     var phone = req.query.phone;
+    var fullName = req.query.fullName;
 
-    var user = User.init(username, password, '', phone, '');
+    var user = User.init(username, password, '', phone, '', fullName);
 
     db.findOne(Collect.user, {userName: user.userName}, (result) => {
         if (result) {
