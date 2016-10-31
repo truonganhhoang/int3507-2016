@@ -1,4 +1,4 @@
-# Repo của môn học INT 3507: Các vấn đề hiện đại CNTT, 2016-2017
+﻿# Repo của môn học INT 3507: Các vấn đề hiện đại CNTT, 2016-2017
 
 ## Chú ý khi chọn đề tài:
 - Các nhóm chủ động chọn, đề xuất đề tài với chủ đề: Tạo công cụ học ngoại ngữ cho học sinh phổ thông.
@@ -10,6 +10,12 @@
 - Trước khi commit/push, nên pull/merge để tránh bị conflict.
 - **Từng người phải có issue mô tả công việc của mình, gán thông tin tag của nhóm, assignee, v.v. đầy đủ.**
 
-## 19/9 các nhóm báo cáo, trình bày kiến thức tìm hiểu đc, và demo chương trình
-- Chuẩn bị sẵn slides để trình bày trong khoảng 20 phút.
-- Demo chương trình, phiên bản v0.1, chuẩn bị sẵn cả source code để trao đổi.
+## Sản phẩm của các nhóm
+Liên kết đến sản phẩm của các nhóm:
+
+| Tên nhóm | Liên kết  |
+|---|---|
+| Duo | https://play.google.com/store/apps/details?id=com.saokhuee.sachmem  |
+| FRIES  | http://v2.uetf.me/ |
+| NaVi  | - Link chatbot: https://www.facebook.com/cwat.seewhat/ <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/README.md)|
+| ...  | ... |

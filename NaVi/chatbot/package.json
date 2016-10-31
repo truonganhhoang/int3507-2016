@@ -1,24 +1,32 @@
 {
-  "name": "messenger-get-started",
+  "name": "chatbot",
   "version": "1.0.0",
-  "description": "Get started example for Messenger Platform",
+  "description": "cwat chatbot",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "lint": "jshint --exclude node_modules .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "import": "node database/import.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fbsamples/messenger-platform-samples.git"
+    "url": "https://github.com/trieudh58/int3507-2016.git"
   },
-  "author": "Facebook",
+  "author": "trieudh58",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.15.0",
+    "body-parser": "^1.15.2",
     "config": "^1.20.4",
     "ejs": "^2.4.2",
     "express": "^4.13.4",
+    "fast-csv": "^2.1.0",
+    "ivona-node": "^0.4.0",
+    "jaro-winkler": "^0.2.7",
+    "mongoose": "^4.6.1",
+    "mongoose-seed": "^0.3.1",
+    "node-schedule": "^1.2.0",
+    "redis": "^2.6.2",
     "request": "^2.72.0"
   },
   "engines": {

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BotDataModelStoreContainer" CdmEntityContainer="BotDataEntities1">
+    <EntitySetMapping Name="windows">
+      <EntityTypeMapping TypeName="BotDataModel.window">
+        <MappingFragment StoreEntitySet="windows">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="winver" ColumnName="winver" />
+          <ScalarProperty Name="topic" ColumnName="topic" />
+          <ScalarProperty Name="question1" ColumnName="question1" />
+          <ScalarProperty Name="question2" ColumnName="question2" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
