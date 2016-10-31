@@ -33,8 +33,13 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-
+                        <tr *ngFor="let exam of exams">
+                            <td>{{exam._id}}</td>
+                            <td>{{exam.unitTitle}}</td>
+                            <td>{{exam.unitType}}</td>
+                            <td>{{exam.createdDate}}</td>
+                            <td>{{exam.point}}</td>
+                            <td><a href="">Chi tiết</a></td>
                         </tr>
                         </tbody>
                     </table>

@@ -3,6 +3,7 @@ import {AppSettings} from "../appSettings";
 import {Observable} from "rxjs/Rx";
 import {User} from "./user.model";
 import {Injectable} from "@angular/core";
+import {Exam} from "../profile/exam.model";
 /**
  * Created by Thinking on 10/01/2016.
  */
@@ -27,5 +28,16 @@ export class UserService {
         return this.http.get(this.logoutUrl, {headers: headers})
             .map((res:Response) => res.json())
             .catch((error: any) => Observable.throw(error.json().error || 'Server error'));
+    }
+
+
+    private getExamUrl = `${AppSettings.API_ENDPOINT}/user/exam`;
+
+    getExam(token): Observable<Exam[]> {
+        let headers = new Headers({ 'access_token': token });
+
+        return this.http.get(this.getExamUrl, {headers: headers})
+            .map((res:Response) => res.json().data)
+            .catch((error: any) => Observable.throw(error.json().error || 'Server error'))
     }
 }

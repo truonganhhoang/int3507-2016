@@ -17,9 +17,34 @@ var user_service_1 = require("../user/user.service");
 var ProfileComponent = (function () {
     function ProfileComponent(router, userService) {
         this.router = router;
+        this.userService = userService;
+        this.loggedIn = false;
         this.msg_error = "";
         this.msg_success = "";
+        this.loggedIn = !!localStorage.getItem('auth_token');
+        if (this.loggedIn) {
+        }
+        else {
+            this.router.navigate(['/login']);
+        }
     }
+    ProfileComponent.prototype.isLoggedIn = function () {
+        return this.loggedIn;
+    };
+    ProfileComponent.prototype.loadExamData = function () {
+        var _this = this;
+        this.userService.getExam(localStorage.getItem('auth_token'))
+            .subscribe(function (data) {
+            _this.exams = data;
+        }, function (err) {
+            console.log(err);
+        });
+    };
+    ProfileComponent.prototype.ngOnInit = function () {
+        if (this.isLoggedIn()) {
+            this.loadExamData();
+        }
+    };
     ProfileComponent = __decorate([
         core_1.Component({
             templateUrl: 'app/profile/profile.component.html',

@@ -101,8 +101,6 @@ router.get('/logout', (req, res) => {
 router.get('/exam', (req, res) => {
     var token = req.get('access_token');
 
-    token = "YS3IzMuhbEFYY7oY4geTjeVlaZGLKA61";
-
     var body = {};
     if (token) {
         body.error = 0;
@@ -116,28 +114,55 @@ router.get('/exam', (req, res) => {
 
                     async.each(results, (x, callback) => {
 
+
                         db.findOne(Collect.unit, {'_id': new ObjectId(x.unitIdRef)}, (r1) => {
 
                             if(r1) {
                                 var _item = {};
+                                var point = 0;
+
                                 _item._id = x._id;
-                                _item._time = x.time;
+                                _item.time = x.time;
                                 _item.createdDate = x.createdDate;
                                 _item.unitTitle = r1.unitTitle;
                                 _item.unitType = r1.unitType;
                                 _item.answer = x.answer;
 
-                                items.push(_item);
-                            }
+                                async.series([
+                                    (c1) => {
+                                        async.each(x.answer, (y, callback1) => {
+                                            db.findOne(Collect.question, {"_id": new ObjectId(y.ansId)}, (r2) => {
+                                                if(r2) {
+                                                    if(r2.correctAns == y.answer) {
+                                                        point = point + 1;
+                                                    }
+                                                    callback1();
+                                                } else {
+                                                    callback1();
+                                                }
+                                            });
+                                        }, err => {
+                                            c1();
+                                        });
 
-                            callback();
+                                    },
+                                    (c2) => {
+                                        db.fetchRows(Collect.question, {"unitIdRef": new ObjectId(x.unitIdRef)}, (r3) => {
+                                            _item.point = point + "/" + r3.length;
+                                            c2();
+                                        });
+                                    }
+                                ], err => {
+                                    items.push(_item);
+                                    callback();
+                                });
+                            } else {
+                                callback();
+                            }
                         });
 
                     }, err => {
                         body.data = items;
-
-                        console.log(body);
-
                         res.send(body);
                     });
                 });

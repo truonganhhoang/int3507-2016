@@ -20,6 +20,7 @@ var UserService = (function () {
         this.http = http;
         this.userProfileUrl = appSettings_1.AppSettings.API_ENDPOINT + "/user/profile";
         this.logoutUrl = appSettings_1.AppSettings.API_ENDPOINT + "/user/logout";
+        this.getExamUrl = appSettings_1.AppSettings.API_ENDPOINT + "/user/exam";
     }
     UserService.prototype.getProfile = function (token) {
         var headers = new http_1.Headers({ 'access_token': token });
@@ -31,6 +32,12 @@ var UserService = (function () {
         var headers = new http_1.Headers({ 'access_token': token });
         return this.http.get(this.logoutUrl, { headers: headers })
             .map(function (res) { return res.json(); })
+            .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
+    };
+    UserService.prototype.getExam = function (token) {
+        var headers = new http_1.Headers({ 'access_token': token });
+        return this.http.get(this.getExamUrl, { headers: headers })
+            .map(function (res) { return res.json().data; })
             .catch(function (error) { return Rx_1.Observable.throw(error.json().error || 'Server error'); });
     };
     UserService = __decorate([
