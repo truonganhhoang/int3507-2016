@@ -34,12 +34,12 @@ export class SongService {
       }
     }, 
     error => {
-      alert('chua co bang');
+      //alert('chua co bang');
       arrSong.push(song);
       NativeStorage.setItem('mysong', arrSong)
         .then(
-          () => alert('saved'),
-          error => alert('Error storing item')
+          () => console.log('saved'),
+          error => console.log('Error storing item')
         );
     });
   }
@@ -53,8 +53,8 @@ export class SongService {
           resolve(data);
         },
         error => {
-          alert(error);
-          resolve(error);
+          //alert(error);
+          resolve(null);
         }
       );
     });

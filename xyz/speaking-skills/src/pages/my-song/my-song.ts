@@ -18,14 +18,23 @@ declare var cordova: any;
 })
 export class MySong implements OnInit {
 
-  arrSong: Object[];
+  arrSong: Object[] = [];
+  audio: MediaPlugin;
 
   constructor(public navCtrl: NavController, private songService: SongService) {}
 
   ngOnInit() {
     this.songService.getSong().then(res => {
-      this.arrSong = res;
-      console.log(this.arrSong);
+      if (res == null) { 
+        //alert('chưa có bảng');
+        this.arrSong = [];
+      } else {
+        this.arrSong = res;
+        for (let i = 0; i < this.arrSong.length; i ++) {
+          this.arrSong[i]['isPlay'] = false;
+        }
+        console.log(this.arrSong);
+      }
     });  
   }
 
@@ -34,9 +43,19 @@ export class MySong implements OnInit {
   }
 
   playAudio(item) {
+    for (let i = 0; i < this.arrSong.length; i ++) {
+      this.arrSong[i]['isPlay'] = false;
+    }
+    item['isPlay'] = true;
+
     let name: string = item['videoId'];
-    let audio = new MediaPlugin(this.getPathFile(name));
-    audio.play();
+    this.audio = new MediaPlugin(this.getPathFile(name));
+    this.audio.play();
+  }
+
+  stopAudio(item) {
+    item['isPlay'] = false;
+    this.audio.stop();
   }
 
    private getPathFile(name: String): string {
