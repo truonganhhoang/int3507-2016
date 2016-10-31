@@ -24,3 +24,4 @@ Liên kết đến sản phẩm của các nhóm:
 | N2QT | http://n2qt.somee.com/N2QT/  |
 | ...  | ... |
 | A2 | - Link product: https://hoanggianguet.github.io/demo/ <br/> - Hướng dẫn sử dụng: [tại đây] |
+| 4C | - Link test Alexa Skill: https://echosim.io/ <br/> - Hướng dẫn sử dụng [tại đây](https://github.com/truonganhhoang/int3507-2016/commit/275c5e14a81bdcfbae0909afc29d2f249b4a8f9d)|
