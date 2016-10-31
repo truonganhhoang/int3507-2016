@@ -9,9 +9,11 @@ var test_component_2 = require("./test/read/test.component");
 var detail_component_1 = require("./detail/detail.component");
 var register_component_1 = require("./login/register.component");
 var profile_component_1 = require("./profile/profile.component");
+var grammar_component_1 = require("./grammar/grammar.component");
 var appRoutes = [
     { path: '', component: home_component_1.HomeComponent, pathMatch: 'full' },
     { path: 'login', component: login_component_1.LoginComponent },
+    { path: 'grammar', component: grammar_component_1.GrammarComponent },
     { path: 'theory', component: theory_component_1.TheoryComponent,
         children: [
             { path: '', redirectTo: 'listen', pathMatch: 'full' },

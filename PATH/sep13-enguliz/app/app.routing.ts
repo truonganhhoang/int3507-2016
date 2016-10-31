@@ -9,10 +9,12 @@ import {TestReadCompoent} from "./test/read/test.component";
 import {DetailComponent} from "./detail/detail.component";
 import {RegisterComponent} from "./login/register.component";
 import {ProfileComponent} from "./profile/profile.component";
+import {GrammarComponent} from "./grammar/grammar.component";
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full'},
     { path: 'login', component: LoginComponent},
+    { path: 'grammar', component: GrammarComponent},
     { path: 'theory', component: TheoryComponent,
         children: [
                 { path: '', redirectTo: 'listen', pathMatch: 'full'},

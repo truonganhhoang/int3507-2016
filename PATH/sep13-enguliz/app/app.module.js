@@ -26,6 +26,7 @@ var test_component_2 = require("./test/read/test.component");
 var detail_component_1 = require("./detail/detail.component");
 var register_component_1 = require("./login/register.component");
 var profile_component_1 = require("./profile/profile.component");
+var grammar_component_1 = require("./grammar/grammar.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -49,6 +50,7 @@ var AppModule = (function () {
                 detail_component_1.DetailComponent,
                 register_component_1.RegisterComponent,
                 profile_component_1.ProfileComponent,
+                grammar_component_1.GrammarComponent
             ],
             providers: [
                 app_routing_1.appRoutingProvider
