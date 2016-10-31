@@ -1,0 +1,10 @@
+{
+  "intents": [
+    {
+      "intent": "SentencesIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}

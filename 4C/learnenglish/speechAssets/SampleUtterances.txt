@@ -1,0 +1,6 @@
+SentencesIntent my university
+SentencesIntent you are stupid
+SentencesIntent my city is London
+SentencesIntent i am so lucky
+SentencesIntent learn english with me
+SentencesIntent start project now
