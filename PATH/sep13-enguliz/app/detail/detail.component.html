@@ -39,12 +39,9 @@
     </div>
 
     <div *ngIf="isTest">
-        <div class="col-md-1 timer">
-            <h5>Time Remain</h5>
-            <h5>{{timeCountdown}}</h5>
-        </div>
 
-        <div class="row">
+        <div class="row" >
+
             <div class="fix-content">
                 <div class="pad col-xs-12 col-sm-6 col-md-6 col-lg-6" *ngFor="let q of questions; let i = index"
                      [attr.data-index]="i">
@@ -60,15 +57,45 @@
                         </p>
                     </div>
                 </div>
+            </div>
 
+            <div style="padding: 5px; position: fixed; text-align: center; background-color: #ba9d37; border-radius: 4px; right: 2; top: 2;">
+                <h5>Time Remain</h5>
+                <h5>{{timeCountdown}}</h5>
+                <button type="button" class="btn btn-success" (click)="submitAns()">KẾT THÚC BÀI LÀM</button>
             </div>
         </div>
+    </div>
 
-        <div id="btn-more" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="content_holder">
-                <a href="#">
-                    <button type="button" class="btn btn-success">KẾT THÚC BÀI LÀM</button>
-                </a>
+    <div *ngIf="isNotify">
+        <div class="row" >
+            <div class="fix-content" style="text-align: center;">
+                    <button type="button" class="btn btn-success" [routerLink]="['']">VỀ TRANG CHỦ</button>
+                    <button type="button" class="btn btn-success" (click)="actionCheckAnswer()">XEM ĐÁP ÁN</button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="checkAnswer">
+        <div class="row" >
+            <div class="fix-content">
+                <div class="pad col-xs-12 col-sm-6 col-md-6 col-lg-6" *ngFor="let q of questions; let i = index"
+                     [attr.data-index]="i">
+                    <div class="bg-les">
+                        <h4>CÂU SỐ {{i+1}}</h4>
+                        <p>{{q.question}}</p>
+                    </div>
+                    <hr>
+                    <div class="bg-les-bot" >
+                        <p *ngFor="let ans of q.anwsers">
+                            <input *ngIf="ans.ansId == q.correctAns" type="radio" name="{{q._id}}" checked>
+                            <span *ngIf="ans.ansId == q.correctAns" style="color: blue;"> {{ans.ansId}}. {{ans.ansContent}}</span>
+                            <input *ngIf="ans.ansId != q.correctAns" type="radio" name="{{q._id}}">
+                            <span *ngIf="ans.ansId != q.correctAns"> {{ans.ansId}}. {{ans.ansContent}}</span>
+                        </p>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>

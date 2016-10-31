@@ -103,6 +103,7 @@ export class DetailComponent implements OnInit {
 
     chooseAns(questionId, ansId) {
         this.userAnswer.push(new Answer(questionId, ansId));
+
     }
 
     convertTime(ticks) {
