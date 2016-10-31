@@ -1,0 +1,19 @@
+<div class="join">
+    <h2>{{titlePage}}</h2>
+    <button type="submit" (click)="gotoBook()">Tham gia</button>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <carousel [interval]="myInterval" [noWrap]="noWrapSlides">
+            <slide *ngFor="let slide of slides;let index=index" [active]="slide.active">
+                <img [src]="slide.image" (click)="gotoBook()">
+                <div class="carousel-caption">
+                    <h4>{{slide.text}}</h4>
+                    <p>{{slide.detail}}</p>
+                </div>
+            </slide>
+            <i class="fa fa-chevron-left left carousel-control"></i>
+            <i class="fa fa-chevron-right right carousel-control"></i>
+        </carousel>
+    </div>
+</div>

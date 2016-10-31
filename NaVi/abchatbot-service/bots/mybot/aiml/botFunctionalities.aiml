@@ -7,24 +7,24 @@
                 <li>Mình có thể giúp bạn làm bài tập, học từ mới, luyện nghe... Nói chung nhiều! Nhưng vui nhất là chém gió! :))</li>
                 <li>Mình có thể giúp bạn học từ vựng, ngữ pháp, luyện nghe... Và còn nhiều thứ đang được phát triển nữa!</li>
                 <li>Các tính năng của mình: Học từ mới, làm bài tập, luyện nghe... và chém gió nữa :)</li>
-                <li>Mình sẽ giúp bạn học từ mới, làm bài tập, luyện nghe. Bạn muốn làm gì giờ nhỉ? :)</li>
+                <li>Mình sẽ giúp bạn học từ mới, làm bài tập, luyện nghe. Bạn muốn làm gì giờ nhỉ? :) </li>
             </random>
         </template>
     </category>
     <category>
-        <pattern>_ có thể làm gì</pattern>
+        <pattern>_ có thể làm</pattern>
         <template>
             <srai>có thể làm gì</srai>
         </template>
     </category>
     <category>
-        <pattern>_ có thể làm gì *</pattern>
+        <pattern>_ có thể làm *</pattern>
         <template>
             <srai>có thể làm gì</srai>
         </template>
     </category>
     <category>
-        <pattern>có thể làm gì *</pattern>
+        <pattern>có thể làm *</pattern>
         <template>
             <srai>có thể làm gì</srai>
         </template>
@@ -53,14 +53,37 @@
             <srai>có thể làm gì</srai>
         </template>
     </category>
-
+    <category>
+        <pattern>_ bạn làm được *</pattern>
+        <template>
+            <srai>có thể làm gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ bạn làm được *</pattern>
+        <template>
+            <srai>có thể làm gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>bạn làm được *</pattern>
+        <template>
+            <srai>có thể làm gì</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ bạn làm được</pattern>
+        <template>
+            <srai>có thể làm gì</srai>
+        </template>
+    </category>
 
     <category>
         <pattern>hiện tại tính năng gì</pattern>
         <template>
             <random>
                 <li>Hiện tại mình đã có các tính năng: làm bài tập, học từ mới! Bạn muốn thử gì nào?</li>
-                <li>Hiện tại mình có thể giúp bạn học từ vựng, luyện từ mới và làm bài tập trắc nghiệm! Mình sẽ cập nhật thêm tính năng mới trong thời gian gần!</li>
+               <li>Hiện tại mình có thể giúp bạn học từ vựng, luyện từ mới và làm bài tập trắc nghiệm! Mình sẽ cập nhật thêm tính năng mới trong thời gian gần!</li>
                 <li>Học từ mới, làm bài tập trắc nghiệm. Bạn muốn làm gì nhỉ? Sẵn lòng phục vụ! :) </li>
             </random>
         </template>
@@ -85,9 +108,9 @@
     </category>
     <category>
         <pattern>bạn có tính năng gì</pattern>
-        <template>
-            <srai>hiện tại tính năng gì</srai>
-        </template>
+       <template>
+           <srai>hiện tại tính năng gì</srai>
+       </template>
     </category>
 
     <category>

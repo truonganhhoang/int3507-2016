@@ -1,0 +1,66 @@
+.join {
+    text-align: center;
+}
+
+.join > button {
+    color: white;
+    background-color: blue;
+}
+
+.row {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.carousel-caption {
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-indicators > ol, li {
+    list-style: none;
+}
+
+.carousel-indicators > ol, li{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    z-index: -1 !important;
+    display: none !important;
+}
+
+carousel img {
+    display: block;
+    width: max-content;
+    height: 450px;
+    text-align: center;
+}
+
+.carousel-caption {
+    overflow: hidden;
+    font-size: 14px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    text-align: center;
+    color:white;
+    background-color: dodgerblue;
+    text-transform: uppercase;
+}
+
+.carousel-caption > h4 {
+    margin-bottom: 20px;
+}
+
+.fa-chevron-left:before {
+    position: absolute;
+    top: 46%;
+    left : 50px;
+}
+.fa-chevron-right:before {
+    position: absolute;
+    top: 46%;
+    right : 50px;
+}

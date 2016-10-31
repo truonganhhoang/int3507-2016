@@ -1,0 +1,41 @@
+.container .join > h1 {
+    margin-top: 0px;
+}
+
+.join {
+    text-align: center;
+}
+
+.join > button {
+    color: white;
+    background-color: blue;
+}
+
+.wrapper{
+    width: 80%;
+    margin: 10px auto;
+}
+
+.container-fluid {
+    background-color: dodgerblue;
+    color: white;
+}
+
+nav li {
+    list-style-type: none;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+nav a:hover {
+  color: white;
+  background-color: blue;
+}
+nav a.active {
+  color: #fff;
+  background-color: blue;
+}
+
+nav a {
+    color: snow;
+}

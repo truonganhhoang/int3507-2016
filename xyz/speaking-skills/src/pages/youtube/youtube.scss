@@ -1,0 +1,25 @@
+page-youtube {
+	.item-md.item-block .item-inner {
+		border-bottom: none;
+	}
+	.item-block.item {
+		border-bottom: 1px solid #dedede;
+	}
+	.item-md ion-avatar[item-left], .item-md ion-thumbnail[item-left] {
+		margin: 16px 16px 0 0;
+		&:hover {
+			cursor: pointer;
+		}
+		img {
+			border-radius: 50%;
+		}
+
+	}
+	.item-md h2:hover {
+		color: #7F54D4;
+		cursor: pointer;
+	}
+	.list-md > .item-block:first-child, .list-md > .item-wrapper:first-child .item-block {
+		border-top: none;
+	}
+}

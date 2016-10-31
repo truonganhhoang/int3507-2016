@@ -1,3 +1,19 @@
+## Cwat vesion 0.4
+
+**Chat với Cwat tại:** `https://www.facebook.com/cwat.seewhat/`
+
+**New features**
+
+- User can view the profile from menu.
+![profile](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/profile.PNG)
+
+- User can follow to the learn process with menu of Cwat.
+![learn-process](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/learn-process.PNG)
+
+- User can set time of notification to menu with Cwat.
+![setting notification](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/setting%20notification.PNG)
+
+
 ## Cwat version 0.3
 
 **New features**

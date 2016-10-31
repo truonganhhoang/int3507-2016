@@ -1,0 +1,13 @@
+.container ul li {
+  list-style-type: none;
+}
+
+.container ul {
+      padding: 17px;
+}
+
+.container .choose {
+  margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
