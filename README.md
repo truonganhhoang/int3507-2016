@@ -15,7 +15,7 @@ Liên kết đến sản phẩm của các nhóm:
 
 | Tên nhóm | Liên kết  |
 |---|---|
-| Duo | https://play.google.com/store/apps/details?id=com.saokhuee.sachmem  |
+| Duo | [Google Play](https://play.google.com/store/apps/details?id=com.saokhuee.sachmem)<br/>[Hướng dẫn sử dụng](https://github.com/fiser-khoanv11/int3507-2016/tree/master/Duo)|
 | FRIES  | http://v2.uetf.me/ |
 | NaVi  | - Link chatbot: https://www.facebook.com/cwat.seewhat/ <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/README.md)|
 | DTQ  | - Link chatbot: [tại đây](https://www.facebook.com/Learning-English-Bot-302820536747403/) <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/truonganhhoang/int3507-2016/tree/master/DTQ)|

@@ -37,4 +37,4 @@ Trong phần Play có các dạng trò chơi khác nhau. Nhấn biểu tượng 
 
 Nhấn biểu tượng "Review" để xem lại các từ đã học trong sách.
 
-<img src="https://raw.githubusercontent.com/fiser-khoanv11/int3507-2016/master/Duo/instruction/sc07.png" width="250">
+<img src="https://raw.githubusercontent.com/fiser-khoanv11/int3507-2016/master/Duo/instruction/sc08.png" width="250">
