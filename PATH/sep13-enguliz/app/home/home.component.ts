@@ -3,10 +3,11 @@
  */
 
 import {Component, OnInit} from "@angular/core";
-import {ListenService} from "../theory/listen.service";
-import {Listen} from "../theory/listen.model";
 import {HomeService} from "./home.service";
 import {Category} from "./category.model";
+import {UserService} from "../user/user.service";
+import {User} from "../user/user.model";
+import {Router} from "@angular/router";
 
 @Component({
     templateUrl: 'app/home/home.component.html',
@@ -16,11 +17,14 @@ import {Category} from "./category.model";
 export class HomeComponent implements OnInit {
     private loggedIn = false;
 
-    auth_token = '';
+    user: User;
+    email = '';
 
     categories : Category[];
 
-    constructor(private service: HomeService) {
+    constructor(
+        private service: HomeService,
+        private router: Router) {
         this.loggedIn = !!localStorage.getItem('auth_token');
     }
 
@@ -38,10 +42,15 @@ export class HomeComponent implements OnInit {
         return this.loggedIn;
     }
 
-    ngOnInit() {
-        if (this.isLoggedIn()) {
-            this.auth_token = localStorage.getItem('auth_token');
+    detailsAction(unitId) {
+        if(this.loggedIn) {
+            this.router.navigate(['/details', unitId]);
+        } else {
+            this.router.navigate(['/login']);
         }
+    }
+
+    ngOnInit() {
         this.loadHomeDatas();
     }
 }

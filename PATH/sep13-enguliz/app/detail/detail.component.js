@@ -15,27 +15,39 @@ var core_1 = require("@angular/core");
 var detail_service_1 = require("./detail.service");
 var router_1 = require("@angular/router");
 var Rx_1 = require("rxjs/Rx");
+var answer_model_1 = require("./answer.model");
 var DetailComponent = (function () {
-    function DetailComponent(route, service) {
+    function DetailComponent(router, route, service) {
+        this.router = router;
         this.route = route;
         this.service = service;
-        this.title = '';
-        this.subTitle = '';
-        this.views = 0;
-        this.thumbnail = '';
         this.isTest = false;
-        this.ticks = 0;
         this.isNotify = false;
+        this.checkAnswer = false;
+        this.loggedIn = false;
+        this.ticks = 999999999999;
+        this.userAns = {};
+        this.userAnswer = [];
+        this.correctNumber = 0;
+        this.loggedIn = !!localStorage.getItem('auth_token');
+        if (this.loggedIn) {
+        }
+        else {
+            this.router.navigate(['/login']);
+        }
     }
     DetailComponent.prototype.loadDetailsData = function (id) {
         var _this = this;
         this.service.getDetailsData(id)
             .subscribe(function (body) {
             _this.unit = body;
-            _this.title = _this.unit.unitTitle;
-            _this.subTitle = _this.unit.unitSubTitle;
-            _this.views = _this.unit.unitViews;
-            _this.thumbnail = _this.unit.unitThumbnail;
+            _this.unitTitle = _this.unit.unitTitle;
+            _this.unitSubTitle = _this.unit.unitSubTitle;
+            _this.unitViews = _this.unit.unitViews;
+            _this.unitType = _this.unit.unitType;
+            _this.unitTime = _this.unit.unitTime;
+            _this.unitThreads = _this.unit.unitThreads;
+            _this.questions = _this.unit.question;
         }, function (err) {
             console.log(err);
         });
@@ -44,14 +56,51 @@ var DetailComponent = (function () {
         var _this = this;
         this.isTest = true;
         this.isNotify = false;
-        var timer = Rx_1.Observable.timer(0, 999).take(11);
-        timer.subscribe(function (t) {
-            if (t >= 10) {
+        var timer = Rx_1.Observable.timer(0, 999).take(this.unit.unitTime / 1000);
+        this.sub = timer.subscribe(function (t) {
+            if (_this.ticks <= 1) {
                 _this.isTest = false;
                 _this.isNotify = true;
             }
-            _this.ticks = t;
+            _this.ticks = _this.unit.unitTime / 1000 - t;
+            _this.timeCountdown = _this.convertTime(_this.ticks);
         });
+    };
+    DetailComponent.prototype.isLoggedIn = function () {
+        return this.loggedIn;
+    };
+    DetailComponent.prototype.submitAns = function () {
+        var _this = this;
+        this.isTest = false;
+        this.isNotify = true;
+        var auth_token = localStorage.getItem('auth_token');
+        var data = new UserAnswer(this.unit.unitTime / 1000 - this.ticks, this.userAnswer);
+        this.service.submitAns(auth_token, this.unit._id, JSON.stringify(data))
+            .subscribe(function (data) {
+            _this.sub.unsubscribe();
+        }, function (err) { return console.log(JSON.stringify(err)); });
+        this.ticks = 99999999999;
+    };
+    DetailComponent.prototype.chooseAns = function (questionId, ansId) {
+        this.userAnswer.push(new answer_model_1.Answer(questionId, ansId));
+    };
+    DetailComponent.prototype.convertTime = function (ticks) {
+        var minute = 0;
+        var second = 0;
+        if (ticks >= 60 && ticks < 3600) {
+            minute = Math.floor(ticks / 60);
+            second = ticks % 60;
+            return minute + " phút " + second + " giây";
+        }
+        else {
+            return ticks + " giây";
+        }
+    };
+    DetailComponent.prototype.actionCheckAnswer = function () {
+        this.checkAnswer = true;
+        for (var i = 0; i < this.unit.question.length; i++) {
+            this.correctNumber++;
+        }
     };
     DetailComponent.prototype.ngOnInit = function () {
         var _this = this;
@@ -66,9 +115,17 @@ var DetailComponent = (function () {
             templateUrl: 'app/detail/detail.component.html',
             providers: [detail_service_1.DetailService]
         }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute, detail_service_1.DetailService])
+        __metadata('design:paramtypes', [router_1.Router, router_1.ActivatedRoute, detail_service_1.DetailService])
     ], DetailComponent);
     return DetailComponent;
 }());
 exports.DetailComponent = DetailComponent;
+var UserAnswer = (function () {
+    function UserAnswer(time, answer) {
+        this.time = time;
+        this.answer = answer;
+    }
+    return UserAnswer;
+}());
+exports.UserAnswer = UserAnswer;
 //# sourceMappingURL=detail.component.js.map

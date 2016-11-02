@@ -7,21 +7,27 @@ import {TheoryComponent} from "./theory/theory.component";
 import {TestComponent} from "./test/test.component";
 import {TestReadCompoent} from "./test/read/test.component";
 import {DetailComponent} from "./detail/detail.component";
+import {RegisterComponent} from "./login/register.component";
+import {ProfileComponent} from "./profile/profile.component";
+import {GrammarComponent} from "./grammar/grammar.component";
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, pathMatch: 'full'},
     { path: 'login', component: LoginComponent},
+    { path: 'grammar', component: GrammarComponent},
     { path: 'theory', component: TheoryComponent,
-    children: [
-            { path: '', redirectTo: 'listen', pathMatch: 'full'},
-            { path: 'listen', component: TheoryListenComponent}
-        ]
+        children: [
+                { path: '', redirectTo: 'listen', pathMatch: 'full'},
+                { path: 'listen', component: TheoryListenComponent}
+            ]
     },
     { path: 'test', component: TestComponent, children: [
             { path: 'read', component: TestReadCompoent }
         ]
     },
-    { path: 'detail/:id', component: DetailComponent }
+    { path: 'details/:id', component: DetailComponent },
+    { path: 'register', component: RegisterComponent },
+    { path: 'profile', component: ProfileComponent },
 ];
 
 export const appRoutingProvider: any[] = [

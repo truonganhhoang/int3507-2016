@@ -1,21 +1,31 @@
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6 col-md-4 col-md-offset-4">
-            <h1 class="text-center login-title">SIGN IN</h1>
-            <div class="account-wall">
-                <form class="form-signin" (submit)="actionLogin(username.value, password.value)">
-                    <div class="form-group">
-                        <input type="text" #username class="form-control" placeholder="Email" required autofocus>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" #password class="form-control" placeholder="Password" required>
-                    </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">
-                        Sign in</button>
-                    <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
-                </form>
+<section id="register">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+
             </div>
-            <a href="#" class="text-center new-account">Create an account </a>
+            <div class="col-md-6 fix">
+                <div class="form-res">
+                    <hr>
+                    <h3>Đăng nhập tài khoản của bạn</h3>
+                    <p>Đăng nhập để nhận được các thông tin của Enguliz</p>
+                    <form (submit)="actionLogin(email.value, pass.value)">
+                        <div class="fix-form">
+                            <div class="form-group">
+                                <input type="text" #email class="form-control" placeholder="Email của bạn">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" #pass class="form-control" placeholder="Mật khẩu">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Đăng nhập ngay</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-3">
+
+            </div>
         </div>
     </div>
-</div>
+</section>

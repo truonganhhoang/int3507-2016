@@ -1,14 +1,23 @@
 <html>
 <head>
-    <title>Angular 2 QuickStart</title>
-    <meta charset="UTF-8">
+    <title>Enguliz</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <base href="/">
 
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap-3.1.1.min.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/newstyle.css">
+    <link rel="stylesheet" href="css/responsive.css">
 
+    <!--<link href='http://fonts.googleapis.com/css?family=Oswald:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' rel='stylesheet'>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+
+    <!--<script src="https://use.fontawesome.com/dc0b83fc41.js"></script>-->
     <!-- 1. Load libraries -->
     <!-- Polyfill(s) for older browsers -->
     <script src="node_modules/core-js/client/shim.min.js"></script>
@@ -19,12 +28,34 @@
     <script src="systemjs.config.js"></script>
     <script>
         System.import('app').catch(function (err) {
-              console.error(err);
+            console.error(err);
         });
     </script>
+
 </head>
 <!-- 3. Display the application -->
 <body>
-<my-app>Loading...</my-app>
+<div class="main">
+<my-app>
+    <div style="text-align: center;">
+        <h3>Loading...</h3>
+        <i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i>
+    </div>
+</my-app>
+</div>
+<script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+<script type="text/javascript" src="js/skinable_tabs.min.js"></script>
+<script type="text/javascript">
+    $('.tabs_holder').skinableTabs({
+        effect: 'basic_display',
+        skin: 'skin10',
+        position: 'top'
+    });
+</script>
+<!-------------------- JS -------------------->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
 </body>
 </html>

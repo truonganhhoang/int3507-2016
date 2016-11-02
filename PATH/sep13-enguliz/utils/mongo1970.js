@@ -52,11 +52,11 @@ module.exports = {
             db.close();
         });
     },
-    remove: (col, where) => {
+    remove: (col, where, callback) => {
         MongoClient.connect(URI, (err, db) => {
             if(err) { return console.dir(err); }
             var collection = db.collection(col);
-            collection.removeOne(where, {w:1}, (err, result) => {});
+            collection.removeOne(where, {w:1}, (err, result) => { callback(result); });
         });
     },
     dropTable: (col) => {

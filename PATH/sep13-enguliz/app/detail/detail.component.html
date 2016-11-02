@@ -1,56 +1,103 @@
-<div class="container">
-    <div style="width: 100%;text-align: center;">
-        <h3>{{title}}</h3>
-        <img alt="" width="30%" height="30%" src="{{thumbnail}}"><br>
-        <span>{{subTitle}}</span><br>
-        <p>Time: 30'</p>
-        <button class="btn btn-primary" (click)="startTesting()">Start</button>
+<section id="courselesson">
+    <div class="row">
+        <div class="cs_bg">
+            <div class="fix-pad">
+                <h2>{{unitTitle}}</h2>
+                <p>{{unitSubTitle}}</p>
+                <div class="pad">
+                    <a href="#">
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                        <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                    </a>
+                    <span class="span">&nbsp;4.9 (321)</span>
+                    <span class="regit">{{unitViews}} người đã tham gia</span>
+                    <span>Thời gian: {{convertTime(unitTime / 1000)}}</span>
+                </div>
+                <div>
+                    <span>Chuyên mục: <a class="cate_menu" href="">{{unitType}}</a></span>
+                </div>
+            </div>
+            <hr>
+            <div class="fix-pad">
+                <div class="fix-pad-top">
+                    <div class="img">
+                        <img src="../../images/imgs/img-01.png" alt="">
+                    </div>
+                    <div class="author">
+                        <p>{{unitThreads}}</p>
+                    </div>
+                </div>
+            </div>
+        </div> <!--and cs_bg-->
     </div>
 
-    <div *ngIf="isTest === true">
-        <h3>Bắt đầu làm bài</h3>
+    <div style="text-align: center;padding-top: 20px;" *ngIf="!isTest && !isNotify">
+        <button class="btn btn-primary" (click)="startTesting()">Bắt đầu làm bài</button>
+    </div>
 
-        <h2>Thời gian làm bài: {{ticks}}</h2>
+    <div *ngIf="isTest">
 
-        <div>
-            <ol>
-                <li>Đây là 1 câu hỏi ?
-                    <ul>
-                        <li><input type="radio" name="cau1">A. Đáp án 1</li>
-                        <li><input type="radio" name="cau1">B. Đáp án 2</li>
-                        <li><input type="radio" name="cau1">C. Đáp án 3</li>
-                        <li><input type="radio" name="cau1">D. Đáp án 4</li>
-                    </ul>
-                </li>
-                <li>Đây là 2 câu hỏi ?
-                    <ul>
-                        <li><input type="radio" name="cau2">A. Đáp án 1</li>
-                        <li><input type="radio" name="cau2">B. Đáp án 2</li>
-                        <li><input type="radio" name="cau2">C. Đáp án 3</li>
-                        <li><input type="radio" name="cau2">D. Đáp án 4</li>
-                    </ul>
-                </li>
-                <li>Đây là 3 câu hỏi ?
-                    <ul>
-                        <li><input type="radio" name="cau3">A. Đáp án 1</li>
-                        <li><input type="radio" name="cau3">B. Đáp án 2</li>
-                        <li><input type="radio" name="cau3">C. Đáp án 3</li>
-                        <li><input type="radio" name="cau3">D. Đáp án 4</li>
-                    </ul>
-                </li>
-                <li>Đây là 4 câu hỏi ?
-                    <ul>
-                        <li><input type="radio" name="cau4">A. Đáp án 1</li>
-                        <li><input type="radio" name="cau4">B. Đáp án 2</li>
-                        <li><input type="radio" name="cau4">C. Đáp án 3</li>
-                        <li><input type="radio" name="cau4">D. Đáp án 4</li>
-                    </ul>
-                </li>
-            </ol>
+        <div class="row" >
+
+            <div class="fix-content">
+                <div class="pad col-xs-12 col-sm-6 col-md-6 col-lg-6" *ngFor="let q of questions; let i = index"
+                     [attr.data-index]="i">
+                    <div class="bg-les">
+                        <h4>CÂU SỐ {{i+1}}</h4>
+                        <p>{{q.question}}</p>
+                    </div>
+                    <hr>
+                    <div class="bg-les-bot">
+                        <p *ngFor="let ans of q.anwsers"><input type="radio" name="{{q._id}}"
+                                                                (click)="chooseAns(q._id, ans.ansId)">
+                            {{ans.ansId}}. {{ans.ansContent}}<label></label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding: 5px; position: fixed; text-align: center; background-color: #ba9d37; border-radius: 4px; right: 2; top: 2;">
+                <h5>Time Remain</h5>
+                <h5>{{timeCountdown}}</h5>
+                <button type="button" class="btn btn-success" (click)="submitAns()">KẾT THÚC BÀI LÀM</button>
+            </div>
         </div>
     </div>
 
-    <div *ngIf="isNotify === true">
-        <h3>Hết giờ làm bài</h3>
+    <div *ngIf="isNotify">
+        <div class="row" >
+            <div class="fix-content" style="text-align: center;">
+                    <button type="button" class="btn btn-success" [routerLink]="['']">VỀ TRANG CHỦ</button>
+                    <button type="button" class="btn btn-success" (click)="actionCheckAnswer()">XEM ĐÁP ÁN</button>
+            </div>
+        </div>
     </div>
-</div>
+
+    <div *ngIf="checkAnswer">
+        <div class="row" >
+            <div class="fix-content">
+                <div class="pad col-xs-12 col-sm-6 col-md-6 col-lg-6" *ngFor="let q of questions; let i = index"
+                     [attr.data-index]="i">
+                    <div class="bg-les">
+                        <h4>CÂU SỐ {{i+1}}</h4>
+                        <p>{{q.question}}</p>
+                    </div>
+                    <hr>
+                    <div class="bg-les-bot" >
+                        <p *ngFor="let ans of q.anwsers">
+                            <input *ngIf="ans.ansId == q.correctAns" type="radio" name="{{q._id}}" checked>
+                            <span *ngIf="ans.ansId == q.correctAns" style="color: blue;"> {{ans.ansId}}. {{ans.ansContent}}</span>
+                            <input *ngIf="ans.ansId != q.correctAns" type="radio" name="{{q._id}}">
+                            <span *ngIf="ans.ansId != q.correctAns"> {{ans.ansId}}. {{ans.ansContent}}</span>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="hr"></div>
