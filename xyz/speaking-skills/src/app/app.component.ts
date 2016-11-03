@@ -7,6 +7,7 @@ import { Category } from '../pages/category/category';
 import { Google } from '../pages/google/google'
 import { Sing } from '../pages/sing/sing';
 import { MySong } from '../pages/my-song/my-song';
+//import { Page1 } from '../pages/page1/page1';
 
 @Component({
   templateUrl: 'app.html'
@@ -26,6 +27,7 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
+      
       { title: 'Category', component: Category },
       // { title: 'Youtube', component: Youtube },
       { title: 'My Drive', component: Google },

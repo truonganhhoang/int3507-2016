@@ -19,9 +19,9 @@
 <ion-content padding>
   <ion-item *ngIf="arrSong.length == 0">You don't have any record.</ion-item>
   <ion-list>
-    <ion-item *ngFor="let item of arrSong">
-       <ion-icon name="play" (click)="playAudio(item)" *ngIf="!item['isPlay']"></ion-icon> 
-       <ion-icon name="pause" (click) = "stopAudio(item)" *ngIf="item['isPlay']"></ion-icon>
+    <ion-item *ngFor="let item of arrSong" (click)="touchRecord(item,item['isPlay'])">
+       <ion-icon name="play" *ngIf="!item['isPlay']"></ion-icon> 
+       <ion-icon name="pause" *ngIf="item['isPlay']"></ion-icon>
        &nbsp;{{item.title}}
     </ion-item>
   </ion-list>
