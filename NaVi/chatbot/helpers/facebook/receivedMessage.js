@@ -79,6 +79,9 @@ module.exports = function receivedMessage(event) {
             else if (reply && reply.context === 'LI') {
                 require('../fnListening/handleTextReplyAction')(senderID, messageText, event);
             }
+            else if (reply && reply.context === 'TW') {
+                require('../fnTests/handleTextReplyAction')(senderID, messageText, event);
+            }
             else {
                 // hard code the command to enter fnPronunciation
                 let
@@ -94,11 +97,19 @@ module.exports = function receivedMessage(event) {
                         break;
                     }
                 }
+
+                var testIntentSignal = 'test';
+
                 if (pronunciationIntentFlag != 0) {
                     var speechContent = messageText.substring(pronunciationIntentFlag + 1, messageText.length);
                     require('../fnPronunciation/sendAudio')(senderID, speechContent);
                 }
                 // End of fnPronunciation
+                else if (messageText.toLowerCase().indexOf(testIntentSignal) != -1) {
+                    // enter test functionality
+                    require('../fnTests/sendNewWordTest')(senderID);
+                }
+                // End of fnTests
                 else {
                     require('../intentClassification/getIntentClassification')(messageText, function (err, response) {
                         // Save the new context to redis
