@@ -5,4 +5,4 @@ Nhóm 4C bao gồm các thành viên:
 + Nông Thành Công
 + Nguyễn Ngọc Duy
 
-Tìm hiểu về Alexa Skill và sử dụng Nodejs để cài đặt
+Tìm hiểu về Alexa Skill 

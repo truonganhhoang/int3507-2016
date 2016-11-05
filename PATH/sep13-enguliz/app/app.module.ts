@@ -13,6 +13,7 @@ import {TheoryComponent} from "./theory/theory.component";
 import {HttpModule, JsonpModule} from "@angular/http";
 import {TestComponent} from "./test/test.component";
 import {TestReadCompoent} from "./test/read/test.component";
+import {DetailComponent} from "./detail/detail.component";
 
 @NgModule({
     imports: [
@@ -29,7 +30,8 @@ import {TestReadCompoent} from "./test/read/test.component";
         TheoryComponent,
         TheoryListenComponent,
         TestComponent,
-        TestReadCompoent
+        TestReadCompoent,
+        DetailComponent
     ],
     providers: [
         appRoutingProvider

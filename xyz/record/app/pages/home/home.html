@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Ionic 2 Audio Recorder</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <h2>Welcome to our demo app!</h2>
+  <div class="row">
+    <button (click)="startRecord()" class="btn-start-recording">
+      <ion-icon name="mic"></ion-icon>
+      Record
+    </button>
+    <button class="btn-stop-recording" (click)="stopRecord()">
+      <ion-icon name="mic-off"></ion-icon>
+      Stop
+      </button>
+    <button class="btn-play-audio"(click)="play()">
+      <ion-icon name="play"></ion-icon>
+      Play
+    </button>
+    <button class="btn btn-warning" (click)="save()">
+      <ion-icon name="cloud-upload"></ion-icon>
+      Upload
+    </button>
+  </div>
+</ion-content>

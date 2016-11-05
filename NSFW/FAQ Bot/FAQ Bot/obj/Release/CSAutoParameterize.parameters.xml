@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="BotDataEntities-Web.config Connection String" description="BotDataEntities Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.BotData.csdl|res://*/Models.BotData.ssdl|res://*/Models.BotData.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\BotData.mdf;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="d:\\documents\\visual\ studio\ 2015\\Projects\\FAQ\ Bot\\FAQ\ Bot\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BotDataEntities']/@connectionString" />
+  </parameter>
+  <parameter name="BotDataEntities1-Web.config Connection String" description="BotDataEntities1 Connection String used in web.config by the application to access the database." defaultValue="metadata=res://*/Models.BotData.csdl|res://*/Models.BotData.ssdl|res://*/Models.BotData.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\BotData.mdf;integrated security=True;multipleactiveresultsets=True;application name=EntityFramework&quot;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="d:\\documents\\visual\ studio\ 2015\\Projects\\FAQ\ Bot\\FAQ\ Bot\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BotDataEntities1']/@connectionString" />
+  </parameter>
+</parameters>
