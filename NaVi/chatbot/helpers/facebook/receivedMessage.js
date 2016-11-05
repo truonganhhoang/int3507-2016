@@ -55,6 +55,16 @@ module.exports = function receivedMessage(event) {
                     require('../fnListening/sendListeningChallenge')(senderID);
                 }
             }
+            else if (action === 'FUNCTEST') {
+                let functionToBeFired = payload.split('_')[1];
+                if (functionToBeFired === 'NW') {
+                    require('../fnNewWords/sendNewWord')(senderID);
+                } else if (functionToBeFired === 'MC') {
+                    require('../fnMutipleChoices/sendQuestion')(senderID);
+                } else if (functionToBeFired === 'LI') {
+                    require('../fnListening/sendListeningChallenge')(senderID);
+                }
+            }
         }
     }
 
