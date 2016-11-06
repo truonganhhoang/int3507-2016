@@ -163,30 +163,25 @@ export class Record implements OnInit {
   }
 
   uploadDrive() {
-    alert('upload');
     var callback;
     const boundary = '-------314159265358979323846';
     const delimiter = "\r\n--" + boundary + "\r\n";
     const close_delim = "\r\n--" + boundary + "--";
-   
-    // File.readAsBinaryString(cordova.file.externalRootDirectory,'badminton.mp3').then( res => {
-    //    var contentType = 'audio/mp3' || 'application/octet-stream';
-    //   var metadata = {
-    //     'title': 'badminton.mp3',
-    //     'mimeType': contentType
-    //   };
-
-    //   alert('binarystring' + res);
-    // })
 
     File.readAsDataURL(cordova.file.externalRootDirectory,'badminton.mp3').then( res => {
+      res = res.toString();
+      let baseStr = ";base64,";
+      var index = res.indexOf(';base64,')+ baseStr.length;
+      res = res.substring(index);
+       alert(res);
+
       var contentType = 'audio/mp3' || 'application/octet-stream';
       var metadata = {
         'title': 'badminton.mp3',
         'mimeType': contentType
       };
 
-       var base64Data = res;
+      var base64Data = res;
       var multipartRequestBody =
           delimiter +
           'Content-Type: application/json\r\n\r\n' +
@@ -198,10 +193,8 @@ export class Record implements OnInit {
           base64Data +
           close_delim;
 
-         alert('bbbb');
-
+ 
         gapi.client.load('drive', 'v2', () => {
-          alert('load done');
           var request = gapi.client.request({
             'path': '/upload/drive/v2/files?access_token=' + this.access_token,
             'method': 'POST',
@@ -218,10 +211,7 @@ export class Record implements OnInit {
               };
             }
             request.execute(callback);
-
         });
-
-            alert('dataURL' + res);
 
       })
 

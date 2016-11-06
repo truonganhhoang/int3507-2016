@@ -114,10 +114,10 @@ export class Google implements OnInit {
         'title': fileName,
         'mimeType': contentType,
         'parents':[{"id":this.idFolder}]
-
       };
 
       var base64Data = btoa(reader.result);
+      console.log(base64Data);
       var multipartRequestBody =
           delimiter +
           'Content-Type: application/json\r\n\r\n' +

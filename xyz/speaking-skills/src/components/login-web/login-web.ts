@@ -40,6 +40,7 @@ export class LoginWeb implements OnInit, AfterViewChecked {
           if (isSignedIn) {
             this.isLogin = true;
             this.appGlobals.setLoginStatus(true);
+            this.appGlobals.setAccessToken(googleUser.getAuthResponse().access_token);
 
             var res =  googleUser.getBasicProfile();
             this.profile['displayName'] = res.getName();

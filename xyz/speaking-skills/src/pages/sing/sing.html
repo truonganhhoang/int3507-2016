@@ -41,29 +41,7 @@
         </ion-option>
       </ion-select>
     </ion-item>
-<!--
-<<<<<<< HEAD
-  </ion-list>
 
-  <ion-list radio-group [(ngModel)]="singType">
-    <ion-item class="singType">
-      <ion-label>Song without Lyrics</ion-label>
-      <ion-radio value="karaoke" checked></ion-radio>
-    </ion-item>
-    <ion-item class="singType">
-      <ion-label>Song with Lyrics</ion-label>
-      <ion-radio value="lyric"></ion-radio>
-    </ion-item>
-  </ion-list>
-
-  <div padding>
-    <button ion-button light block (click)="getVideos()">Search</button>
-  </div>
-
-   <ion-list>
-=======
--->
-  
   <ion-list>
     <ion-item *ngFor="let video of videos" (click)="playVideo(video)" >
       <ion-thumbnail item-left>

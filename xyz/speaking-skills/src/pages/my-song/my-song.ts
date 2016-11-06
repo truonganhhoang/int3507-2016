@@ -20,6 +20,7 @@ export class MySong implements OnInit, OnDestroy {
 
   arrSong: Object[] = [];
   audio: MediaPlugin;
+  duration: any;
 
   constructor(public navCtrl: NavController, private songService: SongService) {}
 
@@ -58,20 +59,29 @@ export class MySong implements OnInit, OnDestroy {
     this.audio.play();
   }
 
+  stopAudio(item) {
+    item['isPlay'] = false;
+    this.audio.stop();
+
+    // get file duration
+   // this.duration = this.secondsToHms(this.audio.getDuration());
+  }
+
   touchRecord(item, isPlay) {
     if(!isPlay) this.playAudio(item);
     else this.stopAudio(item);
   }
 
-  stopAudio(item) {
-    item['isPlay'] = false;
-    this.audio.stop();
-  }
-
-   private getPathFile(name: String): string {
+  private getPathFile(name: String): string {
     let path: string = cordova.file.externalApplicationStorageDirectory;
     return path + name + '.mp3';
   }
 
+  secondsToHms(d) {
+  d = Number(d);
+  var h = Math.floor(d / 3600);
+  var m = Math.floor(d % 3600 / 60);
+  var s = Math.floor(d % 3600 % 60);
+  return ((h > 0 ? h + ":" + (m < 10 ? "0" : "") : "") + m + ":" + (s < 10 ? "0" : "") + s); }
 
 }

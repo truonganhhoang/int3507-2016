@@ -32,9 +32,11 @@ export class VideoPlayer {
   private _pathFile: string;
   idFolder: String;
   access_token: String;
+  isLogin: boolean = false;
 
   constructor(public navCtrl: NavController, 
-   private songService: SongService, private driveService: DriveService, private appGlobals: AppGlobals,
+   private songService: SongService, private driveService: DriveService, 
+   private appGlobals: AppGlobals,
    private navParams: NavParams, private domSanitizer: DomSanitizer, platform: Platform) {
   	this.platform = platform;
     this.video = this.navParams.get('video');
@@ -44,7 +46,14 @@ export class VideoPlayer {
   ngOnInit() {
     this.appGlobals.access_token.subscribe(value => {
       this.access_token = value;
-      //alert(this.access_token);
+      if(value != '') {
+        this.isLogin = true;
+      }
+
+      this.driveService.getIdFolderSpeak(this.access_token).then(res => {
+        this.idFolder = res;
+      });
+
     });
   }
 
@@ -58,7 +67,6 @@ export class VideoPlayer {
   }
 
   stopRecord() {
-    //stop video
     this.isEnd = true;
     document.getElementById("video-player")['contentWindow'].postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
     if (!this.platform.is('cordova')) return;
@@ -73,60 +81,69 @@ export class VideoPlayer {
   }
 
   playRecord() {
-    //alert(this._pathFile);
     if (!this.platform.is('cordova')) return;
     this._fileRecord = new MediaPlugin(this._pathFile);
     this._fileRecord.play();
   }
 
-  getIdFolderSpeak() {
-    gapi.client.load('drive', 'v2', () => {
-        var request = gapi.client.request({
-          path : 'https://www.googleapis.com/drive/v2/files?access_token=' + this.access_token,
-          method : 'GET',
-          params : {
-            q: "title = 'Speaking' and trashed = false"
-          }
-        });
-
-        request.execute((response) => {
-          if(response.items.length == 0 ) { 
-            alert('chưa có folder');
-            return false;
-          } else {
-            for(var i = 0; i < response.items.length; i++) {
-              if (response.items[i].title == 'Speaking') {
-                alert('đã có folder');
-                this.idFolder = response.items[i].id;
-                alert('idFolder'+this.idFolder);
-              }
-            }      
-            
-          }
-         
-        });
-      });
-  }
-
   uploadDrive() {
-    let title: string = this.video['snippet']['title'];
-    alert(title);
-    alert(this.idFolder);
+    if (this.access_token == '' ) { 
+      alert('Please login to upload'); 
+      return;
+    }
+    var name = this.video['id']['videoId'] + '.mp3';
+    var callback;
+    const boundary = '-------314159265358979323846';
+    const delimiter = "\r\n--" + boundary + "\r\n";
+    const close_delim = "\r\n--" + boundary + "--";
 
-    //Tạo folder mới nếu chưa có folder Speaking của app
-    this.driveService.checkFolderExist(this.access_token).then(res => {
-      console.log(res);
-      if (res == false) {
-        this.driveService.createNewFolder(this.access_token);
-      }
-    });
-   // this.insertFile();
-    
-  }
+    File.readAsDataURL(cordova.file.externalApplicationStorageDirectory, name).then( res => {
+      res = res.toString();
+      let baseStr = ";base64,";
+      var index = res.indexOf(';base64,')+ baseStr.length;
+      res = res.substring(index);
 
-  insertFile() {
-   
-    
+      var contentType = 'audio/mp3' || 'application/octet-stream';
+      var metadata = {
+        'title': this.video['snippet']['title'],
+        'mimeType': contentType,
+        'parents':[{"id": this.idFolder}]
+      };
+
+      var base64Data = res;
+      var multipartRequestBody =
+          delimiter +
+          'Content-Type: application/json\r\n\r\n' +
+          JSON.stringify(metadata) +
+          delimiter +
+          'Content-Type: ' + contentType + '\r\n' +
+          'Content-Transfer-Encoding: base64\r\n' +
+          '\r\n' +
+          base64Data +
+          close_delim;
+
+ 
+        gapi.client.load('drive', 'v2', () => {
+          var request = gapi.client.request({
+            'path': '/upload/drive/v2/files?access_token=' + this.access_token,
+            'method': 'POST',
+            'params': {'uploadType': 'multipart'},
+            'headers': {
+              'Content-Type': 'multipart/mixed; boundary="' + boundary + '"'
+            },
+            'body': multipartRequestBody});
+            
+            if (!callback) {
+              callback = function(file) {
+                alert(file);
+                alert('upload success');
+              };
+            }
+            request.execute(callback);
+        });
+
+      })
+
   }
 
   ionViewDidLoad() {
