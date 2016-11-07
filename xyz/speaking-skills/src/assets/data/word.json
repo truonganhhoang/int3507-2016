@@ -1,0 +1,512 @@
+[
+  {
+    "id": "1",
+    "content": "badminton",
+    "meaning": "cầu lông",
+    "category_id": "1"
+  },
+  {
+    "id": "2",
+    "content": "basketball",
+    "meaning": "bóng rổ",
+    "category_id": "1"
+  },
+  {
+    "id": "3",
+    "content": "blind man's bluff",
+    "meaning": "trò chơi bịt mắt bắt dê",
+    "category_id": "1"
+  },
+  {
+    "id": "4",
+    "content": "chess",
+    "meaning": "cờ",
+    "category_id": "1"
+  },
+  {
+    "id": "5",
+    "content": "football",
+    "meaning": "bóng đá",
+    "category_id": "1"
+  },
+  {
+    "id": "6",
+    "content": "hide-and-seek",
+    "meaning": "trò chơi trốn tìm",
+    "category_id": "1"
+  },
+  {
+    "id": "7",
+    "content": "skating",
+    "meaning": "trượt băng/pa tanh",
+    "category_id": "1"
+  },
+  {
+    "id": "8",
+    "content": "skipping",
+    "meaning": "nhảy dây",
+    "category_id": "1"
+  },
+  {
+    "id": "9",
+    "content": "ball",
+    "meaning": "quả bóng",
+    "category_id": "1"
+  },
+  {
+    "id": "10",
+    "content": "fly kites",
+    "meaning": "thả diều",
+    "category_id": "1"
+  },
+  {
+    "id": "11",
+    "content": "skate",
+    "meaning": "trượt băng",
+    "category_id": "1"
+  },
+  {
+    "id": "12",
+    "content": "karate",
+    "meaning": "môn võ karatê",
+    "category_id": "1"
+  },
+  {
+    "id": "13",
+    "content": "table tennis",
+    "meaning": "bóng bàn",
+    "category_id": "1"
+  },
+  {
+    "id": "14",
+    "content": "skip",
+    "meaning": "nhảy dây",
+    "category_id": "1"
+  },
+  {
+    "id": "15",
+    "content": "skipping",
+    "meaning": "dây nhảy",
+    "category_id": "1"
+  },
+  {
+    "id": "16",
+    "content": "badminton",
+    "meaning": "cầu lông",
+    "category_id": "1"
+  },
+  {
+    "id": "17",
+    "content": "table tennis",
+    "meaning": "bóng bàn",
+    "category_id": "1"
+  },
+  {
+    "id": "18",
+    "content": "go skating",
+    "meaning": "đi trượt ba-tanh/trượt băng",
+    "category_id": "1"
+  },
+  {
+    "id": "19",
+    "content": "book",
+    "meaning": "quyển sách",
+    "category_id": "2"
+  },
+  {
+    "id": "20",
+    "content": "bookcase",
+    "meaning": "tủ sách",
+    "category_id": "2"
+  },
+  {
+    "id": "21",
+    "content": "classroom",
+    "meaning": "lớp học",
+    "category_id": "2"
+  },
+  {
+    "id": "22",
+    "content": "computer",
+    "meaning": "máy vi tính",
+    "category_id": "2"
+  },
+  {
+    "id": "23",
+    "content": "desk",
+    "meaning": "bàn học sinh",
+    "category_id": "2"
+  },
+  {
+    "id": "24",
+    "content": "don't talk",
+    "meaning": "đừng nói chuyện",
+    "category_id": "2"
+  },
+  {
+    "id": "25",
+    "content": "gym",
+    "meaning": "nhà đa năng, phòng tập thể dục",
+    "category_id": "2"
+  },
+  {
+    "id": "26",
+    "content": "large",
+    "meaning": "rộng",
+    "category_id": "2"
+  },
+  {
+    "id": "27",
+    "content": "library",
+    "meaning": "thư viện",
+    "category_id": "2"
+  },
+  {
+    "id": "28",
+    "content": "Miss",
+    "meaning": "cô",
+    "category_id": "2"
+  },
+  {
+    "id": "29",
+    "content": "Mr",
+    "meaning": "Thầy, Anh (ấy), Cậu (ấy), Ông (ấy)",
+    "category_id": "2"
+  },
+  {
+    "id": "30",
+    "content": "notebook",
+    "meaning": "vở ghi",
+    "category_id": "2"
+  },
+  {
+    "id": "31",
+    "content": "playground",
+    "meaning": "sân chơi",
+    "category_id": "2"
+  },
+  {
+    "id": "32",
+    "content": "rubber",
+    "meaning": "cục tẩy",
+    "category_id": "2"
+  },
+  {
+    "id": "33",
+    "content": "ruler",
+    "meaning": "thước kẻ",
+    "category_id": "2"
+  },
+  {
+    "id": "34",
+    "content": "school",
+    "meaning": "trường học",
+    "category_id": "2"
+  },
+  {
+    "id": "35",
+    "content": "school bag",
+    "meaning": "cặp sách",
+    "category_id": "2"
+  },
+  {
+    "id": "36",
+    "content": "school thing",
+    "meaning": "dụng cụ học tập",
+    "category_id": "2"
+  },
+  {
+    "id": "37",
+    "content": "do homework",
+    "meaning": "làm bài tập về nhà",
+    "category_id": "2"
+  },
+  {
+    "id": "38",
+    "content": "summer holidays",
+    "meaning": "kì nghỉ hè",
+    "category_id": "2"
+  },
+  {
+    "id": "39",
+    "content": "Teachers' Day",
+    "meaning": "ngày Nhà giáo",
+    "category_id": "2"
+  },
+  {
+    "id": "40",
+    "content": "parrot",
+    "meaning": "con vẹt",
+    "category_id": "3"
+  },
+  {
+    "id": "41",
+    "content": "kangaroo",
+    "meaning": "con chuột túi",
+    "category_id": "3"
+  },
+  {
+    "id": "42",
+    "content": "monkey",
+    "meaning": "con khỉ",
+    "category_id": "3"
+  },
+  {
+    "id": "43",
+    "content": "tiger",
+    "meaning": "con hổ",
+    "category_id": "3"
+  },
+  {
+    "id": "44",
+    "content": "gorilla",
+    "meaning": "con khỉ đột",
+    "category_id": "3"
+  },
+  {
+    "id": "45",
+    "content": "python",
+    "meaning": "con trăn",
+    "category_id": "3"
+  },
+  {
+    "id": "46",
+    "content": "swan",
+    "meaning": "con thiên nga",
+    "category_id": "3"
+  },
+  {
+    "id": "47",
+    "content": "crow",
+    "meaning": "con quạ",
+    "category_id": "3"
+  },
+  {
+    "id": "48",
+    "content": "fox",
+    "meaning": "con cáo",
+    "category_id": "3"
+  },
+  {
+    "id": "49",
+    "content": "elephant",
+    "meaning": "con voi",
+    "category_id": "3"
+  },
+  {
+    "id": "50",
+    "content": "eight",
+    "meaning": "tám (8)",
+    "category_id": "4"
+  },
+  {
+    "id": "51",
+    "content": "five",
+    "meaning": "năm (5)",
+    "category_id": "4"
+  },
+  {
+    "id": "52",
+    "content": "four",
+    "meaning": "bốn (4)",
+    "category_id": "4"
+  },
+  {
+    "id": "53",
+    "content": "one",
+    "meaning": "một (1)",
+    "category_id": "4"
+  },
+  {
+    "id": "54",
+    "content": "seven",
+    "meaning": "bảy (7)",
+    "category_id": "4"
+  },
+  {
+    "id": "55",
+    "content": "six",
+    "meaning": "sáu (6)",
+    "category_id": "4"
+  },
+  {
+    "id": "56",
+    "content": "three",
+    "meaning": "ba (3)",
+    "category_id": "4"
+  },
+  {
+    "id": "57",
+    "content": "two",
+    "meaning": "hai (2)",
+    "category_id": "4"
+  },
+  {
+    "id": "58",
+    "content": "nine",
+    "meaning": "chín (9)",
+    "category_id": "4"
+  },
+  {
+    "id": "59",
+    "content": "ten",
+    "meaning": "mười (10)",
+    "category_id": "4"
+  },
+  {
+    "id": "60",
+    "content": "stormy",
+    "meaning": "trời bão",
+    "category_id": "5"
+  },
+  {
+    "id": "61",
+    "content": "sunny",
+    "meaning": "trời nắng",
+    "category_id": "5"
+  },
+  {
+    "id": "62",
+    "content": "weather",
+    "meaning": "thời tiết",
+    "category_id": "5"
+  },
+  {
+    "id": "63",
+    "content": "windy",
+    "meaning": "trời giông gió",
+    "category_id": "5"
+  },
+  {
+    "id": "64",
+    "content": "beautiful",
+    "meaning": "đẹp",
+    "category_id": "5"
+  },
+  {
+    "id": "65",
+    "content": "nurse",
+    "meaning": "y tá",
+    "category_id": "6"
+  },
+  {
+    "id": "66",
+    "content": "office",
+    "meaning": "văn phòng",
+    "category_id": "6"
+  },
+  {
+    "id": "67",
+    "content": "pilot",
+    "meaning": "phi công",
+    "category_id": "6"
+  },
+  {
+    "id": "68",
+    "content": "doctor",
+    "meaning": "bác sĩ",
+    "category_id": "6"
+  },
+  {
+    "id": "69",
+    "content": "teacher ",
+    "meaning": "giáo viên",
+    "category_id": "6"
+  },
+  {
+    "id": "70",
+    "content": "farmer",
+    "meaning": "nông dân",
+    "category_id": "6"
+  },
+  {
+    "id": "71",
+    "content": "artist",
+    "meaning": "họa sĩ ",
+    "category_id": "6"
+  },
+  {
+    "id": "72",
+    "content": "postman",
+    "meaning": "người đưa thư",
+    "category_id": "6"
+  },
+  {
+    "id": "73",
+    "content": "supervisor",
+    "meaning": "người giám sát",
+    "category_id": "6"
+  },
+  {
+    "id": "74",
+    "content": "painter",
+    "meaning": "thợ sơn",
+    "category_id": "6"
+  },
+  {
+    "id": "75",
+    "content": "writer",
+    "meaning": "nhà văn",
+    "category_id": "6"
+  },
+  {
+    "id": "76",
+    "content": "black",
+    "meaning": "màu đen",
+    "category_id": "7"
+  },
+  {
+    "id": "77",
+    "content": "blue",
+    "meaning": "màu xanh da trời",
+    "category_id": "7"
+  },
+  {
+    "id": "78",
+    "content": "brown",
+    "meaning": "màu nâu",
+    "category_id": "7"
+  },
+  {
+    "id": "79",
+    "content": "colour",
+    "meaning": "màu",
+    "category_id": "7"
+  },
+  {
+    "id": "80",
+    "content": "green",
+    "meaning": "màu xanh lá cây",
+    "category_id": "7"
+  },
+  {
+    "id": "81",
+    "content": "orange",
+    "meaning": "màu da cam",
+    "category_id": "7"
+  },
+  {
+    "id": "82",
+    "content": "red",
+    "meaning": "màu đỏ",
+    "category_id": "7"
+  },
+  {
+    "id": "83",
+    "content": "white",
+    "meaning": "màu trắng",
+    "category_id": "7"
+  },
+  {
+    "id": "84",
+    "content": "yellow",
+    "meaning": "màu vàng",
+    "category_id": "7"
+  },
+  {
+    "id": "85",
+    "content": "paint",
+    "meaning": "tô màu",
+    "category_id": "7"
+  }
+]

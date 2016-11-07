@@ -49,14 +49,17 @@ export class Google implements OnInit {
       gapi.client.load('drive', 'v2', () => {
       var request = gapi.client.request({
            path : 'https://www.googleapis.com/drive/v2/files/'+ this.idFolder +'/children',
-           method : 'GET'
+           method : 'GET',
+           params : {
+            q: "trashed = false"
+          }
       });
       request.execute((response) => {
         console.log(response.items);  
         for(var i = 0; i < response.items.length; i++) {
           this.childOfFolder.push(response.items[i]);
         } 
-        //alert(this.childOfFolder);
+        //console.log(this.childOfFolder);
       });
 
     });
@@ -64,6 +67,7 @@ export class Google implements OnInit {
 
 
   getListRecord() {
+    this.recordAudio = [];
     for( var i = 0; i < this.childOfFolder.length; i ++) {
        let tempId = this.childOfFolder[i]['id']
        gapi.client.load('drive', 'v2', () => {
@@ -72,7 +76,8 @@ export class Google implements OnInit {
              method : 'GET'
         });
         request.execute((response) => {
-             alert(JSON.stringify(response));  
+             //alert(JSON.stringify(response));  
+             console.log(response);
              this.ngZone.run(() => {
                this.recordAudio.push(response);
              })   
@@ -84,6 +89,8 @@ export class Google implements OnInit {
   }
 
   playAudio(url) {
+    url = url.replace('&export=download','');
+    console.log(url);
     var audio = new Audio();
     audio.src = url;
     audio.load();

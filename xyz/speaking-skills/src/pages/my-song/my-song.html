@@ -16,14 +16,24 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
   <ion-item *ngIf="arrSong.length == 0">You don't have any record.</ion-item>
   <ion-list>
     <ion-item *ngFor="let item of arrSong" (click)="touchRecord(item,item['isPlay'])">
        <ion-icon name="play" *ngIf="!item['isPlay']"></ion-icon> 
        <ion-icon name="pause" *ngIf="item['isPlay']"></ion-icon>
-       &nbsp;{{item.title}}
+       &nbsp;{{item.title}} &nbsp; &nbsp;
     </ion-item>
   </ion-list>
-  Time: {{duration}}
+  
+  <ion-item class="range-timer" *ngIf="curSong">
+    <ion-range [(ngModel)]="timerPercent">
+      <ion-icon range-left big name="play" *ngIf="!isRun" 
+        (click)="touchRecord(curSong,isRun)"></ion-icon>
+      <ion-icon range-left big name="pause" *ngIf="isRun"
+        (click)="touchRecord(curSong,isRun)"></ion-icon>
+      <span range-right>{{timeRun}}/{{duration}}</span>
+    </ion-range>
+  </ion-item>
+
 </ion-content>

@@ -25,14 +25,21 @@ export class MyApp {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
-    this.pages = [
-      
-      { title: 'Category', component: Category },
-      // { title: 'Youtube', component: Youtube },
-      { title: 'My Drive', component: Google },
-      { title: 'Sing a Song', component: Sing },
-      { title: 'My Song', component: MySong }
-    ];
+    if (this.onDevice) {
+      this.pages = [
+        { title: 'Category', component: Category },
+        { title: 'Sing a Song', component: Sing },
+        { title: 'My Song', component: MySong }
+      ];
+    }else {
+      this.pages = [
+        { title: 'Category', component: Category },
+        // { title: 'Youtube', component: Youtube },
+        { title: 'My Drive', component: Google },
+        { title: 'Sing a Song', component: Sing },
+        { title: 'My Song', component: MySong }
+      ];
+    }    
   }
 
   initializeApp() {

@@ -11,7 +11,7 @@ export class CategoryService {
 
   getCategory(): Promise<Object[]>{
     return new Promise(resolve => {
-      this.http.get('https://xyz-server.herokuapp.com/api/category').subscribe(res => {
+      this.http.get('assets/data/category.json').subscribe(res => {
         resolve(res.json());
       });
     }) 
