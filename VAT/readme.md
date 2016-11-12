@@ -1,10 +1,34 @@
-# English Learning App
-## Install
-`git clone https://github.com/cuongk58uet/englishlearning` <br>
-`cd englishlearning` <br>
-`npm install` <br>
-`cd client` and run `npm install` <br>
+## Angular2 Express slim starter
+### Heroku ready wih SystemJS builder
 
-## RUN
-`cd englishlearning` and run `nodemon` <br>
-`cd client` and run `npm start`
+- Angular 2 ( https://angular.io/docs/ts/latest/quickstart.html )
+- Express ( from generator )
+
+https://express-angular2-slim.herokuapp.com/
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+## Install
+```bash
+git clone https://github.com/vladotesanovic/angular2-express-slim
+cd angular2-express-slim
+
+# Install dependencies
+npm install
+
+# run and watch for changes in .ts files
+npm start
+
+# Applciation url: http://localhost:3000
+```
+
+## Run in production mod
+```bash
+npm run build:prod
+
+npm run prod
+```
+
+## If you are looking for Webpack version
+
+https://github.com/vladotesanovic/angular2-express-starter
