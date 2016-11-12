@@ -1,4 +1,4 @@
-## Angular2 Express slim starter
+## Angular2 Express starter
 ### Heroku ready wih SystemJS builder
 
 - Angular 2 ( https://angular.io/docs/ts/latest/quickstart.html )
