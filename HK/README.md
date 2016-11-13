@@ -62,9 +62,6 @@ Dưới đây lần lượt là ảnh giao diện của Register, Login
 
 ![List Categories](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/ListCategories.jpg)
 
-##Lesson
-
-![Lesson](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/Lesson.jpg)
 
 ## Hướng dẫn sử dụng
 Có thể chạy test trực tiếp trên link heroku nhóm đã đính kèm trên project.Với tài khoản admin mặc định sẵn là admin@gmail.com và pass là 123456.
