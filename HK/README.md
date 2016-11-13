@@ -7,19 +7,9 @@
 -	Đặng Thị Khôi
 
 #Ứng dụng : E- Learning
-<<<<<<< HEAD
 
 ##Link chạy thử ứng dụng:  
 https://demoeleaningsystem.herokuapp.com/
-=======
-<<<<<<< HEAD
-##Link chạy thử ứng dụng: 
- https://demoeleaningsystem.herokuapp.com/
-=======
-##Link chạy thử ứng dụng:  
-https://demoeleaningsystem.herokuapp.com/
->>>>>>> 6308f89692e7a1518a42857dfb3c507e908e01eb
->>>>>>> bee4808cddab3b20edb95a54c9b1234d218392b1
 
 ### Những yêu cầu cơ bản cần có: 
 - PHP version >= 5.4
@@ -73,18 +63,6 @@ Dưới đây lần lượt là ảnh giao diện của Register, Login
 
 ![List Categories](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/ListCategories.jpg)
 
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-##Lesson
-
-![Lesson](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/Lesson.jpg)
-
-
-=======
->>>>>>> 6308f89692e7a1518a42857dfb3c507e908e01eb
->>>>>>> bee4808cddab3b20edb95a54c9b1234d218392b1
 ## Hướng dẫn sử dụng
 Có thể chạy test trực tiếp trên link heroku nhóm đã đính kèm trên project.Với tài khoản admin mặc định sẵn là admin@gmail.com và pass là 123456.
 Đối với người dùng là user có thể đăng kí trực tiếp tài khoản trên ứng dụng để sử dụng.
@@ -97,5 +75,3 @@ Ngoài những yêu cầu cơ bản ở trên để chạy được ứng dụng
 - Tạo file .env
 - Tạo database và chạy lệnh php artisan migrate để tạo cơ sở dữ liệu.
 - php artisan serve để chạy ứng dụng trên http://localhost:8000/
-
-
