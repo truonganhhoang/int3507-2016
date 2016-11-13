@@ -7,7 +7,8 @@
 -	Đặng Thị Khôi
 
 #Ứng dụng : E- Learning
-##Link tải ứng dụng: 
+##Link chạy thử ứng dụng:  
+https://demoeleaningsystem.herokuapp.com/
 
 ### Những yêu cầu cơ bản cần có: 
 - PHP version >= 5.4
