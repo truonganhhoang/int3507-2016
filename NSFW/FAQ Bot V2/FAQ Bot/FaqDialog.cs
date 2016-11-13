@@ -5,6 +5,8 @@ using System.Web;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
 using System.Collections.Generic;
+using Google.Apis.Customsearch.v1;
+using Google.Apis.Customsearch.v1.Data;
 
 namespace FAQ_Bot
 {
@@ -14,6 +16,8 @@ namespace FAQ_Bot
         private const string HelpMesage = "# Help message\n\nI'm Windows 10 FAQs chat bot. Before you start, you have to choose category you need help, then choose questions.\n\nIf you want to change category just type in 'change category'. And same when you want to choose talk to a person. ";
         private List<int> ansid = new List<int>();
         private string Category_Name = "";
+        const string apiKey = "AIzaSyBNn5axaUkIt5gKzUJfF6bNhY4M3IFHKGI";
+        const string searchEngineId = "012753298971518697678:xwpsbiujfhq";
 
         private List<string> hello = new List<string> {"hi","hello","alo","get started"};
         private List<string> faq = new List<string> { "faq", "change category"};
@@ -211,8 +215,27 @@ namespace FAQ_Bot
 
                 else
                 {
-                    await context.PostAsync($"Let me have a quick look...(Search question on google/bing-not yet finished!)");
+                    await context.PostAsync($"Let me have a quick look...");
                     //Search on Web
+                    CustomsearchService customSearchService = new CustomsearchService(new Google.Apis.Services.BaseClientService.Initializer() { ApiKey = apiKey });
+                    CseResource.ListRequest listRequest = customSearchService.Cse.List(message.Text);
+                    listRequest.Cx = searchEngineId;
+                    Search search = listRequest.Execute();
+                    var ret = context.MakeMessage();
+                    ret.AttachmentLayout = AttachmentLayoutTypes.Carousel;
+                    ret.Attachments = new List<Attachment>();
+                    foreach (var item in search.Items)
+                    {
+                        var card = new HeroCard
+                        {
+                            Title = item.Title,
+                            Subtitle = item.DisplayLink,
+                            Text = item.Snippet,
+                            Buttons = new List<CardAction>() { new CardAction(ActionTypes.OpenUrl, "View on Web", value: item.Link) }
+                        };
+                        ret.Attachments.Add(card.ToAttachment());
+                    }
+                    await context.PostAsync(ret);
                 }
 
             }
