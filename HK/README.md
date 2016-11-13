@@ -72,7 +72,9 @@ Có thể chạy test trực tiếp trên link heroku nhóm đã đính kèm tr�
 Còn nếu muốn biết chi tiết project hoạt động , viết ra sao có thể thực hiện như sau:
 Ngoài những yêu cầu cơ bản ở trên để chạy được ứng dụng cần làm các bước sau
 - Tải project về 
-- Cài đặt composer
+- Cài đặt composer sau đó chạy composer update
+- Chạy npm install
+-Tạo file .env
 - Tạo database và chạy lệnh php artisan migrate để tạo cơ sở dữ liệu.
 - php artisan serve để chạy ứng dụng trên http://localhost:8000/
 
