@@ -9,28 +9,18 @@
             Configuration manager for accessing Microsoft Azure settings.
             </summary>
         </member>
-        <member name="M:Microsoft.Azure.CloudConfigurationManager.GetSetting(System.String,System.Boolean,System.Boolean)">
-            <summary>
-            Gets a setting with the given name.
-            </summary>
-            <param name="name">Setting name.</param>
-            <param name="outputResultsToTrace">If true, this will write that a setting was retrieved to Trace. If false, this will not write anything to Trace.</param>
-            <param name="throwIfNotFoundInRuntime">If true, method will throw exception if setting not found in ServiceRuntime.</param>
-            <returns>Setting value or null if not found.</returns>
-        </member>
         <member name="M:Microsoft.Azure.CloudConfigurationManager.GetSetting(System.String,System.Boolean)">
             <summary>
             Gets a setting with the given name.
             </summary>
             <param name="name">Setting name.</param>
-            <param name="outputResultsToTrace">If true, this will write that a setting was retrieved to Trace. If false, this will not write anything to Trace.</param>
             <returns>Setting value or null if not found.</returns>
         </member>
         <member name="M:Microsoft.Azure.CloudConfigurationManager.GetSetting(System.String)">
             <summary>
             Gets a setting with the given name. Trace results.
             </summary>
-            <remarks>This overloaded function is kept for backward compatibility.</remarks>
+            <remarks>This overloaded function is kept for backward compabability.</remarks>
             <param name="name">Setting name.</param>
             <returns>Setting value or null if not found.</returns>
         </member>
@@ -39,9 +29,35 @@
             Gets application settings.
             </summary>
         </member>
+        <member name="T:Microsoft.WindowsAzure.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.WindowsAzure.Resources.ErrorArgumentEmptyString">
+            <summary>
+              Looks up a localized string similar to Argument &quot;{0}&quot; cannot be an empty string..
+            </summary>
+        </member>
         <member name="T:Microsoft.Azure.AzureApplicationSettings">
             <summary>
             Microsoft Azure settings.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Azure.AzureApplicationSettings.#cctor">
+            <summary>
+            Initializes global application settings (such as writing to the Trace singleton)
             </summary>
         </member>
         <member name="M:Microsoft.Azure.AzureApplicationSettings.#ctor">
@@ -57,32 +73,14 @@
             <param name="e">Exception</param>
             <returns>True for the missing setting exception.</returns>
         </member>
-        <member name="M:Microsoft.Azure.AzureApplicationSettings.GetSetting(System.String,System.Boolean,System.Boolean)">
-            <summary>
-            Gets a setting with the given name.
-            Setting throwIfNotFound to true will result in blow up the app if it can't find the setting
-            </summary>
-            <param name="name">Setting name.</param>
-            <param name="outputResultsToTrace"></param>
-            /// <param name="throwIfNotFoundInRuntime"></param>
-            <returns>Setting value or null if such setting does not exist.</returns>
-        </member>
-        <member name="M:Microsoft.Azure.AzureApplicationSettings.GetSetting(System.String,System.Boolean)">
-            <summary>
-            Gets a setting with the given name.
-            </summary>
-            <param name="name">Setting name.</param>
-            <param name="outputResultsToTrace"></param>
-            <returns>Setting value or null if such setting does not exist.</returns>
-        </member>
         <member name="M:Microsoft.Azure.AzureApplicationSettings.GetSetting(System.String)">
             <summary>
-            Gets a setting with the given name. This method is included for backwards compatibility.
+            Gets a setting with the given name.
             </summary>
             <param name="name">Setting name.</param>
             <returns>Setting value or null if such setting does not exist.</returns>
         </member>
-        <member name="M:Microsoft.Azure.AzureApplicationSettings.GetValue(System.String,System.String,System.Func{System.String,System.String},System.Boolean)">
+        <member name="M:Microsoft.Azure.AzureApplicationSettings.GetValue(System.String,System.String,System.Func{System.String,System.String})">
             <summary>
             Gets setting's value from the given provider.
             </summary>
@@ -119,32 +117,6 @@
             <returns>
             The assembly path if found; otherwise null;
             </returns>
-        </member>
-        <member name="T:Microsoft.WindowsAzure.Resources">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-        </member>
-        <member name="P:Microsoft.WindowsAzure.Resources.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-        </member>
-        <member name="P:Microsoft.WindowsAzure.Resources.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
-            </summary>
-        </member>
-        <member name="P:Microsoft.WindowsAzure.Resources.ErrorArgumentEmptyString">
-            <summary>
-              Looks up a localized string similar to Argument &quot;{0}&quot; cannot be an empty string..
-            </summary>
-        </member>
-        <member name="P:Microsoft.WindowsAzure.Resources.ErrorSettingNotFoundInRuntimeString">
-            <summary>
-              Looks up a localized string similar to Setting: &quot;{0}&quot; was not found in the ServiceRuntime..
-            </summary>
         </member>
     </members>
 </doc>

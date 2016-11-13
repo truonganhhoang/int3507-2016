@@ -1,17 +1,15 @@
 /**
  * Created by Thinking on 09/22/2016.
  */
-function Question(q, unitId, correctAns, answers) {
+function Question(q, unitId, anwsers) {
     this.question = q;
-    this.unitIdRef = unitId;
-    this.correctAns = correctAns;
-    this.anwsers = answers;
-    
+    this.unitRefId = unitId;
+    this.anwsers = anwsers;
 }
 
 module.exports = {
-    init: (q, unitId, correctAns, answers) => {
-        return new Question(q, unitId, correctAns, answers);
+    init: (q, unitId, anwsers) => {
+        return new Question(q, unitId, anwsers);
     }
 }
 

@@ -14,9 +14,6 @@ import {HttpModule, JsonpModule} from "@angular/http";
 import {TestComponent} from "./test/test.component";
 import {TestReadCompoent} from "./test/read/test.component";
 import {DetailComponent} from "./detail/detail.component";
-import {RegisterComponent} from "./login/register.component";
-import {ProfileComponent} from "./profile/profile.component";
-import {GrammarComponent} from "./grammar/grammar.component";
 
 @NgModule({
     imports: [
@@ -34,10 +31,7 @@ import {GrammarComponent} from "./grammar/grammar.component";
         TheoryListenComponent,
         TestComponent,
         TestReadCompoent,
-        DetailComponent,
-        RegisterComponent,
-        ProfileComponent,
-        GrammarComponent
+        DetailComponent
     ],
     providers: [
         appRoutingProvider

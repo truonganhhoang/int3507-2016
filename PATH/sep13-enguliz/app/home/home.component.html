@@ -1,82 +1,107 @@
-<section id="slide">
-    <div id="carousel-id" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="item active">
-
-                <div id="homepage-img"></div>
-                <div class="carousel-caption">
-                    <div id="viademy-slogan" class="hidden-xs">Empower your career</div>
-                    <p id="viademy-caption" class="hidden-xs">Hơn 1000+ bài thi trắc nghiệm giúp bạn nâng cao kỹ năng Tiếng Anh của mình.</p>
-                    <div style="text-align: center;">
-                        <input type="text" id="homepage-course-search" class="form-control" placeholder="Tìm kiếm...">
-                    </div>
+<div class="container">
+    <div class="row">
+        <div class="header row" style="margin-left: 0;">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-4">
+                <div class="sreach">
+                    <form action="#">
+                        <input type="text" placeholder="Sreach" style="border: none">
+                    </form>
                 </div>
+
+            </div>
+            <div class="col-sm-4">
+                <ul>
+                    <li><a [routerLink]="['login']">Login</a></li>
+                    <li><a href="#" class="sign-up">Sign up</a></li>
+                </ul>
             </div>
         </div>
-        <!-- <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-        <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
-    </div>
-</section>
+        <div class="slider row">
 
-<div *ngFor="let category of categories">
-<section class="hidden-xs" id="tab-leasson">
-    <div class="tabs_holder tabs_wrapper skin10 top" style="display: block; overflow: hidden; position: relative;">
-        <ul class="tabs_header">
-            {{category.categoryName}}
-        </ul>
-        <div style="height: 0px; font-size: 1px; line-height: 1px; clear: both;"></div>
-    </div>
+        </div>
+        <div class="partner-banner row">
+            <div class="col-sm-2 partner-logo">
+                <img src="../../images/Penn-logo.png" alt="">
+            </div>
+            <div class="col-sm-2 partner-logo">
+                <img src="../../images/jhu_logo.png" alt="">
+            </div>
+            <div class="col-sm-2 partner-logo">
+                <img src="../../images/U-M_bmp.png" alt="">
+            </div>
+            <div class="col-sm-2 partner-logo">
+                <img src="../../images/stanford.png" alt="">
+            </div>
+            <div class="col-sm-2 partner-logo">
+                <img src="../../images/UC-San-Diego-blue--gold.png" alt="">
+            </div>
+            <div class="col-sm-2 partner-logo">
+                <img src="../../images/Duke_University_Logo.png" alt="">
+            </div>
+        </div>
 
-</section>
-<section id="content-leasson">
-    <div id="bg-leasson">
-        <div class="row">
-            <div class="content_holder">
-                <div id="your-tab-id-1">
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3" *ngFor="let item of category.categoryItems" [routerLink]="['details', item.unitId]">
-                        <div class="clear-fix"><img width="100%" height="100%" src="{{item.unitThumbnail}}" alt=""></div>
-                        <div class="bg-element">
-                            <h4>{{item.unitTitle}}</h4>
-                            <div class="pad">
-                                <a href="#">
-                                    <div class="rating">
-                                        <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+        <div class="wapper row">
+            <div class="list row" style="margin-left: 80px;" *ngFor="let category of categories">
+                <div class="list-header col-sm-11">
+                    <h3>{{category.categoryName}}</h3>
+                </div>
+                <div class="see-all col-sm-1">
+                    <a href="">
+
+                    </a>
+                </div>
+                <div class="list-body">
+                    <div class="list-item" *ngFor="let unit of category.categoryItems" [routerLink]="['detail', unit.unitId]">
+                        <div class="item">
+                            <div class="flex">
+                                <div class="side">
+                                    <div class="image-container">
+                                        <img alt="" width="100%" height="100%" src="{{unit.unitThumbnail}}">
                                     </div>
-                                </a>
-                                <span class="span">&nbsp;4.9 (321)</span>
-                            </div>
-                            <span>{{item.unitSubTitle}}</span>
-                            <hr>
-                            <div class="bg-comment-bot">
-                                <p class="user pull-right">Lượt xem: {{item.unitViews}}&nbsp;<i class="fa fa-user" aria-hidden="true"></i></p>
+                                    <div class="content">
+                                        <div class="partner-names">{{unit.unitSubTitle}}</div>
+                                        <div class="offering-name">{{unit.unitTitle}}</div>
+                                    </div>
+                                </div>
+                                <div class="side-footer">Lượt xem: {{unit.unitViews}}</div>
                             </div>
                         </div>
-                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer row">
+                <div>
+                    <div class="col-sm-3">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Listening</a></li>
+                            <li><a href="">Reading</a></li>
+                            <li><a href="">Writing</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>Contact</h3>
+                        <h3>Dai hoc Cong Nghe</h3>
+
+                        <ul>
+                            <li><a href="">144 Xuan Thuy, Cau Giay, HN</a></li>
+                            <li><a href="">(04)664251</a></li>
+                            <li><a href="">bla@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="web col-sm-3">
+                        <h3>Connect</h3>
                     </div>
 
+                    <div class="col-sm-3"></div>
                 </div>
-
             </div>
+
+
         </div>
-
-        <div id="btn-more" class="row" *ngIf="category.categoryName != 'Grammar'">
-            <div class="content_holder">
-                <a href="#">
-                    <button type="button" class="btn btn-success">XEM THÊM</button>
-                </a>
-            </div>
-        </div>
-
-        <div id="btn-more" class="row" *ngIf="category.categoryName == 'Grammar'">
-            <div class="content_holder">
-                <a href="#">
-                    <button type="button" class="btn btn-success" [routerLink]="['grammar']">XEM THÊM</button>
-                </a>
-            </div>
-        </div>
-
-    </div><!--/.row-->
-
-</section>
+    </div>
 </div>
-

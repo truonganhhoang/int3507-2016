@@ -4,65 +4,6 @@
         <name>Microsoft.Bot.Builder</name>
     </assembly>
     <members>
-        <member name="T:Microsoft.Bot.Builder.ConnectorEx.KeyboardCard">
-            <summary>
-            Card representing a keyboard
-            </summary>
-            <remarks>
-            This will be mapped to <see cref="T:Microsoft.Bot.Connector.HeroCard"/> for all channels 
-            except Facebook. For Facebook, <see cref="T:Microsoft.Bot.Builder.Dialogs.Internals.KeyboardCardMapper"/> maps it 
-            to <see cref="T:Microsoft.Bot.Builder.ConnectorEx.FacebookQuickReply"/>
-            </remarks>
-        </member>
-        <member name="F:Microsoft.Bot.Builder.ConnectorEx.KeyboardCard.ContentType">
-            <summary>
-            Content type of keyboard card for <see cref="P:Microsoft.Bot.Connector.Attachment.ContentType"/>.
-            </summary>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.ConnectorEx.KeyboardCard.#ctor(System.String,System.Collections.Generic.IList{Microsoft.Bot.Connector.CardAction})">
-            <summary>
-            Constructs an instance of the keyboard card.
-            </summary>
-            <param name="text"> The keyboard text.</param>
-            <param name="buttons"> The buttons in keyboard.</param>
-        </member>
-        <member name="P:Microsoft.Bot.Builder.ConnectorEx.KeyboardCard.Text">
-            <summary>
-            The keyboard text. 
-            </summary>
-        </member>
-        <member name="P:Microsoft.Bot.Builder.ConnectorEx.KeyboardCard.Buttons">
-            <summary>
-            The buttons in the keyboard.
-            </summary>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.ConnectorEx.FacebookQuickReply">
-            <summary>
-            Facebook quick reply. See https://developers.facebook.com/docs/messenger-platform/send-api-reference/quick-replies. 
-            </summary>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.ConnectorEx.FacebookMessage">
-            <summary>
-            Facebook message format for quick reply.
-            </summary>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.ConnectorEx.KeyboardCardEx">
-            <summary>
-            Extension methods for <see cref="T:Microsoft.Bot.Builder.ConnectorEx.KeyboardCard"/>
-            </summary>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.ConnectorEx.KeyboardCardEx.ToHeroCard(Microsoft.Bot.Builder.ConnectorEx.KeyboardCard)">
-            <summary>
-            Maps a <see cref="T:Microsoft.Bot.Builder.ConnectorEx.KeyboardCard"/> to a <see cref="T:Microsoft.Bot.Connector.HeroCard"/>
-            </summary>
-            <param name="keyboard"> The keyboard card.</param>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.ConnectorEx.KeyboardCardEx.ToFacebookMessage(Microsoft.Bot.Builder.ConnectorEx.KeyboardCard)">
-            <summary>
-            Maps a <see cref="T:Microsoft.Bot.Builder.ConnectorEx.KeyboardCard"/> to a <see cref="T:Microsoft.Bot.Builder.ConnectorEx.FacebookMessage"/>
-            </summary>
-            <param name="keyboard"> The keyboard card.</param>
-        </member>
         <member name="T:Microsoft.Bot.Builder.Dialogs.Internals.DialogModule">
             <summary>
             Autofac module for Dialog components.
@@ -82,7 +23,7 @@
         <member name="F:Microsoft.Bot.Builder.Dialogs.Internals.CachingBotDataStoreConsistencyPolicy.ETagBasedConsistency">
             <summary>
             Causes <see cref="T:Microsoft.Bot.Builder.Dialogs.Internals.CachingBotDataStore"/> to write data with the same <see cref="P:Microsoft.Bot.Connector.BotData.ETag"/> 
-            returned by <see cref="F:Microsoft.Bot.Builder.Dialogs.Internals.CachingBotDataStore.inner"/>. As a result <see cref="M:Microsoft.Bot.Builder.Dialogs.Internals.IBotDataStore`1.FlushAsync(Microsoft.Bot.Builder.Dialogs.IAddress,System.Threading.CancellationToken)"/>
+            returned by <see cref="F:Microsoft.Bot.Builder.Dialogs.Internals.CachingBotDataStore.inner"/>. As a result <see cref="M:Microsoft.Bot.Builder.Dialogs.Internals.IBotDataStore`1.FlushAsync(Microsoft.Bot.Builder.Dialogs.Internals.BotDataKey,System.Threading.CancellationToken)"/>
             might fail because of ETag inconsistencies.
             </summary>
         </member>
@@ -181,28 +122,6 @@
             <param name="item">The item for the bot.</param>
             <param name="token">The cancellation token.</param>
             <returns>A task that represents the post operation.</returns>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.Dialogs.Internals.IDialogTaskManager.LoadDialogTasks(System.Threading.CancellationToken)">
-            <summary>
-            Loads the <see cref="P:Microsoft.Bot.Builder.Dialogs.Internals.IDialogTaskManager.DialogTasks"/> from <see cref="T:Microsoft.Bot.Builder.Dialogs.IBotDataBag"/>.
-            </summary>
-            <param name="token"> The cancellation token.</param>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.Dialogs.Internals.IDialogTaskManager.FlushDialogTasks(System.Threading.CancellationToken)">
-            <summary>
-            Flushes the <see cref="T:Microsoft.Bot.Builder.Dialogs.Internals.IDialogTask"/> in <see cref="P:Microsoft.Bot.Builder.Dialogs.Internals.IDialogTaskManager.DialogTasks"/>
-            </summary>
-            <param name="token"> The cancellation token.</param>
-        </member>
-        <member name="P:Microsoft.Bot.Builder.Dialogs.Internals.IDialogTaskManager.DialogTasks">
-            <summary>
-            The list of <see cref="T:Microsoft.Bot.Builder.Dialogs.Internals.IDialogTask"/>
-            </summary>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.Dialogs.Internals.IDialogTaskManager.CreateDialogTask">
-            <summary>
-            Creates a new <see cref="T:Microsoft.Bot.Builder.Dialogs.Internals.IDialogTask"/> and add it to <see cref="P:Microsoft.Bot.Builder.Dialogs.Internals.IDialogTaskManager.DialogTasks"/>
-            </summary>
         </member>
         <member name="T:Microsoft.Bot.Builder.Dialogs.Internals.IBotData">
             <summary>
@@ -697,11 +616,6 @@
             </summary>
             <param name="message">The error message that explains the reason for the exception.</param>
         </member>
-        <member name="T:Microsoft.Bot.Builder.Dialogs.IAddress">
-            <summary>
-            The key that minimally and completely identifies a bot's conversation with a user on a channel. 
-            </summary>
-        </member>
         <member name="T:Microsoft.Bot.Builder.Dialogs.Address">
             <summary>
             The key that minimally and completely identifies a bot's conversation with a user on a channel. 
@@ -719,19 +633,9 @@
             to the user's data bags may still conflict across multiple conversations.
             </remarks>
         </member>
-        <member name="T:Microsoft.Bot.Builder.Dialogs.DispatchDialog`1">
-            <summary>
-            A dialog specialized to dispatch an IScorable.
-            </summary>
-        </member>
         <member name="T:Microsoft.Bot.Builder.Dialogs.ResumptionCookie">
             <summary>
             The resumption cookie that can be used to resume a conversation with a user. 
-            </summary>
-        </member>
-        <member name="P:Microsoft.Bot.Builder.Dialogs.ResumptionCookie.Address">
-            <summary>
-            The key that minimally and completely identifies a bot's conversation with a user on a channel.
             </summary>
         </member>
         <member name="P:Microsoft.Bot.Builder.Dialogs.ResumptionCookie.UserName">
@@ -741,10 +645,10 @@
         </member>
         <member name="P:Microsoft.Bot.Builder.Dialogs.ResumptionCookie.IsTrustedServiceUrl">
             <summary>
-            True if the <see cref="P:Microsoft.Bot.Builder.Dialogs.IAddress.ServiceUrl"/> is trusted; False otherwise.
+            True if the <see cref="P:Microsoft.Bot.Builder.Dialogs.Address.ServiceUrl"/> is trusted; False otherwise.
             </summary>
             <remarks> <see cref="M:Microsoft.Bot.Builder.Dialogs.Conversation.ResumeAsync``1(Microsoft.Bot.Builder.Dialogs.ResumptionCookie,``0,System.Threading.CancellationToken)"/> adds 
-            the host of the <see cref="P:Microsoft.Bot.Builder.Dialogs.IAddress.ServiceUrl"/> to <see cref="F:Microsoft.Bot.Connector.MicrosoftAppCredentials.TrustedHostNames"/> if this flag is True.
+            the host of the <see cref="P:Microsoft.Bot.Builder.Dialogs.Address.ServiceUrl"/> to <see cref="F:Microsoft.Bot.Connector.MicrosoftAppCredentials.TrustedHostNames"/> if this flag is True.
             </remarks>
         </member>
         <member name="P:Microsoft.Bot.Builder.Dialogs.ResumptionCookie.IsGroup">
@@ -757,20 +661,22 @@
             The locale of message.
             </summary>
         </member>
-        <member name="M:Microsoft.Bot.Builder.Dialogs.ResumptionCookie.#ctor(Microsoft.Bot.Builder.Dialogs.Address,System.String,System.Boolean,System.String)">
+        <member name="M:Microsoft.Bot.Builder.Dialogs.ResumptionCookie.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
             <summary>
             Creates an instance of the resumption cookie. 
             </summary>
-            <param name="address">The address.</param>
-            <param name="userName">The user name.</param>
-            <param name="isGroup">The IsGroup flag for conversation.</param>
-            <param name="locale">The locale of the message.</param>
+            <param name="userId"> The user Id.</param>
+            <param name="botId"> The bot Id.</param>
+            <param name="conversationId"> The conversation Id.</param>
+            <param name="channelId"> The channel Id of the conversation.</param>
+            <param name="serviceUrl"> The service url of the conversation.</param>
+            <param name="locale"> The locale of the message.</param>
         </member>
         <member name="M:Microsoft.Bot.Builder.Dialogs.ResumptionCookie.#ctor(Microsoft.Bot.Connector.IMessageActivity)">
             <summary>
             Creates an instance of resumption cookie form a <see cref="T:Microsoft.Bot.Connector.IMessageActivity"/>
             </summary>
-            <param name="msg">The message.</param>
+            <param name="msg"> The message.</param>
         </member>
         <member name="M:Microsoft.Bot.Builder.Dialogs.ResumptionCookie.GetMessage">
             <summary>
@@ -829,7 +735,7 @@
             <param name="stack">The dialog stack.</param>
             <param name="resume">The method to resume when the message has been received.</param>
         </member>
-        <member name="M:Microsoft.Bot.Builder.Dialogs.Extensions.AddHeroCard``1(Microsoft.Bot.Connector.IMessageActivity,System.String,System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{System.String})">
+        <member name="M:Microsoft.Bot.Builder.Dialogs.Extensions.AddHeroCard``1(Microsoft.Bot.Connector.IMessageActivity,System.String,System.Collections.Generic.IEnumerable{``0})">
             <summary>
             Generates buttons from options and add them to the message.
             </summary>
@@ -840,20 +746,6 @@
             <param name="message"> The message that the buttons will be added to.</param>
             <param name="text"> The text in the <see cref="T:Microsoft.Bot.Connector.HeroCard"/>.</param>
             <param name="options"> The options that cause generation of buttons.</param>
-            <param name="descriptions">Descriptions for each option.</param>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.Dialogs.Extensions.AddKeyboardCard``1(Microsoft.Bot.Connector.IMessageActivity,System.String,System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEnumerable{System.String})">
-            <summary>
-            Generates buttons from options and add them to the message.
-            </summary>
-            <remarks>
-            <typeparamref name="T"/> should implement ToString().
-            </remarks>
-            <typeparam name="T"> Type of the options.</typeparam>
-            <param name="message"> The message that the buttons will be added to.</param>
-            <param name="text"> The text in the <see cref="T:Microsoft.Bot.Connector.HeroCard"/>.</param>
-            <param name="options"> The options that cause generation of buttons.</param>
-            <param name="descriptions">Descriptions for each option.</param>
         </member>
         <member name="T:Microsoft.Bot.Builder.Dialogs.IBotDataBag">
             <summary>
@@ -864,12 +756,6 @@
             <summary>
             Gets the number of key/value pairs contained in the <see cref="T:Microsoft.Bot.Builder.Dialogs.IBotDataBag"/>.
             </summary>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.Dialogs.IBotDataBag.ContainsKey(System.String)">
-            <summary>
-            Checks if data bag contains a value with specified key
-            </summary>
-            <param name="key">The key.</param>
         </member>
         <member name="M:Microsoft.Bot.Builder.Dialogs.IBotDataBag.TryGetValue``1(System.String,``0@)">
             <summary>
@@ -1093,16 +979,6 @@
             Generate buttons for choices and let connector generate the right style based on channel capabilities
             </summary>
         </member>
-        <member name="F:Microsoft.Bot.Builder.Dialogs.PromptStyle.Keyboard">
-            <summary>
-            Generate keyboard card for choices that will be mapped to a 
-            <see cref="T:Microsoft.Bot.Connector.HeroCard"/> or a keyboard, e.g. Facebook quick replies
-            </summary>
-            <remarks>
-            Make sure to use <see cref="T:Microsoft.Bot.Builder.Dialogs.Internals.MapToChannelData_BotToUser"/> with <see cref="T:Microsoft.Bot.Builder.Dialogs.Internals.KeyboardCardMapper"/>
-            when you use this option
-            </remarks>
-        </member>
         <member name="F:Microsoft.Bot.Builder.Dialogs.PromptStyle.AutoText">
             <summary>
             Show choices as Text.
@@ -1142,17 +1018,8 @@
         </member>
         <member name="F:Microsoft.Bot.Builder.Dialogs.PromptOptions`1.Options">
             <summary>
-            The choices to be returned when selected.
+            The prompt choices.
             </summary>
-        </member>
-        <member name="F:Microsoft.Bot.Builder.Dialogs.PromptOptions`1.Descriptions">
-            <summary>
-            The description of each possible option.
-            </summary>
-            <remarks>
-            If this is null, then the descriptions will be the options converted to strings.
-            Otherwise this should have the same number of values as Options and it contains the string to describe the value being selected.
-            </remarks>
         </member>
         <member name="F:Microsoft.Bot.Builder.Dialogs.PromptOptions`1.TooManyAttempts">
             <summary>
@@ -1179,17 +1046,16 @@
             Default <see cref="F:Microsoft.Bot.Builder.Dialogs.PromptOptions`1.TooManyAttempts"/> string that is used if <see cref="F:Microsoft.Bot.Builder.Dialogs.PromptOptions`1.TooManyAttempts"/> is null.
             </summary>
         </member>
-        <member name="M:Microsoft.Bot.Builder.Dialogs.PromptOptions`1.#ctor(System.String,System.String,System.String,System.Collections.Generic.IReadOnlyList{`0},System.Int32,Microsoft.Bot.Builder.Dialogs.PromptStyler,System.Collections.Generic.IReadOnlyList{System.String})">
+        <member name="M:Microsoft.Bot.Builder.Dialogs.PromptOptions`1.#ctor(System.String,System.String,System.String,System.Collections.Generic.IList{`0},System.Int32,Microsoft.Bot.Builder.Dialogs.PromptStyler)">
             <summary>
             Constructs the prompt options.
             </summary>
             <param name="prompt"> The prompt.</param>
             <param name="retry"> What to display on retry.</param>
             <param name="tooManyAttempts"> What to display when user didn't say a valid response after <see cref="P:Microsoft.Bot.Builder.Dialogs.PromptOptions`1.Attempts"/>.</param>
-            <param name="options"> The prompt choice values.</param>
+            <param name="options"> The prompt choices.</param>
             <param name="attempts"> Maximum number of attempts.</param>
             <param name="promptStyler"> The prompt styler.</param>
-            <param name="descriptions">Descriptions for each prompt.</param>
         </member>
         <member name="T:Microsoft.Bot.Builder.Dialogs.PromptStyler">
             <summary>
@@ -1201,7 +1067,7 @@
             Style of the prompt <see cref="T:Microsoft.Bot.Builder.Dialogs.PromptStyle"/>.
             </summary>
         </member>
-        <member name="M:Microsoft.Bot.Builder.Dialogs.PromptStyler.Apply``1(Microsoft.Bot.Connector.IMessageActivity@,System.String,System.Collections.Generic.IReadOnlyList{``0},Microsoft.Bot.Builder.Dialogs.PromptStyle,System.Collections.Generic.IReadOnlyList{System.String})">
+        <member name="M:Microsoft.Bot.Builder.Dialogs.PromptStyler.Apply``1(Microsoft.Bot.Connector.IMessageActivity@,System.String,System.Collections.Generic.IList{``0},Microsoft.Bot.Builder.Dialogs.PromptStyle)">
             <summary>
             <see cref="M:Microsoft.Bot.Builder.Dialogs.PromptStyler.Apply(Microsoft.Bot.Connector.IMessageActivity@,System.String)"/>.
             </summary>
@@ -1210,7 +1076,6 @@
             <param name="prompt"> The prompt.</param>
             <param name="options"> The options.</param>
             <param name="promptStyle"> The prompt style.</param>
-            <param name="descriptions">Descriptions for each option.</param>
         </member>
         <member name="M:Microsoft.Bot.Builder.Dialogs.PromptStyler.Apply(Microsoft.Bot.Connector.IMessageActivity@,System.String)">
             <summary>
@@ -1219,7 +1084,7 @@
             <param name="message"> The message that will contain the prompt.</param>
             <param name="prompt"> The prompt.</param>
         </member>
-        <member name="M:Microsoft.Bot.Builder.Dialogs.PromptStyler.Apply``1(Microsoft.Bot.Connector.IMessageActivity@,System.String,System.Collections.Generic.IReadOnlyList{``0},System.Collections.Generic.IReadOnlyList{System.String})">
+        <member name="M:Microsoft.Bot.Builder.Dialogs.PromptStyler.Apply``1(Microsoft.Bot.Connector.IMessageActivity@,System.String,System.Collections.Generic.IList{``0})">
             <summary>
             Style a prompt and populate the message based on <see cref="F:Microsoft.Bot.Builder.Dialogs.PromptStyler.PromptStyle"/>.
             </summary>
@@ -1227,9 +1092,8 @@
             <param name="message"> The message that will contain the prompt.</param>
             <param name="prompt"> The prompt.</param>
             <param name="options"> The options.</param>
-            <param name="descriptions">Descriptions to display for each option.</param>
             <remarks>
-            <typeparamref name="T"/> should implement <see cref="M:System.Object.ToString"/> unless descriptions are supplied.
+            <typeparamref name="T"/> should implement <see cref="M:System.Object.ToString"/>.
             </remarks>
         </member>
         <member name="T:Microsoft.Bot.Builder.Dialogs.PromptDialog">
@@ -1277,7 +1141,7 @@
             <param name="retry">    What to show on retry. </param>
             <param name="attempts"> The number of times to retry. </param>
         </member>
-        <member name="M:Microsoft.Bot.Builder.Dialogs.PromptDialog.Choice``1(Microsoft.Bot.Builder.Dialogs.IDialogContext,Microsoft.Bot.Builder.Dialogs.ResumeAfter{``0},System.Collections.Generic.IEnumerable{``0},System.String,System.String,System.Int32,Microsoft.Bot.Builder.Dialogs.PromptStyle,System.Collections.Generic.IEnumerable{System.String})">
+        <member name="M:Microsoft.Bot.Builder.Dialogs.PromptDialog.Choice``1(Microsoft.Bot.Builder.Dialogs.IDialogContext,Microsoft.Bot.Builder.Dialogs.ResumeAfter{``0},System.Collections.Generic.IEnumerable{``0},System.String,System.String,System.Int32,Microsoft.Bot.Builder.Dialogs.PromptStyle)">
             <summary>   Prompt for one of a set of choices. </summary>
             <param name="context">  The context. </param>
             <param name="resume">   Resume handler. </param>
@@ -1286,7 +1150,6 @@
             <param name="retry">    What to show on retry. </param>
             <param name="attempts"> The number of times to retry. </param>
             <param name="promptStyle"> Style of the prompt <see cref="T:Microsoft.Bot.Builder.Dialogs.PromptStyle" /> </param>
-            <param name="descriptions">Descriptions to display for choices.</param>
         </member>
         <member name="M:Microsoft.Bot.Builder.Dialogs.PromptDialog.Choice``1(Microsoft.Bot.Builder.Dialogs.IDialogContext,Microsoft.Bot.Builder.Dialogs.ResumeAfter{``0},Microsoft.Bot.Builder.Dialogs.PromptOptions{``0})">
             <summary>
@@ -1378,16 +1241,15 @@
         </member>
         <member name="T:Microsoft.Bot.Builder.Dialogs.PromptDialog.PromptChoice`1">
             <summary>   Prompt for a choice from a set of choices. </summary>
-            <remarks>   Normally used through <see cref="M:Microsoft.Bot.Builder.Dialogs.PromptDialog.Choice``1(Microsoft.Bot.Builder.Dialogs.IDialogContext,Microsoft.Bot.Builder.Dialogs.ResumeAfter{``0},System.Collections.Generic.IEnumerable{``0},System.String,System.String,System.Int32,Microsoft.Bot.Builder.Dialogs.PromptStyle,System.Collections.Generic.IEnumerable{System.String})"/>.</remarks>
+            <remarks>   Normally used through <see cref="M:Microsoft.Bot.Builder.Dialogs.PromptDialog.Choice``1(Microsoft.Bot.Builder.Dialogs.IDialogContext,Microsoft.Bot.Builder.Dialogs.ResumeAfter{``0},System.Collections.Generic.IEnumerable{``0},System.String,System.String,System.Int32,Microsoft.Bot.Builder.Dialogs.PromptStyle)"/>.</remarks>
         </member>
-        <member name="M:Microsoft.Bot.Builder.Dialogs.PromptDialog.PromptChoice`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.String,System.String,System.Int32,Microsoft.Bot.Builder.Dialogs.PromptStyle,System.Collections.Generic.IEnumerable{System.String})">
+        <member name="M:Microsoft.Bot.Builder.Dialogs.PromptDialog.PromptChoice`1.#ctor(System.Collections.Generic.IEnumerable{`0},System.String,System.String,System.Int32,Microsoft.Bot.Builder.Dialogs.PromptStyle)">
             <summary>   Constructor for a prompt choice dialog. </summary>
             <param name="options">Enumerable of the options to choose from.</param>
             <param name="prompt">   The prompt. </param>
             <param name="retry">    What to display on retry. </param>
             <param name="attempts"> Maximum number of attempts. </param>
             <param name="promptStyle"> Style of the prompt <see cref="T:Microsoft.Bot.Builder.Dialogs.PromptStyle" /> </param>
-            <param name="descriptions">Descriptions to show for each option.</param>
         </member>
         <member name="M:Microsoft.Bot.Builder.Dialogs.PromptDialog.PromptChoice`1.#ctor(Microsoft.Bot.Builder.Dialogs.PromptOptions{`0})">
             <summary>
@@ -1417,45 +1279,6 @@
             Get the awaiter for this awaitable item.
             </summary>
             <returns>The awaiter.</returns>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.History.IActivityLogger">
-            <summary>
-            Log message activities between bots and users.
-            </summary>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.History.TraceActivityLogger">
-            <summary>
-            Activity logger that traces to the console.
-            </summary>
-            <remarks>
-            To use this, you need to register the class like this:
-            <code>           
-            var builder = new ContainerBuilder();
-            builder.RegisterModule(Dialog_Manager.MakeRoot());
-            builder.RegisterType&lt;TraceActivityLogger&gt;()
-                   .AsImplementedInterfaces()
-                   .InstancePerLifetimeScope();
-            </code>
-            </remarks>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.History.TraceActivityLogger.Microsoft#Bot#Builder#History#IActivityLogger#LogAsync(Microsoft.Bot.Connector.IActivity)">
-            <summary>
-            Log activity to trace stream.
-            </summary>
-            <param name="activity">Activity to log.</param>
-            <returns></returns>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.History.NullActivityLogger">
-            <summary>
-            Activity logger that doesn't log.
-            </summary>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.History.NullActivityLogger.Microsoft#Bot#Builder#History#IActivityLogger#LogAsync(Microsoft.Bot.Connector.IActivity)">
-            <summary>
-            Swallow activity.
-            </summary>
-            <param name="activity">Activity to be logged.</param>
-            <returns></returns>
         </member>
         <member name="T:Microsoft.Bot.Builder.Internals.Fibers.FiberModule">
             <summary>
@@ -1502,135 +1325,6 @@
             <param name="context">The serialization context.</param>
             <param name="priority">The priority of this provider.</param>
             <returns>True if this provider handles this type, false otherwise.</returns>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.Internals.Scorables.InheritedAttributes">
-            <summary>
-            Helper methods to enumerate inherited attributes for a method.
-            </summary>
-            <remarks>
-            http://bradwilson.typepad.com/blog/2011/08/interface-attributes-class-attributes.html
-            </remarks>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.Internals.Scorables.Binding">
-            <summary>
-            Represents a binding of arguments to a method's parameters.
-            </summary>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.Internals.Scorables.IScorable`2">
-            <summary>
-            Allow the scoring of items, with external comparison of scores, and enable the winner to take some action.
-            </summary>
-            <remarks>
-            We avoided the traditional "bool TryScore(Item item, object state, out Score score)" pattern to allow for Score generic type parameter covariance.
-            </remarks>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.Internals.Scorables.IScorable`2.PrepareAsync(`0,System.Threading.CancellationToken)">
-            <summary>
-            Perform some asynchronous work to analyze the item and produce some opaque state.
-            </summary>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.Internals.Scorables.IScorable`2.HasScore(`0,System.Object)">
-            <summary>
-            Returns whether this scorable wants to participate in scoring this item.
-            </summary>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.Internals.Scorables.IScorable`2.GetScore(`0,System.Object)">
-            <summary>
-            Gets the score for this item.
-            </summary>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.Internals.Scorables.IScorable`2.PostAsync(`0,System.Object,System.Threading.CancellationToken)">
-            <summary>
-            If this scorable wins, this method is called.
-            </summary>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.Internals.Scorables.IScorable`2.DoneAsync(`0,System.Object,System.Threading.CancellationToken)">
-            <summary>
-            The scoring process has completed - dispose of any scoped resources.
-            </summary>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.Internals.Scorables.ScorableBase`3">
-            <summary>
-            Allow for static type checking of opaque state for convenience of scorable implementations.
-            </summary>
-            <remarks>
-            The IScorable methods are marked with DebuggerStepThrough because once the compiler has verified the type
-            safety of the derived class that implements the abstract State-typed methods, these DebuggerStepThrough
-            methods will not throw exceptions due to runtime type errors.
-            </remarks>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.Internals.Scorables.Token`2">
-            <summary>
-            Provides the state to aggregate the state (and associated scorable) of multiple scorables.
-            </summary>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.Internals.Scorables.ScorableAggregator`5">
-            <summary>
-            Aggregates some non-empty set of inner scorables to produce an outer scorable.
-            </summary>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.Internals.Scorables.LuisIntentScorable`2">
-            <summary>
-            Scorable to represent a specific LUIS intent recommendation.
-            </summary>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.Internals.Scorables.MethodScorable">
-            <summary>
-            Scorable to represent binding arguments to a method's parameters.
-            </summary>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.Internals.Scorables.FoldScorable`2">
-            <summary>
-            Fold an aggregation of scorables to produce a winning scorable.
-            </summary>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.Internals.Scorables.FoldScorable`2.State">
-            <summary>
-            Per-scorable opaque state used during scoring process.
-            </summary>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.Internals.Scorables.RegexMatchScorable`2">
-            <summary>
-            Scorable to represent a regular expression match against an activity's text.
-            </summary>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.Internals.Scorables.IResolver">
-            <summary>
-            Allow the resolution of values based on type and optionally tag.
-            </summary>
-            <remarks>
-            The tag should be restrictive to services registered with that tag.
-            </remarks>
-        </member>
-        <member name="T:Microsoft.Bot.Builder.Internals.Scorables.ActivityResolver">
-            <summary>
-            A resolver to recover C# type information from Activity schema types.
-            </summary>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.Internals.Scorables.Scorables.TryPostAsync``2(Microsoft.Bot.Builder.Internals.Scorables.IScorable{``0,``1},``0,System.Threading.CancellationToken)">
-            <summary>
-            Invoke the scorable calling protocol against a single scorable.
-            </summary>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.Internals.Scorables.Scorables.SelectScore``3(Microsoft.Bot.Builder.Internals.Scorables.IScorable{``0,``1},System.Func{``0,``1,``2})">
-            <summary>
-            Project the score of a scorable using a lambda expression.
-            </summary>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.Internals.Scorables.Scorables.SelectItem``3(Microsoft.Bot.Builder.Internals.Scorables.IScorable{``1,``2},System.Func{``0,``1})">
-            <summary>
-            Project the item of a scorable using a lambda expression.
-            </summary>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.Internals.Scorables.Scorables.First``2(System.Collections.Generic.IEnumerable{Microsoft.Bot.Builder.Internals.Scorables.IScorable{``0,``1}})">
-            <summary>
-            Select the first scorable that produces a score.
-            </summary>
-        </member>
-        <member name="M:Microsoft.Bot.Builder.Internals.Scorables.Scorables.Fold``2(System.Collections.Generic.IEnumerable{Microsoft.Bot.Builder.Internals.Scorables.IScorable{``0,``1}},System.Collections.Generic.IComparer{``1})">
-            <summary>
-            Select a single winning scorable from an enumeration of scorables using a score comparer.
-            </summary>
         </member>
         <member name="T:Microsoft.Bot.Builder.FormFlow.Advanced.FieldReflector`1">
             <summary>   Fill in field information through reflection.</summary>

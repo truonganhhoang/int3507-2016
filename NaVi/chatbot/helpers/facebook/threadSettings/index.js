@@ -18,11 +18,6 @@ let persistentMenuItems = [
         "type":"postback",
         "title":"Cài đặt thông báo",
         "payload":"PM_NOTIFICATIONS"
-    },
-    {
-        "type":"postback",
-        "title":"Giới thiệu các tính năng",
-        "payload":"PM_FUNCTIONALITIES"
     }
 ];
 
