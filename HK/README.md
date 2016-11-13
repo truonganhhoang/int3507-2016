@@ -48,6 +48,7 @@ Dưới đây lần lượt là ảnh giao diện của Register, Login
 - Cả admin và user đều có thể xem thông tin cá nhân, cập nhật chỉnh sửa thông tin của mình và lịch sử hoạt động
 
 -Dưới đây là một số giao diện của ứng dụng:
+
 ## Profile
 
 ![Profile](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/profile.jpg)
@@ -62,10 +63,11 @@ Dưới đây lần lượt là ảnh giao diện của Register, Login
 
 ##Lesson
 
-![Lesson](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/lesson.jpg)
+![Lesson](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/Lesson.jpg)
 
 ## Hướng dẫn sử dụng
-Có thể chạy test trực tiếp trên link heroku nhóm đã đính kèm trên project.
+Có thể chạy test trực tiếp trên link heroku nhóm đã đính kèm trên project.Với tài khoản admin mặc định sẵn là admin@gmail.com và pass là 123456.
+Đối với người dùng là user có thể đăng kí trực tiếp tài khoản trên ứng dụng để sử dụng.
 
 Còn nếu muốn biết chi tiết project hoạt động , viết ra sao có thể thực hiện như sau:
 Ngoài những yêu cầu cơ bản ở trên để chạy được ứng dụng cần làm các bước sau
