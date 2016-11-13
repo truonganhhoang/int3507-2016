@@ -1,0 +1,152 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/font-awesome/scss/font-awesome";
+
+.table-info {
+  margin-top: 20px;
+}
+
+.style-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+#delete-button, #make-admin {
+  display: inline-block;
+}
+
+#followings, #followers {
+  li {
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+    margin: 10px;
+    &:last-child {
+      border: none;
+    }
+    > a {
+      text-decoration: none;
+      color: #000;
+      display: block;
+      width: 200px;
+
+      -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+      -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+      -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+      -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+      transition: font-size 0.3s ease, background-color 0.3s ease;
+
+      &:hover {
+        font-size: 20px;
+        background: #f6f6f6;
+        color: #365899;
+      }
+    }
+  }
+}
+
+$bgDefault: rgb(52, 73, 94);
+$bgHighlight: rgb(52, 94, 73);
+$colDefault: #ecf0f1;
+$colHighlight: rgb(176, 190, 197);
+.navbar-default {
+  background-color: $bgDefault;
+  border-color: $bgHighlight;
+  .navbar-brand {
+    color: $colDefault;
+    &:hover, &:focus {
+      color: $colHighlight;
+    }
+  }
+  .navbar-text {
+    color: $colDefault;
+  }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        &:hover, &:focus {
+          color: $colHighlight;
+        }
+      }
+    }
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight;
+      }
+    }
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight;
+      }
+    }
+  }
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight;
+    }
+    .icon-bar {
+      background-color: $colDefault;
+    }
+  }
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault;
+  }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight;
+      }
+    }
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight;
+      }
+    }
+  }
+}
+
+#avatar_display {
+  width: 32px;
+  height: 32px;;
+  position: absolute;
+  top: 10px;
+  left: -25px;
+  border-radius: 50%;
+}
+
+#navbar_word {
+  margin-right: 25px;
+}
+
+.check-answer {
+  color: #F82F2F;
+}
+
+.word-answer{
+  margin-top: 10px;
+}
+
+#title-result-lesson {
+  color: #F82F2F;
+}
+.button-social {
+  margin-left: 7px;
+  borger-radius: 50%;
+}
