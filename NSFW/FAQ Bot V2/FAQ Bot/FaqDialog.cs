@@ -5,8 +5,6 @@ using System.Web;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Connector;
 using System.Collections.Generic;
-using Google.Apis.Customsearch.v1;
-using Google.Apis.Customsearch.v1.Data;
 
 namespace FAQ_Bot
 {
@@ -16,8 +14,6 @@ namespace FAQ_Bot
         private const string HelpMesage = "# Help message\n\nI'm Windows 10 FAQs chat bot. Before you start, you have to choose category you need help, then choose questions.\n\nIf you want to change category just type in 'change category'. And same when you want to choose talk to a person. ";
         private List<int> ansid = new List<int>();
         private string Category_Name = "";
-        const string apiKey = "AIzaSyBNn5axaUkIt5gKzUJfF6bNhY4M3IFHKGI";
-        const string searchEngineId = "012753298971518697678:xwpsbiujfhq";
 
         private List<string> hello = new List<string> {"hi","hello","alo","get started"};
         private List<string> faq = new List<string> { "faq", "change category"};
@@ -75,7 +71,7 @@ namespace FAQ_Bot
             {
                 Title = "Hi, nice to see you!",
                 Text = "I'm a chat bot and I will do everything I can to help you with Windows 10!",
-                Images = new List<CardImage>() {new CardImage(url: "https://compass-ssl.microsoft.com/assets/7a/af/7aaf08d2-2623-41ab-ba30-b8c48fd0aeb0.png?n=RS1_Win10_Desktop.png") },
+                Images = new List<CardImage>() {new CardImage(url: "http://www.elemica.com/wp-content/uploads/2015/02/support-smiley.png") },
                 Buttons = cardButtons
             };
             Attachment plAttachment = plCard.ToAttachment();
@@ -88,34 +84,25 @@ namespace FAQ_Bot
         {
             var message = await result;
             
-            if(faq.Any(message.Text.ToLower().Equals))
+            if(faq.Any(message.Text.ToLower().Contains))
             {
                 await context.PostAsync($"Is there anything else I can help you with?");
                 Models.BotDataEntities1 DB = new Models.BotDataEntities1();
-                var categories = (from data in DB.categories select data).ToList();
-                var length = categories.Count();
-                var limit = Math.Ceiling((double)categories.Count() / 8);
-                for (var k = 0; k < limit; k++)
+                var categories = (from data in DB.categories select data);
+                var chosen = context.MakeMessage();
+                chosen.AttachmentLayout = AttachmentLayoutTypes.Carousel;
+                chosen.Attachments = new List<Attachment>();
+                foreach (var cate in categories)
                 {
-                    var chosen = context.MakeMessage();
-                    chosen.AttachmentLayout = AttachmentLayoutTypes.Carousel;
-                    chosen.Attachments = new List<Attachment>();
-                    var max = length > 8 ? 8 : length;
-                    for (var m = 0; m < max; m++)
+                    var card = new HeroCard
                     {
-                        var index = 8 * k + m;
-                        var card = new HeroCard
-                        {
-                            Title = categories[index].category_name,
-                            Images = new List<CardImage>() { new CardImage(url: categories[index].category_image) },
-                            Buttons = new List<CardAction>() { new CardAction(ActionTypes.ImBack, "Choose this category", value: categories[index].category_name) }
-                        };
-                        chosen.Attachments.Add(card.ToAttachment());
-                    }
-                    await context.PostAsync(chosen);
-                    length -= 8;
+                        Title = cate.category_name,
+                        //Images = new List<CardImage>() { new CardImage(url: cate.category_image) },
+                        Buttons = new List<CardAction>() { new CardAction(ActionTypes.ImBack, "Choose this category", value: cate.category_name) }
+                    };
+                    chosen.Attachments.Add(card.ToAttachment());
                 }
-                
+                await context.PostAsync(chosen);
                 PromptDialog.Text(context, this.AfterChoseCategory, "Please choose a category from the list above!");
                 return;
             }
@@ -189,24 +176,17 @@ namespace FAQ_Bot
                     {
                         // Create a response
                         System.Text.StringBuilder sb = new System.Text.StringBuilder();
-                        var i = 1;
-                        List<string> num = new List<string>();
+                        var i = 0;
                         ansid.Clear();
-                        sb.Append(message.Text + "\r\n");
+                        sb.Append("If you would like help with one of these questions, please type the number, otherwise answer no.\n\n");
                         // Loop through each answers
                         foreach (var ans in Answers)
                         {
                             ansid.Add(ans.id);
-                            num.Add(i.ToString());
                             // Add the answer to the response
-                            sb.Append(String.Format("{0}. {1}\r\n", i, ans.sub_question));
-                            i++;
+                            sb.Append(String.Format("{0}. {1}\n\n", ++i, ans.sub_question));
                         }
-                        //PromptDialog.Text(context, this.ResumeAfterPrompt, sb.ToString());
-                        await context.PostAsync(sb.ToString());
-                        num.Add("No");
-                        PromptDialog.Choice(context, this.ResumeAfterPrompt,num.ToArray(), "If you would like help with one of these questions, please choose the number, otherwise choose No.\r\n"
-                            , "Sorry, I can't understand your response. If you would like help with one of these topics, please choose the number, otherwise choose No.\n\n");
+                        PromptDialog.Text(context, this.ResumeAfterPrompt, sb.ToString());
                         return;
                     }
                     
@@ -215,27 +195,8 @@ namespace FAQ_Bot
 
                 else
                 {
-                    await context.PostAsync($"Let me have a quick look...");
+                    await context.PostAsync($"Let me have a quick look...(Search question on google/bing-not yet finished!)");
                     //Search on Web
-                    CustomsearchService customSearchService = new CustomsearchService(new Google.Apis.Services.BaseClientService.Initializer() { ApiKey = apiKey });
-                    CseResource.ListRequest listRequest = customSearchService.Cse.List(message.Text);
-                    listRequest.Cx = searchEngineId;
-                    Search search = listRequest.Execute();
-                    var ret = context.MakeMessage();
-                    ret.AttachmentLayout = AttachmentLayoutTypes.Carousel;
-                    ret.Attachments = new List<Attachment>();
-                    foreach (var item in search.Items)
-                    {
-                        var card = new HeroCard
-                        {
-                            Title = item.Title,
-                            Subtitle = item.DisplayLink,
-                            Text = item.Snippet,
-                            Buttons = new List<CardAction>() { new CardAction(ActionTypes.OpenUrl, "View on Web", value: item.Link) }
-                        };
-                        ret.Attachments.Add(card.ToAttachment());
-                    }
-                    await context.PostAsync(ret);
                 }
 
             }
@@ -254,6 +215,13 @@ namespace FAQ_Bot
                 if (isNumberic)
                 {
 
+                    if (choice > ansid.Count)
+                    {
+                        PromptDialog.Text(context, this.ResumeAfterPrompt, "Sorry, I can't understand your response. If you would like help with one of these topics, please type the number, otherwise answer no.\n\n");
+                        return;
+                    }
+                    else
+                    {
                         // Connect to the database
                         Models.BotDataEntities1 DB = new Models.BotDataEntities1();
                         int id = ansid[choice - 1];
@@ -294,10 +262,19 @@ namespace FAQ_Bot
                         reply.Attachments.Add(plAttachment);
                         await context.PostAsync(reply);
 
+                    }
                 }
                 else
                 {
+                    if (mess.ToLower().Equals("no"))
+                    {
                         await context.PostAsync($"Sorry! You can go [here](https://support.microsoft.com/en-us/answerdesk/accessibility) to talk to a person.");
+                    }
+                    else
+                    {
+                        PromptDialog.Text(context, this.ResumeAfterPrompt, "Sorry, I can't understand your response. If you would like help with one of these topics, please type the number, otherwise answer no.\n\n");
+                        return;
+                    }
 
                 }
 

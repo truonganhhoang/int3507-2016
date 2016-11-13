@@ -5,14 +5,13 @@ import 'rxjs/Rx';
 import {Injectable} from "@angular/core";
 import {Http, Response} from "@angular/http";
 import {Observable} from "rxjs/Rx";
-import {AppSettings} from "../appSettings";
 
 @Injectable()
 export class LoginService {
     constructor(private http: Http) {}
 
-    private loginUrl = `${AppSettings.API_ENDPOINT}` + "/user/login?";
-    private logoutUrl = `${AppSettings.API_ENDPOINT}` + "/user/logout?";
+    private loginUrl = "http://localhost:8080/api/v1/user/login?";
+    private logoutUrl = "http://localhost:8080/api/v1/user/logout?";
 
     loginRequest(username, password) {
         return this.http.get(this.loginUrl + "username=" + username + "&password=" + password)

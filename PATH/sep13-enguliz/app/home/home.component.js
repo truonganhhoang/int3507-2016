@@ -13,13 +13,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var home_service_1 = require("./home.service");
-var router_1 = require("@angular/router");
 var HomeComponent = (function () {
-    function HomeComponent(service, router) {
+    function HomeComponent(service) {
         this.service = service;
-        this.router = router;
         this.loggedIn = false;
-        this.email = '';
+        this.auth_token = '';
         this.loggedIn = !!localStorage.getItem('auth_token');
     }
     HomeComponent.prototype.loadHomeDatas = function () {
@@ -32,15 +30,10 @@ var HomeComponent = (function () {
     HomeComponent.prototype.isLoggedIn = function () {
         return this.loggedIn;
     };
-    HomeComponent.prototype.detailsAction = function (unitId) {
-        if (this.loggedIn) {
-            this.router.navigate(['/details', unitId]);
-        }
-        else {
-            this.router.navigate(['/login']);
-        }
-    };
     HomeComponent.prototype.ngOnInit = function () {
+        if (this.isLoggedIn()) {
+            this.auth_token = localStorage.getItem('auth_token');
+        }
         this.loadHomeDatas();
     };
     HomeComponent = __decorate([
@@ -48,7 +41,7 @@ var HomeComponent = (function () {
             templateUrl: 'app/home/home.component.html',
             providers: [home_service_1.HomeService]
         }), 
-        __metadata('design:paramtypes', [home_service_1.HomeService, router_1.Router])
+        __metadata('design:paramtypes', [home_service_1.HomeService])
     ], HomeComponent);
     return HomeComponent;
 }());
