@@ -45,8 +45,8 @@ To add new languages in Windows 10, select the Start button, then select Setting
 * If options to go back and restore factory settings aren’t available, you can use installation media and a product key to install an earlier version of Windows.
 For more info and requirements, see the Go back to your previous version of Windows section of [Recovery options in Windows 10](https://support.microsoft.com/en-us/help/12415).
 
-`Note`
->If the manufacturer set up your PC to run from a compressed Windows image file (also known as Windows image file boot or WIMBoot) and included the option to restore factory settings, that option will no longer be available after you upgrade to Windows 10.',
+# Note
+If the manufacturer set up your PC to run from a compressed Windows image file (also known as Windows image file boot or WIMBoot) and included the option to restore factory settings, that option will no longer be available after you upgrade to Windows 10.',
 'https://support.microsoft.com/en-us/help/12435/windows-10-upgrade-faq'),
 (1,'Upgrade Windows 10 Home to Windows 10 Pro','Upgrade using your digital license for Windows 10 Pro',
 'If you already installed and activated Windows 10 Pro on your device, you''ll have a digital entitlement that lets you upgrade from Windows 10 Home to Windows 10 Pro without a product key.
@@ -76,18 +76,18 @@ Some things to know about the Anniversary Update:
 * Your settings will stay the same and you won''t lose any data.
 * If the setting to defer upgrades is turned on, you may not get the update immediately. To make sure this setting is off, select the Start  button, then select Settings  > Update & security  > Windows Update  > Advanced options, and clear the checkbox for Defer upgrades.
 
-`Note`
->To install the Anniversary Update now, see [Get Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=821363).',
+# Note
+To install the Anniversary Update now, see [Get Windows 10](http://go.microsoft.com/fwlink/p/?LinkId=821363).',
 'https://support.microsoft.com/en-us/help/12373/windows-update-faq'),
 (1,'Windows Update: FAQ','How do I keep my PC up to date?',
 'The best way to keep your PC current is to turn on automatic updates. With automatic updates, you don’t have to search for updates online or possibly miss critical fixes or device drivers for your Windows PC. Windows Update automatically installs important updates as they become available.
 
-`Note`
->If your PC is connected to a network where updates are managed by Group Policy, you might be unable to change settings related to Windows Update. For more info, contact your organization’s support person.
+# Note
+If your PC is connected to a network where updates are managed by Group Policy, you might be unable to change settings related to Windows Update. For more info, contact your organization’s support person.
 
 To turn on automatic updates in Windows 10:
 
-`Note`
+# Note
 
 Windows 10 is a service, which means automatic updates are turned on by default and your PC always has the latest and best features.
 
@@ -205,8 +205,8 @@ Restarting your PC and signing in again also works if you see a message that sta
 (1,'Find lost files after the update to Windows 10','Look for the files using Search',
 'Select the search box on the taskbar and search for your files. If ﻿you don’t see them and you’re not signed in with a temporary profile, use the troubleshooter to fix problems with Search. In the search box on the taskbar, type indexing, and then select Indexing Options. Select the Advanced Administrator icon button to view more options, then select the Troubleshoot search and indexing link and follow the steps.
 
-`Note`
->If you’re having trouble finding files you stored on OneDrive, see [Find lost or missing files in OneDrive](http://go.microsoft.com/fwlink/?LinkID=717895).
+# Note
+If you’re having trouble finding files you stored on OneDrive, see [Find lost or missing files in OneDrive](http://go.microsoft.com/fwlink/?LinkID=717895).
 
 More things to try:
 * Some files might be hidden from view. In the search box, enter Show hidden files and folders. Under Hidden files and folders, select Show hidden files, folders, and drives. Then try searching for your files again.

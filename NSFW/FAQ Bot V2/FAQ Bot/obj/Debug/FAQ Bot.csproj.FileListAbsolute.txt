@@ -40,3 +40,19 @@ d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\zh-hans\Microsoft.B
 d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\obj\Debug\FAQ Bot.csprojResolveAssemblyReference.cache
 d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\obj\Debug\Bot Application1.dll
 d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\obj\Debug\Bot Application1.pdb
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Google.Apis.Core.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Google.Apis.Customsearch.v1.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Google.Apis.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Google.Apis.PlatformServices.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\log4net.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Zlib.Portable.dll
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Google.Apis.pdb
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Google.Apis.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Google.Apis.Core.pdb
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Google.Apis.Core.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Google.Apis.Customsearch.v1.pdb
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Google.Apis.Customsearch.v1.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Google.Apis.PlatformServices.pdb
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Google.Apis.PlatformServices.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\log4net.xml
+d:\documents\visual studio 2015\Projects\FAQ Bot\FAQ Bot\bin\Zlib.Portable.xml
