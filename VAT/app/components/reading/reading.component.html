@@ -11,7 +11,7 @@
 		<div *ngFor=" let option of question.answer">
 			<div>
 				<input type="radio" (click)="saveStatus(question,option.value)" name="{{question.id}}">
-				<label> {{option.text}} </label>
+				{{option.text}}
 			</div>
 	  	</div>
 	</div>
