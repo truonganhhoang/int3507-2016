@@ -1,0 +1,192 @@
+[
+	{
+		"id": 1,
+		"question": "1. The new managing director..............a more effective management structure",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. propose"
+			},
+			{
+				"value": "B",
+				"text": "B. proposed"
+			},
+			{
+				"value": "C",
+				"text": "C. proposal"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 2,
+		"question": "2. The weather.........for tomorrow is partly cloudy with a chance of slight rain",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. forecasts"
+			},
+			{
+				"value": "B",
+				"text": "B. forecasted"
+			},
+			{
+				"value": "C",
+				"text": "C. forecast"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 3,
+		"question": "3. J&B Co. will be.....................its new line of home appliances next month",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. introduce"
+			},
+			{
+				"value": "B",
+				"text": "B. introducing"
+			},
+			{
+				"value": "C",
+				"text": "C. introduces"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 4,
+		"question": "4. Mr. Radford, the plant manager, recently............a tour of the production plant for visitors from Japan",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. conduct"
+			},
+			{
+				"value": "B",
+				"text": "B. conducted"
+			},
+			{
+				"value": "C",
+				"text": "C. to conduct"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 5,
+		"question": "5. ..................the personnel department directly if you have any questions regarding your benefits.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. Contacting"
+			},
+			{
+				"value": "B",
+				"text": "B. Contacts"
+			},
+			{
+				"value": "C",
+				"text": " C. Contact"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 6,
+		"question": "6. The monthly business meeting which is hosted by the president......an important role in exchanging ideas",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. play"
+			},
+			{
+				"value": "B",
+				"text": " B. plays"
+			},
+			{
+				"value": "C",
+				"text": "C. playing"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 7,
+		"question": "7. All requests for office supplies should be................to Mr. Park by noon",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. submitting"
+			},
+			{
+				"value": "B",
+				"text": "B. submit"
+			},
+			{
+				"value": "C",
+				"text": "C. submitted"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 8,
+		"question": "8. The company announces that it plans to...............several properties to expand its business",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. aquire"
+			},
+			{
+				"value": "B",
+				"text": "B. acquired"
+			},
+			{
+				"value": "C",
+				"text": "C. acquiring"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 9,
+		"question": "9. Though many restaurants in the area offer an extensive dinner menu, the quality of service...........considerably.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. varies"
+			},
+			{
+				"value": "B",
+				"text": "B. vary"
+			},
+			{
+				"value": "C",
+				"text": "C. various"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 10,
+		"question": "10. To attract customers, discounted items should..............at the front of the store",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. have displayed"
+			},
+			{
+				"value": "B",
+				"text": "B. displays"
+			},
+			{
+				"value": "C",
+				"text": "C. be displayed"
+			}
+		],
+		"correct_answer": "C"
+	}
+]

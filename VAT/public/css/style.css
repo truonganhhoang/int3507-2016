@@ -1,0 +1,32 @@
+html,
+body {
+  padding:0;
+  height:100%;
+}
+.wrapper {
+  min-height:100%;
+  position:relative;
+}
+.header {
+  background:#ededed;
+}
+.content {
+  padding-bottom:0px;
+  min-height: 500px
+}
+.my-footer {
+  background-color:black;
+  width:100%;
+  height:auto;
+  position:absolute;
+  padding-top: 10px;
+}
+.my-footer a{
+  color: #333333;
+}
+.my-footer a:hover{
+  color: #fff;
+}
+.my-footer a:focus{
+  color: #fff;
+}
