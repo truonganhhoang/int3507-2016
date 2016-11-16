@@ -1,22 +1,37 @@
-<div class="container">
-	<h1>Choose the best answer</h1>
-	<hr>
-	<div *ngFor=" let question of questions">
-		<h4><span *ngIf="question.status=='Right'" class="glyphicon glyphicon-ok" style="color: green"></span>
-		<span *ngIf="question.status && question.status!='Right'" class="glyphicon glyphicon-remove" style="color:red" ></span> {{question.question}}
-		</h4>
-		<div *ngIf="question.status && question.status!='Right'">
-			<p style="color:red"> {{question.status}}</p>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-2">
+			<button (click)="gotoLesson(1)" class="btn btn-md btn-success btn-block">Lesson 1</button><br>
+			<button (click)="gotoLesson(2)" class="btn btn-md btn-success btn-block">Lesson 2</button><br>
+			<button (click)="gotoLesson(3)" class="btn btn-md btn-success btn-block">Lesson 3</button><br>
+			<button (click)="gotoLesson(4)" class="btn btn-md btn-success btn-block">Lesson 4</button><br>
+			<button (click)="gotoLesson(5)" class="btn btn-md btn-success btn-block">Lesson 5</button>
 		</div>
-		<div *ngFor=" let option of question.answer">
-			<div>
-				<input type="radio" (click)="saveStatus(question,option.value)" name="{{question.id}}">
-				{{option.text}}
+		<div class="col-md-10">
+			<div *ngIf="param">
+				<h1>Lesson {{param}}: Choose the best answer</h1>
+				<hr>
+				<div *ngFor=" let question of questions">
+					<div *ngIf="question.id >= lower_limit && question.id <= upper_limit">
+						<h4><span *ngIf="question.status=='Right'" class="glyphicon glyphicon-ok" style="color: green"></span>
+						<span *ngIf="question.status && question.status!='Right'" class="glyphicon glyphicon-remove" style="color:red" ></span> {{question.question}}
+						</h4>
+						<div *ngIf="question.status && question.status!='Right'">
+							<p style="color:red"> {{question.status}}</p>
+						</div>
+						<div *ngFor=" let option of question.answer">
+							<div>
+								<input type="radio" (click)="saveStatus(question,option.value)" name="{{question.id}}">
+								{{option.text}}
+							</div>
+					  	</div>
+					</div>
+				</div>
+				<h4>Correct Answer: <b>{{ countCorrectAnswer}}</b></h4>
+				<button class="btn btn-md btn-success" (click)="check()">Check answer </button>
+				<br><br>
 			</div>
-	  	</div>
+			
+		</div>
 	</div>
-	<h4>Correct Answer: <b>{{ countCorrectAnswer}}</b></h4>
-	<button class="btn btn-md btn-success" (click)="check()">Check answer </button>
-	<br><br>
-
 </div>

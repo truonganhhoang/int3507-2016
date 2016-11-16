@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 import { ReadingService } from './reading.service';
 
@@ -9,18 +10,32 @@ import { ReadingService } from './reading.service';
 })
 export class ReadingComponent implements OnInit{ 
 	questions: Object[];
+  param: number;
+  lower_limit: number;
+  upper_limit: number;
+
 	countCorrectAnswer: number;
-	constructor(private readingService:ReadingService) {
+	constructor(private readingService:ReadingService,
+    private router: Router
+    ) {
 		this.readingService.getQuestions()
 			.subscribe(questions => {
 				this.questions = questions;
 			});
   	}
 
-  	ngOnInit() {
-  		
-  	}
+	ngOnInit() {
+		this.param = 1;
+    this.upper_limit = this.param * 10;
+    this.lower_limit = this.upper_limit - 9;
+	}
 
+  gotoLesson(param: number): void{
+    this.router.navigate(['/reading', param]);
+    this.param = param;
+    this.upper_limit = this.param * 10;
+    this.lower_limit = this.upper_limit - 9;
+  }
 
   saveStatus(question: Object, value:String) {
     question['option'] = value;
