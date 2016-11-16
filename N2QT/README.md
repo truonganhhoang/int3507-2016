@@ -4,7 +4,7 @@
 	+ Trương Thị Hồng Nhung
 	+ Lương Thị Trang
 
-- Đề tài : Làm một số trò chơi học ngoại ngữ, học vui bằng Construct2
+- Đề tài : Làm trò chơi học ngoại ngữ, học vui bằng Construct2
 - Link ứng dụng : http://n2qt.somee.com/N2QT/
 - Cách chơi :
 	+ Người chơi đoán từ đáp án rồi chọn chữ cái .Độ dài từ đáp án là số lượng hình bong bóng
