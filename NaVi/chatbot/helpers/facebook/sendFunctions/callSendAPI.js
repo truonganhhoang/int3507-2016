@@ -14,16 +14,7 @@ module.exports = function callSendAPI(messageData, callback) {
         if (!error && response.statusCode == 200) {
             var recipientId = body.recipient_id;
             var messageId = body.message_id;
-
-            if (messageId) {
-                console.log("Successfully sent message with id %s to recipient %s",
-                    messageId, recipientId);
-            } else {
-                console.log("Successfully called Send API for recipient %s",
-                    recipientId);
-            }
             if (callback) {
-                console.log('Callback fbAPI is called');
                 callback(null);
             }
         } else {

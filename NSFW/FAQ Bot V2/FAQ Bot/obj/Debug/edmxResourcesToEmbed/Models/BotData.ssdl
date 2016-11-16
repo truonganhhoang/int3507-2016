@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BotDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="categories">
+    <Key>
+      <PropertyRef Name="category_id" />
+    </Key>
+    <Property Name="category_id" Type="int" Nullable="false" />
+    <Property Name="category_name" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="category_image" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="help">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="category_id" Type="int" Nullable="false" />
+    <Property Name="question" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="sub_question" Type="nvarchar(max)" />
+    <Property Name="answer" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="link" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_help_categories">
+    <End Role="categories" Type="Self.categories" Multiplicity="1" />
+    <End Role="help" Type="Self.help" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categories">
+        <PropertyRef Name="category_id" />
+      </Principal>
+      <Dependent Role="help">
+        <PropertyRef Name="category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BotDataModelStoreContainer">
+    <EntitySet Name="categories" EntityType="Self.categories" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="help" EntityType="Self.help" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_help_categories" Association="Self.FK_help_categories">
+      <End Role="categories" EntitySet="categories" />
+      <End Role="help" EntitySet="help" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

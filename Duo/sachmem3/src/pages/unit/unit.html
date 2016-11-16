@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>{{bookTitle}}</ion-title>
+
+    <ion-fab middle right>
+      <button ion-fab mini color="light" [disabled]="learned <= 0" (click)="enterReview()">
+        <ion-icon name="clipboard"></ion-icon>
+      </button>
+    </ion-fab>
+  </ion-navbar>
+
+  <ion-grid [@actionState]="actionState" *ngIf="selectedUnit" 
+       style="position:fixed;bottom:0px;background:rgba(210, 210, 210, 0.5)">
+    <ion-row>
+      <ion-col width-50>
+        <button ion-button icon-left [disabled]="!selectedUnit" (click)="enterTraining()" block>
+          <ion-icon name="book"></ion-icon>
+          Learn
+        </button>
+      </ion-col>
+      <ion-col width-50>
+        <button ion-button icon-left [disabled]="!selectedUnit" (click)="enterFighting()" block>
+          <ion-icon name="game-controller-b"></ion-icon>
+          Play
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-header>
+
+<ion-content padding>
+  <ion-list radio-group [(ngModel)]="selectedUnit">
+    <!-- <ion-list-header>
+      Choose a unit
+    </ion-list-header> -->
+    <ion-item *ngFor="let item of units">
+      <ion-label><span color="primary">Unit {{item.number}}.</span> {{item.name}}</ion-label>
+      <ion-radio value="{{item.id}}"></ion-radio>
+    </ion-item>
+  </ion-list>
+</ion-content>

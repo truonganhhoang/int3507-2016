@@ -1,0 +1,11 @@
+.caption > h3 {
+    text-align: center;
+}
+
+.thumbnail > image {
+    margin: 10px;
+}
+
+.thumbnail > img:hover {
+    cursor: pointer;
+}

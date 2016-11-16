@@ -1,0 +1,30 @@
+page-about {
+	ion-slide {
+		background: white;
+	}
+
+	img {
+		width: 30% !important;
+	}
+
+	.version {
+		margin-top: 10px;
+		font-size: 0.8em !important;
+		color: gray;
+	}
+
+	.header {
+		font-family: 'Noto Sans';
+		font-size: 1.2em;
+		text-align: left;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.content {
+		font-family: 'Noto Sans';
+		text-align: left;
+		font-size: 0.9em;
+		text-align: justify
+	}
+}

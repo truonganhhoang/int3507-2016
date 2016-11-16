@@ -4,37 +4,38 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BotDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="FAQ">
+    <Schema Namespace="BotDataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="windows">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Code" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="300" Nullable="false" />
-          <Property Name="Cause" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Resolution" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="winver" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="topic" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="question1" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="question2" Type="nvarchar(max)" />
+          <Property Name="answer" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityContainer Name="BotDataModelStoreContainer">
-          <EntitySet Name="FAQ" EntityType="Self.FAQ" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="windows" EntityType="Self.windows" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BotDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="FAQ">
+        <EntityType Name="window">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Code" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Cause" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Resolution" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="winver" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="topic" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="question1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="question2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityContainer Name="BotDataEntities1" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="FAQs" EntityType="Self.FAQ" />
+          <EntitySet Name="windows" EntityType="Self.window" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -42,14 +43,15 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="BotDataModelStoreContainer" CdmEntityContainer="BotDataEntities1">
-          <EntitySetMapping Name="FAQs">
-            <EntityTypeMapping TypeName="BotDataModel.FAQ">
-              <MappingFragment StoreEntitySet="FAQ">
-                <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="Code" ColumnName="Code" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Cause" ColumnName="Cause" />
-                <ScalarProperty Name="Resolution" ColumnName="Resolution" />
+          <EntitySetMapping Name="windows">
+            <EntityTypeMapping TypeName="BotDataModel.window">
+              <MappingFragment StoreEntitySet="windows">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="winver" ColumnName="winver" />
+                <ScalarProperty Name="topic" ColumnName="topic" />
+                <ScalarProperty Name="question1" ColumnName="question1" />
+                <ScalarProperty Name="question2" ColumnName="question2" />
+                <ScalarProperty Name="answer" ColumnName="answer" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -1,6 +1,4 @@
 'use strict';
-const
-    sendFunctions = require('./sendFunctions');
 
 module.exports = function receivedPostback(event) {
     var senderID = event.sender.id;
@@ -11,10 +9,24 @@ module.exports = function receivedPostback(event) {
     // button for Structured Messages.
     var payload = event.postback.payload;
 
-    console.log("Received postback for user %d and page %d with payload '%s' " +
-        "at %d", senderID, recipientID, payload, timeOfPostback);
+    if (payload) {
+        let action = payload.split('_')[0];
 
-    // When a postback is called, we'll send a message back to the sender to
-    // let them know it was successful
-    sendFunctions.sendTextMessage(senderID, "Postback called");
+        // If action is 'New word'
+        if (action === "NW") {
+            require('../fnNewWords/handlePostbackAction')(senderID, payload);
+        }
+        else if (action === "PM") {
+            let chosenOption = payload.split('_')[1];
+            if (chosenOption === "PROFILE") {
+                require('../fnUserSettings/updateProfile')(senderID);
+            }
+            else if (chosenOption === "STATUS") {
+                require('../fnUserSettings/learningProgress')(senderID);
+            }
+            else if (chosenOption === "NOTIFICATIONS") {
+                require('../fnUserSettings/notificationSetting')(senderID);
+            }
+        }
+    }
 };

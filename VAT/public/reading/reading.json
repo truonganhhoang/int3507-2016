@@ -1,0 +1,952 @@
+[
+	{
+		"id": 1,
+		"question": "1. The new managing director..............a more effective management structure",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. propose"
+			},
+			{
+				"value": "B",
+				"text": "B. proposed"
+			},
+			{
+				"value": "C",
+				"text": "C. proposal"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 2,
+		"question": "2. The weather.........for tomorrow is partly cloudy with a chance of slight rain",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. forecasts"
+			},
+			{
+				"value": "B",
+				"text": "B. forecasted"
+			},
+			{
+				"value": "C",
+				"text": "C. forecast"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 3,
+		"question": "3. J&B Co. will be.....................its new line of home appliances next month",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. introduce"
+			},
+			{
+				"value": "B",
+				"text": "B. introducing"
+			},
+			{
+				"value": "C",
+				"text": "C. introduces"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 4,
+		"question": "4. Mr. Radford, the plant manager, recently............a tour of the production plant for visitors from Japan",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. conduct"
+			},
+			{
+				"value": "B",
+				"text": "B. conducted"
+			},
+			{
+				"value": "C",
+				"text": "C. to conduct"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 5,
+		"question": "5. ..................the personnel department directly if you have any questions regarding your benefits.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. Contacting"
+			},
+			{
+				"value": "B",
+				"text": "B. Contacts"
+			},
+			{
+				"value": "C",
+				"text": " C. Contact"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 6,
+		"question": "6. The monthly business meeting which is hosted by the president......an important role in exchanging ideas",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. play"
+			},
+			{
+				"value": "B",
+				"text": " B. plays"
+			},
+			{
+				"value": "C",
+				"text": "C. playing"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 7,
+		"question": "7. All requests for office supplies should be................to Mr. Park by noon",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. submitting"
+			},
+			{
+				"value": "B",
+				"text": "B. submit"
+			},
+			{
+				"value": "C",
+				"text": "C. submitted"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 8,
+		"question": "8. The company announces that it plans to...............several properties to expand its business",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. aquire"
+			},
+			{
+				"value": "B",
+				"text": "B. acquired"
+			},
+			{
+				"value": "C",
+				"text": "C. acquiring"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 9,
+		"question": "9. Though many restaurants in the area offer an extensive dinner menu, the quality of service...........considerably.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. varies"
+			},
+			{
+				"value": "B",
+				"text": "B. vary"
+			},
+			{
+				"value": "C",
+				"text": "C. various"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 10,
+		"question": "10. To attract customers, discounted items should..............at the front of the store.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. have displayed"
+			},
+			{
+				"value": "B",
+				"text": "B. displays"
+			},
+			{
+				"value": "C",
+				"text": "C. be displayed"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 11,
+		"question": "1. Ms. Lee will reserve the meeting room..........Ms. Leno prepares copies of the meeting agenda.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. also"
+			},
+			{
+				"value": "B",
+				"text": "B. than"
+			},
+			{
+				"value": "C",
+				"text": "C. while"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 12,
+		"question": "2. Successful applicants will be relocated to either New York ...............London.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. neither"
+			},
+			{
+				"value": "B",
+				"text": "B. nor"
+			},
+			{
+				"value": "C",
+				"text": "C. or"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 13,
+		"question": "3. The new company building is relatively...............and adequately ventilated.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. spacing"
+			},
+			{
+				"value": "B",
+				"text": "B. spaciousness"
+			},
+			{
+				"value": "C",
+				"text": "C. spacious"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 14,
+		"question": "4. Due to your excellence performance, I will surely recommend your company to anyone ...............is planning a move.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. who"
+			},
+			{
+				"value": "B",
+				"text": "B. which"
+			},
+			{
+				"value": "C",
+				"text": "C. what"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 15,
+		"question": "5. Management consultants often stress............rewarding dedicated employees raises workplace morale.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. that"
+			},
+			{
+				"value": "B",
+				"text": "B. of"
+			},
+			{
+				"value": "C",
+				"text": "C. in"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 16,
+		"question": "6. By sending gift certificates to regional managers, the director expressed his thanks for their hard work................commitment.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. as"
+			},
+			{
+				"value": "B",
+				"text": "B. and"
+			},
+			{
+				"value": "C",
+				"text": "C. but"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 17,
+		"question": "7. ...............the package were sent by express delivery, the distributor has not yet received them.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. Although"
+			},
+			{
+				"value": "B",
+				"text": "B. Unlike"
+			},
+			{
+				"value": "C",
+				"text": "C. Already"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 18,
+		"question": "8. The award was presented to Dr. Marson...................led the research on global warming.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. while"
+			},
+			{
+				"value": "B",
+				"text": "B. who"
+			},
+			{
+				"value": "C",
+				"text": "C. which"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 19,
+		"question": "9. The city auditorium is available for ...........private and business functions.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. even"
+			},
+			{
+				"value": "B",
+				"text": "B. both"
+			},
+			{
+				"value": "C",
+				"text": "C. either"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 20,
+		"question": "10. The community center runs community-based programs ................include a wide variety of classes and services.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A.  whose"
+			},
+			{
+				"value": "B",
+				"text": "B. where"
+			},
+			{
+				"value": "C",
+				"text": "C. that"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 21,
+		"question": "1. Please note that our service centers will be closed at 3:00 PM on Friday..............the upcoming holidays.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. due to"
+			},
+			{
+				"value": "B",
+				"text": "B. while"
+			},
+			{
+				"value": "C",
+				"text": "C. since"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 22,
+		"question": "2. The sales director has suggested ...........all sales reports be submitted by the end of each week.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. on"
+			},
+			{
+				"value": "B",
+				"text": "B. even though"
+			},
+			{
+				"value": "C",
+				"text": "C. that"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 23,
+		"question": "3. By volunteering, you can create lasting memories and.......................valuable experience.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. gain"
+			},
+			{
+				"value": "B",
+				"text": "B. gaining"
+			},
+			{
+				"value": "C",
+				"text": "C. gained"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 24,
+		"question": "4. Trainees should contact their trainer directly..................they encounter any problem beyond their control.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. if"
+			},
+			{
+				"value": "B",
+				"text": "B. which"
+			},
+			{
+				"value": "C",
+				"text": "C. what"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 25,
+		"question": "5. We are proud of our service technicians because of their professionalism and......................",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. expert"
+			},
+			{
+				"value": "B",
+				"text": "B. inexpert"
+			},
+			{
+				"value": "C",
+				"text": "C. expertise"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 26,
+		"question": "6. ..................the replacement parts arrive in the factory, we will restart the assembly line.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. Once"
+			},
+			{
+				"value": "B",
+				"text": "B. Soon"
+			},
+			{
+				"value": "C",
+				"text": "C. Then"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 27,
+		"question": "7. Neither taking photographs ..................bringing soft drinks is allowed in the musemum.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. or"
+			},
+			{
+				"value": "B",
+				"text": "B. nor"
+			},
+			{
+				"value": "C",
+				"text": "C. and"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 28,
+		"question": "8. The budget report was due last Friday, .................the finance director has agreed to a short extension.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. but"
+			},
+			{
+				"value": "B",
+				"text": "B. beyond"
+			},
+			{
+				"value": "C",
+				"text": "C. until"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 29,
+		"question": "9. S&B Accessories began to sell cosmetics products in 2002, .................now account for more than 50 percent of its total sales.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. what"
+			},
+			{
+				"value": "B",
+				"text": "B. which"
+			},
+			{
+				"value": "C",
+				"text": "C. if"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 30,
+		"question": "10. The company is having difficulty securing funds...............it has a lot of potential.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. which"
+			},
+			{
+				"value": "B",
+				"text": "B. in addition to"
+			},
+			{
+				"value": "C",
+				"text": "C. even though"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 31,
+		"question": "1. The bank has confirmed that I will take necessary measures to ................another computer system failure.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. upgrade"
+			},
+			{
+				"value": "B",
+				"text": "B. encourage"
+			},
+			{
+				"value": "C",
+				"text": "C. prevent"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 32,
+		"question": "2. The management decided to lay off some temporary workers in an effort to reduce ..................",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. values"
+			},
+			{
+				"value": "B",
+				"text": "B. expenses"
+			},
+			{
+				"value": "C",
+				"text": "C. fines"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 33,
+		"question": "3. To apply for the advertised position, please............an application with the necessary documents to the human resources department.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. comply"
+			},
+			{
+				"value": "B",
+				"text": "B. submit"
+			},
+			{
+				"value": "C",
+				"text": "C. urge"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 34,
+		"question": "4. The marketing seminar scheduled for tomorrow is..........for employees who have been with the company less than a year.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. intended"
+			},
+			{
+				"value": "B",
+				"text": "B. based"
+			},
+			{
+				"value": "C",
+				"text": "C. agreed"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 35,
+		"question": "5. If you want to reschedule your..............., please give us at least 24 hours advance notice.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. appointment"
+			},
+			{
+				"value": "B",
+				"text": "B. position"
+			},
+			{
+				"value": "C",
+				"text": "C. assigment"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 36,
+		"question": "6. All visitors are required to...............photo identification before entering our research center.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. notify"
+			},
+			{
+				"value": "B",
+				"text": "B. assign"
+			},
+			{
+				"value": "C",
+				"text": "C. present"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 37,
+		"question": "7. In a preview, seats in the front row are usually..............for VIP guests.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. chaired"
+			},
+			{
+				"value": "B",
+				"text": "B. reserved"
+			},
+			{
+				"value": "C",
+				"text": "C. performed"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 38,
+		"question": "8. Ultra Discount Store Inc. reserves the.................to change the free gift items without prior notice.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. importance"
+			},
+			{
+				"value": "B",
+				"text": "B. selection"
+			},
+			{
+				"value": "C",
+				"text": "C. right"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 39,
+		"question": "9. While the service center is closed for renovation, all questions concerning repairs will be ................by the customer service department.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. expired"
+			},
+			{
+				"value": "B",
+				"text": "B. handled"
+			},
+			{
+				"value": "C",
+				"text": "C. replied"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 40,
+		"question": "10. Our policy clearly states that the board of directors should..................an outside auditor to oversee our company's accounting practices.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. deposite"
+			},
+			{
+				"value": "B",
+				"text": "B. appoint"
+			},
+			{
+				"value": "C",
+				"text": "C. predict"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 41,
+		"question": "1. Business Solutions , one of the leading international business magazines, has...................in over 30 countries.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. subscribers"
+			},
+			{
+				"value": "B",
+				"text": "B. spectators"
+			},
+			{
+				"value": "C",
+				"text": "C. witnesses"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 42,
+		"question": "2. Because of a large number of people, we had to wait for more than 3 hours to ...............tickets for the baseball game.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. support"
+			},
+			{
+				"value": "B",
+				"text": "B. purchase"
+			},
+			{
+				"value": "C",
+				"text": "C. achieve"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 43,
+		"question": "3. We are delighted that your generous................have made it possible for us to support children from low income families.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. acquisitions"
+			},
+			{
+				"value": "B",
+				"text": "B. contributions"
+			},
+			{
+				"value": "C",
+				"text": "C. additions"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 44,
+		"question": "4. Business owners want to hire employees with ambition, energy, and a desire to make a ............",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. complaint"
+			},
+			{
+				"value": "B",
+				"text": "B. decision difference"
+			},
+			{
+				"value": "C",
+				"text": "C. difference"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 45,
+		"question": "5. Our service representatives ...............committed to providing quality service for customers.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. retain"
+			},
+			{
+				"value": "B",
+				"text": "B. remember"
+			},
+			{
+				"value": "C",
+				"text": "C. remain"
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 46,
+		"question": "6. Our current subscription rates will be effective until further ..............",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. notice"
+			},
+			{
+				"value": "B",
+				"text": "B. noticeable"
+			},
+			{
+				"value": "C",
+				"text": "C. noticed"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 47,
+		"question": "7. The board of directors unanimously agreed to ...............your consultant contract for an additional two-year period.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. redeem"
+			},
+			{
+				"value": "B",
+				"text": "B. renew"
+			},
+			{
+				"value": "C",
+				"text": "C. rehire"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 48,
+		"question": "8. Customers may request a refund or..................only if the merchandise is still unused.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. replacement"
+			},
+			{
+				"value": "B",
+				"text": "B. complaint"
+			},
+			{
+				"value": "C",
+				"text": "C. promotion"
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 49,
+		"question": "9. One of the greatest .............. of online bookstores over traditional ones is saving time and money.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. incomes"
+			},
+			{
+				"value": "B",
+				"text": "B. advantages"
+			},
+			{
+				"value": "C",
+				"text": "C.  interests"
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 50,
+		"question": "10. If you need any information about the opening, please do not............to contact me.",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. provide"
+			},
+			{
+				"value": "B",
+				"text": "B. qualify"
+			},
+			{
+				"value": "C",
+				"text": "C. hesitate"
+			}
+		],
+		"correct_answer": "C"
+	}
+]
