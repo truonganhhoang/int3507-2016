@@ -17,15 +17,15 @@ Vũ Minh Vương - K58CD
 
 ##Model chính core.php: Gồm 2 class Core và FbBotApp
 
-###Class Core quét toàn bộ Module để thực thi tìm response phù hợp cho command được gửi từ index
+- Class Core quét toàn bộ Module để thực thi tìm response phù hợp cho command được gửi từ index
 
-###Class FbBotApp tạo cấu trúc gửi response về cho Facebook
+- Class FbBotApp tạo cấu trúc gửi response về cho Facebook
 
 ##List Modules thực thi trong dir 'modules', có thể sửa tên trong class Core
 
-###Tên class trùng tên File.php
+- Tên class trùng tên File.php
 
-###Set Priority để tăng mức độ ưu tiên nếu 1 message cho ra nhiều response
+- Set Priority để tăng mức độ ưu tiên nếu 1 message cho ra nhiều response
 
 ##List message Type trong file messageType, tìm hiểu thêm tại https://developers.facebook.com/docs/messenger-platform/product-overview/conversation#send_messages
 
