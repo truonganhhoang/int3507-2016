@@ -1,33 +1,71 @@
 <?php
-
 class Core{
 	const MODULES_DIR = './modules';
 	const FB_APP_TOKEN = '';
 	const VERIFY_TOKEN = '';
 
 	function process($command, $sender){
-		$modules = self::listModules();
-		$messages = array();
+        $image = false;
+        if(!empty($command['message'])){
+            $command = $command['message'];
+        } else if(!empty($command['postback'])){
+            $command = $command['postback'];
+        } else if(!empty($command['image'])){
+            $image = true;
+        }
+        
+        $bot = new FbBotApp(self::FB_APP_TOKEN);
+        $tangau = new Tangau($sender, $bot);
+        $check = $tangau->check();
 
-		foreach($modules as $moduleName){
-			include(self::MODULES_DIR.'/'.$moduleName.'.php');
-			$module = new $moduleName($sender);
-            $response = $module->process($command);
-            if($response != null)
-                $messages[] = $response ;
-		}
+        $in = preg_match('/^(tangau|batdau|in|ghepcap)$/', self::chuan_hoa($command));
+        $out = preg_match('/^(end|out|ketthuc)$/', self::chuan_hoa($command));
+        $huy = preg_match('/^(huy)$/', self::chuan_hoa($command));
 
-        $totalMessage = sizeof($messages);
+        if($check == 0 && $in)
+          $tangau->reg();
+          //$bot->send(new Message($sender, "Cảm ơn bạn đã quan tâm!\nChức năng tán gẫu đang tạm đóng để bảo trì.\nChat help để xem các chức năng khác!"));
+        else if($check == 0 && $out)
+            $bot->send(new Message($sender, "Bạn chưa đăng ký tán gẫu\nVui lòng chat Tán gẫu để bắt đầu!"));
+        else if($check == 1 && $in)
+            $bot->send(new Message($sender, "Bạn đã đăng ký tán gẫu rồi\nVui lòng đợi được ghép cặp!"));
+        else if($check == 2 && $in)
+            $bot->send(new Message($sender, "Bạn đã được ghép cặp rồi, còn đòi đăng ký gì nữa?"));
+        else if(($check == 2 || $check == 1) && $out)
+            $tangau->out();
+        else if($check == 2)
+            $tangau->send($command, $image);
+        else {
+            if($image){
+                $bot->send(new Message($sender, "Bot không nhận ảnh ngoài chức năng Tán gẫu!"));
+            }
+            else {
+                $bot->send(new SenderAction($sender));
+                $modules = self::listModules();
+                $messages = array();
 
-		if($totalMessage > 1){
-			$index = 0;
-			for($i = 1; $i < $totalMessage; $i++){
-				if($messages[$i]['priority'] >= $messages[$index]['priority'])
-					$index = $i;
-			}
-			return $messages[$index];
-		} else
-			return $messages[0];
+                foreach($modules as $moduleName){
+                    include(self::MODULES_DIR.'/'.$moduleName.'.php');
+                    $module = new $moduleName($sender);
+                    $response = $module->process($command);
+                    if($response != null)
+                        $messages[] = $response ;
+                }
+
+                $totalMessage = sizeof($messages);
+
+                if($totalMessage > 1){
+                    $index = 0;
+                    for($i = 1; $i < $totalMessage; $i++){
+                        if($messages[$i]['priority'] >= $messages[$index]['priority'])
+                            $index = $i;
+                    }
+                    return $messages[$index];
+                } else
+                    return $messages[0];
+            }
+        }
+        $tangau->close();
 	}
 
 	function listModules(){
@@ -43,6 +81,28 @@ class Core{
 	    closedir($handle);
 	    return $listModule;
 	}
+
+
+
+    function chuan_hoa($str) {
+      $str = preg_replace("/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/", 'a', $str);
+      $str = preg_replace("/(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)/", 'e', $str);
+      $str = preg_replace("/(ì|í|ị|ỉ|ĩ)/", 'i', $str);
+      $str = preg_replace("/(ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ)/", 'o', $str);
+      $str = preg_replace("/(ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ)/", 'u', $str);
+      $str = preg_replace("/(ỳ|ý|ỵ|ỷ|ỹ)/", 'y', $str);
+      $str = preg_replace("/(đ)/", 'd', $str);
+      $str = preg_replace("/(À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ)/", 'A', $str);
+      $str = preg_replace("/(È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ)/", 'E', $str);
+      $str = preg_replace("/(Ì|Í|Ị|Ỉ|Ĩ)/", 'I', $str);
+      $str = preg_replace("/(Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ)/", 'O', $str);
+      $str = preg_replace("/(Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ)/", 'U', $str);
+      $str = preg_replace("/(Ỳ|Ý|Ỵ|Ỷ|Ỹ)/", 'Y', $str);
+      $str = preg_replace("/(Đ)/", 'D', $str);
+      //$str = str_replace(" ", "-", str_replace("&*#39;","",$str));
+      return trim(strtolower(str_replace(' ', '',$str)));
+    }
+	
 }
 
 class FbBotApp{
