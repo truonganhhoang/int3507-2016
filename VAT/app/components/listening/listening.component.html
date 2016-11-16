@@ -1,0 +1,49 @@
+<div class="container">
+	<h2>Listening</h2>
+	<h4>This audio track has two different conversations. Please listen carefully and then choose the correct answer to the questions below. Good luck!</h4>
+	<hr>
+	<div class="well">
+		<audio id="track-1" controls>
+			<source src="/audio/Track-1.mp3" type="audio/mp3">
+		</audio>
+	</div>
+	
+	<hr>
+	<h3>Conversation 1</h3>
+	<div *ngFor=" let question of questions">
+		<div *ngIf="question.id <= 5">
+			<b><h4><span *ngIf="question.status=='Right'" class="glyphicon glyphicon-ok" style="color: green"></span>
+			<span *ngIf="question.status && question.status!='Right'" class="glyphicon glyphicon-remove" style="color:red" ></span> <b>{{question.question}}</b>
+			</h4></b>
+			<div *ngIf="question.status && question.status!='Right'">
+				<p style="color:red"> {{question.status}}</p>
+			</div>
+			<div *ngFor=" let option of question.answer">
+				<div>
+					<input type="radio" (click)="saveStatus(question,option.value)" name="{{question.id}}">
+					{{option.text}}
+				</div>
+		  	</div>
+		</div>
+	</div>
+	<h3>Conversation 2</h3>
+	<div *ngFor=" let question of questions">
+		<div *ngIf="question.id > 5">
+			<b><h4><span *ngIf="question.status=='Right'" class="glyphicon glyphicon-ok" style="color: green"></span>
+			<span *ngIf="question.status && question.status!='Right'" class="glyphicon glyphicon-remove" style="color:red" ></span> <b>{{question.question}}</b>
+			</h4></b>
+			<div *ngIf="question.status && question.status!='Right'">
+				<p style="color:red"> {{question.status}}</p>
+			</div>
+			<div *ngFor=" let option of question.answer">
+				<div>
+					<input type="radio" (click)="saveStatus(question,option.value)" name="{{question.id}}">
+					{{option.text}}
+				</div>
+		  	</div>
+		</div>
+	</div>
+	<h4>Correct Answer: <b>{{ countCorrectAnswer}}</b></h4>
+	<button class="btn btn-md btn-success" (click)="check()">Check answer </button>
+	<br><br>
+</div>
