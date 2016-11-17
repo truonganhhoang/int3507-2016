@@ -1,6 +1,9 @@
 ## 
-- Giới thiệu bài toán (Mục đích, hướng tới người dùng nào )
-
+## 1 Giới thiệu bài toán 
+ Mục đích xây dựng chatbot hỗ trợ việc học tiếng anh của nhóm Navi :
+ - Giúp người dùng có được một trải nghiệm, một cách học tiếng anh online mới mẻ.
+ - Xây dựng chatbot ở mức đơn giản để xem phàn hồi của người dùng về sản phẩm qua đó có những phát triển trong tương lai.
+ 
 ## 2 Giới thiệu nền tàng, công nghệ (Chatbot, nodejs, java )
 ### 2.1 Nền tảng Messenger Chatbot là gì?
 * Chatbot: là một chương trình máy tính có khả năng tiến hành hội thoại thông qua phương thức văn bản (textual) hoặc thính giác (auditory) [\[1\]](https://en.wikipedia.org/wiki/Chatterbot). Hiểu một cách đơn giản hơn: Thay vì trò chuyện (text/voice chat) với người, bạn có thể trò chuyện với một chương trình máy tính đã được lập trình sẵn, có khả năng hiểu câu nói của bạn ở một mức độ nhất định, và tự động trả lời bạn.
@@ -55,11 +58,8 @@ Quá trình từ khi người dùng cuối gửi một tin nhắn đến Chatbot
 * Chatbot của bạn hiện tại đã có thể chạy, và làm được một số việc đơn giản như:
   * Trả lại một số mẫu tin nhắn nhất định khi bạn chat đúng rule. VD: 'button', 'generic', 'quick reply',...[see more](https://developers.facebook.com/docs/messenger-platform/product-overview/conversation)
   * Echo lại tất cả các tin nhắn của bạn
-- Các chức năng chính ứng dụng
-- Hướng phát triển tiếp
-- Cầu trúc thư mục project
 
-
+## 5 Các chức năng chính ứng dụng
 
 ## Cwat vesion 0.4
 
@@ -131,3 +131,7 @@ Quá trình từ khi người dùng cuối gửi một tin nhắn đến Chatbot
   ![error handling](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/handling-exceptions.png)
 
 - The database has been updated with more questions.
+
+
+## 6  Hướng phát triển tiếp
+## 7 Cầu trúc thư mục project
