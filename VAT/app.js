@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 
-var users = require('./routes/users');
+var router = require('./routes/router');
 var app = express();
 
 const options = {
@@ -28,11 +28,10 @@ app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, 'public'), options));
 app.use(express.static(path.join(__dirname, 'app')));
-//app.use(express.static(path.join(__dirname, 'bower_components')));
 
 // Routes registration
 // ---
-app.use('/users', users);
+app.use('/', router);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

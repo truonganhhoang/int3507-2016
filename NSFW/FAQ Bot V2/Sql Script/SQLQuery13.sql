@@ -11,21 +11,18 @@ Screenshot of Windows Defender
 To scan specific files or folders, select them, then right-click (or press and hold) and choose Scan with Windows Defender. If Windows Defender finds anything malicious, it notifies you in the app and recommends what you should do next to keep your PC safe.
 
 Windows Firewall filters the information coming into your PC from the Internet, blocking potentially harmful programs. To turn it off:
-
 1. Select the Start button, then select Windows System > Control Panel.
-
 2. Select System and Security > Windows Firewall > Turn Windows Firewall on or off > pick the networks you want to change settings for > OK.
 
-`Note`
->If your PC is connected to a network, you might not be able to change your Windows Firewall settings because of network policies. Contact your administrator for more info.
+# Note
+If your PC is connected to a network, you might not be able to change your Windows Firewall settings because of network policies. Contact your administrator for more info.
+
 To turn off real-time protection temporarily:
-
 1. Select the Start button, then select Settings  > Update and Security > Windows Defender.
-
 2. Turn off Real-time protection.
 
-`Note`
->Windows Defender automatically turns off if you install another antivirus app.',
+# Note
+Windows Defender automatically turns off if you install another antivirus app.',
 'https://support.microsoft.com/en-us/help/17187/windows-10-protect-your-pc'),
 (13,'Where is Action Center in Windows 10?','',
 'In Windows 10, the new action center is where you"ll find app notifications and quick actions. But the old action center is still here—it"s been renamed Security and Maintenance. And it"s still where you go to change your security settings.

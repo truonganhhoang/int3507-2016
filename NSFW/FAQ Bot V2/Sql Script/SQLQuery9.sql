@@ -2,11 +2,11 @@ insert into dbo.help(category_id,question,sub_question,answer,link) values
 (9,'You"ve got games', '',
 'Whether you’re new to gaming on Windows 10 or already a pro, you have something to play—go solo and play solitaire until you add more games, which is easy to do.
 
-    1. Select the Start Start symbol button, then select Xbox Image of Xbox logo.
+1. Select the Start Start symbol button, then select Xbox Image of Xbox logo.
 
-    2. Sign in. If you don’t have a Microsoft account, sign up. If you’ve ever installed games from the Windows Store, use the same Microsoft account here.
+2. Sign in. If you don’t have a Microsoft account, sign up. If you’ve ever installed games from the Windows Store, use the same Microsoft account here.
 
-    3. Select My games. Games you have on that device will appear there
+3. Select My games. Games you have on that device will appear there
 
 To get more games, or to install games you have on other devices, select Find games in the Store.
 ',

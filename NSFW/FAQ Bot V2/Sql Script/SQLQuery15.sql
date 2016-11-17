@@ -43,8 +43,7 @@ If you have difficulty or feel discomfort while using a keyboard, select the Sta
 * Use Filter Keys to set the sensitivity of the keyboard so it can ignore brief or repeated keystrokes.
 * Instead of relying on the physical keyboard, try the On-Screen Keyboard. You select keys using the mouse or other pointing device (like a joystick), or you can use a single switch to cycle through the keys on the screen.
 
-`Note:`
->You can also control your PC with just your voice using Windows Speech Recognition. To learn more, see [Use Speech Recognition](https://support.microsoft.com/en-us/help/17208/windows-10-use-speech-recognition)
+Note: You can also control your PC with just your voice using Windows Speech Recognition. To learn more, see [Use Speech Recognition](https://support.microsoft.com/en-us/help/17208/windows-10-use-speech-recognition)
 ','https://support.microsoft.com/en-us/help/27936/windows-10-make-input-devices-easier-to-use'
 );
 

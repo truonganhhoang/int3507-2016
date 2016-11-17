@@ -7,8 +7,8 @@ Cortana is ready to help you in more places in Windows 10, including the lock sc
 
 And forget about writing tasks on your hands just to remember, say, your dad''s birthday—create reminders based on location, time, and even people. Cortana can help you remember to wish your dad a happy birthday at a specific time, or remind you to pick up a cake when you''re at the grocery store.
 
-`Note`
->Cortana is only available in certain countries/regions, and some Cortana features might not be available everywhere. If Cortana isn''t available, you can still use search.
+# Note
+Cortana is only available in certain countries/regions, and some Cortana features might not be available everywhere. If Cortana isn''t available, you can still use search.
 
 # Rule the web with Microsoft Edge
 The context menu for extensions in Microsoft Edge

@@ -13,8 +13,8 @@ By itself, Groove makes it easy to play and manage your music and playlists. But
 On your PC, just add your MP3s, even iTunes songs, to your music folder on OneDrive. Then you’ll have them at your fingertips in Groove on any of your devices.
 Want more ways to play? Get a [Groove music Pass](https://www.microsoft.com/en-us/store/entertainment) and dive into artist-based radio, curated playlists, and one of the biggest music catalogs on the planet. Groove Music Pass lets you stream and download new hits and familiar favorites from a selection of over 40 million songs. Listen—ad-free—just about anywhere.
 
-`Note`
->Groove Music Pass is sold separately and it''s not available in all markets. The catalog also varies by market.',
+# Note
+Groove Music Pass is sold separately and it''s not available in all markets. The catalog also varies by market.',
 'https://support.microsoft.com/en-us/help/17186'),
 (5,'Photos help','Add pictures to the Photos app',
 'The Photos app automatically finds most of the photos and videos on your PC and OneDrive. But if it’s missing a folder full of photos, you might need to tell it where to look.

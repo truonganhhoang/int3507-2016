@@ -15,12 +15,11 @@ require('rxjs/Rx');
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var Rx_1 = require("rxjs/Rx");
-var appSettings_1 = require("../appSettings");
 var LoginService = (function () {
     function LoginService(http) {
         this.http = http;
-        this.loginUrl = ("" + appSettings_1.AppSettings.API_ENDPOINT) + "/user/login?";
-        this.logoutUrl = ("" + appSettings_1.AppSettings.API_ENDPOINT) + "/user/logout?";
+        this.loginUrl = "http://localhost:8080/api/v1/user/login?";
+        this.logoutUrl = "http://localhost:8080/api/v1/user/logout?";
     }
     LoginService.prototype.loginRequest = function (username, password) {
         return this.http.get(this.loginUrl + "username=" + username + "&password=" + password)

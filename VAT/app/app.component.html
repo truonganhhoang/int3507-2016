@@ -1,88 +1,74 @@
-<nav class="navbar navbar-inverse nav-fixed-top" role="navigation">
-	<div class="container-fluid">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">English Learning</a>
-		</div>
+<div class="wrapper">
+	<!-- Header Area -->
+	<div class="header">
+		<nav class="navbar navbar-inverse" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="">English Learning</a>
+				</div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse navbar-ex1-collapse">
-			<!-- <ul class="nav navbar-nav">
-				<li class="active"><a href="">Vocabulary</a></li>
-				<li><a href="">Listening</a></li>
-				<li><a href="">Speaking</a></li>
-				<li><a href="">Reading</a></li>
-				<li><a href="">Writing</a></li>
-			</ul> -->
-			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="">Logged with <b>admin</b></a></li>
-						<li><a href="">My profile</a></li>
-						<li><a href="">Log out</a></li>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav">
+						<li><a [routerLink]="['/']">Home</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Choose Skill <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a [routerLink]="['/listening']">Listening</a></li>
+								<li><a [routerLink]="['/speaking']">Speaking</a></li>
+								<li><a [routerLink]="['/reading']">Reading</a></li>
+								<li><a [routerLink]="['/writing']">Writing</a></li>
+							</ul>	
+						</li>
+						<li><a [routerLink]="['/about']">About Us</a></li>
 					</ul>
-				</li>
-			</ul>
-		</div><!-- /.navbar-collapse -->
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Signed with ADMIN</a></li>
+								<li><a href="#">My profile</a></li>
+								<li><a href="#">Sign out</a></li>
+							</ul> -->
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div>
+		</nav>
 	</div>
-</nav>
-<div class="container-fluid">
-	<div class="row">
-		<div class="content">
-			<div class="container">
-				<h2>This is website that help you improve basic English Skills </h2>
-				<h4>Please choose skill which you want</h4>
-				<hr>
-			</div>
-			<div class="col-md-6">
-				<a href=""><img src="vocabulary.jpg" alt="" width="300px" height="250px" class="center img img-rounded"></a>
-				<h3 class="text-center">Vocabulary</h3>
-				<a href=""><img src="listening.png" alt="" width="300px" height="250px" class="center"></a>
-				<h3 class="text-center">Listening</h3>
-			</div>
-			<div class="col-md-6">
-				<a href=""><img src="reading.jpg" alt="" width="300px" height="250px" class="center"></a>
-				<h3 class="text-center">Reading</h3>
-				<a href=""><img src="writing.jpg" alt="" width="300px" height="250px" class="center"></a>
-				<h3 class="text-center">Writing</h3>
-			</div>
-			<hr>
-			<div class="footer">
-				<div class="col-md-4">
-					<div class="panel panel-default">
-						<div class="panel-body" style="background-color: #222">
-							<h3 class="text-center">About Us</h3>
-							<p class="text-center">This website was developed by VAT team</p>
-							<p class="text-center">Download source code at <a href="https://github.com/cuongk58uet/englishlearning">here</a></p>
-						</div>
-					</div>
+	<!-- Content Area -->
+	<div class="content">
+		<router-outlet></router-outlet>
+	</div>
+	<!-- Footer Area -->
+	<div class="my-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+					<h4 class="text-center">About Us</h4>
+					<p class="text-center">This is simple project using Angular2 ExpressJS and MongoDB. Website provides basic lesson help user improve English skills.</p>
 				</div>
-				<div class="col-md-4">
-					<div class="panel panel-default">
-						<div class="panel-body" style="background-color: #222">
-							<h3 class="text-center">Helps</h3>
-							<p class="text-center">Please contact us if you encounter any problems</p>
-							<p class="text-center">Mail to: <a href="mailto:">suppport@englishlearning.com</a></p>
-						</div>
-					</div>
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+					<h4 class="text-center">Products</h4>
+					<p class="text-center">Products developed by VAT team</p>
+					<p class="text-center">Download source code at <b><a target="_blank" href="https://github.com/cuongk58uet/englishlearning">here</a></b></p>
 				</div>
-				<div class="col-md-4">
-					<div class="panel panel-default">
-						<div class="panel-body" style="background-color: #222">
-							<h3 class="text-center">FAQs</h3>
-							<p class="text-center">How to choose a skill?</p>
-							<p class="text-center">How to review my lesson?</p>
-						</div>
-					</div>
+				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+					<h4 class="text-center">FAQs</h4>
+					<p class="text-center"><a href="mailto:support@englishlearning.com"> How to review my lesson?</a></p>
+					<p class="text-center"><a href="mailto:support@englishlearning.com"> How to change lesson?</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+
+

@@ -2,6 +2,9 @@
 	//Model File
 include('core.php');
 
+include('tangau.php');
+include('messageType.php');
+
 use Core as Model;
 
 // Make Bot Instance
@@ -26,12 +29,18 @@ if (!empty($_REQUEST['hub_mode']) && $_REQUEST['hub_mode'] == 'subscribe' && $_R
 
             // When bot receive message from user
             if (!empty($message['message'])) {
-                $command = $message['message']['text'];
-
+                $command['message'] = $message['message']['text'];
             // When bot receive button click from user
-            } else if (!empty($message['postback'])) {
-                $command = $message['postback']['payload'];
+            } 
+            if (!empty($message['postback'])) {
+                $command['postback'] = $message['postback']['payload'];
             }
+            if (count($message['message']['attachments']) > 0) {
+                foreach($message['message']['attachments'] as $image){
+                    $command['image'][] = $image['payload']['url'];
+                }
+            }
+
             $responses = Model::process($command, $message['sender']['id']);
             foreach($responses['messages'] as $response){
                 $bot->send($response);

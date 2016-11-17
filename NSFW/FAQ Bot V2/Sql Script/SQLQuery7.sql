@@ -4,14 +4,14 @@ insert into dbo.help(category_id,question,sub_question,answer,link) values
 
 To get going, select Microsoft Edge Screenshot of Edge on the Windows taskbar.
 
-`Tip`
->Pin tabs to keep your favorite sites in the same place every time you open your browser. Press and hold (or right-click) a tab and select Pin.
+# Tip
+Pin tabs to keep your favorite sites in the same place every time you open your browser. Press and hold (or right-click) a tab and select Pin.
 
 * Hub: all your stuff in one place
 Think of the Hub as the place where Microsoft Edge keeps the things you collect on the web. Select Hub  to view your favorites, reading list, browsing history, and current downloads.
 
-`Tip`
->Sign in with a Microsoft account to make your favorites and reading list available across all your Windows 10 devices.
+# Tip
+Sign in with a Microsoft account to make your favorites and reading list available across all your Windows 10 devices.
 
 To import your favorites from another browser, select Hub  > Favorites  > Import favorites. Press and hold (or right-click) any item in the list and select Sort by name to arrange them alphabetically.
 
@@ -22,7 +22,8 @@ Whether you''re looking for pictures of penguins or just want to know what the w
 'Here''s how to import favorites from Internet Explorer, Chrome, or Firefox into Microsoft Edge.
 * In Microsoft Edge, select Hub > Favorites > Settings.
 * Choose the browser you want to import from (only browsers installed on this PC will appear), and then select Import.
->Tip: To show favorites on the favorites bar, select Hub > Favorites > Settings and turn on Show the favorites bar. Then select Hub > Favorites and drag the ones you want into the Favorites Bar folder.',
+# Tip
+To show favorites on the favorites bar, select Hub > Favorites > Settings and turn on Show the favorites bar. Then select Hub > Favorites and drag the ones you want into the Favorites Bar folder.',
 'https://support.microsoft.com/en-us/instantanswers/42f3c33a-ae0a-7af6-2fb7-f0a2413ce94e/import-favorites-in-microsoft-edge'),
 (7,'Tips & tricks','Find out which version of Microsoft Edge you have',
 '1. Open Microsoft Edge.

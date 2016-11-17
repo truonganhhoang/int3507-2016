@@ -1,26 +1,32 @@
-img.center{
-	display: block;
-    margin: 0 auto;
+html,
+body {
+  padding:0;
+  height:100%;
 }
-h3.center{
-	display: block;
-    margin: 0 auto;
+.wrapper {
+  min-height:100%;
+  position:relative;
 }
-.content{
-	position: relative;
-	margin: 0 auto;
-	padding-bottom: 10px;
-	height: 1000px;
+.header {
+  background:#ededed;
 }
-
-.footer{
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding-top: 10px;
-	background-color: #222;
-	text-align: left;
-	color:white;
-	height: 200px
+.content {
+  padding-bottom:0px;
+  min-height: 500px
+}
+.my-footer {
+  background-color:black;
+  width:100%;
+  height:auto;
+  position:absolute;
+  padding-top: 10px;
+}
+.my-footer a{
+  color: #333333;
+}
+.my-footer a:hover{
+  color: #fff;
+}
+.my-footer a:focus{
+  color: #fff;
 }

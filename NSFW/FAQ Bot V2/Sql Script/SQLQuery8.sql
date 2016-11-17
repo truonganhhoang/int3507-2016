@@ -10,25 +10,25 @@ If you’re not sure what to say, you’ll see suggestions on your lock screen, 
 
 1. Home 2. Notebook 3. Settings 4. Feedback
 
-    * Here are some things Cortana can do for you:
+* Here are some things Cortana can do for you:
 
-    * Give you reminders based on time, places, or people.
+* Give you reminders based on time, places, or people.
 
-    * Track packages, teams, interests, and flights.
+* Track packages, teams, interests, and flights.
 
-    * Send emails and texts.
+* Send emails and texts.
 
-    * Manage your calendar and keep you up to date.
+* Manage your calendar and keep you up to date.
 
-    * Create and manage lists.
+* Create and manage lists.
 
-    * Chit chat and play games.
+* Chit chat and play games.
 
-    * Find facts, files, places, and info.
+* Find facts, files, places, and info.
 
-    * Open any app on your system.
+* Open any app on your system.
 
-Try this: Set a reminder
+# Try this: Set a reminder
 
 One of the things Cortana can do is to give you reminders. She can remind you to do things based on time, places, or even people.
 
@@ -38,12 +38,12 @@ The reminder will appear when you get a call from Tanya.
 
 Extra bonus—if you have a Windows phone or Cortana for iPhone or Android, you can set Cortana to sync notifications between your PC and phone.
 
-Hey Cortana!
+# Hey Cortana!
 
 Set Cortana to hear you anytime you say "Hey Cortana." Select the search box on the taskbar to open Cortana home. Then select Settings  and turn on Let Cortana respond to "Hey Cortana."
 
-`Node`
->Cortana is only available in certain countries/regions, and some Cortana features might not be available everywhere.
+# Note
+Cortana is only available in certain countries/regions, and some Cortana features might not be available everywhere.
 ', 'https://support.microsoft.com/en-us/help/17214/windows-10-what-is'
 ),
 (8,'Make Cortana yours','','
@@ -75,8 +75,8 @@ This is where you adjust Cortana’s settings for things like tracking flights a
 
 To get to Cortana"s settings, select the search box on the taskbar to open Cortana home, then select Settings .
 
-`Node`
->Cortana is only available in certain countries/regions, and some Cortana features might not be available everywhere.
+# Note
+Cortana is only available in certain countries/regions, and some Cortana features might not be available everywhere.
 
 ','https://support.microsoft.com/en-us/help/17178/windows-10-make-cortana-yours'
 ),

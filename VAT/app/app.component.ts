@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-//import {VocabularyService} from './services/vocabulary.service';
 
 @Component({
-  moduleId: module.id,
-  selector: 'my-app',
-  templateUrl: 'app.component.html',
-  //providers: []
+    selector: 'my-app',
+    templateUrl: 'app.component.html',
 })
-export class AppComponent { }
+export class AppComponent {
+    name: string = "Angular 2 on Express";
+
+    constructor() {}
+}

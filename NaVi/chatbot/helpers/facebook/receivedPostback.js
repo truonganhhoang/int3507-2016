@@ -27,9 +27,6 @@ module.exports = function receivedPostback(event) {
             else if (chosenOption === "NOTIFICATIONS") {
                 require('../fnUserSettings/notificationSetting')(senderID);
             }
-            else if (chosenOption === "FUNCTIONALITIES") {
-                require('../fnUserSettings/sendFunctionalityTesting')(senderID);
-            }
         }
     }
 };

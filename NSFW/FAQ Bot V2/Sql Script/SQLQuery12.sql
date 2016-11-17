@@ -18,25 +18,25 @@ If you"re coming from Windows 7, here are a couple more differences:
 (12,'OneDrive on your PC','',
 'OneDrive is free online storage that comes with your Microsoft account. Save your files there and you"ll be able to get to them from any PC, tablet, or phone.
 
-#The basics
+# The basics
 To save a doc you"re working on to OneDrive, select a OneDrive folder from the list of save locations. To move files to OneDrive, open [File Explorer](https://support.microsoft.com/en-us/help/17217)and then drag them into a OneDrive folder.
 
-#No Internet? No problem.
+# No Internet? No problem.
 Files you save to OneDrive are available online at OneDrive.com and offline on your PC. That means you can use them anytime, even when you"re not connected to the Internet. When you reconnect, OneDrive updates the online versions with changes you made offline.
 
 Offline files come in handy when you"re stuck without Wi-Fi, but they also take up space on your PC. If you"re running low on storage space, here"s how to keep fewer OneDrive files offline:
 
-#Stay in sync
+# Stay in sync
 
 File Explorer icons show you the sync status of your offline folders and files.
 
-*It"s in sync with online version.
+* It"s in sync with online version.
 
-*It"s getting in sync.
+* It"s getting in sync.
 
-*The version on your PC is out of sync. To find out why, go to the right side of the taskbar, select the Show hidden icons  arrow, press and hold (or right-click) OneDrive OneDrive icon, and then select View sync problems.
+* The version on your PC is out of sync. To find out why, go to the right side of the taskbar, select the Show hidden icons  arrow, press and hold (or right-click) OneDrive OneDrive icon, and then select View sync problems.
 
-#At the Office
+# At the Office
 Learn how to create and share Office docs through the OneDrive website—and get the apps that can sync and edit docs on the go—in the [Get started with OneDrive eBook](https://go.microsoft.com/fwlink/p/?linkid=824830).',
 'https://support.microsoft.com/en-us/help/17184/windows-10-onedrive'),
 (12,'Back up and restore your files','',
@@ -45,7 +45,7 @@ Learn how to create and share Office docs through the OneDrive website—and get
 # Set up your backup
 
 Select the Start​ Start symbol button, select Settings  > Update & security > Backup > Add a drive, and then choose an external drive or network location for your backups.
-All set. Every hour, we"ll back up everything in your user folder (C:\Users\username). To change which files get backed up or how often backups happen, go to More options.
+All set. Every hour, we"ll back up everything in your user folder (C:/Users/username). To change which files get backed up or how often backups happen, go to More options.
 
 # Restore your files
 If you"re missing an important file or folder, here"s how to get it back:
@@ -78,7 +78,7 @@ Open File Explorer and find the zipped folder.
 2. Select Personalization > Themes > Desktop icon settings.
 3. Select the Recycle Bin check box, then Apply.',
 'https://support.microsoft.com/en-us/instantanswers/55c5049f-a1e7-7edd-7367-ccc211aee723/find-the-recycle-bin'),
-('12','Share files in File Explorer','',
+(12,'Share files in File Explorer','',
 '# Use an app to share
 Select a file, go to the Share tab, and select Share. Choose the app you want from the list.
 # Use Onedrive

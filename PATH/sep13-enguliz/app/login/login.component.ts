@@ -10,6 +10,7 @@ import {Router} from "@angular/router";
     templateUrl: 'app/login/login.component.html',
     providers: [LoginService]
 })
+
 export class LoginComponent {
 
     constructor(private loginService: LoginService, private router: Router){}

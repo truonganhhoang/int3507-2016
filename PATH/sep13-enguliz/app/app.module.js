@@ -24,9 +24,6 @@ var http_1 = require("@angular/http");
 var test_component_1 = require("./test/test.component");
 var test_component_2 = require("./test/read/test.component");
 var detail_component_1 = require("./detail/detail.component");
-var register_component_1 = require("./login/register.component");
-var profile_component_1 = require("./profile/profile.component");
-var grammar_component_1 = require("./grammar/grammar.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -47,10 +44,7 @@ var AppModule = (function () {
                 listen_component_1.TheoryListenComponent,
                 test_component_1.TestComponent,
                 test_component_2.TestReadCompoent,
-                detail_component_1.DetailComponent,
-                register_component_1.RegisterComponent,
-                profile_component_1.ProfileComponent,
-                grammar_component_1.GrammarComponent
+                detail_component_1.DetailComponent
             ],
             providers: [
                 app_routing_1.appRoutingProvider
