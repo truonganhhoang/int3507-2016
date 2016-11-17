@@ -8,6 +8,8 @@ import { routing } from "./routes";
 import { HomeComponent } from "./components/home/home.component";
 import { ListeningComponent} from './components/listening/listening.component';
 import { ReadingComponent} from './components/reading/reading.component';
+import {SpeakingComponent} from './components/speaking/speaking.component';
+import {WritingComponent} from './components/writing/writing.component';
 
 @NgModule({
     imports: [
@@ -21,7 +23,9 @@ import { ReadingComponent} from './components/reading/reading.component';
         AboutComponent,
         HomeComponent,
         ListeningComponent,
-        ReadingComponent
+        ReadingComponent,
+        SpeakingComponent,
+        WritingComponent
     ],
     bootstrap: [ AppComponent ]
 })
