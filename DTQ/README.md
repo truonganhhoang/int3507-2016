@@ -5,7 +5,7 @@
 
 ##Phiên bản 0.3.5 - Sửa lỗi và tăng khả năng giao tiếp của Bot
 
-|Bot giao tiếp tốt hơn|
+|Bot giao tiếp tốt hơn trong nhiều ngữ cảnh|
 :-----------------------------------------:
 ![talk](/DTQ/screenshots/talk_upgrade.png)
 
