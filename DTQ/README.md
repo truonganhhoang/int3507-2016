@@ -3,6 +3,12 @@
 
 ##Sơ lược các phiên bản
 
+##Phiên bản 0.3.5 - Sửa lỗi và tăng khả năng giao tiếp của Bot
+
+|Bot giao tiếp tốt hơn|
+:-----------------------------------------:
+![talk](/DTQ/screenshots/talk_upgrade.png)
+
 ##Phiên bản 0.3 - Giao tiếp với người dùng thông qua danh sách chức năng
 
 | Các chức năng | Trợ giúp | Thông tin và kết quả học |
