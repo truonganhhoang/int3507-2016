@@ -1,3 +1,11 @@
+## 
+- Giới thiệu bài toán (Mục đích, hướng tới người dùng nào )
+- Giới thiệu nền tàng, công nghệ (Chatbot, nodejs, java )
+- Cài bước cài đặt chatbot
+- Các chức năng chính ứng dụng
+- Hướng phát triển tiếp
+- Cầu trúc thư mục project
+
 ## Cwat vesion 0.4
 
 **Chat với Cwat tại:** `https://www.facebook.com/cwat.seewhat/`
