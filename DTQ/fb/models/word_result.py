@@ -36,8 +36,8 @@ class WordResultRecord:
       result = None
       try:
         result = word_results[random_int]
-      except Error:
-        result = None
+      except:
+        result = word_results[0]
       return result
     else:
       return None

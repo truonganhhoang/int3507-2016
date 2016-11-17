@@ -8,7 +8,6 @@ from recieve_message import recieve
 from helpers.thread_setting.persistent_menu import send_persistent_menu
 app = Flask(__name__)
 
-
 @app.route('/', methods=['GET'])
 def verify():
   # when the endpoint is registered as a webhook, it must
