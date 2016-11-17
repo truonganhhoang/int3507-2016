@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="secondary">
+  <ion-navbar color="primary">
   	<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -16,19 +16,19 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content padding>
   <ion-item *ngIf="arrSong.length == 0">You don't have any record.</ion-item>
   <ion-list>
     <ion-item *ngFor="let item of arrSong" (click)="touchRecord(item,item['isPlay'])">
-       <ion-icon name="play" *ngIf="!item['isPlay']"></ion-icon> 
+       <ion-icon name="play" *ngIf="!item['isPlay']"></ion-icon>
        <ion-icon name="pause" *ngIf="item['isPlay']"></ion-icon>
        &nbsp;{{item.title}} &nbsp; &nbsp;
     </ion-item>
   </ion-list>
-  
+
   <ion-item class="range-timer" *ngIf="curSong">
     <ion-range [(ngModel)]="timerPercent">
-      <ion-icon range-left big name="play" *ngIf="!isRun" 
+      <ion-icon range-left big name="play" *ngIf="!isRun"
         (click)="touchRecord(curSong,isRun)"></ion-icon>
       <ion-icon range-left big name="pause" *ngIf="isRun"
         (click)="touchRecord(curSong,isRun)"></ion-icon>
