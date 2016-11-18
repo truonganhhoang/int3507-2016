@@ -5,7 +5,7 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-  <ion-navbar color="secondary">
+  <ion-navbar color="primary">
   	<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
   	</button>
@@ -16,14 +16,22 @@
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let item of category" (click)=enterWord(item)>
+      <ion-thumbnail item-left>
+        <img src="{{item.image}}">
+      </ion-thumbnail>
+      <p class=" name-category">{{item.name}}</p>
+    </ion-item>
+  </ion-list>
 	<!-- <ion-list>
 		<ion-item *ngFor="let item of category">{{item.name}}
 		<img src="{{item.image}}">
 		</ion-item>
 	</ion-list> -->
-	<ion-col *ngFor="let item of category" (click)=enterWord(item)>
-		<img src="{{item.image}}">
-		<p class=" name-category">{{item.name}}</p>
-	</ion-col>
+	<!--<ion-col *ngFor="let item of category" (click)=enterWord(item)>-->
+		<!--<img src="{{item.image}}">-->
+		<!--<p class=" name-category">{{item.name}}</p>-->
+	<!--</ion-col>-->
 
 </ion-content>

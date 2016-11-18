@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="secondary">
+  <ion-navbar color="primary">
   	<button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -15,26 +15,27 @@
 
 </ion-header>
 
-<ion-content padding>	
-  <ion-row class="input-search">
-    <ion-col width-80>
-    <ion-item>
-      <ion-label><ion-icon name="search"></ion-icon></ion-label>
-      <ion-input [(ngModel)]="myQuery" type="text" placeholder="Enter a song"></ion-input>
-      </ion-item>
-    </ion-col>
-    <ion-col width-20>
-      <button ion-button color="light" block (click)="getVideos()">  
-        Search
-      </button>
-    </ion-col>
-  </ion-row>
+<ion-content padding>
+  <ion-searchbar [(ngModel)]="myQuery" type="text" placeholder="Enter a song"></ion-searchbar>
+  <!--<ion-row class="input-search">-->
+    <!--<ion-col width-80>-->
+    <!--<ion-item>-->
+      <!--<ion-label><ion-icon name="search"></ion-icon></ion-label>-->
+      <!--<ion-input [(ngModel)]="myQuery" type="text" placeholder="Enter a song"></ion-input>-->
+      <!--</ion-item>-->
+    <!--</ion-col>-->
+    <!--<ion-col width-20>-->
+      <!--<button ion-button color="light" block (click)="getVideos()">-->
+        <!--Search-->
+      <!--</button>-->
+    <!--</ion-col>-->
+  <!--</ion-row>-->
 
- 
+
     <ion-item>
       <ion-select [(ngModel)]="singType">
         <ion-option value="karaoke" selected="true">
-          <ion-icon name="microphone">Karaoke</ion-icon> 
+          <ion-icon name="microphone">Karaoke</ion-icon>
         </ion-option>
         <ion-option value="lyric">
           <ion-icon ios="ios-list-box" md="md-list-box"></ion-icon>Lyrics

@@ -17,7 +17,7 @@ export class MyApp {
   rootPage: any = Sing;
   onDevice: boolean = false;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, icon: string, component: any}>;
 
   constructor(public platform: Platform) {
     this.platform = platform;
@@ -27,19 +27,19 @@ export class MyApp {
     // used for an example of ngFor and navigation
     if (this.onDevice) {
       this.pages = [
-        { title: 'Category', component: Category },
-        { title: 'Sing a Song', component: Sing },
-        { title: 'My Song', component: MySong }
+        { title: 'Category', icon: 'keypad', component: Category },
+        { title: 'Sing a Song', icon: 'microphone', component: Sing },
+        { title: 'My Song', icon: 'musical-notes', component: MySong }
       ];
     }else {
       this.pages = [
-        { title: 'Category', component: Category },
+        { title: 'Category', icon: 'keypad', component: Category },
+        { title: 'Sing a Song', icon: 'microphone', component: Sing },
         // { title: 'Youtube', component: Youtube },
-        { title: 'My Drive', component: Google },
-        { title: 'Sing a Song', component: Sing },
-        { title: 'My Song', component: MySong }
+        { title: 'My Drive', icon: 'folder', component: Google },
+        { title: 'My Song', icon: 'musical-notes', component: MySong }
       ];
-    }    
+    }
   }
 
   initializeApp() {

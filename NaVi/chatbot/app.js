@@ -4,6 +4,7 @@ const
     express = require('express'),
     https = require('https'),
     request = require('request'),
+    redisClient = require('./caching/redisClient'),
     verifyRequestSignature = require('./middlewares/verifyRequestSignature'),
     env = require('./helpers/env'),
     controllers = require('./controllers'),
@@ -29,5 +30,8 @@ app.get('/authorize', facebook.getAuthorize);
 app.listen(app.get('port'), function() {
     console.log('Node app is running on port', app.get('port'));
     models.mongooseConnect();
+
+    // Bootstrap messenger thread settings (persistent menu, greeting text,...)
+    require('./helpers/facebook/threadSettings');
 });
 

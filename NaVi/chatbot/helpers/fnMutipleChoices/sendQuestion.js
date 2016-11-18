@@ -1,14 +1,15 @@
 'use strict';
 const
     mongoose = require('mongoose'),
-    models = require('../../models');
+    models = require('../../models'),
+    redisClient = require('../../caching/redisClient');
 
 module.exports = function (recipientId) {
-    models.User.findOne({
+    models.UnlearnedQuestionUser.findOne({
         facebookId: recipientId
     }, function (err, user) {
         if (!user) {
-            console.log('User does not exist yet!');
+            console.log('UnlearnedQuestionUser does not exist yet!');
             createNewUserWithQuestions(recipientId);
         }
         else {
@@ -31,7 +32,7 @@ function createNewUserWithQuestions(recipientId) {
                 ids.push({questionId: questions[i]._id});
             }
             console.log("Creating unlearned question set for new user.");
-            models.User.create({
+            models.UnlearnedQuestionUser.create({
                 facebookId: recipientId,
                 unlearnedQuestions: ids
             }, function (err) {
@@ -96,6 +97,13 @@ function getOneQuestion(unlearnedQuestions, recipientId) {
             };
 
             require('../facebook/sendFunctions/callSendAPI')(messageData);
+            redisClient.hmset(recipientId, ["lastMCQuestion", JSON.stringify(question)]);
+            // Save last MC question id of current user to Redis
+            redisClient.hmset(recipientId, ["lastMCQuestionId", question._id.toString()], function (err) {
+                if (err) {
+                    console.log(err);
+                }
+            });
         });
     }
 }

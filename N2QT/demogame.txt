@@ -1,0 +1,1 @@
+﻿Game làm dựa theo game sẵn trên sachmem, nhưng chưa được hoàn thiện vì gặp khó khăn về hình ảnh không có tất cả, và các thành viên đang làm thủ công chưa biết sử dụng mạng để  lưu dữ  lieu.

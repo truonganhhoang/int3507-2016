@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BotDataModelStoreContainer" CdmEntityContainer="BotDataEntities1">
+    <EntitySetMapping Name="categories">
+      <EntityTypeMapping TypeName="BotDataModel.category">
+        <MappingFragment StoreEntitySet="categories">
+          <ScalarProperty Name="category_image" ColumnName="category_image" />
+          <ScalarProperty Name="category_name" ColumnName="category_name" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="helps">
+      <EntityTypeMapping TypeName="BotDataModel.help">
+        <MappingFragment StoreEntitySet="help">
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="sub_question" ColumnName="sub_question" />
+          <ScalarProperty Name="question" ColumnName="question" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -13,7 +13,7 @@ module.exports = function sendTextMessage(recipientId, messageText, callback) {
     require('./callSendAPI')(messageData, function (err) {
         if (!err) {
             if (callback) {
-                console.log('Callback is called');
+                // console.log('Callback is called');
                 callback(null);
             }
         }
