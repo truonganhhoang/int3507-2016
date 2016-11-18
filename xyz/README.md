@@ -39,7 +39,7 @@
 
 ### Login / Logout With Google
 
- ![login-success](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/login-success.JPG)
+ ![login-success](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/login-success.PNG)
  
 - Ứng dụng: Cho phép user đăng nhập vào ứng dụng bằng tài khoản Google
 - Login:
@@ -50,14 +50,14 @@
 
 ### Category Speaking
 
-![category](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/category.JPG)
+![category](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/category.PNG)
 
 - Ứng dụng: Hiện lên list các Category chứa các từ mới liên quan trong 1 chủ đề, giúp người dùng có thể tập điều chỉnh cách phát âm một cách chính xác.
 - Hướng dẫn:
  + Sau khi chọn Category trong Menu, màn hình hiển thị list các Category được lưu trên server
  + User chọn 1 Category bất kỳ, xuất hiện list các từ vựng trong chủ đề đó
  
- ![category-list](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/category-list.JPG)
+ ![category-list](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/category-list.PNG)
  
  + Mỗi từ vựng sẽ đi kèm với các chức năng chính: 
   + Start Record: tiến hành ghi âm cách phát âm của user
@@ -66,7 +66,7 @@
   + Button icon Speaker: Phát âm chuẩn của từ vựng (đã được lưu trên server)
  
 ### Sing a Song: Học tiếng anh qua bài hát
-![sing](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/sing.JPG)
+![sing](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/sing.PNG)
 
 - Ứng dụng: Cho phép người dùng tìm kiếm các bài hát trên Youtube, ghi âm lời mình hát vào thiết bị
 - Hướng dẫn:
@@ -77,7 +77,7 @@
   
  + Sau khi chọn 1 video bất kỳ, giao diện Video Player mở ra với khung hiển thị video và các chức năng:
  
- ![sing-save](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/sing-save.JPG)
+ ![sing-save](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/sing-save.PNG)
  
   + Start Record: tiến hành ghi âm cách phát âm của user
   + Stop Recording: Dừng ghi âm
@@ -86,7 +86,7 @@
  
 ### My Drive
 
-![drive](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/drive.JPG)
+![drive](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/drive.PNG)
 
 - Ứng dụng: Cho phép người dùng chọn file từ thiết bị để upload lên Google Drive
 - Hướng dẫn:
