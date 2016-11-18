@@ -48,7 +48,7 @@ Dưới đây lần lượt là ảnh giao diện của Register, Login
 
 - Khi đã đăng nhập thành công , trang chủ của ứng dụng hiện ra cho phép
     + Đối với người dùng là user có thể làm các bài trắc nghiệm (lesson), xem lại các bài đã làm, có thể chọn các category để làm bài.
-    +Admin: ngoài các chức năng của user còn có thể quản lí / thêm các Category, word và có thể quản lí User ( follow hoặc unfollow, thêm sửa xóa phân quyền cho user)
+    +Admin: ngoài các chức năng của user còn có thể quản lí / thêm các Category, word và có thể quản lí User (xóa hoặc phân quyền cho user khác làm admin)
 
 - Cả admin và user đều có thể xem thông tin cá nhân, cập nhật chỉnh sửa thông tin của mình: có thể thay đổi tên đăng nhập, email đã đăng kí, cập nhật avatar thay đổi password.
 
@@ -103,11 +103,11 @@ Ngoài những yêu cầu cơ bản ở trên để chạy được ứng dụng
 - Tải project về tại: https://github.com/truonganhhoang/int3507-2016
 - Nếu máy chưa có composer cần cài đặt composer sau đó chạy "composer update" . Để biết được máy đã có composer chưa tại command line của thư mục project chạy : "composer -v".
 - Chạy lệnh "npm install --save-dev" để cài đặt các chương trình cần thiết cho project.
-- Do có nhiều thư mục rất nặng nên đã được cho vào file gitnore nên không hiển thị trên git vì vậy cần tạo thêm tạo file ".env". Trong đó cần sửa thông tin "DB_DATABASE" giống với tên bạn đã tạo cơ sở dữ liệu trên phpMyadmin.
+- Do có nhiều thư mục rất nặng nên đã được cho vào file gitnore nên không hiển thị trên git vì vậy cần tạo thêm tạo file ".env". Trong đó cần sửa thông tin "DB_DATABASE" giống với tên bạn đã tạo cơ sở dữ liệu trên phpMyadmin.(có thể sao chép file .env.example)
 - Tạo database trên phpMyadmin và chạy lệnh "php artisan migrate " để tạo cơ sở dữ liệu.
-- Việc vài đặt cơ bản hoàn tất, tuy nhiên trong project này cần phải cài gulp để có thể dùng được boostrap, css và js đã không được đẩy lên project. Để cài , yêu cầu trước tiên cần là cài node- một chương trình để chạy các file javascript.
+- Việc cài đặt cơ bản hoàn tất, tuy nhiên trong project này nhóm sử dụng laravel elixir để quản lý css, js. Cần phải cài gulp để có thể dùng được boostrap, css và js đã không được đẩy lên project. Để cài , yêu cầu trước tiên cần là cài node- một chương trình để chạy các file javascript.
 Có thể tải node tại: https://nodejs.org/en
-Sau khi đã cài xong tiếp đến cài gulp bằng câu lệnh : "npm install --global gulp". Sau khi cài xong, chạy lệnh "gulp" để có thể dùng được boostrap, css ,js.
+Sau khi đã cài xong tiếp đến cài gulp bằng câu lệnh : "npm install --global gulp". Sau khi cài xong, chạy lệnh "gulp" để chương trình complie css ,js.
 Chi tiết xem tại: https://laravel.com/docs/5.2/elixir
 - Cuối cùng chạy "php artisan serve" để chạy ứng dụng trên http://localhost:8000/ hoặc có thể chạy trên localhost thông qua xampp.
 
