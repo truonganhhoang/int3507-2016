@@ -81,7 +81,8 @@ Nếu như bạn biết sử dụng JSON thì trong MongoDB cũng có cấu trú
 - Document trong MongoDB có cấu trúc tương tự như kiểu dữ liệu JSON, nghĩa là sẽ có các cặp (key => giá trị) nên nó có tính năng 	   động rất lớn. Document ta có thể hiểu nó giống như các record dữ liệu trong MYSQL, tuy nhiên nó có sự khác biệt là các cặp 		   (key => value) có thể không giống nhau ở mỗi document.
 
 ## MongoDB hoạt động như thế nào?
-# ảnh
+![MongDB](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/mongodb.jpg)
+
 MongoDB hoạt động dưới một tiến trình ngầm service luôn mở một cổng (Cổng mặc định là 27017) để lắng nghe các yêu cầu truy vấn,	thao tác từ các ứng dụng gửi vào sau đó mới tiến hành xử lý. Mỗi một bản ghi của MongoDB được tự động gắn thêm một field có tên “_id” thuộc kiểu dữ liệu ObjectId mà nó quy định để xác định được tính duy nhất của bản ghi này so với bản ghi khác, cũng như phục vụ các thao tác tìm kiếm và truy vấn thông tin về sau. Trường dữ liệu “_id” luôn được tự động đánh index (chỉ mục) để tốc độ truy vấn thông tin đạt hiệu suất cao nhất. Mỗi khi có một truy vấn dữ liệu, bản ghi được cache (ghi đệm) lên bộ nhớ Ram, để phục vụ lượt truy vấn sau diễn ra nhanh hơn mà không cần phải đọc từ ổ cứng. Khi có yêu cầu thêm/sửa/xóa bản ghi, để đảm bảo hiệu suất của ứng dụng mặc định MongoDB sẽ chưa cập nhật xuống ổ cứng ngay, mà sau 60 giây MongoDB mới thực hiện ghi toàn bộ dữ liệu thay đổi từ RAM xuống ổ cứng.
 
 ## Ưu điểm của MongoDB 
@@ -214,6 +215,8 @@ Sau khi bạn tạo được project bạn cần di chuyển con trỏ tới for
 
 Mặc định cổng của Sails là 1337, vì vậy bạn chỉ cần gõ vào trình duyệt là: http://localhost:1337 và bạn sẽ nhìn thấy trang 		default của Sails. 
 
+![Sails](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/sails2.jpg)
+
 ## Cấu trúc phần sever
 ## The assets Folder
 
@@ -291,14 +294,14 @@ Thư mục này có chứa các forder con:
 	-GET/locations/search : Tìm kiếm một vị trí bằng tọa độ địa lý.
 
 ## Database: Sử dụng MongoBD
-# ảnh
-## PHẦN CLIENT
 
+## PHẦN CLIENT
+#ảnh
 ## I. Lý thuyết liên quan
 
 ## 1. OttoEventBus
 Trong Android eventbus tối ưu hóa và đơn giản hóa các event cũng như trao đổi dữ liệu giữa các Activity, Fragment, Service, Theards..... với nhau.	
-# ảnh
+![]
 - OttoEventbus như là nơi quan lý các sự kiện hay điều khiển các quá trình xử lý dữ liệu.Nó giúp ta bắt sự kiện và lấy kết quả của quá trình đó tại bất kì đâu Activity, Fragments.....
 - Nếu như việc sử lý dự liệu ta dùng Theard đơn thuần... nhưng với nhiều sự kiện trao đổi diễn ra dẫn đến Overload Theard hoặc tràn bộ nhớ đệm, thiếu bộ nhớ dẫn đến ứng dụng hoạt động ì ạch. Lúc này Eventbus điều phối các hoạt động này giúp các hoạt động được sắp xếp hợp lý và việc trao đổi dữ liệu trở lên dễ dạng dựa vào các đăng ký hoạt động	
 
@@ -393,7 +396,8 @@ Việc dùng Gson rất dễ dàng, không tốn công parse và cũng giúp ch�
 https://github.com/google/gson
 
 ## Cấu trúc Project – Instagram Clone
-# ảnh
+![Folder](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/%E1%BA%A3nh1.png)
+
 - Project – Instagram Clone có cấu trúc theo mô hình MVC gồm các packages :
 	- Activities: Chứa các class Activity như LoginActivity, HomeActivity, CameraActivity,…. Để hiển thị các views trong layout ra 		              ngoài màn hình.
 	- Adapters: Chứa các class Adapter home/PostAdapter, profile/GridProfileAdaper, profile/UserPostAdapter,… có chức năng tạo các 			    view holder để load dữ liệu cho các Recycle view(trong activities) chạy mượt hơn ko phải load tất cả dữ liệu vào 
@@ -422,7 +426,10 @@ https://github.com/google/gson
 	- Styles: Định nghĩa tên style mà application dùng.
 ## Các luồng chính trong Project
 ## Login
-   # ảnh
+![Login](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/%E1%BA%A3nh2.png)
+
+![Login](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/%E1%BA%A3nh3.png)
+
 (giao diện màn hình login)
 
 - Sau khi LoginActivity bắt sự kiện click vào button “đăng nhập bằng Fb” dialog LoginManager của facebook được hiện ra để người dùng       nhập tên + passw.
@@ -449,23 +456,28 @@ Sau khi đăng nhập thành công có dialog Success hiện ra và data đượ
 	LoginRootObject.class hay InstagramApplication.
 Dữ liệu của người dùng như name, full_name, fbid, photoPicture,… được lưu trong đối tượng LoginRootObject.class.
 Thông tin về token, username, profile được lưu lại vào trong InstagramApplication để tiện sử dụng lại.
-# ảnh
+![Access](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/%E1%BA%A3nh4.png)
+
 
 Màn hình chuyển sang MainActivity qua hàm:
 
 	checkLoginToIntent() của LoginActivity.
 Người dùng muốn đăng suất ra khỏi tài khoản fb của mình chỉ cần vào setting trong profile chọn “Đăng xuất”.
-# ảnh
+![Logout](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/anh5.png)
+
  
 Sau  khi đăng suất giao diện login hiện ra các thông tin người dùng vừa mới đăng nhập, nếu muốn đăng nhập lại chỉ cần click vào button "Đăng nhập với tư cách ….".
 
 Xóa tài khoản cũ, click vào button “Xóa” dialog Xóa tài khoản sẽ hiện ra để hỏi lại 1 lần nữa trước khi về màn hình Login ban đầu.
-# ảnh
+![Delete](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/ah6.png)
+
+![Delete](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/%E1%BA%A3nh7.png)
    
 ## NewFeeds
 Newfeeds được hiển thị trong HomeFragment.
 Layout hiển thị newfeeds qua RecycleView, mỗi View chứa các thông tin data sau khi server trả dữ liệu về client.
- # ảnh
+![Newsfeed](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/%E1%BA%A3nh8.png)
+
 
 Trong HomeFragment tạo 1 thuộc tính để đăng kí nhận dữ liệu từ server trả về.
 
@@ -497,12 +509,15 @@ Dữ liệu là các link image được post,số comment,like,caption,… đư
 	list<HomePost> postlist;
 	postList.addAll(homeRootObject.getData());
 và được postHeaderAdapter setData vào recycleView trong HomeFragment.
-# ảnh
+![Newsfeed](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/%E1%BA%A3nh9.png)
 
 ## Profile
 Profile được hiển thị trong ProfileFragment.
 Layout hiển thị profile qua 2 chế độ GridView và RecycleView, mỗi View chứa các thông tin data sau khi server trả dữ liệu về client.
-# ảnh
+![Profile](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/anh10.png)
+
+![Profile](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/anh11.png)
+
 
 Trong ProfileFragment tạo 1 thuộc tính để đăng kí nhận dữ liệu từ server trả về các dữ liệu như số người follow, số bài đăng, số người mình đang theo dõi,..:
 
@@ -540,10 +555,12 @@ và được gridProfileAdapter setData vào GridView trong ProfileFragment post
 
 ## SharePhoto
 Màn hình camera để chọn ảnh để post bài
-# ảnh
- 
+![SharePhoto](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/anh12.png)
+
 Sau khi đã chọn được ảnh muốn đăng, người dùng click button “Tiêp ” để sang SharePhotoActivity.
-# ảnh
+
+![SharePhoto](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/anh13.png)
+
 
 Trong SharePhotoActivity tạo 1 thuộc tính để đăng kí nhận dữ liệu post lên server đã thành công hay chưa.
 
