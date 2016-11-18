@@ -9,9 +9,9 @@
 ## Mô tả đề tài của nhóm :
  Làm đề tài công ty SOTATEK ( Mô phỏng ứng dụng Instagram có giảm và thêm một số chức năng ).
 
-# BÁO CÁO PROJECT
+## BÁO CÁO PROJECT
 
-# PHẦN SERVER 
+## PHẦN SERVER
 	
 ## Giới thiệu về SailsJs
 
@@ -214,7 +214,7 @@ Sau khi bạn tạo được project bạn cần di chuyển con trỏ tới for
 
 Mặc định cổng của Sails là 1337, vì vậy bạn chỉ cần gõ vào trình duyệt là: http://localhost:1337 và bạn sẽ nhìn thấy trang 		default của Sails. 
 
-# Cấu trúc phần server
+## Cấu trúc phần sever
 ## The assets Folder
 
 The assets folder chứa các forder con của các tập tin javascript, css mà chúng ta muốn đưa vào trong quá trình xây dựng. Đây là nơi mà các bạn nên để các file đó, tránh trường hợp để linh tinh các file sai vị trí.
@@ -250,7 +250,7 @@ Thư mục này có chứa các forder con:
 - Policies folder lưu trữ quy tắc cho người dùng truy cập ứng dụng.
 - The api services implemented by the app are stored in the services folder.
 
-# Các API cung cấp
+## Các API cung cấp
 
 ## APIs cho UserController
 
@@ -381,7 +381,8 @@ http://square.github.io/picasso/
 Gson là một thư viện java cho phép người sử dụng có thể chuyển đổi từ một đối tượng Java sang JSON và cũng có thể chuyển đổi từ một đối tượng JSON sang java.Gson có thể làm việc với đối tượng java tùy ý bao gồm các đối tượng tồn tại sẵn mà bạn không có source-code của chúng.
 
 Việc dùng Gson rất dễ dàng, không tốn công parse và cũng giúp chúng ta đỡ nhầm lẫn hơn khi parse trực tiếp từ JSON sang java. Đặc biệt là khi làm việc với những chuỗi JSON có rất nhiều trường.
-Mục tiêu của GSON:
+
+ - Mục tiêu của Gson:
 	- Cung cấp đơn giản toJson()và fromJson()phương pháp để chuyển đổi các đối tượng Java để JSON và ngược lại.
 	- Cho phép tồn tại trước đó đối tượng unmodifiable để được chuyển đổi sang và từ JSON.
 	- Hỗ trợ mở rộng của Java Generics.
