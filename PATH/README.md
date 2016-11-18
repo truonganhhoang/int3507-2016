@@ -55,7 +55,7 @@ Bắt để làm bài thì nhấn vào nút tương ứng ở trên màn hì
 đưa ra bài làm, hiển thị thời gian làm cùng với nút submit bài khi người dùng hoàn 
 thành xong.
 ![testpage](https://github.com/truonganhhoang/int3507-2016/blob/master/PATH/images/huong%20dan/7.png)
-Sau đó, nếu muốn xem đáp án của bài thi, người dùng có thể click để xem kết quả.
+Sau đó, nếu muốn xem đáp án của bài thi, người dùng có thể click vào "XEM ĐÁP ÁN" để xem kết quả.
 ![ketqua](https://github.com/truonganhhoang/int3507-2016/blob/master/PATH/images/huong%20dan/8.png)
 Sau khi click vào xem đáp án, hệ thống sẽ đưa ra đáp án của bài vừa xong.
 Các đáp án đúng sẽ được bôi màu xanh.
