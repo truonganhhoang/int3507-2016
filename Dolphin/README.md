@@ -20,14 +20,14 @@ Sails là gì?
 Sails là, tất nhiên, một web framework. Nhưng lùi lại một bước. Điều đó nghĩa là gì? Đôi khi, khi chúng tôi đề cập đến "web", chúng tôi có nghĩa là "web front-end." Chúng tôi nghĩ rằng những khái niệm như các tiêu chuẩn web, hoặc HTML 5, hay CSS 3; và các khuôn khổ như Backbone, hoặc góc, hay jQuery. Sails không phải là "loại" web framework. Sails hoạt động tuyệt vời với góc và đường trục, nhưng bạn sẽ không bao giờ sử dụng Sails thay vì các thư viện.
 
 Mặt khác, đôi khi chúng ta nói về "khuôn khổ web", chúng tôi có nghĩa là "web back-end." Điều này gợi lên khái niệm như REST, 		hoặc HTTP, hoặc WebSockets; và các công nghệ như Java hay Ruby, hoặc Node.js. Một "web back-end" khung sẽ giúp bạn làm những
-việc như xây dựng các API, phục vụ tập tin HTML, và xử lý hàng trăm ngàn người sử dụng đồng thời. Sails là "loại" của khuôn khổ 	web.
+việc như xây dựng các API, phục vụ tập tin HTML, và xử lý hàng trăm ngàn người sử dụng đồng thời. Sails là "loại" của khuôn khổ web.
 
-Sails hoàn thành nhiều mục tiêu tương tự như mô hình MVC  ứng dụng web khác, sử dụng nhiều các phương pháp tương tự. Điều này đã 	 được thực hiện trên mục đích. Một cách tiếp cận phù hợp làm cho việc phát triển các ứng dụng dự đoán nhiều hơn và hiệu quả cho	tất cả mọi người tham gia. Hãy tưởng tượng bắt đầu một công việc mới tại một công ty xây dựng một ứng dụng Sails (hay tưởng tượng bắt đầu từ các công ty, nếu đó là điều bạn.) Nếu bất cứ ai trong nhóm của bạn đã làm việc với các khuôn khổ như Zend, Laravel, CodeIgniter, Cake, Grails, Django, ASP.NET MVC, hoặc Rails, Sails sẽ cảm thấy khá quen thuộc. Không chỉ có vậy, nhưng họ có thể xem xét một dự án Sails và biết, nói chung, làm thế nào để mã các hình cơ bản mà họ đã thực hiện hơn và hơn nữa trong 	quá khứ; cho dù nền tảng của họ là trong PHP, Ruby, Java, C #, hoặc Node.js. Gì về ứng dụng thứ hai của bạn, hoặc thứ ba của bạn? Mỗi khi bạn tạo ra một ứng dụng Sails mới, bạn bắt đầu với một sane, soạn quen thuộc mà làm cho bạn hiệu quả hơn. Trong nhiều trường hợp, bạn thậm chí sẽ có thể tái chế một số code phụ trợ của bạn.
+Sails hoàn thành nhiều mục tiêu tương tự như mô hình MVC  ứng dụng web khác, sử dụng nhiều các phương pháp tương tự. Điều này đã được thực hiện trên mục đích. Một cách tiếp cận phù hợp làm cho việc phát triển các ứng dụng dự đoán nhiều hơn và hiệu quả cho	tất cả mọi người tham gia. Hãy tưởng tượng bắt đầu một công việc mới tại một công ty xây dựng một ứng dụng Sails (hay tưởng tượng bắt đầu từ các công ty, nếu đó là điều bạn) Nếu bất cứ ai trong nhóm của bạn đã làm việc với các khuôn khổ như Zend, Laravel, CodeIgniter, Cake, Grails, Django, ASP.NET MVC, hoặc Rails, Sails sẽ cảm thấy khá quen thuộc. Không chỉ có vậy, nhưng họ có thể xem xét một dự án Sails và biết, nói chung, làm thế nào để mã các hình cơ bản mà họ đã thực hiện hơn và hơn nữa trong quá khứ; cho dù nền tảng của họ là trong PHP, Ruby, Java, C#, hoặc Node.js. Gì về ứng dụng thứ hai của bạn, hoặc thứ ba của bạn? Mỗi khi bạn tạo ra một ứng dụng Sails mới, bạn bắt đầu với một sane, soạn quen thuộc mà làm cho bạn hiệu quả hơn. Trong nhiều trường hợp, bạn thậm chí sẽ có thể tái chế một số code phụ trợ của bạn.
 
 ## Loose Coupling
-Những ngày mà bạn phát triển theo kiểu one-size-fits-all qua rồi. Chúng ta cần các công cụ cho phép chúng ta lựa chọn các thành 	phần phù hợp với yêu cầu của chúng ta. Trong thực tế, nó chỉ là sự lười biếng để tạo ra những điều bất kỳ cách nào khác. Cách tiếp cận Sails là để các thành phần lỏng lẻo vài để họ có thể được thêm vào hoặc trừ vào ứng dụng của bạn theo ý thích.Node cốt lõi của nó đã tạo ra một "có thể làm" văn hóa háo hức để thử nghiệm và làm cho mọi công việc. Sails bao trùm thái độ này và phấn đấu để cung cấp những công cụ làm việc xung quanh bạn.
+Những ngày mà bạn phát triển theo kiểu one-size-fits-all qua rồi. Chúng ta cần các công cụ cho phép chúng ta lựa chọn các thành phần phù hợp với yêu cầu của chúng ta. Trong thực tế, nó chỉ là sự lười biếng để tạo ra những điều bất kỳ cách nào khác. Cách tiếp cận Sails là để các thành phần lỏng lẻo vài để họ có thể được thêm vào hoặc trừ vào ứng dụng của bạn theo ý thích. Node cốt lõi của nó đã tạo ra một "có thể làm" văn hóa háo hức để thử nghiệm và làm cho mọi công việc. Sails bao trùm thái độ này và phấn đấu để cung cấp những công cụ làm việc xung quanh bạn.
 
-Mức độ tự động hóa hoặc ma thuật bạn muốn trong Sails được gắn trực tiếp vào thời gian bạn có cho một dự án và kinh nghiệm làm 		việc với các Node. Sails là đủ linh hoạt để cho phép bạn khám phá và tạo ra khi bạn có thời gian mà còn cung cấp tự động khi bạn 	không.
+Mức độ tự động hóa hoặc ma thuật bạn muốn trong Sails được gắn trực tiếp vào thời gian bạn có cho một dự án và kinh nghiệm làm việc với các Node. Sails là đủ linh hoạt để cho phép bạn khám phá và tạo ra khi bạn có thời gian mà còn cung cấp tự động khi bạn không.
 
 Sails hoàn thành khớp nối lỏng lẻo này sử dụng plain-old require. Không có phép thuật, khác hơn so với thời gian để xây dựng các thành phần có thể là một phần của toàn bộ nhưng không cần phải có mặt để cho toàn bộ để làm việc. Ví dụ, bộ điều khiển, mô hình, và các tập tin cấu hình chỉ là Node mô-đun. Sails sử dụng một số quy ước để giúp đỡ. Sails chọn lên trên UserController.js tên trong thư mục. Controllers để suy luận rằng điều này thực sự là một bộ điều khiển người dùng. Một ví dụ khác liên quan đến chính sách. Vì vậy, chính sách cho phép bạn có một chút mã thực thi trên bộ điều khiển hoặc điều khiển hành động cụ thể. Điều thú vị là các tập tin cấu hình kết nối chính sách với bộ điều khiển / hành động riêng biệt. Điều đó có nghĩa là bạn có thể viết một loạt các chính sách khác nhau và họ là hoàn toàn di động giữa các ứng dụng Sails. Bạn có thể quyết định sau đó điều khiển / hành động mà bạn muốn áp dụng chúng vào.
 
@@ -78,17 +78,17 @@ Nếu như bạn biết sử dụng JSON thì trong MongoDB cũng có cấu trú
 
 - Document trong MongoDB có cấu trúc tương tự như kiểu dữ liệu JSON, nghĩa là sẽ có các cặp (key => giá trị) nên nó có tính năng 	   động rất lớn. Document ta có thể hiểu nó giống như các record dữ liệu trong MYSQL, tuy nhiên nó có sự khác biệt là các cặp 		   (key => value) có thể không giống nhau ở mỗi document.
 
-## MongoDB hoạt động như thế nào
+## MongoDB hoạt động như thế nào?
 
  
 MongoDB hoạt động dưới một tiến trình ngầm service luôn mở một cổng (Cổng mặc định là 27017) để lắng nghe các yêu cầu truy vấn,	thao tác từ các ứng dụng gửi vào sau đó mới tiến hành xử lý. Mỗi một bản ghi của MongoDB được tự động gắn thêm một field có tên “_id” thuộc kiểu dữ liệu ObjectId mà nó quy định để xác định được tính duy nhất của bản ghi này so với bản ghi khác, cũng như phục vụ các thao tác tìm kiếm và truy vấn thông tin về sau. Trường dữ liệu “_id” luôn được tự động đánh index (chỉ mục) để tốc độ truy vấn thông tin đạt hiệu suất cao nhất. Mỗi khi có một truy vấn dữ liệu, bản ghi được cache (ghi đệm) lên bộ nhớ Ram, để phục vụ lượt truy vấn sau diễn ra nhanh hơn mà không cần phải đọc từ ổ cứng. Khi có yêu cầu thêm/sửa/xóa bản ghi, để đảm bảo hiệu suất của ứng dụng mặc định MongoDB sẽ chưa cập nhật xuống ổ cứng ngay, mà sau 60 giây MongoDB mới thực hiện ghi toàn bộ dữ liệu thay đổi từ RAM xuống ổ cứng.
 
-## Ưu điểm của MongoDB :
+## Ưu điểm của MongoDB 
 
 - Dữ liệu lưu trữ phi cấu trúc, không có tính ràng buộc, toàn vẹn nên tính sẵn sàng cao, hiệu suất lớn và dễ dàng mở rộng lưu trữ.
 - Dữ liệu được caching (ghi đệm) lên RAM, hạn chế truy cập vào ổ cứng nên tốc độ đọc và ghi cao.
 
-## Nhược điểm của MongoDB :
+## Nhược điểm của MongoDB 
 
 - Không ràng buộc, toàn vẹn nên không ứng dụng được cho các mô hình giao dịch yêu cầu độ chính xác cao.
 - Không có cơ chế transaction (giao dịch) để phục vụ các ứng dụng ngân hàng.
@@ -115,18 +115,18 @@ Nếu xuất ra version của NodeJS tức là bạn đã cài đặt thành cô
 Nếu xuất ra version của NPM bạn đã cài đặt thành công NodeJS, giờ chỉ việc lên ý tưởng và bắt đầu một project. 
 VD:
 
-##Cài đặt NodeJS trên Ubuntu (12.04, 16.00+)
+## Cài đặt NodeJS trên Ubuntu (12.04, 16.00+)
 
 Trên Ubuntu, chúng ta sẽ dùng apt để cài đặt NodeJS.
 Đầu tiên, bạn nên update tất cả package của hệ điều hành để đảm bảo việc cài đặt NodeJS không gặp vấn đề.
 
 	sudo apt-get update.
 
-## Cài NodeJS:
+## Cài NodeJS
 
 	sudo apt-get install nodejs
 
-## Cài đặt NPM:
+## Cài đặt NPM
 
 	sudo apt-get install npm
 
@@ -249,9 +249,9 @@ Thư mục này có chứa các forder con:
 - Policies folder lưu trữ quy tắc cho người dùng truy cập ứng dụng.
 - The api services implemented by the app are stored in the services folder.
 
-# Các API cung cấp:
+# Các API cung cấp
 
-## APIs cho UserController:
+## APIs cho UserController
 
 	-GET/users/user-id : Nhận thông tin về chủ sở hữu của access_token.
 	-GET/users/user-id/media/recent :Nhận thông tin về người sử dụng.
@@ -259,11 +259,11 @@ Thư mục này có chứa các forder con:
 	-GET/users/user-id/media/recent : Lấy phương tiện truyền thông gần đây nhất được công bố bởi một người dùng.
 	-GET/users/self/media/liked : Lấy danh sách các media gần đây được 'like'của chủ sở hữu của access_token.
 
-## APIs cho MediaController:
+## APIs cho MediaController
 
 	-GET/media/media-id : Lấy thông tin về 1 media.
 
-## APIs cho FollowerController:
+## APIs cho FollowerController
 
 	-GET /users/self/follows: Lấy danh sách người theo dõi chính người dùng này.
 	-GET /users/self/followed-by : Lấy danh sách người dùng mà chính người này theo dõi.
@@ -271,19 +271,19 @@ Thư mục này có chứa các forder con:
 	-GET /users/user-id/relationship: Lấy mối quan hệ với 1 người dùng bất kì.
 	-POST /users/user-id/relationship : Tạo mối quan hệ với 1 người dùng.
 
-## APIs cho CommentController:
+## APIs cho CommentController
 
 	-GET/media/media-id/comments : Lấy danh sách các commnet của 1 media. 
 	-POST/media/media-id/comments : Tạo 1 comment trên 1 media và phải thỏa mãn một số luật lệ.
 	-DEL/media/media-id/comments/comment-id : Xóa comment trên 1 media.
 
-## APIs cho LikeCotroller:
+## APIs cho LikeCotroller
 
 	-GET/media/media-id/likes : Lấy danh sách người dùng like media.
 	-POST/media/media-id/likes : Tạo 1 like trên media.
 	-DEL/media/media-id/likes : Xóa bỏ like trên media.
 
-## APIs cho LocationController:
+## APIs cho LocationController
 
 	-GET/locations/location-id : Lấy thông tin về địa điểm.
 	-GET/locations/location-id/media/recent : Lấy danh sách media được đánh dấu trên địa điểm này.
