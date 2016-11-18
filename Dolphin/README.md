@@ -427,7 +427,6 @@ https://github.com/google/gson
 ## Các luồng chính trong Project
 ## Login
 ![Login](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/%E1%BA%A3nh2.png)
-
 ![Login](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/%E1%BA%A3nh3.png)
 
 (giao diện màn hình login)
@@ -456,6 +455,8 @@ Sau khi đăng nhập thành công có dialog Success hiện ra và data đượ
 	LoginRootObject.class hay InstagramApplication.
 Dữ liệu của người dùng như name, full_name, fbid, photoPicture,… được lưu trong đối tượng LoginRootObject.class.
 Thông tin về token, username, profile được lưu lại vào trong InstagramApplication để tiện sử dụng lại.
+
+
 ![Access](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/%E1%BA%A3nh4.png)
 
 
@@ -463,19 +464,21 @@ Màn hình chuyển sang MainActivity qua hàm:
 
 	checkLoginToIntent() của LoginActivity.
 Người dùng muốn đăng suất ra khỏi tài khoản fb của mình chỉ cần vào setting trong profile chọn “Đăng xuất”.
+
 ![Logout](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/anh5.png)
 
  
 Sau  khi đăng suất giao diện login hiện ra các thông tin người dùng vừa mới đăng nhập, nếu muốn đăng nhập lại chỉ cần click vào button "Đăng nhập với tư cách ….".
 
 Xóa tài khoản cũ, click vào button “Xóa” dialog Xóa tài khoản sẽ hiện ra để hỏi lại 1 lần nữa trước khi về màn hình Login ban đầu.
-![Delete](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/ah6.png)
 
+![Delete](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/ah6.png)
 ![Delete](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/%E1%BA%A3nh7.png)
    
 ## NewFeeds
 Newfeeds được hiển thị trong HomeFragment.
 Layout hiển thị newfeeds qua RecycleView, mỗi View chứa các thông tin data sau khi server trả dữ liệu về client.
+
 ![Newsfeed](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/%E1%BA%A3nh8.png)
 
 
@@ -509,13 +512,14 @@ Dữ liệu là các link image được post,số comment,like,caption,… đư
 	list<HomePost> postlist;
 	postList.addAll(homeRootObject.getData());
 và được postHeaderAdapter setData vào recycleView trong HomeFragment.
+
 ![Newsfeed](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/%E1%BA%A3nh9.png)
 
 ## Profile
 Profile được hiển thị trong ProfileFragment.
 Layout hiển thị profile qua 2 chế độ GridView và RecycleView, mỗi View chứa các thông tin data sau khi server trả dữ liệu về client.
-![Profile](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/anh10.png)
 
+![Profile](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/anh10.png)
 ![Profile](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/anh11.png)
 
 
@@ -555,6 +559,7 @@ và được gridProfileAdapter setData vào GridView trong ProfileFragment post
 
 ## SharePhoto
 Màn hình camera để chọn ảnh để post bài
+
 ![SharePhoto](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/anh12.png)
 
 Sau khi đã chọn được ảnh muốn đăng, người dùng click button “Tiêp ” để sang SharePhotoActivity.
