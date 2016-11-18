@@ -16,21 +16,15 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-searchbar [(ngModel)]="myQuery" type="text" placeholder="Enter a song"></ion-searchbar>
-  <!--<ion-row class="input-search">-->
-    <!--<ion-col width-80>-->
-    <!--<ion-item>-->
-      <!--<ion-label><ion-icon name="search"></ion-icon></ion-label>-->
-      <!--<ion-input [(ngModel)]="myQuery" type="text" placeholder="Enter a song"></ion-input>-->
-      <!--</ion-item>-->
-    <!--</ion-col>-->
-    <!--<ion-col width-20>-->
-      <!--<button ion-button color="light" block (click)="getVideos()">-->
-        <!--Search-->
-      <!--</button>-->
-    <!--</ion-col>-->
-  <!--</ion-row>-->
-
+  <ion-row class="input-search">
+    <ion-col width-80>
+      <ion-searchbar [(ngModel)]="myQuery" type="text" placeholder="Enter a song">
+      </ion-searchbar>
+    </ion-col>
+    <ion-col width-20>
+      <button ion-button color="light" block (click)="getVideos()">Search</button>
+    </ion-col>
+  </ion-row>
 
     <ion-item>
       <ion-select [(ngModel)]="singType">
