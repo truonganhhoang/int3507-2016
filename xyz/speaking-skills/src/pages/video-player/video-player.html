@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="secondary">
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -20,7 +20,7 @@
 
 	<div class="image-left embed-video">
     <div class="videoWrapper">
-      <iframe id="video-player" class="embed-responsive-item" width="100%" height="250" [src]="url" 
+      <iframe id="video-player" class="embed-responsive-item" width="100%" height="250" [src]="url"
         allowscriptaccess="always"
         allowfullscreen></iframe>
     </div>
@@ -36,16 +36,16 @@
         <button ion-button (click)="playRecord()"> Play </button>
       </ion-col>
       <ion-col  *ngIf="isEnd" width-50>
-        <button ion-button (click)="saveSong()">  
+        <button ion-button (click)="saveSong()">
         &nbsp;Save
         </button>
-      </ion-col>  
+      </ion-col>
     </ion-row>
 
-   <!--  <button ion-button  *ngIf="isEnd" (click)="uploadDrive()">  
+    <button ion-button  *ngIf="isEnd" (click)="uploadDrive()">
       <ion-icon name="cloud-upload"></ion-icon>
       &nbsp;Upload Drive
-    </button> -->
+    </button>
 
 
   </div>

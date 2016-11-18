@@ -1,0 +1,50 @@
+[{
+  "_id": {
+    "$oid": "57f011e9f36d2867db3b65bb"
+  },
+  "id": "1",
+  "name": "Sport",
+  "image": "https://xyz-server.herokuapp.com/images/category/sport.jpg"
+}, {
+  "_id": {
+    "$oid": "57f01202f36d2867db3b65c2"
+  },
+  "id": "3",
+  "name": "Animal",
+  "image": "https://xyz-server.herokuapp.com/images/category/animal.jpg"
+}, {
+  "_id": {
+    "$oid": "57f01211f36d2867db3b65c9"
+  },
+  "id": "2",
+  "name": "School",
+  "image": "https://xyz-server.herokuapp.com/images/category/school.jpg"
+}, {
+  "_id": {
+    "$oid": "57f10a7ef36d2867db3b8bf0"
+  },
+  "id": "4",
+  "name": "Number",
+  "image": "https://xyz-server.herokuapp.com/images/category/number.jpg"
+}, {
+  "_id": {
+    "$oid": "57f10a9ef36d2867db3b8c02"
+  },
+  "id": "5",
+  "name": "Weather",
+  "image": "https://xyz-server.herokuapp.com/images/category/weather.jpg"
+}, {
+  "_id": {
+    "$oid": "57f10aeef36d2867db3b8c13"
+  },
+  "id": "6",
+  "name": "Job",
+  "image": "https://xyz-server.herokuapp.com/images/category/job.jpg"
+}, {
+  "_id": {
+    "$oid": "580f6503dcba0f042d5e6c54"
+  },
+  "id": "7",
+  "name": "Colors",
+  "image": "http://camroseartssociety.ca/wp-content/uploads/2016/04/artist-1297400_960_720.png"
+}]

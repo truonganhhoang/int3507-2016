@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="secondary">
+  <ion-navbar color="primary">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -17,12 +17,12 @@
 
 
 <ion-content padding>
-  <!-- <button ion-button (click)="getDrive()"> Get Drive</button>
+ <!--  <button ion-button (click)="getDrive()"> Get Drive</button>
   <button ion-button (click)="uploadDrive()"> Upload Drive</button> -->
 	<ion-list>
-	  <ion-item *ngFor="let item of words"> 
+	  <ion-item *ngFor="let item of words">
       <ion-icon color="primary" name="volume-down" (click)=tts(item.content)></ion-icon>
-      &nbsp;{{item.content}}   
+      &nbsp;{{item.content}}
       <ion-row>
         <ion-col *ngIf="!item.isRecording"  width-50>
           <button ion-button (click)="startRecord(item)"> Start Record </button>

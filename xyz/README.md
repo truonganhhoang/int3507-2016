@@ -7,6 +7,22 @@
 
 ##Ứng dụng: E2M - English to Me
 
+### Hướng dẫn phát triển ứng dụng
+#### Cài đặt
+- Cài đặt phiên bản mới nhất của NodeJS tại [đây](https://nodejs.org/en/download/)
+- Cài đặt CLI và Cordova bằng cách vào cmd, gõ lệnh 
+`npm install -g ionic cordova`
+- Clone ứng dụng English2Me theo đường link: [github](https://github.com/trangnt58/int3507-2016/tree/master/xyz/speaking-skills)
+- Vào đường dẫn vừa clone, vào cmd, gõ các lệnh sau:
+  + `npm install`: cài đặt các package cần thiết cho project
+  + `ionic serve`: chạy ứng dụng trên browser
+- Để build được ứng dụng trên điện thoại, cần cài thêm platform bằng cách:
+  + `ionic platform add <platform-name>`
+  VD như trên Android là `ionic platform add android`
+  + `ionic platform build <platform-name>`: build ứng dụng
+  + `ionic platform run <platform-name>``: chạy ứng dụng trên máy ảo hoặc máy thật
+
+### Hướng dẫn sử dụng
 ### Link tải ứng dụng: https://goo.gl/JsyAnX
 
 ### Điều kiện sử dụng E2M
@@ -19,7 +35,7 @@
 - Dữ liệu đầu vào được tải từ server Nodejs do nhóm tự xây dựng
 - E2M được build một bản duy nhất dưới dạng file apk, chạy trên hệ điều hành Android.
 
-## Hướng dẫn sử dụng E2M
+## Các tính năng của  E2M
 
 ### Login / Logout With Google
 

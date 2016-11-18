@@ -41,46 +41,28 @@ export class Record implements OnInit {
     let categoryId = this.navParams.get('category').id;
     this.categoryName = this.navParams.get('category').name;
   
-  	this.wordService.getWord(categoryId).then(res => {
+  	this.wordService.getWord2(categoryId).then(res => {
       this.words = res;
-      this.recordService.getRecords().then(res => {
-        this.records = res;
-        for (let i = 0; i < this.records.length;  i++) {
-          for (let j = 0; j < this.words.length; j++) {
-            if (this.records[i]['word_id'] == this.words[j]['id']) {
-              this.words[j]['url'] = this.records[i]['url'];
-              //on device
-              if(!platform.is('cordova')) break;
-              else {
-                var nameFile = this.words[j]['content'] + '.mp3';
-                 let fs = cordova.file.externalRootDirectory;
-                  File.checkFile(fs, nameFile).then(
-                    _ => {
-                      this.words[j]['url'] = this.records[i]['url'];
-                    }
-                  ).catch(err => {
-                      this.words[j]['url'] = null;
-                    }
-                  );
-               
+      if(!this.platform.is('cordova')) return;
+      for (let i = 0; i < this.words.length; i++) {
+        var nameFile = this.words[i]['content'] + '.mp3';
+        let fs = cordova.file.externalRootDirectory;
+        File.checkFile(fs, nameFile).then(
+              _ => {
+                this.words[i]['url'] = this.words[i]['content'];
               }
-              break;
-              
-            }
-          }
-        }
-      });
+            ).catch(err => {
+                this.words[i]['url'] = null;
+              }
+            );
+      }
     });
-
-    
   }
 
 
   ngOnInit() {
-    
     this.appGlobals.access_token.subscribe(value => {
       this.access_token = value;
-      //alert(this.access_token);
     });
       
   }
@@ -96,11 +78,8 @@ export class Record implements OnInit {
   startRecord(word: Object) {
     word['isRecording'] = true;
     if(!this.platform.is('cordova')) return;
-    //link lưu file ở máy
     this._pathFile = this.getPathFile(word['content']);
-    //khởi tạo đối tượng Media
     this._fileRecord = new MediaPlugin(this._pathFile);
-    //bắt đầu ghi âm
     this._fileRecord.startRecord();
   }
 
@@ -108,22 +87,21 @@ export class Record implements OnInit {
     word['isRecording'] = false;
     if(!this.platform.is('cordova')) return;
     this._fileRecord.stopRecord();
+    word['url'] = word['content'];
 
-    var record: Object = {};
-    record['word_id'] = word['id'];
-    record['url'] = this._pathFile;
+    // var record: Object = {};
+    // record['word_id'] = word['id'];
+    // record['url'] = this._pathFile;
 
     //Lưu vào mlab
-    this.recordService.createRecord(record);
-    word['url'] = this._pathFile;
+    // this.recordService.createRecord(record);
+   
   }
 
   playRecord(item){
-    //let path = this.getPathFile(item['content']);
-    let path = item['url'];
+    let path = this.getPathFile(item.content);
     if(!this.platform.is('cordova')) return;
     this._fileRecord = new MediaPlugin(path);
-    // this._fileRecord['status'].subscribe(()=>{});
     this._fileRecord.play();
   }
 
@@ -163,30 +141,25 @@ export class Record implements OnInit {
   }
 
   uploadDrive() {
-    alert('upload');
     var callback;
     const boundary = '-------314159265358979323846';
     const delimiter = "\r\n--" + boundary + "\r\n";
     const close_delim = "\r\n--" + boundary + "--";
-   
-    // File.readAsBinaryString(cordova.file.externalRootDirectory,'badminton.mp3').then( res => {
-    //    var contentType = 'audio/mp3' || 'application/octet-stream';
-    //   var metadata = {
-    //     'title': 'badminton.mp3',
-    //     'mimeType': contentType
-    //   };
-
-    //   alert('binarystring' + res);
-    // })
 
     File.readAsDataURL(cordova.file.externalRootDirectory,'badminton.mp3').then( res => {
+      res = res.toString();
+      let baseStr = ";base64,";
+      var index = res.indexOf(';base64,')+ baseStr.length;
+      res = res.substring(index);
+       alert(res);
+
       var contentType = 'audio/mp3' || 'application/octet-stream';
       var metadata = {
         'title': 'badminton.mp3',
         'mimeType': contentType
       };
 
-       var base64Data = res;
+      var base64Data = res;
       var multipartRequestBody =
           delimiter +
           'Content-Type: application/json\r\n\r\n' +
@@ -198,10 +171,8 @@ export class Record implements OnInit {
           base64Data +
           close_delim;
 
-         alert('bbbb');
-
+ 
         gapi.client.load('drive', 'v2', () => {
-          alert('load done');
           var request = gapi.client.request({
             'path': '/upload/drive/v2/files?access_token=' + this.access_token,
             'method': 'POST',
@@ -218,10 +189,7 @@ export class Record implements OnInit {
               };
             }
             request.execute(callback);
-
         });
-
-            alert('dataURL' + res);
 
       })
 

@@ -19,7 +19,7 @@ import { VideoPlayer } from '../video-player/video-player';
 
 export class Sing implements OnInit {
 	videos: Object[];
-	myQuery: String;
+	myQuery: String = "";
   singType: String = 'karaoke';
 
   constructor(public navCtrl: NavController, private ytbSearchService: YtbSearchService) {}
