@@ -63,7 +63,7 @@ Quá trình từ khi người dùng cuối gửi một tin nhắn đến Chatbot
 
 **Chat với Cwat tại:** `https://www.facebook.com/cwat.seewhat/`
 
-**Mục tiêu của chat-bot là giúp người dùng học và nâng cao trình độ tiếng anh của mình. Chức năng chính của nó gồm :**
+**Mục tiêu của chat-bot là giúp người dùng học và nâng cao trình độ tiếng anh của mình. Các chức năng chính của nó gồm :**
 * Có khả năng giao tiếp đơn giản như: phản hồi các câu giao tiếp phổ biến, giới thiệu các tính năng, trả lời các câu hỏi đơn giản, tương tác thân thiện...
 
 ![conversation](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/conversation.png)
