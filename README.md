@@ -26,6 +26,6 @@ Liên kết đến sản phẩm của các nhóm:
 | ...  | ... |
 | A2 | - Link product: https://hoanggianguet.github.io/sachmem/ <br/> - Hướng dẫn sử dụng: [] |
 | 4C | - Link test Alexa Skill: https://echosim.io/ <br/> - Hướng dẫn sử dụng [tại đây](https://github.com/truonganhhoang/int3507-2016/commit/275c5e14a81bdcfbae0909afc29d2f249b4a8f9d)|
-| HK | - Link product: https://demoeleaningsystem.herokuapp.com/ <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/README.md) |
+| HK | - Link product: http://tranquil-hamlet-99422.herokuapp.com/ <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/README.md) |
 | VAT | - Link sản phẩm: http://englishlearningdemo.herokuapp.com/ <br> - Hướng dẫn sử dụng [tại đây](https://github.com/truonganhhoang/int3507-2016/blob/master/VAT/README.md)
 | ACE  | - Link chatbot: https://www.facebook.com/UETBot/ <br> - Hướng dẫn sử dụng [tại đây](https://github.com/truonganhhoang/int3507-2016/blob/master/ACE/README.md#hướng-dẫn-sử-dụng)|
