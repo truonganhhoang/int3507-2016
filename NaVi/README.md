@@ -58,6 +58,22 @@ Quá trình từ khi người dùng cuối gửi một tin nhắn đến Chatbot
 * Chatbot của bạn hiện tại đã có thể chạy, và làm được một số việc đơn giản như:
   * Trả lại một số mẫu tin nhắn nhất định khi bạn chat đúng rule. VD: 'button', 'generic', 'quick reply',...[see more](https://developers.facebook.com/docs/messenger-platform/product-overview/conversation)
   * Echo lại tất cả các tin nhắn của bạn
+  
+## 4. Tài liệu tham khảo
+
+[1]: [Chatbot definition - wikipedia](https://en.wikipedia.org/wiki/Chatterbot)
+
+[2]: [Messenger at F8 Conference](http://newsroom.fb.com/news/2016/04/messenger-platform-at-f8)
+
+[3]: [4 use cases of Chatbot](http://tomtunguz.com/bot-use-cases/)
+
+[4]: [Resons to start using Messenger Chatbot platform](https://www.quora.com/Is-Facebooks-Messenger-chatbot-platform-worth-building-for)
+
+[5]: [11000 chatbots are available to try](http://venturebeat.com/2016/06/30/facebook-messenger-now-has-11000-chatbots-for-you-to-try/)
+
+[More Chatbot applications](https://blog.exponea.com/full-guide-chatbot-use-cases-brands)
+	
+[Facebook sample code for messenger platform](https://github.com/fbsamples/messenger-platform-samples)
 
 ## 5 Các chức năng chính ứng dụng
 
