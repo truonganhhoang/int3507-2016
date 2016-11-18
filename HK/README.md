@@ -9,7 +9,7 @@
 #Ứng dụng : E- Learning
 
 ##Link chạy thử ứng dụng:  
-https://demoeleaningsystem.herokuapp.com/
+http://tranquil-hamlet-99422.herokuapp.com/
 
 ### Những yêu cầu cơ bản cần có: 
 - PHP version >= 5.4
