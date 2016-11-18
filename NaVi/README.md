@@ -61,85 +61,36 @@ Quá trình từ khi người dùng cuối gửi một tin nhắn đến Chatbot
 
 ## 5 Các chức năng chính ứng dụng
 
-## Cwat vesion 0.4
-
 **Chat với Cwat tại:** `https://www.facebook.com/cwat.seewhat/`
+**Mục tiêu của chat-bot là giúp người dùng học và nâng cao trình độ tiếng anh của mình. Chức năng chính của nó gồm :**
+* Có khả năng giao tiếp đơn giản như: phản hồi các câu giao tiếp phổ biến, giới thiệu các tính năng, trả lời các câu hỏi đơn giản, tương tác thân thiện...
+![conversation](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/conversation.png)
 
-**New features**
+* Cung cấp cho người dùng các câu hỏi chắc nghiệm để người dùng trả lời: Giúp họ rèn luyện và đánh giá kĩ năng tiếng anh của mình. Các câu hỏi đã được người dùng trả lời đúng sẽ không xuất hiện lại. Người dùng có thể chọn đáp án hoặc nhập từ bàn phím.
+![right answer](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/right-answer.png)
 
-- User can view the profile from menu.
-![profile](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/profile.PNG)
+* Người dùng có thể học từ mới cùng Cwat: Cwat gửi tới người dùng từ cùng với cách phát âm và nghĩa của nó để người dùng học, họ có thể chọn không hiện lại để hệ thống biết người dùng đã biết và sẽ không hiện lại từ đó.
+![new-word-no-show](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/new-word-no-show.png)
 
-- User can follow to the learn process with menu of Cwat.
-![learn-process](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/learn-process.PNG)
+* Người dùng có thể rèn luyện kỹ năng nghe và viết với Cwat: Cwat gửi tới người dùng một đoạn audio, sau khi nghe người dùng gửi lại những gì mình đã nghe được. Hệ thống sẽ phân tích và gửi lại người dùng kết quả bài làm của họ cũng như nội dung của đoạn audio.
+![listening 1](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/listening-1.png)
 
-- User can set time of notification to menu with Cwat.
-![setting notification](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/setting%20notification.PNG)
-
-
-## Cwat version 0.3
-
-**New features**
-
-- Users can now learn both listening and writing skills with Cwat.
-  ![listening](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/listening.png)
-
-- Cwat helps you improve by correcting your answer and showing how many percent correctness you've achieved.
-  ![listening 1](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/listening-1.png)
-
-- Improved user experience with friendly interaction.
-
-- The database has been updated with more audio questions for listening feature.
-
-
-## Cwat version 0.2
-
-**New features**
-
-- Users can ask Cwat for new words to learn.
-  ![new-word](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/new-word.png)
-
-- Users can choose not to see a word and Cwat will never show that word again to them.
-  ![new-word-no-show](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/new-word-no-show.png)
-
-- New ways to answer multiple choice questions:
-  - Users can type the answer directly.
-	![multiple choices 2](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/multiple-choices-2.png)
-  - Users can type A, B or C to answer.
-	![multiple choices 1](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/multiple-choices-1.png)
-
-- Improved user experience with friendly interaction.
-  ![conversation 1](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/conversation-1.png)
-
-- The database has been updated with more questions new words.
-
-
-## Cwat version 0.1
-
-**New features**
-
-- Users can ask Cwat for multiple choice question exercises.
-  ![multiple choices](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/multiple-choices.png)
-
-- Cwat knows which question has been correctly answered by the users and will not show that question again.
-  ![right answer](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/right-answer.png)
-
-- Improved user experience with friendly interaction (programab intergrated).
-  ![conversation](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/conversation.png)
-
-- Error/Exception handling if any service is down.
-  ![error handling](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/handling-exceptions.png)
-
-- The database has been updated with more questions.
-
-
+* Các tiện ích cho người dùng:
+  * Người dùng có thể xem và cập nhật hồ sơ cá nhân của mình:
+  ![profile](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/profile.PNG)
+  
+  * Người dùng có thể theo dõi quá trình học tập của mình:
+  ![learn-process](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/learn-process.PNG)
+  
+  * Thiết lập thời gian thông báo của Cwat:
+  ![setting notification](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/setting%20notification.PNG)
+  
 ## 6  Hướng phát triển
 
 * Huấn luyện mô hình xác định ý định của người dùng đối với mỗi tin nhắn được gửi tới bot.
 * Xây dựng các luồng xử lý sự kiện (kịch bản chat) cho bot.
 * Làm mịn các tính năng sẵn có và mở rộng tính năng khác dựa vào việc phối hợp các tính năng sẵn có.
 * Xây dựng 1 web app để quản lý (thêm, sửa, xóa) dữ liệu
-
 
 ## 7 Cầu trúc thư mục project
 
