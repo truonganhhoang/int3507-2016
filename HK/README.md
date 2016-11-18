@@ -62,7 +62,7 @@ Giao diện bắt đầu trước khi vào ứng dụng
 
 ## Profile
 
-![Profile](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/Profile.jpg)
+![Profile](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/profile.jpg)
 
 ##List User
 
