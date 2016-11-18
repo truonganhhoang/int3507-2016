@@ -8,4 +8,6 @@
 
 ##Mô tả đề tài của nhóm :
 Làm đề tài công ty SOTATEK ( Mô phỏng ứng dụng Instagram có giảm và thêm một số chức năng )
+##@@@ sua dk day con j
+
 
