@@ -76,7 +76,7 @@ Quá trình từ khi người dùng cuối gửi một tin nhắn đến Chatbot
 ![listening 1](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/listening-1.png)
 
 * Các tiện ích cho người dùng:
-  * Người dùng có thể xem và cập nhật hồ sơ cá nhân của mình:
+  * Người dùng có thể xem và cập nhật hồ sơ cá nhân:
   ![profile](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/profile.PNG)
   
   * Người dùng có thể theo dõi quá trình học tập của mình:
