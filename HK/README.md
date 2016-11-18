@@ -100,7 +100,7 @@ Có thể chạy test trực tiếp trên link heroku nhóm đã đính kèm tr�
 
 Còn nếu muốn biết chi tiết project hoạt động , viết ra sao, chạy như thế nào có thể thực hiện như sau:
 Ngoài những yêu cầu cơ bản ở trên để chạy được ứng dụng cần làm các bước sau
-- Tải project về tại: https://github.com/truonganhhoang/int3507-2016
+- Clone project về tại: https://github.com/truonganhhoang/int3507-2016
 - Nếu máy chưa có composer cần cài đặt composer sau đó chạy "composer update" . Để biết được máy đã có composer chưa tại command line của thư mục project chạy : "composer -v".
 - Chạy lệnh "npm install --save-dev" để cài đặt các chương trình cần thiết cho project.
 - Do có nhiều thư mục rất nặng nên đã được cho vào file gitnore nên không hiển thị trên git vì vậy cần tạo thêm tạo file ".env". Trong đó cần sửa thông tin "DB_DATABASE" giống với tên bạn đã tạo cơ sở dữ liệu trên phpMyadmin.(có thể sao chép file .env.example)
