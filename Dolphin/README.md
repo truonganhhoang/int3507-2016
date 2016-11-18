@@ -9,7 +9,9 @@
 ## Mô tả đề tài của nhóm :
  Làm đề tài công ty SOTATEK ( Mô phỏng ứng dụng Instagram có giảm và thêm một số chức năng ).
 
-# Báo cáo phần server
+# Báo cáo project
+
+## Phần Server : 
 	
 ## Giới thiệu về SailsJs
 
