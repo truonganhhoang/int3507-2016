@@ -391,3 +391,183 @@ Việc dùng Gson rất dễ dàng, không tốn công parse và cũng giúp ch�
 		
 - Chi tiết hơn về GSON cũng như các tài liệu tham khảo liên quan có thể tham khảo trên link sau : 
 https://github.com/google/gson
+
+## Cấu trúc Project – Instagram Clone
+# ảnh
+- Project – Instagram Clone có cấu trúc theo mô hình MVC gồm các packages :
+	- Activities: Chứa các class Activity như LoginActivity, HomeActivity, CameraActivity,…. Để hiển thị các views trong layout ra 		              ngoài màn hình.
+	- Adapters: Chứa các class Adapter home/PostAdapter, profile/GridProfileAdaper, profile/UserPostAdapter,… có chức năng tạo các 			    view holder để load dữ liệu cho các Recycle view(trong activities) chạy mượt hơn ko phải load tất cả dữ liệu vào 
+	            recycle view cùng lúc gây chết app.
+	- Application: Chứa class InstagramApplication tạo 1 class singleton để sử dụng trong toàn app, dung để tạo ra các phương thức 			       get, set 1 số dữ liệu dùng chung trong application như get, putToken, get, putUserName, get, putUserImage.
+	- Controller: Chứa các class như HomeController,LoginController, SharePhotoController ,… tương tác trưc tiếp với server để post 		      dữ liệu từ views (SharePhotoController) lên server,  hay để lấy dữ liệu trả về views (HomeController). 
+	- Fragments: Chứa các class như HomeFragment, ProfileFragment,… được dùng trong các class Activities. Một Activity có thể chứa 			     nhiều các fragment tương tác với nhau.
+	- Listeners: Chứa các class listener như HidingScrollListener,.. dùng để thực hiện các phương thức khi fragment hay activity nào 		      đó gọi tới.
+	- Models: Chứa các class như login/(LoginData, LoginProfilePicture, LoginUser, LoginRootObject) là mô hình các đối tượng khi dữ 		  liệu chuyển đổi từ file json khi server trả về client.
+	- Services: Chứa các class services chạy ngầm trong application như bus/provider hay các event chạy ngầm bus/event. Services còn 		     chứa các class Service tương tác với server để lấy API về cho controller qua các giao thức Okhttp , Retrofit vs 			    Gson,… 	
+	- Utils: Chứa các class tiện ích như tính toán hay scale ảnh CaculateValue, ScalingUtilities.
+	- Views: Chứa các class custom hình ảnh, view trong layout như CustomAvatar, RoundedImageView để custom lại layout như ý muốn.
+
+## Android/Res/
+
+- Drawable: lưu các file animation.xml,image
+- Layout : chứa các file layout.xml để hiển thị ra ngoài màn hình qua các Activity+Fragment
+- Mipmap-hdpi, mipmap-mdpi, mipmap-xhdpi, mipmap-xxhdpi, mipmap-xxxhdpi, lưu các file image png, jpg để dùng trong project 
+	Các file hdpi, mdpi, xhdpi,… để phân loạị size màn ảnh như nhỏ dùng dhpi, vừa có mdpi, rộng có xhdpi phù hợp với các dòng máy, 		màn hình khác nhau của android
+
+- values:  
+	- Attrs: Định nghiã tên các customview và thuộc tính của nó trong views.
+	- Colors: Định nghĩa tên màu sắc theo Color Hex.
+	- Dimens: Định nghĩa tên độ dài theo dp.
+	- Strings: Định nghĩa tên các chuỗi kí tự trong layout.
+	- Styles: Định nghĩa tên style mà application dùng.
+## Các luồng chính trong Project
+## Login
+   # ảnh
+(giao diện màn hình login)
+
+- Sau khi LoginActivity bắt sự kiện click vào button “đăng nhập bằng Fb” dialog LoginManager của facebook được hiện ra để người dùng       nhập tên + passw.
+
+Trong LoginActivity tạo 1 thuộc tính để đăng kí nhận dữ liệu từ server trả về khi đăng nhập thành công. 
+
+	loginController = LoginController(this, BusProvider.bus());
+Nếu đăng nhập thành công qua hàm 
+
+	onSuccess(LoginResult loginResult) 
+để lấy được tokenFacebook trả về.
+
+Khi bạn đăng nhập sai hay lỗi đăng nhập LoginManager của facebook sẽ tới hàm onCancel() hay onError để báo lỗi cho developer.
+
+Phương thức loginFacebook trong LoginController để post fb_access_token lên server qua class InstagramService + LoginServiceAPI, Facebook xác nhận đúng access_token sẽ trả về client 1 file Json.
+Tại InstagramService dùng Retrofit.Builder + OKhttpClient để kết nối tới URl của server, LoginServiceAPI post hay gửi request với params là fb_access_token qua phương thức loginFacebook và nhận dữ liệu trả về dưới đạng đối tượng LoginRootObject.class.
+
+Việc chuyển từ file Json server trả về sang 1 đối tượng trong android ta dùng:
+
+	GsonConverterFactory như trong class InstagramService
+
+Sau khi đăng nhập thành công có dialog Success hiện ra và data được trả về qua hàm onResponse trong controller, Otto event Bus sẽ post một sự kiện hay gửi data về Activity (nơi đăng kí) để lưu các data vào:
+
+	LoginRootObject.class hay InstagramApplication.
+Dữ liệu của người dùng như name, full_name, fbid, photoPicture,… được lưu trong đối tượng LoginRootObject.class.
+Thông tin về token, username, profile được lưu lại vào trong InstagramApplication để tiện sử dụng lại.
+# ảnh
+
+Màn hình chuyển sang MainActivity qua hàm:
+
+	checkLoginToIntent() của LoginActivity.
+Người dùng muốn đăng suất ra khỏi tài khoản fb của mình chỉ cần vào setting trong profile chọn “Đăng xuất”.
+# ảnh
+ 
+Sau  khi đăng suất giao diện login hiện ra các thông tin người dùng vừa mới đăng nhập, nếu muốn đăng nhập lại chỉ cần click vào button "Đăng nhập với tư cách ….".
+
+Xóa tài khoản cũ, click vào button “Xóa” dialog Xóa tài khoản sẽ hiện ra để hỏi lại 1 lần nữa trước khi về màn hình Login ban đầu.
+# ảnh
+   
+## NewFeeds
+Newfeeds được hiển thị trong HomeFragment.
+Layout hiển thị newfeeds qua RecycleView, mỗi View chứa các thông tin data sau khi server trả dữ liệu về client.
+ # ảnh
+
+Trong HomeFragment tạo 1 thuộc tính để đăng kí nhận dữ liệu từ server trả về.
+
+	homeController = HomeController(this, BusProvider.bus());  
+	
+Param để gửi request lấy data của người dùng lên server là token mà facebook trả về khi đăng nhập thành công có được lưu trong Application.
+
+Param được truyền trong phương thức:
+
+	homeController.getNewsFeed(InstagramApplication.getInstance().getToken())
+Tương tự như Login Controller homeController dùng phương thức:
+
+	instagramService.createService 
+chứa retrofit + OkhttpClient để gửi request lên server,sau khi server xác nhận đúng token sẽ trả dữ liệu là 1 file Json và được
+
+	GsonConverterFactory 
+chuyển về các đối tượng HomeRootObject.
+
+Data dk trả về nếu thành công sẽ vào phương thức onResponse.
+Nếu không sẽ được trả về phương thức để HomeFragment (nơi đăng kí otto bus) có thể nhận được dữ liệu trả về là các đối tượng HomeRootObject.
+
+	onFailure . OttoeventBuspostdata
+Tại HomeFragment data dk trả về thành công sẽ vào phương thức:
+
+	@Subscribe
+	getNewsfeed (HomeRootObject homeRootObject) 
+Dữ liệu là các link image được post,số comment,like,caption,… được lưu vào:
+
+	list<HomePost> postlist;
+	postList.addAll(homeRootObject.getData());
+và được postHeaderAdapter setData vào recycleView trong HomeFragment.
+# ảnh
+
+## Profile
+Profile được hiển thị trong ProfileFragment.
+Layout hiển thị profile qua 2 chế độ GridView và RecycleView, mỗi View chứa các thông tin data sau khi server trả dữ liệu về client.
+# ảnh
+
+Trong ProfileFragment tạo 1 thuộc tính để đăng kí nhận dữ liệu từ server trả về các dữ liệu như số người follow, số bài đăng, số người mình đang theo dõi,..:
+
+	profileController = ProfileController(this, BusProvider.bus()); 
+Một thuộc tính để đăng kí nhận dữ liệu từ server trả về các bài post để hiện lên Gridview + RecycleView.
+
+	homeController = HomeController(this, BusProvider.bus()); 
+
+Param để gửi request lấy data của người dùng lên server là token mà facebook trả về khi đăng nhập thành công có được lưu trong Application.
+
+Param được truyền trong phương thức:
+
+	homeController.getNewsFeed(InstagramApplication.getInstance().getToken())
+Tương tự của  HomeController
+Param là fbtoken được cũng được truyền trong phương thức profileController.
+
+	getUserProfile(InstagramApplication.getInstance().getToken())
+
+profileController dùng phương thức để gửi request lên server,sau khi server xác nhận đúng token sẽ trả dữ liệu là 1 file Json và được GsonConverterFactory chuyển về các đối tượng ProfileUserRootObject.
+
+	instagramService.createService chứa retrofit + OkhttpClient
+Data dk trả về nếu thành công sẽ vào phương thức onResponse.
+Nếu không sẽ được trả về phương thức để ProfileFragment (nơi đăng kí otto bus) có thể nhận được dữ liệu trả về là các đối tượng ProfileUserRootObject.
+
+	onFailure. OttoeventBuspostdata
+Tại ProfileFragment data dk trả về thành công sẽ vào phương thức:
+
+	@Subscribe
+	getNewsfeed (HomeRootObject homeRootObject) 
+Dữ liệu là các link image được post, số comment, like, caption,… được lưu vào:
+
+	list<HomePost> list;
+	list.addAll(homeRootObject.getData());
+và được gridProfileAdapter setData vào GridView trong ProfileFragment postHeaderAdapter setData vào RecycleView trong ProfileFragment.
+
+## SharePhoto
+Màn hình camera để chọn ảnh để post bài
+# ảnh
+ 
+Sau khi đã chọn được ảnh muốn đăng, người dùng click button “Tiêp ” để sang SharePhotoActivity.
+# ảnh
+
+Trong SharePhotoActivity tạo 1 thuộc tính để đăng kí nhận dữ liệu post lên server đã thành công hay chưa.
+
+	sharephotoController = SharePhotoController (this, BusProvider.bus()); 
+Các param truyền vào controller để post lên server được lấy từ SharePhotoActivity:
+
+	sharePhotoController.uploadImage(access_token, type, caption, media);
+Phương thức uploadImage dùng UploadImageAPI.class để gửi các param lên server.
+
+	UploadImageAPI uploadImageAPI = InstagramService.getInstance().createService(UploadImageAPI.class);
+	uploadImageAPI.postImage(access_token, type, caption, media)
+Sau khi dữ liệu trả về sẽ vào hàm onRespone Otto event Bus post dữ liệu đã trả về thành công hay không qua hàm:
+
+	UploadImageEvent.OnLoadingDone
+Nếu lỗi sẽ trả về:
+	
+	error UploadImageEvent.OnLoadingError
+Dữ liệu trả về thất bại sẽ vào hàm onFailure Otto event Bus post trạng thái:
+
+	UploadImageEvent.Failure
+SharePhotoActivity nhận dữ liệu trả về qua hàm:
+
+	onUploadImageSuccess(UploadImageEvent.OnLoadingDone onLoadingDone)
+Nếu trả về trạng thái post image thành trong sẽ trở lại MainActivity để xem bài vừa mới đăng:
+
+	onUploadImageFailed(UploadImageEvent.OnLoadingError onLoadingError)
+Nếu dữ liệu trả về trạng thái failure Toast lên dòng status “Tải ảnh lên không thành công!”.
