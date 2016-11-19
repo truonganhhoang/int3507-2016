@@ -6,4 +6,4 @@
 
 ## Chất lượng bên trong của sản phẩm.
 - Dựa vào tài liệu hướng dẫn của nhóm, đã cài đặt và build thử ứng dụng thành công trên điện thoại.
-- Về mã nguồn:
+- Về mã nguồn: code dễ hiểu, có khả năng mở rộng và phát triển thêm.
