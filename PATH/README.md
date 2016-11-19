@@ -20,7 +20,7 @@ Enguliz  là website học tiếng anh miễn phí trực tuyến. Enguliz c
 học từ cơ bản đến nâng cao, các bài học xung quanh các chủ đề thân thuộc giúp 
 người học dễ tiếp thu và nâng cao trình độ tiếng anh.
 Enguliz  bao  gồm  các  khóa  học  theo  các  kỹ  năng  listening,  reading,  writing, 
-grammar. (Trang chủ: http://139.162.52.76/ ) 
+grammar. (Trang chủ: http://139.162.52.76:3000/ ) 
 ### 2. Đăng ký/ Đăng nhập
 2.1 Để tham gia các khóa học của Enguliz bạn cần đăng kí tài khoản trên website 
 của Enguliz theo các bước sau đây:
@@ -28,7 +28,7 @@ B1: Truy cập Enguliz sau đó click “Đăng kí” để đăng ký tài 
 ![dangky](https://github.com/truonganhhoang/int3507-2016/blob/master/PATH/images/huong%20dan/1.jpg)
 B2: Hệ thống sẽ chuyển sang giao diện trang đăng kí. Tại trang này bạn cần điền 
 đầy đủ các thông tin (Họ và tên, Email, Mật khẩu, Xác nhận mật khẩu) để đăng ký 
-tài khoản. http://139.162.52.76/register).
+tài khoản. http://139.162.52.76:3000/register).
 ![thongtindangky](https://github.com/truonganhhoang/int3507-2016/blob/master/PATH/images/huong%20dan/2.jpg)
 B3:  Sau  khi  đăng  kí  thành  công,  hệ  thống  sẽ  chuyển  sang  giao  diện  trang  chủ. 
 Hiện giờ, bạn có thể bắt đầu học tại Enguliz
@@ -36,7 +36,7 @@ Hiện giờ, bạn có thể bắt đầu học tại Enguliz
 “Đăng nhập” trên trang chủ của Enguliz:
 ![dangnhap](https://github.com/truonganhhoang/int3507-2016/blob/master/PATH/images/huong%20dan/3.jpg)
 B2: Hệ thống sẽ chuyển đến trang đăng nhập. Tại trang này bạn cần nhập Email v 
-và password mà bạn đã khai báo khi đăng kí (http://139.162.52.76/login)
+và password mà bạn đã khai báo khi đăng kí (http://139.162.52.76:3000/login)
 ![dangnhap1](https://github.com/truonganhhoang/int3507-2016/blob/master/PATH/images/huong%20dan/4.jpg)
 B3: Sau khi đăng nhập thành công, hệ thống sẽ chuyển sang giao diện trang chủ 
 tại đây bạn có thể tham gia các khóa  học tại Enguliz.  Ngoài ra bạn có thể sử dụng 
@@ -63,7 +63,7 @@ Các đáp án đúng sẽ được bôi màu xanh.
 ## III.  XEM LỊCH SỬ CÁC BÀI KIỂM TRA.
 Sau khi đăng nhập, trên thanh navigation sẽ hiện ra thông tin tài khoản như hình 
 vẽ dưới, nhấn vào nút khoanh vùng đỏ để tới trang profile và xem thông tin lịch sử:
-Link URL: http://139.162.52.76/profile
+Link URL: http://139.162.52.76:3000/profile
 ![profile](https://github.com/truonganhhoang/int3507-2016/blob/master/PATH/images/huong%20dan/10.PNG)
 Ở trang profile sẽ hiện lên thông tin lịch sử những bài kiểm tra đã làm,  và số điểm 
 đạt được:
