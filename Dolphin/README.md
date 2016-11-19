@@ -301,7 +301,10 @@ Thư mục này có chứa các forder con:
 
 ## 1. OttoEventBus
 Trong Android eventbus tối ưu hóa và đơn giản hóa các event cũng như trao đổi dữ liệu giữa các Activity, Fragment, Service, Theards..... với nhau.	
-![]
+
+![Otto](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/otto1.jpg)
+![Otto](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/otto2.png)
+
 - OttoEventbus như là nơi quan lý các sự kiện hay điều khiển các quá trình xử lý dữ liệu.Nó giúp ta bắt sự kiện và lấy kết quả của quá trình đó tại bất kì đâu Activity, Fragments.....
 - Nếu như việc sử lý dự liệu ta dùng Theard đơn thuần... nhưng với nhiều sự kiện trao đổi diễn ra dẫn đến Overload Theard hoặc tràn bộ nhớ đệm, thiếu bộ nhớ dẫn đến ứng dụng hoạt động ì ạch. Lúc này Eventbus điều phối các hoạt động này giúp các hoạt động được sắp xếp hợp lý và việc trao đổi dữ liệu trở lên dễ dạng dựa vào các đăng ký hoạt động	
 
