@@ -115,6 +115,7 @@ Quá trình từ khi người dùng cuối gửi một tin nhắn đến Chatbot
 * Xây dựng các luồng xử lý sự kiện (kịch bản chat) cho bot.
 * Làm mịn các tính năng sẵn có và mở rộng tính năng khác dựa vào việc phối hợp các tính năng sẵn có.
 * Xây dựng 1 web app để quản lý (thêm, sửa, xóa) dữ liệu
+* Lấy thêm dữ liệu tiếng anh từ lớp 1 đến lớp 12.
 
 ## 7 Cầu trúc thư mục project
 
