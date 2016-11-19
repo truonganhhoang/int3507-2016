@@ -6,7 +6,7 @@
   - Giao diện đơn giản, trong sáng dễ nắm bắt.
   - Có thông báo đầy đủ tới người dùng về kết quả làm bài, đáp án đúng cho các câu trả lời sai.
   
-  Nhược điểm :
+Nhược điểm :
   - Các tính năng còn sơ sài (chỉ có listening và reading) và không điểm nổi bật so với các sản phẩm tương tự.
   - Dữ liệu câu hỏi còn khá ít. (chỉ có 1 file audio cho kĩ năng listening và 5 bộ câu hỏi).
   - Phần Reading thực sự không phải kĩ năng đọc, nó giống như là một bài kiểm về ngữ pháp, từ vựng.
@@ -15,7 +15,7 @@
   - Nút "Start Learning" luôn chuyển tới phần Listening, trong khi không phải người dùng nào cũng muốn học kĩ năng nghe. Đương nhiên có thể chọn kĩ năng khác tại "choose skill" trên thanh thanh Navigation, nhưng đây là nỗi của nút "Start Learning" và nó là gì?
   - Với cùng một chức năng để trở về trang chủ nhưng nhần vào "Home" thì nhanh trong khi chọn "English Learning" thì rất chậm?
   
-  Chỉnh sửa bổ sung :
+Chỉnh sửa bổ sung :
   - Bổ sung cơ sở dữ liệu, hoàn thiện thêm các chức năng cho Speaking and Writing.
   - Chỉnh sửa lại phần Reading cho phù hợp.
   - Nên phân loại trình độ các câu hỏi để tiện cho việc học của người dùng.
@@ -28,12 +28,12 @@
   - Readme hướng dẫn về cài đặt và sử dụng khá đầy đủ và dễ hiểu.
   - Hướng dẫn có hình ảnh mô tả cụ thể chi tiết.
   
-  Nhược điểm :
+Nhược điểm :
   - Sản phẩm còn đơn giản và không có gì đặc biệt.
   - Cần có trình bày về cấu trúc thư mục, các thư mục chính và công dụng của nó để người khác tiện theo dõi và dễ dàng hơn khi cần chuyển giao để phát tiển tiếp.
   - Tài liệu thiếu phần định hướng phát triển.
   
-  Chỉnh sửa bổ sung :
+Chỉnh sửa bổ sung :
   - Thêm các tính năng mới, tạo điểm nhấn cho sản phẩm.
   - Bổ sung vào tài liệu Readme cấu trúc thư mục và hướng phát triển để người khác có thể dễ dàng theo dõi và phát triển tiếp.
   
