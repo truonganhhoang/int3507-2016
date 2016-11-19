@@ -77,77 +77,90 @@ Quá trình từ khi người dùng cuối gửi một tin nhắn đến Chatbot
 
 ## 5 Các chức năng chính ứng dụng
 
-## Cwat vesion 0.4
-
 **Chat với Cwat tại:** `https://www.facebook.com/cwat.seewhat/`
 
-**New features**
+**Mục tiêu của chat-bot là giúp người dùng học và nâng cao trình độ tiếng anh của mình. Các chức năng chính của nó gồm:**
+* Có khả năng giao tiếp đơn giản như: phản hồi các câu giao tiếp phổ biến, giới thiệu các tính năng, trả lời các câu hỏi đơn giản, tương tác thân thiện...
 
-- User can view the profile from menu.
-![profile](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/profile.PNG)
+![conversation](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/conversation.png)
 
-- User can follow to the learn process with menu of Cwat.
-![learn-process](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/learn-process.PNG)
+* Cung cấp các câu hỏi chắc nghiệm để người dùng trả lời: Giúp rèn luyện và đánh giá kĩ năng tiếng anh của mình. Các câu hỏi đã được người dùng trả lời đúng sẽ không xuất hiện lại. Người dùng có thể chọn đáp án hoặc nhập đáp án từ bàn phím.
 
-- User can set time of notification to menu with Cwat.
-![setting notification](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/setting%20notification.PNG)
+![right answer](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/right-answer.png)
 
+* Người dùng có thể học từ mới cùng Cwat: Cwat gửi tới người dùng các từ cùng với cách phát âm và nghĩa của nó để người dùng học, có thể chọn không hiện lại để hệ thống biết người dùng đã biết và sẽ không hiện lại từ đó.
 
-## Cwat version 0.3
+![new-word-no-show](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/new-word-no-show.png)
 
-**New features**
+* Cung cấp tính năng giúp người dùng rèn luyện kỹ năng nghe và viết: Cwat gửi tới người dùng một đoạn audio, sau khi nghe người dùng gửi lại những gì mình đã nghe được. Hệ thống sẽ phân tích và gửi lại người dùng kết quả bài làm của họ cũng như nội dung của đoạn audio.
 
-- Users can now learn both listening and writing skills with Cwat.
-  ![listening](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/listening.png)
+![listening 1](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/listening-1.png)
 
-- Cwat helps you improve by correcting your answer and showing how many percent correctness you've achieved.
-  ![listening 1](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/listening-1.png)
+* Các tiện ích cho người dùng:
+  * Người dùng có thể xem và cập nhật hồ sơ cá nhân:
+  
+  ![profile](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/profile.PNG)
+  
+  * Người dùng có thể theo dõi quá trình học tập của mình:
+  
+  ![learn-process](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/learn-process.PNG)
+  
+  * Thiết lập thời gian thông báo của Cwat:
+  
+  ![setting notification](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/setting%20notification.PNG)
+  
+## 6  Hướng phát triển
 
-- Improved user experience with friendly interaction.
+* Huấn luyện mô hình xác định ý định của người dùng đối với mỗi tin nhắn được gửi tới bot.
+* Xây dựng các luồng xử lý sự kiện (kịch bản chat) cho bot.
+* Làm mịn các tính năng sẵn có và mở rộng tính năng khác dựa vào việc phối hợp các tính năng sẵn có.
+* Xây dựng 1 web app để quản lý (thêm, sửa, xóa) dữ liệu
 
-- The database has been updated with more audio questions for listening feature.
-
-
-## Cwat version 0.2
-
-**New features**
-
-- Users can ask Cwat for new words to learn.
-  ![new-word](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/new-word.png)
-
-- Users can choose not to see a word and Cwat will never show that word again to them.
-  ![new-word-no-show](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/new-word-no-show.png)
-
-- New ways to answer multiple choice questions:
-  - Users can type the answer directly.
-	![multiple choices 2](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/multiple-choices-2.png)
-  - Users can type A, B or C to answer.
-	![multiple choices 1](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/multiple-choices-1.png)
-
-- Improved user experience with friendly interaction.
-  ![conversation 1](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/conversation-1.png)
-
-- The database has been updated with more questions new words.
-
-
-## Cwat version 0.1
-
-**New features**
-
-- Users can ask Cwat for multiple choice question exercises.
-  ![multiple choices](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/multiple-choices.png)
-
-- Cwat knows which question has been correctly answered by the users and will not show that question again.
-  ![right answer](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/right-answer.png)
-
-- Improved user experience with friendly interaction (programab intergrated).
-  ![conversation](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/conversation.png)
-
-- Error/Exception handling if any service is down.
-  ![error handling](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/screenshots/handling-exceptions.png)
-
-- The database has been updated with more questions.
-
-
-## 6  Hướng phát triển tiếp
 ## 7 Cầu trúc thư mục project
+
+* `abchatbot-service/`:
+  * Folder này chứa các thiết lập cho chat bot được xây dựng dưới dạn java RESTful web service với mục đích hỗ trợ tính năng hội thoại cho mesenger chatbot.
+  * Các công nghệ được sử dụng:
+    * Jersey framework
+    * ProgramAB
+* `chatbot/` : là folder chứa các thiết lập, mã chính của ứng dụng chatbot
+  * `config/` : chứa các biến môi trường dùng chung cho cả project. Các biến này được mô tả trong file `default.json` dưới dạng `key:value`.
+  Ví dụ ta cần đọc giá trị của `pageAccessToken` thì ta có thể đạt được bằng cách gọi: `config('pageAccessToken')`; trong đó `config` thực chất là một thư viện giúp đọc file `config/default.json` - sẽ giới thiệu về thư viện trong mục `node_modules` dưới đây.
+  * `database/` : là folder lưu trữ các dữ liệu cho ứng dựng (câu hỏi, từ mới...)
+  * `node_modules/` : là folder chứa các thư viện (libs/dependencies) hỗ trợ nodejs. Các thư viện được quản lý bởi `npm` ([node package management](https://www.npmjs.com/)).
+  npm hỗ trợ việc cài đặt, gỡ và quản lý các thư viện mà ta cần sử dụng trong project. Các mô tả về project đều nằm trong file `package.json` mà ta có thể tạo ra bằng lệnh `npm init` từ Terminal (hoặc có thể tạo tay).
+  * public/ : chứa các content static để gửi đi (ảnh, video, audio, html files...).
+  * models/ : folder lưu trữ định dạng các thuộc tính của các đối tượng (Question, NewWord, Audio...).
+  * views/ : views engine phục vụ xem trên trình duyệt. Không cần quan tâm file này.
+  * app.js : file chính của cả chương trình. Trong code mẫu của facebook, họ để chung code ở mỗi một file này, còn khi chúng ta làm product thật thì hiển nhiên phải cấu trúc lại thư mục, không thể để code ở chung một file được.
+  * package.json : như đã giới thiệu, là file mô tả project (tựa như pom.xml của maven). File này được đọc và ghi bởi `npm`. `package.json` cũng ở dạng json (key:value). Các thư viện nodejs được khai báo trong `dependencies` của file này. Dưới đây là một ví dụ:
+  ```json
+  // package.json
+  {
+    "name": "messenger-get-started", 
+    "version": "1.0.0", 
+    "description": "Get started example for Messenger Platform",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js",
+      "lint": "jshint --exclude node_modules .",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/fbsamples/messenger-platform-samples.git"
+    },
+    "author": "Facebook",
+    "license": "ISC",
+    "dependencies": {
+      "body-parser": "^1.15.0",
+      "config": "^1.20.4",
+      "ejs": "^2.4.2",
+      "express": "^4.13.4",
+      "request": "^2.72.0"
+    },
+    "engines": {
+      "node": "~4.1.2"
+    }
+  }
+  ```
