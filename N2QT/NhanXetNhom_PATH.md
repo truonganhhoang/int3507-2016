@@ -3,7 +3,9 @@
 
 ##Chất lượng sản phẩm : 
 -chức năng đã làm đc sign in,sign up,grammar,reading ,quản lý dữ liệu hệ thống.
+
 -cảm giác trải nghiệm : lúc đầu load trang thấy lâu quá ,một số giao diện chưa cân đối lắm 
+
 ##Điểm cần cải thiện
 -Hiển thị tên người dùng chưa khoa học: 
 	+ chỉ cần hiển thị tên người dùng mà không cần hiển thị họ tên đầy đủ. 
