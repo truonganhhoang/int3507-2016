@@ -75,7 +75,7 @@ Quá trình từ khi người dùng cuối gửi một tin nhắn đến Chatbot
 	
 [Facebook sample code for messenger platform](https://github.com/fbsamples/messenger-platform-samples)
 
-## 4 Các chức năng chính ứng dụng
+## 5 Các chức năng chính ứng dụng
 
 **Chat với Cwat tại:** `https://www.facebook.com/cwat.seewhat/`
 
@@ -109,14 +109,14 @@ Quá trình từ khi người dùng cuối gửi một tin nhắn đến Chatbot
   
   ![setting notification](https://github.com/truonganhhoang/int3507-2016/blob/master/NaVi/screenshots/setting%20notification.PNG)
   
-## 5  Hướng phát triển
+## 6  Hướng phát triển
 
 * Huấn luyện mô hình xác định ý định của người dùng đối với mỗi tin nhắn được gửi tới bot.
 * Xây dựng các luồng xử lý sự kiện (kịch bản chat) cho bot.
 * Làm mịn các tính năng sẵn có và mở rộng tính năng khác dựa vào việc phối hợp các tính năng sẵn có.
 * Xây dựng 1 web app để quản lý (thêm, sửa, xóa) dữ liệu
 
-## 6 Cầu trúc thư mục project
+## 7 Cầu trúc thư mục project
 
 * `abchatbot-service/`:
   * Folder này chứa các thiết lập cho chat bot được xây dựng dưới dạn java RESTful web service với mục đích hỗ trợ tính năng hội thoại cho mesenger chatbot.
