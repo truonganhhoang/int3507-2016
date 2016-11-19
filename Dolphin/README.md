@@ -294,9 +294,9 @@ Thư mục này có chứa các forder con:
 	-GET/locations/search : Tìm kiếm một vị trí bằng tọa độ địa lý.
 
 ## Database: Sử dụng MongoBD
-
+![DB](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/DB.png)
 ## PHẦN CLIENT
-#ảnh
+
 ## I. Lý thuyết liên quan
 
 ## 1. OttoEventBus
@@ -427,6 +427,7 @@ https://github.com/google/gson
 	- Dimens: Định nghĩa tên độ dài theo dp.
 	- Strings: Định nghĩa tên các chuỗi kí tự trong layout.
 	- Styles: Định nghĩa tên style mà application dùng.
+
 ## Các luồng chính trong Project
 ## Login
 ![Login](https://github.com/truonganhhoang/int3507-2016/blob/master/Dolphin/images/%E1%BA%A3nh2.png)
