@@ -21,7 +21,7 @@ Chỉnh sửa bổ sung :
   - Nên phân loại trình độ các câu hỏi để tiện cho việc học của người dùng.
   - Chỉnh sửa giao diện tại trang chủ cho thân thiện và hữu ích hơn. Ví dụ như cho phép chọn kĩ năng muốn học ngay tại đó...
   
-## 2 Chất lượng sản phẩm bên trong (mã nguồn, tài liệu hướng dẫn phát triển tiếp ).
+## 2 Chất lượng sản phẩm bên trong (mã nguồn, tài liệu hướng dẫn phát triển tiếp).
   Ưu điểm :
   - Mã nguồn đúng chuẩn, rõ ràng, dễ hiểu.
   - Giới thiệu đầy đủ về các công nghệ được sử dụng.
