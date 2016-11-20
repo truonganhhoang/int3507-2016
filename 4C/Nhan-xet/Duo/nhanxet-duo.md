@@ -1,14 +1,17 @@
+Nhận xét từ phía người dùng
 
-	Nhận xét từ phía người dung
 •	Ưu điểm
-o	Đầy đủ các chức năng như mô tả
-o	Các chức năng hoạt động ổn định
+
+- Đầy đủ các chức năng như mô tả
+- Các chức năng hoạt động ổn định
+
 •	Nhược điểm
-o	Ứng dụng bị lỗi giao diện
-o	Khởi động app lâu. Cần cho 1 thanh xoay tròn ( progessBar ) để người dùng biết là đang load dữ liệu
-o	Màn hình your book không có gì
-o	Phản hồi của hệ thống với thao tác của người dùng chậm  ( bị delay 0,5s )
-o	Khi tích vào Unit từ 16 thì không hiện dấu tích được đã chọn
+
+- Ứng dụng bị lỗi giao diện
+-	Khởi động app lâu. Cần cho 1 thanh xoay tròn ( progessBar ) để người dùng biết là đang load dữ liệu
+- Màn hình your book không có gì
+- Phản hồi của hệ thống với thao tác của người dùng chậm  ( bị delay 0,5s )
+- Khi tích vào Unit từ 16 thì không hiện dấu tích được đã chọn
 
 o	Còn ít dữ liệu
 	Nhận xét từ phía nhà phát triển
