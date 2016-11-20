@@ -17,6 +17,12 @@ class Greeting{
 		if(preg_match('/^(xinchao|chao|hi|hello)$/', self::chuan_hoa($command))){
 			$response['messages'][] = new Message($this->sender, "Xin chào,\nTôi là UET CoolBot");
 			return $response;
+		} else if(preg_match('/^(room)$/', self::chuan_hoa($command))){
+			$replies = array();
+			$replies[] = array("content_type" => "text","title" => "#tech","payload" => "#tech");
+			$replies[] = array("content_type" => "text","title" => "#general","payload" => "#general");
+			$response['messages'][] = new QuickReply($this->sender, "Chọn chủ đề hoặc tạo room với chủ đề riêng của bạn với cú pháp #chúđề", $replies);
+			return $response;
 		} else if(preg_match('/^(help|trogiup|huongdan)$/', self::chuan_hoa($command))){
       $response['messages'][] = new Message($this->sender, "Danh sách chức năng và Hướng dẫn sử dụng của UET CoolBot");
       $response['messages'][] = new StructuredMessage($this->sender,
