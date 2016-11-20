@@ -36,7 +36,7 @@ public class LearnEnglishSpeechlet implements Speechlet {
 	public SpeechletResponse onIntent(IntentRequest request, Session session) throws SpeechletException {
 		log.info("onIntent requestId={}, sessionId={}", request.getRequestId(), session.getSessionId());
 
-		// Get intent from the request object.
+		// lay intent tu request
 		Intent intent = request.getIntent();
 		String intentName = (intent != null) ? intent.getName() : null;
 
@@ -60,7 +60,7 @@ public class LearnEnglishSpeechlet implements Speechlet {
 	}
 
 	private SpeechletResponse getWelcomeResponse() {
-		// Create the welcome message.
+		// tao message welcome
 		String speechText = "Welcome to the Alexa Skills. Please read after me. ";
 		String repromptText = "Please read after me.";
 
@@ -74,12 +74,12 @@ public class LearnEnglishSpeechlet implements Speechlet {
 	}
 
 	private SpeechletResponse getSpeechResponse(String speechText, String repromptText) {
-		// Create the Simple card content.
+		// tao noi dung Simple card
 		SimpleCard card = new SimpleCard();
 		card.setTitle("English");
 		card.setContent(speechText);
 
-		// Create the plain text output.
+		// tao text output.
 		PlainTextOutputSpeech speech = new PlainTextOutputSpeech();
 		speech.setText(speechText);
 		
