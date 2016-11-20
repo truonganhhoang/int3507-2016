@@ -25,7 +25,7 @@ Liên kết đến sản phẩm của các nhóm:
 | N2QT  | - Link product: http://n2qt.somee.com/N2QT/ <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/truonganhhoang/int3507-2016/blob/master/N2QT/README.md) |
 | ...  | ... |
 | A2 | - Link product:https://sachmem-12ccd.firebaseapp.com/<br/> - Hướng dẫn sử dụng: [tại dây](https://github.com/truonganhhoang/int3507-2016/blob/master/A2/README.md) |
-| 4C | - Link test Alexa Skill: https://echosim.io/ <br/> - Hướng dẫn sử dụng [tại đây](https://github.com/truonganhhoang/int3507-2016/commit/275c5e14a81bdcfbae0909afc29d2f249b4a8f9d)|
+| 4C | - Link test Alexa Skill: https://echosim.io/ <br/> - Hướng dẫn sử dụng [tại đây](https://github.com/truonganhhoang/int3507-2016/blob/master/4C/H%C6%B0%E1%BB%9Bng%20d%E1%BA%ABn%20test%20Alexa%20Skill.md)|
 | HK | - Link product: http://tranquil-hamlet-99422.herokuapp.com/ <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/README.md) |
 | VAT | - Link sản phẩm: http://englishlearningdemo.herokuapp.com/ <br> - Hướng dẫn sử dụng [tại đây](https://github.com/truonganhhoang/int3507-2016/blob/master/VAT/README.md)
 | ACE  | - Link chatbot: https://www.facebook.com/UETBot/ <br> - Hướng dẫn sử dụng [tại đây](https://github.com/truonganhhoang/int3507-2016/blob/master/ACE/README.md#hướng-dẫn-sử-dụng)|
