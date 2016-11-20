@@ -8,6 +8,7 @@
 - Có đáp án dễ dàng kiểm tra.
 
 ###*Nhược điểm :*
+
 - Giao diện còn đơn giản ko bắt mắt.
 - Chưa có nhiều chức năng (chỉ có listening và reading).
 - Số lượng câu hỏi rất ít.
@@ -17,5 +18,14 @@
 - Chưa có account để người dùng có thể lưu lại quá trình học.
 ---
 ##Chất lượng sản phẩm bên trong
+
+### *Ưu điểm :*
+
 - Hướng dẫn có hình ảnh rõ ràng, dễ hiểu, dễ cài đặt.
-- Mã nguồn dễ đọc dễ hiểu.
+- Mã nguồn dễ đọc.
+- Có khả năng mở rộng và phát triển.
+
+###*Nhược điểm :*
+
+- Cấu trúc mà nguồn còn rắc rối, khó hiểu.
+- Chưa có tài liệu hướng dẫn phát triển bổ sung
