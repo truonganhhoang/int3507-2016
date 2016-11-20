@@ -60,5 +60,39 @@
 
 #### Chỉnh sửa bổ sung
 - Bổ sung tài liệu cấu trúc thư mục
+- Thêm tính năng
 
+# Nhận xét nhóm FRIES
+### Góc độ người dùng
+#### Ưu điểm
+- Trang web đẹp, thân thiện, bắt mắt người dùng
+- Chức năng hoạt động tốt, ổn định
+- Đăng nhập, đăng xuất có thông báo cụ thể, rõ ràng
+- Dễ hiểu, dễ sự dụng, giao diện gọn gàng
+- Có đánh giá điểm theo bình luận hoặc bài đăng
+- Ghi rõ ràng thông tin cần thiết ở bên ngoài bài đăng
 
+#### Nhược điểm
+- Phần chữ dưới đề mục các câu hỏi chưa rõ chức năng
+- Chưa ấn được vào chú "cùng tham gia bình luận"
+- Chưa hiểu rõ bảng xếp hạng ở bên trái (Dựa theo số bình luận, hay số bài đăng...)
+- Đăng nhập xong không trở về được trang chủ lúc đầu
+
+#### Chỉnh sửa bổ sung
+- Nên ghi chú rõ ràng, cụ thể hơn
+- Tạo thêm nút để trở về trang chủ
+
+### Góc độ bên trong
+#### Ưu điểm:
+- Có giới thiệu ngôn ngữ sử dụng
+- Có hướng phát triển tốt, áp dụng thực tiễn
+
+#### Nhược điểm
+- Cách cài đặt chưa ghi rõ ràng, còn thiếu một số bước
+- Chưa có hướng dẫn cho người phát triển
+- Đường link trên README.MD không sử dụng được
+- Giới thiệu ngôn ngữ không đủ
+
+#### Chỉnh sửa bổ sung
+- Hoàn thiện hơn về tài liệu hướng dẫn người phát triển
+- Bổ sung cách cài đặt, chạy và cấu trúc thư mục
