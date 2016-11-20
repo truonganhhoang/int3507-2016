@@ -6,11 +6,11 @@ Về trải nghiệm người dùng :
  •	Không có tiêu đề cho sách khiến người dùng không biết là sách dành cho trình độ nào.
  •	Nội dung không theo chủ đề, quá ít dữ liệu.
  •	Giao diện trang web như trang quảng cáo.
-  !https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Nhan-xet/A2/image2.png
+  ![alt tag](https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Nhan-xet/A2/image2.png)
  •	Chức năng bị sai nhập đúng đáp án vẫn báo là nhập sai
- !https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Nhan-xet/A2/image1.png
+ ![alt tag](https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Nhan-xet/A2/image1.png)
 •	Phần bài viết giống phần trả lời câu hỏi hơn
- !https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Nhan-xet/A2/image3.png
+ ![alt tag](https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Nhan-xet/A2/image3.png)
  •	Không có điểm gì đặc biệt để thu hút người sử dụng.
  •	Trang web không thể đưa vào sử dụng, đây không phải là 1 trang web sách mềm.
 
