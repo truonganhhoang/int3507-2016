@@ -30,7 +30,6 @@ export class Login implements OnInit {
   }
 
   ngOnInit() {
-    //this.loginSilent();
   }
 
   login() {
@@ -38,19 +37,18 @@ export class Login implements OnInit {
       'scopes': 'https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.file', // optional, space-separated list of scopes, If not included or empty, defaults to `profile` and `email`.
       'webClientId': '736288713251-26srbi81jha5n1aithe4av668oh5pn12.apps.googleusercontent.com', // optional clientId of your Web application from Credentials settings of your project - On Android, this MUST be included to get an idToken. On iOS, it is not required.
       'offline': true, // optional, but requires the webClientId - if set to true the plugin will also return a serverAuthCode, which can be used to grant offline access to a non-Google server
-    }).then(res => {
-     
+    }).then(res => { 
       this.ngZone.run(() => {
         this.isLogin = true;
         this.profile = res;
       })
      
       var data = {
-                client_id: '736288713251-26srbi81jha5n1aithe4av668oh5pn12.apps.googleusercontent.com',
-                client_secret: 'DXCJ-YeBLOcuY49Hq1OsbUmi',
-                grant_type: 'authorization_code',
-                code: res.serverAuthCode
-            };
+        client_id: '736288713251-26srbi81jha5n1aithe4av668oh5pn12.apps.googleusercontent.com',
+        client_secret: 'DXCJ-YeBLOcuY49Hq1OsbUmi',
+        grant_type: 'authorization_code',
+        code: res.serverAuthCode
+      };
 
        var body = 'client_id=' + data.client_id +
                    '&client_secret=' + data.client_secret +
@@ -65,7 +63,6 @@ export class Login implements OnInit {
         .map(res => res.json())
         .subscribe(data => {
           //access_token
-          //alert(data.access_token);
           this.appGlobals.setAccessToken(data.access_token);
 
           //Tạo folder mới nếu chưa có folder Speaking của app
@@ -92,7 +89,6 @@ export class Login implements OnInit {
       'offline': true, // optional, but requires the webClientId - if set to true the plugin will also return a serverAuthCode, which can be used to grant offline access to a non-Google server
     }).then(res => {
       this.profile = res;
-
     },
     err => {
       alert(err);
@@ -112,9 +108,6 @@ export class Login implements OnInit {
         this.isLogin = false;
         this.profile = {};
       })
-      //alert(res);
     })
   }
-
-
 }

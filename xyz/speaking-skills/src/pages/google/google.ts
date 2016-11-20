@@ -46,25 +46,24 @@ export class Google implements OnInit {
 
 
   getSpeakingFolder() {
-      gapi.client.load('drive', 'v2', () => {
+    gapi.client.load('drive', 'v2', () => {
       var request = gapi.client.request({
-           path : 'https://www.googleapis.com/drive/v2/files/'+ this.idFolder +'/children',
-           method : 'GET',
-           params : {
-            q: "trashed = false"
-          }
+        path : 'https://www.googleapis.com/drive/v2/files/'+ this.idFolder +'/children',
+        method : 'GET',
+        params : {
+          q: "trashed = false"
+        }
       });
+
       request.execute((response) => {
         console.log(response.items);  
         for(var i = 0; i < response.items.length; i++) {
           this.childOfFolder.push(response.items[i]);
         } 
-        //console.log(this.childOfFolder);
       });
 
     });
   }
-
 
   getListRecord() {
     this.recordAudio = [];
@@ -75,22 +74,19 @@ export class Google implements OnInit {
              path : 'https://www.googleapis.com/drive/v2/files/'+ tempId,
              method : 'GET'
         });
+
         request.execute((response) => {
-             //alert(JSON.stringify(response));  
              console.log(response);
              this.ngZone.run(() => {
                this.recordAudio.push(response);
              })   
         });
-
       });
-
     }
   }
 
   playAudio(url) {
     url = url.replace('&export=download','');
-    console.log(url);
     var audio = new Audio();
     audio.src = url;
     audio.load();
@@ -138,7 +134,6 @@ export class Google implements OnInit {
 
       var request = gapi.client.request({
           'path': '/upload/drive/v2/files?access_token=' + this.access_token,
-          //'path': 'https://www.googleapis.com/drive/v2/files/'+ this.idFolder + '/children',
           'method': 'POST',
           'params': {'uploadType': 'multipart'},
           'headers': {
