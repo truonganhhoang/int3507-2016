@@ -20,11 +20,59 @@ http://tranquil-hamlet-99422.herokuapp.com/
 - Mbstring PHP Extension
 - Tokenizer PHP Extension...
 
-### Mô tả ngắn gọn: 
+### I. Mô tả ngắn gọn: 
 - Ứng dụng E-Learning được viết bằng framework Laravel 5.2 giúp cho người dùng có thể làm các bài trắc nghiệm tiếng anh.
 - Ứng dụng đã được nhóm đẩy code lên heroku để mọi người có thể sử dụng thử.Sản phẩm đang trong quá trình hoàn thiện và phát triển.
 
-## Giới thiệu ứng dụng E-Learning
+## II. Giới thiệu về cấu trúc, cơ chế hoạt động của project sử dụng Laravel 5.2
+
+Cấu trúc framework Laravel (5.2) được thiết kế phù hợp cho cả ứng dụng lớn và nhỏ. Tất nhiên là chúng ta có thể tùy chỉnh và tổ chức ứng theo cách riêng của chúng ta cho phù hợp với dự án của chúng ta. 
+
+Cấu trúc ứng dụng mặc định của Laravel 5.2 có dạng là cây các thư mục :
+
+1. Folder app: đây là nơi mà ta phải làm việc với nó nhiều nhất, nó chứa core code ứng dụng của chúng ta, tại đây chúng ta có thể triển khai các mô hình để điều khiển ứng dụng (cụ thể là mô hình MVC). Bên trong nó có các folder con với tên viết hoa chữ cái đầu tiên (ngược với folder app - viết thường) như sau:
+
+- Foler app/Http: Các Controtrllers, routes đều được đặt trong thư mục này. Ngoài ra còn có 2 thư mục khác khá quan trọng là Requests (dùng để xử lý các request của ứng dụng vd: get, post, put…) và Middleware (tạm thời hiểu nó như firewall, sẽ được nói rỏ hơn ở các bài sau).
+
+- Folder app/Events: thư mục chứa class event, events có thể được sử dụng để thông báo đến các thành phần khác trong ứng dụng về một hành động đã xảy ra, events rất linh hoạt và tách biệt.
+
+- Folder app/Exceptions: thư mục chứa các class ngoại lệ xử lý các trường hợp ngoại lệ của ứng dụng.
+
+- Folder app/Jobs: thư mục chức class Job, là nơi xử lý các kỹ thuật liên quan đến hàng đợi (queue) và đồng bộ (synchronously) trong ứng dụng của bạn.
+
+- Folder app/Listeners: Chứa cá class handler xử lý các Event trả lại kết quả.
+
+- Folder app/Providers: là nơi chứa các class đăng ký (register) các ServiceProvider.
+
+- Folder bootstrap: chứa file app.php, autoload.php là 2 file thiết lập cơ bản để bắt đầu chạy ứng dụng và file cấu hình nạp class tự động. Ngoài ra trong này còn có thư mục cache (dùng để chứa các file cache tối ưu hóa hiệu suất chạy của ứng dụng).
+
+2. Folder config: là nơi chứa các file thiết lập cấu hình của ứng dụng như cấu hình kết nối cơ sỡ dữ liệu, cấu hình cấu hình session, mail, server cache, view.. Nếu để ý bạn sẽ thấy ở những phần trước ta cũng đã động đến file database.php và mail.php trong Folder này rồi.
+
+3. Folder database: Bên trong chứa các folder factories, migration và seed cơ sỡ dữ liệu của ứng dụng. Factories là nơi tạo ra các dữ liệu mẫu, còn Migration chứa các file migration được tạo bằng tool Artisan (Tool này đã được Laravel cung cấp sẵn, chẳng hạn ta chạy câu lệnh php artisan make: migration create_users_table thì file migration sẽ được tạo ra). Seed chứa những file PHP cho phép Artisan đưa vào bảng cơ sở dữ liệu với dữ liệu ta mong muốn.
+
+4. Folder public: là thư mục gốc chứa file index.php Laravel dùng để chạy ứng dụng, đây cũng là nơi chứa các tài nguyên của ứng dụng như js, css, image…
+
+5. Folder resources: nơi chứa các template views, asset và các file ngôn ngữ.
+
+6. Folder storage: là thư mục cần được set quyền ghi thì ứng dụng mới chạy được (tham khảo Cài đặt (P1)), dùng để lưu trữ các tập tin cache, session, logs… được tạo ra trong quá trình ứng dụng chạy.
+
+7. Folder tests: chứa các file testcase của ứng dụng.
+
+8.Folder vendor: thư mục chứa core của Laravel, ta không nên động chạm hay sửa chưa gì trong thư mục này.
+
+9.File .env: Đây là một tập tin ẩn trong thư mục gốc của ứng dụng. Tập tin này có chứa các định nghĩa cơ bản về các thông số của ứng dụng như tên và mật khẩu cơ sở dữ liệu, dữ liệu cấu hình email, cấu hình server cache…
+
+10. File artisan: tool mà Laravel cung cấp sẵn trong project dùng để phục vụ cho việc tương tác với migration (database), tạo key cho ứng dụng…
+
+11. File composer.json: là tập tin chứa các thiết lập về việc cài đặt, cập nhật ứng dụng bằng lệnh composer.
+
+
+### Cơ chế hoạt động :
+- Khi người dùng gửi một request lên hệ thống, hệ thống sẽ gửi về cho Controller xử lí các yêu cầu.
+- Controller thực hiện các action cụ thể và thông qua model để làm việc với cơ sở dữ liệu. Sau khi xử lí xong model sẽ trả lại dữ liệu cho COntroller. Controller tiếp tục gửi dữ liệu đến View.
+- View định dạng các dữ liệu một cách thích hợp, cung cấp phản hồi hiển thị lại cho người dùng kết quả cuối cùng.
+
+## III. Giới thiệu ứng dụng E-Learning
 
 Sau đây nhóm sẽ trình bày về các chức năng cũng như cách sử dụng của ứng dụng E-Learning.
 
@@ -87,7 +135,7 @@ Khi vào Learnt , người sử dụng có thể xem thông tin bài học đã 
 ![Management Word](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/ManagementWord.jpg)
 
 
-## Hướng dẫn sử dụng
+## IV. Hướng dẫn sử dụng
 Có thể chạy test trực tiếp trên link heroku nhóm đã đính kèm trên project.Với tài khoản admin mặc định sẵn là admin@gmail.com và pass là 123456.
 Đối với người dùng là user có thể đăng kí trực tiếp tài khoản trên ứng dụng để sử dụng.
 Để làm bài test tiếng anh: 
