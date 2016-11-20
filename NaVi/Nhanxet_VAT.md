@@ -1,6 +1,6 @@
 #Nhận xét nhóm VAT
 
-## 1 Chất lượng sản phẩm ở góc độ người dùng
+## 1. Chất lượng sản phẩm ở góc độ người dùng
   Ưu điểm :
   - Ý tưởng trang web học tiếng Anh là thiết thực và rất hữu ích.
   - Giao diện đơn giản, trong sáng dễ nắm bắt.
@@ -22,7 +22,7 @@ Chỉnh sửa bổ sung :
   - Nên phân loại trình độ các câu hỏi để tiện cho việc học của người dùng.
   - Chỉnh sửa giao diện tại trang chủ cho thân thiện và hữu ích hơn. Ví dụ như cho phép chọn kĩ năng muốn học ngay tại đó...
   
-## 2 Chất lượng sản phẩm bên trong (mã nguồn, tài liệu hướng dẫn phát triển tiếp).
+## 2. Chất lượng sản phẩm bên trong (mã nguồn, tài liệu hướng dẫn).
   Ưu điểm :
   - Mã nguồn đúng chuẩn, rõ ràng, dễ hiểu.
   - Có khả năng mở rộng và phát triển thêm.
@@ -39,7 +39,7 @@ Chỉnh sửa bổ sung :
   - Thêm các tính năng mới, tạo điểm nhấn cho sản phẩm.
   - Bổ sung vào tài liệu Readme cấu trúc thư mục và hướng phát triển để người khác có thể dễ dàng theo dõi và phát triển tiếp.
   
-## 3 Hướng phát triển bổ sung
+## 3. Hướng phát triển bổ sung
   - Có thể thực hiện các gợi ý nêu trên như: Bổ sung, hoàn thiện các tính năng; chỉnh sửa lại giao diện trang chủ; chỉnh sửa tài liệu Readme...
   - Có thể thêm phần tài liệu học tiếng Anh, các phương pháp hay khi học tiếng Anh...
   - Tạo ra các trò chơi để có thể vừa giải trí vừa học.
