@@ -8,10 +8,14 @@ Nhận xét từ phía người dùng
 •	Nhược điểm
 
 - Ứng dụng bị lỗi giao diện
+![alt tag](https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Nhan-xet/Duo/anh1.png)
+![alt tag](https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Nhan-xet/Duo/anh2.png)
 -	Khởi động app lâu. Cần cho 1 thanh xoay tròn ( progessBar ) để người dùng biết là đang load dữ liệu
 - Màn hình your book không có gì
+![alt tag](https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Nhan-xet/Duo/anh3.png)
 - Phản hồi của hệ thống với thao tác của người dùng chậm  ( bị delay 0,5s )
-- Khi tích vào Unit từ 16 thì không hiện dấu tích được đã chọn
+- Khi tích vào Unit từ 1 tới 6 thì không hiện dấu tích được đã chọn
+![alt tag](https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Nhan-xet/Duo/anh4.png)
 - Còn ít dữ liệu
 
 Nhận xét từ phía nhà phát triển
