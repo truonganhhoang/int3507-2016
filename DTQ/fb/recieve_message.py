@@ -8,6 +8,7 @@ from helpers.sendMessage.send_question import send_question_message
 from helpers.sendMessage.send_image_question import send_image_question_message
 from helpers.sendMessage.send_audio_question import send_audio_question_message
 from helpers.program_o.program_o  import ProgramO
+from helpers.simsimi.simsimi import SimSimi
 from luis import Luis
 from database import db, Conversation, User
 from models.category import CategoryRecord
@@ -28,7 +29,7 @@ def recieve(data):
         if messaging_event.get("postback"):
           payload = messaging_event["postback"]["payload"]
           if PostBack.PAY_LOAD_MENU_HELP in payload:
-            send_text_message(sender_id, "We have two functions for you: learn new words and do exercises. Please type 'learn word' to learn new words and 'do exercise' to do exercises. Thanks <3")
+            send_text_message(sender_id, "We have two functions for you: learn new words and do exercises. Please type 'new word' to learn new words and 'test' to do exercises. Thanks <3")
           else:
             if PostBack.PAY_LOAD_MENU_ACCOUNT in payload:
               str_word = " word"
@@ -37,7 +38,10 @@ def recieve(data):
         else:
           if messaging_event.get("message"):  # someone sent us a message
             recipient_id = messaging_event["recipient"]["id"]  # the recipient's ID, which should be your page's facebook ID
-            message_text = messaging_event["message"]["text"].lower()  # the message's text
+            if messaging_event["message"]["text"]:
+              message_text = messaging_event["message"]["text"].lower()  # the message's text
+            else:
+              message_text = "Hello"
             luis = Luis()
 
             if "quick_reply" in messaging_event["message"]:
@@ -109,7 +113,9 @@ def recieve(data):
                     log("LAM BAI TAP")
                     send_random_type_question(sender_id, do_exercise=True)
                   else:
-                    botsay = ProgramO.get_answer(sender_id, message_text)
+                    botsay = SimSimi.get_answer(message_text)
+                    if botsay is None:
+                      botsay = ProgramO.get_answer(sender_id, message_text)
                     send_text_message(sender_id, botsay)
 
 def send_question(sender_id, do_exercise=False):
