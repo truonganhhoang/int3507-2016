@@ -25,3 +25,12 @@
 
 ### Góc độ bên trong
 - Hướng dẫn cụ thể, dễ hiểu
+
+## Nhóm N2QT
+### Góc độ người dùng
+#### Ưu điểm:
+- Giao diện đẹp, bắt mắt.
+#### Nhược điểm:
+- Sau khi qua 2 bàn, thì nên để người dùng ấn quay lại chơi từ đầu ( hoặc bàn tiếp theo)
+- Dòng chữ ở dưới cùng che một phần màn hình.
+- Ấn chữ W, được tính là 1 câu sai nhưng vẫn nhảy sang bàn 2
