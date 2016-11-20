@@ -4,6 +4,7 @@
   Ưu điểm :
   - Ý tưởng trang web học tiếng Anh là thiết thực và rất hữu ích.
   - Giao diện đơn giản, trong sáng dễ nắm bắt.
+  - Trang web hoạt động tốt, ổn định.
   - Có thông báo đầy đủ tới người dùng về kết quả làm bài, đáp án đúng cho các câu trả lời sai.
   
 Nhược điểm :
@@ -24,8 +25,9 @@ Chỉnh sửa bổ sung :
 ## 2 Chất lượng sản phẩm bên trong (mã nguồn, tài liệu hướng dẫn phát triển tiếp).
   Ưu điểm :
   - Mã nguồn đúng chuẩn, rõ ràng, dễ hiểu.
+  - Có khả năng mở rộng và phát triển thêm.
   - Giới thiệu đầy đủ về các công nghệ được sử dụng.
-  - Readme hướng dẫn về cài đặt và sử dụng khá đầy đủ và dễ hiểu.
+  - Readme hướng dẫn về cài đặt và sử dụng đầy đủ và dễ hiểu.
   - Hướng dẫn có hình ảnh mô tả cụ thể chi tiết.
   
 Nhược điểm :
@@ -42,5 +44,6 @@ Chỉnh sửa bổ sung :
   - Có thể thêm phần tài liệu học tiếng Anh, các phương pháp hay khi học tiếng Anh...
   - Tạo ra các trò chơi để có thể vừa giải trí vừa học.
   - Liên kết, giới thiệu các trung tâm, các khóa học tiếng Anh chất lượng.
+  - Nên thêm phần đăng nhập, tài khoản và lưu lại thông tin về quá trình học để tiện cho việc theo dõi, đánh giá quá trình học của người dùng.
   
   
