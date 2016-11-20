@@ -77,14 +77,15 @@ export class MySong implements OnInit, OnDestroy {
         num = dur;
         this.duration = this.secondsToHms(dur);
       }
+
       this.timerPercent = ((counter/1000))*100/num;
       this.timeRun = this.secondsToHms(counter/1000);
+
       if (num > 0 && counter/1000 > num) {
         this.timeRun = this.duration;
         this.isRun = false;
         this.timerPercent = 100;
         this.stopAudio(item);
-        //clearInterval(this.timerDur);
       }
     }, 100);  
 
@@ -95,7 +96,6 @@ export class MySong implements OnInit, OnDestroy {
     item['isPlay'] = false;
     this.isRun = false;
     this.audio.stop();
-    //this.duration = this.secondsToHms(this.audio.getDuration());
   }
 
   touchRecord(item, isPlay) {

@@ -3,7 +3,6 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 
 import { Category } from '../pages/category/category';
-// import { Youtube } from '../pages/youtube/youtube';
 import { Google } from '../pages/google/google'
 import { Sing } from '../pages/sing/sing';
 import { MySong } from '../pages/my-song/my-song';
@@ -35,7 +34,6 @@ export class MyApp {
       this.pages = [
         { title: 'Category', icon: 'keypad', component: Category },
         { title: 'Sing a Song', icon: 'microphone', component: Sing },
-        // { title: 'Youtube', component: Youtube },
         { title: 'My Drive', icon: 'folder', component: Google },
         { title: 'My Song', icon: 'musical-notes', component: MySong }
       ];

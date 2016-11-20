@@ -17,8 +17,6 @@
 
 
 <ion-content padding>
- <!--  <button ion-button (click)="getDrive()"> Get Drive</button>
-  <button ion-button (click)="uploadDrive()"> Upload Drive</button> -->
 	<ion-list>
 	  <ion-item *ngFor="let item of words">
       <ion-icon color="primary" name="volume-down" (click)=tts(item.content)></ion-icon>
@@ -36,5 +34,4 @@
       </ion-row>
 	  </ion-item>
   </ion-list>
-
 </ion-content>

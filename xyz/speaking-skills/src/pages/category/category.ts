@@ -22,7 +22,6 @@ export class Category {
   	this.categoryService.getCategory().then(res => {
       this.category = res;
   	});
-
   }
 
   ionViewDidLoad() {

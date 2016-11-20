@@ -88,14 +88,6 @@ export class Record implements OnInit {
     if(!this.platform.is('cordova')) return;
     this._fileRecord.stopRecord();
     word['url'] = word['content'];
-
-    // var record: Object = {};
-    // record['word_id'] = word['id'];
-    // record['url'] = this._pathFile;
-
-    //Lưu vào mlab
-    // this.recordService.createRecord(record);
-   
   }
 
   playRecord(item){
@@ -124,20 +116,20 @@ export class Record implements OnInit {
 
   getDrive() {
     gapi.client.load('drive', 'v2', () => {
-          var request = gapi.client.request({
-               path : 'https://www.googleapis.com/drive/v2/files?access_token=' + this.access_token,
-               method : 'GET',
-               params : {
-                    projection: "FULL",
-                    maxResults: 5
-               }
-          });
-          request.execute(function(response) {
-               alert(JSON.stringify(response));   
-          });
+      var request = gapi.client.request({
+        path : 'https://www.googleapis.com/drive/v2/files?access_token=' + this.access_token,
+        method : 'GET',
+        params : {
+          projection: "FULL",
+          maxResults: 5
+        }
+      });
 
+      request.execute(function(response) {
+        alert(JSON.stringify(response));   
+      });
 
-     });
+    });
   }
 
   uploadDrive() {
@@ -151,7 +143,6 @@ export class Record implements OnInit {
       let baseStr = ";base64,";
       var index = res.indexOf(';base64,')+ baseStr.length;
       res = res.substring(index);
-       alert(res);
 
       var contentType = 'audio/mp3' || 'application/octet-stream';
       var metadata = {

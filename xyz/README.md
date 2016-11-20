@@ -7,23 +7,24 @@
 
 ##Ứng dụng: E2M - English to Me
 
-### Hướng dẫn phát triển ứng dụng
+### HƯỚNG DẪN PHÁT TRIỂN ỨNG DỤNG
 #### Cài đặt
 - Cài đặt phiên bản mới nhất của NodeJS tại [đây](https://nodejs.org/en/download/)
 - Cài đặt CLI và Cordova bằng cách vào cmd, gõ lệnh 
 `npm install -g ionic cordova`
 - Clone ứng dụng English2Me theo đường link: [github](https://github.com/trangnt58/int3507-2016/tree/master/xyz/speaking-skills)
-- Vào đường dẫn vừa clone, vào cmd, gõ các lệnh sau:
-  + `npm install`: cài đặt các package cần thiết cho project
-  + `ionic serve`: chạy ứng dụng trên browser
+- Vào đường dẫn vừa clone, vào cmd, thực hiện theo các bước bằng các lệnh như sau:
+  + Cài đặt các package cần thiết cho project: `npm install`
+  + Cài thêm một số type: `npm install --save @types/gapi` và `npm install --save @types/gapi.auth2`
+  + Chạy thử ứng dụng trên browser: `ionic serve`
 - Để build được ứng dụng trên điện thoại, cần cài thêm platform bằng cách:
   + `ionic platform add <platform-name>`
   VD như trên Android là `ionic platform add android`
   + `ionic platform build <platform-name>`: build ứng dụng
   + `ionic platform run <platform-name>``: chạy ứng dụng trên máy ảo hoặc máy thật
 
-### Hướng dẫn sử dụng
-### Link tải ứng dụng: https://goo.gl/JsyAnX
+### HƯỚNG DẪN SỬ DỤNG
+### Link tải ứng dụng: https://goo.gl/H8YqSx
 
 ### Điều kiện sử dụng E2M
 - Có thiết bị di động chạy hệ điều hành android
@@ -39,7 +40,7 @@
 
 ### Login / Logout With Google
 
- ![login-success](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/login-success.JPG)
+ ![login-success](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/login-success.PNG)
  
 - Ứng dụng: Cho phép user đăng nhập vào ứng dụng bằng tài khoản Google
 - Login:
@@ -50,14 +51,14 @@
 
 ### Category Speaking
 
-![category](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/category.JPG)
+![category](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/category.PNG)
 
 - Ứng dụng: Hiện lên list các Category chứa các từ mới liên quan trong 1 chủ đề, giúp người dùng có thể tập điều chỉnh cách phát âm một cách chính xác.
 - Hướng dẫn:
  + Sau khi chọn Category trong Menu, màn hình hiển thị list các Category được lưu trên server
  + User chọn 1 Category bất kỳ, xuất hiện list các từ vựng trong chủ đề đó
  
- ![category-list](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/category-list.JPG)
+ ![category-list](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/category-list.PNG)
  
  + Mỗi từ vựng sẽ đi kèm với các chức năng chính: 
   + Start Record: tiến hành ghi âm cách phát âm của user
@@ -66,7 +67,7 @@
   + Button icon Speaker: Phát âm chuẩn của từ vựng (đã được lưu trên server)
  
 ### Sing a Song: Học tiếng anh qua bài hát
-![sing](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/sing.JPG)
+![sing](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/sing.PNG)
 
 - Ứng dụng: Cho phép người dùng tìm kiếm các bài hát trên Youtube, ghi âm lời mình hát vào thiết bị
 - Hướng dẫn:
@@ -77,7 +78,7 @@
   
  + Sau khi chọn 1 video bất kỳ, giao diện Video Player mở ra với khung hiển thị video và các chức năng:
  
- ![sing-save](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/sing-save.JPG)
+ ![sing-save](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/sing-save.PNG)
  
   + Start Record: tiến hành ghi âm cách phát âm của user
   + Stop Recording: Dừng ghi âm
@@ -86,7 +87,7 @@
  
 ### My Drive
 
-![drive](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/drive.JPG)
+![drive](https://raw.githubusercontent.com/trangnt58/int3507-2016/master/xyz/speaking-skills/docs/images/drive.PNG)
 
 - Ứng dụng: Cho phép người dùng chọn file từ thiết bị để upload lên Google Drive
 - Hướng dẫn:

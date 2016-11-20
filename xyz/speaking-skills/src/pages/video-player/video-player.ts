@@ -135,7 +135,6 @@ export class VideoPlayer {
             
             if (!callback) {
               callback = function(file) {
-                //alert(file);
                 if(file != false) alert('upload success');
                 else alert('upload failed');
               };
