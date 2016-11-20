@@ -26,7 +26,7 @@ class Professor{
 
 	function professor($query){
 		include('../messageType.php');
-
+		//fix bug giang vien -> gianien
 		$db = new mysqli('', '', '', '');
 		mysqli_set_charset($db,"utf8");
 		$get_gv = $db->query('SELECT * FROM `prof`');
@@ -64,6 +64,19 @@ class Professor{
 			return $response;
 		}
 		$db->close();
+	}
+
+	function has_str($str, $find){
+		$str = $this->chuan_hoa($str);
+		$key = explode('|', $find);
+		$check = '';
+		for($i = 0; $i < sizeof($key); $i++){
+			if(strpos($str, $key[$i]) !== false){
+				$check = str_replace($key[$i], '', $str);
+				break;
+			}
+		}
+		return $check;
 	}
 
 	function chuan_hoa($str, $rmblank = true) {

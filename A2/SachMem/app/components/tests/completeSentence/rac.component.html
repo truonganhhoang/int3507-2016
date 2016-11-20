@@ -1,0 +1,44 @@
+
+<h1>Read and complete the sentences</h1>
+
+<div class="question">
+  <img src="http://s.sachmem.com/public//images/TA2SHS/RA-L1-3-1-6ec4c5b7dd9af37d1cf601cd918bc6fc.jpg">
+  <br><br>
+  1. Look! There is lots of <input [(ngModel)]="_answer1" type="text" id="_answer1">.
+   <div *ngIf="_result && _clicked" style="color:green">Correct</div>
+  <div *ngIf="!_result && _clicked" style="color:red">Incorrect</div> 
+  <div [ngSwitch]="_guide">
+    <div *ngSwitchCase="true" style="color:yellow">{{_guideAnswer[0]}}</div>
+    <div *ngSwitchCase="false"></div>
+  </div>
+</div>
+<br>
+<div class="question">
+  <img src="http://s.sachmem.com/public//images/TA2SHS/RA-L1-3-2-de1b33b9448315f0b2a8ffb92ea4a9b5.jpg">
+  <br><br>
+  2. They are playing <input [(ngModel)]="_answer2" type="text" >.
+  <div *ngIf="_result && _clicked" style="color:green">Correct</div>
+  <div *ngIf="!_result && _clicked" style="color:red">Incorrect</div> 
+  <div [ngSwitch]="_guide">
+    <div *ngSwitchCase="true" style="color:yellow">{{_guideAnswer[1]}}</div>
+    <div *ngSwitchCase="false"></div>
+  </div>
+</div>
+<br>
+<div class="question">
+  <img src="http://s.sachmem.com/public//images/TA2SHS/RA-L1-3-3-232780def65528b9642525552fd4670c.jpg">
+<br>
+  3. The <input [(ngModel)]="_answer3" type="text" > is in the car park.
+  <div *ngIf="_result && _clicked" style="color:green">Correct</div>
+  <div *ngIf="!_result && _clicked" style="color:red">Incorrect</div> 
+  <div [ngSwitch]="_guide">
+    <div *ngSwitchCase="true" style="color:yellow">{{_guideAnswer[2]}}</div>
+    <div *ngSwitchCase="false"></div>
+  </div>
+</div>
+<br>
+
+<div class="guide">
+  <img src="./app/assets/images/check.jpg" alt="check" (click)="check1()" title="Check">
+  <img src="./app/assets/images/hint.jpg" alt="hint" (click)="hint()" title="Hint">
+</div>
