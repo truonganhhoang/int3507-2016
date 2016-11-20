@@ -8,6 +8,7 @@ Nhận xét từ phía người dùng
 •	Nhược điểm
 
 - Ứng dụng bị lỗi giao diện
+
 ![alt tag](https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Nhan-xet/Duo/anh1.png)
 ![alt tag](https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Nhan-xet/Duo/anh2.png)
 -	Khởi động app lâu. Cần cho 1 thanh xoay tròn ( progessBar ) để người dùng biết là đang load dữ liệu
