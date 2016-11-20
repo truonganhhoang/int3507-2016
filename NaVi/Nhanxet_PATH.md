@@ -2,7 +2,7 @@
 
 ## 1. Chất lượng sản phẩm ở góc độ người dùng
 
- # Ưu điểm :
+# Ưu điểm :
 
   - Ứng dụng trang Web học tiếng Anh là thực tế và hữu ích với mọi người.
   - Web thiết kế đơn giản dễ hiểu.
@@ -33,7 +33,7 @@
   
 ## 2. Chất lượng sản phẩm bên trong (mã nguồn, tài liệu hướng dẫn phát triển).
 
- # Ưu điểm :
+# Ưu điểm :
  
   - Mã nguồn chuẩn, rõ ràng.
   - Có khả năng mở rộng và phát triển.
