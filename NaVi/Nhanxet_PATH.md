@@ -1,6 +1,6 @@
-#Nhận xét nhóm VAT
+#Nhận xét nhóm PATH
 
-## 1 Chất lượng sản phẩm ở góc độ người dùng
+## 1. Chất lượng sản phẩm ở góc độ người dùng
   Ưu điểm :
   - Ứng dụng trang Web học tiếng Anh là thực tế và hữu ích với mọi người.
   - Web thiết kế đơn giản dễ hiểu.
@@ -26,7 +26,7 @@ Chỉnh sửa bổ sung :
   - Chỉnh sửa lại các phần chưa hợp lí của giao diện cũng như các tính năng đã nêu trên.
   - Nên hiện thị kết quả cho người dùng ngay khi kết thúc làm bài, nên có cả phần đáp án người dùng đã chọn trong phần xem đáp án để người dùng tiện so sánh và hiểu mình sai ở đâu.
   
-## 2 Chất lượng sản phẩm bên trong (mã nguồn, tài liệu hướng dẫn phát triển tiếp ).
+## 2. Chất lượng sản phẩm bên trong (mã nguồn, tài liệu hướng dẫn phát triển tiếp ).
   Ưu điểm :
   - Mã nguồn chuẩn, rõ ràng.
   - Có khả năng mở rộng và phát triển.
