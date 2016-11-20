@@ -30,3 +30,5 @@ Nhận xét dưới góc độ người lập trình :
 •	Cấu trúc thư mục rõ ràng.
 
 •	Chưa có comment cần bổ sung để người phát triển dễ hiểu.
+
+•	Chưa có tài liệu hướng dẫn người lập trình rõ ràng .
