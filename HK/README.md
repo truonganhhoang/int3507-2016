@@ -58,9 +58,9 @@ Cấu trúc ứng dụng mặc định của Laravel 5.2 có dạng là cây cá
 
  7. Folder tests: chứa các file testcase của ứng dụng.
 
- 8.Folder vendor: thư mục chứa core của Laravel, ta không nên động chạm hay sửa chưa gì trong thư mục này.
+ 8. Folder vendor: thư mục chứa core của Laravel, ta không nên động chạm hay sửa chưa gì trong thư mục này.
 
- 9.File .env: Đây là một tập tin ẩn trong thư mục gốc của ứng dụng. Tập tin này có chứa các định nghĩa cơ bản về các thông số của ứng dụng như tên và mật khẩu cơ sở dữ liệu, dữ liệu cấu hình email, cấu hình server cache…
+ 9. File .env: Đây là một tập tin ẩn trong thư mục gốc của ứng dụng. Tập tin này có chứa các định nghĩa cơ bản về các thông số của ứng dụng như tên và mật khẩu cơ sở dữ liệu, dữ liệu cấu hình email, cấu hình server cache…
 
  10. File artisan: tool mà Laravel cung cấp sẵn trong project dùng để phục vụ cho việc tương tác với migration (database), tạo key cho ứng dụng…
 
