@@ -16,5 +16,6 @@
 ## Bổ sung
 
 - Sản phẩm cần có thêm tính năng
-- Các thông báo, pre-loading cần rõ ràng hơn
-- Giao diện cần chau chuốt bắt mắt hơn
+- Các thông báo, pre-loading cần rõ ràng hơn. Giao diện cần chau chuốt hơn.
+- Cần phát triển thêm data cho Alexa.
+- Cần xây dựng các chức năng theo các chủ đề.
