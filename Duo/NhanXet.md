@@ -30,7 +30,7 @@
 - Thêm hướng dẫn cách cài đặt, chạy chương trình cũng như cách để phát triển
 - Bổ sung giới thiệu công nghệ và ngôn ngữ lập trình
 
-## Nhóm HK
+# Nhận xét nhóm HK
 ### Góc độ người dùng
 #### Ưu điểm:
 - Chức năng login, học hoạt động tốt, dễ sử dụng
