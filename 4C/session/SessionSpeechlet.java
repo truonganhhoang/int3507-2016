@@ -49,12 +49,9 @@ public class SessionSpeechlet implements Speechlet {
         log.info("onIntent requestId={}, sessionId={}", request.getRequestId(),
                 session.getSessionId());
 
-        // Get intent from the request object.
         Intent intent = request.getIntent();
         String intentName = (intent != null) ? intent.getName() : null;
 
-        // Note: If the session is started with an intent, no welcome message will be rendered;
-        // rather, the intent specific response will be returned.
         if ("MyColorIsIntent".equals(intentName)) {
             return setColorInSession(intent, session);
         } else if ("WhatsMyColorIntent".equals(intentName)) {
@@ -69,7 +66,6 @@ public class SessionSpeechlet implements Speechlet {
             throws SpeechletException {
         log.info("onSessionEnded requestId={}, sessionId={}", request.getRequestId(),
                 session.getSessionId());
-        // any cleanup logic goes here
     }
 
 	// tao welcome message
