@@ -1,11 +1,11 @@
 #Nhận xét từ phía người dùng
 
-#Ưu điểm
+##Ưu điểm
 
 - Đầy đủ các chức năng như mô tả
 - Các chức năng hoạt động ổn định
 
-#Nhược điểm
+##Nhược điểm
 
 - Ứng dụng bị lỗi giao diện
 
@@ -21,12 +21,12 @@
 
 #Nhận xét từ phía nhà phát triển
 
-#Ưu điểm
+##Ưu điểm
 
 -	Giới thiệu đầy đủ về công nghệ đã sử dụng
 -	Có comment đầy đủ, chia các component dễ hiểu, giải thích đầy đủ, chi tiết
 
-#Nhược điểm
+##Nhược điểm
 
 -	Bị lỗi giao diện trên các màn hình khác nhau
 -	Ứng dụng không cần mạng vẫn chơi được ( không phải load dữ liệu từ server như trong tài liệu )
