@@ -10,6 +10,17 @@
 
 # Mạng xã hội học tập Edoo - Angular 2
 
+- [I. Mô tả bài toán](https://github.com/truonganhhoang/int3507-2016/blob/master/FRIES/README.md#i-m%C3%B4-t%E1%BA%A3-b%C3%A0i-to%C3%A1n)
+	- [I.1. Vấn đề đặt ra](https://github.com/truonganhhoang/int3507-2016/blob/master/FRIES/README.md#i1-v%E1%BA%A5n-%C4%91%E1%BB%81-%C4%91%E1%BA%B7t-ra)
+	- [I.2. Giải pháp: Edoo](https://github.com/truonganhhoang/int3507-2016/blob/master/FRIES/README.md#i2-gi%E1%BA%A3i-ph%C3%A1p-edoo)
+- [II. Các chức năng](https://github.com/truonganhhoang/int3507-2016/blob/master/FRIES/README.md#ii-c%C3%A1c-ch%E1%BB%A9c-n%C4%83ng)
+	- [II.1. Chức năng chính](https://github.com/truonganhhoang/int3507-2016/blob/master/FRIES/README.md#ii1-ch%E1%BB%A9c-n%C4%83ng-ch%C3%ADnh)
+	- [II.2. Chức năng khác](https://github.com/truonganhhoang/int3507-2016/blob/master/FRIES/README.md#ii2-ch%E1%BB%A9c-n%C4%83ng-kh%C3%A1c)
+- [III. Hướng phát triển](https://github.com/truonganhhoang/int3507-2016/blob/master/FRIES/README.md#iii-h%C6%B0%E1%BB%9Bng-ph%C3%A1t-tri%E1%BB%83n)
+- [IV. Các bước cài đặt cho project](https://github.com/truonganhhoang/int3507-2016/blob/master/FRIES/README.md#iv-c%C3%A1c-b%C6%B0%E1%BB%9Bc-c%C3%A0i-%C4%91%E1%BA%B7t-cho-project)
+- [V. Cấu trúc Project](https://github.com/truonganhhoang/int3507-2016/blob/master/FRIES/README.md#v-c%E1%BA%A5u-tr%C3%BAc-project)
+- [VI. Tài liệu tham khảo](https://github.com/truonganhhoang/int3507-2016/blob/master/FRIES/README.md#t%C3%A0i-li%E1%BB%87u-tham-kh%E1%BA%A3o)
+
 
 ## I. Mô tả bài toán
 
@@ -136,7 +147,7 @@ gulp deploy
 - **package.json**: khai báo các package được sử dụng trong project.
 
 
-## Tài liệu tham khảo
+## VI. Tài liệu tham khảo
 
 - [Angular 2](https://angular.io/)
 - [TypeScript](https://www.typescriptlang.org/) 
