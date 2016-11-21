@@ -13,4 +13,9 @@ export class ReadingService{
     return this.http.get('/api/reading')
       .map(res => res.json());
   }
+
+  getParagraph(){
+  	return this.http.get('api/reading/advanced')
+  	.map(res => res.json());
+  }
 }

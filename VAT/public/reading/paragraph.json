@@ -1,0 +1,216 @@
+[
+	{
+	"id": 1,
+	"paragraph": "People living today in the northwestern state of Washington who have many sources of news in addition to newspapers must stretch their imaginations to understand the importance of the press during much of the state's history. Beginning in 1852 with The Cohumblan. the first paper in (5) Washington Territory, newspapers served to connect settlers in frontier communities with each other and with the rnajor events of their times. Unlike many mid-century papers, The Columbian, published every Saturday in Olympia, one of Washington's larger towns, was \"neutral in politics,\" meaning that it was not the organ of a particular political party or (10) religious group. For its first few years, it was the only newspaper in the territory, but during the following decades, enterprising Washingtonians founded many other papers. Few of these papers lasted long. Until the turn of the century, most were the production of an individual editor, who might begin with insufficient capital or fail to attract (15) a steady readership. Often working with no staff at all, these editors wrote copy, set type, delivered papers, oversaw billing, and sold advertising. Their highly personal journals reflected their own tastes, politics, and known as the \"Oregon style\"--graphic, torrid, and potentially libelous. Early newspapers were thick with print, carrying no illustrations or (20) cartoons. Advertising was generally confined to the back pages and simply listed commodities received by local stores. Toward the end of the century, newspapers in Washington began to carry national advertising, especially from patent medicine companies, which bought space from agencies that brokered ads in papers all over the country. By 1900, (25) Washington boasted 19 daily and 176 weekly papers. Especially in the larger cities, they reflected less the personal opinions of the editor than the interests of the large businesses they had become. They subscribed to the Associated Press and United Press news services, and new technology permitted illustrations. Concentrating on features, crime reporting, and (30) sensationalism, they imitated the new mass-circulation papers that William Randolph Hearst and Joseph Pulitzer were making popular throughout the United States.",
+	"questions": [
+		{
+			"id": 1,
+			"title": "1. What does the passage mainly discuss?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. Ways in which various newspapers were advertised in Washington."
+				},
+				{
+					"value": "B",
+					"text": "B. The history of newspapers in Washington."
+				},
+				{
+					"value": "C",
+					"text": "C. Editors of the first Washington newspapers."
+				},
+				{
+					"value": "D",
+					"text": "D. The illustrations in early Washington newspapers."
+				}
+			],
+			"correct_answer": "B"
+		},
+		{
+			"id": 2,
+			"title": "2. What does the passage imply about early Washington newspapers?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. People relied on them as their primary source of news."
+				},
+				{
+					"value": "B",
+					"text": "B. They contained important historical articles."
+				},
+				{
+					"value": "C",
+					"text": "C. They were not as informative as today's newspapers."
+				},
+				{
+					"value": "D",
+					"text": "D. They rarely reflected the views of any particular religion."
+				}
+			],
+			"correct_answer": "C"
+		},
+		{
+			"id": 3,
+			"title": "3.  In line 9, the word “it” refers to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. The Columbian."
+				},
+				{
+					"value": "B",
+					"text": "B. Olympia."
+				},
+				{
+					"value": "C",
+					"text": "C. religious group."
+				},
+				{
+					"value": "D",
+					"text": "D. political party ."
+				}
+			],
+			"correct_answer": "A"
+		},
+		{
+			"id": 4,
+			"title": "4. In line 16, the word \"oversaw\" is closest in meaning to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. estimated."
+				},
+				{
+					"value": "B",
+					"text": "B. supervised."
+				},
+				{
+					"value": "C",
+					"text": "C. collected."
+				},
+				{
+					"value": "D",
+					"text": "D. provided."
+				}
+			],
+			"correct_answer": "A"
+		},
+		{
+			"id": 5,
+			"title": "5. In line 16, the word \"'delivered'\" is closest in meaning to ",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. confirmed."
+				},
+				{
+					"value": "B",
+					"text": "B. compared."
+				},
+				{
+					"value": "C",
+					"text": "C. questioned."
+				},
+				{
+					"value": "D",
+					"text": "D. presented."
+				}
+			],
+			"correct_answer": "D"
+		},
+		{
+			"id" : 6,
+			"title": "6. According to the passage, which of the following was true of curly Washington newspapers?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. Most were owned by part-time editors who worked at other jobs."
+				},
+				{
+					"value": "B",
+					"text": "B. Most were run by editors who had little or no earlier newspaper experience."
+				},
+				{
+					"value": "C",
+					"text": "C. Most received financial support from the town in which they were published."
+				},
+				{
+					"value": "D",
+					"text": "D. Most stayed in business for only a short while."
+				}
+			],
+			"correct_answer": "D"
+		},
+		{
+			"id": 7,
+			"title": "7. What does the author mention as typical of early newspaper editors from Washington?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. Their capital grew rapidly."
+				},
+				{
+					"value": "B",
+					"text": "B. Their political opinions changed with time."
+				},
+				{
+					"value": "C",
+					"text": "C. They had many types of responsibilities."
+				},
+				{
+					"value": "D",
+					"text": "D. They were generally members of the same political party."
+				}
+			],
+			"correct_answer": "C"
+		},
+		{
+			"id": 8,
+			"title": "8.  Which of the following can be inferred from the passage about advertising in Washington newspapers of the mid-nineteenth century?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. It contained information about patent medicines."
+				},
+				{
+					"value": "B",
+					"text": "B. It focused on local rather than national products."
+				},
+				{
+					"value": "C",
+					"text": "C. It was printed on entire pages distributed in local stores."
+				},
+				{
+					"value": "D",
+					"text": "D. It was the only part of the paper containing cartoons."
+				}
+			],
+			"correct_answer": "B"
+		},
+		{
+			"id": 9,
+			"title": "9. In line 25, the word \"boasted\" is closest in meaning to ",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. planned."
+				},
+				{
+					"value": "B",
+					"text": "B. financed."
+				},
+				{
+					"value": "C",
+					"text": "C. was forced to close."
+				},
+				{
+					"value": "D",
+					"text": "D. took pride in having."
+				}
+			],
+			"correct_answer": "B"
+		}
+	]
+	}
+
+]
