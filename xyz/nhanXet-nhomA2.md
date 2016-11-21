@@ -2,7 +2,7 @@
 
 ## Người dùng sản phẩm
 
-- Lỗi UX: Khi click vào slide ở trang Home không chuyển slide mà chuyển sang tab khác
+- Lỗi UX: Có những chức năng chưa hoàn thiện, khi click vào Tab tương ứng trên Menu không có phản hổi
 - Lỗi UI: chưa có Menu responsive, không nên để hình ảnh ngay trang đầu tiên
 - Chức năng chưa hoàn thiện
 
