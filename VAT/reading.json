@@ -1,0 +1,55 @@
+[
+	{
+		"People living today in the northwestern state of Washington who have many sources of news
+		in addition to newspapers must stretch their imaginations to understand the importance of the
+		press during much of the state's history. Beginning in 1852 with The Cohumblan. the first paper in
+		(5)Washington Territory, newspapers served to connect settlers in frontier communities with each
+		other and with the rnajor events of their times. Unlike many mid-century papers, The Columbian,
+		published every Saturday in Olympia, one of Washington's larger towns, was ""neutral in politics,""
+		meaning that it was not the organ of a particular political party or (10)religious group. For its first
+		meaning that it was not the organ of a particular political party or (10)religious group. For its first
+		few years, it was the only newspaper in the territory, but during the following decades,
+		enterprising Washingtonians founded many other papers. Few of these papers lasted long. Until
+		the turn of the century, most were the production of an individual editor, who might begin with
+		insufficient capital or fail to attract (15) a steady readership. Often working with no staff at all,
+		these editors wrote copy, set type, delivered papers, oversaw billing, and sold advertising. Their
+		highly personal journals reflected their own tastes, politics, and known as the ""Oregon style""--graphic,
+		torrid, and potentially libelous.
+		Early newspapers were thick with print, carrying no illustrations or (20)cartoons. Advertising
+		was generally confined to the back pages and simply listed commodities received by local stores.
+		Toward the end of the century, newspapers in Washington began to carry national advertising,
+		especially from patent medicine companies, which bought space from agencies that brokered ads
+		in papers all over the country. By 1900, (25)Washington boasted 19 daily and 176 weekly papers.
+		Especially in the larger cities, they reflected less the personal opinions of the editor than the
+		interests of the large businesses they had become. They subscribed to the Associated Press and
+		United Press news services, and new technology permitted illustrations. Concentrating on features,
+		crime reporting, and (30) sensationalism, they imitated the new mass-circulation papers that
+		William Randolph Hearst and Joseph Pulitzer were making popular throughout the United States."
+
+			"id": 51,
+			"question": "51. What does the passage mainly discuss?",
+			"answer": [
+				{
+					"value" : "A",
+					"text": "A. Ways in which various newspapers were advertised in Washington"
+				},
+				{
+					"value": "B",
+					"text": "B. The history of newspapers in Washington"
+				},
+				{
+					"value": "C",
+					"text": "C.  Editors of the first Washington newspapers"
+				},
+				{
+					"value": "D",
+					"text": "D.  The illustrations in early Washington newspapers"
+				}
+			],
+			"correct_answer": "B"
+		},
+
+	{
+		
+	}
+]
