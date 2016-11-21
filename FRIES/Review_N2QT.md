@@ -10,9 +10,10 @@
 - Ảnh nền và một số ảnh bị vỡ ở màn hình laptop.
 - Đơn giản ít nội dung, ít bàn chơi.
 - Chữ I đôi lúc không hoạt động.
+- Chữ W chọn không đúng nhưng vẫn qua được level 1.
 - Sau khi hiện You Lose hay You win vẫn có thể chọn được chữ và mất lượt đoán (mất mạng). Chọn hết lượt sẽ hiện You Lose đè lên You Win.
-##3. Góp ý chỉnh sửa bổ sung
 
+##3. Góp ý chỉnh sửa bổ sung
 - Thêm những chú thích và gợi ý.
 - Thay đổi ảnh biểu thị ô chữ cần đoán và số lượt đoán dễ nhận biết hơn.
 - Chỉnh sửa những chức năng hoạt động lỗi đã góp ý ở trên.
