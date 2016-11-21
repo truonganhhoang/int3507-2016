@@ -3,10 +3,12 @@
 ##1. Ưu điểm
 - Giao diện đơn giản, dễ sử dụng các chức năng chính.
 - Các chức năng chính hoạt động tốt, không lỗi.
+
 ##2. Tồn tại
 - Quá đơn giản nên chưa gây được hứng thú cho người học, hơi khô khan và nhàm chán.
 - Số lượng bài học hạn chế và chưa phân cấp, Ít chức năng, ít dữ liệu.
 - Chưa đồng nhất trong cách hiển thị ngôn ngữ. (Nơi để tiếng anh nơi để tiếng Việt)
+
 ##3. Góp ý chỉnh sửa bổ sung
 - Có thể chia làm 2 nội dung chính là Bài Test và Bài học. 
 Bài test thì xây dựng giống như khi làm bài thi thật và tính thời gian. 
