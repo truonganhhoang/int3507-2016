@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+=======
 # Nhận xét nhóm 4C
 
 Đã làm theo hướng dẫn và chạy thành công Alexa
@@ -11,3 +14,4 @@
 ## 3. Hướng phát triển
 	 	- Cần phát triển thêm data cho Alexa.
 	 	- Nên tập trung vào 1 chủ đề cụ thể để xây dựng các câu nói, câu hỏi dựa trên chủ đề đó.
+>>>>>>> truonganhhoang/master
