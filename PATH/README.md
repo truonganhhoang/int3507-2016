@@ -2,6 +2,7 @@
 - Lê Đức Anh
 - Nguyễn Hữu Tiến
 - Ngô Thị Phượng
+
 Đề tài:
 Tìm hiểu Angular 2.
 Làm trò chơi học ngoại ngữ bằng angular2 + nodejs + mongoDB, theo kỹ năng: ngữ pháp, đọc.
@@ -9,6 +10,20 @@ Làm các core components bằng angular2 để dùng cho các dạng bài của
 
 # Enguliz
 ## Website học tiếng anh trực tuyến
+
+### TÀI LIỆU HƯỚNG DẪN CÀI ĐẶT ỨNG DỤNG VÀ SỬ DỤNG MÃ NGUỒN
+* Yêu cầu công nghệ
+- Node: v6.9.1
+- Npm: v3.10.8
+- MongDB 3.2+
+
+* Project theo cấu trúc M.E.A.N Stack (MongDB, ExpressJS, Angular 2, Node)
+- Cấu hình mongodb (cho window) xem tại: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+
+- Sau khi clone ứng dụng về chạy lệnh ```npm install``` để tải các thư viện của Node và Angular về.
+- Chạy cmd: ```node server.js``` để chạy Backend
+- Chạy cmd: ```npm start``` để chạy Frontend 
+
 ### TÀI LIỆU HƯỚNG DẪN SỬ DỤNG
 
 ## I.  TRAO ĐỔI THÔNG TIN
