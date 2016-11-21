@@ -5,7 +5,7 @@ class Room{
 	function __construct($sender, $bot){
 		$this->sender = $sender;
 		$this->bot = $bot;
-		$this->db = new mysqli('localhost', 'root', 'selab15', 'test');
+		$this->db = new mysqli();
 	}
 
 	function check(){
