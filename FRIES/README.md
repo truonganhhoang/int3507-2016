@@ -1,7 +1,109 @@
-#FRIES Team
+# FRIES Team
 
-#Thành Viên:
+## Thành Viên:
 - Trần Văn Tú
 - Nguyễn Tiến Minh 
 - Trần Minh Quý
 - Bùi Minh Thái
+
+------------------------
+
+# Mạng xã hội học tập Edoo - Angular 2
+
+
+## I. Mô tả bài toán
+
+### I.1. Vấn đề đặt ra
+
+Hiện nay, phần lớn các trường Đại học, Cao đẳng đều đào tạo theo mô hình tín chỉ, nó giúp sinh viên có thể sắp xếp thời gian học tập, làm việc phù hợp với bản thân mình, ... .
+
+
+Tuy nhiên, vẫn còn nhiều mặt hạn chế mà mô hình đào tạo tín chỉ gặp phải:
+
+- Sinh viên trong một lớp môn học chưa có sự quen biết, gắn kết chặt chẽ với nhau và với giáo viên cũng vậy.
+- Thời gian trên lớp là chưa đủ để giải đáp hết các thắc mắc của sinh viên.
+- Môi trường trao đổi học tập chưa rõ ràng, còn nhiều bất cập.
+- Cập nhật thông tin còn chậm.
+
+### I.2. Giải pháp: Edoo
+
+Từ những vấn đề trên, mạng xã hội học tập theo mô hình tín chỉ ra đời, mang tên Edoo.
+
+Edoo có các đặc điểm:
+
+- **Kênh trao đổi thông tin, giải đáp tập trung**: Các thành viên trao đổi thông tin đến nhau, cùng nhau giải đáp những thắc mắc học tập. Những thông tin liên quan tới học tập sẽ được tập trung, người học có thể dễ dàng nắm bắt được.
+- **Môi trường học tập liên tục**: Sinh viên có thể nghiên cứu vấn đề và trao đổi về bài học vào bất kì thời gian nào (không phải đợi đến khi tới lớp).
+- **Môi trường học tập rộng lớn**: Sinh viên có thể tiếp cận với tất cả thành viên khác cùng trường học với mình, tiếp cận với nhiều vấn đề hơn ngoài giờ học.
+
+
+## II. Các chức năng chính
+Tài khoản đăng nhập (lưu ý: không đổi password, để các nhóm khác có thể test):
+
+
+- Giáo viên: 
+
+  + Email: khoiln@vnu.edu.vn
+  + Password: 123456
+- Sinh viên:
+	+ Email: tutv_58@vnu.edu.vn
+	+ Password: 123456
+  
+### II.1. Chức năng chính
+
+#### II.1.1. Chức năng chung
+
+- Xem bài viết, đăng bài viết, sửa và xóa bài viết.
+- Bình luận (trả lời) bài viết.
+- Đánh giá bài viết, bình luận.
+- Xem xếp hạng sinh viên.
+
+#### II.1.1. Chức năng riêng: Sinh viên
+
+- Nộp bài tập.
+
+#### II.1.2. Chức năng riêng: Giáo viên
+
+- Đăng thông báo, bài tập.
+- Thu bài tập của Sinh viên.
+
+### II.2. Chức năng khác
+
+Chức năng chung cho cả Sinh viên và Giáo viên:
+
+
+- Đăng nhập, đăng xuất.
+- Cập nhật thông tin cá nhân.
+- Gửi feedback.
+- Trang welcome.
+
+## III. Hướng phát triển
+
+- Làm mịn các chức năng sẵn có, phát triển theo chiều rộng.
+- Thêm các animation cho các Component.
+- Push notification để người dùng nhận thông báo realtime.
+- Đưa sản phẩm vào thử nghiệm ở một vài lớp.
+
+## IV. Các bước cài đặt cho project
+
+- Cài đặt [Nodejs](https://nodejs.org/en) và [npm](http://blog.npmjs.org/post/85484771375/how-to-install-npm)
+- Cài [Angular-cli](https://github.com/angular/angular-cli):
+
+> npm install -g angular-cli.
+
+Angular-cli cho phép bạn generate ra các boilerplate code cho một project mới, đồng thời tạo và thêm các component, directive, service, pipes, ... vào trong project. 
+
+
+- Install các package dùng trong project:
+
+
+> npm install
+
+
+- Build project trên localhost:
+
+
+> npm start
+
+## V. Cấu trúc Project
+
+## Tài liệu tham khảo
