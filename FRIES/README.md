@@ -36,7 +36,7 @@ Edoo có các đặc điểm:
 - **Môi trường học tập rộng lớn**: Sinh viên có thể tiếp cận với tất cả thành viên khác cùng trường học với mình, tiếp cận với nhiều vấn đề hơn ngoài giờ học.
 
 
-## II. Các chức năng chính
+## II. Các chức năng
 
 Web: http://v2.uetf.me
 
