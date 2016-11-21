@@ -37,14 +37,18 @@ Edoo có các đặc điểm:
 
 
 ## II. Các chức năng chính
-Tài khoản đăng nhập (lưu ý: không đổi password, để các nhóm khác có thể test):
 
+Web: http://v2.uetf.me
+
+Tài khoản đăng nhập (lưu ý: không đổi password, để các nhóm khác có thể test):
 
 - Giáo viên: 
 
   + Email: khoiln@vnu.edu.vn
   + Password: 123456
+  
 - Sinh viên:
+
 	+ Email: tutv_58@vnu.edu.vn
 	+ Password: 123456
   
@@ -70,7 +74,6 @@ Tài khoản đăng nhập (lưu ý: không đổi password, để các nhóm kh
 
 Chức năng chung cho cả Sinh viên và Giáo viên:
 
-
 - Đăng nhập, đăng xuất.
 - Cập nhật thông tin cá nhân.
 - Gửi feedback.
@@ -88,22 +91,56 @@ Chức năng chung cho cả Sinh viên và Giáo viên:
 - Cài đặt [Nodejs](https://nodejs.org/en) và [npm](http://blog.npmjs.org/post/85484771375/how-to-install-npm)
 - Cài [Angular-cli](https://github.com/angular/angular-cli):
 
-> npm install -g angular-cli.
+```
+npm install -g angular-cli.
+```
 
-Angular-cli cho phép bạn generate ra các boilerplate code cho một project mới, đồng thời tạo và thêm các component, directive, service, pipes, ... vào trong project. 
+Angular-cli cho phép bạn generate ra các boilerplate code cho một project mới, đồng thời tạo và thêm các `component`, `directive`, `service`, `pipes`, ... vào trong project. 
 
 
 - Install các package dùng trong project:
 
+```
+npm install
+```
 
-> npm install
+- Build project trên `localhost`:
 
+```
+npm start
+```
 
-- Build project trên localhost:
+- Build app ra bản production và chuyển vào thư mục `/docs`
 
-
-> npm start
+```
+gulp deploy
+```
 
 ## V. Cấu trúc Project
 
+- **src**:
+	- **typings.d.ts**: Khai báo các biến để typescript có thể hiểu. 
+	- **styles.css**: Style global cho app.
+	- **main.ts**: Main app.
+	- **index.html**: file html gốc.
+	- **app**:
+		- **components**: Chứa các components của app
+		- **config**: Config cho app
+		- **scss**: SCSS cho global.
+		- **services**: Chứa các service của app
+		- **app.component.***: Component root của app.
+
+- **docs**: sau khi deploy project thì bản production được đưa vào trong thư mục `/docs`
+- **angular-cli**: chứa các config do Angular-cli tạo ra, nó import các styles, scripts, environments, ... sử dụng trong project.
+- **karma.conf.js**: file cấu hình cho karma test runner (sử dụng cho việc kiểm thử).
+- **package.json**: khai báo các package được sử dụng trong project.
+
+
 ## Tài liệu tham khảo
+
+- [Angular 2](https://angular.io/)
+- [TypeScript](https://www.typescriptlang.org/) 
+- [Angular CLI](https://github.com/angular/angular-cli) 
+- [UI Router - State based routing for client-side web apps ](https://ui-router.github.io/)
+- [Sass - CSS extension language](http://sass-lang.com/)
+- [Karma runner test](https://karma-runner.github.io/)
