@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 # Nhận xét nhóm 4C
 
 Đã làm theo hướng dẫn và chạy thành công Alexa
@@ -11,7 +8,7 @@
 	 	- Viết code khá rõ ràng, đúng quy tắc.
 ## 2. Nhược điểm
 	 	- Bài toán còn sơ sài. Mới chỉ thực hiện được 1 câu nói.
+    - Cần public Skill để các User khác có thể sử dụng.
 ## 3. Hướng phát triển
 	 	- Cần phát triển thêm data cho Alexa.
 	 	- Nên tập trung vào 1 chủ đề cụ thể để xây dựng các câu nói, câu hỏi dựa trên chủ đề đó.
->>>>>>> truonganhhoang/master
