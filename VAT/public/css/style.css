@@ -1,32 +1,35 @@
-html,
-body {
-  padding:0;
-  height:100%;
-}
 .wrapper {
   min-height:100%;
   position:relative;
 }
 .header {
-  background:#ededed;
+  border-color: #595959;
 }
-.content {
-  padding-bottom:0px;
-  min-height: 500px
+
+.content{
+  min-height: 500px;
+  position: relative;
 }
-.my-footer {
-  background-color:black;
-  width:100%;
-  height:auto;
+.narbar{
+  border-radius: 0px;
+}
+.footer{
+  background-color: black;
+  height: auto;
+  width: 100%;
   position:absolute;
   padding-top: 10px;
 }
-.my-footer a{
+.footer p{
+  color: #333333;
+  font-size: 14px;
+}
+.footer a{
   color: #333333;
 }
-.my-footer a:hover{
-  color: #fff;
+.footer a:hover{
+  color: white;
 }
-.my-footer a:focus{
-  color: #fff;
+.footer h2{
+  color: #333333;
 }
