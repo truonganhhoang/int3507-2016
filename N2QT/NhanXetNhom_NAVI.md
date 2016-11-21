@@ -20,7 +20,7 @@
 -Mã nguồn chuẩn,dễ phát triển
 ### 2. Nhược điểm
 
-## IV. Điểm : 
+## III. Điểm : 
 
 
 
