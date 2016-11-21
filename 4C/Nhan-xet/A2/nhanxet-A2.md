@@ -23,7 +23,7 @@ Về trải nghiệm người dùng :
 
 •	Không có điểm gì đặc biệt để thu hút người sử dụng.
 
-•	Trang web không thể đưa vào sử dụng, đây không phải là 1 trang web sách mềm.
+•	Trang web chưa thể đưa vào sử dụng vì các tính năng chưa hoàn thiện.
 
 Nhận xét dưới góc độ người lập trình :
 
