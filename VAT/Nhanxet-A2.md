@@ -15,6 +15,7 @@
 + Các bộ sách còn ít data.
 + Quick Test còn sơ sài (mới có data của 3/5 mục).
 + Chức năng đăng ký, đăng nhập chưa có.
+
 ### 3. Chỉnh sửa, bổ sung
 - Cần thêm data nhiều hơn.
 - Tập trung vào 1 nhóm người dùng. Có hướng dẫn trả lời từng bộ câu hỏi.
