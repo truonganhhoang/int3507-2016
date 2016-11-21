@@ -10,19 +10,24 @@ module.exports = function receivedMessage(event) {
     var timeOfMessage = event.timestamp;
     var message = event.message;
 
-    console.log("Received message for user %d and page %d at %d with message:",
-        senderID, recipientID, timeOfMessage);
-    console.log(JSON.stringify(message));
-
     var isEcho = message.is_echo;
     var messageId = message.mid;
     var appId = message.app_id;
-    var metadata = message.metadata;
 
     // You may get a text or attachment but not both
     var messageText = message.text;
     var messageAttachments = message.attachments;
     var quickReply = message.quick_reply;
+    var metadata = message.metadata;
+
+    if (metadata == "DEVELOPER_DEFINED_METADATA") {
+        // chatbot's messages, not from real user
+        return; // will not process this kind of message
+    }
+
+    console.log("Received message for user %d and page %d at %d with message:",
+        senderID, recipientID, timeOfMessage);
+    console.log(JSON.stringify(message));
 
     // Can not use metadata === 'MULTIPLE_CHOICES' here?
     // if (quickReply && metadata === 'MULTIPLE_CHOICES') {

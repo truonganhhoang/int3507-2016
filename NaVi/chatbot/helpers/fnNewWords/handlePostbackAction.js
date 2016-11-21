@@ -15,6 +15,7 @@ module.exports = function (recipientId, payload) {
 		let wordId = payload.split('_')[2];  // new word's id
 
 		models.UnlearnedWordUser.update({
+			facebookId: recipientId,
 			$pull: {
 				unlearnedWords: {
 					wordId: wordId
