@@ -1,0 +1,26 @@
+<h1>Write</h1>
+<div class="container-fluid" *ngFor="let itemWrite of _arrayItemWrite">
+    <samp>{{itemWrite._question}}</samp>
+    <p>{{itemWrite._answer}}</p>
+
+</div>
+<h1>{{test}}</h1>
+<!--
+<div class="form-group" *ngFor="#itemWrite of _arrayAnswer" > 
+    <div class="col-xs-4">
+        <input [(ngModel)]="_arrayAnswer[1]" class="form-control" id="ex3" type="text">
+        <h1>{{_arrayAnswer[1]}}</h1>
+    </div>
+</div>-->
+<div class="col-xs-4">
+    <input [(ngModel)]="_arrayAnswer[0]" class="form-control" id="ex3" type="text">
+</div>
+<div class="col-xs-4">
+    <input [(ngModel)]="_arrayAnswer[1]" class="form-control" id="ex3" type="text">
+</div>
+<div class="col-xs-4">
+    <input [(ngModel)]="_arrayAnswer[2]" class="form-control" id="ex3" type="text">
+</div>
+<h1>{{result}}</h1>
+<button (click)="clickMe()">Check</button>
+<h1 *ngIf="result == true">Chuẩn</h1>

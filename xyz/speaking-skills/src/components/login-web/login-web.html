@@ -1,0 +1,25 @@
+<!--
+  Generated template for the LoginWeb component.
+
+  See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
+  for more info on Angular 2 Components.
+-->
+
+
+  <ion-item *ngIf="isLogin">
+    <ion-avatar item-left>
+      <img src="{{profile.imageUrl}}">
+    </ion-avatar>
+    <h2>{{profile.displayName}}</h2>
+  </ion-item>
+
+  <button ion-item id="customBtn" *ngIf="!isLogin">
+		<ion-icon name="log-in" item-left></ion-icon>
+		Login with Google
+	</button>
+
+	<button ion-item *ngIf="isLogin" (click)="signOut()">
+    <ion-icon name="log-out" item-left></ion-icon>
+    Logout Google
+  </button>
+

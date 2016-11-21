@@ -1,7 +1,9 @@
 .idea/
 
-target/*
+target/
 
-out/*
-
-bots/mybot/aimlif/*
+.settings/
+out/
+bots/mybot/aimlif/
+.project
+.classpath

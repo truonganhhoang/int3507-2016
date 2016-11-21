@@ -1,3 +1,10 @@
 node_modules
-
-bower_components
+app/**/*.js
+app/**/*.js.map
+typings
+npm-debug.log
+public/ng2
+*.bak
+.idea
+*.iml
+*.ipr

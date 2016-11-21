@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BotDataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BotDataEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categories" EntityType="BotDataModel.category" />
+    <EntitySet Name="helps" EntityType="BotDataModel.help" />
+    <AssociationSet Name="FK_help_categories" Association="BotDataModel.FK_help_categories">
+      <End Role="category" EntitySet="categories" />
+      <End Role="help" EntitySet="helps" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="category">
+    <Key>
+      <PropertyRef Name="category_id" />
+    </Key>
+    <Property Name="category_id" Type="Int32" Nullable="false" />
+    <Property Name="category_name" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="category_image" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="helps" Relationship="BotDataModel.FK_help_categories" FromRole="category" ToRole="help" />
+  </EntityType>
+  <EntityType Name="help">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="category_id" Type="Int32" Nullable="false" />
+    <Property Name="question" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="sub_question" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="answer" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="link" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="category" Relationship="BotDataModel.FK_help_categories" FromRole="help" ToRole="category" />
+  </EntityType>
+  <Association Name="FK_help_categories">
+    <End Type="BotDataModel.category" Role="category" Multiplicity="1" />
+    <End Type="BotDataModel.help" Role="help" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="category">
+        <PropertyRef Name="category_id" />
+      </Principal>
+      <Dependent Role="help">
+        <PropertyRef Name="category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

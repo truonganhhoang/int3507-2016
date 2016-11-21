@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('simpleapp:server');
+var debug = require('debug')('angular2-express-slim:server');
 var http = require('http');
 
 /**

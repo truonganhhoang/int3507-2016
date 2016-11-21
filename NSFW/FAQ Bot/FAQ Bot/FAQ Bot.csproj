@@ -143,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="ContextConstants.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="FaqDialog.cs" />
     <Compile Include="Global.asax.cs">

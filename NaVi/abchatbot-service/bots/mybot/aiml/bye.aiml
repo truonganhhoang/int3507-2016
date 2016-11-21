@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>bye</pattern>
+        <template>
+            <random>
+                <li>Tạm biệt! Hẹn gặp lại bạn sau nhé! :))</li>
+                <li>Lượn đi cho nước nó trong! :3 </li>
+                <li>Rất vui khi được giúp đỡ bạn! Nhắn cho mình khi cần nhé!</li>
+                <li>Chào bạn! Mong sớm gặp lại bạn.</li>
+                <li>Ok. Khi nào thích học lại gọi mình nhé!</li>
+                <li>OK! GL HF</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>goodbye</pattern>
+        <template>
+            <srai>bye</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>goodbye *</pattern>
+        <template>
+            <srai>bye</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>tạm biệt *</pattern>
+        <template>
+            <srai>bye</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>tạm biệt</pattern>
+        <template>
+            <srai>bye</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ tạm biệt</pattern>
+        <template>
+            <srai>bye</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ tạm biệt *</pattern>
+        <template>
+            <srai>bye</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>dừng</pattern>
+        <template>
+            <srai>bye</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>không * nữa</pattern>
+        <template>
+            <random>
+                <li>OK! Dừng học.</li>
+                <li>Ok. Khi nào thích học lại gọi mình nhé!</li>
+                <li>OK! Bạn muốn làm gì tiếp không?</li>
+                <li>OK! GL HF</li>
+            </random>
+        </template>
+    </category>
+    <category>
+        <pattern>_ không * nữa</pattern>
+        <template>
+            <srai>không * nữa</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>không * nữa *</pattern>
+        <template>
+            <srai>không * nữa</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ không * nữa *</pattern>
+        <template>
+            <srai>không * nữa</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>dẹp</pattern>
+        <template>
+            <srai>không * nữa</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ dẹp</pattern>
+        <template>
+            <srai>không * nữa</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>_ dẹp *</pattern>
+        <template>
+            <srai>không * nữa</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>dẹp *</pattern>
+        <template>
+            <srai>không * nữa</srai>
+        </template>
+    </category>
+</aiml>

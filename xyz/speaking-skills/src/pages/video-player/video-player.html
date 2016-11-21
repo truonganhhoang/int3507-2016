@@ -1,0 +1,52 @@
+<!--
+  Generated template for the VideoPlayer page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Video Player</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<div class="image-left embed-video">
+    <div class="videoWrapper">
+      <iframe id="video-player" class="embed-responsive-item" width="100%" height="250" 
+        [src]="url"
+        allowscriptaccess="always"
+        allowfullscreen></iframe>
+    </div>
+
+    <ion-row>
+      <ion-col *ngIf="!isRecord"  width-33>
+        <button ion-button (click)="startRecord()"> Start Record </button>
+      </ion-col>
+       <ion-col *ngIf="isRecord&&!isEnd"  width-33>
+        <button ion-button (click)="stopRecord()"> Stop Recording </button>
+      </ion-col>
+      <ion-col *ngIf="isEnd" width-50>
+        <button ion-button (click)="playRecord()"> Play </button>
+      </ion-col>
+      <ion-col  *ngIf="isEnd" width-50>
+        <button ion-button (click)="saveSong()">
+        &nbsp;Save
+        </button>
+      </ion-col>
+    </ion-row>
+
+    <button ion-button  *ngIf="isEnd" (click)="uploadDrive()">
+      <ion-icon name="cloud-upload"></ion-icon>
+      &nbsp;Upload Drive
+    </button>
+
+  </div>
+</ion-content>

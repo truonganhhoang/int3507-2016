@@ -1,0 +1,23 @@
+page-sing {
+	.singType {
+		width: 33.33%;
+		float: left;
+		padding: 10px;
+	}
+
+	ion-item {
+		border: none !important;
+		.item-inner {
+			border: none !important;
+		}
+	}
+
+	.input-search {
+		border: 1px solid #e0e0e0;
+	}
+	
+	.item-md h2:hover,.item-md ion-thumbnail img {
+		cursor:pointer;
+	}
+	
+}

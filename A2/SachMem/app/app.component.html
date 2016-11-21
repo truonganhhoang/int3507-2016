@@ -1,0 +1,16 @@
+<nav class='navbar navbar-default'>
+    <div class='container-fluid'>
+        <ul class='nav navbar-nav'>
+            <li><a [routerLink]="['home']" routerLinkActive="active">Sách mềm</a></li>
+            <li><a [routerLink]="['books']" routerLinkActive="active">Chọn sách</a></li>
+            <li><a [routerLink]="['tests']" routerLinkActive="active">Quick Test</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a [routerLink]="['signup']" routerLinkActive="active">Đăng ký</a></li>
+            <li><a [routerLink] = "['login']" routerLinkActive="active">Đăng nhập</a></li>   
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
