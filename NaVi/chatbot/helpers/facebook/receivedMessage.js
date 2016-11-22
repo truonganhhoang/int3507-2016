@@ -89,87 +89,87 @@ module.exports = function receivedMessage(event) {
             require('../fnUserSettings/notificationSetting')(senderID);
         } else if (sendFunctionalityTestingSignals.indexOf(lowerCaseOfMessageText) != -1) {
             require('../fnUserSettings/sendFunctionalityTesting')(senderID);
-        }
+        } else {
+            redisClient.hgetall(senderID, function (err, reply) {
+                if (err) {
+                    console.log(err);
+                }
+                else if (reply && reply.context === 'MC') {
+                    require('../fnMutipleChoices/handleTextReplyAction')(senderID, messageText, event);
+                }
+                else if (reply && reply.context === 'LI') {
+                    require('../fnListening/handleTextReplyAction')(senderID, messageText, event);
+                }
+                else if (reply && reply.context === 'TW') {
+                    require('../fnTests/handleTextReplyAction')(senderID, messageText, event);
+                }
+                else {
+                    // hard code the command to enter fnPronunciation
+                    let
+                        pronunciationIntentFlag = 0,
+                        pronunciationIntentSignals = [
+                            'speak', 'say', 'pronounce',
+                            'đọc', 'nói', 'phát âm',
+                            'doc', 'noi', 'phat am'
+                        ];
+                    for (let i = 0; i < pronunciationIntentSignals.length; i++) {
+                        if (messageText.toLowerCase().indexOf(pronunciationIntentSignals[i]) != -1) {
+                            pronunciationIntentFlag = pronunciationIntentSignals[i].length;
+                            break;
+                        }
+                    }
 
-        redisClient.hgetall(senderID, function (err, reply) {
-            if (err) {
-                console.log(err);
-            }
-            else if (reply && reply.context === 'MC') {
-                require('../fnMutipleChoices/handleTextReplyAction')(senderID, messageText, event);
-            }
-            else if (reply && reply.context === 'LI') {
-                require('../fnListening/handleTextReplyAction')(senderID, messageText, event);
-            }
-            else if (reply && reply.context === 'TW') {
-                require('../fnTests/handleTextReplyAction')(senderID, messageText, event);
-            }
-            else {
-                // hard code the command to enter fnPronunciation
-                let
-                    pronunciationIntentFlag = 0,
-                    pronunciationIntentSignals = [
-                        'speak', 'say', 'pronounce',
-                        'đọc', 'nói', 'phát âm',
-                        'doc', 'noi', 'phat am'
-                    ];
-                for (let i = 0; i < pronunciationIntentSignals.length; i++) {
-                    if (messageText.toLowerCase().indexOf(pronunciationIntentSignals[i]) != -1) {
-                        pronunciationIntentFlag = pronunciationIntentSignals[i].length;
-                        break;
+                    var testIntentSignal = 'test';
+
+                    if (pronunciationIntentFlag != 0) {
+                        var speechContent = messageText.substring(pronunciationIntentFlag + 1, messageText.length);
+                        require('../fnPronunciation/sendAudio')(senderID, speechContent);
+                    }
+                    // End of fnPronunciation
+                    else if (messageText.toLowerCase().indexOf(testIntentSignal) != -1) {
+                        // enter test functionality
+                        require('../fnTests/sendNewWordTest')(senderID);
+                    }
+                    // End of fnTests
+                    else {
+                        require('../intentClassification/getIntentClassification')(messageText, function (err, response) {
+                            // Save the new context to redis
+                            if (!err && response && response.intentClass) {
+                                redisClient.hmset(senderID, ["context", response.intentClass], function (err, res) {
+                                    if (err) {
+                                        console.log("Redis error: ", err);
+                                    }
+                                    else {
+                                        console.log(res);
+                                    }
+                                });
+                            }
+
+                            if (err) {
+                                require('../sendErrorMessage')(senderID);
+                            }
+                            else if (response && response.intentClass === 'MC') {
+                                require('../fnMutipleChoices/sendQuestion')(senderID);
+                            }
+                            else if (response && response.intentClass === 'NW') {
+                                require('../fnNewWords/sendNewWord')(senderID);
+                            }
+                            else if (response && response.intentClass === 'LI') {
+                                require('../fnListening/sendListeningChallenge')(senderID);
+                            }
+                            else if (response && response.intentClass === 'CO') {
+                                require('../fnConversations/sendNormalMessage')(senderID, response.botResponse);
+                            }
+                            else {
+                                require('./sendFunctions/sendTextMessage')(senderID, response.intentClass, function (err) {
+                                    console.log("Message sent!");
+                                });
+                            }
+                        });
                     }
                 }
-
-                var testIntentSignal = 'test';
-
-                if (pronunciationIntentFlag != 0) {
-                    var speechContent = messageText.substring(pronunciationIntentFlag + 1, messageText.length);
-                    require('../fnPronunciation/sendAudio')(senderID, speechContent);
-                }
-                // End of fnPronunciation
-                else if (messageText.toLowerCase().indexOf(testIntentSignal) != -1) {
-                    // enter test functionality
-                    require('../fnTests/sendNewWordTest')(senderID);
-                }
-                // End of fnTests
-                else {
-                    require('../intentClassification/getIntentClassification')(messageText, function (err, response) {
-                        // Save the new context to redis
-                        if (!err && response && response.intentClass) {
-                            redisClient.hmset(senderID, ["context", response.intentClass], function (err, res) {
-                                if (err) {
-                                    console.log("Redis error: ", err);
-                                }
-                                else {
-                                    console.log(res);
-                                }
-                            });
-                        }
-
-                        if (err) {
-                            require('../sendErrorMessage')(senderID);
-                        }
-                        else if (response && response.intentClass === 'MC') {
-                            require('../fnMutipleChoices/sendQuestion')(senderID);
-                        }
-                        else if (response && response.intentClass === 'NW') {
-                            require('../fnNewWords/sendNewWord')(senderID);
-                        }
-                        else if (response && response.intentClass === 'LI') {
-                            require('../fnListening/sendListeningChallenge')(senderID);
-                        }
-                        else if (response && response.intentClass === 'CO') {
-                            require('../fnConversations/sendNormalMessage')(senderID, response.botResponse);
-                        }
-                        else {
-                            require('./sendFunctions/sendTextMessage')(senderID, response.intentClass, function (err) {
-                                console.log("Message sent!");
-                            });
-                        }
-                    });
-                }
-            }
-        });
+            });
+        }
     }
     else if (messageAttachments) {
         sendFunctions.sendTextMessage(senderID, "Xin lỗi, hiện tại mình chỉ xử lý tin nhắn văn bản.");
