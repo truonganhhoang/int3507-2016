@@ -11,11 +11,11 @@ export const routes: Route[] = [
     { path: '', pathMatch: 'full', component: HomeComponent },
     { path: 'about', component: AboutComponent },
     { path: 'listening', component: ListeningComponent},
+    { path: 'listening/:id', component: ListeningComponent},
     { path: 'reading', component: ReadingComponent},
     { path: 'reading/:id', component: ReadingComponent},
     { path: 'speaking', component: SpeakingComponent},
-    { path: 'writing', component: WritingComponent},
-
+    { path: 'writing', component: WritingComponent}
 ];
 
 export const routing = RouterModule.forRoot(routes, { useHash: false });

@@ -6,7 +6,7 @@
     "start": "concurrently \"tsc -w\" \"nodemon ./bin/www\" ",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
-    "prod": "NODE_ENV=production ./bin/www",
+    "prod": "SET NODE_ENV=production & nodemon ./bin/www",
     "build:prod": "node bin/bundler.js --prod",
     "postinstall": "npm run build:prod"
   },

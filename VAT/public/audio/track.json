@@ -1,0 +1,463 @@
+[
+	{
+		"id": 1,
+		"question": "1. What prompted the conversation?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. The man wants to place a classified ad in the newspaper."
+			},
+			{
+				"value": "B",
+				"text": "B. The woman wants to find an apartment close to school."
+			},
+			{
+				"value": "C",
+				"text": "C. The man wants to pay for a newspaper subscription."
+			},
+			{
+				"value": "D",
+				"text": "D. The woman wants to fill out an application for employment."
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 2,
+		"question": "2. What does the man want to sell?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. Furniture."
+			},
+			{
+				"value": "B",
+				"text": "B. Books."
+			},
+			{
+				"value": "C",
+				"text": "C. Garden supplies."
+			},
+			{
+				"value": "D",
+				"text": "D. An apartment."
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 3,
+		"question": "3. What is the man's last name?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. Martin."
+			},
+			{
+				"value": "B",
+				"text": "B. Martyn."
+			},
+			{
+				"value": "C",
+				"text": "C. Wynn."
+			},
+			{
+				"value": "D",
+				"text": "D. Wartin."
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 4,
+		"question": "4. How will the man pay?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. He will pay by check."
+			},
+			{
+				"value": "B",
+				"text": "B. He will have the amount billed to his home address."
+			},
+			{
+				"value": "C",
+				"text": "C. He will come back to pay when he is billed."
+			},
+			{
+				"value": "D",
+				"text": "D. He will give the woman cash."
+			}
+		],
+		"correct_answer": "D"
+	},
+	{
+		"id": 5,
+		"question": "5. Why does the man decide to revise what he has written?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. To make it clearer to understand."
+			},
+			{
+				"value": "B",
+				"text": "B. To make it longer to read."
+			},
+			{
+				"value": "C",
+				"text": "C. To make it cheaper to print."
+			},
+			{
+				"value": "D",
+				"text": "D. To make it easies to use."
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 6,
+		"question": "1. What is the purpose of the conversation?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. To help the woman make a purchase."
+			},
+			{
+				"value": "B",
+				"text": "B. To request the woman's identification."
+			},
+			{
+				"value": "C",
+				"text": "C. To show the woman how to make out a check."
+			},
+			{
+				"value": "D",
+				"text": "D. To register the woman for a course at City College."
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 7,
+		"question": "2. What is meant by the term cash?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. Money."
+			},
+			{
+				"value": "B",
+				"text": "B. Money or credit cards."
+			},
+			{
+				"value": "C",
+				"text": "C. Credit cards or checks."
+			},
+			{
+				"value": "D",
+				"text": "D. Checks or money."
+			}
+		],
+		"correct_answer": "D"
+	},
+	{
+		"id": 8,
+		"question": "3. How does the woman pay for her purchase?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. Credit cards."
+			},
+			{
+				"value": "B",
+				"text": "B. Money."
+			},
+			{
+				"value": "C",
+				"text": "C. Debit card."
+			},
+			{
+				"value": "D",
+				"text": "D. check."
+			}
+		],
+		"correct_answer": "D"
+	},
+	{
+		"id": 9,
+		"question": "4. What did the woman use as identification?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. She used her student ID card and a charge card."
+			},
+			{
+				"value": "B",
+				"text": "B. She used her credit card."
+			},
+			{
+				"value": "C",
+				"text": "C. She used her driver's license and her student ID card."
+			},
+			{
+				"value": "D",
+				"text": "D. She used her telephone number and her student ID card."
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 10,
+		"question": "5. Who is the man in this conversation?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. A clerk."
+			},
+			{
+				"value": "B",
+				"text": "B. The woman's husband."
+			},
+			{
+				"value": "C",
+				"text": "C. A police officer."
+			},
+			{
+				"value": "D",
+				"text": "D. A bank teller."
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 11,
+		"question": "1. What do the speakers mainly discuss?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. A sick friend."
+			},
+			{
+				"value": "B",
+				"text": "B. A math class."
+			},
+			{
+				"value": "C",
+				"text": "C. Shool policy."
+			},
+			{
+				"value": "D",
+				"text": "D. The man's test."
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 12,
+		"question": "2. Why can't the woman give Terry Young's test to the man?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. It is against the law."
+			},
+			{
+				"value": "B",
+				"text": "B. The man isn't not a member of Terry's family."
+			},
+			{
+				"value": "C",
+				"text": "C. The woman cannot find the test."
+			},
+			{
+				"value": "D",
+				"text": "D. Terry was too sick to take the rest."
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 13,
+		"question": "3. What is the man's last name?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. Young."
+			},
+			{
+				"value": "B",
+				"text": "B. Purcell."
+			},
+			{
+				"value": "C",
+				"text": "C. Raleigh."
+			},
+			{
+				"value": "D",
+				"text": "D. Kelly."
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 14,
+		"question": "4. How does the woman feel about the policy?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. She agrees with it."
+			},
+			{
+				"value": "B",
+				"text": "B. She thinks it is odd."
+			},
+			{
+				"value": "C",
+				"text": "C. She does not enforce it."
+			},
+			{
+				"value": "D",
+				"text": "D. She is angry about it."
+			}
+		],
+		"correct_answer": "B"
+	},
+	{
+		"id": 15,
+		"question": "5. What will the man most probably do?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. Call his friend."
+			},
+			{
+				"value": "B",
+				"text": "B. Go to the office to get his test."
+			},
+			{
+				"value": "C",
+				"text": "C. Send the woman a letter."
+			},
+			{
+				"value": "D",
+				"text": "D. Take the test later."
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 16,
+		"question": "1. What is the purpose of this conversation?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. To register the student for classes."
+			},
+			{
+				"value": "B",
+				"text": "B. To help the student change his major field of study."
+			},
+			{
+				"value": "C",
+				"text": "C. To register the student for placement tests."
+			},
+			{
+				"value": "D",
+				"text": "D. To advise the student about the orientation to engineering program."
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 17,
+		"question": "2. How many classes does the woman advise the man to take?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. Two."
+			},
+			{
+				"value": "B",
+				"text": "B. Five."
+			},
+			{
+				"value": "C",
+				"text": "C. Three."
+			},
+			{
+				"value": "D",
+				"text": "D. Seventeen."
+			}
+		],
+		"correct_answer": "C"
+	},
+	{
+		"id": 18,
+		"question": "3. What does the man need to be admitted to the examination?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. A driver's license."
+			},
+			{
+				"value": "B",
+				"text": "B. A permission slip."
+			},
+			{
+				"value": "C",
+				"text": "C. A registration card."
+			},
+			{
+				"value": "D",
+				"text": "D. Nothing."
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 19,
+		"question": "4. What does the woman suggest?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. The man should return Friday afternoon."
+			},
+			{
+				"value": "B",
+				"text": "B. The man should complete his registration now."
+			},
+			{
+				"value": "C",
+				"text": "C. The man should take five classes."
+			},
+			{
+				"value": "D",
+				"text": "D. The man should schedule the Math 130 class."
+			}
+		],
+		"correct_answer": "A"
+	},
+	{
+		"id": 20,
+		"question": "5. What do we know about the student?",
+		"answer": [
+			{
+				"value" : "A",
+				"text": "A. He is majoring in mathematics."
+			},
+			{
+				"value": "B",
+				"text": "B. He has never taken a chemistry course."
+			},
+			{
+				"value": "C",
+				"text": "C. He is a freshman."
+			},
+			{
+				"value": "D",
+				"text": "D. He does not like his advisor."
+			}
+		],
+		"correct_answer": "C"
+	}
+
+]
