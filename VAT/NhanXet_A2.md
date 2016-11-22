@@ -2,6 +2,7 @@
 ## 1. Góc độ người dùng:
 ### Ưu điểm:
 - Trang web đã hoạt động với các chức năng cơ bản.
+
 ### Nhược điểm:
 - Các chức năng còn cơ bản và đôi khi chạy không chính xác.
 - Giao diện chưa thân thiện, các căn chỉnh, màu sắc trang web chưa thật sự hợp lý.
