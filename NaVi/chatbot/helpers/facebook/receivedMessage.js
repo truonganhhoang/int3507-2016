@@ -74,6 +74,23 @@ module.exports = function receivedMessage(event) {
     }
 
     else if (messageText) {
+        // Process text message commands for persistent menu
+        var lowerCaseOfMessageText = messageText.toLowerCase();
+        var updateProfileSignals = ['hồ sơ cá nhân', 'ho so ca nhan'],
+            learningProgressSignals = ['cài đặt thông báo', 'cai dat thong bao', 'thong bao'],
+            notificationSettingSignals = ['tiến trình học tập', 'tien trinh hoc tap'],
+            sendFunctionalityTestingSignals = ['giới thiệu các tính năng', 'gioi thieu cac tinh nang', 
+                'giới thiệu tính năng', 'gioi thieu tinh nang'];
+        if (updateProfileSignals.indexOf(lowerCaseOfMessageText) != -1) {
+            require('../fnUserSettings/updateProfile')(senderID);
+        } else if (learningProgressSignals.indexOf(lowerCaseOfMessageText) != -1) {
+            require('../fnUserSettings/learningProgress')(senderID);
+        } else if (notificationSettingSignals.indexOf(lowerCaseOfMessageText) != -1) {
+            require('../fnUserSettings/notificationSetting')(senderID);
+        } else if (sendFunctionalityTestingSignals.indexOf(lowerCaseOfMessageText) != -1) {
+            require('../fnUserSettings/sendFunctionalityTesting')(senderID);
+        }
+
         redisClient.hgetall(senderID, function (err, reply) {
             if (err) {
                 console.log(err);
