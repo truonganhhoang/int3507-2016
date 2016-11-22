@@ -155,6 +155,6 @@ module.exports = function receivedMessage(event) {
         });
     }
     else if (messageAttachments) {
-        sendFunctions.sendTextMessage(senderID, "Mình đã nhận được tệp đính kèm :)");
+        sendFunctions.sendTextMessage(senderID, "Xin lỗi, hiện tại mình chỉ xử lý tin nhắn văn bản.");
     }
 };

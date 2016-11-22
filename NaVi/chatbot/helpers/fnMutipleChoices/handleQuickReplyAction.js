@@ -10,6 +10,8 @@ module.exports = function (recipientId, payload) {
 
     if (status === 'TRUE') {
         models.UnlearnedQuestionUser.update({
+            facebookId: recipientId
+        }, {
             $pull: {
                 unlearnedQuestions: {
                     questionId: qId
