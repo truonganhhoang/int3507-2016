@@ -99,6 +99,8 @@ Chức năng chung cho cả Sinh viên và Giáo viên:
 
 ## IV. Các bước cài đặt cho project
 
+**Link source code**: https://github.com/tutv95/edoo-web-v2
+
 - Cài đặt [Nodejs](https://nodejs.org/en) và [npm](http://blog.npmjs.org/post/85484771375/how-to-install-npm)
 - Cài [Angular-cli](https://github.com/angular/angular-cli):
 
