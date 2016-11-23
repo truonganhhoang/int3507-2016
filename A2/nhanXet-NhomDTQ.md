@@ -10,7 +10,7 @@
 
 *Nhược điểm*
 
-- Chức năng đoàn hình ảnh còn hơi gây khó khăn cho người dùng 
+- Chức năng đoán hình ảnh còn hơi gây khó khăn cho người dùng 
 
 ----
 ## Người phát triển
