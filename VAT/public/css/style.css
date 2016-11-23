@@ -1,0 +1,35 @@
+.wrapper {
+  min-height:100%;
+  position:relative;
+}
+.header {
+  border-color: #595959;
+}
+
+.content{
+  min-height: 500px;
+  position: relative;
+}
+.narbar{
+  border-radius: 0px;
+}
+.footer{
+  background-color: black;
+  height: auto;
+  width: 100%;
+  position:absolute;
+  padding-top: 10px;
+}
+.footer p{
+  color: #333333;
+  font-size: 14px;
+}
+.footer a{
+  color: #333333;
+}
+.footer a:hover{
+  color: white;
+}
+.footer h2{
+  color: #f2f2f2;
+}

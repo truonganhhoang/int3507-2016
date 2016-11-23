@@ -3,9 +3,9 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from 'ionic-native';
 
 import { Category } from '../pages/category/category';
-import { Youtube } from '../pages/youtube/youtube';
 import { Google } from '../pages/google/google'
-
+import { Sing } from '../pages/sing/sing';
+import { MySong } from '../pages/my-song/my-song';
 
 @Component({
   templateUrl: 'app.html'
@@ -13,10 +13,10 @@ import { Google } from '../pages/google/google'
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = Youtube;
+  rootPage: any = Sing;
   onDevice: boolean = false;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, icon: string, component: any}>;
 
   constructor(public platform: Platform) {
     this.platform = platform;
@@ -24,12 +24,20 @@ export class MyApp {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Speaking by category', component: Category },
-      { title: 'Speaking with youtube', component: Youtube },
-      { title: 'Test Google Drive', component: Google }
-    ];
-
+    if (this.onDevice) {
+      this.pages = [
+        { title: 'Category', icon: 'keypad', component: Category },
+        { title: 'Sing a Song', icon: 'microphone', component: Sing },
+        { title: 'My Song', icon: 'musical-notes', component: MySong }
+      ];
+    }else {
+      this.pages = [
+        { title: 'Category', icon: 'keypad', component: Category },
+        { title: 'Sing a Song', icon: 'microphone', component: Sing },
+        { title: 'My Drive', icon: 'folder', component: Google },
+        { title: 'My Song', icon: 'musical-notes', component: MySong }
+      ];
+    }
   }
 
   initializeApp() {

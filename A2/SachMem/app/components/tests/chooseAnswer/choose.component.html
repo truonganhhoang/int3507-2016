@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+<div class="container">
+    <ul class="heroes">
+    <li *ngFor="let question of questions">
+        <span class="badge">{{question.id}}.</span>
+        <span class="hero-name">{{question.content}}</span> 
+        <div *ngIf="question.status" >
+          <span *ngIf="question.status=='correct'" style="color:green;">{{question.status}}</span>
+          <span *ngIf="question.status=='incorrect'" style="color:red;">{{question.status}}</span>
+        </div> 
+        <ul>
+          <li *ngFor="let item of question.option">  
+            <div class="checkbox" >
+              <input type="radio" (click)="saveStatus(question,item.asw)" class="choose" name="choose_{{question.id}}" id="{{question.id}}">
+              <label for="">{{item.asw}}. {{item.choose}} </label>  
+            </div>
+          </li>
+      </ul>
+    </li>
+  </ul>
+
+  <footer>
+      <button (click)="check()">Check answer </button> {{correct}}
+  </footer>
+</div>

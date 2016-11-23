@@ -1,0 +1,105 @@
+<div class="container">
+	<h1>Listening</h1>
+	<h4>This lesson will help you improve your English listening skills. You will hear an audio clip, then look at the following question and choose the correct answer for each question.</h4>
+	<p>This audio clip has two different conversations. Please listen and then choose the correct answer to the following questions. Good luck!</p>
+	<div class="col-md-3">
+		<div class="list-group">
+			<button (click)="gotoLesson(1)" class="list-group-item"><b>LESSON 1</b></button>
+			<button (click)="gotoLesson(2)" class="list-group-item"><b>LESSON 2</b></button>
+			<button (click)="gotoLesson(1)" class="list-group-item"><b>LESSON 3</b></button>
+			<button (click)="gotoLesson(2)" class="list-group-item"><b>LESSON 4</b></button>
+			<button (click)="gotoLesson(1)" class="list-group-item"><b>LESSON 5</b></button>
+		</div>
+	</div>
+	<div class="col-md-9">
+		<hr>
+		<div *ngIf="param==1" >
+			<div class="well">
+				<audio id="track-1" controls>
+					<source src="/audio/Track-1.mp3" type="audio/mp3">
+				</audio>
+			</div>
+			<hr>
+			<h3 style="color: green"><span class="glyphicon glyphicon-tags"></span>  Conversation 1</h3>
+			<div *ngFor=" let question of questions">
+				<div *ngIf="question.id > 0 && question.id <= 5">
+					<b><h4><span *ngIf="question.status=='Right'" class="glyphicon glyphicon-ok" style="color: green"></span>
+					<span *ngIf="question.status && question.status!='Right'" class="glyphicon glyphicon-remove" style="color:red" ></span> <b>{{question.question}}</b>
+					</h4></b>
+					<div *ngIf="question.status && question.status!='Right'">
+						<p style="color:red"> {{question.status}}</p>
+					</div>
+					<div *ngFor=" let option of question.answer">
+						<div>
+							<input type="radio" (click)="saveStatus(question,option.value)" name="{{question.id}}">
+							{{option.text}}
+						</div>
+				  	</div>
+				</div>
+			</div>
+			<h3 style="color: green"><span class="glyphicon glyphicon-tags"></span>  Conversation 2</h3>
+			<div *ngFor=" let question of questions">	
+				<div *ngIf="question.id > 5 && question.id <= 10">
+					<b><h4><span *ngIf="question.status=='Right'" class="glyphicon glyphicon-ok" style="color: green"></span>
+					<span *ngIf="question.status && question.status!='Right'" class="glyphicon glyphicon-remove" style="color:red" ></span> <b>{{question.question}}</b>
+					</h4></b>
+					<div *ngIf="question.status && question.status!='Right'">
+						<p style="color:red"> {{question.status}}</p>
+					</div>
+					<div *ngFor=" let option of question.answer">
+						<div>
+							<input type="radio" (click)="saveStatus(question,option.value)" name="{{question.id}}">
+							{{option.text}}
+						</div>
+				  	</div>
+				</div>
+			</div>
+		</div>
+		<div *ngIf="param==2" >
+			<div class="well">
+				<audio id="track-1" controls>
+					<source src="/audio/Track-2.mp3" type="audio/mp3">
+				</audio>
+			</div>
+			<hr>
+			<h3 style="color: green"><span class="glyphicon glyphicon-tags"></span>  Conversation 1</h3>
+			<div *ngFor=" let question of questions">
+				<div *ngIf="question.id > 10 && question.id <= 15">
+					<b><h4><span *ngIf="question.status=='Right'" class="glyphicon glyphicon-ok" style="color: green"></span>
+					<span *ngIf="question.status && question.status!='Right'" class="glyphicon glyphicon-remove" style="color:red" ></span> <b>{{question.question}}</b>
+					</h4></b>
+					<div *ngIf="question.status && question.status!='Right'">
+						<p style="color:red"> {{question.status}}</p>
+					</div>
+					<div *ngFor=" let option of question.answer">
+						<div>
+							<input type="radio" (click)="saveStatus(question,option.value)" name="{{question.id}}">
+							{{option.text}}
+						</div>
+				  	</div>
+				</div>
+			</div>
+			<h3 style="color: green"><span class="glyphicon glyphicon-tags"></span>  Conversation 2</h3>
+			<div *ngFor=" let question of questions">	
+				<div *ngIf="question.id > 15 && question.id <= 20">
+					<b><h4><span *ngIf="question.status=='Right'" class="glyphicon glyphicon-ok" style="color: green"></span>
+					<span *ngIf="question.status && question.status!='Right'" class="glyphicon glyphicon-remove" style="color:red" ></span> <b>{{question.question}}</b>
+					</h4></b>
+					<div *ngIf="question.status && question.status!='Right'">
+						<p style="color:red"> {{question.status}}</p>
+					</div>
+					<div *ngFor=" let option of question.answer">
+						<div>
+							<input type="radio" (click)="saveStatus(question,option.value)" name="{{question.id}}">
+							{{option.text}}
+						</div>
+				  	</div>
+				</div>
+			</div>
+		</div>
+			
+		<h4>Correct Answer: <b>{{ countCorrectAnswer}}</b></h4>
+		<button class="btn btn-md btn-success" (click)="check()">Check answer </button>
+		<br><br>
+	</div>
+</div>

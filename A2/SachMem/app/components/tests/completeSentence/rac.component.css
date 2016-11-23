@@ -1,0 +1,18 @@
+.guide img{
+	/*display: inline;*/
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	margin-right: 20px;
+}
+.question img {
+	max-height: 150px !important; height: 150px;
+}
+div {
+	line-height: 10px;
+}
+input{
+	text-align: center;
+    border: none;
+    border-bottom: 1px solid black;
+}

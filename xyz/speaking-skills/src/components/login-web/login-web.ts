@@ -1,5 +1,5 @@
-import { Component, NgZone } from '@angular/core';
-
+import { Component, NgZone, OnInit, AfterViewChecked } from '@angular/core';
+import { AppGlobals } from '../../services/app-globals.service';
 /*
   Generated class for the LoginWeb component.
 
@@ -8,55 +8,78 @@ import { Component, NgZone } from '@angular/core';
 */
 @Component({
   selector: 'login-web',
-  templateUrl: 'login-web.html'
+  templateUrl: 'login-web.html',
 })
-export class LoginWeb {
+export class LoginWeb implements OnInit, AfterViewChecked {
   isLogin: boolean = false;
   profile: Object = {};
   auth2: any;
+  isLogout: boolean = false;
 
-  constructor( private zone: NgZone) {
+  constructor( private zone: NgZone, private appGlobals: AppGlobals) {
+    this.appGlobals.isUserLoggedIn.subscribe(value => console.log(value));
+    this.appGlobals.access_token.subscribe(value => console.log(value));
   }
   
+  ngOnInit() {
+    this.start();
+  }
+
   start() {
     gapi.load('auth2', () => {
       // Retrieve the singleton for the GoogleAuth library and set up the client.
-       this.auth2 = gapi.auth2.init({
+      this.auth2 = gapi.auth2.init({
         client_id: '736288713251-26srbi81jha5n1aithe4av668oh5pn12.apps.googleusercontent.com',
         scope: 'https://www.googleapis.com/auth/drive'
-        
-        // Request scopes in addition to 'profile' and 'email'
-        //scope: 'additional_scope'
       });
 
-       console.log(gapi.auth2.getAuthInstance());
+      this.auth2.then(() => {
+        var isSignedIn = this.auth2.isSignedIn.get();
+        var googleUser = this.auth2.currentUser.get();
+        
+          if (isSignedIn) {
+            this.isLogin = true;
+            this.appGlobals.setLoginStatus(true);
+            this.appGlobals.setAccessToken(googleUser.getAuthResponse().access_token);
 
-      this.attachSignin(document.getElementById('customBtn'));
-    });
+            var res =  googleUser.getBasicProfile();
+            this.profile['displayName'] = res.getName();
+            this.profile['imageUrl'] = res.getImageUrl();
+            // User is signed in.
+            // Pass currentUser to onSignIn callback.
+          } else {
+            this.appGlobals.setLoginStatus(false);
+            console.log('not login');
+             // User is not signed in.
+            // call auth2.attachClickHandler
+            this.attachSignin(document.getElementById('customBtn'));
+          }
+      });
+
+     });
   };
 
   attachSignin(element) {
-    console.log(element.id);
     this.auth2.attachClickHandler(element, {},
-        (googleUser) => {
-         console.log(googleUser.getAuthResponse());
+      (googleUser) => {
+        this.appGlobals.setAccessToken(googleUser.getAuthResponse().access_token);
         
-         this.zone.run(() => {
-           this.isLogin = true;
+        this.zone.run(() => {
+          this.appGlobals.setLoginStatus(true);
+          this.isLogin = true;
+          this.isLogout = false;
           var res =  googleUser.getBasicProfile();
           this.profile['displayName'] = res.getName();
           this.profile['imageUrl'] = res.getImageUrl();
         });
-         // alert('is sign in'+ this.auth2.isSignedIn.get());
-        },(error) => {
-          alert(JSON.stringify(error, undefined, 2));
-        });
+      },(error) => {
+        alert(JSON.stringify(error, undefined, 2));
+    });
   }
 
-  ngAfterViewInit() {
-    this.start();
+  ngAfterViewChecked() {
+    if(this.isLogout == true) this.attachSignin(document.getElementById('customBtn'));
   }
-
 
   signOut() {
     this.auth2 = gapi.auth2.getAuthInstance();
@@ -64,34 +87,15 @@ export class LoginWeb {
     this.auth2.signOut().then(() => {
       console.log('User signed out.');
       this.zone.run(() => {
+        this.appGlobals.setLoginStatus(false);
         this.isLogin = false;
+        this.isLogout = true;
         this.profile = {};
       })
     });
-
-  }
-
-  list(){
-   gapi.client.load('drive', 'v2', function() {
-          var request = gapi.client.request({
-               path : 'https://www.googleapis.com/drive/v2/files',
-               method : 'GET',
-               params : {
-                    projection: "FULL",
-                    maxResults: 5
-               }
-          });
-          request.execute(function(response) {
-               console.log(response);   
-          });
-
-
-     });
   }
   
   ionViewDidLoad() {
     console.log('Hello Google Page');
   }
-
-
 }

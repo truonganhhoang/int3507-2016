@@ -1,0 +1,11 @@
+<div class="navbar">
+    <!--<h1>{{book.name}}</h1>-->
+    <button (click)="goBack()">Back</button>
+</div>
+<div class="list-units">
+    <ul>
+        <li *ngFor="let unit of units">
+            <label>Unit {{unit.id}}:</label> {{unit.name}}
+        </li>
+    </ul>
+</div>

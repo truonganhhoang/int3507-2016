@@ -5,16 +5,20 @@
   for more info on Angular 2 Components.
 -->
 
-<button ion-button (click)="login()">Login</button>
-<button ion-button (click)="loginSilent()">Login Silent</button>
-<button ion-button (click)="logout()">Log Out</button>
-<button ion-button (click)="disconnect()">Disconnect</button>
 
-<ion-list *ngIf="profile">
-  <ion-item>
+  <ion-item *ngIf="isLogin">
     <ion-avatar item-left>
       <img src="{{profile.imageUrl}}">
     </ion-avatar>
     <h2>{{profile.displayName}}</h2>
   </ion-item>
-</ion-list>
+
+  <button ion-item (click)="login()" *ngIf="!isLogin">
+    <ion-icon name="log-in" ios="ios-log-in" md="md-log-in" item-left></ion-icon>
+    Login with Google
+  </button>
+
+  <button ion-item *ngIf="isLogin" (click)="disconnect()">
+    <ion-icon name="log-out" ios="ios-log-out" md="md-log-out" item-left></ion-icon>
+    Logout Google
+  </button>

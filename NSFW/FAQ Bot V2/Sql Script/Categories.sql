@@ -1,0 +1,16 @@
+insert into dbo.categories(category_id,category_name, category_image) values
+('1','Install, upgrade, & activate','http://cuongurus.tk/images/Desktop.png'),
+('2','Get started','http://cuongurus.tk/images/Bulb.png'),
+('3','Microsoft account','http://cuongurus.tk/images/User.png'),
+('4','Store','http://cuongurus.tk/images/Store.png'),
+('5','Apps on Windows 10','http://cuongurus.tk/images/Application.png'),
+('6','Connectivity','http://cuongurus.tk/images/Wifi.png'),
+('7','Microsoft Edge','http://cuongurus.tk/images/Edge.png'),
+('8','Cortana & search','http://cuongurus.tk/images/Search.png'),
+('9','Gaming & Xbox','http://cuongurus.tk/images/Game.png'),
+('10','Devices & drivers','http://cuongurus.tk/images/Printer.png'),
+('11','Repair & recovery','http://cuongurus.tk/images/Settings.png'),
+('12','Syncing & saving','http://cuongurus.tk/images/Cloud.png'),
+('13','Security & privacy','http://cuongurus.tk/images/Lock.png'),
+('14','Email & communication','http://cuongurus.tk/images/Mail.png'),
+('15','Ease of Access','http://cuongurus.tk/images/Accessibility.png');
