@@ -7,7 +7,9 @@
 - <b>Đề tài : Làm trò chơi học ngoại ngữ, học vui bằng Construct2</b>
 
 - <b>Link ứng dụng</b> : http://n2qt.somee.com/N2QT/
-
+- <b>Cài đặt ứng dụng</b> :
+	+ link: https://www.scirra.com/construct2/releases
+	+ chọn phiên bản cài đặt để dowload về ,sau khi cài đặt xong .Mở phần mềm ,chọn File->Open-> File đuôi capx (có trong thư mục N2QT) .Chọn run để chạy ứng dụng.
 - <b>Mô tả ứng dụng</b> :
 ![capture](https://cloud.githubusercontent.com/assets/16796548/20435438/af2fb3b2-adde-11e6-8256-bd6e3f91d968.JPG)
 	+ Đây là game ứng dụng học tiếng anh. Làm lại từ một game trên sachmem.vn bằng công cụ Construct 2.
