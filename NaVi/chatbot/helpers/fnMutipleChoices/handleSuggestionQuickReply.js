@@ -10,9 +10,24 @@ module.exports = function (recipientId, payload, event) {
             rightAnswer = payload.split('_')[3],
             answerToCompare = rightAnswer.split('.')[1].substring(1);
         if (userAnswer == answerToCompare) {
-            sendFunctions.sendTextMessage(recipientId, 'Chính xác! Đang tải câu hỏi tiếp theo...', function () {
-                // send new question
-                require('../fnMutipleChoices/sendQuestion')(recipientId);
+            models.UnlearnedQuestionUser.update({
+                facebookId: recipientId
+            }, {
+                $pull: {
+                    unlearnedQuestions: {
+                        questionId: qId
+                    }
+                }
+            }).exec(function (err) {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    sendFunctions.sendTextMessage(recipientId, 'Chính xác! Đang tải câu hỏi tiếp theo...', function () {
+                        // send new question
+                        require('../fnMutipleChoices/sendQuestion')(recipientId);
+                    });
+                }
             });
         }
         else {

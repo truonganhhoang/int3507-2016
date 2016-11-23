@@ -104,15 +104,15 @@ var importQuestion = function (questions, callback) {
                     choices: [
                         {
                             text: questions[i][2],
-                            isAnswer: questions[i][5] == 'A'
+                            isAnswer: questions[i][5].trim() == 'A'
                         },
                         {
                             text: questions[i][3],
-                            isAnswer: questions[i][5] == 'B'
+                            isAnswer: questions[i][5].trim() == 'B'
                         },
                         {
                             text: questions[i][4],
-                            isAnswer: questions[i][5] == 'C'
+                            isAnswer: questions[i][5].trim() == 'C'
                         }
                     ]
                 });
