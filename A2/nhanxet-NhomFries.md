@@ -1,8 +1,5 @@
 # Nhận xét nhóm Fries - Sản phẩm Edoo
-
-<<<<<<< HEAD
 ## Góc độ người dùng
-
 *Ưu điểm*
 
 - Trang web chạy tốt, giao diện đẹp, thu hút người dùng
@@ -27,14 +24,12 @@
 - Phần README trình bày ổn, giới thiệu cụ thể được các chức năng của trang web và công nghệ sử dụng
 
 *Nhược điểm*
-- chưa có hướng dân để người phát triển sau này hiểu được và phát triển trang web của bạn
+- chưa có hướng dân để người phát triển sau này hiểu được và phát triển trang web của bạn.
 
-=======
 ## Người sử dụng
 - Giao diện đẹp.
 - Dễ sử dụng.
 - Có ứng dụng thực tế.
->>>>>>> parent of 4d470de... UpdateBaiNhanXet
 
 ## Người phát triển
 - Nhóm chưa cập nhật tài liệu.

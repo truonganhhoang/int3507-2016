@@ -1,8 +1,6 @@
 ﻿# Nhận xét nhóm Duo - Sản phẩm sách mềm
-<<<<<<< HEAD
 ## Góc độ người dùng
 *Ưu điểm*
-
 - ứng dụng chạy tốt, giao diện đẹp
 - Dễ sử dụng, dễ cài đăt
 - Hỗ trợ được người dùng trong việc học từ mới và kiểm tra lại các từ đã học.
@@ -46,4 +44,4 @@
 
 ## Đóng góp ý kiến
 - Phát triển mở rộng các dạng bài tập và vốn từng vựng.
->>>>>>> parent of 4d470de... UpdateBaiNhanXet
+
