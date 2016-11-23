@@ -31,7 +31,6 @@
 - Ứng dụng bị một số lỗi ở một sô hệ điều hành. Vì vậy mà cần nói rõ ứng dụng phù hợp với hệ điều hành nào 
 - Ứng dụng chạy lúc online và offline không có khác biệt
 - Cần bổ sung dữ liệu cho ứng dụng.
-=======
 
 ## Người dùng sản phẩm
 - Giao diện đẹp.
