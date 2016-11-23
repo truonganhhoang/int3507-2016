@@ -26,10 +26,3 @@
 *Nhược điểm*
 - chưa có hướng dân để người phát triển sau này hiểu được và phát triển trang web của bạn.
 
-## Người sử dụng
-- Giao diện đẹp.
-- Dễ sử dụng.
-- Có ứng dụng thực tế.
-
-## Người phát triển
-- Nhóm chưa cập nhật tài liệu.
