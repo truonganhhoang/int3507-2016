@@ -1,5 +1,6 @@
 # Nhận xét nhóm Fries - Sản phẩm Edoo
 
+<<<<<<< HEAD
 ## Góc độ người dùng
 
 *Ưu điểm*
@@ -28,4 +29,12 @@
 *Nhược điểm*
 - chưa có hướng dân để người phát triển sau này hiểu được và phát triển trang web của bạn
 
+=======
+## Người sử dụng
+- Giao diện đẹp.
+- Dễ sử dụng.
+- Có ứng dụng thực tế.
+>>>>>>> parent of 4d470de... UpdateBaiNhanXet
 
+## Người phát triển
+- Nhóm chưa cập nhật tài liệu.
