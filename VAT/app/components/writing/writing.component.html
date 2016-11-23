@@ -1,13 +1,41 @@
 <div class="container">
-	<h1>Writing</h1>
-	<div class="col-md-10">
-		<div class="jumbotron">
-			<div class="container">
-				<h1>Hello, world!</h1>
-				<p>Coming soon ...</p>
-				<p>
-					<a class="btn btn-primary btn-lg">Learn more</a>
-				</p>
+	<div class="col-md-3">
+		<div class="list-group">
+			<button (click)="gotoLesson(0)" class="list-group-item"><b>INTRODUCTION</b></button>
+			<button (click)="gotoLesson(1)" class="list-group-item"><b>ESSAY 1</b></button>
+			<button (click)="gotoLesson(2)" class="list-group-item"><b>ESSAY 2</b></button>
+			<button (click)="gotoLesson(3)" class="list-group-item"><b>ESSAY 3</b></button>
+			<button (click)="gotoLesson(4)" class="list-group-item"><b>ESSAY 4</b></button>
+			<button (click)="gotoLesson(5)" class="list-group-item"><b>ESSAY 5</b></button>
+		</div>
+	</div>
+	<div class="col-md-9">
+		<div *ngIf="param == 0">
+			<!-- Introduction -->
+			<h4>English Sample Essays:</h4>
+			<p>Learning to write well is a skill, like any other. This ability is important not only in the TOEIC, but also in their academic and professional career. TOEIC writing section consists of two parts:</p>
+			<p>Integrated newsroom, which includes reading, listening and then write an article summary / comparison of 250 words in 20 minutes</p>
+			<p>Freelance writing, which is to write an essay of four to five paragraph of 300-350 words in 30 minutes.</p>
+			<p>The following tests TOEIC free sample illustrating how to get a high score on the writing section of the iBT independent. In reading through the essays, you can learn to:</p>
+			<ul>
+				<li>Develop any topic into a well organized, the logical answer</li>
+				<li>Use synonyms to paraphrase the question</li>
+				<li>Use a variety of sentence structures and grammatical forms</li>
+				<li>Start with a simple introduction, strong</li>
+				<li>Creating body paragraphs which flow logically</li>
+				<li>Develop unity by linking the body paragraphs</li>
+				<li>End to a memorable conclusion</li>
+			</ul>
+			<h4>References: <a href="http://englishtestprepreview.com/" target="_blank">englishtestprepreview.com/</a></h4> 
+		</div>
+		<div *ngFor=" let question of questions">
+			<div *ngIf="question.id == param">
+				<p>{{question.question}}</p>
+				<button (click)="hasFinish()" class="btn btn-md btn-success">Finish</button>
+				<br><br>
+				<h4 *ngIf="finished">Sample essay answer:</h4>
+				<textarea *ngIf="finished" class="form-control" rows="20">{{question.answer}}</textarea>
+				<br><br>
 			</div>
 		</div>
 	</div>
