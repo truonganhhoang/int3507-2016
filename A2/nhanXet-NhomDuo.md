@@ -16,6 +16,7 @@
 
 - Phần trả lời các câu hỏi nên giới hạn số lượng chữ và cần có sự gợi ý để người dùng có thể dễ dàng trả lời câu hơn cũng như hạn chế một câu có nhiều đáp án.
 - Cần bổ sung các gợi ý cho ứng dụng.
+
 ----
 ##Góc độ bên trong
 
