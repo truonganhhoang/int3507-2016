@@ -3,21 +3,22 @@
 #Ưu điểm
 
 - Đã release ứng dụng thực tế
-- giao diện welcome đẹp
+- giao diện đẹp, dễ làm quen và sử dụng
 
 #Tồn tại
 
-- Không có hướng dẫn sử dụng cho người mới bắt đầu --> không đăng nhập được
+- Cần có hướng dẫn đăng nhập cho người dùng mới bắt đầu(account và password là gì?)
 
 #Về chất lượng bên trong sản phẩm, mã nguồn, tài liệu hướng dẫn phát triển
 
 #Ưu điểm
-
+- Cấu trúc project rõ ràng
+- Hướng dẫn đầy đủ
+- Có thể tiếp tục phát triển 
 
 #Tồn tại
 - 
-- Chưa cập nhật tài liệu nên không thể cài đặt cũng như không thể hiểu về cấu trúc project
 
 #Góp ý từ nhóm nhận xét
 - Bổ sung hướng dẫn sử dụng cho người dùng
-- Cần cập nhật tài liệu hướng dẫn cài đặt cũng như mô tả cấu trúc project
+- Cập nhật chức năng push thông báo cho người dùng
