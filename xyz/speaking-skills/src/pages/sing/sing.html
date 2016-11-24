@@ -39,6 +39,7 @@
 <!--   Kết quả tìm kiếm -->
   <div>
     <div *ngIf="!loading">
+      <div *ngIf="!noResult"><span style="float:right; font-size: 12px;">20 results</span></div>
       <ion-list>
         <ion-item *ngFor="let video of videos" (click)="playVideo(video)" >
           <ion-thumbnail item-left>
@@ -47,11 +48,11 @@
           <h2>{{video.snippet.title}}</h2>
           <p>{{video.snippet.channelTitle}}</p>
         </ion-item>
-        <ion-item *ngIf="noResult"> No result</ion-item>
+        <div *ngIf="noResult"><span style="float:right; font-size: 12px;">0 result</span></div>
       </ion-list>
     </div>
     <div *ngIf="loading">
-        <loading-indicator></loading-indicator>
+      <loading-indicator></loading-indicator>
     </div>
   </div>
 </ion-content>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { YtbSearchService } from '../../services/ytbsearch.service';
 import { VideoPlayer } from '../video-player/video-player';
-import {LoadingIndicator, LoadingPage} from '../../components/loading-indicator/loading-indicator';
+import { LoadingPage } from '../../components/loading-indicator/loading-indicator';
 
 /*
   Generated class for the Sing page.
@@ -33,6 +33,7 @@ export class Sing extends LoadingPage implements OnInit {
   ngOnInit() {
     this.ytbSearchService.getTopVideos().then(res => {
       this.videos = res['items'];
+      this.noResult = false;
       this.ready();
     })
   }
@@ -42,6 +43,7 @@ export class Sing extends LoadingPage implements OnInit {
     this.standby();
     if (this.myQuery == '' || this.myQuery == null) {
       this.ready();
+      this.noResult = true;
       return;
     }
    	this.ytbSearchService.getVideos(this.myQuery + ' ' + this.singType).then(res => {
