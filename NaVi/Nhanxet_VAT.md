@@ -2,7 +2,7 @@
 
 ## 1. Chất lượng sản phẩm ở góc độ người dùng
 
-  # Ưu điểm :
+# Ưu điểm :
   
   - Ý tưởng trang web học tiếng Anh là thiết thực và rất hữu ích.
   - Giao diện đơn giản, trong sáng dễ nắm bắt.
@@ -28,7 +28,7 @@
   
 ## 2. Chất lượng sản phẩm bên trong (mã nguồn, tài liệu hướng dẫn).
 
-  # Ưu điểm :
+# Ưu điểm :
   
   - Mã nguồn đúng chuẩn, rõ ràng, dễ hiểu.
   - Có khả năng mở rộng và phát triển thêm.

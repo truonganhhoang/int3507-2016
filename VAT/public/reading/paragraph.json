@@ -1,0 +1,1091 @@
+[
+	{
+	"id": 1,
+	"paragraph": "People living today in the northwestern state of Washington who have many sources of news in addition to newspapers must stretch their imaginations to understand the importance of the press during much of the state's history. Beginning in 1852 with The Cohumblan. the first paper in (5) Washington Territory, newspapers served to connect settlers in frontier communities with each other and with the rnajor events of their times. Unlike many mid-century papers, The Columbian, published every Saturday in Olympia, one of Washington's larger towns, was \"neutral in politics,\" meaning that it was not the organ of a particular political party or (10) religious group. For its first few years, it was the only newspaper in the territory, but during the following decades, enterprising Washingtonians founded many other papers. Few of these papers lasted long. Until the turn of the century, most were the production of an individual editor, who might begin with insufficient capital or fail to attract (15) a steady readership. Often working with no staff at all, these editors wrote copy, set type, delivered papers, oversaw billing, and sold advertising. Their highly personal journals reflected their own tastes, politics, and known as the \"Oregon style\"--graphic, torrid, and potentially libelous. Early newspapers were thick with print, carrying no illustrations or (20) cartoons. Advertising was generally confined to the back pages and simply listed commodities received by local stores. Toward the end of the century, newspapers in Washington began to carry national advertising, especially from patent medicine companies, which bought space from agencies that brokered ads in papers all over the country. By 1900, (25) Washington boasted 19 daily and 176 weekly papers. Especially in the larger cities, they reflected less the personal opinions of the editor than the interests of the large businesses they had become. They subscribed to the Associated Press and United Press news services, and new technology permitted illustrations. Concentrating on features, crime reporting, and (30) sensationalism, they imitated the new mass-circulation papers that William Randolph Hearst and Joseph Pulitzer were making popular throughout the United States.",
+	"questions": [
+		{
+			"id": 1,
+			"title": "1. What does the passage mainly discuss?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. Ways in which various newspapers were advertised in Washington."
+				},
+				{
+					"value": "B",
+					"text": "B. The history of newspapers in Washington."
+				},
+				{
+					"value": "C",
+					"text": "C. Editors of the first Washington newspapers."
+				},
+				{
+					"value": "D",
+					"text": "D. The illustrations in early Washington newspapers."
+				}
+			],
+			"correct_answer": "B"
+		},
+		{
+			"id": 2,
+			"title": "2. What does the passage imply about early Washington newspapers?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. People relied on them as their primary source of news."
+				},
+				{
+					"value": "B",
+					"text": "B. They contained important historical articles."
+				},
+				{
+					"value": "C",
+					"text": "C. They were not as informative as today's newspapers."
+				},
+				{
+					"value": "D",
+					"text": "D. They rarely reflected the views of any particular religion."
+				}
+			],
+			"correct_answer": "C"
+		},
+		{
+			"id": 3,
+			"title": "3.  In line 9, the word “it” refers to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. The Columbian."
+				},
+				{
+					"value": "B",
+					"text": "B. Olympia."
+				},
+				{
+					"value": "C",
+					"text": "C. religious group."
+				},
+				{
+					"value": "D",
+					"text": "D. political party ."
+				}
+			],
+			"correct_answer": "A"
+		},
+		{
+			"id": 4,
+			"title": "4. In line 16, the word \"oversaw\" is closest in meaning to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. estimated."
+				},
+				{
+					"value": "B",
+					"text": "B. supervised."
+				},
+				{
+					"value": "C",
+					"text": "C. collected."
+				},
+				{
+					"value": "D",
+					"text": "D. provided."
+				}
+			],
+			"correct_answer": "A"
+		},
+		{
+			"id": 5,
+			"title": "5. In line 16, the word \"'delivered'\" is closest in meaning to ",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. confirmed."
+				},
+				{
+					"value": "B",
+					"text": "B. compared."
+				},
+				{
+					"value": "C",
+					"text": "C. questioned."
+				},
+				{
+					"value": "D",
+					"text": "D. presented."
+				}
+			],
+			"correct_answer": "D"
+		},
+		{
+			"id" : 6,
+			"title": "6. According to the passage, which of the following was true of curly Washington newspapers?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. Most were owned by part-time editors who worked at other jobs."
+				},
+				{
+					"value": "B",
+					"text": "B. Most were run by editors who had little or no earlier newspaper experience."
+				},
+				{
+					"value": "C",
+					"text": "C. Most received financial support from the town in which they were published."
+				},
+				{
+					"value": "D",
+					"text": "D. Most stayed in business for only a short while."
+				}
+			],
+			"correct_answer": "D"
+		},
+		{
+			"id": 7,
+			"title": "7. What does the author mention as typical of early newspaper editors from Washington?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. Their capital grew rapidly."
+				},
+				{
+					"value": "B",
+					"text": "B. Their political opinions changed with time."
+				},
+				{
+					"value": "C",
+					"text": "C. They had many types of responsibilities."
+				},
+				{
+					"value": "D",
+					"text": "D. They were generally members of the same political party."
+				}
+			],
+			"correct_answer": "C"
+		},
+		{
+			"id": 8,
+			"title": "8.  Which of the following can be inferred from the passage about advertising in Washington newspapers of the mid-nineteenth century?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. It contained information about patent medicines."
+				},
+				{
+					"value": "B",
+					"text": "B. It focused on local rather than national products."
+				},
+				{
+					"value": "C",
+					"text": "C. It was printed on entire pages distributed in local stores."
+				},
+				{
+					"value": "D",
+					"text": "D. It was the only part of the paper containing cartoons."
+				}
+			],
+			"correct_answer": "B"
+		},
+		{
+			"id": 9,
+			"title": "9. In line 25, the word \"boasted\" is closest in meaning to ",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. planned."
+				},
+				{
+					"value": "B",
+					"text": "B. financed."
+				},
+				{
+					"value": "C",
+					"text": "C. was forced to close."
+				},
+				{
+					"value": "D",
+					"text": "D. took pride in having."
+				}
+			],
+			"correct_answer": "B"
+		}
+	]
+	},
+	{
+	"id": 2,
+	"paragraph": "All mammals feed their young. Beluga whale mothers, for example, nurse their calves for some twenty months, until they are about to give birth again and their young are able to find their own food. The behavior of feeding of the young is built into the reproductive system. It is a (5)nonelective part of parental care and the defining feature of a mammal, the most important thing that mammals-- whether marsupials, platypuses, spiny anteaters, or placental mammals -- have in common.But not all animal parents, even those that tend their offspring to the point of hatching or birth, feed their young. Most egg -guarding fish do not, (10) for the simple reason that their young are so much smaller than the parents and eat food that is also much smaller than the food eaten by adults. In reptiles, the crocodile mother protects her young after they have hatched and takes them down to the water, where they will find food, but she does not actually feed them. Few insects feed their young after (15)hatching, but some make other arrangement, provisioning their cells and nests with caterpillars and spiders that they have paralyzed with their venom and stored in a state of suspended animation so that their larvae might have a supply of fresh food when they hatch. For animals other than mammals, then, feeding is not intrinsic to (20)parental care. Animals add it to their reproductive strategies to give them an edge in their lifelong quest for descendants. The most vulnerable moment in any animal's life is when it first finds itself completely on its own, when it must forage and fend for itself. Feeding postpones that moment until a young animal has grown to such a size that it is better able (25) to cope. Young that are fed by their parents become nutritionally independent at a much greater fraction of their full adult size. And in the meantime those young are shielded against the vagaries of fluctuating of difficult-to-find supplies. Once a species does take the step of feeding its young, the young become totally dependent on the extra effort. If both (30)parents are removed, the young generally do no survive.",
+	"questions": [
+		{
+			"id": 1,
+			"title": "1. What does the passage mainly discuss?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. The care that various animals give to their offspring."
+				},
+				{
+					"value": "B",
+					"text": "B. The difficulties young animals face in obtaining food."
+				},
+				{
+					"value": "C",
+					"text": "C. The methods that mammals use to nurse their young."
+				},
+				{
+					"value": "D",
+					"text": "D. The importance among young mammals of becoming independent."
+				}
+			],
+			"correct_answer": "B"
+		},
+		{
+			"id": 2,
+			"title": "2. The author lists various animals in line 6 to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. contrast the feeding habits of different types of mammals"
+				},
+				{
+					"value": "B",
+					"text": "B. describe the process by which mammals came to be defined"
+				},
+				{
+					"value": "C",
+					"text": "C. emphasize the point that every type of mammal feeds its own young"
+				},
+				{
+					"value": "D",
+					"text": "D. explain why a particular feature of mammals is nonelective"
+				}
+			],
+			"correct_answer": "C"
+		},
+		{
+			"id": 3,
+			"title": "3. The word \"tend\" in line 8 is closest in meaning to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. sit on"
+				},
+				{
+					"value": "B",
+					"text": "B. move "
+				},
+				{
+					"value": "C",
+					"text": "C. notice "
+				},
+				{
+					"value": "D",
+					"text": "D. care for"
+				}
+			],
+			"correct_answer": "A"
+		},
+		{
+			"id": 4,
+			"title": "4. What can be inferred from the passage about the practice of animal parents feeding their young?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. It is unknown among fish."
+				},
+				{
+					"value": "B",
+					"text": "B. It is unrelated to the size of the young."
+				},
+				{
+					"value": "C",
+					"text": "C. It is dangerous for the parents."
+				},
+				{
+					"value": "D",
+					"text": "D. It is most common among mammals."
+				}
+			],
+			"correct_answer": "A"
+		},
+		{
+			"id": 5,
+			"title": "5. The word \"provisioning\" in line 15 is closest in meaning to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. supplying "
+				},
+				{
+					"value": "B",
+					"text": "B. preparing"
+				},
+				{
+					"value": "C",
+					"text": "C. building"
+				},
+				{
+					"value": "D",
+					"text": "D. expanding"
+				}
+			],
+			"correct_answer": "D"
+		},
+		{
+			"id" : 6,
+			"title": "6. According to the passage, how do some insects make sure their young have food?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. By storing food near their young."
+				},
+				{
+					"value": "B",
+					"text": "B. By locating their nests or cells near spiders and caterpillars."
+				},
+				{
+					"value": "C",
+					"text": "C. By searching for food some distance from their nest."
+				},
+				{
+					"value": "D",
+					"text": "D. By gathering food from a nearby water source."
+				}
+			],
+			"correct_answer": "D"
+		},
+		{
+			"id": 7,
+			"title": "7. The word \"edge\" in line 21 is closest in meaning to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. opportunity "
+				},
+				{
+					"value": "B",
+					"text": "B. advantage"
+				},
+				{
+					"value": "C",
+					"text": "C. purpose"
+				},
+				{
+					"value": "D",
+					"text": "D. rest"
+				}
+			],
+			"correct_answer": "C"
+		},
+		{
+			"id": 8,
+			"title": "8. The word \"it\" in line 24 refers to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. Feeding"
+				},
+				{
+					"value": "B",
+					"text": "B. moment"
+				},
+				{
+					"value": "C",
+					"text": "C. young animal"
+				},
+				{
+					"value": "D",
+					"text": "D. size"
+				}
+			],
+			"correct_answer": "B"
+		},
+		{
+			"id": 9,
+			"title": "9. According to the passage, animal young are most defenseless when",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. their parents are away searching for food"
+				},
+				{
+					"value": "B",
+					"text": "B. their parents have many young to feed"
+				},
+				{
+					"value": "C",
+					"text": "C. they are only a few days old"
+				},
+				{
+					"value": "D",
+					"text": "D. they first become independent"
+				}
+			],
+			"correct_answer": "B"
+		},
+		{
+			"id": 10,
+			"title": "10.  The  word  \"shielded\"  in  line  27  is  closest  in meaning to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. raised"
+				},
+				{
+					"value": "B",
+					"text": "B. protected"
+				},
+				{
+					"value": "C",
+					"text": "C. hatched"
+				},
+				{
+					"value": "D",
+					"text": "D. valued"
+				}
+			],
+			"correct_answer": "B"
+		}
+	]
+	},
+	{
+	"id": 3,
+	"paragraph": "The term \"folk song\" has been current for over a hundred years, but there is still a good deal of disagreement as to what it actually means. The definition provided by the International Folk Music Council states that folk music is the music of ordinary people, which is passed on from person to person by being listened to rather than learned from (5) the printed page. Other factors that help shape a folk song include: continuity (many performances over a number of years); variation (changes in words and melodies either through artistic interpretation or failure of memory); and selection (the acceptance of a song by the community in which it evolves). When songs have been subjected to these processes their origin is usually impossible (10) to trace. For instance, if a farm laborer were to make up a song and sing it to a-couple of friends who like it and memorize it, possibly when the friends come to sing it themselves one of them might forget some of the words and make up new ones to fill the gap, while the other, perhaps more artistic, might add a few decorative touches to the tune and improve a couple of lines of text. If this happened a few times there would be many (15) different versions, the song's original composer would be forgotten, and the song would become common property. This constant reshaping and re-creation is the essence of folk music. Consequently, modem popular songs and other published music, even though widely sung by people who are not professional musicians, are not considered folk music. The music and words have been set by a printed or recorded source, limiting scope for (20) further artistic creation. These songs' origins cannot be disguised and therefore they belong primarily to the composer and not to a community. The ideal situation for the creation of folk music is an isolated rural community. In such a setting folk songs and dances have a special purpose at every stage in a person's life, from childhood to death. Epic tales of heroic deeds, seasonal songs relating to calendar events, and occupational songs are also likely to be sung.",
+	"questions": [
+		{
+			"id": 1,
+			"title": "1. What does the passage mainly discuss?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. Themes commonly found in folk music"
+				},
+				{
+					"value": "B",
+					"text": "B. Elements that define folk music"
+				},
+				{
+					"value": "C",
+					"text": "C. Influences of folk music on popular music"
+				},
+				{
+					"value": "D",
+					"text": "D. The standards of the International Folk Music Council"
+				}
+			],
+			"correct_answer": "B"
+		},
+		{
+			"id": 2,
+			"title": "2. Which of the following statements about the term \"folk song\" is supported by the passage?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. It has been used for several centuries."
+				},
+				{
+					"value": "B",
+					"text": "B. The International Folk Music Council invented it"
+				},
+				{
+					"value": "C",
+					"text": "C. It is considered to be out-of-date."
+				},
+				{
+					"value": "D",
+					"text": "D. There is disagreement about its meaning."
+				}
+			],
+			"correct_answer": "C"
+		},
+		{
+			"id": 3,
+			"title": "3. The word \"it\" in line 8 refers to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. community"
+				},
+				{
+					"value": "B",
+					"text": "B. song"
+				},
+				{
+					"value": "C",
+					"text": "C. acceptance"
+				},
+				{
+					"value": "D",
+					"text": "D. memory"
+				}
+			],
+			"correct_answer": "A"
+		},
+		{
+			"id": 4,
+			"title": "4. Which of the following is NOT mentioned in the passage as a characteristic of the typical folk song?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. It is constantly changing over time."
+				},
+				{
+					"value": "B",
+					"text": "B. It is passed on to other people by being performed."
+				},
+				{
+					"value": "C",
+					"text": "C. It contains complex musical structures."
+				},
+				{
+					"value": "D",
+					"text": "D. It appeals to many people."
+				}
+			],
+			"correct_answer": "A"
+		},
+		{
+			"id": 5,
+			"title": "5. The word \"subjected\" in line 9 is closest in meaning to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. reduced"
+				},
+				{
+					"value": "B",
+					"text": "B. modified"
+				},
+				{
+					"value": "C",
+					"text": "C. exposed"
+				},
+				{
+					"value": "D",
+					"text": "D. imitated"
+				}
+			],
+			"correct_answer": "D"
+		},
+		{
+			"id" : 6,
+			"title": "6. The author mentions the farm laborer and his friends (lines 10-14) in order to do which of the following?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. Explain how a folk song evolves over time"
+				},
+				{
+					"value": "B",
+					"text": "B. Illustrate the importance of music to rural workers"
+				},
+				{
+					"value": "C",
+					"text": "C. Show how subject matter is selected for a folk song"
+				},
+				{
+					"value": "D",
+					"text": "D. Demonstrate how a community, chooses a folk song"
+				}
+			],
+			"correct_answer": "D"
+		},
+		{
+			"id": 7,
+			"title": "7. According to the passage, why would the original composers of folk songs be forgotten?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. Audiences prefer songs composed by professional musicians."
+				},
+				{
+					"value": "B",
+					"text": "B. Singers dislike the decorative touches in folk song tunes."
+				},
+				{
+					"value": "C",
+					"text": "C. Numerous variations of folk songs come to exist at the same time."
+				},
+				{
+					"value": "D",
+					"text": "D. Folk songs are not considered an important form of music."
+				}
+			],
+			"correct_answer": "C"
+		},
+		{
+			"id": 8,
+			"title": "8. The word \"essence\" in line 16 is closest in meaning to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. basic nature"
+				},
+				{
+					"value": "B",
+					"text": "B. growing importance"
+				},
+				{
+					"value": "C",
+					"text": "C. full extent"
+				},
+				{
+					"value": "D",
+					"text": "D. first phase"
+				}
+			],
+			"correct_answer": "B"
+		},
+		{
+			"id": 9,
+			"title": "9. The author mentions that published music is not considered to be folk music because",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. the original composer can be easily identified"
+				},
+				{
+					"value": "B",
+					"text": "B. the songs attract only the young people in a community"
+				},
+				{
+					"value": "C",
+					"text": "C. the songs are generally performed by professional singers"
+				},
+				{
+					"value": "D",
+					"text": "D. the composers write the music in rural communities"
+				}
+			],
+			"correct_answer": "B"
+		}
+	]
+	},
+	{
+	"id": 4,
+	"paragraph": "Composers today use a wider variety of sounds than ever before, including many that were once considered undesirable noises. Composer Edgard Varese (1883-1965) called thus the \"liberation of sound...the right to make music with any and all sounds.\" (5) Electronic music, for example—made with the aid of computers, synthesizers, and electronic instruments— may include sounds that in the past would not have been considered musical. Environmental sounds, such as thunder, and electronically generated hisses and blips can be recorded, manipulated, and then incorporated into a musical composition. But composers also draw novel sounds from voices and nonelectronic instruments. Singers may be asked to scream, laugh, groan, sneeze, or to sing phonetic sounds rather than words. Wind and string players may lap or scrape their instruments. (14) A brass or woodwind player may hum while playing, to produce two pitches at once; a pianist may reach inside the piano to pluck a string and then run a metal blade along it. In the music of the Western world, the greatest expansion and experimentation have involved percussion instruments, which outnumber strings and winds in many recent compositions. (19) Traditional percussion instruments are struck with new types of beaters; and instruments that used to be couriered unconvennonal in Western music—tom-toms, bongos, slapsticks, maracas—are widelv used. In the search for novel sounds, increased use has been made in Western music of Microtones. Non-Western music typically divides and interval between two pitches more finely than Western music does, thereby producing a greter number of distinct tones, or micro tones, within the same interval. Composers such as Krzysztof Pmderecki create sound that borders on electronic noise through tone clusters— closely spaced tones played together and heard as a mass, block, or band of sound. The directional aspect of sound has taken on new importance as well Loudspeakers or groups of instruments may be placed at opposite ends of the stage, in the balcony, or at the back and sides of the auditorium. (32) Because standard music notation makes no provision for many of these innovations, recent music scores may contain graphlike diagrams, new note shapes and symbols, and novel ways of arranging notation on the page.",
+	"questions": [
+		{
+			"id": 1,
+			"title": "1. What does the passage mainly discuss?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. The use of nontraditional sounds in contemporary music"
+				},
+				{
+					"value": "B",
+					"text": "B. How sounds are produced electronically"
+				},
+				{
+					"value": "C",
+					"text": "C. How standard musical notation has beer, adapted for nontraditional sounds"
+				},
+				{
+					"value": "D",
+					"text": "D. Several composers who have experimented with the electronic production of sound"
+				}
+			],
+			"correct_answer": "B"
+		},
+		{
+			"id": 2,
+			"title": "2. The word \"wider\" in one 1 is closest in meaning to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. more impressive"
+				},
+				{
+					"value": "B",
+					"text": "B. more distinctive"
+				},
+				{
+					"value": "C",
+					"text": "C. more controversial"
+				},
+				{
+					"value": "D",
+					"text": "D. more extensive"
+				}
+			],
+			"correct_answer": "C"
+		},
+		{
+			"id": 3,
+			"title": "3. The passage suggests that Edgard Varese is an example of a composer who",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. criticized electronic music as too noiselike"
+				},
+				{
+					"value": "B",
+					"text": "B. modified sonic of the electronic instruments he used in his music"
+				},
+				{
+					"value": "C",
+					"text": "C. believed that any sound could be used in music"
+				},
+				{
+					"value": "D",
+					"text": "D. wrote music with environmental themes"
+				}
+			],
+			"correct_answer": "A"
+		},
+		{
+			"id": 4,
+			"title": "4. The word \"it\" in line 16 refers to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. piano"
+				},
+				{
+					"value": "B",
+					"text": "B. string"
+				},
+				{
+					"value": "C",
+					"text": "C. blade"
+				},
+				{
+					"value": "D",
+					"text": "D. music"
+				}
+			],
+			"correct_answer": "A"
+		},
+		{
+			"id": 5,
+			"title": "5. According to the passage, which of the following types of instruments has played a role in much of the innovation in Western music?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. String"
+				},
+				{
+					"value": "B",
+					"text": "B. Percussion"
+				},
+				{
+					"value": "C",
+					"text": "C. Woodwind"
+				},
+				{
+					"value": "D",
+					"text": "D. Brass"
+				}
+			],
+			"correct_answer": "D"
+		},
+		{
+			"id" : 6,
+			"title": "6. The word \"thereby\" in line 24 is closest in meaning to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. in return for"
+				},
+				{
+					"value": "B",
+					"text": "B. in spite of"
+				},
+				{
+					"value": "C",
+					"text": "C. by the way"
+				},
+				{
+					"value": "D",
+					"text": "D. by that means"
+				}
+			],
+			"correct_answer": "D"
+		},
+		{
+			"id": 7,
+			"title": "7. According to the passage, Krzysziof Pendereckj is known for which of the following practices?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. Using tones that are clumped together"
+				},
+				{
+					"value": "B",
+					"text": "B. Combining traditional and nontradinonal instruments"
+				},
+				{
+					"value": "C",
+					"text": "C. Seating musicians in unusual areas of an auditorium"
+				},
+				{
+					"value": "D",
+					"text": "D. Playing Western music for non-Western audiences"
+				}
+			],
+			"correct_answer": "C"
+		},
+		{
+			"id": 8,
+			"title": "8. According to the passage, which of the following would be considered traditional elements of Western music?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. Microtones"
+				},
+				{
+					"value": "B",
+					"text": "B. Tom-toms and bongos"
+				},
+				{
+					"value": "C",
+					"text": "C. Pianos"
+				},
+				{
+					"value": "D",
+					"text": "D. Hisses"
+				}
+			],
+			"correct_answer": "B"
+		},
+		{
+			"id": 9,
+			"title": "9. In paragraph 3, the author mentions diagrams as an example of a new way to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. chart the history of innovation in musical notation"
+				},
+				{
+					"value": "B",
+					"text": "B. explain the logic of standard musical notation"
+				},
+				{
+					"value": "C",
+					"text": "C. design and develop electronic instruments"
+				},
+				{
+					"value": "D",
+					"text": "D. indicate how particular sounds should be produced."
+				}
+			],
+			"correct_answer": "B"
+		}
+	]
+	},
+	{
+	"id": 5,
+	"paragraph": "Glass fibers have a long history. The Egyptians made coarse fibers by 1600 B.C., and fibers survive as decorations on Egyptian pottery dating back to 375 B.C. During the Renaissance (fifteenth and sixteenth centuries A.D.), glassmakers from Venice used glass. (5) Fibers to decorate the surfaces of plain glass vessels. However, glassmakers guarded their secrets so carefully that no one wrote about glass fiber production until the early seventeenth century. (8) The eighteenth century brought the invention of \"spun glass\" fibers. Rene-Antoine de Reaumur, a French scientist, tried to make artificial feathers from glass. He made fibers by rotating a wheel through a pool of molten glass, pulling threads of glass where the hot thick liquid stuck to the wheel. His fibers were short and fragile, but he predicted that spun glass fibers as thin as spider silk would be flexible and could be woven into fabric. (14) By the start of the nineteenth century, glassmakers learned how to make longer, stronger fibers by pulling them from molten glass with a hot glass tube. Inventors wound the cooling end of the thread around a yarn reel, then turned the reel rapidly to pull more fiber from the molten glass. Wandering tradespeople began to spin glass fibers at fairs, making decorations and ornaments as novelties for collectors, but this material was of little practical use; the fibers were brittle, ragged, and no longer than ten feet, the circumference of the largest reels. By the mid-1870's, however, the best glass fibers were finer than silk and could be woven into fabrics or assembled into imitation ostrich feathers to decorate hats. Cloth of white spun glass resembled silver; fibers drawn from yellow-orange glass looked golden. (25) Glass fibers were little more than a novelty until the 1930's, when their thermal and electrical insulating properties were appreciated and methods for producing continuous filaments were developed. In the modern manufacturing process, liquid glass is fed directly from a glass-melting furnace into a bushing, a receptacle pierced with hundreds of fine nozzles, from which the liquid issues in fine streams. As they solidify, the streams of glass are gathered into a single strand and wound onto a reel.",
+	"questions": [
+		{
+			"id": 1,
+			"title": "1. Which of the following aspects of glass fiber does the passage mainly discuss?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. The major developments in its production"
+				},
+				{
+					"value": "B",
+					"text": "B. Its relationship with pottery making"
+				},
+				{
+					"value": "C",
+					"text": "C. Important inventors in its long history"
+				},
+				{
+					"value": "D",
+					"text": "D. The variety of its uses in modern Industry"
+				}
+			],
+			"correct_answer": "B"
+		},
+		{
+			"id": 2,
+			"title": "2. The word \"coarse\" in line 1 is closest in meaning to ",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. decorative"
+				},
+				{
+					"value": "B",
+					"text": "B. natural"
+				},
+				{
+					"value": "C",
+					"text": "C. crude"
+				},
+				{
+					"value": "D",
+					"text": "D. weak"
+				}
+			],
+			"correct_answer": "C"
+		},
+		{
+			"id": 3,
+			"title": "3. Why was there nothing written about the making of Renaissance glass fibers until the seventeenth century?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. Glassmakers were unhappy with the quality of the fibers they could make."
+				},
+				{
+					"value": "B",
+					"text": "B. Glassmakers did not want to reveal the methods they used."
+				},
+				{
+					"value": "C",
+					"text": "C. Few people were interested in the Renaissance style of glass fibers."
+				},
+				{
+					"value": "D",
+					"text": "D. Production methods had been well known for a long time."
+				}
+			],
+			"correct_answer": "A"
+		},
+		{
+			"id": 4,
+			"title": "4. According to the passage, using a hot glass tube rather than a wheel to pull fibers from molten glass made the fibers",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. quicker to cool"
+				},
+				{
+					"value": "B",
+					"text": "B. harder to bend"
+				},
+				{
+					"value": "C",
+					"text": "C. shorter and more easily broken"
+				},
+				{
+					"value": "D",
+					"text": "D. longer and more durable"
+				}
+			],
+			"correct_answer": "A"
+		},
+		{
+			"id": 5,
+			"title": "5. The phrase \"this material\" in line 19 refers to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. glass fibers"
+				},
+				{
+					"value": "B",
+					"text": "B. decorations"
+				},
+				{
+					"value": "C",
+					"text": "C. ornaments"
+				},
+				{
+					"value": "D",
+					"text": "D. novelties for collectors"
+				}
+			],
+			"correct_answer": "D"
+		},
+		{
+			"id" : 6,
+			"title": "6. The word \"brittle\" in line 20 is closest in meaning to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. easily broken"
+				},
+				{
+					"value": "B",
+					"text": "B. roughly made"
+				},
+				{
+					"value": "C",
+					"text": "C. hairy"
+				},
+				{
+					"value": "D",
+					"text": "D. shiny"
+				}
+			],
+			"correct_answer": "D"
+		},
+		{
+			"id": 7,
+			"title": "7. The production of glass fibers was improved in the nineteenth century by which of the following",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. Adding silver to the molten glass"
+				},
+				{
+					"value": "B",
+					"text": "B. Increasing the circumference of the glass tubes"
+				},
+				{
+					"value": "C",
+					"text": "C. Putting silk thread in the center  of the fibers"
+				},
+				{
+					"value": "D",
+					"text": "D. Using yam reels"
+				}
+			],
+			"correct_answer": "C"
+		},
+		{
+			"id": 8,
+			"title": "8. The word \"appreciated\" in line 26 is closest in meaning to",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. experienced"
+				},
+				{
+					"value": "B",
+					"text": "B. recognized"
+				},
+				{
+					"value": "C",
+					"text": "C. explored"
+				},
+				{
+					"value": "D",
+					"text": "D. increased"
+				}
+			],
+			"correct_answer": "B"
+		},
+		{
+			"id": 9,
+			"title": "9. Which of the following terms is defined in the passage?",
+			"answers": [
+				{
+					"value": "A",
+					"text": "A. invention (line 8)"
+				},
+				{
+					"value": "B",
+					"text": "B. circumference (line 21)"
+				},
+				{
+					"value": "C",
+					"text": "C. manufacturing process (line 28)"
+				},
+				{
+					"value": "D",
+					"text": "D. bushing (line29)"
+				}
+			],
+			"correct_answer": "B"
+		}
+	]
+	}
+
+]

@@ -34,7 +34,7 @@ module.exports = function (recipientId, recipientMessageText, event) {
 
             let accuracy = rightWords * 100.00/answerTextSplittedToWords.length;
             let botReply = 'Đáp án là: \n"' + answerText + '".\nBạn làm đúng ' + accuracy.toFixed(1) + '% '
-                + '(' + rightWords + ' từ)';
+                + '(' + rightWords + ' từ). Các từ viết in hoa là các từ bạn nghe chưa đúng.';
             let messageData = {
                 recipient: {
                     id: recipientId

@@ -81,3 +81,10 @@ Bằng cách sử dụng các điều hướng có trên thanh Navigation, ngư�
 Câu lệnh sẽ biên dịch các cài đặt cần thiết để có thể triển khai lên host mà không gặp lỗi
 - Yêu cầu đã có tài khoản trên heroku
 - Hướng dẫn deploy lên heroku tại [đây](https://devcenter.heroku.com/articles/deploying-nodejs)
+
+### Định hướng phát triển:
+- Tiếp tục hoàn thành các skill Tiếng Anh: Speaking và Writing.
+- Bổ sung dữ liệu thật.
+- Định hướng website là nơi cung cấp các bài test, mini test phục vụ người dùng.
+- Nâng cao hiệu quả các bài test.
+- Bổ sung chức năng đăng nhập, lưu trữ dữ liệu người dùng.

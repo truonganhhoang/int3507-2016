@@ -16,26 +16,35 @@ class Core{
         
         $bot = new FbBotApp(self::FB_APP_TOKEN);
         $tangau = new Tangau($sender, $bot);
+        $room = new Room($sender, $bot);
+        $checkRoom = $room->check();
+		$checkTopic = $room->checkCommand($command);
         $check = $tangau->check();
 
         $in = preg_match('/^(tangau|batdau|in|ghepcap)$/', self::chuan_hoa($command));
         $out = preg_match('/^(end|out|ketthuc)$/', self::chuan_hoa($command));
         $huy = preg_match('/^(huy)$/', self::chuan_hoa($command));
 
-        if($check == 0 && $in)
+        if($checkTanGau == 0 && $in && !$checkRoom)
           $tangau->reg();
           //$bot->send(new Message($sender, "Cảm ơn bạn đã quan tâm!\nChức năng tán gẫu đang tạm đóng để bảo trì.\nChat help để xem các chức năng khác!"));
-        else if($check == 0 && $out)
+        else if($checkTanGau == 0 && $out && !$checkRoom)
             $bot->send(new Message($sender, "Bạn chưa đăng ký tán gẫu\nVui lòng chat Tán gẫu để bắt đầu!"));
-        else if($check == 1 && $in)
+        else if($checkTanGau == 1 && $in && !$checkRoom)
             $bot->send(new Message($sender, "Bạn đã đăng ký tán gẫu rồi\nVui lòng đợi được ghép cặp!"));
-        else if($check == 2 && $in)
+        else if($checkTanGau == 2 && $in && !$checkRoom)
             $bot->send(new Message($sender, "Bạn đã được ghép cặp rồi, còn đòi đăng ký gì nữa?"));
-        else if(($check == 2 || $check == 1) && $out)
+        else if(($checkTanGau == 2 || $check == 1) && $out && !$checkRoom)
             $tangau->out();
-        else if($check == 2)
+        else if($checkTanGau == 2 && !$checkRoom)
             $tangau->send($command, $image);
-        else {
+        else if(!$checkRoom && $checkTopic && !$checkTanGau)
+            $room->reg($command);
+        else if($checkRoom && $out && !$checkTanGau)
+            $room->out();
+		else if($checkRoom && !$checkTanGau){
+            $room->send($command);
+		} else {
             if($image){
                 $bot->send(new Message($sender, "Bot không nhận ảnh ngoài chức năng Tán gẫu!"));
             }

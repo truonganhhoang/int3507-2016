@@ -1,34 +1,67 @@
 <div class="container">
-	<div class="col-md-10">
-		<h2>Reading</h2>
-		<h4>This lesson will help you improve your English reading skills by choosing the correct answer to each following question.</h4>
-		<button (click)="gotoLesson(1)" class="btn btn-md btn-success">Lesson 1</button>
-		<button (click)="gotoLesson(2)" class="btn btn-md btn-success">Lesson 2</button>
-		<button (click)="gotoLesson(3)" class="btn btn-md btn-success">Lesson 3</button>
-		<button (click)="gotoLesson(4)" class="btn btn-md btn-success">Lesson 4</button>
-		<button (click)="gotoLesson(5)" class="btn btn-md btn-success">Lesson 5</button>
-		<div *ngIf="param">
-			<h1>Lesson {{param}}: Choose the correct answer</h1>
-			<hr>
-			<div *ngFor=" let question of questions">
-				<div *ngIf="question.id >= lower_limit && question.id <= upper_limit">
-					<h4><span *ngIf="question.status=='Right'" class="glyphicon glyphicon-ok" style="color: green"></span>
-					<span *ngIf="question.status && question.status!='Right'" class="glyphicon glyphicon-remove" style="color:red" ></span> {{question.question}}
-					</h4>
-					<div *ngIf="question.status && question.status!='Right'">
-						<p style="color:red"> {{question.status}}</p>
+	<h1>Reading</h1>
+	<h4>This lesson will help you improve your English reading skills by choosing the correct answer to each following question.</h4>
+	<div class="col-md-3">
+		<div class="list-group">
+			<button (click)="gotoLesson(1)" class="list-group-item"><b>LESSON 1</b></button>
+			<button (click)="gotoLesson(2)" class="list-group-item"><b>LESSON 2</b></button>
+			<button (click)="gotoLesson(3)" class="list-group-item"><b>LESSON 3</b></button>
+			<button (click)="gotoLesson(4)" class="list-group-item"><b>LESSON 4</b></button>
+			<button (click)="gotoLesson(5)" class="list-group-item"><b>LESSON 5</b></button>
+			<button (click)="advanced_gotoLesson(1)" class="list-group-item"><b>ADVANCED LESSON 1</b></button>
+			<button (click)="advanced_gotoLesson(2)" class="list-group-item"><b>ADVANCED LESSON 2</b></button>
+			<button (click)="advanced_gotoLesson(3)" class="list-group-item"><b>ADVANCED LESSON 3</b></button>
+			<button (click)="advanced_gotoLesson(4)" class="list-group-item"><b>ADVANCED LESSON 4</b></button>
+			<button (click)="advanced_gotoLesson(5)" class="list-group-item"><b>ADVANCED LESSON 5</b></button>
+		</div>
+	</div>
+	<div *ngIf="param" class="col-md-9">
+		<h2>Lesson {{param}}: Choose the correct answer</h2>
+		<hr>
+		<div *ngFor=" let question of questions">
+			<div *ngIf="question.id >= lower_limit && question.id <= upper_limit">
+				<h4><span *ngIf="question.status=='Right'" class="glyphicon glyphicon-ok" style="color: green"></span>
+				<span *ngIf="question.status && question.status!='Right'" class="glyphicon glyphicon-remove" style="color:red" ></span> {{question.question}}
+				</h4>
+				<div *ngIf="question.status && question.status!='Right'">
+					<p style="color:red"> {{question.status}}</p>
+				</div>
+				<div *ngFor=" let option of question.answer">
+					<div>
+						<input type="radio" (click)="saveStatus(question,option.value)" name="{{question.id}}">
+						{{option.text}}
 					</div>
-					<div *ngFor=" let option of question.answer">
+			  	</div>
+			</div>
+		</div>
+		<h4>Correct Answer: <b>{{ countCorrectAnswer}}</b></h4>
+		<button class="btn btn-md btn-success" (click)="check()">Check answer </button>
+		<br><br>
+	</div>
+	<div *ngIf="param_advanced" class="col-md-9">
+		<h2>Advanced Lesson {{param_advanced}}: Choose the correct answer</h2>
+		<hr>
+		<div *ngFor=" let question of advanced_questions">
+			<div *ngIf="question.id == param_advanced">
+				<p style="text-align: justify;">{{question.paragraph}}</p>
+				<div *ngFor=" let sub_question of question.questions">
+				<h4><span *ngIf="sub_question.status=='Right'" class="glyphicon glyphicon-ok" style="color: green"></span>
+					<span *ngIf="sub_question.status && sub_question.status!='Right'" class="glyphicon glyphicon-remove" style="color:red" ></span> {{sub_question.title}}
+					</h4>
+					<div *ngIf="sub_question.status && sub_question.status!='Right'">
+						<p style="color:red"> {{sub_question.status}}</p>
+					</div>
+					<div *ngFor=" let option of sub_question.answers">
 						<div>
-							<input type="radio" (click)="saveStatus(question,option.value)" name="{{question.id}}">
+							<input type="radio" (click)="saveValue(sub_question,option.value)" name="{{sub_question.id}}">
 							{{option.text}}
 						</div>
 				  	</div>
 				</div>
 			</div>
-			<h4>Correct Answer: <b>{{ countCorrectAnswer}}</b></h4>
-			<button class="btn btn-md btn-success" (click)="check()">Check answer </button>
-			<br><br>
 		</div>
+		<h4>Correct Answer: <b>{{ countCorrectAnswer}}</b></h4>
+		<button class="btn btn-md btn-success" (click)="adv_check()">Check answer </button>
+		<br><br>
 	</div>
 </div>

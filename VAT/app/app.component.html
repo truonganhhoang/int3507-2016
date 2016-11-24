@@ -11,64 +11,50 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="">English Learning</a>
+					<a class="navbar-brand" [routerLink]="['']">English Learning</a>
 				</div>
-
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-ex1-collapse">
 					<ul class="nav navbar-nav">
-						<li><a [routerLink]="['/']">Home</a></li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Choose Skill <span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a [routerLink]="['/listening']">Listening</a></li>
-								<li><a [routerLink]="['/speaking']">Speaking</a></li>
-								<li><a [routerLink]="['/reading']">Reading</a></li>
-								<li><a [routerLink]="['/writing']">Writing</a></li>
-							</ul>	
-						</li>
+						<li><a [routerLink]="['/listening']">Listening</a></li>
+						<li><a [routerLink]="['/speaking']">Speaking</a></li>
+						<li><a [routerLink]="['/reading']">Reading</a></li>
+						<li><a [routerLink]="['/writing']">Writing</a></li>
 						<li><a [routerLink]="['/about']">About Us</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
-							<!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li><a href="#">Signed with ADMIN</a></li>
-								<li><a href="#">My profile</a></li>
-								<li><a href="#">Sign out</a></li>
-							</ul> -->
 						</li>
 					</ul>
 				</div><!-- /.navbar-collapse -->
 			</div>
 		</nav>
 	</div>
+	<!-- End Header area -->
 	<!-- Content Area -->
 	<div class="content">
 		<router-outlet></router-outlet>
 	</div>
 	<!-- Footer Area -->
-	<div class="my-footer">
+	<div class="footer">
 		<div class="container">
-			<div class="row">
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-					<h4 class="text-center">About Us</h4>
-					<p class="text-center">This is simple project using Angular2 ExpressJS and MongoDB. Website provides basic lesson help user improve English skills.</p>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-					<h4 class="text-center">Products</h4>
-					<p class="text-center">Products developed by VAT team</p>
-					<p class="text-center">Download source code at <b><a target="_blank" href="https://github.com/cuongk58uet/englishlearning">here</a></b></p>
-				</div>
-				<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
-					<h4 class="text-center">FAQs</h4>
-					<p class="text-center"><a href="mailto:support@englishlearning.com"> How to review my lesson?</a></p>
-					<p class="text-center"><a href="mailto:support@englishlearning.com"> How to change lesson?</a></p>
-				</div>
+			<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+				<h2 class="text-center">About Us</h2>
+				<p class="text-center">Products developed by VAT team</p>
+				<p class="text-center">Download source code at <b><a target="_blank" href="https://github.com/cuongk58uet/englishlearning">here</a></b></p>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+				<h2 class="text-center">Products</h2>
+				<p>This is simple project using Angular2 ExpressJS and MongoDB. Our website provides basic and advanced lessons will help user improve English skills.</p>
+			</div>
+			<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+				<h2 class="text-center">References</h2>
+				<p class="text-center"><a href="http://englishtestprepreview.com/" target="_blank">englishtestprepreview.com</a></p>
+				<p class="text-center"><a href="http://mstuyenenglish.edu.vn/" target="_blank"> mstuyenenglish.edu.vn</a></p>
+				<p class="text-center"><a href="http://englishteststore.net/" target="_blank">englishteststore.net</a></p>
 			</div>
 		</div>
 	</div>
 </div>
-
 
 
