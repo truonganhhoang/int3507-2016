@@ -29,3 +29,32 @@
 
 <h2> Hướng dẫn tạo game và phát triển sản phẩm </h2>
 
+
+<b> Bước 1: Tạo mới project </b>
+
+![capture](https://cloud.githubusercontent.com/assets/16796548/20601143/a0bad51e-b289-11e6-9d8d-247f4a7318cd.JPG)
+
+<b> Bước 2: Chuẩn bị các đối tượng (Object) </b>
+Ở đây các đối tượng là các hình ảnh đã được thiết kế sẵn hoặc các đối tượng đã được định nghĩa sẵn trong Construct 2.
+Chúng ta cho các đối tượng vào.
+
+![capture](https://cloud.githubusercontent.com/assets/16796548/20601209/00c2bfd0-b28a-11e6-91b1-50e631fcdda1.JPG)
+
+Sau đó sắp xếp các đối tượng vào Layout
+
+![capture](https://cloud.githubusercontent.com/assets/16796548/20601229/20a10870-b28a-11e6-9a9b-bd2f347d517a.JPG)
+
+Ngoài ra ta có thể tạo các đối tượng được định nghĩa sẵn trong Construct 2
+
+![demo](https://cloud.githubusercontent.com/assets/16796548/20602058/3cf0d9f2-b28e-11e6-9426-c14acd6aa8da.jpg)
+
+![demo](https://cloud.githubusercontent.com/assets/16796548/20602142/7fe2a466-b28e-11e6-82e1-e8c4230dd27a.jpg)
+
+Tiếp thep, đây là Properties nơi chỉnh thông số hiển thị, kích thước màn hình
+
+![demo](https://cloud.githubusercontent.com/assets/16796548/20602168/a09529b8-b28e-11e6-833e-5e7106ebaf7e.jpg)
+
+Mỗi Layer là một màn chơi. Ở đây chúng ta xây dựng 2 Level ứng với Layer 1 và Layer 2. Với Layer 0 để hiển thị Menu.
+
+![demo](https://cloud.githubusercontent.com/assets/16796548/20602215/d7e8e378-b28e-11e6-84cb-bd2b5d16635a.jpg)
+
