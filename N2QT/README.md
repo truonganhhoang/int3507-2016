@@ -74,7 +74,7 @@ Sau đó chọn hành vi cho đối tượng
 
 Các bạn có thể xem chi tiết các “hành vi” cho đối tượng ở đây https://www.scirra.com/manual/103/sine
 
-<b> Bước 4: Tạo sự kiện cho Game <b>
+<b> Bước 4: Tạo sự kiện cho Game </b>
 
 Ở đây sự kiện của game có thể hiểu là các tương tác giữa các đối tượng trong game hoặc ở đây là các kết quả khi đối tượng thực hiện xong hành vi nào đó
 
