@@ -35,6 +35,7 @@
 ![capture](https://cloud.githubusercontent.com/assets/16796548/20601143/a0bad51e-b289-11e6-9d8d-247f4a7318cd.JPG)
 
 <b> Bước 2: Chuẩn bị các đối tượng (Object) </b>
+
 Ở đây các đối tượng là các hình ảnh đã được thiết kế sẵn hoặc các đối tượng đã được định nghĩa sẵn trong Construct 2.
 Chúng ta cho các đối tượng vào.
 
@@ -57,4 +58,19 @@ Tiếp thep, đây là Properties nơi chỉnh thông số hiển thị, kích t
 Mỗi Layer là một màn chơi. Ở đây chúng ta xây dựng 2 Level ứng với Layer 1 và Layer 2. Với Layer 0 để hiển thị Menu.
 
 ![demo](https://cloud.githubusercontent.com/assets/16796548/20602215/d7e8e378-b28e-11e6-84cb-bd2b5d16635a.jpg)
+
+<b> Bước 3: Định nghĩa các đối tượng </b>
+
+Ở đây các đối tượng được định nghĩa để thể hiện chức năng của đối tượng đó. 
+VD: Đối tượng Button, ta có thể tạo hành vi cho button. Button này có thể để chọn ô chữ.
+
+Đầu tiên chọn đối tượng để thêm hành vi
+
+![demo](https://cloud.githubusercontent.com/assets/16796548/20602335/67758f6e-b28f-11e6-8236-8622dca6b4bb.jpg)
+
+Sau đó chọn hành vi cho đối tượng
+
+
+
+
 
