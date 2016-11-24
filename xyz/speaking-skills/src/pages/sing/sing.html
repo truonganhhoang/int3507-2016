@@ -12,7 +12,6 @@
     </button>
     <ion-title>Sing a Song</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 <ion-content padding>
@@ -36,15 +35,23 @@
         </ion-option>
       </ion-select>
     </ion-item>
-
-  <ion-list>
-    <ion-item *ngFor="let video of videos" (click)="playVideo(video)" >
-      <ion-thumbnail item-left>
-        <img src="{{video.snippet.thumbnails.high.url}}">
-      </ion-thumbnail>
-      <h2>{{video.snippet.title}}</h2>
-      <p>{{video.snippet.channelTitle}}</p>
-    </ion-item>
-  </ion-list>
-
+  
+<!--   Kết quả tìm kiếm -->
+  <div>
+    <div *ngIf="!loading">
+      <ion-list>
+        <ion-item *ngFor="let video of videos" (click)="playVideo(video)" >
+          <ion-thumbnail item-left>
+            <img src="{{video.snippet.thumbnails.high.url}}">
+          </ion-thumbnail>
+          <h2>{{video.snippet.title}}</h2>
+          <p>{{video.snippet.channelTitle}}</p>
+        </ion-item>
+        <ion-item *ngIf="noResult"> No result</ion-item>
+      </ion-list>
+    </div>
+    <div *ngIf="loading">
+        <loading-indicator></loading-indicator>
+    </div>
+  </div>
 </ion-content>

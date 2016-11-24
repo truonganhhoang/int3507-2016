@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { YtbSearchService } from '../../services/ytbsearch.service';
 import { VideoPlayer } from '../video-player/video-player';
-
-
+import {LoadingIndicator, LoadingPage} from '../../components/loading-indicator/loading-indicator';
 
 /*
   Generated class for the Sing page.
@@ -17,12 +16,15 @@ import { VideoPlayer } from '../video-player/video-player';
   providers: [YtbSearchService]
 })
 
-export class Sing implements OnInit {
+export class Sing extends LoadingPage implements OnInit {
 	videos: Object[];
 	myQuery: String = "";
   singType: String = 'karaoke';
+  noResult: boolean = false;
 
-  constructor(public navCtrl: NavController, private ytbSearchService: YtbSearchService) {}
+  constructor(public navCtrl: NavController, private ytbSearchService: YtbSearchService) {
+    super(true);
+  }
 
   ionViewDidLoad() {
     console.log('Hello Sing Page');
@@ -31,13 +33,23 @@ export class Sing implements OnInit {
   ngOnInit() {
     this.ytbSearchService.getTopVideos().then(res => {
       this.videos = res['items'];
+      this.ready();
     })
   }
 
   getVideos() {
-    if (this.myQuery == '' || this.myQuery == null) return;
+    this.noResult = false;
+    this.standby();
+    if (this.myQuery == '' || this.myQuery == null) {
+      this.ready();
+      return;
+    }
    	this.ytbSearchService.getVideos(this.myQuery + ' ' + this.singType).then(res => {
   		this.videos = res['items'];
+      if(this.videos.length == 0 ) {
+        this.noResult = true;
+      }
+      this.ready();
   	});
   }
 
