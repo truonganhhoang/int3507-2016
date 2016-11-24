@@ -29,4 +29,3 @@
 
 <h2> Hướng dẫn tạo game và phát triển sản phẩm </h2>
 
-<b> Bước 1: Tạo mới project </b>
