@@ -1,7 +1,8 @@
 # Nhận xét nhóm 4C
 ## 1. Góc độ người dùng
 ### Ưu điểm:
-- Giao diện đơn giản, trực quan
+- Giao diện đơn giản, trực quan.
+- Có tiềm năng phát triển manhj mẽ trong tương lai.
 
 ### Nhược điểm:
 - Ứng dụng khó sử dụng, không nhận dạng được câu nói của người dùng mặc dù đã thử nói nhiều lần.
@@ -15,12 +16,13 @@
 ### Ưu điểm:
 - Dù Alexa là một công nghệ khá mới nhưng nhóm đã tìm hiểu và nắm bắt công nghệ tốt.
 - Đã bước đầu xây dựng giúp Alexa hoạt động bằng một câu nói đơn giản. Alexa sẽ trả lời lại.
-- Mã nguồn rõ ràng.
+- Mã nguồn rõ ràng. Có thể tiếp tục phát triển.
 
 ### Nhược điểm:
 - Bài toán còn sơ sài. Mới chỉ thực hiện được 1 câu nói.
 - Tài liệu hướng dẫn khá sơ sài, chưa có hình ảnh hoặc tài liệu kèm theo.
 - Thiếu giới thiệu công nghệ sử dụng và hướng phát triển của nhóm trong thời gian tới.
+- Skill chỉ sử dụng được với một tài khoản. Cần public để các tài khoản khác cũng dùng được.
 
 ## Chỉnh sửa, bổ sung:
 - Hoàn thiện skill, skill chạy hiệu quả.
