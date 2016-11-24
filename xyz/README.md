@@ -41,6 +41,7 @@ Xem chi tiết tại [đây] (https://goo.gl/SCw4pF)
 #### Hướng phát triển tiếp theo
 - Thêm chức năng học tiếng anh qua các youtube channel nổi tiếng
 - Upload đồng thời nhiều file lên Google Drive
+- Phát triển thêm trên các nền tảng khác như IOS hoặc Window Phone
 
 ### HƯỚNG DẪN SỬ DỤNG
 ### Link tải ứng dụng: https://goo.gl/H8YqSx
