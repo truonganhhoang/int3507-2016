@@ -12,6 +12,8 @@ import { LoginWeb } from '../components/login-web/login-web';
 import { Google } from '../pages/google/google';
 import { MySong } from '../pages/my-song/my-song';
 import { AppGlobals } from '../services/app-globals.service';
+import { LoadingIndicator} from '../components/loading-indicator/loading-indicator';
+
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { AppGlobals } from '../services/app-globals.service';
     LoginWeb,
     Sing,
     MySong,
-   Google
+    Google,
+    LoadingIndicator
   ],
   imports: [
     IonicModule.forRoot(MyApp)

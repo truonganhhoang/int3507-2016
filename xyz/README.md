@@ -7,6 +7,18 @@
 
 ##Ứng dụng: E2M - English to Me
 
+### GIỚI THIỆU CÔNG NGHỆ SỬ DỤNG
+![ionic2] (https://richardshergold.files.wordpress.com/2016/03/cropped-ionic-logo-horizontal-transparent.png)
+
+  Ionic 2 là một framework dùng để phát triển ứng dụng trên thiết bị di động bằng các công nghệ phát triển web như HTML5, CSS, JavaScript và sau đó đóng gói trong một môi trường hiển thị nôi dung có thể hoạt động trên hầu hết các thiết bị di động giống như trình duyệt web.
+  
+  Có thể coi Ionic như là một bộ khung front-end giúp bạn kiểm soát hình ảnh và trải nghiệm trên ứng dụng của bạn. Giống như “Bootstrap for Native”, nhưng với sự hỗ trợ của một lượng lớn các thành phần di động, hiệu ứng chuyển động mượt mà và thiết kế đẹp.
+  
+  Vì Ionic là một framework HTML5 nên nó cần bộ đóng gói (wrapper) như Cordova hay PhoneGap để có thể chạy được như một ứng dụng di động. Cordova là bộ đóng gói mặc định trong Ionic framework.
+  
+  Tìm hiểu thêm về Ionic 2 tại [đây] (http://ionicframework.com/docs/v2/)
+
+
 ### HƯỚNG DẪN PHÁT TRIỂN ỨNG DỤNG
 #### Cài đặt
 - Cài đặt phiên bản mới nhất của NodeJS tại [đây](https://nodejs.org/en/download/)
@@ -21,7 +33,15 @@
   + `ionic platform add <platform-name>`
   VD như trên Android là `ionic platform add android`
   + `ionic platform build <platform-name>`: build ứng dụng
-  + `ionic platform run <platform-name>``: chạy ứng dụng trên máy ảo hoặc máy thật
+  + `ionic platform run <platform-name>`: chạy ứng dụng trên máy ảo hoặc máy thật
+
+#### Cấu trúc của ứng dụng:
+Xem chi tiết tại [đây] (https://goo.gl/SCw4pF)
+
+#### Hướng phát triển tiếp theo
+- Thêm chức năng học tiếng anh qua các youtube channel nổi tiếng
+- Upload đồng thời nhiều file lên Google Drive
+- Phát triển thêm trên các nền tảng khác như IOS hoặc Window Phone
 
 ### HƯỚNG DẪN SỬ DỤNG
 ### Link tải ứng dụng: https://goo.gl/H8YqSx
