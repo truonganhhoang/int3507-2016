@@ -14,4 +14,8 @@ router.get('/api/reading/advanced', function(req, res, next) {
   res.sendFile(path.join(__dirname, '../public/reading', 'paragraph.json'));
 });
 
+router.get('/api/writing', function(req, res, next) {
+  res.sendFile(path.join(__dirname, '../public/writing', 'writing.json'));
+});
+
 module.exports = router;

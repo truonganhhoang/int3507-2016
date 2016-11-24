@@ -12,6 +12,7 @@ export class ReadingComponent implements OnInit{
   questions: Object[];
   advanced_questions: Object[];
   param: number;
+  param_advanced: numver;
   lower_limit: number;
   upper_limit: number;
 
@@ -31,6 +32,7 @@ export class ReadingComponent implements OnInit{
 
     ngOnInit() {
       this.param = 1;
+      this.param_advanced = 0;
       this.upper_limit = this.param * 10;
       this.lower_limit = this.upper_limit - 9;
       this.countCorrectAnswer = 0;
@@ -39,14 +41,16 @@ export class ReadingComponent implements OnInit{
     gotoLesson(param: number): void{
       this.router.navigate(['/reading', param]);
       this.param = param;
+      this.param_advanced = 0;
       this.upper_limit = this.param * 10;
       this.lower_limit = this.upper_limit - 9;
       this.countCorrectAnswer = 0;
     }
 
     advanced_gotoLesson(param: number): void{
-      this.router.navigate(['/reading', param]);
-      this.param = param;
+      this.router.navigate(['/reading/advanced/', param]);
+      this.param = 0;
+      this.param_advanced = param;
       this.countCorrectAnswer = 0;
     }
 
@@ -59,9 +63,10 @@ export class ReadingComponent implements OnInit{
     }
     adv_check(){
       this.countCorrectAnswer = 0;
-      for( let i = 0; i < this.advanced_questions.length; i++){
-        let question = this.advanced_questions[i]['questions'];
-        for(let j = 0; j < 9; j++){
+        let question = this.advanced_questions[this.param_advanced - 1]['questions'];
+        let length = question.length;
+        //console.log(length);
+        for(let j = 0; j < length; j++){
           if(question[j]['option'] == question[j]['correct_answer']){
             this.countCorrectAnswer++;
             question[j]['status'] = "Right";
@@ -69,7 +74,6 @@ export class ReadingComponent implements OnInit{
             question[j]['status'] = "Wrong! The correct answer is " + question[j]['correct_answer'];
           }
         }
-      }
     }
 
     check() {

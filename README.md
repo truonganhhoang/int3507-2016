@@ -20,7 +20,7 @@ Liên kết đến sản phẩm của các nhóm:
 | NaVi  | - Link chatbot: https://www.facebook.com/cwat.seewhat/ <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/trieudh58/int3507-2016/blob/master/NaVi/README.md)|
 | DTQ  | - Link chatbot: [tại đây](https://www.facebook.com/Learning-English-Bot-302820536747403/) <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/truonganhhoang/int3507-2016/tree/master/DTQ)|
 | PATH  | - Link product: http://139.162.52.76:3000/ <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/truonganhhoang/int3507-2016/blob/master/PATH/README.md) |
-| XYZ  | - Link APK:  https://goo.gl/H8YqSx <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/trangnt58/int3507-2016/blob/master/xyz/README.md) |
+| XYZ  | - Link APK:  https://goo.gl/VgYqLz <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/trangnt58/int3507-2016/blob/master/xyz/README.md) |
 | NSFW | - Link add Chat bot vào skype: [here](https://join.skype.com/bot/455b9e86-db27-4a3a-86c8-df9cc15ccc09) <br/> - Hướng dẫn sử sụng: [here](https://github.com/truonganhhoang/int3507-2016/blob/master/NSFW/FAQ%20Bot%20V2/README.md)
 | N2QT  | - Link product: http://n2qt.somee.com/N2QT/ <br/> - Hướng dẫn sử dụng: [tại đây](https://github.com/truonganhhoang/int3507-2016/blob/master/N2QT/README.md) |
 | ...  | ... |

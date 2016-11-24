@@ -14,8 +14,10 @@ export const routes: Route[] = [
     { path: 'listening/:id', component: ListeningComponent},
     { path: 'reading', component: ReadingComponent},
     { path: 'reading/:id', component: ReadingComponent},
+    { path: 'reading/advanced/:id', component: ReadingComponent},
     { path: 'speaking', component: SpeakingComponent},
-    { path: 'writing', component: WritingComponent}
+    { path: 'writing', component: WritingComponent},
+    { path: 'writing/:id', component: WritingComponent}
 ];
 
 export const routing = RouterModule.forRoot(routes, { useHash: false });
