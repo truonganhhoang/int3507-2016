@@ -1,3 +1,5 @@
+<h2> Giới thiệu </h2>
+
 - <b>Nhóm N2QT, thành viên</b>:
 	+ Nguyễn Tiến Nam (*)
 	+ Lê Văn Quang
@@ -23,5 +25,8 @@
 
 - <b>Đáp án:</b>
 	+ Level 1 : đáp án <b>IT</b>
-	+ Level 2 : đáp án <b>NO</b> 
+	+ Level 2 : đáp án <b>NO</b>
 
+<h2> Hướng dẫn tạo game và phát triển sản phẩm </h2>
+
+<b> Bước 1: Tạo mới project </b>
