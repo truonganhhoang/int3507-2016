@@ -60,7 +60,7 @@ Tài khoản đăng nhập (lưu ý: không đổi password, để các nhóm kh
   
 - Sinh viên:
 
-	+ Email: tutv_58@vnu.edu.vn
+	+ Email: quytm_58@vnu.edu.vn
 	+ Password: 123456
   
 ### II.1. Chức năng chính
