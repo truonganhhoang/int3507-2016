@@ -23,6 +23,10 @@ http://tranquil-hamlet-99422.herokuapp.com/
 ### I. Mô tả ngắn gọn: 
 - Ứng dụng E-Learning được viết bằng framework Laravel 5.2 giúp cho người dùng có thể làm các bài trắc nghiệm tiếng anh.
 - Ứng dụng đã được nhóm đẩy code lên heroku để mọi người có thể sử dụng thử.Sản phẩm đang trong quá trình hoàn thiện và phát triển.
+- Ứng dụng có phân quyền thành admin-quản trị/quản lí ứng dụng và quyền user-người dử dụng.
+
+     + User : có thể đăng nhập vào ứng dụng để làm các bài test trắc nghiệm tiếng anh, có thể xem lại kết quả cũng như lịch sử các bài test đã làm, có thể view thông tin trong profile( có thể sửa tên, email, avatar, hay mật khẩu tài khoản cá nhân)
+     + Admin : ngoài những quyền của user, admin có thể quản lí được các category( có thể thêm các category, add/edit/delete thêm question...) và word, có thể quản lí user( xóa một user nào đó)
 
 ## II. Giới thiệu về cấu trúc, cơ chế hoạt động của project sử dụng Laravel 5.2
 
@@ -118,6 +122,8 @@ Giao diện bắt đầu trước khi vào ứng dụng
 ![List User](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/Users.jpg)
 
 ## List Categories
+
+Khi chọn một category để làm bài , mỗi bài test nhóm random lấy ra số lượng 5 câu trong tổng số của category đó.
 
 ![List Categories](https://github.com/truonganhhoang/int3507-2016/blob/master/HK/images/Category.jpg)
 
