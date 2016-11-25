@@ -2,7 +2,7 @@
 ## 1. Góc độ người dùng
 ### Ưu điểm:
 - Giao diện đơn giản, trực quan.
-- Có tiềm năng phát triển manhj mẽ trong tương lai.
+- Có tiềm năng phát triển mạnh mẽ trong tương lai.
 
 ### Nhược điểm:
 - Ứng dụng khó sử dụng, không nhận dạng được câu nói của người dùng mặc dù đã thử nói nhiều lần.

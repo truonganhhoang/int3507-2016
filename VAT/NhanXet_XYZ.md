@@ -24,7 +24,7 @@
 
 ### Nhược điểm:
 - Chưa có phần giới thiệu công nghệ sử dụng.
-- Thiếu hướng phát triển tiếp
+- Thiếu hướng phát triển tiếp.
 
 ### Chỉnh sửa, bổ sung:
 - Bổ sung phần giới thiệu về công nghệ sử dụng
