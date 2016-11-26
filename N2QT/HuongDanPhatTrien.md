@@ -1,4 +1,4 @@
-<h2> Hướng dẫn tạo game và phát triển sản phẩm </h2>
+<h2> Hướng dẫn làm game bằng C2 và phát triển sản phẩm </h2>
 
 
 <b> Bước 1: Tạo mới project </b>
@@ -12,7 +12,7 @@ Chúng ta cho các đối tượng vào.
 
 ![capture](https://cloud.githubusercontent.com/assets/16796548/20601209/00c2bfd0-b28a-11e6-91b1-50e631fcdda1.JPG)
 
-Sau đó sắp xếp các đối tượng vào Layout
+Sau đó sắp xếp các đối tượng vào Layout theo thiết kế mình muốn game hiện ra như thế nào
 
 ![capture](https://cloud.githubusercontent.com/assets/16796548/20601229/20a10870-b28a-11e6-9a9b-bd2f347d517a.JPG)
 
@@ -22,7 +22,7 @@ Ngoài ra ta có thể tạo các đối tượng được định nghĩa sẵn 
 
 ![demo](https://cloud.githubusercontent.com/assets/16796548/20602142/7fe2a466-b28e-11e6-82e1-e8c4230dd27a.jpg)
 
-Tiếp thep, đây là Properties nơi chỉnh thông số hiển thị, kích thước màn hình
+Tiếp thep, Properties là nơi chỉnh thông số hiển thị, kích thước màn hình, ơ game của nhóm mình bọn mình làm trên kích thước 1280x720
 
 ![demo](https://cloud.githubusercontent.com/assets/16796548/20602168/a09529b8-b28e-11e6-833e-5e7106ebaf7e.jpg)
 
