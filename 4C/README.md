@@ -25,7 +25,7 @@ Cấu trúc thư mục gồm một số file sau:
 
 - SessionSpeechlet.java: file này file chính của dự án. Các hàm xử lí kỹ năng đều viết tại đây.
 - SessionSpeechletRequestStreamHandler.java: file này để khai báo ID của kỹ năng để Lambda Function có thể biết được đang yêu cầu đến kỹ năng nào.
-- Launcher.java: file này để tạo kết nối HTTP, tạo yêu cầu và phản hồi. File này được Amazon xây dựng sẵn, lập trình viên chỉ cần khao báo, khởi tạo lớp Speechlet tương ứng với kỹ năng là được.
+- Launcher.java: file này để tạo kết nối HTTP, tạo yêu cầu và phản hồi. File này được Amazon xây dựng sẵn, lập trình viên chỉ cần khai báo, khởi tạo lớp Speechlet tương ứng với kỹ năng là được.
 - IntentSchema.json: file này một lược đồ ý định, khai báo mô hình tương tác giữa người dùng và Alexa.
 - SampleUtterance.txt: file này chứa các câu yêu cầu từ phía người dùng và các câu phản hồi từ Alexa.
 
