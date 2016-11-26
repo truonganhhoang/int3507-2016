@@ -10,71 +10,63 @@ Nhóm 4C bao gồm các thành viên:
 
 Alexa Skill
 
-I. Giới thiệu về Alexa
+# Giới thiệu về Alexa
 
 Alexa là dịch vụ riêng của Amazon nó được biết đến giống như Siri của Apple hay Google Now. Đó là một trợ lý bằng giọng nói cho phép bạn đặt câu hỏi, tạo ra nhiệm vụ và danh sách mua sắm từ Amazon, nghe tin tức và thời tiết, chơi nhạc, bộ tính giờ và báo động, và thậm chí kiểm soát một số thiết bị "nhà thông minh" như đèn và chuyển mạch.
 
 Alexa được ứng dụng trong các thiết bị thông minh như nhà thông minh giúp bạn có thể điều khiển hệ thống đèn, hệ thống sưởi, và cửa ra vào bằng giọng nói. Alexa cũng được tích hợp trong, máy đo sức khỏe, điện thoại thông minh, các thiết bị di động thông minh khác có thể kết nối internet. 
 
-Ví dụ sử dụng Alexa đển bật đèn phòng khách : Khi nói “ turn on the… “ là một cụm từ được xác nhận bời thiết bị tích hợp Alexa. Alexa nhận rằng đây là một yêu cầu để bật một thiết bị chiếu sáng. Nói cụm từ đầy đủ là  “turn on the  living room lights” alexa nhận diện được bật bóng đèn phòng khách đây là thiết bị cụ thể đã được người dùng cấu hình và đặt tên trước. Alexa gửi chỉ thị thiết bị đến các bộ chuyển đổi kỹ năng cụ thể mà có thể kiểm soát thiết bị đèn phòng khách, bộ chuyển đổi này bật đèn quy định bằng cách giao tiếp với các thiết bị điện toán đám mây qua Internet, sau đó trả về một phản ứng chỉ thị nó đã thành công.
+# Tạo 1 kỹ năng đơn giản Alexa sử dụng Java
 
-Khi người dùng nói chuyện với một thiết bị Alexa đã đươc kích hoạt, những bài phát biểu được truyền tới các dịch vụ Alexa trong cloud. Alexa nhận diện giọng nói, xác định những gì người dùng muốn, và sau đó sẽ gửi một yêu cầu cấu trúc để các kỹ năng đặc biệt mà có thể đáp ứng yêu cầu của người dùng. Tất cả các nhận dạng giọng nói và chuyển đổi được xử lý bởi Alexa trong cloud. Mỗi kỹ năng Alexa có một mô hình tương tác (thiết bị tương tác) xác định các từ và cụm từ người sử dụng có thể nói để làm cho các kỹ năng làm những gì họ muốn. Các loại kỹ năng bạn xây dựng sẽ áp đặt với thiết bị tích hợp Alexa để người dùng giao tiếp điều khiển nó.
+## Các phần mềm cần có
 
-Alexa được sử dụng trong các ứng dụng sức khỏe tập trung; điều khiển TV từ xa bằng giọng nói hỗ trợ; tìm kiếm tin tức và thời tiết các ứng dụng từ các tên tuổi lớn như AccuWeather, AOL, HuffPost, oh, và TechCrunch;  
+- Java 8
+- Maven
+- IDE để viết chương trình Java. Có thể chọn Eclipse.
+- AWS: Amazon Web Service. Có thể tải xuống từ trên trang chủ của Amazon. Còn nếu sử dụng Eclipse để viết chương trình có thể cài tải trực tiếp từ kho ứng dụng trên Eclipse (cài như 1 add-on cho Eclipse).
 
-II. Alexa Skills Kit(ASK) 
+## Cấu trúc thư mục 
 
-Dịch vụ giọng nói cho phép người dùng tương tác với các thiết bị thông qua giọng nói. VD: khả năng chơi nhạc, trả lời câu hỏi chung, thiết lập báo động hoặc hẹn giờ,…ASK là một bộ các self-service(tự phục vụ) API, các công cụ, tài liệu và mã nguồn giúp bạn nhanh chóng và dễ dàng cho bạn để thêm kỹ năng mới cho Alexa. ASK là dịch vụ chạy trên Cloud - không được lập trình trên thiết bị của người dùng, 1 thể loại thiết bị mới được thiết kế xung quanh giọng nói của bạn. Chỉ với 1 vài dòng code bạn có thể dễ dàng tích hợp các dịch vụ web có sẵn với Alexa hoặc trong 1 vài giờ bạn có thể xây dựng được những trải nghiệm hoàn toàn mới xung quanh giọng nói của bạn. Amazon thực hiện tất cả các công việc để nghe, hiểu, và xử lý yêu cầu của khách hàng
+Amazon cung cấp cho người dùng khá nhiều các thư viện xử lý giọng nói để phục vụ cho phát triển kỹ năng cho Alexa. Người dùng chỉ cần download trên mạng về xong import vào project là có thể sử dụng được
 
-Bạn có thể mở rộng các dịch vụ có sẵn của bạn hoặc tạo ra 1 thứ hoàn toàn mới. Người dùng không nhất thiết phải dùng tay hoặc mắt, họ có thể “hỏi” theo lệnh được định nghĩa của họ
+Cấu trúc thư mục gồm một số file sau:
 
-• Get in Early: cung cấp cho bạn một cơ hội để tận dụng lợi thế của hình thức mới của sự tương tác: Giao tiếp tự nhiên
+![alt tag](https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Photo/file.png)
 
-• Làm hài lòng người dùng: cho người nghe của bạn 1 cách hoàn toàn mới để tương tác với dịch vụ. Người dùng không nhất thiết phải dùng tay hoặc mắt, họ có thể “hỏi” theo lệnh được định nghĩa của họ
+- SessionSpeechlet.java: file này file chính của dự án. Các hàm xử lí kỹ năng đều viết tại đây.
+- SessionSpeechletRequestStreamHandler.java: file này để khai báo ID của kỹ năng để Lambda Function có thể biết được đang yêu cầu đến kỹ năng nào.
+- Launcher.java: file này để tạo kết nối HTTP, tạo yêu cầu và phản hồi. File này được Amazon xây dựng sẵn, lập trình viên chỉ cần khao báo, khởi tạo lớp Speechlet tương ứng với kỹ năng là được.
+- IntentSchema.json: file này một lược đồ ý định, khai báo mô hình tương tác giữa người dùng và Alexa.
+- SampleUtterance.txt: file này chứa các câu yêu cầu từ phía người dùng và các câu phản hồi từ Alexa.
 
-• Tạo ra và chạy: chỉ trong 1 vài giờ. Nếu bạn có 1 dịch vụ cloud-based có sẵn, bạn có thể dễ dàng bắt đầu sử dụng nó. Nếu không, AWS Lambda là 1 dịch vụ tính toán, nó xây dựng 1 dịch vụ cloud- based 1 cách khá dễ dàng, phản hồi nhanh chóng với 1 yêu cầu bằng giọng nói
+Hai file IntentSchema.json và SampleUtterance.txt không được gọi đến trong mã nguồn mà chỉ sử dụng để cấu hình cho kỹ năng.
 
-• Xây dựng miễn phí: ASK miễn phí khi sử dụng. 
+## Tạo Lambda Function
 
-III. Các bước tạo một kỹ năng tùy chỉnh.
+## Tạo và cấu hình cho kỹ năng
 
-1 Tạo Lambda function
+Tạo và cấu hình cho kỹ năng trên trang https://developer.amazon.com/edw/home.html#/skills/list 
 
-Để tạo Lambda function cho kĩ năng, vào trang console.aws.amazon.com. Sau khi đăng nhặp bằng tài khoản Amazon se vào tạo Lambda function. Để tạo 1 Lambda function cần:
+Kết quả sau khi tạo được kỹ năng:
 
-• Đặt tên cho function.
+![alt tag](https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Photo/config.png)
 
-• Chọn server runtime là Java 8.
+Cấu hình cho kỹ năng khá đơn giản, chỉ cần làm theo từng bước như trên trang.
 
-• Clone sample skill trên trang github của amazon https://github.com/amzn/alexa-skills-kit-java sau đó vài thư mục sample để build thành file jar. Sử dụng maven để build.
+Lưu ý khi cấu hình ở mục "Interaction Model": đây chính là nội dung được viết trong 2 file IntentSchema.json và SampleUtterance.txt. Người dùng chỉ cần copy ra và lưu lại.
 
-• Upload file jar vừa build được lên Lambda function để tạo server runtime.
+![alt tag](https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Photo/config2.png)
+![alt tag](https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Photo/config3.png)
 
-• Tạo function và thêm 1 Event Sources.
+## Kiểm thử kỹ năng
 
-• Copy ARN của function để sử dụng trong quá trình cấu hình skill.
+Amazon có một trang web để kiểm thử cho kỹ năng vừa tạo là trang https://echosim.io/. Người dùng cần đăng nhập bằng tài khoản Amazon để có thể tiến hành kiểm thử cho kỹ năng. Người dùng vừa giữ biểu tượng loa vừa nói các câu được khai báo trong file SampleUtterance.text để kiểm thử cho kỹ năng và sau đó Alexa sẽ phản hồi lại.
 
-2 Viết code 
+Để biết được các câu đã nói và phản hồi của Alexa, người dùng vào trang alexa.amazon.com, chọn tab Home. Kết quả như sau
+![alt tag](https://github.com/truonganhhoang/int3507-2016/blob/master/4C/Photo/k%E1%BA%BFt%20qu%E1%BA%A3%20test.png)
 
-• Tham khảo code mẫu trong thư mục sample. CÓ 1 số skill mẫu trong đó. Tham khảo để biết cách sử dụng các thư viện được amazon hỗ trợ và xử lý dữ liệu giọng nói đầu vào
 
-3 Tạo skill
 
-• Vào trang developer.amazon.com, chọn alexa skill để tạo 1 skill .
-
-• Đặt tên và tiến hành cấu hình cho skill. Có 1 số mục quan trọng là invocation name, interaction model, sample utterance và ARN. Invocation name dùng để xác nhận skill. Interaction model là mô hình xử lý để alexa có thể hiểu được câu hỏi và lấy ra câu trả lời. Sample Utterance là chỗ để viết câu hỏi và câu trả lời, được chia thành 2 intent là question intent và anser intent. ARN chính là ARN có được khi tạo lambda function ở trên.
-
-• Có 1 thư mục để cấu hình để publish skill lên trên alexa skill store. 
-
-• Copy Alexa skill ID vào trong code, sau đó build và upload lại lên Lambda function.
-
-4 Test skill
-
-• Vào trang alexa.amazon.com đăng nhập tài khoản amazon.
-
-• Tìm kiếm skill. Sau đó enable skill đó để test.
-
-• Vào trang echosim.io, đăng nhập tài khoản amazon và tiến hành test skill. Khi test thì giữ biểu tượng mic và nói câu để kích hoạt skill. Câu này là 1 trong các câu được định nghĩa trong Sample Utterance.
 
 
 
