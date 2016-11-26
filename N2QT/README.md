@@ -13,7 +13,7 @@
 	+ link: https://www.scirra.com/construct2/releases
 	+ chọn phiên bản cài đặt r195 để dowload về ,sau khi cài đặt xong .Mở phần mềm ,chọn File->Open-> File đuôi capx (có trong thư mục N2QT) .Chọn run để chạy ứng dụng.
 - <b>Mô tả ứng dụng</b> :
-![capture](https://cloud.githubusercontent.com/assets/16796548/20435438/af2fb3b2-adde-11e6-8256-bd6e3f91d968.JPG)
+![capture](https://lh6.googleusercontent.com/5Ro-38sLs1q8pak4Hmquu3WM_TXa5NBx9co9uCnyVA8snALVLYOd4LegY0me6NTYdWfXSKuJbANA4yo=w1366-h665-rw)
 	+ Đây là game ứng dụng học tiếng anh. Làm lại từ một game trên sachmem.vn bằng công cụ Construct 2.
  	
 </hr>
