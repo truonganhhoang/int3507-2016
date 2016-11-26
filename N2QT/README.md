@@ -18,7 +18,9 @@
  	
 </hr>
 - <b> Hướng dẫn chơi </b>
+
 	+Lưu ý : game test trên Coccoc,Chrome chuẩn nhất .Còn lại một số trình duyệt như IE,..không được hỗ trợ nhiều bởi Construct2 nên khi chạy còn lỗi
+	
 	+Người chơi đoán từ đáp án của câu hỏi phía trên rồi chọn chữ cái.Độ dài từ đáp án là số lượng hình bong bóng.
 	
 	+Người chơi có 3 lần chọn từ sai,mỗi lần sai sẽ mất đi 1 viên ngọc chai.Ba lần sai sẽ bị xử thua.
