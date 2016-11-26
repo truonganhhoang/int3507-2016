@@ -18,6 +18,7 @@
  	
 </hr>
 - <b> Hướng dẫn chơi </b>
+	
 	+Người chơi đoán từ đáp án rồi chọn chữ cái.Độ dài từ đáp án là số lượng hình bong bóng.
 	
 	+Người chơi có 3 lần chọn từ sai,mỗi lần sai sẽ mất đi 1 viên ngọc chai.Ba lần sai sẽ bị xử thua.
