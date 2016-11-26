@@ -15,8 +15,7 @@
 - <b>Mô tả ứng dụng</b> :
 ![capture](https://cloud.githubusercontent.com/assets/16796548/20435438/af2fb3b2-adde-11e6-8256-bd6e3f91d968.JPG)
 	+ Đây là game ứng dụng học tiếng anh. Làm lại từ một game trên sachmem.vn bằng công cụ Construct 2.
-	+ Để chơi game này thì người chơi cần có sách giáo khoa tiếng Anh. Do vậy chúng tôi cung cấp luôn đáp án để các bạn vào test dễ hơn (Xem đáp án trong phần ĐÁP ÁN)   
-	
+ 	
 </hr>
 - <b> Hướng dẫn chơi </b>
 	+ Người chơi đoán từ đáp án rồi chọn chữ cái .Độ dài từ đáp án là số lượng hình bong bóng
