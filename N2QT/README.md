@@ -25,7 +25,7 @@
 	+Người chơi chọn từ đúng theo trình tự  đáp án đáp án đúng thì ô chữ cái đó sẽ được mở.
 	
 	+Người chơi vượt qua 10 level sẽ chiến thắng. 
-
+- <b> Hướng dẫn phát triển game </b>: [tại đây](https://github.com/truonganhhoang/int3507-2016/blob/master/N2QT/HuongDanPhatTrien.md)
 
 
 
