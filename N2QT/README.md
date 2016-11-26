@@ -23,10 +23,6 @@
 	+ Mỗi level người chơi có 3 lần chọn từ sai ,mỗi lần sai sẽ bị mất đi 1 viên ngọc chai.Ba lần sai thua
 	+ Người chơi chọn từ đúng có chứa trong đáp án thì ô chữ cái đó sẽ được mở
 
-- <b>Đáp án:</b>
-	+ Level 1 : đáp án <b>IT</b>
-	+ Level 2 : đáp án <b>NO</b>
-
 <h2> Hướng dẫn tạo game và phát triển sản phẩm </h2>
 
 
