@@ -56,7 +56,7 @@ B3: Sau khi đăng nhập thành công, hệ thống sẽ chuyển sang giao di
 tại đây bạn có thể tham gia các khóa  học tại Enguliz.  Ngoài ra bạn có thể sử dụng 
 tài khoản sau để đăng nhập trực tiếp vào hệ thống mà không cần đăng ký:
 Email: ducanh54@gmail.com
-Password: 123456
+Password: 123
 
 ## II. HƯỚNG DẪN LÀM BÀI KIỂM TRA.
 ![homepage](https://github.com/truonganhhoang/int3507-2016/blob/master/PATH/images/huong%20dan/5.png)
