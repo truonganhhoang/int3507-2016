@@ -15,7 +15,7 @@ http://uet.somee.com/
 * Chọn phiên bản cài đặt r195 để dowload về, sau khi cài đặt xong. Mở phần mềm, chọn File->Open-> File đuôi capx (có trong thư mục N2QT). Chọn run để chạy ứng dụng.
 
 ###Mô tả ứng dụng : 
-https://lh4.googleusercontent.com/Xj4IGpCZH4pquZWeWv6Nr0gQuK_h0jSswym2QM8gaY02o687YFsJ01b9t8T8Bw25a0zQuKsksZhuovo=w1366-h665-rw
+![Register](https://lh4.googleusercontent.com/Xj4IGpCZH4pquZWeWv6Nr0gQuK_h0jSswym2QM8gaY02o687YFsJ01b9t8T8Bw25a0zQuKsksZhuovo=w1366-h665-rw)
 
 * Đây là game ứng dụng học tiếng anh. Làm lại từ một game trên sachmem.vn bằng công cụ Construct 2.
 
