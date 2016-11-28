@@ -15,7 +15,8 @@ http://uet.somee.com/
 * Chọn phiên bản cài đặt r195 để dowload về, sau khi cài đặt xong. Mở phần mềm, chọn File->Open-> File đuôi capx (có trong thư mục N2QT). Chọn run để chạy ứng dụng.
 
 ###Mô tả ứng dụng : 
-![Register](https://lh3.googleusercontent.com/44j7r_2KZSErw1QAygPkV0zJwHiowkl6lAYGdvzDc7Gnponwta5GFvaHY9lypviWb0FXOqIUwInaHvw=w1366-h665-rw)
+
+![untitled](https://cloud.githubusercontent.com/assets/16796548/20654090/6bc764fa-b548-11e6-96de-fc8c3386169e.png)
 
 * Đây là game ứng dụng học tiếng anh. Làm lại từ một game trên sachmem.vn bằng công cụ Construct 2.
 
@@ -30,17 +31,18 @@ http://uet.somee.com/
 
 * Người chơi vượt qua 10 level sẽ chiến thắng. Và có thể chơi lại từ đầu!
 * Đáp án để test
-	1. mom
-	2. bed
-	3. cat
-	4. mouth
-	5. sad
-	6. sky
-	7. fire
-	8. egg
-	9. today
-	10. clock
-
+	<ul>
+	<li> 1. mom </li>
+	<li> 2. bed </li>
+	<li> 3. cat </li>
+	<li> 4. mouth </li>
+	<li> 5. sad </li>
+	<li> 6. sky </li>
+	<li> 7. fire </li>
+	<li> 8. egg </li>
+	<li> 9. today </li>
+	<li> 10. clock </li>
+	</ul>
 
 ### Hướng dẫn phát triển game
 https://github.com/truonganhhoang/int3507-2016/blob/master/N2QT/HuongDanPhatTrien.md
