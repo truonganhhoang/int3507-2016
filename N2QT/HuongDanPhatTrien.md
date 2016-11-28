@@ -26,13 +26,13 @@ Tiếp thep, Properties là nơi chỉnh thông số hiển thị, kích thướ
 
 ![demo](https://cloud.githubusercontent.com/assets/16796548/20602168/a09529b8-b28e-11e6-833e-5e7106ebaf7e.jpg)
 
-Mỗi Layer là một màn chơi. Ở đây chúng ta xây dựng 2 Level ứng với Layer 1 và Layer 2. Với Layer 0 để hiển thị Menu.
+Mỗi Layer là một màn. Game mình có 2 layer, 1 layer là màn hình game, 1 layer là màn hình chứa popup.
 
 ![demo](https://cloud.githubusercontent.com/assets/16796548/20602215/d7e8e378-b28e-11e6-84cb-bd2b5d16635a.jpg)
 
 <b> Bước 3: Định nghĩa các đối tượng </b>
 
-Ở đây các đối tượng được định nghĩa để thể hiện chức năng của đối tượng đó. 
+Ở đây các đối tượng được định nghĩa để thể hiện chức năng của đối tượng đó. Các đối tượng có thể có sử dung những behavior đã được định nghĩa sẵn trong C2.
 VD: Đối tượng Button, ta có thể tạo hành vi cho button. Button này có thể để chọn ô chữ.
 
 Đầu tiên chọn đối tượng để thêm hành vi
