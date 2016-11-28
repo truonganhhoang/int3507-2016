@@ -7,7 +7,8 @@
 
 #Tồn tại
 
-- Ứng dụng trên Android chạy không được chức năng chính, cụ thể trên thiết bị test là Asus Zenfone 5
+- Ứng dụng không chạy được trên một số thiết bị khác nhau
+- Ứng dụng trên Android chạy không được, cụ thể trên máy test là Asus Zenfone 5
 - Thời gian chờ của ứng dụng lâu
 - Có lỗi cụ thể như là:
   + Khi chọn một Unit khác thì checkbox vẫn đánh ở Unit đầu tiên chọn
@@ -27,5 +28,5 @@
 
 #Góp ý từ nhóm nhận xét
 
-- Cần xem lại ứng dụng trên Android, có thể do database chưa đầy đủ nên không thể ấn play được
+- Cần xem lại ứng dụng trên Android, cố gắng sửa để có thể sử dụng trên nhiều thiết bị.
 - Trong ứng dụng không có phần hướng dẫn sử dụng cho người dùng
