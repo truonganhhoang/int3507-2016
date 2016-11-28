@@ -79,4 +79,4 @@ Do Construct 2 chúng ta sử dụng là bản phát triển miễn phí nên ch
 
 Sản phẩm cuối cùng sau khi hoàn thành
 
-![hello](https://cloud.githubusercontent.com/assets/16796548/20602957/f73d6570-b291-11e6-8c8a-dd3cad1384c6.jpg)
+![untitled](https://cloud.githubusercontent.com/assets/16796548/20654229/c8f51fa4-b549-11e6-9407-fab1b761fece.png)
