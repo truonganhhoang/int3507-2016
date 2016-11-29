@@ -3,14 +3,16 @@
 ### Ưu điểm:
 - Giao diện đơn giản, trực quan.
 - Có tiềm năng phát triển mạnh mẽ trong tương lai.
+- Chức năng đã bước đầu theo 1 chủ đề nhất định (Learn English).
+- ứng dụng chạy khá tốt, có tính ứng dụng cao.
 
 ### Nhược điểm:
-- Ứng dụng khó sử dụng, không nhận dạng được câu nói của người dùng mặc dù đã thử nói nhiều lần.
-- Chức năng còn tương đối hạn chế.
+- Ứng dụng khá khó sử dụng với người Việt. Bởi người dùng cần phát âm cực kỳ chuẩn xác như người bản ngữ thì Alexa mới hoạt động.
+- Vẫn còn hạn chế về dữ liệu. 
 
 ### Chỉnh sửa, bổ sung:
-- Hoàn thiện các chức năng: người dùng và Alexa có thể giao tiếp với nhau bằng những câu đơn giản.
-- Bổ sung thêm các skill nếu có thể. Hoặc không, hoàn thiện 1 skill nhưng khi chạy phải chính xác, hiệu quả.
+- Bổ sung thêm các skill nếu có thể.
+- Thêm dữ liệu về 1 chủ đề tiếng anh cụ thể.
 
 ## 2. Góc độ nhà phát triển:
 ### Ưu điểm:
@@ -19,8 +21,6 @@
 - Mã nguồn rõ ràng. Có thể tiếp tục phát triển.
 
 ### Nhược điểm:
-- Bài toán còn sơ sài. Mới chỉ thực hiện được 1 câu nói.
-- Tài liệu hướng dẫn khá sơ sài, chưa có hình ảnh hoặc tài liệu kèm theo.
 - Thiếu giới thiệu công nghệ sử dụng và hướng phát triển của nhóm trong thời gian tới.
 - Skill chỉ sử dụng được với một tài khoản. Cần public để các tài khoản khác cũng dùng được.
 
