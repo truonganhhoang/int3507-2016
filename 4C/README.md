@@ -32,7 +32,15 @@ Cấu trúc thư mục gồm một số file sau:
 Hai file IntentSchema.json và SampleUtterance.txt không được gọi đến trong mã nguồn mà chỉ sử dụng để cấu hình cho kỹ năng.
 
 ### Tạo Lambda Function
-
+1. Vào trang console.aws.amazon.com và đăng nhập bằng tài khoản amazon, chọn AWS Service là Lambda. Chọn tab Functions.
+2. Click vào Create a Lambda Function or Get Started Now.
+3. Bỏ qua phần blueprint.
+4. Đặt tên cho Lambda Function.
+5. Chọn runtime Java 8.
+6. Build project đã code trong thư mục samples bằng file maven.
+7. Up file .jar lên Function
+8. Đặt Handler là session.SessionSpeechletRequestStreamHandler (để trỏ đến lớp cần dùng để hứng các request đếnn cho skill.
+9. Lưu lại và test. 
 ### Tạo và cấu hình cho kỹ năng
 
 Tạo và cấu hình cho kỹ năng trên trang https://developer.amazon.com/edw/home.html#/skills/list 
