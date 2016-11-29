@@ -1,11 +1,5 @@
-MyColorIsIntent  my color is {Color}
-MyColorIsIntent  my favorite color is {Color}
-WhatsMyColorIntent whats my color
-WhatsMyColorIntent what is my color
-WhatsMyColorIntent say my color
-WhatsMyColorIntent tell me my color
-WhatsMyColorIntent whats my favorite color
-WhatsMyColorIntent what is my favorite color
-WhatsMyColorIntent say my favorite color
-WhatsMyColorIntent tell me my favorite color
-WhatsMyColorIntent tell me what my favorite color is
+TodayIsVeryHotIntent today is very hot
+FacebookIntent Facebook is the most popular social network in Vietnam
+PhotographIntent We keep this love in a photograph
+ThisSongForYouIntent This song for you baby
+TalkToMeIntent tell me a discretionary sentence
