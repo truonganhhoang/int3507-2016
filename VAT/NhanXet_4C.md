@@ -21,10 +21,9 @@
 - Mã nguồn rõ ràng. Có thể tiếp tục phát triển.
 
 ### Nhược điểm:
-- Thiếu giới thiệu công nghệ sử dụng và hướng phát triển của nhóm trong thời gian tới.
+- Thiếu hướng phát triển của nhóm trong thời gian tới.
 - Skill chỉ sử dụng được với một tài khoản. Cần public để các tài khoản khác cũng dùng được.
 
 ## Chỉnh sửa, bổ sung:
-- Hoàn thiện skill, skill chạy hiệu quả.
 - Bổ sung tài liệu tham khảo, tài liệu hướng dẫn.
 - Thêm định hướng phát triển của nhóm trong thời gian tới.
