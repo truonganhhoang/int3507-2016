@@ -8,4 +8,4 @@ Các bước cài đặt và sử dụng:
  + User: Alexa, tell session tell me a sentence.
  + Alexa: "Please read after me." + <a sentence> (<a sentence> là một trong các câu sau: "Today is very hot", "Facebook is the most popular social network in Vietnam", "We keep this love in a photograph", "This song for you baby").
  + User: Nhắc lại câu Alexa vừa nói.
- + Alexa: Nếu người dùng nhắc lại đúng, Alexa sẽ phản hồi là "Congratulations! you answered correctly. Goodbye" và kết thúc phiên làm việc. Nếu người dùng nhắc lại không đúng, Alexa sẽ phản hồi là "Oh you answer wrong. Please read after me." + <a sentence>(là câu mà Alexa nói lúc đầu. Người dùng tiếp tục nhắc lại câu cần nói.
+ + Alexa: Nếu người dùng nhắc lại đúng, Alexa sẽ phản hồi là "Congratulations! you answered correctly. Goodbye" và kết thúc phiên làm việc. Nếu người dùng nhắc lại không đúng, Alexa sẽ phản hồi là "Oh you answer wrong. Please read after me." + <a sentence>(là câu mà Alexa nói lúc đầu). Người dùng tiếp tục nhắc lại câu cần nói.
