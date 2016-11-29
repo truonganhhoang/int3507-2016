@@ -173,36 +173,65 @@ Chi tiết xem tại: https://laravel.com/docs/5.2/elixir
 Project nhóm chia làm 26 task và từng người làm như sau :
 
 Task 1: Database Design, create model
+
 Task 2: [User] Sign up -Dương Thị Huế
+
 Task 3: [User] Login, logout - Dương Thị Huế
+
 Task 4: [User] Show profile - Đặng Thị Khôi
+
 Task 5: [User] Category - Phạm Thị Hà
+
 Task 6: [User] Word list - Đặng Thị Khôi
+
 Task 7: [User] Lesson - Đặng Thị Khôi
+
 Task 8: [User] Result - Dương Thị Huế
+
 Task 9: [User] Home - Dương Thị Huế
 
+
 [Admin] User management - Phạm Thị Hà
+
 Task 10: Create user 
+
 Task 11: List user
+
 Task 12: Update user
+
 Task 13: Delete user
 
+
 [Admin] Lesson management - Phạm Thị Hà
+
 Task 14: Create lesson
+
 Task 15: Edit lesson
+
 Task 16: Update lesson
+
 Task 17: List lesson
 
+
 [Admin] Word management - Trịnh Thị Hiền
+
 Task 18: Create word
+
 Task 19: Edit word
+
 Task 20: Update word
+
 Task 21: Update word
+
 Task 22: List word
 
+
 [Admin] Answer management - Trịnh Thị Hiền
+
 Task 23: Create answer
+
 Task 24: Edit answer
+
 Task 25: Update answer
+
 Task 26: List answer
