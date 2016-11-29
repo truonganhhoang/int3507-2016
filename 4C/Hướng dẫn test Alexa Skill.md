@@ -1,4 +1,4 @@
-Trong skill này, người dùng sẽ nói 1 câu là "Alexa tell session my favorite color is red/green..." là 1 màu yêu thích của người dùng. Sau đó alexa sẽ nói lại "I now know that your favorite color is red/green..."
+Trong skill này, người dùng sẽ nhắc lại 1 câu tiếng Anh do Alexa nói ra để kiểm tra khả năng phát âm tiếng Anh của mình.
 
 Các bước cài đặt và sử dụng:
 - Bước 1: vào trang alexa.amazon.com, đăng nhập bằng tài khoản duynn1220@gmail.com/nguyenduy1. Hiện tại skill đang chưa được publish nên chưa thể tìm kiếm và kích hoạt được bằng tài khoản khác.
