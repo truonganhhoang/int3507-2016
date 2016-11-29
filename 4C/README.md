@@ -41,6 +41,7 @@ Hai file IntentSchema.json và SampleUtterance.txt không được gọi đến 
 7. Up file .jar lên Function
 8. Đặt Handler là session.SessionSpeechletRequestStreamHandler (để trỏ đến lớp cần dùng để hứng các request đếnn cho skill.
 9. Lưu lại và test. 
+
 ### Tạo và cấu hình cho kỹ năng
 
 Tạo và cấu hình cho kỹ năng trên trang https://developer.amazon.com/edw/home.html#/skills/list 
