@@ -11,21 +11,21 @@ Skype phiển bản mới nhất (Ios/Mac OS, Android, Windows).
 Vào đường [link](https://join.skype.com/bot/455b9e86-db27-4a3a-86c8-df9cc15ccc09) để thêm chat bot vào danh bạ Skype của bạn.
 
 Sau khi thêm, bạn gõ "hi" để bắt đầu trò chuyện với bot.
-![intro](https://github.com/truonganhhoang/int3507-2016/blob/master/NSFW/FAQ%20Bot%20V2/images/intro.png?raw=true)
+![intro](https://github.com/truonganhhoang/int3507-2016/blob/master/NSFW/FAQ%20Bot%20V2/Screenshots/intro.png?raw=true)
 
 Bạn chọn 'FAQ' để bắt đầu việc hỏi đáp, bot sẽ yêu cầu bạn chọn danh mục mà vấn đề bạn cần giúp thuộc về, sau đó bot liệt kê các câu hỏi của từng danh mục.
-![category](https://github.com/truonganhhoang/int3507-2016/blob/master/NSFW/FAQ%20Bot%20V2/images/categories.png?raw=true)
+![category](https://github.com/truonganhhoang/int3507-2016/blob/master/NSFW/FAQ%20Bot%20V2/Screenshots/categories.png?raw=true)
 
 Bạn chọn câu hỏi và bot sẽ đưa lại câu trả lời kèm theo link để bạn xem câu trả lời trên web.
-![faq](https://github.com/truonganhhoang/int3507-2016/blob/master/NSFW/FAQ%20Bot%20V2/images/faq.png?raw=true)
-![thanks](https://github.com/truonganhhoang/int3507-2016/blob/master/NSFW/FAQ%20Bot%20V2/images/thanks.png?raw=true)
+![faq](https://github.com/truonganhhoang/int3507-2016/blob/master/NSFW/FAQ%20Bot%20V2/Screenshots/faq.png?raw=true)
+![thanks](https://github.com/truonganhhoang/int3507-2016/blob/master/NSFW/FAQ%20Bot%20V2/Screenshots/thanks.png?raw=true)
 
 Đối với các câu hỏi không nằm trong dữ liệu, bot sẽ tìm kiếm trên google và đưa bạn những câu hỏi liên quan kèm đường link.
-![ggcse](https://github.com/truonganhhoang/int3507-2016/blob/master/NSFW/FAQ%20Bot%20V2/images/ggcse.png?raw=true)
+![ggcse](https://github.com/truonganhhoang/int3507-2016/blob/master/NSFW/FAQ%20Bot%20V2/Screenshots/ggcse.png?raw=true)
 
 
 Trong khi trò chuyện bạn gõ "help" khi cần trợ giúp về bot.
-![help](https://github.com/truonganhhoang/int3507-2016/blob/master/NSFW/FAQ%20Bot%20V2/images/help.png?raw=true)
+![help](https://github.com/truonganhhoang/int3507-2016/blob/master/NSFW/FAQ%20Bot%20V2/Screenshots/help.png?raw=true)
 Để chuyển đổi danh mục gõ tên danh mục hoặc chọn danh mục từ danh sách lúc đầu (bạn cũng có thể gõ 'faq' để hiển thị lại danh sách danh mục).
 
 ## Note
