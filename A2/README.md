@@ -39,7 +39,7 @@ Angular 2 là một javascript framework, Angular 2 thích hợp xây dựng ứ
 
     + `node -v` => hiển thị phiên bản nodejs
     + `nmp -v` => hiển thị bản cài đặt npm
-- Clone phần mềm theo link [sachmem-nhomA2](https://github.com/huyendtt58/int3507-2016/tree/master/A2/SachMem)
+- Clone phần mềm theo link [sachmem-nhomA2](https://github.com/huyendtt58/sachmem)
 - Mở cmd:
     + `npm install` => cài đặt thư viện
     + `npm start` => chạy ứng dụng
